@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-07-03",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wix-migration-cost")],
@@ -74,7 +74,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/wix-migration-cost"),
             datePublished: "2026-07-03",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -116,7 +116,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-07-03",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -156,18 +156,18 @@ export default function WixMigrationCostPage() {
                             A Wix migration is a rebuild rather than a transfer, and that one fact sets the price. Wix
                             lets you export your data, but not the site itself, so the design, the page layouts and the
                             page-level SEO settings are recreated by hand on the other side. PandaCodeGen&apos;s tiers start at
-                            $1,500 and run past $10,000. Page count on its own is a poor predictor of where you land.
+                            $1,500, with Scale from $5,000 and larger work quoted after a scoping call. Page count on its own is a poor predictor of where you land.
                             What actually moves the number is how many unique templates, data domains, apps and
                             workflows have to come with you. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed against current Wix and Google documentation on July 31, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Reviewed against current Wix and Google documentation on October 8, 2026.</p>
                       </div>
                       <div data-article-hero-screen>
                         <BlogCoverFigure id="wix-migration-cost" />
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jul 3, 2026" readTime="9 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wix-migration-cost" published="2026-07-03" readTime="14 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <div className="my-10">
                         <ExportLockAnimation />
@@ -231,14 +231,10 @@ export default function WixMigrationCostPage() {
                     <BlogHeader id="methods">The four ways people actually do this, cheapest first</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Published Wix migration costs disagree so wildly because they average four different jobs.
-                            <strong> Doing it yourself is $0 plus your own hours</strong>, and for a small static site
-                            that is genuinely the right answer. <strong>An automated migration tool runs roughly $50 to
-                            $500</strong> and moves your content: posts, products, customers. <strong>A freelancer is
-                            usually four figures</strong> and gets you a rebuilt site rather than transferred rows. An
-                            agency build is a different product again, and that is what our tiers below price. Pick the
-                            cheapest one that actually covers what you need, because paying agency prices for a data
-                            transfer is the most common way to overspend here.
+                            Compare DIY work, a data-transfer tool, a freelancer and an agency against the same
+                            deliverables. A transfer utility does not necessarily rebuild the design or integrations.
+                            DIY still has software costs and your own time. Obtain current quotes for the actual data,
+                            templates and workflows instead of treating an unsourced market range as a budget.
                         </BlogText>
                     </div>
                     <BlogText>
@@ -257,7 +253,7 @@ export default function WixMigrationCostPage() {
                     <BlogHeader id="export">What can you export from Wix?</BlogHeader>
                     <BlogText>
                         Wix documents several separate export paths rather than one complete site package. Checked
-                        against Wix&apos;s current support documentation on July 31, 2026:
+                        against Wix&apos;s current support documentation on October 8, 2026:
                     </BlogText>
                     <BlogList
                         items={[
@@ -505,7 +501,7 @@ export default function WixMigrationCostPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

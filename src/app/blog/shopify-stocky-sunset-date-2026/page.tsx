@@ -21,7 +21,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Shopify Stocky Sunset: August 31, 2026 Migration Guide";
 const description =
-    "Stocky stops managing inventory after August 31, 2026. Export required history, map Stocky workflows, test Shopify inventory or alternatives, update integrations and train the team.";
+    "Stocky stopped managing inventory on August 31, 2026. Export what you still need while read-only access lasts, map your Stocky workflows, and move to Shopify inventory or another tool.";
 
 export const dynamic = "force-static";
 
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-25",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-stocky-sunset-date-2026")],
@@ -75,7 +75,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-stocky-sunset-date-2026"),
             description,
             datePublished: "2026-04-25",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -151,14 +151,14 @@ export default function ShopifyStockySunsetPage() {
                             Shopify Stocky Sunset: <span className="italic text-cognac">August 31, 2026</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Shopify says Stocky stops working for inventory management after August 31, 2026. That is read from its <a href="https://help.shopify.com/en/manual/products/inventory/transitioning-from-stocky" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">transition documentation</a>, checked August 8, 2026. Work backwards from that date rather than from when you happen to read this, and confirm the current position on that page before you plan against it. Before then:
-                            export the history you are required to keep, write down what each of your workflows actually
-                            does, test whatever you are moving to, fix anything that talked to Stocky, and show your team
+                            Stocky stopped working for inventory management on August 31, 2026, according to Shopify&apos;s <a href="https://help.shopify.com/en/manual/products/inventory/transitioning-from-stocky" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">transition documentation</a>, rechecked October 8, 2026. You keep read-only access to export your data for at least 90 days after that date. Use it now:
+                            export the history you are required to keep, write down what each of your workflows did,
+                            test whatever you are moving to, fix anything that talked to Stocky, and show your team
                             how the new thing works.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Status verified August 8, 2026 against Shopify&apos;s current migration guidance, and
-                            re-checked on 13 September 2026.
+                            rechecked on October 8, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -169,15 +169,15 @@ export default function ShopifyStockySunsetPage() {
                     <InsightBox variant="warning" label="Update: this date has passed">
                         The deadline in the title was <strong>31 August 2026</strong>, which is now behind us, so read
                         the rest of this page as a record of what was required rather than a plan you still have time to
-                        run. If you migrated, nothing here changes. If you did not, the position on 13 September 2026 is
+                        run. If you migrated, nothing here changes. If you did not, the position on 8 October 2026 is
                         this: Stocky no longer manages inventory and <strong>its APIs stopped on the same date</strong>,
-                        so anything that called them is already failing. Shopify has said it provides read-only access
-                        for a limited time, and it has not published an end date for that window, which makes exporting
-                        purchase orders, stock counts and supplier records the only item on this page that is still
-                        urgent. Do that first, then work through the rest in order.
+                        so anything that called them is already failing. Shopify says you keep read-only access to export
+                        your data for at least 90 days after August 31, so until at least November 29, 2026, and it
+                        hasn&apos;t said when that access ends. That makes exporting purchase orders, stock counts and
+                        supplier records the only item on this page that is still urgent. Do that first, then work through the rest in order.
                     </InsightBox>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 25, 2026" readTime="10 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="shopify-stocky-sunset-date-2026" published="2026-04-25" readTime="10 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-red-200 bg-red-50 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Confirmed timeline and impact</h2>
@@ -185,10 +185,10 @@ export default function ShopifyStockySunsetPage() {
                             items={[
                                 "Stocky was delisted from the Shopify App Store on February 2, 2026. No new installs and no re-installs, so if you remove it from a store you cannot put it back. Check Shopify's own transition documentation for the current status rather than relying on a date reported second-hand.",
                                 "Stocky ships with Shopify POS Pro rather than as a separate purchase, which is why many merchants have it running without having chosen it.",
-                                "Stocky inventory management stops after August 31, 2026.",
+                                "Stocky inventory management stopped on August 31, 2026.",
                                 "Shopify says read-only access remains for at least 90 days after the date, for exporting your data on the current migration page.",
                                 "Historical purchase orders and stocktakes do not move into Shopify automatically.",
-                                "Stocky APIs stop working on August 31, 2026, so connected tools must be updated.",
+                                "Stocky APIs stopped working on August 31, 2026, so anything connected to them has to move to Shopify's inventory APIs. Shopify's new physical inventory APIs are in developer preview.",
                             ]}
                         />
                     </section>
@@ -246,8 +246,8 @@ export default function ShopifyStockySunsetPage() {
 
                     <BlogHeader id="sequence">What to do first, and what can wait</BlogHeader>
                     <BlogText>
-                        The seven steps below are ordered deliberately, and <strong>three of them stop being possible
-                        after August 31, 2026</strong>. If you are reading this with weeks rather than months left, the
+                        The seven steps below are ordered deliberately, and <strong>three of them got harder after
+                        August 31, 2026 and become impossible once read-only access ends</strong>. If you are reading this with weeks rather than months left, the
                         order matters more than the completeness: do the irreversible things now, compress the
                         reversible ones, and accept that some of the later steps will run after the deadline rather
                         than before it. Nothing below asks you to have chosen a replacement first. If the sunset
@@ -351,10 +351,10 @@ export default function ShopifyStockySunsetPage() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr><td className="p-4 font-bold">Purchase orders</td><td className="p-4">Shopify admin can create and manage them, with documented feature differences</td><td className="p-4">Do approvals, receiving and supplier communication still work?</td></tr>
                                 <tr><td className="p-4 font-bold">Transfers</td><td className="p-4">Inbound and outbound transfers move to Shopify workflows</td><td className="p-4">Can each location initiate, receive and reconcile correctly?</td></tr>
-                                <tr><td className="p-4 font-bold">Counts</td><td className="p-4">Shopify describes inventory adjustments and POS Quick count options</td><td className="p-4">Are barcode, partial count and audit requirements met?</td></tr>
+                                <tr><td className="p-4 font-bold">Counts</td><td className="p-4">Shopify describes inventory stock counts in the admin for full stocktakes, plus POS Quick count for spot checks of up to 1,000 items</td><td className="p-4">Are barcode, partial count and audit requirements met?</td></tr>
                                 <tr><td className="p-4 font-bold">Forecasting</td><td className="p-4">Shopify documents inventory insights and Sidekick-assisted planning</td><td className="p-4">Are the method, access and review controls acceptable?</td></tr>
                                 <tr><td className="p-4 font-bold">Reporting</td><td className="p-4">Some Stocky reports differ or have no direct native equivalent</td><td className="p-4">Which decision or compliance output must be recreated?</td></tr>
-                                <tr><td className="p-4 font-bold">Integrations</td><td className="p-4">Stocky APIs cease on August 31, 2026</td><td className="p-4">What supported interface replaces every read and write?</td></tr>
+                                <tr><td className="p-4 font-bold">Integrations</td><td className="p-4">Stocky APIs stopped on August 31, 2026</td><td className="p-4">What supported interface replaces every read and write?</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -414,8 +414,8 @@ export default function ShopifyStockySunsetPage() {
 
                     <BlogHeader>How long will Shopify keep Stocky read-only?</BlogHeader>
                     <BlogText>
-                        Shopify states you keep read-only access to export your data for at least 90 days after that date, as specified on its current transition page. That window is finite, so do not use it as your retention plan. and validate your
-                        exports before August 31, 2026.
+                        Shopify states you keep read-only access to export your data for at least 90 days after that date, as specified on its current transition page. That gives you until at least November 29, 2026, but Shopify hasn&apos;t said when the
+                        window ends, so don&apos;t treat it as your retention plan. Export your data and check the files now.
                     </BlogText>
                     <BlogText>
                         We scope transitions of this kind as part of{" "}

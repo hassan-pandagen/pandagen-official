@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-23",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-april-2026-evidence")],
@@ -91,7 +91,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-april-2026-evidence"),
             description,
             datePublished: "2026-04-23",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -134,7 +134,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-04-23",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -172,8 +172,8 @@ export default function WordPressAprilEvidencePage() {
                             They do not prove that every WordPress site is compromised or should migrate. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Patchstack&apos;s Smart Slider analysis reverified August 1, 2026. Remaining sources and
-                            post-publication context last checked July 24, 2026.
+                            Patchstack&apos;s two analyses, Nextend&apos;s advisory and the WordPress release record
+                            rechecked October 8, 2026. The Reddit thread was last checked July 24, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -181,7 +181,7 @@ export default function WordPressAprilEvidencePage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 23, 2026" readTime="7 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wordpress-april-2026-evidence" published="2026-04-23" readTime="13 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">What the record shows</h2>
@@ -246,7 +246,7 @@ export default function WordPressAprilEvidencePage() {
                     <BlogHeader id="smart-slider-response">What a Smart Slider owner should verify</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Check whether 3.5.1.35 was ever installed, and check that first. The compromised build was available for roughly six hours, so most sites never received it, and the question is a version-history question rather than a judgement about the plugin. Five checks follow, and Nextend&apos;s own advisory is the authority on what cleanup its release requires.
+                            Check whether 3.5.1.35 was ever installed, and check that first. The reported six-hour availability window does not establish how many sites installed it. Check update history, logs and indicators of compromise rather than assuming your site was unaffected. Five checks follow, and Nextend&apos;s own advisory is the authority on what cleanup its release requires.
                         </BlogText>
                     </div>
                     <BlogList
@@ -330,8 +330,8 @@ export default function WordPressAprilEvidencePage() {
                             malicious release is discovered, the fix that arrives is a corrected version of the
                             plugin. <strong>That repairs the code. It does not undo what the code did while it was
                             running.</strong> If a site received a compromised release and it executed, anything it
-                            established — an added administrator, a file dropped outside the plugin directory, a
-                            scheduled task, a modified core file — survives the update, because none of it lives in
+                            established (an added administrator, a file dropped outside the plugin directory, a
+                            scheduled task, a modified core file) survives the update, because none of it lives in
                             the plugin that just got replaced.
                         </BlogText>
                         <BlogText>
@@ -354,7 +354,7 @@ export default function WordPressAprilEvidencePage() {
                             fixed by deleting what you found, because you are working from the indicators you happened
                             to notice. Restoring from a backup taken before the affected window, or bringing in someone
                             who does remediation for a living, is the appropriate response. We do not offer incident
-                            response, and a rebuild is not a substitute for it — <strong>migrating a compromised site
+                            response, and a rebuild is not a substitute for it: <strong>migrating a compromised site
                             can carry the compromise across.</strong>
                         </InsightBox>
                     </div>
@@ -500,16 +500,14 @@ export default function WordPressAprilEvidencePage() {
                     <BlogText>
                         For the money side of the same review, our{" "}
                         <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline">three-year comparison of WordPress and custom code</Link>{" "}
-                        and the{" "}
-                        <Link href="/blog/wordpress-killer" className="text-cognac hover:underline">invoice-led total cost guide</Link>{" "}
-                        show how to build the numbers from real bills. To apply any of this to one specific site, use the{" "}
+                        shows how to build the numbers from real bills, starting with your invoices. To apply any of this to one specific site, use the{" "}
                         <Link href="/contact" className="text-cognac hover:underline">contact form</Link>.
                     </BlogText>
 
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

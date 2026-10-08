@@ -225,7 +225,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "What will I still be paying for after the site is live?",
-      a: "Your quote separates the build price, hosting and connected services, and optional ongoing work. Hosting is agreed per client rather than included as standard: some clients use PandaCodeGen's hosting account at no extra charge and others are billed for it. The arrangement and any charge are written into your quote. Hosting moves to your account on request or when an engagement ends. Budget separately for your domain and any CMS or third-party services your site uses. Panda support is optional and scoped separately; the site does not require a support subscription to keep running.",
+      a: "Your quote separates the build price, hosting and connected services, and optional ongoing work. On a maintenance or SEO package, hosting on PandaCodeGen's Vercel account is included if you want it. Outside a package, hosting is agreed per client, and the arrangement and any charge are written into your quote. Hosting moves to your account on request or when an engagement ends. Budget separately for your domain and any CMS or third-party services your site uses. Panda support is optional and scoped separately; the site does not require a support subscription to keep running.",
     },
     {
       q: "What if Webflow adds the features I need later?",

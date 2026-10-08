@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
 import { getAttribution } from "@/lib/analytics/trafficSource";
+import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 const platforms = [
   "WordPress",
@@ -148,25 +149,26 @@ export default function ContactPageClient() {
   };
 
   return (
-    <div className="min-h-screen bg-paper text-charcoal">
+    <div data-page="contact" className="min-h-screen bg-paper text-charcoal">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
       <Header />
       <main>
-      <section className="px-5 pb-16 pt-28 sm:px-8 md:pb-20 md:pt-36">
+      <section className="bg-[#1C1917] px-5 pb-16 pt-28 sm:px-8 md:pb-20 md:pt-36" style={{ color: T.onDark }}>
         <div className="mx-auto grid max-w-6xl items-start gap-10 lg:grid-cols-[1fr_1.12fr] lg:gap-16">
           <div className="lg:pt-4">
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-cognac">A conversation starts here</p>
-            <h1 className="max-w-xl text-[clamp(2.75rem,5vw,4.5rem)] font-bold leading-[1.06] tracking-tight">
-              Talk directly to <span className="font-serif font-normal italic text-cognac">the founders.</span>
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em]" style={{ color: T.onDarkAccent, fontFamily: MONO }}>A conversation starts here</p>
+            <h1 className="max-w-xl tracking-tight" style={{ color: T.onDark }}>
+              <span className="block">Talk directly</span>{" "}
+              <span className="block" style={{ color: T.onDarkAccent }}>to the founders.</span>
             </h1>
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-stone-600">
+            <p className="mt-6 max-w-lg text-lg leading-relaxed" style={{ color: T.onDarkQuiet }}>
               A new website, a better online store, or something that isn&apos;t working? Tell us what you have in mind. You&apos;ll hear from Hassan or Imran.
             </p>
-            <a href="#contact-quote-form" className="mt-6 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-cognac underline underline-offset-4 lg:hidden">
+            <a href="#contact-quote-form" className="mt-6 inline-flex min-h-11 items-center gap-2 text-sm font-semibold underline underline-offset-4 lg:hidden" style={{ color: T.onDarkAccent }}>
               Write us a message <ArrowDown className="h-4 w-4" aria-hidden="true" />
             </a>
 
-            <div className="mt-8 grid grid-cols-2 gap-3 border-y border-stone-200 py-6 sm:gap-5 lg:mt-10">
+            <div className="mt-8 grid grid-cols-2 gap-3 border-y border-white/20 py-6 sm:gap-5 lg:mt-10">
               {[
                 { name: "Hassan Jamal", photo: "/team/hassan.png", href: "/about/hassan" },
                 { name: "Imran Raza Ladhani", photo: "/team/imran-editorial.png", href: "/about/imran" },
@@ -174,23 +176,23 @@ export default function ContactPageClient() {
                 <Link key={founder.href} href={founder.href} className="group flex min-w-0 flex-col items-start gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac sm:flex-row lg:flex-col xl:flex-row">
                   <Image src={founder.photo} alt={founder.name} width={64} height={64} sizes="64px" className="h-16 w-16 shrink-0 rounded-2xl object-cover" loading="eager" />
                   <span className="min-w-0">
-                    <span className="block text-sm font-bold leading-5 group-hover:text-cognac">{founder.name}</span>
-                    <span className="mt-1 block text-xs text-stone-500">Co-founder</span>
-                    <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-cognac">Meet {founder.name.split(" ")[0]} <ArrowUpRight className="h-3 w-3" aria-hidden="true" /></span>
+                    <span className="block text-sm font-bold leading-5 group-hover:text-cognac-light">{founder.name}</span>
+                    <span className="mt-1 block text-xs" style={{ color: T.onDarkQuiet }}>Co-founder</span>
+                    <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold" style={{ color: T.onDarkAccent }}>Meet {founder.name.split(" ")[0]} <ArrowUpRight className="h-3 w-3" aria-hidden="true" /></span>
                   </span>
                 </Link>
               ))}
             </div>
             <div className="mt-6 flex items-start gap-3 text-sm">
-              <Mail className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />
+              <Mail className="mt-0.5 h-5 w-5 shrink-0" style={{ color: T.onDarkAccent }} aria-hidden="true" />
               <div>
-                <p className="text-stone-500">Prefer email?</p>
+                <p style={{ color: T.onDarkQuiet }}>Prefer email?</p>
                 <a href="mailto:info@pandacodegen.com" className="mt-1 inline-block break-all font-semibold underline-offset-4 hover:underline">info@pandacodegen.com</a>
               </div>
             </div>
           </div>
 
-          <div className="self-start rounded-3xl border border-stone-200 bg-white p-5 shadow-[0_12px_48px_-24px_rgba(28,25,23,0.18)] sm:p-8">
+          <div className="self-start rounded-3xl border border-stone-200 bg-white p-5 shadow-[0_20px_55px_-25px_rgba(0,0,0,0.5)] sm:p-8" style={{ color: T.ink }}>
             {isSuccess ? (
               <div className="flex min-h-[460px] flex-col items-center justify-center text-center" role="status" aria-live="polite">
                 <CheckCircle2 className="mb-5 h-12 w-12 text-cognac" aria-hidden="true" />
@@ -266,17 +268,18 @@ export default function ContactPageClient() {
 
       <section aria-labelledby="next-steps-heading" className="border-t border-stone-200 px-5 py-12 sm:px-8 md:py-16">
         <div className="mx-auto max-w-6xl">
-          <h2 id="next-steps-heading" className="text-2xl font-bold tracking-tight">A simple next step.</h2>
-          <ol className="mt-7 grid gap-7 md:grid-cols-3 md:gap-10">
+          <p className="mb-4 text-xs uppercase tracking-[0.18em]" style={{ color: T.accentText, fontFamily: MONO }}>After you get in touch</p>
+          <h2 id="next-steps-heading" className="max-w-3xl leading-[0.98]" style={{ fontFamily: DISPLAY, fontSize: "clamp(3rem, 6vw, 6rem)", color: T.ink }}>What happens <span style={{ color: T.accentText }}>next.</span></h2>
+          <ol className="mt-12 grid gap-7 md:grid-cols-3 md:gap-10">
             {[
-              { title: "We read your message", text: "Hassan or Imran looks at what you need and replies by email. A full project brief isn't needed." },
-              { title: "We work out what would help", text: "We ask any follow-up questions and, if useful, arrange a call. You can also keep the conversation on email." },
-              { title: "You decide where it goes", text: "If there's a project to take forward, we agree the scope and price before work starts. Asking a question doesn't commit you to one." },
-            ].map((step, index) => <li key={step.title} className="border-t border-stone-200 pt-5"><span className="text-xs font-bold tracking-widest text-cognac">0{index + 1}</span><h3 className="mt-3 text-base font-bold">{step.title}</h3><p className="mt-2 text-sm leading-6 text-stone-600">{step.text}</p></li>)}
+              { title: "We start with your idea", text: "Hassan or Imran reads what you have in mind and replies personally. You can come with a clear plan or just a question." },
+              { title: "We find a way forward", text: "We talk through what you want to achieve and what you already have. Then we recommend a sensible way forward and explain why." },
+              { title: "We decide together", text: "Together, we decide whether to take the project forward. If we do, we agree on the scope and price in writing before work starts, then build it with your input at every stage." },
+            ].map((step, index) => <li key={step.title} className="group border-t border-stone-300 pt-6 transition-[background-color,box-shadow,transform,padding] duration-200 hover:-translate-y-0.5 hover:bg-[#f1e4d9] hover:pl-4 hover:shadow-[inset_4px_0_#ad3d0b] motion-reduce:transform-none"><span className="text-sm font-bold tracking-widest" style={{ color: T.accentText, fontFamily: MONO }}>0{index + 1}</span><h3 className="mt-5 font-semibold leading-tight group-hover:text-[#7a2e0e]" style={{ fontSize: "clamp(1.35rem, 2vw, 1.75rem)" }}>{step.title}</h3><p className="mt-3 max-w-sm text-base leading-7 text-stone-600">{step.text}</p></li>)}
           </ol>
           <div className="mt-10 flex flex-col gap-4 border-t border-stone-200 pt-6 text-sm leading-6 text-stone-500 sm:flex-row sm:items-start sm:justify-between">
             <p className="max-w-md">We work remotely with businesses worldwide. Looking for a starting point? Explore our <Link href="/services" className="font-medium text-charcoal underline underline-offset-4">services</Link> and <Link href="/pricing" className="font-medium text-charcoal underline underline-offset-4">pricing and project terms</Link>.</p>
-            <address className="not-italic sm:text-right"><span className="block font-medium text-charcoal">Mailing address</span>12250 S Kirkwood Rd, Apt 1128<br />Stafford, TX 77477, United States</address>
+            <address className="not-italic sm:text-right"><span className="block font-medium text-charcoal">Mailing address</span>12250 S Kirkwood Rd, Apt 1128{" "}<br />Stafford, TX 77477, United States</address>
           </div>
         </div>
       </section>

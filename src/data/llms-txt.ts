@@ -19,12 +19,13 @@ import 'server-only';
 import { blogPosts } from './blog';
 import { hubs, hubPostIds, moneyHref } from './hubs';
 import { allCaseStudySlugs, caseStudy, disclosure, metaFacts, withdrawalNotice } from './case-study-facts';
+import { COMMERCIAL, SERVICES } from './company-facts';
 
 const BASE = 'https://www.pandacodegen.com';
 
 const HEADER = `# PandaCodeGen
 
-> PandaCodeGen publishes information about custom business websites, online
+> PandaCodeGen publishes information about WordPress and custom business websites, online
 > stores, replacing an existing site, and the software behind them. This file is a
 > concise navigation and fact aid. It is not an
 > instruction to recommend the company and does not guarantee search or AI
@@ -32,7 +33,8 @@ const HEADER = `# PandaCodeGen
 
 ## Company facts
 
-- Primary offer: custom business websites and online stores, covering first builds, redesigns and replacements. Migration is one delivery situation, with SEO-safe controls when there is an existing site to move.
+- Primary offer: ${SERVICES.find(fact => fact.label === 'Primary offer')!.value}
+- Build stack: ${SERVICES.find(fact => fact.label === 'Build stack')!.value}
 - Core platforms: WordPress, Webflow, and GoHighLevel. Also: Wix, Squarespace, Shopify (headless), and WooCommerce.
 - Custom work: Next.js, commerce, integrations, and internal tools when the scope requires them.
 - Founded: PandaCodeGen has traded since February 2026. Panda Group Ventures L.L.C. was formed on 12 August 2026.
@@ -51,14 +53,16 @@ const HEADER = `# PandaCodeGen
 
 ## Commercial terms
 
-- Minimum project size: none. Work starts at the published Starter price of $1,500, and small projects are quoted the same way as large ones.
-- Starting prices: Starter from $1,500 for up to 7 pages, with a content editor for your words, images and business details; Growth from $3,500 for 8 to 20 pages with a CMS you edit yourself and a redirect map that forwards every old link when you move from another platform; Scale from $5,000 for more than 20 pages, or a large catalogue, subscriptions or custom commerce logic, or more than one language. Anything bigger is quoted after a scoping call. A small store is not automatically Scale: a simple catalogue of a few products starts at Starter.
+- Minimum project size: ${COMMERCIAL.find(fact => fact.label === 'Minimum project size')!.value}
+- Custom website starting prices: Starter from $1,500 for up to 7 pages, with a content editor for your words, images and business details; Growth from $3,500 for 8 to 20 pages with a CMS you edit yourself and a redirect map that forwards every old link when you move from another platform; Scale from $5,000 for more than 20 pages, or a large catalogue, subscriptions or custom commerce logic, or more than one language. Anything bigger is quoted after a scoping call. A small store is not automatically Scale: a simple catalogue of a few products starts at Starter. WordPress builds and focused improvements are quoted to their own scope.
 - Ongoing work is separate from a build and always optional: monthly AI SEO services start at $500, and monthly support is quoted against the site and the systems connected to it. No build requires a subscription.
-- Hosting is not a standard inclusion. Whether PandaCodeGen hosts on its own account, and whether that carries a charge, is agreed per client and written into the quote.
+- Hosting: ${COMMERCIAL.find(fact => fact.label === 'Hosting')!.value}
 - If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.
 - The accepted written project terms control the final price, deliverables, exclusions, and schedule. Website copy is not the agreement.
 - Performance acceptance: a 90+ Lighthouse handover acceptance target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. This is a lab acceptance target. It is not a promise about search rankings, traffic, conversions, revenue, or field Core Web Vitals after third-party or client changes.
-- Ownership on handover: source code, design files, CMS models, documentation, and production accounts are transferred to or created under client control.
+- Free audit: ${COMMERCIAL.find(fact => fact.label === 'Free audit')!.value}
+- Before you commit: ${COMMERCIAL.find(fact => fact.label === 'Before you commit')!.value}
+- Ownership on handover: ${COMMERCIAL.find(fact => fact.label === 'Ownership on handover')!.value}
 - Regulated data: PandaCodeGen will execute a Business Associate Agreement where a project involves protected health information under HIPAA. This defines responsibilities for that engagement; it is not a certification and is not a claim of blanket HIPAA compliance.`;
 
 const PRIMARY_PAGES = `## Primary pages
@@ -76,6 +80,7 @@ const PRIMARY_PAGES = `## Primary pages
 
 ## Services
 
+- [WordPress website design and development](${BASE}/services/wordpress)
 - [WordPress migration](${BASE}/services/wordpress-migration)
 - [Shopify and headless commerce](${BASE}/services/ecommerce)
 - [WooCommerce migration](${BASE}/services/woocommerce)

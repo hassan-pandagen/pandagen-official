@@ -1,7 +1,7 @@
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
-import { Ladies4JesusCaseStudyPreview as RedesignLadies4JesusCaseStudy } from "@/app/preview/work/ladies-4-jesus/Design";
+import { Ladies4JesusCaseStudyPreview as RedesignLadies4JesusCaseStudy } from "@/components/pages/work/ladies-4-jesus/Design";
 
 const canonicalUrl = "https://www.pandacodegen.com/work/ladies-4-jesus";
 const title = "Ladies 4 Jesus Case Study: A Moderated Community an Owner Runs Alone";

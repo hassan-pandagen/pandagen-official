@@ -155,7 +155,7 @@ export default function WebflowVsCustomWebsitePage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 27, 2026" readTime="7 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="webflow-vs-custom-website" published="2026-03-27" readTime="7 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -223,10 +223,9 @@ export default function WebflowVsCustomWebsitePage() {
 
                     <BlogText>
                         One dated change belongs in this factor rather than in a footnote. Webflow&apos;s{" "}
-                        <a href="https://help.webflow.com/hc/en-us/articles/36046081578515-Feature-sunsets-deprecations" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">feature sunsets page</a>,
-                        read on August 3, 2026, states that the legacy Editor and legacy Editor whitelabeling become
-                        unavailable starting August 4, 2026, with existing legacy Editor users automatically given
-                        access to a free client seat or a limited seat. If the people who publish your content have
+                        <a href="https://help.webflow.com/hc/en-us/articles/48412420902675-Legacy-Editor-deprecation-FAQ" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">legacy Editor deprecation FAQ</a>
+                        confirms the legacy Editor and legacy Editor whitelabeling were removed on August 4, 2026, with
+                        existing legacy Editor users moved to a free client seat or a limited seat. If the people who publish your content have
                         been using the legacy Editor, the workflow you are comparing against a custom CMS is the seat
                         and role model rather than the one they used last year. Test the comparison against what they
                         will actually be using. The wider sequence is in{" "}
@@ -254,6 +253,8 @@ export default function WebflowVsCustomWebsitePage() {
                         <Link href="/blog/do-you-own-your-website" className="text-cognac hover:underline">do you own your website</Link>, and
                         one dependency worth checking early is covered in our guide to the{" "}
                         <Link href="/blog/webflow-user-accounts-sunset-date-2026" className="text-cognac hover:underline">Webflow User Accounts timeline</Link>.
+                        To see how Webflow&apos;s export compares with Wix, Squarespace, Shopify and WordPress, read our{" "}
+                        <Link href="/blog/website-portability" className="text-cognac hover:underline">website export comparison across eight platforms</Link>.
                     </BlogText>
                     <InsightBox variant="warning" label="Ownership wording">
                         Client content remains the client&apos;s. Transfer of custom deliverables follows full payment
@@ -306,8 +307,8 @@ export default function WebflowVsCustomWebsitePage() {
                         Two things to take from that table rather than from the headline number. The jump that decides
                         most comparisons is <strong>$25 to $2,500</strong>: there is no tier between Premium and Team, so
                         the moment you need governance, publishing workflows or localization at scale, the platform line
-                        stops being a rounding error in the comparison. And the add-ons are priced on usage — page views
-                        for Optimize, sessions for Analyze, locale count for Localize — so a growing site&apos;s Webflow
+                        stops being a rounding error in the comparison. And the add-ons are priced on usage (page views
+                        for Optimize, sessions for Analyze, locale count for Localize), so a growing site&apos;s Webflow
                         bill grows with it, which is the opposite of how the fixed custom-build cost behaves after
                         launch. Prices are per site and exclude tax. <strong>Re-check them before quoting: this table is
                         dated on purpose.</strong>
@@ -315,7 +316,7 @@ export default function WebflowVsCustomWebsitePage() {
                     <BlogText>
                         The custom side behaves differently after launch, and it is worth stating precisely rather than
                         as a win. <strong>A custom build does not become free once it ships.</strong> Hosting still
-                        meters — bandwidth, function invocations, database rows — and the bill still moves with
+                        meters bandwidth, function invocations and database rows, and the bill still moves with
                         traffic. What changes is <em>what</em> you are metered on and who you pay: infrastructure you
                         can price, move or re-architect, rather than a plan tier whose feature set and price are both
                         set by one vendor. The Team-tier jump above has no equivalent on the custom side, because there
@@ -325,7 +326,7 @@ export default function WebflowVsCustomWebsitePage() {
                     <BlogText>
                         That cuts both ways, which is the part most comparisons skip. Engineering work has to be
                         bought, from staff or an agency, and if nobody owns the site after launch a custom build decays
-                        in ways a managed platform does not — dependencies age, security patches stop, and the cost
+                        in ways a managed platform does not: dependencies age, security patches stop, and the cost
                         arrives later as a rebuild rather than monthly as a subscription. <strong>The honest framing is
                         not cheaper versus more expensive. It is a predictable subscription with a ceiling on what you
                         can change, against a variable engineering cost with no ceiling on what you can change.</strong>{" "}
@@ -479,7 +480,7 @@ export default function WebflowVsCustomWebsitePage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader>Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

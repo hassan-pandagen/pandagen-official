@@ -1,18 +1,18 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
-import ServiceDetailPreview from "@/app/preview/services/ServiceDetailPreview";
-import { servicePreview } from "@/app/preview/services/service-data";
-import { previewServiceFaqs } from "@/app/preview/services/preview-faqs";
+import ServiceDetailPreview from "@/components/pages/services/ServiceDetailPreview";
+import { servicePreview } from "@/components/pages/services/service-data";
+import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 // 30 Sep 2026: renders the redesign (built under /preview/services). Metadata
 // stay here; the FAQ structured data now comes from the FAQs the redesign shows.
 
 
 const path = "/services/ai-seo";
-const name = "AI SEO Services and Answer Engine Optimisation";
+const name = "AI SEO Services & Answer Engine Optimization";
 const description =
-  "We make website content readable to search systems and AI assistants. The technical foundations are included when we build your site, and optional ongoing monitoring and agreed changes start at $500 a month against a written scope.";
+  "AI SEO and answer engine optimization. Search foundations come with every build; ongoing research and agreed improvements start at $500 a month.";
 
 export const metadata: Metadata = {
   title: name,

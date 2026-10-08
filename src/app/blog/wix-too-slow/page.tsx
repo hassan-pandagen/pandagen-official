@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-10",
-        modifiedTime: "2026-08-19T00:00:00-05:00",
+        modifiedTime: "2026-10-08T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wix-too-slow")],
@@ -66,7 +66,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wix-too-slow"),
             description,
             datePublished: "2026-04-10",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -145,14 +145,14 @@ export default function WixTooSlowPage() {
                             Wix speed varies page by page. It depends on your content, who is visiting, which apps you run, what scripts load and how the page is designed. Use the
                             property&apos;s real-user and lab evidence to identify the slow layer before paying for a fix.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed against current Wix and Google documentation on July 24, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Reviewed against current Wix and Google documentation on October 8, 2026.</p>
                       </div>
                       <div data-article-hero-screen>
                         <BlogCoverFigure id="wix-too-slow" />
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 10, 2026" readTime="5 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wix-too-slow" published="2026-04-10" readTime="11 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -187,7 +187,7 @@ export default function WixTooSlowPage() {
                             These are different problems with different fixes, and most advice on this question blends
                             them. <BlogHighlight>Editor lag affects you. Site slowness affects your visitors.</BlogHighlight>{" "}
                             A laggy Wix Editor or Wix Studio while you are building changes nothing about what a
-                            customer experiences, because visitors never load the editor — they load the published
+                            customer experiences, because visitors never load the editor. They load the published
                             site.
                         </BlogText>
                     </div>
@@ -234,7 +234,7 @@ export default function WixTooSlowPage() {
                         If the difference between field and lab evidence is new to you,{" "}
                         <Link href="/blog/core-web-vitals-explained" className={inlineLinkClass}>Core Web Vitals explained</Link>{" "}
                         covers what each metric records, and{" "}
-                        <Link href="/blog/why-is-my-website-loading-so-slow" className={inlineLinkClass}>why a website loads slowly</Link>{" "}
+                        <Link href="/blog/how-to-speed-up-your-website" className={inlineLinkClass}>how to find the slow part of any website</Link>{" "}
                         walks the same diagnosis without assuming a platform.
                     </BlogText>
 
@@ -331,6 +331,8 @@ export default function WixTooSlowPage() {
                         <Link href="/blog/how-website-speed-affects-seo" className={inlineLinkClass}>how site speed relates to search performance</Link>,
                         and at the other explanations worth ruling out in{" "}
                         <Link href="/blog/why-competitor-outranks-you" className={inlineLinkClass}>why a competitor outranks you</Link>.
+                        For the rest of Wix&apos;s search controls, from redirects to structured data, see{" "}
+                        <Link href="/blog/is-wix-bad-for-seo" className={inlineLinkClass}>what Wix lets you control for SEO</Link>.
                     </BlogText>
 
                     <BlogHeader id="business-impact">How do you measure revenue or lead impact?</BlogHeader>
@@ -409,7 +411,7 @@ export default function WixTooSlowPage() {
 
                     <BlogHeader id="offer">PandaCodeGen offer and terms</BlogHeader>
                     <BlogText>
-                        We start with a free fit audit and recommend repair before migration when repair satisfies the
+                        We start with a <Link href="/free-audit" className="text-cognac hover:underline">free fit audit</Link> (share your website URL and email) and recommend repair before migration when repair satisfies the
                         requirements. PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and Scale
                         from $5,000. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund
                         is tied to failure to deliver the signed scope. Where the accepted terms include it, Starter carries 15 business days of launch defect support and Growth and Scale carry 30. The full terms sit on our{" "}
@@ -421,7 +423,7 @@ export default function WixTooSlowPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

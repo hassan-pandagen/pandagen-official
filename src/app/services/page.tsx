@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
-import ServicesPreviewIndex from "@/app/preview/services/page";
+import ServicesPreviewIndex from "@/components/pages/services/ServicesIndexDesign";
 
 // 30 Sep 2026: /services renders the redesign (built as /preview/services);
 // metadata and structured data stay here.
 import { ogImageForPath } from "@/lib/seo/og";
 import { alternatesFor } from "@/lib/i18n/config";
 
+const description = "Websites, stores, Sanity editors and custom software. Work with the founders on design, development and migration, with scope and price agreed.";
+
 export const metadata: Metadata = {
   title: "Website Design, Redesign and Development Services",
-  description: "Website, online store and software development, redesigns and migrations. Website builds from $1,500, and you own the code. Scope and dates agreed before work starts.",
+  description,
   alternates: alternatesFor("services", "en"),
   openGraph: {
     title: "Website Design, Redesign and Development Services | PandaCodeGen",
-    description: "New websites, online stores, redesigns, migrations and custom software. Website builds from $1,500, and you own the code.",
+    description,
     url: "https://www.pandacodegen.com/services",
     type: "website",
     images: [ogImageForPath("/services")],
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Website Design, Redesign and Development Services | PandaCodeGen",
-    description: "Website, store and software services scoped around evidence, acceptance, cutover, and handover.",
+    description,
     images: [ogImageForPath("/services")],
   },
 };
@@ -33,7 +35,7 @@ const schema = {
       "@id": "https://www.pandacodegen.com/services#webpage",
       url: "https://www.pandacodegen.com/services",
       name: "Website, Online Store and Custom Software Development Services",
-      description: "Service options for new website builds, redesigns, migrations, commerce diagnostics, and custom web engineering.",
+      description: "Service options for WordPress websites, custom builds, redesigns, migrations, online stores and software.",
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       inLanguage: "en-US",
     },

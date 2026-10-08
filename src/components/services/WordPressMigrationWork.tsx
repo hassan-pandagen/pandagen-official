@@ -66,7 +66,7 @@ export default function WordPressMigrationWork() {
           </div>
           <div>
             <p className="leading-relaxed text-stone-700">{aStepAboveMedical.summary}</p>
-            <p className="mt-3 text-sm text-stone-600">Project status as of <time dateTime={aStepAboveMedical.confirmedOn}>18 September 2026</time>.</p>
+            <p className="mt-3 text-sm text-stone-600">Project status as of <time dateTime={aStepAboveMedical.confirmedOn}>{new Date(`${aStepAboveMedical.confirmedOn}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}</time>.</p>
           </div>
         </article>
 

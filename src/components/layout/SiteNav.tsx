@@ -10,13 +10,11 @@ import { PHONE } from "@/data/company-facts";
 import { T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Floating navigation bar with a full-screen menu. Redesign candidate, 23 Sep 2026.
+// In-flow sticky navigation that contracts on scroll, with dropdowns and a menu panel.
 // ─────────────────────────────────────────────────────────────────────────────
-// Replaces Header.tsx only once approved; until then it is used by the
-// /preview route alone. It carries everything Header.tsx carries, because each
-// piece there has a dated reason:
-//   - the service list keeps its 16 Sep order: what you are buying first, then
-//     the platform you are leaving. The platform pages rank on those words.
+// Shared by the live redesign and preview routes. Keep the primary routes,
+// founder profiles, contact methods and language switcher reachable here.
+//   - the service list shows what you can build first, then platform options.
 //   - both founder pages stay linked (restored 11 Aug: /about/imran had been
 //     all but orphaned).
 //   - phone, email and the language switcher.
@@ -31,6 +29,11 @@ const QuoteModal = dynamic(() => import("@/components/ui/QuoteModal"), { ssr: fa
 const INK = T.ink;
 const QUIET = T.quiet;
 const ACCENT = T.accent; // logo dot and hover only; fills below use INK
+// 7 Oct 2026, owner: the small grey mono labels made the five link groups run
+// together. Each group now starts with a rule and a bold heading in the text
+// accent, which keeps AA contrast on the paper background.
+const HEADING = T.accentText;
+const GROUP_HEADING = "mb-4 border-t border-[#1C1917]/25 pt-4 text-[13px] font-bold uppercase tracking-[0.14em]";
 const PAPER = T.paper;
 
 const primary = [
@@ -44,17 +47,19 @@ const primary = [
 
 const buying = [
   { name: "Websites", href: "/services" },
+  { name: "WordPress websites & migration", href: "/services/wordpress-migration" },
   { name: "Online stores", href: "/services/ecommerce" },
   { name: "Custom software", href: "/services/custom-engineering" },
+  { name: "Sanity CMS & websites", href: "/services/sanity-development" },
+  { name: "Backend development", href: "/services/backend-development" },
   { name: "AI SEO", href: "/services/ai-seo" },
 ];
 
-const leaving = [
-  { name: "Leaving WordPress", href: "/services/wordpress-migration" },
-  { name: "Leaving WooCommerce", href: "/services/woocommerce" },
-  { name: "Leaving Wix", href: "/services/wix" },
-  { name: "Leaving Squarespace", href: "/services/squarespace" },
-  { name: "Webflow", href: "/services/webflow" },
+const platformOptions = [
+  { name: "WooCommerce stores", href: "/services/woocommerce" },
+  { name: "Wix websites & migration", href: "/services/wix" },
+  { name: "Squarespace websites & migration", href: "/services/squarespace" },
+  { name: "Webflow websites & migration", href: "/services/webflow" },
   { name: "GoHighLevel", href: "/services/gohighlevel" },
 ];
 
@@ -75,18 +80,43 @@ const shots = [
   { src: "/work/mycustompatches.png", name: "MyCustomPatches", href: "/work/mycustompatches" },
 ];
 
+const dropdowns: Record<string, { name: string; href: string; note?: string }[]> = {
+  Work: [
+    { name: "All work", href: "/work" },
+    { name: "Panda Patches", href: "/work/panda-patches", note: "Founder-affiliated business" },
+    { name: "NorthDeck Group", href: "/work/northdeck-group" },
+    { name: "Emblematic Studio", href: "/work/emblematic-studio" },
+    { name: "MyCustomPatches", href: "/work/mycustompatches" },
+  ],
+  Services: [
+    { name: "All services", href: "/services" },
+    ...buying.slice(1),
+    ...platformOptions,
+  ],
+  About: [
+    { name: "About PandaCodeGen", href: "/about" },
+    ...company.slice(0, 4),
+  ],
+};
+
 export default function SiteNav() {
   const [open, setOpen] = useState(false);
   const [quoteOpen, setQuoteOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [dropdownX, setDropdownX] = useState(0);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
+  const topNavRef = useRef<HTMLElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
   const close = useCallback((returnFocus = true) => {
     setOpen(false);
-    if (returnFocus) buttonRef.current?.focus();
+    // preventScroll: focus lands while the page is still locked, and Chrome
+    // then scrolled to the sticky button's place at the top of the page, so
+    // closing the menu threw the reader back to the top (7 Oct 2026).
+    if (returnFocus) buttonRef.current?.focus({ preventScroll: true });
   }, []);
 
   // One QuoteModal for the page; any CTA opens it with this event.
@@ -100,16 +130,13 @@ export default function SiteNav() {
   }, []);
 
   useEffect(() => {
-    let previousY = window.scrollY;
     let frame = 0;
     const onScroll = () => {
       if (frame) return;
       frame = window.requestAnimationFrame(() => {
-        const currentY = window.scrollY;
-        setScrolled(currentY > 24);
-        if (currentY < 80 || open) setHidden(false);
-        else if (Math.abs(currentY - previousY) > 6) setHidden(currentY > previousY);
-        previousY = currentY;
+        const compact = window.scrollY > 110;
+        setScrolled(compact);
+        if (compact) setActiveDropdown(null);
         frame = 0;
       });
     };
@@ -119,7 +146,15 @@ export default function SiteNav() {
       window.removeEventListener("scroll", onScroll);
       if (frame) window.cancelAnimationFrame(frame);
     };
-  }, [open]);
+  }, []);
+
+  useEffect(() => {
+    const onPointerDown = (event: PointerEvent) => {
+      if (!topNavRef.current?.contains(event.target as Node) && !dropdownRef.current?.contains(event.target as Node)) setActiveDropdown(null);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, []);
 
   // Close on navigation, including back/forward, which no link click sees.
   // Adjusted during render rather than in an effect (React's documented pattern
@@ -128,12 +163,17 @@ export default function SiteNav() {
   if (pathname !== lastPath) {
     setLastPath(pathname);
     setOpen(false);
+    setActiveDropdown(null);
   }
 
   useEffect(() => {
     if (!open) return;
+    // html is the element that scrolls on this site (globals.css gives it
+    // overflow-x: clip), so locking body alone left the page free to move.
     const prev = document.body.style.overflow;
+    const prevRoot = document.documentElement.style.overflow;
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
     // Wait a tick: the menu is visibility:hidden until this render commits, and
     // a hidden element cannot take focus.
     const focusTimer = window.setTimeout(() => {
@@ -162,54 +202,44 @@ export default function SiteNav() {
       window.clearTimeout(focusTimer);
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
+      document.documentElement.style.overflow = prevRoot;
     };
   }, [open, close]);
 
   const openQuote = () => window.dispatchEvent(new Event("open-quote-modal"));
+  const openMenu = (button: HTMLButtonElement) => {
+    buttonRef.current = button;
+    setActiveDropdown(null);
+    setOpen(true);
+  };
+  const showDropdown = (name: string, button: HTMLButtonElement) => {
+    setDropdownX(button.getBoundingClientRect().left);
+    setActiveDropdown(name);
+  };
 
   return (
     <>
       {/* ── Floating bar ─────────────────────────────────────────────────── */}
-      <header
-        onFocusCapture={() => setHidden(false)}
-        className={`pointer-events-none fixed inset-x-0 top-0 z-[60] flex justify-center px-4 pt-4 transition-transform duration-300 motion-reduce:transition-none md:pt-5 ${hidden ? "-translate-y-full" : "translate-y-0"}`}
-      >
-        <div
-          className="pointer-events-auto flex w-full max-w-[560px] items-center justify-between gap-3 py-2 pl-5 pr-2 transition-shadow duration-300"
-          style={{
-            backgroundColor: "rgba(235,233,228,0.86)",
-            backdropFilter: "blur(14px) saturate(1.2)",
-            WebkitBackdropFilter: "blur(14px) saturate(1.2)",
-            border: "1px solid rgba(28,25,23,0.08)",
-            boxShadow: scrolled ? "0 10px 30px -12px rgba(28,25,23,0.28)" : "0 1px 0 rgba(255,255,255,0.5) inset",
-          }}
-        >
-          <Link href="/" className="text-[19px] tracking-[-0.01em]" style={{ color: INK, fontFamily: "Zodiak, Georgia, serif", fontWeight: 700 }}>
-            PandaCodeGen<span style={{ color: ACCENT }}>.</span>
-          </Link>
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={openQuote}
-              className="cta-solid hidden px-4 py-2.5 text-[14px] font-medium sm:inline-flex"
-              style={{ backgroundColor: INK, color: PAPER }}
-            >
-              Talk to the founders
-            </button>
-            <button
-              ref={buttonRef}
-              type="button"
-              aria-expanded={open}
-              aria-controls="site-menu"
-              onClick={() => setOpen(true)}
-              className="group flex h-11 w-11 flex-col items-center justify-center gap-[5px]"
-              style={{ border: `1px solid ${INK}` }}
-            >
-              <span className="sr-only">Open menu</span>
-              <span className="h-px w-5 bg-[#1C1917] transition-transform group-hover:translate-x-0.5" />
-              <span className="h-px w-5 bg-[#1C1917] transition-transform group-hover:-translate-x-0.5" />
-            </button>
+      <header onMouseLeave={() => setActiveDropdown(null)} onKeyDown={(event) => { if (event.key === "Escape" && activeDropdown) setActiveDropdown(null); }} className={`sticky top-0 z-[60] flex min-h-[88px] items-center transition-colors duration-500 ${scrolled ? "border-b border-transparent bg-transparent" : "border-b border-[#1C1917]/15 bg-[#EBE9E4]"}`}>
+        <div className={`mx-auto flex w-[calc(100%-16px)] items-center justify-between border px-2 transition-[max-width,min-height,padding,box-shadow,background-color,border-color] duration-500 ease-[cubic-bezier(.22,1,.36,1)] motion-reduce:transition-none min-[380px]:w-[calc(100%-32px)] min-[380px]:px-4 md:px-6 xl:justify-start ${scrolled ? "min-h-[64px] max-w-[560px] gap-2 border-[#1C1917]/15 shadow-[0_14px_40px_-18px_rgba(28,25,23,.5)]" : "min-h-[86px] max-w-[1440px] gap-2 border-transparent sm:gap-6"}`} style={{ backgroundColor: scrolled ? "#EBE9E4" : "transparent" }}>
+          <Link href="/" className={`shrink-0 text-[16px] tracking-[-0.01em] transition-[font-size] duration-500 min-[380px]:text-[18px] sm:text-[21px] ${scrolled ? "sm:text-[19px]" : ""}`} style={{ color: INK, fontFamily: "Zodiak, Georgia, serif", fontWeight: 700 }}>PandaCodeGen<span style={{ color: ACCENT }}>.</span></Link>
+          <nav ref={topNavRef} aria-label="Primary navigation" inert={scrolled} className={`hidden min-w-0 items-center gap-1 whitespace-nowrap transition-[max-width,opacity,transform] duration-500 motion-reduce:transition-none xl:ml-[clamp(35px,4vw,85px)] xl:flex ${scrolled ? "pointer-events-none max-w-0 scale-90 overflow-hidden opacity-0" : "max-w-[720px] scale-100 opacity-100"}`}>
+            {primary.map((link) => dropdowns[link.name] ? (
+              <button key={link.href} type="button" aria-expanded={activeDropdown === link.name} aria-controls="nav-dropdown" onMouseEnter={(event) => showDropdown(link.name, event.currentTarget)} onClick={(event) => showDropdown(link.name, event.currentTarget)} className={`flex items-center gap-1 px-3 py-3 text-[14px] font-semibold transition-colors hover:text-[#AD3D0B] focus-visible:text-[#AD3D0B] ${pathname.startsWith(link.href) ? "text-[#AD3D0B]" : "text-[#1C1917]"}`}>
+                {link.name}<span aria-hidden="true" className={`text-[10px] transition-transform duration-200 ${activeDropdown === link.name ? "rotate-180" : ""}`}>⌄</span>
+              </button>
+            ) : (
+              <Link key={link.href} href={link.href} aria-current={pathname === link.href ? "page" : undefined} className={`px-3 py-3 text-[14px] font-semibold transition-colors hover:text-[#AD3D0B] focus-visible:text-[#AD3D0B] ${pathname === link.href ? "text-[#AD3D0B]" : "text-[#1C1917]"}`}>{link.name}</Link>
+            ))}
+          </nav>
+          <div className="flex shrink-0 items-center gap-1 min-[380px]:gap-2 xl:ml-auto">
+            <button type="button" onClick={openQuote} className="cta-solid inline-flex min-h-11 items-center px-2 py-2 text-[12px] font-semibold sm:hidden" style={{ backgroundColor: INK, color: PAPER }} aria-label="Talk to the founders">Talk</button>
+            <button type="button" onClick={openQuote} className="cta-solid hidden min-h-11 items-center px-4 py-2 text-[14px] font-semibold sm:inline-flex" style={{ backgroundColor: INK, color: PAPER }}>Talk to the founders</button>
+            <button type="button" aria-expanded={open} aria-controls="site-menu" aria-label="Open site menu" onClick={(event) => openMenu(event.currentTarget)} className="flex h-11 items-center gap-1 border border-[#1C1917] px-2 text-[13px] font-semibold text-[#1C1917] transition-colors hover:bg-[#1C1917] hover:text-white focus-visible:bg-[#1C1917] focus-visible:text-white min-[380px]:gap-2 min-[380px]:px-3"><span>Menu</span><span aria-hidden="true">☰</span></button>
           </div>
+        </div>
+        <div id="nav-dropdown" ref={dropdownRef} inert={!activeDropdown || scrolled} className={`absolute top-full z-[65] border border-[#1C1917]/20 p-4 shadow-[0_18px_40px_-18px_rgba(28,25,23,.35)] transition-[opacity,transform,visibility] duration-200 ${activeDropdown && !scrolled ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"}`} style={{ left: dropdownX, width: activeDropdown === "Services" ? 500 : 300, backgroundColor: "#F5F4F0", display: "grid", gridTemplateColumns: activeDropdown === "Services" ? "repeat(2,minmax(0,1fr))" : "1fr", gap: "0 22px" }}>
+          {(activeDropdown ? dropdowns[activeDropdown] : []).map((item) => <Link key={item.href} href={item.href} onClick={() => setActiveDropdown(null)} className="block border-b border-[#1C1917]/10 px-2 py-2.5 text-[14px] text-[#1C1917] transition-colors hover:text-[#AD3D0B] focus-visible:text-[#AD3D0B]"><span>{item.name}</span>{item.note && <span className="mt-0.5 block text-[11px] text-[#5E5B55]">{item.note}</span>}</Link>)}
         </div>
       </header>
 
@@ -221,11 +251,18 @@ export default function SiteNav() {
         aria-modal="true"
         aria-label="Site menu"
         inert={!open}
-        className="fixed inset-0 z-[70] overflow-y-auto transition-[opacity,visibility] duration-300"
-        style={{ backgroundColor: PAPER, opacity: open ? 1 : 0, visibility: open ? "visible" : "hidden" }}
+        // 7 Oct 2026: without data-lenis-prevent the smooth-scroll library took
+        // every wheel event, so the page behind moved and the menu itself could
+        // not scroll (its lower links sat below the screen on a laptop).
+        // overscroll-contain stops a scroll that reaches the end of the menu from
+        // carrying on into the page.
+        data-lenis-prevent
+        onMouseDown={(event) => { if (event.target === event.currentTarget) close(); }}
+        className="fixed inset-0 z-[70] flex items-start justify-center overflow-y-auto overscroll-contain bg-[#1C1917]/65 px-3 py-3 transition-[opacity,visibility] duration-300 backdrop-blur-sm sm:px-6 sm:py-6"
+        style={{ opacity: open ? 1 : 0, visibility: open ? "visible" : "hidden" }}
       >
-        <div className="mx-auto grid min-h-full max-w-[1440px] gap-12 px-6 pb-10 pt-6 md:px-10 lg:grid-cols-12 lg:gap-8">
-          <div className="flex items-center justify-between lg:col-span-12">
+        <div className="mx-auto grid w-full max-w-[1280px] gap-8 border border-[#1C1917] bg-[#EBE9E4] px-5 pb-7 pt-5 shadow-[0_26px_80px_rgba(0,0,0,.25)] transition-transform duration-300 motion-reduce:transition-none sm:px-8 lg:grid-cols-12 lg:gap-7" style={{ transform: open ? "scale(1)" : "scale(.97)" }}>
+          <div className="flex items-center justify-between border-b border-[#1C1917]/25 pb-4 lg:col-span-12">
             <Link href="/" onClick={() => close(false)} className="text-[19px]" style={{ color: INK, fontFamily: "Zodiak, Georgia, serif", fontWeight: 700 }}>
               PandaCodeGen<span style={{ color: ACCENT }}>.</span>
             </Link>
@@ -241,7 +278,7 @@ export default function SiteNav() {
           </div>
 
           {/* Primary pages, large. */}
-          <nav aria-label="Main" className="lg:col-span-5">
+          <nav aria-label="Main" className="lg:col-span-4">
             <ul className="space-y-1">
               {primary.map((l, i) => (
                 <li
@@ -265,18 +302,29 @@ export default function SiteNav() {
                 </li>
               ))}
             </ul>
+            {/* 7 Oct 2026, owner: the button sat in its own row under every column,
+                below the fold on a laptop. It now follows the main links. */}
+            <button
+              type="button"
+              onClick={openQuote}
+              className="cta-solid mt-10 px-7 py-4 text-[17px] font-medium"
+              style={{ backgroundColor: INK, color: PAPER }}
+            >
+              Talk to the founders
+            </button>
           </nav>
 
           {/* Everything else, grouped the way a buyer thinks about it. */}
-          <div className="grid gap-10 text-[16px] sm:grid-cols-2 lg:col-span-4 lg:content-start lg:pt-4">
+          <div className="grid gap-x-10 gap-y-12 text-[17px] sm:grid-cols-2 lg:col-span-5 lg:content-start lg:pt-4">
+            <MenuGroup title="Selected work" links={dropdowns.Work} onPick={() => close(false)} />
             <MenuGroup title="What you are buying" links={buying} onPick={() => close(false)} />
-            <MenuGroup title="Moving from" links={leaving} onPick={() => close(false)} />
+            <MenuGroup title="Platform options" links={platformOptions} onPick={() => close(false)} />
             <MenuGroup title="The company" links={company} onPick={() => close(false)} />
             <div>
-              <p className="mb-3 font-mono text-[12px] uppercase tracking-[0.12em]" style={{ color: QUIET }}>
+              <p className={GROUP_HEADING} style={{ color: HEADING }}>
                 Talk to us
               </p>
-              <ul className="space-y-1.5">
+              <ul className="space-y-2">
                 <li>
                   <a href="mailto:info@pandacodegen.com" style={{ color: INK }}>
                     info@pandacodegen.com
@@ -329,16 +377,6 @@ export default function SiteNav() {
             </div>
           </div>
 
-          <div className="lg:col-span-12">
-            <button
-              type="button"
-              onClick={openQuote}
-              className="cta-solid px-7 py-4 text-[17px] font-medium"
-              style={{ backgroundColor: INK, color: PAPER }}
-            >
-              Talk to the founders
-            </button>
-          </div>
         </div>
       </div>
 
@@ -358,19 +396,19 @@ function MenuGroup({
   onPick,
 }: {
   title: string;
-  links: { name: string; href: string }[];
+  links: { name: string; href: string; note?: string }[];
   onPick: () => void;
 }) {
   return (
     <div>
-      <p className="mb-3 font-mono text-[12px] uppercase tracking-[0.12em]" style={{ color: QUIET }}>
+      <p className={GROUP_HEADING} style={{ color: HEADING }}>
         {title}
       </p>
-      <ul className="space-y-1.5">
+      <ul className="space-y-2">
         {links.map((l) => (
           <li key={l.href + l.name}>
             <Link href={l.href} onClick={onPick} style={{ color: INK }} className="hover:text-[#AD3D0B]">
-              {l.name}
+              {l.name}{l.note && <span className="block text-[11px]" style={{ color: QUIET }}>{l.note}</span>}
             </Link>
           </li>
         ))}

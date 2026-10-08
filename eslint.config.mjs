@@ -5,6 +5,7 @@ const config = [
     ignores: [
       ".next/**",
       ".next-audit/**",
+      ".tmp/**",
       "out/**",
       "public/_pagefind/**",
       "next-env.d.ts",

@@ -58,7 +58,7 @@ const sources = [
     { name: "Webflow CMS import and export", url: "https://help.webflow.com/hc/en-us/articles/33961290794771-How-do-I-import-content-into-the-Webflow-CMS" },
     { name: "Webflow exported forms", url: "https://help.webflow.com/hc/en-us/articles/33961341546899-Collect-form-submissions-on-exported-sites" },
     { name: "Webflow User Accounts sunset", url: "https://help.webflow.com/hc/en-us/articles/36046006227731-User-Accounts-sunset" },
-    { name: "Webflow feature sunsets and deprecations", url: "https://help.webflow.com/hc/en-us/articles/36046081578515-Feature-sunsets-deprecations" },
+    { name: "Webflow legacy Editor deprecation FAQ", url: "https://help.webflow.com/hc/en-us/articles/48412420902675-Legacy-Editor-deprecation-FAQ" },
 ];
 
 const articleSchema = {
@@ -171,7 +171,7 @@ export default function WebflowMigrationCostPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 25, 2026" readTime="12 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="webflow-migration-cost" published="2026-03-25" readTime="12 min read" />
 
                     <BlogText>
                         These are Webflow site owners posting during the April 14, 2026 outage, in their own words, with a link to each original comment.
@@ -401,8 +401,8 @@ export default function WebflowMigrationCostPage() {
                         <Link href="/blog/webflow-user-accounts-sunset-date-2026" className={sourceLinkClass}>our guide to the Webflow User Accounts sunset</Link>.
                     </BlogText>
                     <BlogText>
-                        CMS collections, ecommerce collections and User Accounts can each be exported separately as
-                        CSV, localized Collection content included. That is data, not a working target application. The migration still needs schemas, relationships, media, transformations,
+                        CMS collections and ecommerce collections can each be exported separately as CSV, localized
+                        Collection content included. That is data, not a working target application. The migration still needs schemas, relationships, media, transformations,
                         validation, preview and publishing behavior.
                     </BlogText>
 
@@ -413,7 +413,7 @@ export default function WebflowMigrationCostPage() {
                             about twenty minutes. Published estimates for a Webflow migration often price content at $15
                             to $50 per page, which assumes somebody retypes it. Webflow&apos;s own CMS import
                             documentation says the opposite is normal: CSVs exported from other content management
-                            systems &ldquo;like WordPress are already structured in a way that&apos;s compatible with
+                            systems &ldquo;like WordPress are typically already structured in a way that&apos;s compatible with
                             Webflow&rdquo;, hundreds or thousands of items import in one pass, and CSV values map to
                             reference fields during that import. Content that imports cleanly should not be billed by
                             the page.
@@ -427,7 +427,7 @@ export default function WebflowMigrationCostPage() {
                     </BlogText>
                     <BlogList
                         items={[
-                            "Rich text has to arrive as HTML. A body column exported as plain text, or as another editor's markup, is rework on every single row.",
+                            "Rich text accepts any value, including HTML, so a body column rarely needs converting first. Check a sample of imported rows, because markup from another editor does not always display the way it did there.",
                             "Image fields need a direct URL ending in an image extension, and Webflow tells you to run that column through a bulk URL checker first, because a broken link cannot be mapped at all.",
                             "Video fields accept YouTube and Vimeo URLs only. Self-hosted video does not map, so those pages get rebuilt by hand.",
                             "Number fields reject $100, 100 USD and 10,000. Currency symbols, unit labels and thousands separators have to be stripped before the column will map.",
@@ -533,8 +533,8 @@ export default function WebflowMigrationCostPage() {
                             rather than adding a surcharge to the included site&apos;s plan. Additional sites and extras
                             require a Webflow quote; we rechecked the Team bundle on September 18, 2026. Enterprise is
                             quoted on request. Selling adds a separate Ecommerce plan: Standard $29/mo with a
-                            2% transaction fee, Plus $74/mo and Advanced $212/mo at 0%. Add-ons sit on top and are
-                            priced by usage: Optimize from $299/mo, Analyze from $9/mo, Localize from $9/mo.
+                            2% transaction fee, Plus $74/mo and Advanced $212/mo at 0%. Add-ons sit on top: Optimize
+                            from $299/mo, Analyze from $9/mo and Localize from $9/mo per added locale.
                         </BlogText>
                     </div>
                     <BlogText>
@@ -633,7 +633,7 @@ export default function WebflowMigrationCostPage() {
                             "Open the Pages panel and count the pages, then count them again by layout. The second number is the one that prices the job.",
                             "List every CMS Collection, the fields in each and the reference fields between them. The Collection is the cost unit, not the items inside it.",
                             "Note every third-party integration the site talks to, and mark which have to work on launch day rather than the week after.",
-                            "Say whether anything is gated, localized, searchable or sold, because those are the four things Webflow will not export.",
+                            "Say whether anything is gated, localized, searchable or sold, because those are among the things Webflow will not export, along with CMS content and form processing.",
                             "Name the content owners, the approvers and how many review rounds the schedule assumes.",
                             "State who should own the repository, hosting, CMS and domain at the end, and give read-only access or exports so nobody estimates blind.",
                             "Ask for assumptions, exclusions, milestones, acceptance evidence, change control and support in the proposal itself, with vendor fees and third-party licenses separated from the agency price.",
@@ -652,7 +652,7 @@ export default function WebflowMigrationCostPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader>Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

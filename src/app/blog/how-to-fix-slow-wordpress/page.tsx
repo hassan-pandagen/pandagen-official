@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-17",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-to-fix-slow-wordpress")],
@@ -66,7 +66,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/how-to-fix-slow-wordpress"),
             description,
             datePublished: "2026-02-17",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -146,7 +146,7 @@ export default function SlowWordPressGuide() {
                             plugins, queries, media, fonts and third parties can all contribute. That order matters: fixing an unmeasured layer is how an afternoon disappears.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current WordPress and Google primary guidance.
+                            Reviewed October 8, 2026 against current WordPress and Google primary guidance.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -154,7 +154,7 @@ export default function SlowWordPressGuide() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="February 17, 2026" readTime="7 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="how-to-fix-slow-wordpress" published="2026-02-17" readTime="11 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The eight-method ladder</h2>
@@ -214,17 +214,20 @@ export default function SlowWordPressGuide() {
                         recommends performance profiling and slow transaction or query evidence. Inspect document time,
                         PHP workers, slow queries, autoloaded options, object cache, cron, external HTTP calls and errors
                         before assigning the cause. If the complaint is a whole-site slowdown rather than one template,{" "}
-                        <Link href="/blog/why-is-my-website-loading-so-slow" className={inlineLinkClass}>why a website loads slowly</Link>{" "}
-                        walks the same layers from the visitor&apos;s side.
+                        <Link href="/blog/how-to-speed-up-your-website" className={inlineLinkClass}>our twelve checks for any slow website</Link>{" "}
+                        walk the same layers from the visitor&apos;s side.
                     </BlogText>
                     <BlogText>
-                        Measure the document response — the metric every tool labels{" "}
-                        <strong>TTFB, or Time to First Byte</strong> — on its own before you touch the front end, and
-                        read it against a scale rather than a feeling: <strong>under about 200ms is healthy, 200 to
-                        600ms usually points at an underpowered or oversold plan, and consistently above 600ms makes
-                        hosting the first thing to fix rather than the last.</strong> You will find TTFB reported under
-                        that name in PageSpeed Insights, WebPageTest and your browser&apos;s network panel, so it is the
-                        one number you can compare across tools without translating it. Time the request from
+                        {/* 8 Oct 2026: the old scale (under 200ms healthy, 200 to 600ms an oversold plan) is in
+                            no Google source. Replaced with the two thresholds Google publishes: Lighthouse's
+                            600ms server-response flag and web.dev's 0.8s "good" TTFB. */}
+                        Measure the document response on its own before you touch the front end. Most tools call it{" "}
+                        <strong>TTFB, or Time to First Byte</strong>. Read it against Google&apos;s own numbers:{" "}
+                        <strong>Lighthouse and WordPress&apos;s own Site Health check both treat a server response over
+                        600ms as slow, and web.dev counts a TTFB of 0.8 seconds or less as good. If your server time
+                        is regularly above 600ms, make hosting the first thing to fix, not the last.</strong> PageSpeed
+                        Insights, WebPageTest and your browser&apos;s network panel all report it, but some include DNS,
+                        connection and redirect time and some don&apos;t, so compare runs from the same tool. Time the request from
                         the command line or read it off a request waterfall, then repeat it with a warm cache, with a
                         cold cache, and from a region your visitors actually use. A slow document response is a server,
                         cache or network problem, and no amount of image compression or script deferral recovers it.
@@ -383,7 +386,7 @@ export default function SlowWordPressGuide() {
                     </BlogText>
                     <BlogText>
                         Price the alternatives before you choose one. The{" "}
-                        <Link href="/blog/wordpress-killer" className={inlineLinkClass}>three-year WordPress cost method</Link>{" "}
+                        <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className={inlineLinkClass}>three-year WordPress cost method</Link>{" "}
                         and the{" "}
                         <Link href="/blog/wordpress-migration-cost" className={inlineLinkClass}>WordPress migration cost breakdown</Link>{" "}
                         set out how to build both sides of that comparison, and our{" "}

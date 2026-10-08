@@ -158,7 +158,7 @@ export default function WebflowTrueCostPage() {
                         <BlogCoverFigure id="webflow-true-cost" />
                       </div>
                     </header>
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 18, 2026" readTime="9 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="webflow-true-cost" published="2026-03-18" readTime="9 min read" />
 
                     <nav aria-label="Article contents" className="my-8 rounded-2xl border border-stone-200 bg-stone-50 p-6">
                         <p className="mb-3 font-bold text-charcoal">Find your answer</p>
@@ -249,6 +249,12 @@ export default function WebflowTrueCostPage() {
                         Forms need a specific check: Webflow documents a lifetime limit of 50 submissions on the free Starter Site plan and unlimited submissions on the other Site plans. Do not invent a paid submission-overage line. File uploads and any external routing or CRM service have their own requirements. Confirm that a test enquiry reaches its destination before cancelling a service that looks redundant. <a href="https://help.webflow.com/hc/en-us/articles/33961344521235-Form-submissions" className={sourceLinkClass}>Form submission rules</a>.
                     </BlogText>
                     <BlogText>
+                        Membership needs its own line too. Webflow&apos;s User Accounts feature ended on January 29, 2026,
+                        so a members area now runs on a separate provider with its own bill;{" "}
+                        <Link href="/blog/webflow-user-accounts-sunset-date-2026" className={sourceLinkClass}>our User Accounts sunset guide</Link>{" "}
+                        covers what Webflow recommended in its place.
+                    </BlogText>
+                    <BlogText>
                         For ecommerce, use the Ecommerce plan that applies to your store, then separately account for Webflow transaction charges, payment processing and store apps. Do not add a marketing Site plan to the same store simply because a comparison table lists both. Work from gross eligible sales, order count and your processor statement; refunds, currencies and your contract can change the result. Check the <a href="https://help.webflow.com/hc/en-us/articles/33961345384339-Webflow-Ecommerce-overview" className={sourceLinkClass}>Ecommerce documentation</a> and your billing terms.
                     </BlogText>
                     <BlogText>
@@ -269,7 +275,7 @@ export default function WebflowTrueCostPage() {
                         Keep the decisions separate: this page covers ongoing cost. Our <Link href="/blog/webflow-migration-cost" className={sourceLinkClass}>Webflow migration cost guide</Link> covers a one-time move; <Link href="/blog/webflow-vs-custom-website" className={sourceLinkClass}>Webflow versus a custom website</Link> compares operating requirements. If you need someone to do the work, see our <Link href="/services/webflow" className={sourceLinkClass}>Webflow optimization and migration services</Link>. A build quote and a subscription price answer different questions.
                     </BlogText>
 
-                    {postFAQs.length > 0 && <><BlogHeader id="faq">Webflow cost questions</BlogHeader><FAQAccordion faqs={postFAQs} /></>}
+                    {postFAQs.length > 0 && <><BlogHeader id="faq">Webflow cost questions</BlogHeader><FAQAccordion faqs={postFAQs} showHeading={false} /></>}
                     <BlogHeader id="sources">Sources and method</BlogHeader>
                     <BlogText>We checked the official pages below on September 25, 2026. The worked budget is our illustrative calculation, not a survey of customer bills. We also sell website services, so compare our proposed work and ongoing costs with keeping your existing platform.</BlogText>
                     <ul className="mb-12 space-y-3 text-sm text-stone-600">{sources.map((source) => <li key={source.url}><a href={source.url} className={sourceLinkClass}>{source.name}</a></li>)}</ul>

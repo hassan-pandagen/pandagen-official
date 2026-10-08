@@ -26,12 +26,12 @@ export default function Footer({ onOpenQuote, showCta = true }: FooterProps) {
 
           <div className="relative z-10 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-stone-300 mb-5 md:mb-8">
-              <MessageCircle className="w-3 h-3 text-orange-300" aria-hidden="true" />
+              <MessageCircle className="w-3 h-3 text-cognac-light" aria-hidden="true" />
               Work directly with the founders
             </div>
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-5 md:mb-8 tracking-tight">
-              Have something{" "}
-              <span className="font-serif italic text-orange-300">in mind?</span>
+              <span className="block">Have something</span>{" "}
+              <span className="block font-serif italic text-cognac-light">in mind?</span>
             </h2>
             <p className="mx-auto mb-7 max-w-xl text-base leading-relaxed text-stone-300">
               A new website, a store to improve, or a workflow to simplify. Tell Hassan or Imran what you need, even if you are still figuring it out.
@@ -79,7 +79,7 @@ export default function Footer({ onOpenQuote, showCta = true }: FooterProps) {
                 </li>
                 <li>
                   <address className="not-italic leading-relaxed">
-                    12250 S Kirkwood Rd, Apt 1128<br />
+                    12250 S Kirkwood Rd, Apt 1128{" "}<br />
                     Stafford, TX 77477, United States
                   </address>
                 </li>

@@ -11,6 +11,7 @@ import {
 } from "@/lib/i18n/config";
 import { getDictionary, type TranslatedLocale } from "@/lib/i18n/dictionaries";
 import HeroLeadForm from "@/components/forms/HeroLeadForm";
+import FaqRows from "@/components/ui/FaqRows";
 import type { PricingContent, ContactContent, HomeContent } from "@/lib/i18n/dictionaries/types";
 import LocaleSwitcher from "./LocaleSwitcher";
 
@@ -86,7 +87,7 @@ export default function LocalePage({
                 {content.hero.title}{" "}
                 <span className="font-serif font-normal italic text-cognac">{content.hero.titleAccent}</span>
               </h1>
-              <p className="mb-6 max-w-xl text-lg font-medium leading-snug text-stone-700 md:text-xl">
+              <p className="mb-5 max-w-xl text-base font-medium leading-6 text-stone-700 sm:text-lg md:text-xl">
                 {content.hero.lead}
               </p>
               {/* French and German CTA labels run well past the English ones, so these
@@ -125,8 +126,8 @@ export default function LocalePage({
               {content.hero.title}{" "}
               <span className="font-serif font-normal italic text-cognac">{content.hero.titleAccent}</span>
             </h1>
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-stone-700">{content.hero.lead}</p>
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-stone-700 sm:mt-8">{content.hero.lead}</p>
+            <div className="mt-7 flex flex-col gap-3 sm:mt-10 sm:flex-row">
               <Link
                 href={routes.contact[locale]}
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white transition-colors hover:bg-cognac"
@@ -291,7 +292,7 @@ export default function LocalePage({
                   <dd className="mt-1">
                     <address className="not-italic leading-relaxed text-stone-600">
                       12250 S Kirkwood Rd, Apt 1128
-                      <br />
+                      {" "}<br />
                       Stafford, TX 77477, United States
                     </address>
                   </dd>
@@ -329,16 +330,9 @@ export default function LocalePage({
 
       {/* FAQ */}
       <section className="px-6 pb-16 md:pb-24">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-8 text-center text-3xl font-bold text-charcoal">{dict.common.faqHeading}</h2>
-          <div className="space-y-5">
-            {content.faq.map((entry) => (
-              <div key={entry.q} className="rounded-2xl border border-stone-300 bg-white p-6">
-                <h3 className="mb-3 text-lg font-bold text-charcoal">{entry.q}</h3>
-                <p className="text-sm leading-relaxed text-stone-600">{entry.a}</p>
-              </div>
-            ))}
-          </div>
+        <div className="mx-auto max-w-6xl">
+          <h2 className="mb-10 text-3xl font-bold text-charcoal md:text-5xl">{dict.common.faqHeading}</h2>
+          <FaqRows faqs={content.faq.map(({ q, a }) => ({ question: q, answer: a }))} />
         </div>
       </section>
 
@@ -850,7 +844,7 @@ function LocaleFooter({
             <li>
               <address className="not-italic leading-relaxed">
                 12250 S Kirkwood Rd, Apt 1128
-                <br />
+                {" "}<br />
                 Stafford, TX 77477, United States
               </address>
             </li>
@@ -893,16 +887,16 @@ function LocaleFooter({
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 text-xs font-medium uppercase tracking-wide text-stone-600 md:flex-row md:items-center md:justify-between">
           <span>&copy; 2026 PandaCodeGen. All rights reserved.</span>
           <div className="flex flex-wrap gap-5">
-            <Link href="/privacy" hrefLang="en" lang="en" className="hover:text-cognac">
+            <Link href="/privacy" hrefLang="en" lang="en" className="inline-flex min-h-6 items-center hover:text-cognac">
               Privacy
             </Link>
-            <Link href="/terms" hrefLang="en" lang="en" className="hover:text-cognac">
+            <Link href="/terms" hrefLang="en" lang="en" className="inline-flex min-h-6 items-center hover:text-cognac">
               Terms
             </Link>
-            <Link href="/cookies" hrefLang="en" lang="en" className="hover:text-cognac">
+            <Link href="/cookies" hrefLang="en" lang="en" className="inline-flex min-h-6 items-center hover:text-cognac">
               Cookies
             </Link>
-            <Link href="/security" hrefLang="en" lang="en" className="hover:text-cognac">
+            <Link href="/security" hrefLang="en" lang="en" className="inline-flex min-h-6 items-center hover:text-cognac">
               Security
             </Link>
           </div>

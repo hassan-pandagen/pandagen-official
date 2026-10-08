@@ -254,14 +254,14 @@ export function hasWithdrawn(slug: string): boolean {
 export function withdrawalNotice(slug: string): string | null {
     const pulled = withdrawnMetrics(slug);
     if (pulled.length === 0) return null;
-    const date = pulled[0].withdrawnDate;
-
-    const pending = pulled.filter(m => !m.permanent);
-    const permanent = pulled.filter(m => m.permanent);
+    const corrections = pulled.filter(m => m.id === 'urls-migrated');
+    const pending = pulled.filter(m => m.id !== 'urls-migrated' && !m.permanent);
+    const permanent = pulled.filter(m => m.id !== 'urls-migrated' && m.permanent);
     const list = (ms: CaseStudyMetric[]) => ms.map(m => m.label.toLowerCase()).join(', ');
 
     const parts: string[] = [];
     if (pending.length) {
+        const date = pending[0].withdrawnDate;
         parts.push(
             `Performance figures for this project (${list(pending)}) were withdrawn on ${date} ` +
             `pending reconciliation of the original test records. They are not stated anywhere ` +
@@ -275,6 +275,9 @@ export function withdrawalNotice(slug: string): string | null {
             `recall the amount, so there is nothing to reconcile against and it will not return.`
         );
     }
+    if (corrections.length) {
+        parts.push('The earlier URL count was withdrawn after an owner correction. No replacement count is published.');
+    }
     return parts.join(' ');
 }
 
@@ -285,10 +288,9 @@ export function withdrawalNotice(slug: string): string | null {
  */
 export function metaFacts(slug: string): string {
     return verifiedMetrics(slug)
-        .filter(m => ['delivery-days', 'urls-migrated', 'templates', 'downtime'].includes(m.id))
+        .filter(m => ['delivery-days', 'templates', 'downtime'].includes(m.id))
         .map(m => {
             if (m.id === 'delivery-days') return `migrated in ${m.value}`;
-            if (m.id === 'urls-migrated') return `${m.value} URLs`;
             if (m.id === 'templates') return `${m.value} templates`;
             if (m.id === 'downtime') return `${m.value} downtime`;
             return `${m.label} ${m.value}`;

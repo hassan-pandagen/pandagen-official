@@ -3,16 +3,22 @@ import type { Metadata } from "next";
 import { alternatesFor } from "@/lib/i18n/config";
 import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, ORGANIZATION_PROFILES } from "@/data/company-facts";
 import { homepageFaqs } from "@/components/redesign/FaqOpen";
-import HeroPreview from "@/app/preview/hero/page";
+import HeroPreview from "@/components/pages/home/HomeDesign";
 
 // Tell Next.js to statically generate this page at build time
 // so critters can inline critical CSS into the HTML output
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
+  // 4 Oct 2026, SEO audit. This is the site's top click page (40 clicks, 1,011
+  // impressions in 90 days). All 25 clicks that GSC ties to a query came from brand
+  // searches (pandacodegen, panda codegen and close spellings), so the title stays. The redesign's description had dropped the starting
+  // price and "code you own", which the live description carried and this page's
+  // body still says ("Custom builds from $1,500", "Code you own"). Both are back,
+  // worded from COMMERCIAL in company-facts.ts. Keep it under about 155 characters.
   title: "Custom Website Design & Development | PandaCodeGen",
   description:
-    "Custom business websites and online stores, with content your team can edit and code you own. Work directly with the founders, scope and price agreed upfront. Fixed pricing from $1,500.",
+    "Work directly with the founders on WordPress sites, custom websites, stores and migrations. Custom builds from $1,500. Code you own, price agreed upfront.",
   // Self-referencing canonical plus reciprocal hreflang to the French and
   // German versions of this page. x-default points at English.
   alternates: alternatesFor("home", "en"),
@@ -23,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "PandaCodeGen",
     title: "Custom Website Design & Development | PandaCodeGen",
     description:
-      "Custom business websites and online stores you own outright. Your team edits the content; we agree scope and price before work starts. From $1,500.",
+      "Work directly with the founders on WordPress sites, custom websites, stores and migrations. Custom builds from $1,500. Code you own, price agreed upfront.",
     images: [
       ogImageForPath("/"),
     ],
@@ -32,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Custom Website Design & Development | PandaCodeGen",
     description:
-      "Custom business websites and online stores you own outright, with a content editor your team runs. Scope and price agreed before work starts.",
+      "Work directly with the founders on WordPress sites, custom websites, stores and migrations. Custom builds from $1,500. Code you own, price agreed upfront.",
     images: [ogImageForPath("/")],
   },
 };
@@ -102,6 +108,7 @@ export default function Home() {
           "availableLanguage": "English"
         },
         "serviceType": [
+          "WordPress Website Design and Development",
           "Custom Web Development",
           "WordPress Migration",
           "Shopify Headless Commerce",
@@ -132,8 +139,8 @@ export default function Home() {
         "@type": "WebSite",
         "@id": "https://www.pandacodegen.com/#website",
         "url": "https://www.pandacodegen.com",
-        "name": "PandaCodeGen - Custom Next.js Web Development",
-        "description": "Custom Next.js websites you own outright, with fast pages and clear answers that search engines and AI assistants can quote.",
+        "name": "PandaCodeGen - Website Design and Development",
+        "description": ORGANIZATION_DESCRIPTION,
         "publisher": {
           "@id": "https://www.pandacodegen.com/#organization"
         },
@@ -144,7 +151,7 @@ export default function Home() {
         "@id": "https://www.pandacodegen.com/#webpage",
         "url": "https://www.pandacodegen.com",
         "name": "Custom Website Design & Development | PandaCodeGen",
-        "description": "Custom Next.js websites you own outright, with fast pages and clear answers that search engines and AI assistants can quote.",
+        "description": ORGANIZATION_DESCRIPTION,
         "isPartOf": {
           "@id": "https://www.pandacodegen.com/#website"
         },

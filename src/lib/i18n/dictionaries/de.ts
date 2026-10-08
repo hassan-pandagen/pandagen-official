@@ -34,17 +34,17 @@ const de: Dictionary = {
     meta: {
       title: "Webdesign und Onlineshop-Entwicklung | PandaCodeGen",
       description:
-        "Individuelle Business-Websites und Onlineshops auf Next.js, die vollständig Ihnen gehören. Ab 1.500 $. Leistungsumfang und Preis werden vor Arbeitsbeginn vereinbart.",
+        "WordPress-Websites, individuelle Websites und Onlineshops. Direkte Zusammenarbeit mit den Gründern, schriftliches Angebot und eine Live-Einführung in die Bearbeitung.",
     },
     hero: {
       eyebrow: "Content-Editor · Einführung · Code, der Ihnen gehört",
       title: "Websites, die zu Ihrer",
       titleAccent: "Arbeitsweise passen.",
       lead:
-        "Wir gestalten und entwickeln Business-Websites und Onlineshops rund um die Art, wie Ihre Kunden anfragen und kaufen. Ihr Team pflegt die Inhalte selbst, der Code gehört Ihnen, und jede Seite ist so gebaut, dass Google und KI-Assistenten sie richtig lesen können. Wenn eine bestehende Website übernommen werden soll, planen wir, wie Inhalte, URLs und Integrationen mitgehen.",
+        "Eine einfache WordPress-Website, ein Onlineshop oder ein individuelles Projekt: Sprechen Sie direkt mit Hassan und Imran. Wir helfen bei der Auswahl, vereinbaren den Preis und zeigen Ihnen in einer Live-Demo und schriftlichen Anleitung, wie Sie Ihre Inhalte bearbeiten.",
     },
     summary:
-      "PandaCodeGen gestaltet und entwickelt schnelle Business-Websites und Onlineshops als individuellen Next.js-Code, der vollständig Ihnen gehört. Wir bauen neue Websites und gestalten oder erneuern bestehende Websites entlang der tatsächlichen Abläufe Ihres Unternehmens. Wenn ein Projekt eine Migration erfordert, planen wir, wie Inhalte, URLs und Integrationen übernommen werden. Projekte beginnen bei 1.500 $ zum Festpreis für den schriftlich vereinbarten Leistungsumfang, ohne Mindestprojektgröße und ohne Abrechnung nach Stunden. Sie erhalten einen Content-Editor, eine Einführung und Code, der Ihnen gehört.",
+      "PandaCodeGen erstellt WordPress-Websites, wenn sie zum Vorhaben passen, sowie individuelle Websites und Software. Die Gründer begleiten neue Projekte, Verbesserungen und Migrationen. Seiten, Funktionen, Zugänge, laufende Kosten und Übergabe werden vor Arbeitsbeginn vereinbart.",
     sections: [
       {
         title: "Wochen statt Monate",
@@ -92,7 +92,7 @@ const de: Dictionary = {
       },
       {
         q: "Warum nicht einfach schnelleres WordPress-Hosting oder ein Caching-Plugin?",
-        a: "Schnelleres Hosting und Caching helfen, ändern aber das zugrunde liegende Modell nicht: WordPress setzt jede Seite bei Aufruf neu zusammen, fragt die Datenbank ab, lädt Plugins und rendert das Theme. Ein statisch erzeugter oder serverseitig gerenderter individueller Build entfernt diesen Zusammenbau, statt ihn zu verdecken.",
+        a: "Ja. Wir prüfen, was auf Ihrer Website Probleme verursacht: Bilder, Hosting, Theme, Plugins oder angebundene Dienste. Eine gezielte Verbesserung kann ausreichen. Eine Migration schlagen wir vor, wenn sie Ihre Anforderungen erfüllt; Kosten und Abwägungen erklären wir vor Ihrer Entscheidung.",
       },
     ],
 
@@ -406,29 +406,29 @@ const de: Dictionary = {
 
   services: {
     meta: {
-      title: "Website-Migration und individuelles Web-Engineering | PandaCodeGen",
+      title: "WordPress-Websites, Webentwicklung und Migration | PandaCodeGen",
       description:
-        "Website-Migration, Commerce-Diagnose und individuelles Web-Engineering, strukturiert entlang von Belegen, Abnahme, Umschaltung und Übergabe.",
+        "WordPress-Websites, individuelle Websites und Onlineshops. Direkte Zusammenarbeit mit den Gründern, schriftliches Angebot und eine Live-Einführung in die Bearbeitung.",
     },
     hero: {
       eyebrow: "Was wir bauen",
       title: "Leistungen und",
       titleAccent: "Architektur.",
       lead:
-        "Drei Kernbereiche. Ein Ziel: Ihr Geschäft schneller, günstiger im Betrieb und schwerer zu übersehen zu machen.",
+        "Eine neue Website, eine Verbesserung oder eine Migration: Wir stimmen die passende Arbeit auf Ihr Unternehmen und Ihr Budget ab.",
     },
     summary:
-      "PandaCodeGen bietet drei Leistungsfamilien: Website-Migration von WordPress, Wix, Squarespace, Webflow, WooCommerce und GoHighLevel; individuelles Web-Engineering für Anwendungen, Portale und Dashboards; sowie hochperformanten Headless-Commerce. Jede Leistung wird zum Festpreis für einen schriftlichen Leistungsumfang kalkuliert und trägt einen Lighthouse-Zielwert von 90+ bei der Übergabe auf Mobilgeräten und Desktop, für die im Umfang benannten repräsentativen Seiten, geprüft über drei aufgezeichnete Durchläufe.",
+      "PandaCodeGen erstellt WordPress-Websites, wenn sie zum Vorhaben passen, sowie individuelle Websites und Software. Die Gründer begleiten neue Projekte, Verbesserungen und Migrationen. Seiten, Funktionen, Zugänge, laufende Kosten und Übergabe werden vor Arbeitsbeginn vereinbart.",
     sections: [
       {
-        title: "01 · WordPress-Migration",
+        title: "01 · WordPress-Websites und Migrationen",
         body:
-          "Ist Ihre WordPress-Website langsam, wird sie angegriffen oder bricht sie regelmäßig? Wir überführen sie auf eine moderne Plattform aus individuellem Code, mit URL-Inventur, Weiterleitungsplan und Prüfung vor dem Umschalten.",
+          "Sie brauchen eine einfache WordPress-Website? Die bauen wir ebenfalls. Bei einer bestehenden Website prüfen wir, was sich verbessern lässt und wann eine Migration zu einer individuellen Lösung sinnvoll wäre. Sie entscheiden, nachdem wir die Möglichkeiten und Kosten erklärt haben.",
         bullets: [
-          "Keine Plugin-Updates mehr zu überwachen",
-          "Kleinere Angriffsfläche: keine Schwachstellen aus Plugins",
-          "Übernahme von Inhalten, Metadaten und Weiterleitungen inbegriffen",
-          "Lighthouse-Ziel 90+ auf den vereinbarten repräsentativen Seiten",
+          "Seiten, Formulare und Inhalte im Angebot festgelegt",
+          "Hosting, Lizenzen und Updates mit klaren Zuständigkeiten",
+          "Bei Migrationen: Inhalte, URLs und Weiterleitungen geplant",
+          "Schriftliche Anleitung und Live-Demo der vereinbarten Bearbeitungsschritte",
         ],
       },
       {

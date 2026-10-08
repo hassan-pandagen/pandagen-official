@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-01-28",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-traffic-drop-speed")],
@@ -64,7 +64,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-traffic-drop-speed"),
             description,
             datePublished: "2026-01-28",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -142,7 +142,7 @@ export default function WordPressTrafficDropPage() {
                             unpleasant to use. Work the list in order and let the evidence name the cause.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed against current Google Search guidance on July 24, 2026.
+                            Reviewed against current Google Search guidance on October 8, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -150,7 +150,7 @@ export default function WordPressTrafficDropPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jan 28, 2026" readTime="5 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wordpress-traffic-drop-speed" published="2026-01-28" readTime="8 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">First response</h2>
@@ -422,7 +422,7 @@ export default function WordPressTrafficDropPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

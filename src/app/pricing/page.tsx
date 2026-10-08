@@ -1,15 +1,15 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import { PricingPreview, pricingPageFaqs } from "@/app/preview/pricing/PricingDesign";
+import { PricingPreview, pricingPageFaqs } from "@/components/pages/pricing/PricingDesign";
 import { alternatesFor } from "@/lib/i18n/config";
 
 export const metadata: Metadata = {
     title: { absolute: "Website & Online Store Pricing | PandaCodeGen" },
-    description: "Custom websites and online stores start at $1,500, $3,500 and $5,000, with pages and features adjusted in a written quote.",
+    description: "Custom website and online store builds have published starting prices from $1,500. WordPress websites are quoted to scope. Final work and price are agreed in writing.",
     alternates: alternatesFor("pricing", "en"),
     openGraph: {
         title: "Website & Online Store Pricing | PandaCodeGen",
-        description: "Packages start at $1,500, $3,500 and $5,000, with exact scope confirmed in writing.",
+        description: "Custom builds have published starting prices from $1,500. WordPress websites are quoted to scope; the final price is agreed in writing.",
         url: "https://www.pandacodegen.com/pricing",
         type: "website",
         images: [ogImageForPath("/pricing")],
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Website & Online Store Pricing | PandaCodeGen",
-        description: "Packages start at $1,500, $3,500 and $5,000, with exact scope confirmed in writing.",
+        description: "Custom builds have published starting prices from $1,500. WordPress websites are quoted to scope; the final price is agreed in writing.",
     },
 };
 
@@ -46,7 +46,7 @@ const pageSchema = {
             "@id": "https://www.pandacodegen.com/pricing#webpage",
             "url": "https://www.pandacodegen.com/pricing",
             "name": "Website & Online Store Pricing | PandaCodeGen",
-            "description": "Website and online store packages starting at $1,500, $3,500, and $5,000, adjusted through a written project scope.",
+            "description": "Custom website and online store builds with published starting prices from $1,500. WordPress websites are quoted to scope; the written proposal sets the final price.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "inLanguage": "en-US"
         },

@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         description: "Step-by-step WordPress to Next.js migration: content export, 301 redirect mapping, SEO preservation, staged QA, controlled cutover, rollback, and monitoring.",
         type: "article",
         publishedTime: "2026-03-11",
-        modifiedTime: "2026-08-19T00:00:00-05:00",
+        modifiedTime: "2026-10-08T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs",
         images: [ogImageForPath("/blog/how-to-migrate-wordpress-to-nextjs")],
@@ -57,7 +57,7 @@ const articleSchema = {
             "description": "Step-by-step WordPress to Next.js migration: content export, 301 redirect mapping, SEO preservation, staged QA, controlled cutover, rollback, and monitoring.",
             "image": ogImageUrlForPath("/blog/how-to-migrate-wordpress-to-nextjs"),
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-08-19T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -88,7 +88,7 @@ const articleSchema = {
             "citation": [
                 { "@type": "CreativeWork", "name": "Next.js Official Documentation", "url": "https://nextjs.org/docs" },
                 { "@type": "CreativeWork", "name": "Google Search Central. Site Move Guide", "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
-                { "@type": "CreativeWork", "name": "Vercel Deployment Documentation", "url": "https://vercel.com/docs/deployments/overview" },
+                { "@type": "CreativeWork", "name": "Vercel Deployment Documentation", "url": "https://vercel.com/docs/deployments" },
                 { "@type": "CreativeWork", "name": "WordPress Export Tool Documentation", "url": "https://wordpress.org/documentation/article/tools-export-screen/" }
             ]
         },
@@ -110,7 +110,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/how-to-migrate-wordpress-to-nextjs") },
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-08-19T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -164,14 +164,15 @@ export default function MigrateWordPressToNextJSPage() {
                             How to Migrate WordPress to <span className="font-serif italic text-cognac">Next.js</span> Without Losing SEO
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed" data-speakable="true">
-                            MyCustomPatches is an independent client, and its owner reports that the migration was
-                            completed in about 22 days. The performance numbers we previously published for it have
-                            been withdrawn until their dated URLs, profiles, run count, cache and consent state are
-                            reconciled. Here is the SEO migration checklist behind the work.
+                            To move a WordPress site to Next.js without losing search traffic, list every URL you have,
+                            decide whether WordPress stays on as a headless backend, export the content, rebuild the
+                            pages, give every changed address a 301 redirect, carry over titles, descriptions and
+                            canonicals, then crawl the staged site before you switch DNS. This guide is for doing it
+                            yourself, and the eight steps below are the ones we run on client migrations.
                         </p>
                         <BlogAuthor
-                            date="Mar 11, 2026"
-                            readTime="11 min read"
+                            postId="how-to-migrate-wordpress-to-nextjs" published="2026-03-11"
+                            readTime="17 min read"
                             bio="Hassan plans WordPress to Next.js migrations around four things: performance you can measure, URLs that keep working, crawling the staged site before anyone sees it, and a handover that does not surprise you."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -212,7 +213,7 @@ export default function MigrateWordPressToNextJSPage() {
                         <div className="my-6 p-5 bg-cognac/5 border border-cognac/20 rounded-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Owner-confirmed project: MyCustomPatches</p>
                             <p className="text-sm text-stone-700 leading-relaxed mb-2">
-                                MyCustomPatches is an independent client, not a PandaCodeGen property, and its figures are owner-confirmed and published with permission. The client&apos;s owner reports a delivery of about 22 days. We do not hold a dated record of that confirmation, so treat it as an owner statement rather than an audited figure. This article does not treat that number as a
+                                MyCustomPatches is an independent client, not a PandaCodeGen property, and its figures are owner-confirmed and published with permission. The client&apos;s owner reports a delivery of about 22 days. Our central project record lists client-owner approval on July 21, 2026. Treat it as an owner statement rather than an audited figure. This article does not treat that number as a
                                 market average or as proof of the project&apos;s exact migration inventory. We publish performance
                                 figures only with the test profile, date and conditions attached, so none are quoted
                                 here. Commercial hosting is budgeted under the destination provider&apos;s
@@ -235,7 +236,12 @@ export default function MigrateWordPressToNextJSPage() {
                             content backend and replaces only the front end with Next.js, so editors keep working in
                             wp-admin exactly as they do today. <strong>Full migration</strong> takes the content out of
                             WordPress altogether, into Markdown/MDX files in the repository or into a separate headless
-                            CMS, and WordPress is switched off at the end.
+                            CMS, and WordPress is switched off at the end. If you are also weighing a WordPress-style
+                            CMS that isn&apos;t WordPress,{" "}
+                            <Link href="/blog/cloudflare-emdash-wordpress-replacement#nextjs" className="text-stone-700 underline underline-offset-2 hover:text-black">
+                                our EmDash review covers whether it works with Next.js
+                            </Link>
+                            .
                         </BlogText>
                         <BlogText>
                             Choose by who edits the site and how often, not by which stack sounds more modern:
@@ -312,7 +318,7 @@ export default function MigrateWordPressToNextJSPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-600 mb-1">Step 3</p>
                                 <h3 className="text-lg font-bold mb-3">Set Up Your Next.js Project</h3>
                                 <BlogText>
-                                    Scaffold your project with <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">npx create-next-app@latest --typescript</code>. Install Tailwind CSS for styling. Deploy an empty shell to Vercel immediately. This sets up your CI/CD pipeline so every commit deploys automatically. You will use preview URLs for QA throughout the build.
+                                    Scaffold your project with <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">npx create-next-app@latest</code>. TypeScript and Tailwind CSS come set up by default. Deploy an empty shell to Vercel immediately. This sets up your CI/CD pipeline so every commit deploys automatically. You will use preview URLs for QA throughout the build.
                                 </BlogText>
                                 <BlogText>
                                     If your team needs to edit blog posts or pages themselves, work out what they actually need before you pick a CMS: which fields, how content pieces relate to each other, who is allowed to do what, whether they can preview before publishing, whether you need other languages, and who signs a post off. Sanity and Contentful are both established choices. Check the plan you would be on, what usage is included, what editor seats cost, and what you would pay to run it.
@@ -329,7 +335,7 @@ export default function MigrateWordPressToNextJSPage() {
                                     For each <Link href="/blog/wordpress-plugin-security-2026" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WordPress plugin</Link>, implement the equivalent native solution:
                                 </BlogText>
                                 <BlogList items={[
-                                    "Contact Form 7 / Gravity Forms → API route + Resend or Nodemailer",
+                                    "Contact Form 7 / Gravity Forms → a Route Handler or Server Action that sends mail with Resend or Nodemailer",
                                     "Yoast SEO → Next.js metadata API + JSON-LD schema in each page",
                                     "Analytics and advertising tags → consent-gated loading through the site's approved consent flow, with regional behavior and event delivery verified before launch",
                                     "WooCommerce → Shopify headless or custom Stripe integration",
@@ -349,7 +355,7 @@ export default function MigrateWordPressToNextJSPage() {
     {
       source: '/old-wordpress-slug',
       destination: '/new-nextjs-path',
-      permanent: true, // 301
+      permanent: true, // 308, which Google treats like a 301
     },
   ]
 }`}</pre>
@@ -366,21 +372,21 @@ export default function MigrateWordPressToNextJSPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-600 mb-1">Step 6</p>
                                 <h3 className="text-lg font-bold mb-3">Migrate All SEO Metadata</h3>
                                 <BlogText>
-                                    Transfer every title tag, meta description, Open Graph tag, and canonical URL from WordPress (via Yoast or RankMath) to Next.js. In Next.js 14+, use the metadata API in each <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">page.tsx</code>:
+                                    Transfer every title tag, meta description, Open Graph tag, and canonical URL from WordPress (via Yoast or Rank Math) to Next.js. In the Next.js App Router, use the metadata API in each <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">page.tsx</code>:
                                 </BlogText>
                                 <div className="bg-stone-900 text-stone-100 rounded-lg p-4 my-4 text-sm font-mono overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                                     <pre>{`export const metadata = {
   title: "Your Page Title",
   description: "Your meta description",
   alternates: { canonical: "https://yoursite.com/page" },
-  openGraph: { title, description, type: "website" },
+  openGraph: { title: "Your Page Title", description: "Your meta description", type: "website" },
 }`}</pre>
                                 </div>
                                 <BlogText>
                                     Recreate only the JSON-LD structured data that accurately describes the page and was previously generated by WordPress or its SEO plugin. Common types include Organization, WebSite, BreadcrumbList, WebPage, and Article where eligible. Keeping schema in the codebase makes it version-controlled and testable, but it does not guarantee a rich result.
                                 </BlogText>
                                 <BlogText>
-                                    Generate a new <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">sitemap.xml</code> with Next.js metadata routes or <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">next-sitemap</code>. Include the canonical, indexable URLs you want search engines to discover, exclude application and API routes, and compare the output with the approved URL inventory.
+                                    Generate a new <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">sitemap.xml</code> with Next.js&apos;s built-in sitemap file, <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">app/sitemap.ts</code>. Include the canonical, indexable URLs you want search engines to discover, exclude application and API routes, and compare the output with the approved URL inventory.
                                 </BlogText>
                             </div>
 
@@ -410,7 +416,7 @@ export default function MigrateWordPressToNextJSPage() {
                                 <p className="text-xs font-semibold uppercase tracking-widest text-stone-600 mb-1">Step 8</p>
                                 <h3 className="text-lg font-bold mb-3">DNS Cutover and Post-Launch Monitoring</h3>
                                 <BlogText>
-                                    When QA is complete and everything passes, update your domain DNS to point to Vercel. In your domain registrar, update the A record to Vercel's IP or add a CNAME pointing to your Vercel project URL. Vercel provisions an SSL certificate automatically within minutes.
+                                    When QA is complete and everything passes, update your domain DNS to point to Vercel. At your registrar, point the root domain at Vercel with an A record and the www subdomain with a CNAME, using the exact values shown in your project's Domains settings. Vercel issues the SSL certificate automatically once those DNS records have propagated.
                                 </BlogText>
                                 <BlogText>
                                     Immediately after DNS propagates and your new site is live:
@@ -503,6 +509,18 @@ export default function MigrateWordPressToNextJSPage() {
                             The decision comes down to technical capacity, migration risk, and what the website supports. For a revenue-generating site, compare the quoted migration cost with maintenance spend, conversion friction, downtime exposure, and the internal time required for DIY delivery. A professional migration can reduce execution risk, but it cannot promise payback or rankings. If you are a developer who wants to learn Next.js through a real project, DIY is a legitimate path. Just budget time for crawl QA, accessibility, analytics, consent, security, and rollback testing as well as the build. For the measurement process, read our guide to <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">a 90+ PageSpeed score</Link>.
                         </BlogText>
                         <BlogText>
+                            If you&apos;d rather have it done for you, our{" "}
+                            <Link href="/services/wordpress-migration" className="text-stone-700 underline underline-offset-2 hover:text-black">
+                                WordPress to Next.js migration service
+                            </Link>{" "}
+                            handles the same work: the URL inventory, the build, the redirects, the staged crawl and the
+                            cutover. If you go the professional route, compare providers on the same evidence:{" "}
+                            <Link href="/blog/top-nextjs-agencies-2026" className="text-stone-700 underline underline-offset-2 hover:text-black">
+                                our shortlist of Next.js development agencies
+                            </Link>{" "}
+                            sets out what to check before you choose one, us included.
+                        </BlogText>
+                        <BlogText>
                             Either way, read our post on{" "}
                             <Link href="/blog/wordpress-vs-nextjs" className="text-stone-700 underline underline-offset-2 hover:text-black">
                                 WordPress vs Next.js
@@ -515,10 +533,10 @@ export default function MigrateWordPressToNextJSPage() {
                             <Link href="/blog/why-we-chose-nextjs-over-wordpress-2026" className="text-stone-700 underline underline-offset-2 hover:text-black">
                                 why we moved off WordPress ourselves
                             </Link>{" "}
-                            with the before and after numbers.
+                            and what it cost us.
                         </BlogText>
 
-                        <div className="flex items-center gap-2 text-xs text-stone-500 mt-8"><RefreshCw className="w-3 h-3" />Published: Mar 11, 2026</div>
+                        <div className="flex items-center gap-2 text-xs text-stone-500 mt-8"><RefreshCw className="w-3 h-3" />Published: Mar 11, 2026. Updated Oct 8, 2026.</div>
                     </section>
 
                     {/* Bottom CTA */}

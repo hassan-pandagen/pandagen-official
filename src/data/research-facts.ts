@@ -12,6 +12,8 @@ import raw from './research-facts.json';
  * limits, which change without notice and carry a 90/180-day staleness clock.
  * These are published studies. A study does not go stale in 90 days; it is
  * superseded when the next edition appears. Different lifecycle, different file.
+ * Since 4 Oct 2026 scripts/spec_freshness.py watches this file too, with a
+ * longer default (warn at 180 days, fail at 360) so a new edition gets noticed.
  *
  * THE RULE. Every figure here was read off the source page and verified, not
  * taken from a research summary. Two figures in the dossier these came from
@@ -59,6 +61,8 @@ export interface ResearchFinding {
     limitation: string;
     publishedYear: string;
     verifiedAt: string;
+    /** Days before scripts/spec_freshness.py warns (it fails at twice this). Default 180. */
+    reviewDays?: number;
     source: string;
 }
 

@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-28",
-        modifiedTime: "2026-08-31",
+        modifiedTime: "2026-10-08",
         url: canonicalUrl,
         siteName: "PandaCodeGen",
         images: [ogImageForPath("/blog/ai-search-visibility-tracking")],
@@ -66,7 +66,7 @@ const schema = {
             headline: title,
             description,
             datePublished: "2026-08-28",
-            dateModified: "2026-08-31",
+            dateModified: "2026-10-08",
             author: { "@type": "Person", name: "Hassan Jamal", url: "https://www.pandacodegen.com/about/hassan" },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
             mainEntityOfPage: canonicalUrl,
@@ -130,14 +130,14 @@ export default function AiSearchVisibilityTracking() {
                     AI visibility tracking: what 77 pages and 6,700 AI impressions showed
                 </h1>
 
-                <BlogAuthor name="Hassan Jamal" role="Lead Engineer" date="28 August 2026" readTime="15 min" />
+                <BlogAuthor name="Hassan Jamal" role="Lead Engineer" postId="ai-search-visibility-tracking" published="2026-08-28" readTime="15 min" />
                   </div>
                   <div data-article-hero-screen>
                 <BlogCoverFigure id="ai-search-visibility-tracking" />
                   </div>
                 </div>
 
-                <p data-speakable="true" className="mt-6 text-lg leading-relaxed text-stone-700">Seventy-seven pages, 6,700 AI impressions over 88 days, and the pages Google&apos;s AI quoted were not the ones that ranked best. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.</p>
+                <p data-speakable="true" className="mt-6 text-lg leading-relaxed text-stone-700">Seventy-seven pages, 6,700 AI impressions over 88 days, and AI impressions were concentrated on a few pages. Across matching URLs, AI impressions and ordinary search clicks were positively correlated; this is not a comparison of ranking positions. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.</p>
 
                 <TopicUpLink postId={postId} />
 
@@ -220,7 +220,7 @@ export default function AiSearchVisibilityTracking() {
                     <BlogHeader id="free-tool">How do you track AI visibility without buying a tool?</BlogHeader>
                     <BlogText>
                         Open Search Console, go to Performance, and switch to the Generative AI report. That is the whole
-                        setup. It is our own data about your own property, Google publishes it at no cost, and it
+                        setup. It is Google&apos;s own data about your own property, Google publishes it at no cost, and it
                         needs no tag, no script and no trial. Ask a general-purpose AI assistant how to track brand
                         mentions in AI search and it will send you shopping for monitoring software before it mentions
                         the report Google already gives you.
@@ -345,8 +345,9 @@ export default function AiSearchVisibilityTracking() {
                         forgotten the window moved.
                     </BlogText>
 
+                    {/* 8 Oct 2026: was "Ninety-five more posts exist". src/data/blog.ts lists 88 posts today, so 87 others. */}
                     <BlogQuote>
-                        Half of this site&apos;s AI visibility comes from one URL. Ninety-five more posts exist. Volume was
+                        Half of this site&apos;s AI visibility comes from one URL. Eighty-seven more posts exist. Volume was
                         not the thing that worked.
                     </BlogQuote>
 
@@ -365,8 +366,10 @@ export default function AiSearchVisibilityTracking() {
                     <div className="overflow-x-auto">
                         <table className="w-full border-collapse text-left text-sm">
                             <caption className="mb-3 text-left text-sm text-stone-500">
-                                Pages where AI visibility and ordinary clicks disagree. Same property, same export date.
+                                Pages where AI visibility and ordinary clicks disagree. Same property. AI impressions from
+                                the 19 August 2026 Generative AI export, clicks from the 25 August 2026 Performance export.
                             </caption>
+                            {/* 8 Oct 2026: caption said "same export date". The method box above gives two exports on different dates (19 and 25 August). */}
                             <thead>
                                 <tr className="border-b border-stone-300">
                                     <th scope="col" className="p-3 font-semibold text-charcoal">Page</th>
@@ -410,18 +413,18 @@ export default function AiSearchVisibilityTracking() {
                         real visit.
                     </BlogText>
                     <BlogText>
-                        We got this wrong ourselves before catching it. An earlier internal read calculated click-through
-                        rates from the query export and produced a figure that was wrong by orders of magnitude, because
-                        the denominator was complete and the numerator was not. Use the pages export for any rate. Use
-                        the query export to see which phrases exist, never to work out how well they perform.
+                        Do not combine clicks from a partial query export with impressions from a different total.
+                        Calculate CTR from matching clicks and impressions at the same scope and date range. Returned
+                        query rows can support query-level CTR; omitted queries mean their sum is not a complete
+                        property total. Use the page report for page comparisons and preserve its filters and limits.
                     </BlogText>
 
-                    <BlogHeader id="fan-out-queries">Can you see the machine\u2019s own queries in Search Console?</BlogHeader>
+                    <BlogHeader id="fan-out-queries">Can you see the machine&apos;s own queries in Search Console?</BlogHeader>
 
                     <BlogText>
                         Sometimes, and it costs nothing to check. Filter the query report for{" "}
-                        <code>site:</code> and any results are almost certainly not people. Assistants building a
-                        retrieval query use search operators; humans typing into a box very rarely do. The method comes
+                        <code>site:</code> to find queries worth investigating. Both people and automated systems use
+                        search operators, so an operator alone does not identify an AI request. One proposed method comes
                         from{" "}
                         <a
                             href="https://lilyraynyc.substack.com/p/what-we-can-learn-from-evolving-chatgpt"
@@ -448,8 +451,8 @@ export default function AiSearchVisibilityTracking() {
                     </div>
 
                     <BlogText>
-                        Twenty-one impressions, average position 3.24, no clicks. Nobody types eleven exclusions. That
-                        is a retrieval query stating an intent in plain words and then removing every freelance
+                        Twenty-one impressions, average position 3.24, no clicks. The exclusions suggest automated retrieval, but do not prove it. This
+                        query stating an intent in plain words and then removing every freelance
                         marketplace and website-builder domain from the results, which is a reasonable thing to do if
                         you are trying to find an agency rather than a gig listing.
                     </BlogText>
@@ -472,7 +475,7 @@ export default function AiSearchVisibilityTracking() {
                         no clicks looks like a click-through failure, and often is. The query above is impressions with
                         no clicks and is not a failure at all: something retrieved the result, read what it needed, and
                         had no reason to click. Those two cases are indistinguishable in the pages report and separable
-                        in the query report, which is the one argument for opening the query export at all.
+                        in the query report. Treat them as leads to investigate, alongside ordinary search queries, rather than verified AI requests.
                     </BlogText>
 
                     <BlogHeader id="how-to-read">How should you read your own numbers?</BlogHeader>
@@ -486,7 +489,7 @@ export default function AiSearchVisibilityTracking() {
                         items={[
                             "Export the Generative AI report and sort by impressions. Note what share your top page holds. If one URL is carrying most of your AI visibility, that page is your position, and the risk sitting under it is concentration.",
                             "Compare that list against your standard Performance export, page by page. Pages with AI impressions and no clicks are the ones the standard report will never draw your attention to.",
-                            "Calculate every rate from the pages export. The query export is missing most of your clicks and will mislead you about all of them.",
+                            "Calculate rates only from matching numerators and denominators. Query-level CTR is valid for returned rows, but their totals omit anonymized or truncated queries.",
                             "Read the answers themselves for your five most important commercial queries. That is the only way to learn whether you are being recommended or merely footnoted.",
                             "Re-export on a fixed schedule and keep the files. The report has no history beyond its window, so the only trend line you will ever have is the one you saved.",
                         ]}
@@ -530,13 +533,14 @@ export default function AiSearchVisibilityTracking() {
                         .
                     </BlogText>
                     <BlogText>
-                        If your own export shows impressions without clicks, or one page carrying everything, the
-                        diagnosis is usually in the page rather than in the platform. That is the work behind{" "}
+                        A concentration of AI impressions identifies pages worth investigating. This report does not
+                        isolate AI clicks or conversions, so it cannot diagnose conversion loss. Compare matched
+                        search data with referral and conversion records before attributing an outcome. That is part of{" "}
                         <Link href="/services/ai-seo" className="text-cognac hover:underline">
                             our AI SEO services
                         </Link>:
-                        instead of asking what a rebuild would cost, you are asking which pages already earn
-                        attention and what is stopping them converting it.
+                        we establish what each report measures, which pages receive visibility and which business
+                        outcomes can actually be attributed.
                     </BlogText>
 
                     <BlogHighlight>
@@ -561,7 +565,7 @@ export default function AiSearchVisibilityTracking() {
                         </p>
                         <div className="mt-5">
                             <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 font-bold text-white hover:bg-stone-800">
-                                Book a 30-minute read-through <ArrowRight className="h-4 w-4" />
+                                Book a 15-minute read-through <ArrowRight className="h-4 w-4" />
                             </CalModalButton>
                         </div>
                     </div>

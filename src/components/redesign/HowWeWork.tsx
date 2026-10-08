@@ -2,7 +2,7 @@ import { FileCheck2, Gauge, KeyRound, LifeBuoy, PencilLine, UserRound } from "lu
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// How we work, as a list of short commitments. Redesign candidate, 24 Sep 2026,
+// Client commitments, as a list of short terms. Redesign candidate, 24 Sep 2026,
 // modelled on grigoletti.ch: rows dimmed until you point at one.
 // ─────────────────────────────────────────────────────────────────────────────
 // Every line is a claim the site already makes, shortened where marked:
@@ -32,10 +32,13 @@ const rows = [
 
 export default function HowWeWork() {
   return (
-    <section aria-labelledby="how-title" className="px-6 py-24 md:px-10 md:py-32" style={{ backgroundColor: T.dark, color: T.onDark }}>
+    <section aria-labelledby="how-title" className="px-6 py-16 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
       <div className="mx-auto max-w-[1440px]">
-        <h2 id="how-title" className="text-[12px] uppercase tracking-[0.16em]" style={{ fontFamily: MONO, color: T.onDarkQuiet }}>
-          How we work
+        <p className="text-[12px] uppercase tracking-[0.16em]" style={{ fontFamily: MONO, color: T.onDarkQuiet }}>
+          What you get
+        </p>
+        <h2 id="how-title" className="mt-5 max-w-[18ch]" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2.6rem, 5.4vw, 5.2rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}>
+          Know what is included <span style={{ color: T.onDarkAccent }}>before we build.</span>
         </h2>
         <ul className="how-list mt-10 border-t" style={{ borderColor: T.onDarkRule }}>
           {rows.map(({ label, Icon, text }) => (

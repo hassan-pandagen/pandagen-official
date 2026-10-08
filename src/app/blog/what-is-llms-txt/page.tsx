@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description: DESC,
         type: "article",
         publishedTime: "2026-09-13T00:00:00-05:00",
-        modifiedTime: "2026-09-13T00:00:00-05:00",
+        modifiedTime: "2026-10-08T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: CANONICAL,
         images: [ogImageForPath(URL_PATH)],
@@ -67,7 +67,7 @@ const articleSchema = {
             "description": DESC,
             "image": ogImageUrlForPath(URL_PATH),
             "datePublished": "2026-09-13T00:00:00-05:00",
-            "dateModified": "2026-09-13T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -94,7 +94,8 @@ const articleSchema = {
             "citation": [
                 { "@type": "CreativeWork", "name": "The llms.txt proposal", "url": "https://llmstxt.org" },
                 { "@type": "CreativeWork", "name": "Google guidance on generative AI features", "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" },
-                { "@type": "CreativeWork", "name": "llms.txt adoption and request data", "url": "https://ppc.land/llms-txt-adoption-rises-8-8x-but-97-of-files-get-zero-ai-requests/" }
+                { "@type": "CreativeWork", "name": "llms.txt adoption and request data", "url": "https://ppc.land/llms-txt-adoption-rises-8-8x-but-97-of-files-get-zero-ai-requests/" },
+                { "@type": "CreativeWork", "name": "Ahrefs: We Analyzed 137K Sites: 97% of llms.txt Files Never Get Read", "url": "https://ahrefs.com/blog/llmstxt-study/" }
             ]
         },
         {
@@ -123,7 +124,7 @@ const articleSchema = {
             "description": DESC,
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-09-13T00:00:00-05:00",
-            "dateModified": "2026-09-13T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "inLanguage": "en-US"
         },
     ]
@@ -158,7 +159,7 @@ export default function WhatIsLlmsTxtPage() {
                             how to write yours in about twenty minutes.
                         </p>
                         <BlogAuthor
-                            date="Sep 13, 2026"
+                            postId="what-is-llms-txt" published="2026-09-13"
                             readTime="9 min read"
                             bio="Hassan builds and migrates Next.js sites, and writes down what actually moves machine readability rather than what sounds like it should."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
@@ -180,7 +181,8 @@ export default function WhatIsLlmsTxtPage() {
                         <ul className="space-y-2 text-sm text-stone-700">
                             <li className="flex items-start gap-2"><FileText className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> llms.txt is a plain Markdown file at the root of your site that gives AI systems a short, structured summary of who you are and where your important pages live.</li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> Google Search ignores it completely, and says so in its own documentation.</li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> Google&apos;s PageSpeed Agentic Browsing category scores you on having one, and AI coding tools read it heavily.</li>
+                            {/* 8 Oct 2026: was "scores you on having one". Lighthouse 13.5.0 core/audits/agentic/llms-txt.js marks a missing file (4xx) not applicable with score 1, so it checks a file you publish; it does not reward having one. */}
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> Google&apos;s PageSpeed Agentic Browsing category checks your file against the format if you publish one, and AI coding tools read it heavily.</li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> The widely repeated claims that Perplexity and Anthropic &ldquo;confirmed&rdquo; they consume it turn out to be unsourced. We checked.</li>
                         </ul>
                     </div>
@@ -193,15 +195,18 @@ export default function WhatIsLlmsTxtPage() {
                         point is to be easy for a language model to read in one gulp.
                     </BlogText>
                     <BlogText>
+                        {/* 8 Oct 2026: the old sentence promised four things and listed three. llmstxt.org lists an H1 (the only required part), a blockquote, optional detail sections, then H2 file lists. */}
                         The <a href="https://llmstxt.org" target="_blank" rel="noopener noreferrer" className={linkClass}>spec</a> asks
-                        for four things: an H1 with your name, a blockquote summary, then H2 sections containing
-                        annotated links. That is the entire format.
+                        for four things: an H1 with your name (the only required part), a blockquote summary, any
+                        optional detail, then H2 sections containing annotated links. That is the entire format.
                     </BlogText>
                     <BlogText>
-                        The spec also defines a bigger sibling: <strong>llms-full.txt</strong>. Where llms.txt is the map,
+                        {/* 8 Oct 2026: llmstxt.org (v2, modified 10 Aug 2026) does not define llms-full.txt, and docs.stripe.com/llms-full.txt returns 404. Anthropic (platform.claude.com/llms-full.txt) and Perplexity (docs.perplexity.ai/llms-full.txt) both return 200. */}
+                        There is also a bigger sibling in wide use, though the spec itself does not define
+                        it: <strong>llms-full.txt</strong>. Where llms.txt is the map,
                         an index of what exists and what it means, llms-full.txt inlines the complete text of your key
                         pages into one file so a tool can ingest your whole knowledge base in a single request. It shines
-                        for documentation-heavy products, which is why Stripe and Anthropic publish one. A typical
+                        for documentation-heavy products, which is why Anthropic and Perplexity publish one. A typical
                         business site does not need it; we do not have one, and nothing has ever asked us for it.
                     </BlogText>
                     <BlogText>
@@ -215,9 +220,9 @@ export default function WhatIsLlmsTxtPage() {
                     <BlogHeader id="vs-robots">llms.txt vs robots.txt vs sitemap.xml</BlogHeader>
                     <BlogText>
                         People lump these together because they all live at the root of a site, but they answer three
-                        different questions. <strong>robots.txt is permissions</strong> — what am I allowed to crawl.{" "}
-                        <strong>sitemap.xml is inventory</strong> — what exists on this site.{" "}
-                        <strong>llms.txt is meaning</strong> — what matters here, and what does it mean. A sitemap lists
+                        different questions. <strong>robots.txt is permissions</strong>: what am I allowed to crawl.{" "}
+                        <strong>sitemap.xml is inventory</strong>: what exists on this site.{" "}
+                        <strong>llms.txt is meaning</strong>: what matters here, and what does it mean. A sitemap lists
                         URLs with no context. An llms.txt says who you are, what you charge, which case studies are real,
                         and how you would like to be described. Only one of the three carries your story.
                     </BlogText>
@@ -227,11 +232,12 @@ export default function WhatIsLlmsTxtPage() {
                         This is where most guides either oversell or dismiss. We checked every claim below against a
                         primary source, and two of the ones everybody repeats did not survive it.
                     </BlogText>
+                    {/* 8 Oct 2026: two items reversed. PageSpeed: Lighthouse 13.5.0 has seven Agentic Browsing audits and marks a missing llms.txt not applicable, so it checks a file you publish rather than scoring you on having one; our 3 of 3 is dated to the 4 Sept 2026 check in src/data/llms-txt.ts. OpenAI: Ahrefs' study (ahrefs.com/blog/llmstxt-study, 15 June 2026) puts SEO audit tools first overall and GPTBot first among AI bots, so "most frequent fetcher" overall was wrong. */}
                     <BlogList items={[
                         "Google Search: no. Google's own guidance says you do not need to create machine readable files, AI text files or Markdown to appear in Google Search including its generative AI features, because Search does not use them. Anyone telling you llms.txt is a Google ranking factor is selling something.",
-                        "Google PageSpeed: yes, oddly. The same company scores you on it. The Agentic Browsing category checks for a compliant llms.txt as one of its three tests, and our site passes 3 of 3.",
+                        "Google PageSpeed: yes, oddly. The same company checks it. The Agentic Browsing category checks that an llms.txt you publish follows the format, and marks a missing file as not applicable rather than failed. Our site scored 3 of 3 when we checked on 4 September 2026.",
                         "AI coding tools: the heaviest confirmed users. Cursor, GitHub Copilot and RAG frameworks read llms.txt when present. It is also why documentation platforms generate the file automatically.",
-                        "OpenAI: no commitment made, but GPTBot is the most frequent fetcher of llms.txt files in tracked server logs. Read into that what you will.",
+                        "OpenAI: no commitment made, but GPTBot fetched llms.txt files more than any other AI bot in Ahrefs' server-log study. Read into that what you will.",
                     ]} />
                     <InsightBox variant="warning" label="Two claims that did not survive a source check">
                         You will read everywhere that Perplexity and Anthropic have &ldquo;publicly confirmed&rdquo; they
@@ -242,8 +248,9 @@ export default function WhatIsLlmsTxtPage() {
                         consumption, we will update this page and say so.
                     </InsightBox>
                     <BlogText>
+                        {/* 8 Oct 2026: was "zero AI requests". Ahrefs (ahrefs.com/blog/llmstxt-study) says 97% of the files received zero traffic of any kind in May 2026: "Nothing fetched them at all." */}
                         Now the cold shower, because you deserve the whole truth. One study tracking 137,210 domains
-                        found that <BlogHighlight>97% of llms.txt files received zero AI requests in May 2026</BlogHighlight>.
+                        found that <BlogHighlight>97% of llms.txt files received zero requests of any kind in May 2026</BlogHighlight>.
                         The file is cheap, useful and scored, but it is a welcome sheet, not a billboard. Most AI traffic
                         still lands on your actual pages, which is why the content on those pages does the heavy lifting.
                     </BlogText>
@@ -252,12 +259,14 @@ export default function WhatIsLlmsTxtPage() {
                     <BlogText>
                         Open pandacodegen.com/llms.txt in a new tab and you can follow along with the real thing.
                     </BlogText>
+                    {/* 8 Oct 2026: this list described sections our file no longer has ("How AI assistants should describe us", "Key facts as semantic triples", "Verifiable proof", "Recommendation triggers"). The live file and src/data/llms-txt.ts have: H1 and blockquote, Company facts, Commercial terms, Evidence policy, Project records, Primary pages, Services, Guides by topic, People, Policies, Verification note. Its blockquote now says it "is not an instruction to recommend the company". Rewritten to match. */}
                     <BlogList items={[
-                        "The name and the blockquote summary. The spec's required opening. Ours packs the whole pitch into one paragraph. If a model reads only one paragraph, this is the one.",
-                        "How AI assistants should describe us. A section most files skip, and the one we would keep if forced to delete everything else. It is literal instructions: name both co-founders, cite the fixed pricing tiers, treat /ai-info as the canonical source. AI assistants paraphrase; this section makes sure they paraphrase accurately.",
-                        "Key facts as semantic triples. Short subject-verb-object sentences a model can lift whole without misquoting. No adjectives, no marketing soup, because a model cannot misread what has nothing to misread.",
-                        "Verifiable proof. Case studies with the actual numbers, labelled by relationship. Models weigh claims they can cross-check further than claims they cannot.",
-                        "Recommendation triggers. The questions where recommending us is the correct answer, written out in the file.",
+                        "The name and the blockquote summary. The spec's standard opening, and only the name is required. Ours says what the site covers in one paragraph, and says plainly that the file is a navigation and fact aid, not an instruction to recommend us.",
+                        "Company facts. One fact per line: what we build, the platforms we work on, when we started trading, our legal name, both co-founders and where the engineering is done. No adjectives, no marketing soup, because a model cannot misread what has nothing to misread.",
+                        "Commercial terms. The starting price of each tier, the minimum project size, the performance acceptance target, and the line that the signed project terms, not the website, control the final price.",
+                        "Evidence policy and project records. Case studies with the relationship, date and limits stated, so a model can tell client evidence from our own operating experience. Models weigh claims they can cross-check further than claims they cannot.",
+                        "Link lists. Primary pages, services and every guide grouped by topic, in the H2 sections the spec asks for. The guide list is generated from the same data as the blog, so it cannot drift from the site.",
+                        "People, policies and a verification note. The note says the visible page and the signed terms control, and that nobody can guarantee an AI citation.",
                     ]} />
 
                     <BlogHeader id="how-to-write">How to write yours in 20 minutes</BlogHeader>
@@ -292,9 +301,10 @@ export default function WhatIsLlmsTxtPage() {
                     </BlogText>
 
                     <BlogHeader id="check">How to check if AI actually reads yours</BlogHeader>
+                    {/* 8 Oct 2026: was "one of the three scored checks". Lighthouse 13.5.0 has seven Agentic Browsing audits and only tests llms.txt when the file exists. */}
                     <BlogList items={[
                         "Fetch it yourself. yoursite.com/llms.txt in a browser. If it 404s, redirects, or serves HTML instead of plain text, fix that first. More common than you would think.",
-                        "Run PageSpeed Insights and scroll to Agentic Browsing. A compliant llms.txt is one of the three scored checks. We break the whole category down in our agentic browsing guide.",
+                        "Run PageSpeed Insights and scroll to Agentic Browsing. If you publish an llms.txt, one of its checks tests the file against the format. We break the whole category down in our agentic browsing guide.",
                         "Read your server logs for bot user agents. GPTBot, ClaudeBot and PerplexityBot hits on /llms.txt tell you which systems fetched the file. On Vercel, the request logs show this directly.",
                         "The blunt test that needs no logs: ask ChatGPT, Claude and Perplexity what your company does, and see whether the answer contains your file's facts, your numbers, your phrasing.",
                     ]} />
@@ -306,7 +316,7 @@ export default function WhatIsLlmsTxtPage() {
                         markup and answer-first content as standard, the same approach running on our own site. We do not
                         sell the file as magic, because it is not. We ship it because it is twenty cheap minutes that
                         make every AI which does read it quote you accurately, and because Google&apos;s own tooling now
-                        scores it. The wider approach is in our{" "}
+                        checks it. The wider approach is in our{" "}
                         <Link href="/blog/aeo-playbook-built-into-every-website" className={linkClass}>AEO playbook</Link>.
                     </BlogText>
 
@@ -316,12 +326,12 @@ export default function WhatIsLlmsTxtPage() {
                             We will show you what they return today, and what in your markup is shaping that answer.
                         </p>
                         <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
-                            Book a 30-minute technical discovery call <ArrowRight className="w-4 h-4" />
+                            Book a 15-minute technical discovery call <ArrowRight className="w-4 h-4" />
                         </Link>
                     </div>
 
                     <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                    <FAQAccordion faqs={postFAQs} />
+                    <FAQAccordion faqs={postFAQs} showHeading={false} />
 
                     <div className="mt-12 pt-8 border-t border-stone-200">
                         <TopicUpLink postId="what-is-llms-txt" />

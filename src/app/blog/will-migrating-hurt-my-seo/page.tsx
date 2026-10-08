@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description: "How to reduce avoidable migration risk with URL mapping, redirects, metadata, crawl checks, rollback planning, and post-launch monitoring.",
         type: "article",
         publishedTime: "2026-06-03",
-        modifiedTime: "2026-08-01",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo",
         images: [ogImageForPath("/blog/will-migrating-hurt-my-seo")],
@@ -66,7 +66,7 @@ const articleSchema = {
             "description": "A website-migration SEO guide covering URL inventories, page-level redirects, metadata and canonical checks, crawl validation, rollback planning, and post-launch Search Console monitoring.",
             "image": ogImageUrlForPath("/blog/will-migrating-hurt-my-seo"),
             "datePublished": "2026-06-03T00:00:00-05:00",
-            "dateModified": "2026-08-01",
+            "dateModified": "2026-10-08",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -126,7 +126,7 @@ const articleSchema = {
             "description": "The controls that reduce avoidable website-migration SEO risk, plus the outcomes and timelines no agency can guarantee.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-06-03T00:00:00-05:00",
-            "dateModified": "2026-08-01",
+            "dateModified": "2026-10-08",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -164,8 +164,8 @@ export default function WillMigratingHurtSeoPage() {
                             anything recovers. Here is the process, and the evidence you should insist on.
                         </p>
                         <BlogAuthor
-                            date="June 3, 2026"
-                            readTime="7 min read"
+                            postId="will-migrating-hurt-my-seo" published="2026-06-03"
+                            readTime="8 min read"
                             bio="Hassan plans SEO-conscious migrations using URL inventories, page-level redirect maps, rendered-output checks, and post-launch monitoring. Search outcomes remain controlled by search engines."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -347,8 +347,8 @@ export default function WillMigratingHurtSeoPage() {
                         costs,{" "}
                         <Link href="/blog/website-migration-cost-2026" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">the cross-platform migration cost guide</Link>{" "}
                         prices it by source platform. And if the reason you are moving is speed rather than capability,{" "}
-                        <Link href="/blog/why-is-my-website-loading-so-slow" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">diagnose the slowness first</Link>{" "}
-                        &mdash; a migration undertaken to fix a problem you have not measured is the most expensive way
+                        <Link href="/blog/how-to-speed-up-your-website" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">diagnose the slowness first</Link>.
+                        A migration undertaken to fix a problem you have not measured is the most expensive way
                         to find out the problem was somewhere else.
                     </BlogText>
 
@@ -412,7 +412,7 @@ export default function WillMigratingHurtSeoPage() {
                     </div>
 
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>
-                    <FAQAccordion faqs={seoMigrationFAQs} />
+                    <FAQAccordion faqs={seoMigrationFAQs} showHeading={false} />
 
                 </article>
             </section>

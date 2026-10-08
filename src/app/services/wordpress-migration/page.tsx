@@ -1,13 +1,13 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
-import { WordPressMigrationPreview, migrationFaqs } from "@/app/preview/services/wordpress-migration/MigrationDesign";
+import { WordPressMigrationPreview, migrationFaqs } from "@/components/pages/services/wordpress-migration/MigrationDesign";
 // 30 Sep 2026: renders the redesign (built under /preview/services). Metadata
 // stay here; the FAQ structured data now comes from the FAQs the redesign shows.
 
 const path = "/services/wordpress-migration";
-const name = "WordPress Website Migration";
-const description = "Plan a WordPress migration around content, URLs, metadata, forms, integrations, accessibility, analytics, launch validation, rollback, and ownership.";
+const name = "WordPress to Next.js Migration Services";
+const description = "Move a WordPress site to Next.js with a written plan for content, URLs, redirects and forms. Review it with Hassan, then get an editing demo and documentation.";
 
 export const metadata: Metadata = {
   title: name,

@@ -197,7 +197,7 @@ export default function ShopifyHeadlessPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 15, 2026" readTime="17 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="shopify-headless" published="2026-02-15" readTime="17 min read" />
 
                     <BlogHeader id="cost-line-by-line">Headless Shopify cost, line by line</BlogHeader>
                     <div data-speakable="true">

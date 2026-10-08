@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-07",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-dawn-theme-slow")],
@@ -81,7 +81,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-07",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -126,7 +126,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             datePublished: "2026-03-07",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -169,7 +169,7 @@ export default function ShopifyDawnThemeSlowPage() {
                             the cause, impose a <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> ceiling or prove that headless is required.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 2, 2026 against current Shopify documentation and the Dawn repository.
+                            Reviewed October 8, 2026 against current Shopify documentation and the Dawn repository.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -177,7 +177,7 @@ export default function ShopifyDawnThemeSlowPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 7, 2026" readTime="9 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="shopify-dawn-theme-slow" published="2026-03-07" readTime="9 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -187,18 +187,18 @@ export default function ShopifyDawnThemeSlowPage() {
                             a template, the apps and third-party code you installed, and custom code someone put in the
                             theme. Shopify&apos;s{" "}
                             <a href="https://shopify.dev/docs/storefronts/themes/best-practices/performance" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>theme performance best practices</a>{" "}
-                            document those four, and separately document what the platform already handles for you,
-                            including CDN delivery, automatic image optimization, gzip on CSS and JavaScript, a
-                            one-year browser cache and HTTP/2. Read August 2, 2026. None of those last five is the
-                            thing you are about to fix.
+                            cover the same ground under images, Liquid, JavaScript and apps, and CSS and fonts. They
+                            separately list what the platform already handles for you, including a Cloudflare-backed
+                            CDN, Brotli and gzip compression, HTTP/3 and Early Hints. Read October 8, 2026. None of
+                            those is the thing you are about to fix.
                         </BlogText>
                         <BlogText>
                             Find your own cause in two moves. Open Shopify&apos;s{" "}
                             <a href="https://help.shopify.com/en/manual/online-store/web-performance/web-performance-reports" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Web Performance report</a>{" "}
                             and read the 75th percentile by page type and device to see which routes and which real
                             visitors have a problem. Then reproduce the worst route in a repeated lab test and take the
-                            median. The same performance documentation gives a 16 KB target for a theme&apos;s minified
-                            JavaScript bundle, which is one number you can check in DevTools in about a minute.
+                            median. Shopify&apos;s linter, Theme Check, flags oversized JavaScript bundles, so run it before
+                            you start removing things.
                         </BlogText>
                     </section>
 
@@ -250,12 +250,11 @@ export default function ShopifyDawnThemeSlowPage() {
                     </BlogText>
                     <BlogText>
                         Dawn shipped in 2021 as the reference theme for Online Store 2.0 and became the theme most new
-                        stores started from. Shopify has since introduced Horizon as the reference theme for new
-                        stores; check the current position in{" "}
-                        <a href="https://shopify.dev/docs/storefronts/themes/architecture" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shopify&apos;s theme architecture documentation</a>{" "}
-                        rather than here, because default themes change. Dawn remains free and source-available, and the{" "}
+                        stores started from. Shopify has since released{" "}
+                        <a href="https://themes.shopify.com/themes/horizon" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Horizon</a>,
+                        a newer free theme family built on theme blocks, and many new stores now start there. Dawn remains free and source-available, and the{" "}
                         <a href="https://github.com/Shopify/dawn" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>public repository</a>{" "}
-                        was still active when read on August 2, 2026. If you are on Dawn today, you are not on a
+                        was still active when read on October 8, 2026 (latest release 16.0.0, August 10, 2026). If you are on Dawn today, you are not on a
                         deprecated theme. You are on a supported one that has been customized for several years, and
                         the customization history is where the evidence usually is.
                     </BlogText>
@@ -354,7 +353,7 @@ export default function ShopifyDawnThemeSlowPage() {
                             "Annotate app installs, theme releases, campaigns and media changes.",
                             "Wait before judging a release. Shopify documents that the report may be delayed by up to 36 hours.",
                             "Remember the window. Shopify keeps only the last 90 days of web performance data, so export before you need it.",
-                            "Expect gaps on a new or password-protected store, and larger swings on a low-traffic store. Shopify says so directly.",
+                            "Expect gaps on a new store or one in private mode, and larger swings on a low-traffic store. Shopify says so directly.",
                         ]}
                     />
 
@@ -390,7 +389,7 @@ export default function ShopifyDawnThemeSlowPage() {
                     <BlogList
                         items={[
                             "List every script by owner, purpose, route and consent category.",
-                            "Measure your theme bundle against the 16 KB minified JavaScript target in Shopify's theme performance best practices, then list what else loads on top of it.",
+                            "Run Theme Check to flag oversized bundles, then list what else loads on top of your theme's own JavaScript.",
                             "Check your fonts. Shopify notes that a system font avoids the client downloading another resource before text can render.",
                             "Find long tasks, duplicate libraries, synchronous work and global listeners.",
                             "Check whether an app embed loads on routes where its interface is absent.",

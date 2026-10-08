@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-12",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/is-squarespace-bad-for-seo")],
@@ -59,6 +59,7 @@ const sources = [
     { name: "Squarespace: optimize your site for AI-powered search engines", url: "https://support.squarespace.com/hc/en-us/articles/38299115788813-Optimize-your-site-for-AI-powered-search-engines" },
     { name: "Squarespace: hiding your site from search results", url: "https://support.squarespace.com/hc/en-us/articles/21829426828045-Hiding-your-site-from-search-results" },
     { name: "Squarespace Extensions", url: "https://support.squarespace.com/hc/en-us/articles/360000975547-Squarespace-Extensions" },
+    { name: "Squarespace: URL mappings", url: "https://support.squarespace.com/hc/en-us/articles/205815308-URL-mappings" },
     {
         name: "Squarespace: SEO checklist",
         url: "https://support.squarespace.com/hc/en-us/articles/360002090267-SEO-checklist",
@@ -85,7 +86,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-12",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -129,7 +130,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-12",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -173,7 +174,7 @@ export default function IsSquarespaceBadForSEOPage() {
                             platform on what is left. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 3, 2026 against current Squarespace and Google documentation.
+                            Reviewed October 8, 2026 against current Squarespace and Google documentation.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -181,7 +182,7 @@ export default function IsSquarespaceBadForSEOPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 12, 2026" readTime="9 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="is-squarespace-bad-for-seo" published="2026-05-12" readTime="14 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The defensible answer</h2>
@@ -274,7 +275,9 @@ export default function IsSquarespaceBadForSEOPage() {
                         items={[
                             "You cannot edit robots.txt. Squarespace generates it and gives you two checkboxes under Settings, Crawlers: block search engine crawlers, and block AI crawlers. The generated file carries its own internal disallow rules. If you need per-bot rules, crawl-delay or disallow patterns for parameterized URLs, Squarespace has no way to express them.",
                             "Blog posts sit under a collection prefix. Check yours in Pages: you can rename it, so /blog/ can become /news/ or /journal/, but confirm in your own site whether a post can live at the root before you plan a URL structure around it. Anyone migrating from WordPress with root-level post URLs needs a redirect for every one of them.",
-                            "Redirects have no CSV import. They live at Settings, Advanced, URL Redirects in the format /old-url -> /new-url 301. You can paste many lines at once, so this is not the one-at-a-time job it is often described as, but there is no file import and no way to manage the list programmatically. On a large migration that is a real piece of manual work.",
+                            // 8 Oct 2026: the location used to read "Settings, Advanced, URL Redirects". Squarespace's
+                            // URL mappings guide (updated 8 Sep 2026) puts the panel under Developer tools.
+                            "Redirects have no CSV import. They live in the Developer tools panel under URL mappings, in the format /old-url -> /new-url 301. You can paste many lines at once, so this is not the one-at-a-time job it is often described as, but there is no file import and no way to manage the list programmatically. On a large migration that is a real piece of manual work.",
                             "Multi-location businesses should test this before committing. Squarespace's Business Information settings take a single primary location and a Map block renders one pin per block, so check what genuinely separate location sites would require on your own plan, including how each would be billed. Location pages can still be built by hand; what you do not get is a location entity the platform understands.",
                         ]}
                     />
@@ -342,7 +345,12 @@ export default function IsSquarespaceBadForSEOPage() {
                         to get them is a lot of disruption for a capability you were not going to use. Both companies draw the
                         same line underneath all of this, too: Squarespace says its support cannot assist with SEO strategy or
                         guarantee ranking changes, and Wix says its customer care cannot help with robots.txt edits or structured
-                        data changes. On the advanced controls, both platforms hand you the switch and step back.
+                        data changes. On the advanced controls, both platforms hand you the switch and step back. The Wix
+                        side, with its limits on redirects and markup, is in{" "}
+                        <Link href="/blog/is-wix-bad-for-seo" className="text-cognac hover:underline">
+                            is Wix bad for SEO
+                        </Link>
+                        .
                     </BlogText>
 
                     <BlogHeader>Why you will not find a Squarespace speed score here</BlogHeader>
@@ -433,8 +441,10 @@ export default function IsSquarespaceBadForSEOPage() {
                         third-party data when the data flatters it is not publishing evidence. */}
                     <BlogHeader id="accessibility">Where Squarespace measurably beats WordPress</BlogHeader>
                     <BlogText>
-                        {finding("cms-errors-2026").statement}. Squarespace sat near the bottom of that
-                        table, well below WordPress, and Wix was barely behind it.
+                        {/* 8 Oct 2026: this said Squarespace "sat near the bottom of that table". In WebAIM's
+                            table it has the second-fewest errors of the nine systems listed, so it is near the top. */}
+                        {finding("cms-errors-2026").statement}. Squarespace had the second-lowest error average
+                        of the nine systems in WebAIM&apos;s table, well below WordPress, and Wix was barely behind it.
                     </BlogText>
                     <BlogText>
                         The likely reason is the thing this article otherwise treats as a limitation. A
@@ -586,7 +596,7 @@ export default function IsSquarespaceBadForSEOPage() {
                     </section>
 
                     <BlogHeader>Frequently asked questions</BlogHeader>
-                    <FAQAccordion faqs={postFAQs} />
+                    <FAQAccordion faqs={postFAQs} showHeading={false} />
                     <TopicUpLink postId={postId} />
 
                     <RelatedPosts currentPostId={postId} />

@@ -42,10 +42,10 @@ export const metadata: Metadata = {
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title: "AEO Playbook: How to Get Your Site Quoted by AI Search",
-        description: "Ten practical controls for AI-search eligibility, measurement, and useful content without promising inclusion, ranking, or citation.",
+        description: "Eleven practical controls for AI-search eligibility, measurement, and useful content without promising inclusion, ranking, or citation.",
         type: "article",
         publishedTime: "2026-05-18T00:00:00-05:00",
-        modifiedTime: "2026-08-19T00:00:00-05:00",
+        modifiedTime: "2026-10-08T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website",
         images: [ogImageForPath("/blog/aeo-playbook-built-into-every-website")],
@@ -67,7 +67,7 @@ const articleSchema = {
             "description": "An evidence-led AEO playbook covering crawlability, useful content, structured data, measurement, and AI-search eligibility without citation guarantees.",
             "image": ogImageUrlForPath("/blog/aeo-playbook-built-into-every-website"),
             "datePublished": "2026-05-18T00:00:00-05:00",
-            "dateModified": "2026-08-19T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -130,7 +130,7 @@ const articleSchema = {
             "description": "An evidence-led playbook for crawlability, useful content, structured data, and AI-search measurement.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-18T00:00:00-05:00",
-            "dateModified": "2026-08-19T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -176,12 +176,12 @@ export default function AEOPlaybookPage() {
                             <span className="font-serif italic text-cognac">AI Search and Citations</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            Ten things you can actually do: make sure crawlers can reach your pages, write content that answers something, mark it up so machines can read it, and measure what happens. Together they make you eligible to be picked, and let you see what is going on. Nothing you build can guarantee you get included, ranked, sent traffic, or quoted. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.
+                            Eleven controls you can apply: make sure crawlers can reach your pages, write content that answers something, mark it up so machines can read it, and measure what happens. Together they make you eligible to be picked, and let you see what is going on. Nothing you build can guarantee you get included, ranked, sent traffic, or quoted. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.
                         </p>
                         <BlogAuthor
                             name="Hassan Jamal"
-                            date="May 18, 2026"
-                            readTime="15 min read"
+                            postId="aeo-playbook-built-into-every-website" published="2026-05-18"
+                            readTime="20 min read"
                             bio="Hassan is PandaCodeGen's Co-founder and Lead Engineer. He works on making sure search engines and AI assistants can actually read a site, and that what they read is backed by evidence. Any AI referral described here is a dated first-party observation, not a citation guarantee."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -216,8 +216,9 @@ export default function AEOPlaybookPage() {
                         ]} />
                     </div>
 
+                    {/* 8 Oct 2026: "this month" was September 2026, when these comments were posted. */}
                     <BlogText>
-                        These are marketers and developers on Reddit this month, describing the problem in their own words. All three comments come from one <a href="https://www.reddit.com/r/aeo/comments/1w8n72k/how_can_i_get_my_company_mentioned_in_chatgpt/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">r/aeo thread</a>.
+                        These are marketers and developers on Reddit in September 2026, describing the problem in their own words. All three comments come from one <a href="https://www.reddit.com/r/aeo/comments/1w8n72k/how_can_i_get_my_company_mentioned_in_chatgpt/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">r/aeo thread</a>.
                     </BlogText>
 
                     <BlogQuote>
@@ -270,14 +271,15 @@ export default function AEOPlaybookPage() {
                     <BlogText>
                         An AI-info page, clear headings, and structured data can help a system interpret public facts, but they are inputs, not ranking weights or citation guarantees. Publish them because they improve clarity and governance, then measure what actually happens.
                     </BlogText>
+                    {/* 8 Oct 2026: Google's June 2026 post now notes the reports reached all websites on 31 August 2026. */}
                     <BlogText>
-                        Google began testing dedicated generative-AI performance reports in Search Console in June 2026. Where the report is available, use its page, country, device, date, and impression dimensions instead of treating ordinary impression changes as proof of an AI Overview citation.
+                        Google began testing dedicated generative-AI performance reports in Search Console in June 2026 and rolled them out to all websites on 31 August 2026. Use the report&apos;s page, country, device, date, and impression dimensions instead of treating ordinary impression changes as proof of an AI Overview citation.
                     </BlogText>
                     <BlogText>
                         There is no verified advantage window of any particular length. The durable advantage is operational: maintain accurate public facts, publish evidence worth citing, and keep a dated measurement record.
                     </BlogText>
                     <BlogText>
-                        <BlogHighlight>We build sites every bot can read, ChatGPT, Claude, Perplexity and Google&apos;s AI, then write your pages so that when someone asks about the problem you solve, your answer is the easiest thing on the page to quote.</BlogHighlight> That opens a channel most businesses are not in yet and it is growing. Our founder-owned store, Panda Patches, took <Link href="/blog/ai-referral-revenue-2026" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">63 orders worth $16,783.76 from AI assistants</Link> between 1 March and 18 August 2026. It is a founder-affiliated store rather than client proof, and we publish it because we would rather show you a number we measured than a claim we cannot check. Both halves of the work are yours to verify: readability is a test you run in PageSpeed Insights, and the writing is visible in your own page source.
+                        <BlogHighlight>We build crawlable pages with clear answers and check the access and rendering requirements of the search and AI services in scope. External services still decide whether to fetch, use or cite them.</BlogHighlight> That opens a channel most businesses are not in yet and it is growing. Our founder-owned store, Panda Patches, took <Link href="/blog/ai-referral-revenue-2026" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">63 orders worth $16,783.76 from AI assistants</Link> between 1 March and 18 August 2026. It is a founder-affiliated store rather than client proof, and we publish it because we would rather show you a number we measured than a claim we cannot check. Both halves of the work are yours to verify: PageSpeed Insights provides useful diagnostics, while response inspection and the relevant crawler tools check content access. None proves universal bot access or citation, and the writing is visible on the page.
                     </BlogText>
 
                     {/* Section 2: what AEO means and does not mean */}
@@ -369,7 +371,7 @@ export default function AEOPlaybookPage() {
                         <BlogList
                             items={[
                                 "A named action. Not 'improve your tracking' but the specific thing to do, in a verb the reader can carry out today.",
-                                "A named tool, with its constraint stated. Not 'use analytics' but the actual product, and the limit that matters — the window it reports over, the percentile it uses, what it cannot see.",
+                                "A named tool, with its constraint stated. Not 'use analytics' but the actual product, and the limit that matters: the window it reports over, the percentile it uses, what it cannot see.",
                                 "Enumerated fields. The specific things to record or check, listed rather than summarised. A list of five named items survives extraction; 'gather the relevant data' does not.",
                                 "A stated purpose. Why this step exists and what it rules out, so the passage carries its own justification when it appears without the paragraphs around it.",
                             ]}
@@ -398,7 +400,7 @@ export default function AEOPlaybookPage() {
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">1. A Governed Page for Your Public Facts</h3>
                     <BlogText>
-                        Every website we build now ships with an AI-info page at the URL <code className="text-sm bg-stone-100 px-2 py-1 rounded">/ai-info</code>. You can see ours at <Link href="/ai-info" className="text-cognac hover:underline">pandacodegen.com/ai-info</Link>.
+                        Where the accepted scope calls for a separate machine-readable company summary, we provide an AI-info page at the URL <code className="text-sm bg-stone-100 px-2 py-1 rounded">/ai-info</code>. You can see ours at <Link href="/ai-info" className="text-cognac hover:underline">pandacodegen.com/ai-info</Link>.
                     </BlogText>
                     <BlogText>
                         The AI-info page is a governed reference page for public company facts: company name, founding date, services, pricing approach, contact methods, areas served, evidence labels, and important limitations. It can reduce factual drift across the site, but providers decide whether and how to use it.
@@ -431,7 +433,8 @@ export default function AEOPlaybookPage() {
                         Weak opening: &quot;In today&apos;s competitive landscape, businesses face many challenges...&quot; It delays the useful answer.
                     </BlogText>
                     <BlogText>
-                        Good opening: &quot;A custom Next.js website costs $1,500 to $5,000 to build, targets fast loading under documented conditions, and has third-party platform costs documented before approval. Here is the exact build process and what is included at each tier.&quot;
+                        {/* 8 Oct 2026: Scale is "from $5,000" with no published ceiling, so "$1,500 to $5,000" was wrong. */}
+                        Good opening: &quot;A custom Next.js website starts at $1,500 to build, targets fast loading under documented conditions, and has third-party platform costs documented before approval. Here is the exact build process and what is included at each tier.&quot;
                     </BlogText>
                     <BlogText>
                         Lead with the specific numbers, the named technologies, and the citable claim. The first 300 words of every page should answer the question that brought the visitor to the page.
@@ -514,7 +517,8 @@ export default function AEOPlaybookPage() {
                         Not &quot;fast loading.&quot; Say &quot;the product page scored 94 on mobile in <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> 13, throttled 4G, on August 1, 2026&quot;, because the second one can be checked and the first one cannot.
                     </BlogText>
                     <BlogText>
-                        Not &quot;affordable.&quot; Say &quot;Starter $1,500 fixed price, Growth $3,500 fixed price.&quot;
+                        {/* 8 Oct 2026: the tiers are starting prices, so "from" is restored. */}
+                        Not &quot;affordable.&quot; Say &quot;Starter from $1,500 fixed price, Growth from $3,500 fixed price.&quot;
                     </BlogText>
                     <BlogText>
                         Not &quot;many integrations.&quot; Say &quot;12 native integrations including Stripe, Shopify Storefront API, Resend, and Cal.com.&quot;
@@ -524,11 +528,12 @@ export default function AEOPlaybookPage() {
                     </BlogText>
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">10. Citation Tracking From Day 1</h3>
+                    {/* 8 Oct 2026: the Search Console report is no longer limited to some sites (all websites since 31 August 2026). */}
                     <BlogText>
-                        You cannot improve what you cannot measure. Google began testing a dedicated generative-AI Search Console report in June 2026, while other providers expose different or more limited signals. Third-party monitoring can supplement those records but should not be treated as ground truth.
+                        You cannot improve what you cannot measure. Google began testing a dedicated generative-AI Search Console report in June 2026 and has offered it to all websites since 31 August 2026, while other providers expose different or more limited signals. Third-party monitoring can supplement those records but should not be treated as ground truth.
                     </BlogText>
                     <BlogText>
-                        Tool plans, engine coverage, prompt limits, and prices change frequently. Record the plan and retrieval date when evaluating a monitoring vendor. Where Google&apos;s dedicated generative-AI report is available, use it alongside ordinary Search Console and analytics data rather than replacing them with a single vendor score.
+                        Tool plans, engine coverage, prompt limits, and prices change frequently. Record the plan and retrieval date when evaluating a monitoring vendor. Use Google&apos;s dedicated generative-AI report alongside ordinary Search Console and analytics data rather than replacing them with a single vendor score.
                     </BlogText>
 
                     {/* Section 5: GSC Receipts */}
@@ -574,12 +579,13 @@ export default function AEOPlaybookPage() {
                     </BlogText>
 
                     <BlogHeader id="gsc-receipts">How to Read Search Console Evidence</BlogHeader>
+                    {/* 8 Oct 2026: the subset rollout finished; Google says all websites have had the report since 31 August 2026. */}
                     <BlogText>
-                        Ordinary Search Console impressions, clicks, and position can identify a change worth investigating, but they cannot by themselves prove that an AI Overview cited a page. Google began rolling out a dedicated generative-AI performance view to a subset of sites in June 2026; use that feature when available.
+                        Ordinary Search Console impressions, clicks, and position can identify a change worth investigating, but they cannot by themselves prove that an AI Overview cited a page. Google began rolling out a dedicated generative-AI performance view to a subset of sites in June 2026 and extended it to all websites on 31 August 2026; use it.
                     </BlogText>
                     <BlogList items={[
                         "Record the exact Search Console report, filters, comparison dates, query/page scope, country, and device.",
-                        "Use the dedicated generative-AI report when the property has access; do not relabel ordinary impressions as AI-feature impressions.",
+                        "Use the dedicated generative-AI report; do not relabel ordinary impressions as AI-feature impressions.",
                         "Capture the visible result and cited URL for a dated manual observation.",
                         "Keep correlation, customer-reported referral, and verified platform attribution as separate evidence classes."
                     ]} />
@@ -657,9 +663,9 @@ export default function AEOPlaybookPage() {
                         for what a month contains and what it cannot promise.
                     </BlogText>
 
-                    <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">Free 30 Minute Consultation</h3>
+                    <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">Free 15-Minute Consultation</h3>
                     <BlogText>
-                        Before any work begins, PandaCodeGen offers a free 30 minute consultation call. The call format is direct: drop your URL when you book, and Hassan runs a live audit of your current site through Google PageSpeed Insights, identifies your top AEO opportunities, and explains the specific implementation path for your business.
+                        Before any work begins, PandaCodeGen offers a free 15-minute consultation call. The call format is direct: drop your URL when you book, and Hassan runs a live audit of your current site through Google PageSpeed Insights, identifies your top AEO opportunities, and explains the specific implementation path for your business.
                     </BlogText>
                     <BlogText>
                         The consultation includes:
@@ -702,10 +708,11 @@ export default function AEOPlaybookPage() {
                     <div className="my-12 p-6 md:p-8 bg-charcoal text-white rounded-2xl text-center">
                         <p className="text-xs font-bold uppercase tracking-wider text-cognac mb-3">Ready to build an AEO-ready website?</p>
                         <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                            Custom Next.js that passes all three of Google&apos;s agentic browsing checks and scores 100 on SEO. <span className="font-serif italic text-cognac">Check it yourself in PageSpeed Insights.</span>
+                            {/* 8 Oct 2026: Lighthouse 13.5.0 has seven Agentic Browsing audits, and most sites are scored on three of them, so "all three" no longer described the category. */}
+                            Custom Next.js that passes the three Lighthouse agentic browsing checks most sites are scored on, and scores 100 on SEO. <span className="font-serif italic text-cognac">Check it yourself in PageSpeed Insights.</span>
                         </h3>
                         <p className="text-stone-300 mb-6 max-w-xl mx-auto">
-                            We build crawlable, evidence-led websites, while search and AI systems independently control inclusion, ranking, and citation. Starter from $1,500. Growth from $3,500. Free 30 minute consultation, including a live audit of your site.
+                            We build crawlable, evidence-led websites, while search and AI systems independently control inclusion, ranking, and citation. Starter from $1,500. Growth from $3,500. Free 15-minute consultation, including a live audit of your site.
                         </p>
                         <CalModalButton>
                             Book Free Discovery Call <ArrowRight className="w-4 h-4" />
@@ -724,7 +731,7 @@ export default function AEOPlaybookPage() {
                     </BlogText>
 
                     <BlogHeader id="faqs">Frequently Asked Questions About AEO</BlogHeader>
-                    <FAQAccordion faqs={aeoPlaybookFAQs} />
+                    <FAQAccordion faqs={aeoPlaybookFAQs} showHeading={false} />
 
                 </div>
             </section>

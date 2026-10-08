@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-31",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/saas-software-pricing-audit-2026")],
@@ -85,7 +85,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/saas-software-pricing-audit-2026"),
             description,
             datePublished: "2026-05-31",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -100,8 +100,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Software procurement",
             inLanguage: "en-US",
-            wordCount: 2303,
-            timeRequired: "PT12M",
+            wordCount: 3073,
+            timeRequired: "PT15M",
             about: [
                 { "@type": "Thing", name: "Software as a service", sameAs: ["https://en.wikipedia.org/wiki/Software_as_a_service"] },
                 { "@type": "Thing", name: "Total cost of ownership", sameAs: ["https://en.wikipedia.org/wiki/Total_cost_of_ownership"] },
@@ -128,7 +128,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-31",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -170,7 +170,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                             consolidate, replace or investigate without promising a universal savings rate.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 2, 2026 against current primary vendor sources.
+                            Reviewed October 8, 2026 against current primary vendor sources.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -178,7 +178,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 31, 2026" readTime="7 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="saas-software-pricing-audit-2026" published="2026-05-31" readTime="15 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The audit deliverables</h2>
@@ -229,8 +229,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                         announcement. Verify against the live page before you budget from it, because vendors revise these
                         notices and regional pricing differs. We follow the same vendor announcements in our{" "}
                         <Link href="/blog/saas-price-increases-2026-tracker" className="text-cognac hover:underline font-medium">2026 vendor price-change tracker</Link>, and the
-                        practical response once a change is confirmed on your own invoice is set out in our{" "}
-                        <Link href="/blog/how-to-cut-saas-bill-2026" className="text-cognac hover:underline font-medium">guide to reducing a software bill</Link>.
+                        eight steps below are what to do once a change shows up on your own invoice.
                     </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[680px] border-collapse text-left text-sm">
@@ -240,7 +239,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr>
                                     <td className="p-4 font-bold">Microsoft 365</td>
-                                    <td className="p-4">Per user/month: Business Basic $6 to $7; Business Standard $12.50 to $14; E3 $36 to $39; E5 $57 to $60; F1 $2.25 to $3; F3 $8 to $10. Business Premium is unchanged at $22, so check your own SKU before assuming a rise. Microsoft states existing customers remain on current pricing until renewal, and that tenants get at least 30 days notice in Message Center before packaging changes become available. Figures from Microsoft&apos;s licensing news page, checked August 2, 2026.</td>
+                                    <td className="p-4">Per user/month: Business Basic $6 to $7; Business Standard $12.50 to $14; E3 $36 to $39; E5 $57 to $60; F1 $2.25 to $3; F3 $8 to $10. Business Premium is unchanged at $22, so check your own SKU before assuming a rise. Microsoft states existing customers remain on current pricing until renewal, and that tenants get at least 30 days notice in Message Center before packaging changes become available. Figures from Microsoft&apos;s licensing news page, checked October 8, 2026.</td>
                                     <td className="p-4">July 1, 2026</td>
                                 </tr>
                                 <tr>
@@ -250,7 +249,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                                 </tr>
                                 <tr>
                                     <td className="p-4 font-bold">Klaviyo</td>
-                                    <td className="p-4">Billing model change affecting how contacts and sends are counted. This is an earlier policy change rather than a 2026 price rise, and it can still be the reason a 2026 invoice looks different. The practical effect varies by list size and sending pattern, so read your own invoice rather than a published percentage.</td>
+                                    <td className="p-4">{/* 8 Oct 2026: this said the change affected "how contacts and sends are counted". Klaviyo's FAQ describes a plan-compliance rule plus two optional billing preferences, not a new counting method. */}Credit-card customers must be on an email plan that matches or exceeds their active-profile count, with optional flexible sending and auto-downgrade settings. This is an earlier policy change rather than a 2026 price rise, and it can still be the reason a 2026 invoice looks different. The practical effect varies by list size and sending pattern, so read your own invoice rather than a published percentage.</td>
                                     <td className="p-4">February 18, 2025</td>
                                 </tr>
                             </tbody>
@@ -323,6 +322,14 @@ export default function SaasSoftwarePricingAudit2026Page() {
                             "Retain a change and rollback plan for any seat, tier or integration adjustment.",
                         ]}
                     />
+                    <BlogText>
+                        Check size as well as use. People often buy the plan that matches where they expect the
+                        business to be in a year, then the year goes differently and nobody revisits the plan, so the
+                        gap between what you pay for and what you use stays on every invoice. The same goes for a tier
+                        bought for one feature that turned out not to matter. Moving down a tier is often reversible,
+                        but confirm that in your own contract before you downgrade rather than assuming you can move
+                        back up later.
+                    </BlogText>
                     <InsightBox variant="info" label="Why there is no benchmark figure here">
                         We do not publish a single figure for unused seats, dormant users or expected savings. Any such
                         number depends on which organizations were sampled, how each of them defined an active user and
@@ -361,18 +368,28 @@ export default function SaasSoftwarePricingAudit2026Page() {
                         ]}
                     />
 
-                    <BlogHeader>5. Avoid cancellation mistakes</BlogHeader>
+                    <BlogHeader id="cancellation-mistakes">5. Avoid cancellation mistakes</BlogHeader>
                     <BlogText>
-                        Confirm the current vendor procedure before changing access. Shopify currently says uninstalling
-                        an app cancels future Shopify-billed recurring charges, while pending charges from the current
-                        cycle can still appear and externally billed subscriptions must be canceled with the provider.
-                        Other products use different timing. Capture confirmation, exports and effective dates. App
+                        Confirm the current vendor procedure before changing access. Shopify&apos;s help page on
+                        uninstalling apps, checked October 4, 2026, says uninstalling a paid app cancels future recurring
+                        charges but you might still be billed for the current billing cycle, and that uninstalling
+                        doesn&apos;t cancel charges an app bills outside Shopify. It also says to contact the developer
+                        before uninstalling if you want a refund, that some apps leave code in your theme, and that some
+                        store data you can&apos;t recover afterwards. Other products use different timing. Capture
+                        confirmation, exports and effective dates. App
                         charges are easy to overlook at this step, so read our walkthrough of{" "}
                         <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline font-medium">where Shopify app charges appear on a monthly bill</Link>{" "}
                         before you touch a storefront. If commerce is the workload under review, our{" "}
                         <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">ecommerce engineering service</Link>{" "}
                         page describes what we take on.
                     </BlogText>
+                    <InsightBox variant="info" label="Cancel first, uninstall second">
+                        Find out where each app bills you before you uninstall it. Where the developer bills you
+                        directly, cancel in that app&apos;s own billing area, ask about any refund and export the data
+                        you need while you still have access, then uninstall. Keep the confirmation and the effective
+                        date. A Shopify-billed charge, a charge already raised for the current cycle and an external
+                        subscription each stop on different terms, so one blanket uninstall rule will miss something.
+                    </InsightBox>
 
                     <BlogHeader>6. Decide line by line</BlogHeader>
                     <div data-speakable="true">
@@ -423,7 +440,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                         <Link href="/services/custom-engineering" className="text-cognac hover:underline font-medium">custom engineering</Link> work.
                     </BlogText>
 
-                    <BlogHeader>8. Assign someone to check that each change works</BlogHeader>
+                    <BlogHeader id="realized-savings">8. Assign someone to check that each change works</BlogHeader>
                     <BlogText>
                         Before cancelling a tool, name who will check the change and when to restore the previous setup if something fails. Confirm that the data has been moved or deleted as required, test any replacement and compare the results with your starting records. Also agree who approves new subscriptions so the same expense does not quietly return.
                     </BlogText>
@@ -438,6 +455,20 @@ export default function SaasSoftwarePricingAudit2026Page() {
                         ]}
                     />
                     <BlogText>
+                        A cancellation isn&apos;t a saving until the invoice changes. Count it with everything the change
+                        cost you, not just the charge that stopped, and model a base case, a high-usage case and a
+                        delayed case rather than one payback date.
+                    </BlogText>
+                    <div className="my-8 rounded-2xl border border-stone-200 bg-stone-50 p-6 font-mono text-sm leading-7 text-charcoal">
+                        Realized savings = avoided charges - replacement vendor cost - migration and build cost
+                        - internal time - new maintenance and support - residual commitments - risk events
+                    </div>
+                    <BlogText>
+                        Don&apos;t count a planned cancellation until the committed quantity and the next invoice have
+                        changed. Then replace the forecast with real invoices and measured time at 30, 90 and 365 days,
+                        and note any lost capability, incidents or manual work the change created.
+                    </BlogText>
+                    <BlogText>
                         Where the replacement is a website, storefront or internal tool rather than a single
                         subscription, our{" "}
                         <Link href="/work" className="text-cognac hover:underline font-medium">project write-ups</Link>{" "}
@@ -448,7 +479,8 @@ export default function SaasSoftwarePricingAudit2026Page() {
                     <BlogHeader>Primary sources</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Seven pages, all vendor-owned rather than third-party summaries, checked on the dates given above. Vendors revise these without notice, so treat the list as where to verify rather than as a substitute for verifying. Where a figure here disagrees with your own invoice, your invoice is the authority.
+                            {/* 8 Oct 2026: said "Seven pages"; the list below has six. */}
+                            Six pages, all vendor-owned rather than third-party summaries, checked on the dates given above. Vendors revise these without notice, so treat the list as where to verify rather than as a substitute for verifying. Where a figure here disagrees with your own invoice, your invoice is the authority.
                         </BlogText>
                     </div>
                     <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
@@ -475,7 +507,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                     </section>
 
                     <BlogHeader>Frequently asked questions</BlogHeader>
-                    <FAQAccordion faqs={postFAQs} />
+                    <FAQAccordion faqs={postFAQs} showHeading={false} />
                     <TopicUpLink postId={postId} />
 
                     <RelatedPosts currentPostId={postId} />

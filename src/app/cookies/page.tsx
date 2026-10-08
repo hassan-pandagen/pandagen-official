@@ -6,11 +6,11 @@ import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
   title: { absolute: "Cookie Policy | PandaCodeGen" },
-  description: "How PandaCodeGen uses cookies and similar technologies. Last updated October 4, 2026.",
+  description: "How PandaCodeGen uses cookies and similar technologies. Last updated October 7, 2026.",
   alternates: { canonical: "/cookies" },
   openGraph: {
     title: "Cookie Policy | PandaCodeGen",
-    description: "How PandaCodeGen uses cookies and similar technologies. Last updated October 4, 2026.",
+    description: "How PandaCodeGen uses cookies and similar technologies. Last updated October 7, 2026.",
     url: "https://www.pandacodegen.com/cookies",
     siteName: "PandaCodeGen",
     type: "website",
@@ -31,6 +31,13 @@ const rows = [
     examples: "pandacodegen_consent_v1 (local storage)",
     duration: "Up to 180 days",
     purpose: "Stores the cookie choices you make so the site can respect them.",
+  },
+  {
+    service: "PandaCodeGen chat panel",
+    category: "Strictly necessary",
+    examples: "pcg-assistant-v1 and pcg-live-chat-v1 (session storage)",
+    duration: "Until you close the tab or window",
+    purpose: "Keeps your conversation with the assistant or with Hassan while you move between pages.",
   },
   {
     service: "Google Analytics 4",
@@ -74,13 +81,6 @@ const rows = [
     duration: "Session or provider-controlled",
     purpose: "Loads the appointment-booking interface when functional services are allowed.",
   },
-  {
-    service: "Tawk.to",
-    category: "Functional",
-    examples: "Chat/session storage and trafficSource",
-    duration: "Session or provider-controlled",
-    purpose: "Enables live chat and referral context when functional services are allowed.",
-  },
 ] as const;
 
 // The five legal pages were the only indexable routes without structured data.
@@ -117,7 +117,7 @@ export default function CookiesPage() {
         <div className="container mx-auto max-w-4xl">
           <div className="mb-16 animate-fade-in-up">
             <h1 className="text-5xl font-bold text-charcoal mb-4">Cookie Policy</h1>
-            <p className="text-stone-600">Last updated: October 4, 2026</p>
+            <p className="text-stone-600">Last updated: October 7, 2026</p>
           </div>
 
           <div className="space-y-8 text-stone-600 leading-relaxed">
@@ -127,7 +127,7 @@ export default function CookiesPage() {
                 This policy explains how PandaCodeGen uses cookies, local storage, pixels, scripts,
                 and similar browser technologies on this website. These technologies can remember
                 settings, measure use of the site, support advertising measurement, or enable
-                features such as scheduling and live chat.
+                features such as scheduling.
               </p>
             </FadeIn>
 
@@ -150,7 +150,7 @@ export default function CookiesPage() {
                 remember your selection for up to 180 days, after which we ask again.
               </p>
               <p className="mt-4">
-                If you try to open scheduling or live chat before allowing functional services,
+                If you try to open scheduling before allowing functional services,
                 the site asks for that choice at the time. We do not treat continued browsing as
                 consent.
               </p>
@@ -211,9 +211,9 @@ export default function CookiesPage() {
 
               <h3 className="text-lg font-semibold text-charcoal mb-2 mt-6">Functional</h3>
               <p>
-                Cal.com provides appointment scheduling. Tawk.to provides live chat, and the chat
-                setup may request approximate IP-based location and referral context. These
-                services and requests load only after you allow functional services.
+                Cal.com provides appointment scheduling. It loads only after you allow functional
+                services. Live chat with Hassan runs on our own website and sets no cookies, so it
+                does not depend on this choice.
               </p>
             </FadeIn>
 
@@ -272,7 +272,6 @@ export default function CookiesPage() {
                 <li><a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Meta Privacy Policy</a></li>
                 <li><a href="https://vercel.com/legal/privacy-notice" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Vercel Privacy Notice</a></li>
                 <li><a href="https://cal.com/privacy" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Cal.com Privacy Policy</a></li>
-                <li><a href="https://www.tawk.to/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Tawk.to Privacy Policy</a></li>
               </ul>
             </FadeIn>
 

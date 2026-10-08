@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-30",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-vs-custom-website")],
@@ -79,7 +79,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-vs-custom-website"),
             description,
             datePublished: "2026-03-30",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -162,7 +162,7 @@ export default function ShopifyVsCustomWebsitePage() {
                             figures or PageSpeed targets.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 8, 2026 against current Shopify and Google documentation.
+                            Reviewed October 8, 2026 against current Shopify and Google documentation.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -170,7 +170,7 @@ export default function ShopifyVsCustomWebsitePage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 30, 2026" readTime="5 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="shopify-vs-custom-website" published="2026-03-30" readTime="12 min read" />
 
                     <BlogText>
                         These are merchants on r/shopify explaining, in their own words, why they started looking at leaving the platform. Every quote links to the original post.
@@ -346,9 +346,10 @@ export default function ShopifyVsCustomWebsitePage() {
                         section because it makes the same argument with a different metric:
                         measure the platform you have rather than accept a reputation. */}
                     <BlogHeader>Accessibility is measurable too, and Shopify scores badly</BlogHeader>
+                    {/* 8 Oct 2026: said this was "the highest error average of any platform group in the study apart from Magento and Prestashop". WebAIM's 2026 tables show 1C-Bitrix at 106.5 in the CMS table, and Magento and Prestashop are the only other ecommerce platforms listed. */}
                     <BlogText>
-                        {finding("ecommerce-errors-2026").statement}. That is the highest error average
-                        of any platform group in the study apart from Magento and Prestashop.
+                        {finding("ecommerce-errors-2026").statement}. The only other ecommerce platforms in
+                        the study, Magento and Prestashop (143.2), averaged more.
                     </BlogText>
                     <BlogText>
                         Before treating it as a reason to leave: {finding("ecommerce-errors-2026").limitation}{" "}

@@ -34,6 +34,10 @@ export const T = {
   onDarkRule: "rgba(235,233,228,0.16)",
 } as const;
 
+// Headline emphasis: one meaningful phrase per major heading. Use accent on
+// light paper, onDarkAccent on charcoal, and accentText for smaller linked text.
+// Project names, testimonials and factual claims keep their normal text colour.
+
 // Resolves to Zodiak unless a wrapper sets --display (the preview compares Anton).
 export const DISPLAY = "var(--display, Zodiak), Georgia, serif";
 // Display text under ~28px (review quotes, FAQ questions, card titles). Zodiak

@@ -70,9 +70,10 @@ export const COMPANY: readonly Fact[] = [
 
 /** What the firm sells. */
 export const SERVICES: readonly Fact[] = [
-    { label: 'Primary offer', value: 'Custom business websites and online stores. Replacing an existing site is one route in rather than the whole offer: the same team builds a first website, a replacement for one a business has outgrown, or a store, and migration controls apply when there is a site to move.' },
+    { label: 'Primary offer', value: 'Business websites and online stores, including WordPress builds when they fit the client and custom builds when the requirements call for them. The founders work directly with clients on new sites, improvements and migrations, with a written scope, documentation and an editing walkthrough.' },
     { label: 'Core platforms migrated from', value: 'WordPress, Webflow, and GoHighLevel' },
-    { label: 'Build stack', value: 'Next.js, with Sanity as the CMS where a project needs editorial workflows' },
+    // Supabase sentence added 3 Oct 2026 at the owner's direction.
+    { label: 'Build stack', value: 'WordPress for suitable website projects. Custom builds use Next.js, with Sanity as the CMS where a project needs editorial workflows. Every build that uses Sanity includes training on Sanity Studio for your team and written documentation for it. We also build the databases, logins and file storage a project needs, usually on Supabase, or on MongoDB or another database if you have a preference. The platform, licences and ongoing responsibilities are agreed in the proposal.' },
     { label: 'Custom work', value: 'Next.js, commerce, integrations, and internal tools when the scope requires them' },
     { label: 'What "SEO-safe" means', value: 'A controlled process, not a ranking promise. It describes the migration controls used to reduce avoidable risk: URL inventory, redirect mapping, metadata and canonical parity, internal links, structured data, staging checks, cutover monitoring and rollback planning. Search engines control crawling, indexing, ranking and rich results.' },
 ];
@@ -87,7 +88,7 @@ export const COMMERCIAL: readonly Fact[] = [
     // deliberately NOT published, because top-nextjs-agencies-2026 decided in
     // July not to treat third-party Clutch numbers as fixed facts. The fact
     // about ourselves needs no such maintenance.
-    { label: 'Minimum project size', value: 'None. Work starts at the published Starter price of $1,500, and small projects are quoted the same way as large ones.' },
+    { label: 'Minimum project size', value: 'None. Custom website builds start at the published Starter price of $1,500. WordPress builds and focused improvements are quoted to their own scope; the written proposal sets the price before work starts.' },
     // 10 Sep 2026: Starter gained the content editor. It previously read "built
     // and updated by us, no CMS", which was honest but was the single most
     // common reason a small buyer hesitated: it reads as a dependency. Two buyer
@@ -98,17 +99,30 @@ export const COMMERCIAL: readonly Fact[] = [
     { label: 'Starter', value: 'From $1,500. Up to 7 pages, with a content editor for your words, images and business details. Set up, documented, and we train you on it.' },
     { label: 'Growth', value: 'From $3,500. 8 to 20 pages, a content model built around your own collections, full migration with redirect map.' },
     { label: 'Scale', value: 'From $5,000. More than 20 pages, a large catalogue, subscriptions or custom commerce logic, or more than one language. A small store is not automatically this tier: a simple catalogue of a few products starts at Starter.' },
+    // 8 Oct 2026: owner confirmed fixed pricing for agreed scope, with separately approved additions.
+    { label: 'Fixed scope and changes', value: 'The price is fixed once the written scope is agreed. Additional work is priced separately and starts only after the client approves the scope and price change in writing. An expanded scope can increase the total project price.' },
     { label: 'Above that range', value: 'Quoted after a scoping call. The accepted written terms control the final price.' },
     { label: 'Delivery, Starter', value: '1 to 2 weeks.' },
     { label: 'Delivery, Growth', value: '2 to 4 weeks.' },
     { label: 'Delivery, Scale', value: '3 to 6 weeks. Ranges overlap on purpose: a complex Growth build can take as long as a simple Scale one, and the accepted written terms give the dates for your project.' },
     { label: 'None of these fit', value: `If none of these match what you have, call ${PHONE.display} or email info@pandacodegen.com and we will quote it.` },
     { label: 'Ongoing services', value: 'Everything above prices a build. Ongoing work is separate and optional: monthly AI SEO services start at $500 and monthly support is quoted against the site and the systems connected to it, both scoped and priced before they begin. No build requires a subscription, and the site keeps working without one.' },
-    { label: 'Hosting', value: 'Not a standard inclusion. Whether PandaCodeGen hosts on its own account, and whether that carries a charge, is agreed per client and written into the quote. Some clients host with us at no extra charge and others are billed for it. Hosting moves to the client account on request or when an engagement ends.' },
+    // 8 Oct 2026, owner: on a maintenance or SEO package, hosting on our Vercel account is
+    // included if the client wants it. Outside a package it stays agreed per client.
+    { label: 'Hosting', value: 'On a maintenance or SEO package, hosting on our Vercel account is included if you want it. Outside a package, whether PandaCodeGen hosts on its own account, and whether that carries a charge, is agreed per client and written into the quote. Hosting moves to an account in your name on request or when an engagement ends.' },
+    // Added 3 Oct 2026 at the owner's direction, so the assistant can answer
+    // "can I talk to you before I commit?" and "will you bill me extra?".
+    // 8 Oct 2026, owner: the first call is 15 minutes (the only public Cal.com event,
+    // pandagen/discovery), and the free audit is a current offer. Every page that
+    // said 30 minutes was changed the same day.
+    { label: 'Free audit', value: 'Free, with no obligation. Run the automated check at /free-audit for an on-screen report, or request a free founder review of up to three public pages, with up to three prioritized recommendations by email within 24 hours. We need your website URL and an email address to send it.' },
+    { label: 'Before you commit', value: 'The first call with a founder is a free 15-minute meeting with no commitment, and you can ask questions by call or email for as long as you need before deciding. Work starts only after you accept the written proposal, and you are not billed beyond its price unless you agree to a change in writing first.' },
     { label: 'Payment structure', value: 'A common starting structure is 30 percent at onboarding and 70 percent at the delivery milestone. The accepted project terms control each engagement.' },
     { label: 'Refunds', value: 'Refund protection is tied to failure to deliver the signed scope, not a general change-of-mind promise. Timing, exceptions and ownership consequences are documented before work begins.' },
     { label: 'Performance acceptance', value: 'A 90+ Lighthouse handover target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. It is a lab acceptance target, not a ranking, traffic, or revenue promise. Field data in the Chrome User Experience Report is measured from real visitors over 28 days and depends on their devices, networks and anything added after handover, so it is measured with the client rather than promised.' },
-    { label: 'Ownership on handover', value: 'Source code, design files, CMS models, documentation and production accounts are transferred to or created under client control.' },
+    // Monthly-plan sentence added 3 Oct 2026 at the owner's direction: a care
+    // plan must not read as a way of holding the client's site back.
+    { label: 'Ownership on handover', value: 'You receive the project code and design files we create for you, plus documentation and control of the production accounts. If you then take a monthly support or care plan, that doesn\'t change: we keep sharing the code, documentation and accounts with you, so you always have your own copy. Third-party themes, plugins, services and assets remain under their own licence terms.' },
 ];
 
 /**
@@ -119,7 +133,7 @@ export const COMMERCIAL: readonly Fact[] = [
  * above; change the facts there, then here, never here alone.
  */
 export const OFFER_LINE =
-    'PandaCodeGen builds from $1,500 at a fixed price agreed before work starts, has no minimum project size, and the source code, design files and production accounts are yours at the end.';
+    'PandaCodeGen offers WordPress websites quoted to scope and custom website builds from $1,500. There is no minimum project size. The written proposal sets the price and handover before work starts.';
 
 /**
  * The company description for the Organization entity, maintained in ONE place.
@@ -141,7 +155,7 @@ export const OFFER_LINE =
  * Derived from `Primary offer` in COMPANY above. Change that first, then this.
  */
 export const ORGANIZATION_DESCRIPTION =
-    'PandaCodeGen designs and develops custom business websites, online stores and software. The founders work directly with clients on new builds, redesigns, migrations and integrations. Optional monthly AI SEO and ongoing support are scoped separately.';
+    'PandaCodeGen designs and develops WordPress websites, custom business websites, online stores and software. The founders work directly with clients on new builds, improvements, migrations and integrations. Optional monthly AI SEO and ongoing support are scoped separately.';
 
 /**
  * The LLC formation date from the Articles, for schema.org `foundingDate`.
@@ -240,7 +254,7 @@ export const PROJECTS: readonly { name: string; relationship: string; href: stri
     // date confirmed 27 Sep. No case study yet -- see migration-projects.ts's
     // own rule: the public domain still runs the client's previous WordPress
     // site and must not be presented as our delivered build until launch.
-    { name: 'A Step Above Medical', relationship: 'Client project, in progress', href: '/services/wordpress-migration', fact: `${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.summary} Testing begins ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.testingStarts}; launch is pending. The current public domain still serves the client's previous WordPress site.` },
+    { name: 'A Step Above Medical', relationship: 'Client project, in progress', href: '/services/wordpress-migration', fact: `${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.summary} ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.progress} as of ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.confirmedOn}. The current public domain still serves the client's previous WordPress site.` },
 
     // Panda CodeLab (added 10 Sep 2026, when an auditor found a /work page with
     // no record here) was removed on 30 Sep 2026 together with its /work page,

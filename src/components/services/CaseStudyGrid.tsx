@@ -95,7 +95,7 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     // unused while the card rendered three em-dashes under PageSpeed / Load
     // Time / Outcome — labels whose figures are withdrawn — so the one client
     // with genuinely evidenced delivery facts showed none of them.
-    statIds: ["delivery-days", "urls-migrated", "downtime"],
+    statIds: ["delivery-days", "templates", "downtime"],
     image: "/work/mycustompatches.png",
     imageAlt: "MyCustomPatches storefront home page.",
     lead: "A WordPress store rebuilt as a custom Next.js storefront, with every URL inventoried before cutover and the DNS switch monitored start to finish.",

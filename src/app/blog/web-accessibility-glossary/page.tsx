@@ -130,8 +130,12 @@ const DEFS: Record<string, string> = {
         "Checking the things a machine cannot judge: whether alternative text is accurate, whether reading order makes sense, whether an error message explains how to recover, and whether the page can actually be completed by keyboard or with a screen reader. Most real accessibility barriers are found this way.",
     "wave-axe":
         "Two widely used automated engines. WAVE is published by WebAIM and is the tool behind the annual WebAIM Million study. axe-core is published by Deque and is embedded in many other products, including the accessibility category in Chrome's Lighthouse. Different engines flag different things, so a score is tied to the tool that produced it.",
+    // 8 Oct 2026: no Google page we could find says "a perfect score does not mean
+    // the page is accessible". Lighthouse's own category description says the
+    // narrower thing below (GoogleChrome/lighthouse, shared/localization/locales/en-US.json,
+    // a11yCategoryDescription).
     "lighthouse-a11y":
-        "A weighted score derived from a set of automated axe-core checks. Google's own documentation states that a perfect score does not mean the page is accessible, because the checks cover only what can be automated. Treat it as a smoke test, not as evidence of conformance.",
+        "A weighted score derived from a set of automated axe-core checks. Lighthouse's own report says automatic detection can only detect a subset of issues and does not guarantee the accessibility of your web app, so a perfect score is not proof the page is accessible. Treat it as a smoke test, not as evidence of conformance.",
     "overlay":
         "A third-party script that attempts to correct accessibility problems in the browser after a page has loaded, usually sold as a fast route to compliance. It sits on top of markup it did not author. It does not change the contrast ratio a designer chose or write alternative text nobody wrote.",
 };
@@ -241,7 +245,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-13",
-        modifiedTime: "2026-08-13",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/web-accessibility-glossary")],
@@ -259,7 +263,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/web-accessibility-glossary"),
             datePublished: "2026-08-13T00:00:00-05:00",
-            dateModified: "2026-08-13T00:00:00-05:00",
+            dateModified: "2026-10-08T00:00:00-05:00",
             citation: [
                 "https://www.w3.org/TR/WCAG22/",
                 "https://www.w3.org/WAI/standards-guidelines/wcag/",
@@ -332,7 +336,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             datePublished: "2026-08-13T00:00:00-05:00",
-            dateModified: "2026-08-13T00:00:00-05:00",
+            dateModified: "2026-10-08T00:00:00-05:00",
             inLanguage: "en-US",
         },
     ],
@@ -366,8 +370,8 @@ export default function WebAccessibilityGlossaryPage() {
                                 gives you the question to ask the person putting it in a quote.
                             </p>
                             <BlogAuthor
-                                date="Aug 13, 2026"
-                                readTime="21 min read"
+                                postId="web-accessibility-glossary" published="2026-08-13"
+                                readTime="23 min read"
                                 bio="Hassan builds custom Next.js sites and writes the engineering guides on this site."
                                 linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                             />
@@ -520,8 +524,8 @@ export default function WebAccessibilityGlossaryPage() {
                                 ask={
                                     <>
                                         If a proposal promises AAA across the whole site, ask which AAA criteria they
-                                        intend to meet and how. The W3C itself does not recommend AAA as a general
-                                        sitewide policy, because some content cannot satisfy it.
+                                        intend to meet and how. The W3C itself does not recommend requiring AAA as a
+                                        general sitewide policy, because some content cannot satisfy it.
                                     </>
                                 }
                             >
@@ -529,9 +533,11 @@ export default function WebAccessibilityGlossaryPage() {
                                     Success criteria are graded A, AA or AAA, and the levels are cumulative.
                                 </BlogHighlight>{" "}
                                 Level A is the floor. Level AA is the practical target and is what almost every law and
-                                procurement rule actually points at. Level AAA is an enhancement that the W3C states is
-                                not required as a general policy for entire sites, because it is not possible to satisfy
-                                for all content.{" "}
+                                {/* 8 Oct 2026: WCAG 2.2 section 5.2.1 Note 2 says it "is not recommended that Level AAA
+                                    conformance be required as a general policy for entire sites", not that AAA "is not required". */}
+                                procurement rule actually points at. Level AAA is an enhancement that the W3C recommends
+                                against requiring as a general policy for entire sites, because it is not possible to
+                                satisfy for all content.{" "}
                                 <BlogHighlight>Why it matters:</BlogHighlight> AAA in a sales document is usually either
                                 a misunderstanding or a way to justify a larger number. AA on named templates, with
                                 evidence, is what a real engagement looks like.
@@ -1184,8 +1190,11 @@ export default function WebAccessibilityGlossaryPage() {
                                     The Lighthouse accessibility score is a weighted result derived from a set of
                                     automated axe-core checks.
                                 </BlogHighlight>{" "}
-                                Google&apos;s own documentation states plainly that a perfect score does not mean the
-                                page is accessible, because the checks only cover what can be automated.{" "}
+                                {/* 8 Oct 2026: reworded to what Google's Lighthouse actually says. The old line
+                                    credited Google's documentation with a "perfect score" statement we could not find. */}
+                                Lighthouse&apos;s own report says automatic detection can only detect a subset of
+                                issues and does not guarantee the accessibility of your web app, so a perfect score is
+                                not proof the page is accessible.{" "}
                                 <BlogHighlight>Why it matters:</BlogHighlight> it is a useful smoke test and a bad
                                 acceptance criterion, which is the same thing this site says about the performance
                                 score sitting next to it.
@@ -1229,12 +1238,12 @@ export default function WebAccessibilityGlossaryPage() {
                                 you, that offer stands too.
                             </p>
                             <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                                Book a 30-minute review <ArrowRight className="h-4 w-4" />
+                                Book a 15-minute review <ArrowRight className="h-4 w-4" />
                             </CalModalButton>
                         </section>
 
                         <h2 className="mb-6 mt-16 font-serif text-3xl text-charcoal">Frequently asked questions</h2>
-                        <FAQAccordion faqs={postFAQs} />
+                        <FAQAccordion faqs={postFAQs} showHeading={false} />
 
                         <p className="mt-10 leading-relaxed text-stone-600">
                             For the measured picture behind the figures quoted here, read{" "}

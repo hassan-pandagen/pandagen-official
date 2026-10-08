@@ -19,7 +19,7 @@
     "connectionNote": "connectedPrimaryMailbox describes whichever assistant connection is in use. A Zoho connector authenticated to a different mailbox (e.g. lance@pandapatches.com) cannot send as hassan@mail.pandacodegen.com; verify with getMailAccounts before sending."
   },
   "outreachStatus": "initiated",
-  "sentCount": 5,
+  "sentCount": 7,
   "externalSubmissionsCount": 0,
   "acquiredLinksCount": 0,
   "notes": [
@@ -32,7 +32,9 @@
     "Daily HARO screening is active; no HARO reply or outreach follow-up is sent automatically.",
     "templates@netlify.com should not be retried as an email address. It is a Google Group closed to outside posting. Netlify's template route needs a different, verified channel before it re-enters the queue.",
     "Reconciled against the live Zoho mailbox on 23 Sep 2026: Sent folder read via API, Outbox confirmed empty.",
-    "NO EMAIL OUTREACH REMAINS, established 23 Sep 2026. Mailbox checked: four live sends (DC House 17 Sep, Sanity and A List Apart 19 Sep, Indie Maker Diaries 20 Sep), one bounce (Netlify), zero replies, Spam folder empty. No follow-up is due; the rule is seven business days. Searching both prospect documents for addresses returns exactly one across all 21 researched competitor backlinks \u2014 templates@netlify.com, which bounced and is suppressed. Every other route is a partner application form, a directory signup, a paid submission, a GitHub pull request or a Discord post. The campaign is not short of prospects; it is short of a public asset. The approachable free routes (Web Performance Research README PR, Built At Lightspeed open-source listing, No-Code Supply, CSS-Tricks when proposals reopen) all require a reusable technical resource that does not yet exist, which is the same conclusion README.md reached on 16 Sep. Sending more email is not the bottleneck."
+    "NO EMAIL OUTREACH REMAINS, established 23 Sep 2026. Mailbox checked: four live sends (DC House 17 Sep, Sanity and A List Apart 19 Sep, Indie Maker Diaries 20 Sep), one bounce (Netlify), zero replies, Spam folder empty. No follow-up is due; the rule is seven business days. Searching both prospect documents for addresses returns exactly one across all 21 researched competitor backlinks — templates@netlify.com, which bounced and is suppressed. Every other route is a partner application form, a directory signup, a paid submission, a GitHub pull request or a Discord post. The campaign is not short of prospects; it is short of a public asset. The approachable free routes (Web Performance Research README PR, Built At Lightspeed open-source listing, No-Code Supply, CSS-Tricks when proposals reopen) all require a reusable technical resource that does not yet exist, which is the same conclusion README.md reached on 16 Sep. Sending more email is not the bottleneck.",
+    "7 Oct 2026: Owner renewed authorization for 3 or 5 daily emails. Three newly verified editorial routes reopened the queue: one Sent receipt and two accepted schedules in Outbox. September NO EMAIL OUTREACH REMAINS note was historical, not a current prohibition. No new backlinks confirmed. Daily task created; hosted Zoho access pending its first run.",
+    "7 October 16:42 UTC: Next.js Weekly verified in Sent with a new message ID; Programming Digest remains in Outbox. Prefer independent editors and specialist communities per owner refinement. No links acquired. New catalog resource is local-only until its public URL is verified."
   ],
   "queue": [
     {
@@ -152,7 +154,7 @@
         "ourArticleCheck": "Fetched the live destination article and stripped script/style plus all tags. Its 28,225 characters of visible text contain zero occurrences of '0.8', '1.2', 'benchmark' or 'load time'. Three raw-HTML matches for '0.8' are CSS/JS values, not content. The attribution is unsupported by the page it cites.",
         "routeCheck": "https://storeownertips.com/contact/ returns 200 and exposes a form only: no mailto link and no email address anywhere in the markup. There is no email route to this publisher, so the correction cannot be sent from the Zoho mailbox."
       },
-      "ownerDecision": "23 Sep 2026: owner declined to send. storeownertips.com already appears in GSC Top linking sites, and the owner chose to keep the link rather than request a correction. Recorded because first-outreach.md section 5 and README.md both state the opposite position \u2014 'citation accuracy takes priority over retaining a backlink', and 'removal of the inaccurate link is a successful outcome'. The underlying facts are unchanged and re-verified on 23 Sep: their anchor reads '0.8 to 1.2 seconds' and our cited article contains that figure zero times. Reopen only on a fresh owner decision."
+      "ownerDecision": "23 Sep 2026: owner declined to send. storeownertips.com already appears in GSC Top linking sites, and the owner chose to keep the link rather than request a correction. Recorded because first-outreach.md section 5 and README.md both state the opposite position — 'citation accuracy takes priority over retaining a backlink', and 'removal of the inaccurate link is a successful outcome'. The underlying facts are unchanged and re-verified on 23 Sep: their anchor reads '0.8 to 1.2 seconds' and our cited article contains that figure zero times. Reopen only on a fresh owner decision."
     },
     {
       "id": "a-list-apart-verification-pitch",
@@ -195,7 +197,7 @@
         "detectedAt": "2026-09-20T04:34:06Z",
         "reportedBy": "mailer-daemon@googlemail.com",
         "reason": "templates@netlify.com is a Google Group that rejected the post: \"the group you tried to contact (templates) may not exist, or you may not have permission to post messages to the group\".",
-        "authenticationAtBounce": "dkim=pass, spf=pass, dmarc=pass \u2014 the failure is the target address, not deliverability.",
+        "authenticationAtBounce": "dkim=pass, spf=pass, dmarc=pass — the failure is the target address, not deliverability.",
         "classification": "prospect_verification_failure"
       },
       "publishedUrl": null
@@ -211,6 +213,47 @@
       "messageId": "1789853953175155300",
       "draft": "indie-maker-diaries-outreach-2026-09-20.md",
       "publishedUrl": null
+    },
+    {
+      "id": "frontend-focus-2026-10-07",
+      "kind": "editorial_resource_suggestion",
+      "recipientEmail": "editor@cooperpress.com",
+      "route": "https://cooperpress.com/contact/",
+      "targetAsset": "https://www.pandacodegen.com/work/emblematic-studio",
+      "subject": "Frontend Focus suggestion: keeping a product catalogue in sync",
+      "status": "sent_verified_in_sent_folder",
+      "messageId": "1791386728351155300",
+      "publishedUrl": null,
+      "receipt": "../seo-aeo-prelaunch-audit-2026-10-07/outreach-receipts.json",
+      "sentAt": "2026-10-07T15:25:28.344Z"
+    },
+    {
+      "id": "nextjs-weekly-2026-10-07",
+      "kind": "editorial_resource_suggestion",
+      "recipientEmail": "erfan@nextjsweekly.com",
+      "route": "https://nextjsweekly.com/imprint",
+      "targetAsset": "https://www.pandacodegen.com/work/ladies-4-jesus",
+      "subject": "Next.js Weekly project suggestion: moderation and upload cleanup",
+      "status": "sent_verified_in_sent",
+      "messageId": "1791390591205166100",
+      "publishedUrl": null,
+      "receipt": "../seo-aeo-prelaunch-audit-2026-10-07/outreach-receipts.json",
+      "scheduleRequested": "one hour after submission; Asia/Karachi",
+      "scheduledMessageId": "1791386991903155000",
+      "verifiedInSentAt": "2026-10-07T16:42:15Z"
+    },
+    {
+      "id": "programming-digest-2026-10-07",
+      "kind": "editorial_resource_suggestion",
+      "recipientEmail": "jakub@bonobopress.com",
+      "route": "https://bonobopress.com/",
+      "targetAsset": "https://www.pandacodegen.com/work/enterprise-ops",
+      "subject": "Programming Digest suggestion: permissions in an operations app",
+      "status": "scheduled_verified_in_outbox",
+      "messageId": "1791387222941155100",
+      "publishedUrl": null,
+      "receipt": "../seo-aeo-prelaunch-audit-2026-10-07/outreach-receipts.json",
+      "scheduleRequested": "two hours after submission; Asia/Karachi"
     }
   ],
   "deferred": [
@@ -295,7 +338,7 @@
       "route": "https://gitnation.com/sponsors"
     }
   ],
-  "sentCountNote": "Five first contacts plus one HARO reply, reconciled 23 Sep 2026 against the Zoho Sent folder via API. The previous value of 2 predated three sends that were never recorded, because the ledger was deleted on 19 Sep and restored on 22 Sep.",
+  "sentCountNote": "Six first-contact sends historically recorded, including one bounced Netlify attempt; two additional October messages remain scheduled, not counted as sent. One historical HARO reply is separate. October receipt details are saved in the 2026-10-07 audit folder.",
   "bouncedCount": 1,
   "cadence": {
     "maxFirstContactsPerDay": 5,
@@ -306,6 +349,17 @@
       "one hour (README, 16-19 Sep)",
       "five minutes (smaller-publisher-reset, 20-22 Sep)"
     ],
-    "note": "The interval is a pacing rule, not a deliverability control. At five first contacts a day from a domain passing DKIM, SPF and DMARC, no mailbox provider distinguishes 15 minutes from an hour. Its real function is the sentence that follows it in README.md: a ceiling, not a quota, with only individually verified prospects sent. The one bounce in this campaign, templates@netlify.com, was an unverified address rather than a spacing failure, so the interval would not have prevented it at any length."
+    "note": "The interval is a pacing rule, not a deliverability control. At five first contacts a day from a domain passing DKIM, SPF and DMARC, no mailbox provider distinguishes 15 minutes from an hour. Its real function is the sentence that follows it in README.md: a ceiling, not a quota, with only individually verified prospects sent. The one bounce in this campaign, templates@netlify.com, was an unverified address rather than a spacing failure, so the interval would not have prevented it at any length.",
+    "targetFirstContactsPerDay": 3
+  },
+  "scheduledPendingCount": 1,
+  "updatedAt": "2026-10-07",
+  "dailyAutomation": {
+    "status": "active_hosted_mail_access_unverified",
+    "time": "19:00",
+    "timezone": "Asia/Karachi",
+    "starts": "2026-10-08",
+    "page": "https://chatgpt.com/space/page_f8952304a3748191aa1041fe234072cc",
+    "automationId": "Automation_88330e19eebc81918b9bcec74ff04fa6"
   }
 }

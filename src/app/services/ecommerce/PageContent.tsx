@@ -77,7 +77,7 @@ export default function PageContent() {
               See Our Work <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
-          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your store URL when you book. We test your speed live, show you what the measurement does and does not establish, and quote you on the spot. <span className="text-charcoal font-medium">Best fit for stores doing $50K to $5M/year.</span></p>
+          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">15-min call. Drop your store URL when you book. We test your speed live, show you what the measurement does and does not establish, and quote you on the spot. <span className="text-charcoal font-medium">Best fit for stores doing $50K to $5M/year.</span></p>
         </div>
       </section>
 

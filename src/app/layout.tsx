@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import "./site-fonts.css";
 import "./globals.css";
 import "lenis/dist/lenis.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
@@ -9,6 +9,7 @@ import { blogPosts } from "@/data/blog";
 import { ConsentProvider } from "@/components/consent/ConsentProvider";
 import ConsentManagedServices from "@/components/consent/ConsentManagedServices";
 import CookieConsent from "@/components/consent/CookieConsent";
+import AskAssistant from "@/components/assistant/AskAssistant";
 import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, PHONE } from "@/data/company-facts";
 
 // Inter is the body font and it is used above the fold on every page, so it is
@@ -26,24 +27,8 @@ import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, PHONE } from "@/data/company-f
 // Playfair stays unpreloaded on purpose: it is only used for serif italic
 // accents, and preloading a font a page may not use is wasted bandwidth.
 // If you set this back to false, measure the homepage first.
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-  adjustFontFallback: true,
-  variable: "--font-sans",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  display: "swap",
-  preload: false,
-  weight: ["400"],
-  style: ["normal", "italic"],
-  variable: "--font-serif",
-  adjustFontFallback: false,
-  fallback: ["Georgia", "Times New Roman", "serif"],
-});
+const inter = { variable: "font-inter" };
+const playfair = { variable: "font-playfair" };
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.pandacodegen.com'),
@@ -169,6 +154,7 @@ export default function RootLayout({
     <HtmlShell
       bodyClassName={`${inter.variable} ${playfair.variable} font-sans antialiased bg-background text-charcoal`}
     >
+      <link rel="preload" href="/fonts/site/inter-83afe278b6a6bb3c-s.woff2" as="font" type="font/woff2" crossOrigin="" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraph) }}
@@ -189,6 +175,7 @@ export default function RootLayout({
               {children}
             </div>
           </SmoothScroll>
+          <AskAssistant />
           <CookieConsent />
       </ConsentProvider>
     </HtmlShell>

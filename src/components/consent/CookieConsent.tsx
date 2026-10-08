@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Cookie, Settings2, X } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { Cookie, X } from "lucide-react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { createPortal } from "react-dom";
 import { useConsent } from "./ConsentProvider";
 
 interface DraftChoices {
@@ -17,6 +18,19 @@ const defaultChoices: DraftChoices = {
   functional: false,
 };
 
+// The node the banner renders into: the first child of <body>. Created once, on
+// the client only; the server snapshot is null, so the server HTML is unchanged.
+let bannerHostNode: HTMLElement | null = null;
+function getBannerHost() {
+  if (!bannerHostNode || !bannerHostNode.isConnected) {
+    bannerHostNode = document.createElement("div");
+    bannerHostNode.dataset.cookieBannerHost = "";
+    document.body.prepend(bannerHostNode);
+  }
+  return bannerHostNode;
+}
+const noSubscription = () => () => {};
+
 export default function CookieConsent() {
   const {
     preferences,
@@ -30,13 +44,67 @@ export default function CookieConsent() {
     rejectOptional,
   } = useConsent();
   const [draftOverride, setDraft] = useState<DraftChoices | null>(null);
+  const [chatOpen, setChatOpen] = useState(false);
+  const bannerHost = useSyncExternalStore(noSubscription, getBannerHost, () => null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
+  const bannerRef = useRef<HTMLElement>(null);
+  const showBanner = !preferences && !preferencesOpen && !chatOpen;
   const draft = draftOverride ?? {
     analytics: preferences?.analytics ?? defaultChoices.analytics,
     marketing: preferences?.marketing ?? defaultChoices.marketing,
     functional: preferences?.functional ?? defaultChoices.functional,
   };
+
+  useEffect(() => {
+    const sync = () => setChatOpen(
+      document.body.dataset.assistantChatOpen === "true" || document.body.dataset.tawkChatOpen === "true",
+    );
+    const observer = new MutationObserver(sync);
+    observer.observe(document.body, { attributes: true, attributeFilter: ["data-assistant-chat-open", "data-tawk-chat-open"] });
+    sync();
+    return () => observer.disconnect();
+  }, []);
+
+  // 4 Oct 2026, keyboard access (WCAG 2.2 SC 2.4.11, Focus Not Obscured). This
+  // component renders last in the layout, so the banner was the last thing on the
+  // page to get focus: about 110 Tab presses on the home page. Meanwhile the fixed
+  // banner sat over the bottom of the screen and completely hid 16 of 115 focused
+  // links there at 1366x900 (25 of 109 at 390x844). Two fixes, both measured:
+  //
+  // 1. The banner renders into a node at the very start of <body>, before the
+  //    skip link, so it is the first thing Tab reaches. That is where the GOV.UK
+  //    Design System puts its cookie banner. It still looks the same: fixed to the
+  //    bottom of the screen.
+  // 2. While the banner is open, the page gets a bottom scroll-padding equal to
+  //    the area the banner covers, so the browser scrolls a focused link up above
+  //    the banner instead of leaving it underneath. The body also gets the same
+  //    space at the bottom; without it the footer's last row (Privacy, Terms,
+  //    Cookies...) could not scroll any higher and stayed hidden.
+  //
+  // Consent logic, GPC handling and the events ConsentProvider sends are untouched.
+  useEffect(() => {
+    const banner = bannerRef.current;
+    if (!ready || !showBanner || !banner) return;
+    const root = document.documentElement;
+    const update = () => {
+      const covered = Math.max(0, Math.ceil(window.innerHeight - banner.getBoundingClientRect().top));
+      root.style.scrollPaddingBottom = `${covered + 16}px`;
+      root.style.setProperty("--cookie-banner-clearance", `${covered + 16}px`);
+      document.body.style.paddingBottom = `${covered}px`;
+    };
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(banner);
+    window.addEventListener("resize", update);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", update);
+      root.style.scrollPaddingBottom = "";
+      root.style.removeProperty("--cookie-banner-clearance");
+      document.body.style.paddingBottom = "";
+    };
+  }, [ready, showBanner, bannerHost]);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -67,18 +135,16 @@ export default function CookieConsent() {
 
   const reasonCopy =
     promptReason === "calendar"
-      ? "The booking calendar connects to Cal.com. Allow Scheduling & live chat to load it."
-      : promptReason === "chat"
-        ? "Live chat connects to Tawk.to and uses IP-based location data. Allow Scheduling & live chat to start it."
-        : "Choose which optional services may load. You can change or withdraw your choice at any time.";
+      ? "The booking calendar connects to Cal.com. Allow Scheduling to load it."
+      : "Choose which optional services may load. You can change or withdraw your choice at any time.";
 
   if (!ready) return null;
 
-  return (
-    <>
-      {!preferences && !preferencesOpen && (
+  const banner = showBanner ? (
         <section
+          ref={bannerRef}
           aria-label="Cookie and privacy choices"
+          data-cookie-control
           style={{ zIndex: 2147483000 }}
           className="fixed inset-x-3 bottom-3 z-[100] mx-auto max-w-5xl rounded-2xl border border-stone-300 bg-white p-4 shadow-2xl sm:inset-x-6 sm:bottom-6 sm:p-5"
         >
@@ -143,18 +209,23 @@ export default function CookieConsent() {
             </div>
           </div>
         </section>
-      )}
+  ) : null;
 
-      {preferences && !preferencesOpen && (
+  return (
+    <>
+      {bannerHost ? createPortal(banner, bannerHost) : banner}
+
+      {preferences && !preferencesOpen && !chatOpen && (
         <button
           type="button"
+          data-cookie-control
           onClick={() => openPreferences()}
           style={{ zIndex: 2147483000 }}
-          className="fixed bottom-3 left-3 z-[90] inline-flex min-h-10 items-center gap-2 rounded-full border border-stone-300 bg-white px-3 py-2 text-xs font-bold text-charcoal shadow-lg transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal sm:bottom-5 sm:left-5"
+          className="fixed bottom-4 left-4 z-[90] inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone-300 bg-[#faf7f1] text-stone-600 shadow-md transition-colors hover:border-[#ad3d0b] hover:bg-white hover:text-[#ad3d0b] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ad3d0b]"
+          title="Cookie preferences"
           aria-label="Open cookie preferences"
         >
-          <Settings2 className="h-4 w-4" aria-hidden="true" />
-          Cookie settings
+          <Cookie className="h-[18px] w-[18px]" aria-hidden="true" />
         </button>
       )}
 
@@ -207,7 +278,7 @@ export default function CookieConsent() {
                 onClick={() => saveDraft({ ...draft, functional: true })}
                 className="mt-3 min-h-11 rounded-full bg-charcoal px-5 py-2.5 text-sm font-bold text-white hover:bg-stone-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
               >
-                Allow scheduling &amp; live chat
+                Allow scheduling
               </button>
             </div>
           )}
@@ -236,8 +307,8 @@ export default function CookieConsent() {
             />
             <PreferenceRow
               id="consent-functional"
-              title="Scheduling & live chat"
-              description="Cal.com provides booking and Tawk.to provides chat. These services load only when Functional is enabled."
+              title="Scheduling"
+              description="Cal.com provides booking. It loads only when Functional is enabled. Live chat with Hassan needs no cookies and works either way."
               checked={draft.functional}
               onChange={(checked) => setDraft({ ...draft, functional: checked })}
             />

@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-06",
-        modifiedTime: "2026-09-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/for-agencies-offer-custom-web-development")],
@@ -60,7 +60,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/for-agencies-offer-custom-web-development"),
             description,
             datePublished: "2026-03-06",
-            dateModified: "2026-09-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -137,7 +137,7 @@ export default function WhiteLabelDevelopmentGuide() {
                             Write down how the commercial side and the delivery side will work before anyone
                             sells the project.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Offer and terms reviewed August 8, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Offer and terms reviewed October 8, 2026.</p>
                       </div>
                       <div data-article-hero-screen>
                         <BlogCoverFigure id="for-agencies-offer-custom-web-development" />
@@ -147,8 +147,8 @@ export default function WhiteLabelDevelopmentGuide() {
                     <BlogAuthor
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
-                        date="March 6, 2026"
-                        readTime="5 min read"
+                        postId="for-agencies-offer-custom-web-development" published="2026-03-06"
+                        readTime="14 min read"
                         bio="Hassan scopes search-sensitive migrations and partner delivery systems."
                     />
 
@@ -203,6 +203,14 @@ export default function WhiteLabelDevelopmentGuide() {
                         Two of those are the reason agencies bring in a partner at all: commerce and internal tools are where a request most commonly exceeds what a design-led team can deliver alone. The other two are
                         usually within reach if you have someone to hand the engineering to. Knowing which of the four
                         a client is describing is the difference between quoting confidently and quoting defensively.
+                    </BlogText>
+                    <BlogText>
+                        GoHighLevel requests tend to start with one of two questions. Whether the built-in builder is
+                        enough for client sites is covered in{" "}
+                        <Link href="/blog/best-website-builder-for-gohighlevel-agencies" className="text-cognac hover:underline">our comparison of website builders for GoHighLevel agencies</Link>
+                        , and when the complaint is a slow funnel,{" "}
+                        <Link href="/blog/gohighlevel-website-speed" className="text-cognac hover:underline">our GoHighLevel speed guide</Link>{" "}
+                        separates what the agency can fix from what the platform controls.
                     </BlogText>
 
                     <BlogQuote>
@@ -327,6 +335,12 @@ export default function WhiteLabelDevelopmentGuide() {
                         Revision limits set by count alone, with no reference to whether the work met the agreed scope.
                     </InsightBox>
 
+                    <BlogText>
+                        If the partner you need is a Next.js team, our{" "}
+                        <Link href="/blog/top-nextjs-agencies-2026" className="text-cognac hover:underline">disclosed shortlist of Next.js agencies</Link>{" "}
+                        shows these checks applied to named firms.
+                    </BlogText>
+
                     <BlogHeader>Ownership and account control</BlogHeader>
                     <BlogText>
                         Client content, data, brand assets, and{" "}
@@ -345,7 +359,7 @@ export default function WhiteLabelDevelopmentGuide() {
 
                     <BlogHeader>Commercial terms for a PandaCodeGen project</BlogHeader>
                     <BlogText>
-                        These are the terms a partner agency is quoting on top of, reviewed July 24, 2026. Read them as
+                        These are the terms a partner agency is quoting on top of, reviewed October 8, 2026. Read them as
                         the starting position rather than the final one: every line below is subject to the signed
                         contract, and the full wording lives on our{" "}
                         <Link href="/terms" className="text-cognac hover:underline">terms page</Link>, which governs if
@@ -385,7 +399,7 @@ export default function WhiteLabelDevelopmentGuide() {
                         </BlogText>
                         <BlogList
                             items={[
-                                "Who triages, and who fixes. These are different jobs. An agency can reasonably own first response — reproduce it, establish urgency, tell the client something true within an hour — while the partner owns the code fix. Agreeing that split is most of the value, because it decides what the agency has to be able to do itself.",
+                                "Who triages, and who fixes. These are different jobs. An agency can reasonably own first response (reproduce it, establish urgency, tell the client something true within an hour) while the partner owns the code fix. Agreeing that split is most of the value, because it decides what the agency has to be able to do itself.",
                                 "What counts as a defect versus a change. A form that never worked is a defect. A form that now needs a new field is a change, and it is billable. Without that line written down, every request arrives as a warranty claim and the margin quietly disappears.",
                                 "Response expectations, in hours, and who is on the hook outside working days. Publish something you can actually meet rather than something that sounds reassuring, because the first missed response is what a client remembers.",
                             ]}
@@ -393,7 +407,7 @@ export default function WhiteLabelDevelopmentGuide() {
                         <InsightBox variant="info">
                             The support included with a build is a defined window, not an open-ended arrangement, and it
                             is stated in the project terms rather than assumed. <strong>Decide before launch what happens
-                            the day after it ends</strong> — whether the agency sells its own retainer and calls on the partner for
+                            the day after it ends</strong>: whether the agency sells its own retainer and calls on the partner for
                             code work, whether ongoing work is quoted separately each time, or whether the client is
                             handed over entirely. All three are legitimate. Not choosing is the one that damages the
                             client relationship the agency spent the project protecting.

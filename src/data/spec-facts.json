@@ -7,6 +7,7 @@
       "value": "$0",
       "qualifier": "for eligible personal, non-commercial projects",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 30,
       "source": "https://vercel.com/pricing"
     },
     "vercel-hobby-fast-data-transfer": {
@@ -16,6 +17,7 @@
       "value": "the first 100 GB a month",
       "qualifier": "listed under Hobby Included Usage; Hobby can't buy more, and going over a limit pauses that feature, in most cases for 30 days",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/hobby"
     },
     "vercel-hobby-fast-origin-transfer": {
@@ -25,6 +27,7 @@
       "value": "the first 10 GB a month",
       "qualifier": "listed under Hobby Included Usage",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/hobby"
     },
     "vercel-hobby-cdn-requests": {
@@ -34,6 +37,7 @@
       "value": "the first 1,000,000 a month",
       "qualifier": "listed under Hobby Included Usage; Vercel previously called these Edge Requests",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/hobby"
     },
     "vercel-hobby-deployments": {
@@ -42,6 +46,7 @@
       "label": "Deployments",
       "value": "up to 100 a day",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/hobby"
     },
     "vercel-hobby-blob-included": {
@@ -51,6 +56,7 @@
       "value": "1 GB of storage, 10,000 simple operations, 2,000 advanced operations and 10 GB of Blob Data Transfer a month",
       "qualifier": "Hobby can't buy more; going over removes Blob access until 30 days have passed",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 30,
       "source": "https://vercel.com/docs/vercel-blob/usage-and-pricing"
     },
     "vercel-pro-price": {
@@ -59,7 +65,8 @@
       "label": "Pro plan price",
       "value": "$20 a month",
       "qualifier": "platform fee including one deploying seat and $20 a month of usage credit; added seats and usage beyond the credit are extra",
-      "verifiedAt": "2026-10-04",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/pro-plan"
     },
     "vercel-pro-cdn-capacity": {
@@ -69,6 +76,7 @@
       "value": "1 million CDN requests and 1 TB of data transfer a month",
       "qualifier": "the lowest Flat Rate CDN capacity tier, included with Pro at no extra cost",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/pro-plan"
     },
     "vercel-flat-rate-cdn-next-tier": {
@@ -78,6 +86,7 @@
       "value": "$20 a month for 10 million CDN requests and 50 TB of data transfer",
       "qualifier": "a billing cycle over capacity moves the team up a tier at the start of the next cycle; a one-day spike doesn't",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 30,
       "source": "https://vercel.com/docs/pricing/flat-rate-cdn"
     },
     "vercel-flat-rate-cdn-ga-date": {
@@ -87,6 +96,7 @@
       "value": "8 September 2026",
       "qualifier": "the changelog entry says new Pro teams have Flat Rate CDN on by default and existing teams can switch over in Billing settings",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 30,
       "source": "https://vercel.com/changelog/flat-rate-cdn-is-now-ga-for-pro-teams"
     },
     "vercel-pro-spend-notification-default": {
@@ -96,6 +106,7 @@
       "value": "$200 per billing cycle",
       "qualifier": "Vercel enables spend management notifications at this amount by default for new customers",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/pro-plan"
     },
     "vercel-fast-data-transfer-on-demand": {
@@ -105,6 +116,7 @@
       "value": "$0.15 to $0.35 per GB by region",
       "qualifier": "applies to Pro CDN usage billed on demand, not to usage covered by a Flat Rate CDN tier",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 30,
       "source": "https://vercel.com/docs/pricing/regional-pricing"
     },
     "vercel-cdn-requests-on-demand": {
@@ -114,6 +126,7 @@
       "value": "$2.00 to $3.20 per million by region",
       "qualifier": "applies to Pro CDN usage billed on demand, not to usage covered by a Flat Rate CDN tier",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 30,
       "source": "https://vercel.com/docs/pricing/regional-pricing"
     },
     "vercel-fast-origin-transfer-on-demand": {
@@ -123,6 +136,7 @@
       "value": "$0.06 to $0.43 per GB by region",
       "qualifier": "usage-based on Pro; Flat Rate CDN doesn't cover it",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 30,
       "source": "https://vercel.com/docs/pricing/regional-pricing"
     },
     "googlebot-crawl-size-limit": {
@@ -140,6 +154,7 @@
       "value": "$15 a month",
       "qualifier": "USD; billed yearly, per site, plus tax; custom-domain Site plan without CMS. Monthly billing is recorded separately.",
       "verifiedAt": "2026-09-25",
+      "reviewDays": 60,
       "source": "https://webflow.com/pricing"
     },
     "webflow-premium-price": {
@@ -149,6 +164,7 @@
       "value": "$25 a month",
       "qualifier": "USD; base rate billed yearly, per site, plus tax; includes CMS. Usage tiers and extras can change the total.",
       "verifiedAt": "2026-09-25",
+      "reviewDays": 60,
       "source": "https://webflow.com/pricing"
     },
     "webflow-team-price": {
@@ -158,6 +174,7 @@
       "value": "$2,500 a month",
       "qualifier": "USD; annual contract required. Includes a site and Workspace. Additional sites and extras must be agreed with Webflow sales; the included site does not require a separate Site plan charge",
       "verifiedAt": "2026-09-25",
+      "reviewDays": 60,
       "source": "https://webflow.com/pricing"
     },
     "webflow-optimize-addon": {
@@ -165,8 +182,9 @@
       "plan": "Optimize add-on",
       "label": "Optimize add-on price",
       "value": "$299 a month",
-      "qualifier": "priced by page views, and charged separately from the site plan",
-      "verifiedAt": "2026-08-05",
+      "qualifier": "billed yearly ($379 billed monthly) for 25,000 page views, rising with page views, and charged separately from the site plan",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 60,
       "source": "https://webflow.com/pricing"
     },
     "webflow-localize-essential": {
@@ -174,8 +192,9 @@
       "plan": "Localize Essential add-on",
       "label": "Localize Essential price",
       "value": "$9 a month",
-      "qualifier": "covers 1 to 3 locales in total, not $9 per locale. Localize Advanced is $29 a month for 1 to 10",
-      "verifiedAt": "2026-08-05",
+      "qualifier": "per added locale, billed yearly ($12 billed monthly), up to 3 added locales not counting the primary one. Localize Advanced is $29 a month per locale, up to 10",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 60,
       "source": "https://webflow.com/pricing"
     },
     "webflow-analyze-addon": {
@@ -184,7 +203,8 @@
       "label": "Analyze add-on price",
       "value": "$9 a month",
       "qualifier": "priced by sessions, and charged separately from the site plan",
-      "verifiedAt": "2026-08-05",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 60,
       "source": "https://webflow.com/pricing"
     },
     "shopify-storefront-api-protocol": {
@@ -192,7 +212,7 @@
       "label": "Storefront API protocol",
       "value": "GraphQL only",
       "qualifier": "Shopify states there is no REST API for storefronts",
-      "verifiedAt": "2026-08-17",
+      "verifiedAt": "2026-10-08",
       "source": "https://shopify.dev/docs/api/storefront"
     },
     "shopify-storefront-api-content": {
@@ -200,7 +220,7 @@
       "label": "Content available through the Storefront API",
       "value": "pages, blogs and articles, alongside products, collections, cart, checkout, search and customer accounts",
       "qualifier": "this is why Shopify can serve a headless site as well as a headless shop",
-      "verifiedAt": "2026-08-17",
+      "verifiedAt": "2026-10-08",
       "source": "https://shopify.dev/docs/api/storefront"
     },
     "woocommerce-store-api-scope": {
@@ -208,7 +228,7 @@
       "label": "Store API scope",
       "value": "unauthenticated cart, checkout and product endpoints at /wp-json/wc/store/v1/",
       "qualifier": "WooCommerce describes it as public endpoints for customer-facing cart, checkout and product functionality",
-      "verifiedAt": "2026-08-17",
+      "verifiedAt": "2026-10-08",
       "source": "https://developer.woocommerce.com/docs/apis/store-api/"
     },
     "woocommerce-rest-api-scope": {
@@ -216,7 +236,7 @@
       "label": "REST API scope",
       "value": "authenticated admin resources only, with no cart or checkout endpoints",
       "qualifier": "products, orders, customers, coupons, refunds, tax rates and reports; a headless storefront needs the separate Store API",
-      "verifiedAt": "2026-08-17",
+      "verifiedAt": "2026-10-08",
       "source": "https://woocommerce.github.io/woocommerce-rest-api-docs/"
     },
     "wix-headless-price": {
@@ -225,7 +245,8 @@
       "label": "Wix Headless entry price",
       "value": "free to start",
       "qualifier": "Wix states a premium plan is required to unlock payments, in-depth analytics and custom domains",
-      "verifiedAt": "2026-08-17",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 60,
       "source": "https://dev.wix.com/docs/go-headless/get-started/about-wix-headless"
     },
     "wix-headless-solutions": {
@@ -234,7 +255,7 @@
       "label": "Business solutions available headlessly",
       "value": "eCommerce, bookings, events, memberships, CMS and blog",
       "qualifier": "Wix states these sit under a single auth model and a consistent API pattern",
-      "verifiedAt": "2026-08-17",
+      "verifiedAt": "2026-10-08",
       "source": "https://dev.wix.com/docs/go-headless/get-started/about-wix-headless"
     },
     "squarespace-api-scope": {
@@ -242,23 +263,23 @@
       "label": "Developer API scope",
       "value": "nine back-office Commerce APIs, with no content, page or storefront API",
       "qualifier": "Analytics, Contacts, Discounts, Inventory, Orders, Products, Profiles, Transactions and Webhook Subscriptions",
-      "verifiedAt": "2026-08-17",
+      "verifiedAt": "2026-10-08",
       "source": "https://developers.squarespace.com/commerce-apis/overview"
     },
     "webflow-cloud-frameworks": {
       "vendor": "Webflow",
       "label": "Frameworks deployable to Webflow Cloud",
-      "value": "Astro and Next.js",
-      "qualifier": "deployed to Webflow infrastructure either standalone or mounted on an existing Webflow site at a path",
-      "verifiedAt": "2026-08-17",
+      "value": "Next.js, Astro, React, Vue, Svelte and plain JavaScript",
+      "qualifier": "deployed to Webflow infrastructure either standalone or mounted on an existing Webflow site at a path; the deploy wizard's built-in templates cover Astro and Next.js, and Webflow keeps official starters for the others",
+      "verifiedAt": "2026-10-08",
       "source": "https://developers.webflow.com/webflow-cloud/getting-started"
     },
     "webflow-devlink-direction": {
       "vendor": "Webflow",
       "label": "What DevLink moves",
-      "value": "Webflow components exported as React components into an external codebase",
+      "value": "Webflow components exported as React components into an external codebase, and your own React components imported into Webflow",
       "qualifier": "Webflow describes DevLink as the interface between external codebases and Webflow",
-      "verifiedAt": "2026-08-17",
+      "verifiedAt": "2026-10-08",
       "source": "https://developers.webflow.com/devlink/reference/overview"
     },
     "gohighlevel-api-scope": {
@@ -268,6 +289,54 @@
       "qualifier": "Blogs and Funnels APIs are listed in the developer portal; whether they return renderable page content was not established",
       "verifiedAt": "2026-08-17",
       "source": "https://marketplace.gohighlevel.com/docs/"
+    },
+    "gohighlevel-starter-price": {
+      "vendor": "HighLevel",
+      "plan": "Starter",
+      "label": "Monthly price",
+      "value": "$97 a month",
+      "qualifier": "or $970 a year; 3 sub-accounts; the Website & Funnel Builder is listed among the core features on every plan",
+      "verifiedAt": "2026-10-04",
+      "reviewDays": 60,
+      "source": "https://www.gohighlevel.com/pricing"
+    },
+    "gohighlevel-unlimited-price": {
+      "vendor": "HighLevel",
+      "plan": "Unlimited",
+      "label": "Monthly price",
+      "value": "$297 a month",
+      "qualifier": "or $2,970 a year; unlimited sub-accounts and Basic API access",
+      "verifiedAt": "2026-10-04",
+      "reviewDays": 60,
+      "source": "https://www.gohighlevel.com/pricing"
+    },
+    "gohighlevel-agency-pro-price": {
+      "vendor": "HighLevel",
+      "plan": "Agency Pro",
+      "label": "Monthly price",
+      "value": "$497 a month",
+      "qualifier": "or $4,970 a year; adds SaaS Mode and Advanced API access",
+      "verifiedAt": "2026-10-04",
+      "reviewDays": 60,
+      "source": "https://www.gohighlevel.com/pricing"
+    },
+    "gohighlevel-wordpress-hosting-price": {
+      "vendor": "HighLevel",
+      "plan": "WordPress Standard hosting",
+      "label": "Price",
+      "value": "$10 a month for one site",
+      "qualifier": "an optional add-on billed on top of a HighLevel plan, not included in one; $9 a month billed annually",
+      "verifiedAt": "2026-10-04",
+      "reviewDays": 60,
+      "source": "https://help.gohighlevel.com/support/solutions/articles/48001231366-wordpress-hosting-specs-market-comparison-and-new-pricing-plans"
+    },
+    "wordpress-org-plugin-count": {
+      "vendor": "WordPress.org",
+      "label": "Free plugins in the directory",
+      "value": "over 74,000",
+      "qualifier": "as stated on the WordPress.org plugin directory",
+      "verifiedAt": "2026-10-04",
+      "source": "https://wordpress.org/plugins/"
     },
     "shopify-theme-store-min-perf": {
       "vendor": "Shopify",
@@ -316,6 +385,7 @@
       "value": "$39/mo",
       "qualifier": "$29/mo billed yearly. US pricing as shown to a US visitor; Shopify sets plan prices by country",
       "verifiedAt": "2026-10-03",
+      "reviewDays": 60,
       "source": "https://www.shopify.com/pricing"
     },
     "shopify-plan-grow": {
@@ -325,6 +395,7 @@
       "value": "$105/mo",
       "qualifier": "$79/mo billed yearly. US pricing as shown to a US visitor; Shopify sets plan prices by country",
       "verifiedAt": "2026-10-03",
+      "reviewDays": 60,
       "source": "https://www.shopify.com/pricing"
     },
     "shopify-plan-advanced": {
@@ -334,6 +405,7 @@
       "value": "$399/mo",
       "qualifier": "$299/mo billed yearly. US pricing as shown to a US visitor; Shopify sets plan prices by country",
       "verifiedAt": "2026-10-03",
+      "reviewDays": 60,
       "source": "https://www.shopify.com/pricing"
     },
     "shopify-plan-plus": {
@@ -341,16 +413,17 @@
       "plan": "Plus",
       "label": "Plus plan starting price",
       "value": "$2,300/mo",
-      "qualifier": "Starting price; the pricing page offers no yearly rate for Plus",
-      "verifiedAt": "2026-10-03",
-      "source": "https://www.shopify.com/pricing"
+      "qualifier": "Starting price on a 3-year term; $2,500/mo on a 1-year term. More complex, higher-volume businesses pay a variable platform fee instead",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 60,
+      "source": "https://www.shopify.com/plus/pricing"
     },
     "woocommerce-cart-fragments-default": {
       "vendor": "WooCommerce",
       "label": "Cart fragments script enqueueing",
       "value": "only on views that render the Cart widget",
       "qualifier": "Changed in WooCommerce 7.8. Before that release the script was enqueued on every page load. Third-party code that registers wc-cart-fragments as a dependency, or enqueues it explicitly, still pulls it in",
-      "verifiedAt": "2026-08-25",
+      "verifiedAt": "2026-10-08",
       "source": "https://developer.woocommerce.com/2023/06/16/best-practices-for-the-use-of-the-cart-fragments-api/"
     },
     "woocommerce-variation-ajax-threshold": {
@@ -358,7 +431,7 @@
       "label": "Variation preload threshold",
       "value": "30",
       "qualifier": "A product with 30 or fewer variations has all of them preloaded into the page as JSON; 31 or more falls back to AJAX. Filterable via woocommerce_ajax_variation_threshold",
-      "verifiedAt": "2026-08-25",
+      "verifiedAt": "2026-10-08",
       "source": "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/wc-template-functions.php"
     },
     "woocommerce-guest-checkout-default": {
@@ -366,7 +439,7 @@
       "label": "Guest checkout default",
       "value": "enabled on a fresh install",
       "qualifier": "woocommerce_enable_guest_checkout defaults to yes. The admin label reads Enable guest checkout (recommended), under WooCommerce, Settings, Accounts and Privacy",
-      "verifiedAt": "2026-08-25",
+      "verifiedAt": "2026-10-08",
       "source": "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/admin/settings/class-wc-settings-accounts.php"
     },
     "woocommerce-classic-checkout-fields": {
@@ -374,7 +447,7 @@
       "label": "Default billing fields on the classic checkout",
       "value": "11 shown, 9 required",
       "qualifier": "Default locale only. Per-country overrides make state or postcode optional in many countries. The block checkout shows 10 and requires 8, hiding company name and making phone optional",
-      "verifiedAt": "2026-08-25",
+      "verifiedAt": "2026-10-08",
       "source": "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/class-wc-countries.php"
     },
     "woocommerce-shipping-cost-requires-address-default": {
@@ -382,7 +455,7 @@
       "label": "Hide shipping costs until an address is entered",
       "value": "off by default",
       "qualifier": "woocommerce_shipping_cost_requires_address defaults to no, so a fresh store is not hiding shipping cost by configuration. If your customers meet the price late, something else put it there",
-      "verifiedAt": "2026-08-25",
+      "verifiedAt": "2026-10-08",
       "source": "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/admin/settings/class-wc-settings-shipping.php"
     },
     "woocommerce-blocks-checkout-default": {
@@ -390,24 +463,9 @@
       "label": "Cart and Checkout blocks as the default experience",
       "value": "new installs from WooCommerce 8.3",
       "qualifier": "Existing stores keep the shortcode checkout when they upgrade, so a store built before November 2023 is likely still running it",
-      "verifiedAt": "2026-08-25",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 365,
       "source": "https://developer.woocommerce.com/2023/08/18/cart-and-checkout-blocks-becoming-the-default-experience/"
-    },
-    "irp-conversion-rate-jul-2026": {
-      "vendor": "IRP Commerce",
-      "label": "All Ecommerce Markets conversion rate, July 2026",
-      "value": "2.26%",
-      "qualifier": "Transactions divided by sessions, calculated from live trading data on IRP's own platform. B2C only, Great Britain, Northern Ireland and Ireland. Merchant count is withheld for confidentiality. This is not a global average and does not describe your store. IRP revises published months, so re-read before quoting: this figure read 2.22% on 25 August 2026 and 2.26% on 13 September 2026 for the same month",
-      "verifiedAt": "2026-09-13",
-      "source": "https://www.irpcommerce.com/en/gb/ecommercemarketdata.aspx"
-    },
-    "irp-conversion-spread-jul-2026": {
-      "vendor": "IRP Commerce",
-      "label": "Sector spread within a single month, July 2026",
-      "value": "0.55% to 5.23%",
-      "qualifier": "Baby and Child at the low end, Arts and Crafts at the high end. Same month, same platform, same definition, a 9.5x range",
-      "verifiedAt": "2026-09-13",
-      "source": "https://www.irpcommerce.com/en/gb/ecommercemarketdata.aspx"
     },
     "statista-global-conversion-q2-2026": {
       "vendor": "Statista",
@@ -422,7 +480,7 @@
       "label": "Returning against new visitor conversion",
       "value": "2.9% against 1.7%",
       "qualifier": "From 99 billion sessions across 6,000+ sites, Q4 2024 to Q4 2025, published March 2026. Contentsquare publishes no single overall ecommerce conversion figure",
-      "verifiedAt": "2026-09-13",
+      "verifiedAt": "2026-10-08",
       "source": "https://contentsquare.com/guides/digital-experience-benchmark/conversions/"
     },
     "wp-saml-cve-15981": {
@@ -447,7 +505,7 @@
       "value": "7",
       "qualifier": "Free, Standard, Premium, Premium multisite, Enterprise, VIP single site and VIP multisite all ship under the slug miniorange-saml-20-single-sign-on, each independently version-numbered. Public advisories covered the free edition only; the six paid editions were patched with no public changelog entry and no advisory, and were not listed in any vulnerability database until miniOrange supplied the full matrix on 18 August 2026",
       "verifiedAt": "2026-08-26",
-      "source": "https://patchstack.com/articles/one-slug-seven-editions/"
+      "source": "https://patchstack.com/articles/one-slug-seven-editions-the-miniorange-saml-sso-bug-that-let-anyone-log-in-as-your-wordpress-admin/"
     },
     "wp-saml-installs": {
       "vendor": "miniOrange",
@@ -479,7 +537,7 @@
       "label": "AI Overview link clicks",
       "value": "counted as clicks in the Performance report",
       "qualifier": "clicking a link to an external page in an AI Overview or AI Mode counts as a click, under standard impression rules",
-      "verifiedAt": "2026-08-28",
+      "verifiedAt": "2026-10-08",
       "source": "https://support.google.com/webmasters/answer/7042828"
     },
     "gsc-search-labs-excluded": {
@@ -488,7 +546,7 @@
       "label": "Search Labs experiments",
       "value": "excluded from all Search Console data",
       "qualifier": "Google states experiments in Search Labs are still in active development and are not reported",
-      "verifiedAt": "2026-08-28",
+      "verifiedAt": "2026-10-08",
       "source": "https://support.google.com/webmasters/answer/7042828"
     },
     "google-faq-rich-result-retired": {
@@ -507,6 +565,7 @@
       "value": "confirmed rolling out, 26 August 2026",
       "qualifier": "Google described it as a technical measure against abuse and did not address referrer, analytics or ranking impact",
       "verifiedAt": "2026-08-29",
+      "reviewDays": 365,
       "source": "https://searchengineland.com/google-confirms-deploying-goto-url-redirects-to-search-results-links-485926"
     },
     "lovable-project-monitoring": {
@@ -583,6 +642,7 @@
       "value": "$25 a month",
       "qualifier": "USD; monthly billing, per site, plus tax; existing-account renewal terms can differ.",
       "verifiedAt": "2026-09-25",
+      "reviewDays": 60,
       "source": "https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026"
     },
     "webflow-premium-monthly-price": {
@@ -592,6 +652,7 @@
       "value": "$39 a month",
       "qualifier": "USD; base rate on monthly billing, per site, plus tax; usage tiers and extras can change the total.",
       "verifiedAt": "2026-09-25",
+      "reviewDays": 60,
       "source": "https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026"
     },
     "webflow-core-price": {
@@ -601,6 +662,7 @@
       "value": "$19 a month",
       "qualifier": "USD; in-house Workspace plan billed yearly, plus tax. Additional paid seats and published Site plans are separate.",
       "verifiedAt": "2026-09-25",
+      "reviewDays": 60,
       "source": "https://webflow.com/pricing"
     },
     "webflow-growth-price": {
@@ -610,6 +672,7 @@
       "value": "$49 a month",
       "qualifier": "USD; in-house Workspace plan billed yearly, plus tax. Additional paid seats and published Site plans are separate.",
       "verifiedAt": "2026-09-25",
+      "reviewDays": 60,
       "source": "https://webflow.com/pricing"
     },
     "shopify-oxygen-hosting": {
@@ -618,6 +681,7 @@
       "value": "no extra charge on paid plans: Starter, Basic, Grow, Advanced, Plus, and Pause and build",
       "qualifier": "not available on Agentic plans; development stores and trial plans can build and test but get no public environments",
       "verifiedAt": "2026-10-03",
+      "reviewDays": 60,
       "source": "https://shopify.dev/docs/storefronts/headless/hydrogen/fundamentals"
     },
     "shopify-headless-channel-price": {
@@ -626,6 +690,7 @@
       "value": "free",
       "qualifier": "the channel that issues Storefront API tokens for a non-Hydrogen storefront",
       "verifiedAt": "2026-10-03",
+      "reviewDays": 60,
       "source": "https://apps.shopify.com/headless"
     },
     "shopify-hydrogen-license": {
@@ -634,6 +699,7 @@
       "value": "MIT, open source",
       "qualifier": "no licence fee; you can also self-host it instead of using Oxygen",
       "verifiedAt": "2026-10-03",
+      "reviewDays": 365,
       "source": "https://github.com/Shopify/hydrogen"
     },
     "shopify-api-version-support": {
@@ -663,9 +729,10 @@
     "emdash-current-version": {
       "vendor": "EmDash",
       "label": "Current EmDash release",
-      "value": "1.1.0",
-      "qualifier": "published to npm on 1 October 2026; 1.0 was released on 28 September 2026 as emdash@1.0.1. An earlier emdash 1.0.0 on npm (27 April 2026) is deprecated and is not the 1.0 release",
-      "verifiedAt": "2026-10-04",
+      "value": "1.2.0",
+      "qualifier": "published to npm on 6 October 2026; 1.0 was released on 28 September 2026 as emdash@1.0.1. An earlier emdash 1.0.0 on npm (27 April 2026) is deprecated and is not the 1.0 release",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 30,
       "source": "https://www.npmjs.com/package/emdash"
     },
     "emdash-1-0-release-date": {
@@ -674,6 +741,7 @@
       "value": "28 September 2026",
       "qualifier": "Cloudflare: \"a stable, free, and open source CMS built on Astro, ready to power a production website\"",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 365,
       "source": "https://blog.cloudflare.com/emdash-cms-plugin-registry/"
     },
     "emdash-sandbox-cpu-limit": {
@@ -714,7 +782,93 @@
       "value": "38",
       "qualifier": "entries on the registry listing page, one of them a test entry; free plugins only so far",
       "verifiedAt": "2026-10-04",
+      "reviewDays": 30,
       "source": "https://plugins.emdashcms.com/"
+    },
+    "supabase-free-plan": {
+      "vendor": "Supabase",
+      "plan": "Free",
+      "label": "Free plan",
+      "value": "$0 a month",
+      "qualifier": "500 MB database, 1 GB file storage, 50,000 monthly active users, 2 active projects; free projects are paused after 1 week of inactivity and have no backups",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 60,
+      "source": "https://supabase.com/pricing"
+    },
+    "supabase-pro-price": {
+      "vendor": "Supabase",
+      "plan": "Pro",
+      "label": "Pro plan price",
+      "value": "from $25 a month",
+      "qualifier": "with $10 a month of compute credits, 8 GB disk per project, 100 GB file storage, 100,000 monthly active users and daily backups kept 7 days; paid projects are not paused for inactivity",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 60,
+      "source": "https://supabase.com/pricing"
+    },
+    "supabase-ipv4-addon": {
+      "vendor": "Supabase",
+      "label": "Dedicated IPv4 address add-on",
+      "value": "$4 a month",
+      "qualifier": "billed at $0.0055 an hour per project, on paid plans",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 60,
+      "source": "https://supabase.com/docs/guides/platform/manage-your-usage/ipv4"
+    },
+    "sanity-free-plan": {
+      "vendor": "Sanity",
+      "plan": "Free",
+      "label": "Free plan",
+      "value": "$0 a month",
+      "qualifier": "up to 20 user seats, 2 public datasets, 10,000 documents, 1 million API CDN requests and 100 GB bandwidth a month; drafts kept 3 days",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 60,
+      "source": "https://www.sanity.io/pricing"
+    },
+    "sanity-growth-price": {
+      "vendor": "Sanity",
+      "plan": "Growth",
+      "label": "Growth plan price",
+      "value": "$15 per seat a month",
+      "qualifier": "up to 50 user seats, 25,000 documents, private datasets and 90 days of draft history",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 60,
+      "source": "https://www.sanity.io/pricing"
+    },
+    "resend-free-plan": {
+      "vendor": "Resend",
+      "plan": "Free",
+      "label": "Free plan",
+      "value": "$0 a month",
+      "qualifier": "3,000 emails a month, 100 a day, 3 domains; Pro is $20 a month for 50,000 emails",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 60,
+      "source": "https://resend.com/pricing"
+    },
+    "github-free-plan": {
+      "vendor": "GitHub",
+      "plan": "Free",
+      "label": "Free plan",
+      "value": "$0 a month",
+      "qualifier": "unlimited public and private repositories",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 60,
+      "source": "https://github.com/pricing"
+    },
+    "irp-conversion-rate-aug-2026": {
+      "vendor": "IRP Commerce",
+      "label": "All Ecommerce Markets conversion rate, August 2026",
+      "value": "2.23%",
+      "qualifier": "Transactions divided by sessions, calculated from live trading data on IRP's own platform. B2C only, Great Britain, Northern Ireland and Ireland. Merchant count is withheld for confidentiality. This is not a global average and does not describe your store. IRP revises published months, so re-read before quoting: July 2026 read 2.22% on 25 August 2026 and 2.26% on 13 September and 8 October 2026",
+      "verifiedAt": "2026-10-08",
+      "source": "https://www.irpcommerce.com/en/gb/ecommercemarketdata.aspx"
+    },
+    "irp-conversion-spread-aug-2026": {
+      "vendor": "IRP Commerce",
+      "label": "Sector spread within a single month, August 2026",
+      "value": "0.57% to 5.81%",
+      "qualifier": "Baby and Child at the low end, Arts and Crafts at the high end. Same month, same platform, same definition, a 10.2x range",
+      "verifiedAt": "2026-10-08",
+      "source": "https://www.irpcommerce.com/en/gb/ecommercemarketdata.aspx"
     }
   }
 }

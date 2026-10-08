@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-25",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-04",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/woocommerce-too-slow")],
@@ -60,6 +60,12 @@ const sources = [
     { name: "WooCommerce HPOS documentation", url: "https://developer.woocommerce.com/docs/features/high-performance-order-storage" },
     { name: "WooCommerce server requirements", url: "https://woocommerce.com/document/server-requirements/" },
     { name: "WooCommerce Cart and Checkout data flow", url: "https://developer.woocommerce.com/docs/block-development/reference/overview-of-data-flow/" },
+    { name: "WooCommerce 8.3.0 release notes (block checkout default)", url: "https://developer.woocommerce.com/2023/11/16/woocommerce-8-3-0-released/" },
+    { name: "WooCommerce Cart and Checkout blocks status", url: "https://woocommerce.com/document/cart-checkout-blocks-status/" },
+    { name: "WooCommerce classic checkout script (source)", url: "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/client/legacy/js/frontend/checkout.js" },
+    { name: "WooCommerce shipping rate caching (source)", url: "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/class-wc-shipping.php" },
+    { name: "Query Monitor plugin", url: "https://wordpress.org/plugins/query-monitor/" },
+    { name: "Chrome DevTools network reference", url: "https://developer.chrome.com/docs/devtools/network/reference" },
 ];
 
 const articleSchema = {
@@ -72,7 +78,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath(`/blog/${postId}`),
             datePublished: "2026-03-25",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-04",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -87,8 +93,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "WooCommerce performance",
             keywords: ["WooCommerce slow", "WooCommerce add to cart slow", "WooCommerce checkout slow", "WooCommerce backend slow", "speed up WooCommerce", "WooCommerce Core Web Vitals", "headless WooCommerce"],
-            wordCount: 3169,
-            timeRequired: "PT16M",
+            wordCount: 4941,
+            timeRequired: "PT25M",
             inLanguage: "en-US",
             about: [
                 { "@type": "SoftwareApplication", name: "WooCommerce", sameAs: ["https://en.wikipedia.org/wiki/WooCommerce", "https://woocommerce.com"] },
@@ -117,7 +123,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             datePublished: "2026-03-25",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-04",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -157,13 +163,13 @@ export default function WooCommerceTooSlowPage() {
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             WooCommerce is usually slow for a reason you can name and locate: every uncached page is
                             assembled per request by PHP and the database, WooCommerce loads cart-refreshing JavaScript
-                            across the whole site, not only the shop, and cart, checkout and account pages can&apos;t be
+                            on every page that shows the mini-cart, which many themes put in the header of every page, and cart, checkout and account pages can&apos;t be
                             full-page cached because they hold customer state. Extensions, media and hosting then add
                             to whichever of those is already hurting. Find which layer is responsible on your store
                             before buying another plugin or committing to a new architecture.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed against current Google and WooCommerce documentation on August 2, 2026.
+                            Reviewed against current Google and WooCommerce documentation on August 2, 2026. The add to cart and checkout sections were rechecked against WooCommerce&apos;s docs and source code on October 4, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -174,7 +180,7 @@ export default function WooCommerceTooSlowPage() {
                     <BlogAuthor
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
-                        date="Mar 25, 2026"
+                        postId="woocommerce-too-slow" published="2026-03-25"
                         readTime="17 min read"
                         bio="Hassan is PandaCodeGen's co-founder and lead engineer. He audits WooCommerce stores layer by layer, from field data down to the database, and rebuilds storefronts as custom Next.js when the measurement supports it."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
@@ -245,7 +251,7 @@ export default function WooCommerceTooSlowPage() {
                         network, test region, consent state, account state and data set. Run each case multiple times and
                         keep the median plus the raw results. Note releases, promotions and traffic spikes that could
                         distort comparisons. If you haven&apos;t narrowed the problem to a layer yet,{" "}
-                        <Link href="/blog/why-is-my-website-loading-so-slow" className={inlineLinkClass}>our walkthrough for tracing a slow-loading site</Link>{" "}
+                        <Link href="/blog/how-to-speed-up-your-website" className={inlineLinkClass}>our walkthrough for tracing a slow-loading site</Link>{" "}
                         is the wider starting point.
                     </BlogText>
                     <BlogList
@@ -366,14 +372,25 @@ export default function WooCommerceTooSlowPage() {
                         WooCommerce add to cart is slow because the click isn&apos;t a local update. It&apos;s a server round trip that runs
                         WordPress, resolves the product, checks stock and pricing, writes the cart to the session, and
                         then hands back a fragment for the mini-cart to redraw. In a browser network panel a classic store
-                        shows the add itself as <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-ajax=add_to_cart</code>, usually followed by a second
-                        request, <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-ajax=get_refreshed_fragments</code>, that redraws the mini-cart. A
-                        block-based store uses the Store API instead and posts to <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">/wc/store/v1/cart/add-item</code>.
-                        Either way it&apos;s two round trips where the shopper expects one instant update. On a variable
+                        shows the add as <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-ajax=add_to_cart</code>, and its response already carries the
+                        updated mini-cart. A block-based store uses the Store API instead and posts to <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">/wc/store/v1/cart/add-item</code>,
+                        which returns the whole cart. Either way it&apos;s a full server round trip where the shopper expects an instant update. On a variable
                         product it also has to match the chosen variation. Because the response differs per visitor it can&apos;t be served from a
                         page cache, so it lands on PHP every time, competing for the same workers as everything else on
                         the site. Any extension hooked into the add-to-cart action, such as bundles, add-ons,
                         subscriptions or upsell logic, runs inside that same request.
+                    </BlogText>
+                    <BlogText>
+                        Which request you see depends on where the button is. On shop and category pages, the
+                        &ldquo;Enable AJAX add to cart buttons on archives&rdquo; setting, on by default, sends the{" "}
+                        <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-ajax=add_to_cart</code> request above.
+                        On a single product page in a classic theme, the default template submits the product form
+                        instead, so the shopper waits for the whole product page to be rebuilt on the server. If
+                        &ldquo;Redirect to the cart page after successful addition&rdquo; is ticked under{" "}
+                        <strong>WooCommerce &rarr; Settings &rarr; Products</strong>, they wait for the cart page as
+                        well. Both settings were read from{" "}
+                        <a href="https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/admin/settings/class-wc-settings-products.php" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>WooCommerce&apos;s source code</a>{" "}
+                        on October 4, 2026.
                     </BlogText>
                     <BlogText>
                         Work through these in order to find which part of the round trip is responsible:
@@ -407,11 +424,89 @@ export default function WooCommerceTooSlowPage() {
                         changes, repeated recalculation, payment-provider latency, fraud services, webhooks and order
                         hooks. Simulate third-party slowness and failure, not only the happy path.
                     </BlogText>
+                    <BlogText>
+                        The recalculation request looks different depending on which checkout you run. Since WooCommerce
+                        8.3, released in November 2023, new stores get the block-based Cart and Checkout by default,
+                        while stores that updated from an earlier version kept the classic shortcode checkout. On the
+                        classic checkout, typing in an address field queues a{" "}
+                        <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-ajax=update_order_review</code> request
+                        one second after the last keystroke, and changing the shipping method sends it straight away.
+                        Each one recalculates shipping, then totals, then rebuilds the order summary and payment section
+                        on the server. On the block checkout, address changes go to the Store API&apos;s{" "}
+                        <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">cart/update-customer</code> endpoint
+                        inside a batch request, a new shipping method sends another Store API request, and both return
+                        the whole cart. Changing the payment method doesn&apos;t send a request on its own. Sources,
+                        read October 4, 2026:{" "}
+                        <a href="https://developer.woocommerce.com/2023/11/16/woocommerce-8-3-0-released/" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>the WooCommerce 8.3 release post</a>,{" "}
+                        <a href="https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/client/legacy/js/frontend/checkout.js" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>the classic checkout script</a>{" "}
+                        and{" "}
+                        <a href="https://developer.woocommerce.com/docs/block-development/reference/overview-of-data-flow/" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>WooCommerce&apos;s Cart and Checkout data flow guide</a>.
+                    </BlogText>
+                    <BlogText>
+                        Shipping rates are one place a checkout can end up waiting on another company. WooCommerce stores
+                        the rates it calculates in the customer&apos;s session, keyed to the items and the destination,
+                        so it recalculates only when one of those changes. A live-rate extension that asks a carrier for
+                        prices makes that call during the recalculation, and the data flow guide lists courier rates
+                        and payment APIs among the data that can only come from the server. Check that shipping{" "}
+                        <strong>Debug mode</strong> is off on a live store: WooCommerce&apos;s own setting text says it
+                        bypasses the shipping rate cache, so every recalculation starts from scratch. The caching and the
+                        setting are both in{" "}
+                        <a href="https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/class-wc-shipping.php" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>WooCommerce&apos;s shipping code</a>.
+                    </BlogText>
+                    <BlogText>
+                        One more thing to rule out before timing anything on a block checkout: a payment gateway that
+                        hasn&apos;t declared support for it. WooCommerce&apos;s{" "}
+                        <a href="https://woocommerce.com/document/cart-checkout-blocks-status/" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>Cart and Checkout blocks status page</a>{" "}
+                        says an incompatible gateway may not appear as a payment option at all, and offers a one-click
+                        switch back to the classic checkout.
+                    </BlogText>
                     <InsightBox variant="info" label="Don't optimize away correctness">
                         The WooCommerce Cart and Checkout documentation treats the server as the source of truth for
                         transactional data such as totals, addresses, shipping and coupons. A faster interface still
                         needs authoritative server validation.
                     </InsightBox>
+
+                    <h3 id="time-cart-and-checkout" className="mt-10 mb-4 text-2xl font-bold text-charcoal">How to time a slow add to cart or checkout</h3>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Time the request, not the page. Add to cart and checkout feel slow because of one or two
+                            server round trips, and a PageSpeed run of the checkout page measures neither of them. Five
+                            steps find which request is slow and what it&apos;s waiting on.
+                        </BlogText>
+                    </div>
+                    <ol className="my-6 list-decimal space-y-3 pl-6 text-lg leading-relaxed text-stone-700">
+                        <li>
+                            Open Chrome DevTools, go to the Network panel and pick the Fetch/XHR filter. Type{" "}
+                            <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-ajax</code> in the filter box on a
+                            classic store, or <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc/store</code> on a
+                            block checkout.
+                        </li>
+                        <li>
+                            Click add to cart, change the address and pick a shipping method. For each request, open
+                            the Timing tab and read Waiting (TTFB), which{" "}
+                            <a href="https://developer.chrome.com/docs/devtools/network/reference" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>Chrome&apos;s documentation</a>{" "}
+                            defines as the time the browser spends waiting for the first byte of the response. That is
+                            your server&apos;s share. If it&apos;s short and the update still feels slow, the delay is in
+                            the browser.
+                        </li>
+                        <li>
+                            Repeat as a guest and signed in, with a simple and a variable product, with one item and a
+                            full cart, and with each shipping and payment method. Take three runs of each and keep the
+                            median.
+                        </li>
+                        <li>
+                            On a staging copy, install{" "}
+                            <a href="https://wordpress.org/plugins/query-monitor/" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>Query Monitor</a>.
+                            It lists database queries and outbound HTTP API calls with the time each took, grouped by
+                            the plugin responsible, and adds debugging information to the headers of AJAX responses and
+                            of REST responses when you&apos;re signed in as an administrator. A slow carrier, tax or
+                            fraud service shows up there as an HTTP API call.
+                        </li>
+                        <li>
+                            Switch off the extensions that hook into cart and checkout one at a time on staging, and
+                            retime the same requests after each change.
+                        </li>
+                    </ol>
 
                     <BlogHeader id="admin">Why is the WooCommerce backend (wp-admin) slow?</BlogHeader>
                     <BlogText>
@@ -585,7 +680,7 @@ export default function WooCommerceTooSlowPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-06",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/core-web-vitals-explained")],
@@ -66,7 +66,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/core-web-vitals-explained"),
             datePublished: "2026-05-06",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -167,7 +167,7 @@ export default function CoreWebVitalsExplainedPage() {
                             what the metrics prove from what your own data still has to establish.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Google Search Central, Search Console, and web.dev guidance.
+                            Reviewed October 8, 2026 against current Google Search Central, Search Console, and web.dev guidance.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -179,8 +179,8 @@ export default function CoreWebVitalsExplainedPage() {
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
                         bio="Hassan leads PandaCodeGen's engineering work on performance-sensitive website migrations and custom builds."
-                        date="May 6, 2026"
-                        readTime="9 min read"
+                        postId="core-web-vitals-explained" published="2026-05-06"
+                        readTime="11 min read"
                     />
 
                     <BlogText>
@@ -252,7 +252,7 @@ export default function CoreWebVitalsExplainedPage() {
                                 </tr>
                                 <tr>
                                     <td className="p-4 font-bold">CLS{" "}<br /><span className="font-normal text-stone-500">Cumulative Layout Shift</span></td>
-                                    <td className="p-4">How much visible content moves unexpectedly while the page loads.</td>
+                                    <td className="p-4">The largest burst of unexpected layout shifts across the page&apos;s lifecycle, including after initial load.</td>
                                     <td className="p-4">0.1 or less</td>
                                     <td className="p-4">0.1 to 0.25</td>
                                     <td className="p-4">over 0.25</td>
@@ -356,7 +356,7 @@ export default function CoreWebVitalsExplainedPage() {
                         <BlogText>
                             Yes, and less powerfully than most SEO advice implies. Google still publishes them, still
                             reports them in Search Console, and still describes good page experience as helpful for
-                            Search. What it has never published is a weighting — and its own guidance says there is no
+                            Search. What it has never published is a weighting, and its own guidance says there is no
                             single page-experience signal and that relevance remains important.
                         </BlogText>
                     </div>
@@ -371,7 +371,7 @@ export default function CoreWebVitalsExplainedPage() {
                         Two things have genuinely changed since the metrics launched, and both argue for treating them
                         as live rather than settled. <strong>INP replaced First Input Delay in March 2024</strong>, so
                         any guide still optimising for FID is measuring something Google no longer collects. And the
-                        set is explicitly versioned — Google has changed the metrics before and has said it will again,
+                        set is explicitly versioned: Google has changed the metrics before and has said it will again,
                         which is a reason to re-read the thresholds each year rather than to memorise them once.
                     </BlogText>
 
@@ -519,9 +519,8 @@ export default function CoreWebVitalsExplainedPage() {
                         <h2 className="mb-3 text-xl font-bold text-charcoal">Related reading</h2>
                         <p className="leading-relaxed text-stone-700">
                             For the practical follow-on work, read{" "}
-                            <Link href="/blog/how-to-speed-up-your-website" className={inlineLinkClass}>how to speed up a website</Link>{" "}
-                            and{" "}
-                            <Link href="/blog/why-is-my-website-loading-so-slow" className={inlineLinkClass}>why a website loads slowly</Link>.
+                            <Link href="/blog/how-to-speed-up-your-website" className={inlineLinkClass}>how to speed up a website</Link>,
+                            which starts by finding the part of the page that causes the wait.
                         </p>
                     </section>
 

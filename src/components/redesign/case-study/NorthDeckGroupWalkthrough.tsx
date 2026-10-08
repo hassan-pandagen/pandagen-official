@@ -125,7 +125,7 @@ export default function NorthDeckGroupWalkthrough() {
       slug="northdeck"
       projectName="NorthDeck Group"
       eyebrow="Two businesses. One site."
-      heading={<>Security systems up front.<br />Back-office services alongside.</>}
+      heading={<>Security systems <em>up front.</em>{" "}<br />Back-office services alongside.</>}
       lead={<>The <strong>security systems</strong> a property manager comes for, the <strong>business services</strong> that sit beside them, and <strong>how a project runs</strong> from enquiry to handover.</>}
       navAriaLabel="Explore the NorthDeck Group build"
       chapters={chapters}

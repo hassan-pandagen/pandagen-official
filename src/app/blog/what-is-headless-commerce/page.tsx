@@ -163,7 +163,7 @@ export default function WhatIsHeadlessCommercePage() {
                             systems. It also leaves you with another application to secure, test and keep
                             running.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Every Shopify figure on this page was read from Shopify&apos;s own pricing page and developer documentation on August 2, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Shopify product details on this page were read from Shopify&apos;s developer documentation on August 2, 2026.</p>
                     <p className="mt-3 text-sm leading-relaxed text-stone-600">
                         Disclosure: PandaCodeGen builds headless storefronts, so we have a commercial interest in
                         one side of this question. That is why this page publishes no speed uplift, no conversion
@@ -175,7 +175,7 @@ export default function WhatIsHeadlessCommercePage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 14, 2026" readTime="11 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="what-is-headless-commerce" published="2026-03-14" readTime="11 min read" />
 
                     <BlogText>
                         Two Shopify store owners, in their own words on r/shopify, on what apps and admin changes do to a themed store. Each quote links to the original post.
@@ -442,7 +442,7 @@ export default function WhatIsHeadlessCommercePage() {
                             Shopify offers Oxygen hosting at no extra charge on its paid plans. The real costs are the
                             build, the apps you replace, and whoever keeps the storefront running after launch. Our{" "}
                             <Link href="/blog/shopify-headless" className={linkClass}>headless Shopify cost guide</Link>{" "}
-                            prices each line, from the Shopify plan to the yearly API upgrade. If you host the storefront
+                            prices each line, from the Shopify plan to the quarterly API upgrades Shopify recommends. If you host the storefront
                             yourself instead,{" "}
                             <Link href="/blog/nextjs-hosting-zero-cost" className={linkClass}>what it takes to host a Next.js frontend</Link>{" "}
                             sets out that line.
@@ -518,7 +518,7 @@ export default function WhatIsHeadlessCommercePage() {
 
                     <BlogHeader id="our-approach">PandaCodeGen&apos;s approach</BlogHeader>
                     <BlogText>
-                        We begin with a free fit audit and only recommend a custom storefront when the documented
+                        We begin with a <Link href="/free-audit" className="text-cognac hover:underline">free fit audit</Link> (share your website URL and email) and only recommend a custom storefront when the documented
                         requirements justify it. <Link href="/work/panda-patches" className={linkClass}>Panda Patches</Link> is
                         owned by a PandaCodeGen co-founder and can be described as a
                         first-party architecture example, but this article does not claim unverified speed, conversion
@@ -535,7 +535,7 @@ export default function WhatIsHeadlessCommercePage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

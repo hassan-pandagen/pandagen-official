@@ -2,7 +2,7 @@ import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, ORGANIZATION_PROFILES } from "@/data/company-facts";
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
-import { PandaPatchesCaseStudyPreview as RedesignPandaPatchesCaseStudy } from "@/app/preview/work/panda-patches/Design";
+import { PandaPatchesCaseStudyPreview as RedesignPandaPatchesCaseStudy } from "@/components/pages/work/panda-patches/Design";
 
 const description = `A founder-owned WordPress store rebuilt with Next.js, a Sanity editor and custom pricing. ${MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory}`;
 

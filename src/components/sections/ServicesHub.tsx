@@ -203,7 +203,7 @@ export default function ServicesHub() {
             <button
               type="button"
               onClick={() => {
-                if (typeof window !== "undefined") (window as { __openChat?: () => void }).__openChat?.();
+                window.dispatchEvent(new Event("open-assistant"));
               }}
               className="inline-flex items-center gap-2 text-cognac font-bold text-sm transition-colors [&>svg]:transition-transform [&>svg]:duration-200 hover:[&>svg]:translate-x-1 self-start"
             >

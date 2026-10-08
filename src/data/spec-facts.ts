@@ -25,7 +25,10 @@ import raw from './spec-facts.json';
  *
  * ENFORCEMENT. scripts/spec_freshness.py warns at 90 days and FAILS the build at
  * 180. A stale third-party price presented as current is the same defect class as
- * a withdrawn metric that keeps rendering.
+ * a withdrawn metric that keeps rendering. Since 4 Oct 2026 an entry can set
+ * "reviewDays" to change its clock (warn at reviewDays, fail at twice that):
+ * Vercel is on 30, Shopify and Webflow prices on 60. The reasons for each tier
+ * are in the script's docstring.
  */
 
 /**
@@ -49,6 +52,8 @@ export interface SpecFact {
     qualifier?: string;
     /** ISO date this value was last read off the vendor's own page. */
     verifiedAt: string;
+    /** Days before scripts/spec_freshness.py warns (it fails at twice this). Default 90. */
+    reviewDays?: number;
     /** The vendor URL it was read from. */
     source: string;
 }

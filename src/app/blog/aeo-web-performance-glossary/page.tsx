@@ -76,13 +76,13 @@ const DEFS: Record<string, string> = {
   "ssg": "Static Site Generation: pages are built into HTML before anyone asks for them. Less work per request, and fewer things to go wrong. What you actually pay and how fast it feels still come down to the page itself, your CDN, your traffic, your plan and the third-party code you load.",
   "isr": "Incremental Static Regeneration: a Next.js feature that serves static pages but rebuilds them in the background on a schedule, combining static speed with fresh content.",
   "hydration": "The step where JavaScript attaches interactivity to server-rendered HTML in the browser. Heavy hydration can delay interactivity even when the page appears loaded.",
-  "crawlability": "Whether a crawler that is allowed in can actually reach your page, fetch it, and get at the content that matters. A robots rule, a noindex tag, a login, a server error or a rendering problem will each stop it on its own.",
+  "crawlability": "Whether a crawler that is allowed in can actually reach your page, fetch it, and get at the content that matters. Robots rules, authentication, server errors or rendering problems can prevent access. A noindex directive controls indexing and must be fetched to be read.",
   "schema": "Schema.org structured data, usually written as JSON-LD, describes what a page is about in a form machines read cleanly. Supported markup can make you eligible for Google search features. Valid markup on its own gets you neither the feature nor the citation.",
   "knowledge-graph": "A map of things and how they relate to each other. Saying consistent, checkable things about yourself leaves less ambiguity. Whether you get recognised, ranked or quoted is still each product's decision, not yours.",
   "core-web-vitals": "Google's user-experience metrics: Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift. Google uses Core Web Vitals in its ranking systems, alongside many other signals.",
-  "lcp": "Largest Contentful Paint: how long until the biggest thing in the viewport — usually a hero image, video poster or headline block — has actually rendered. It measures loading, and it is the metric a heavy unoptimised hero image ruins on its own. Google's good threshold is 2.5 seconds or less, measured at the 75th percentile of real visits.",
+  "lcp": "Largest Contentful Paint: how long until the biggest thing in the viewport (usually a hero image, video poster or headline block) has actually rendered. It measures loading, and it is the metric a heavy unoptimised hero image ruins on its own. Google's good threshold is 2.5 seconds or less, measured at the 75th percentile of real visits.",
   "inp": "Interaction to Next Paint: how long the page takes to visibly respond after someone clicks, taps or types, assessed across the interactions in a visit rather than just the first one. It measures responsiveness, and heavy JavaScript is the usual cause when it is poor. Google's good threshold is 200 milliseconds or less at the 75th percentile. INP replaced First Input Delay as a Core Web Vital in March 2024.",
-  "cls": "Cumulative Layout Shift: how much the page moves under the reader while it is still loading — the ad or image that arrives late and pushes everything down, so you tap the wrong thing. It measures visual stability, is a unitless score rather than a time, and is usually caused by images or embeds without reserved space. Google's good threshold is 0.1 or less at the 75th percentile.",
+  "cls": "Cumulative Layout Shift: the largest burst of unexpected layout shifts across the page lifecycle, including shifts after initial load. It measures visual stability, is a unitless score rather than a time, and is usually caused by images or embeds without reserved space. Google's good threshold is 0.1 or less at the 75th percentile.",
   "pagespeed": "PageSpeed Insights shows two different things side by side: what real Chrome users experienced, and a lab test run by Lighthouse. A 90+ Lighthouse score can be an acceptance target. It is not proof that every real visit passes Core Web Vitals.",
   "ttfb": "Time to First Byte: how long from asking for something until the first byte comes back. Everything after it waits on it. Before you blame anything, separate the network, the cache, the edge, your application and your origin server.",
   "redirect-301": "An HTTP permanent redirect from one URL to another. Google treats it as a strong signal about which URL is the real one. A safe migration also needs the content to match, the internal links updated, someone watching afterwards, and time.",
@@ -147,7 +147,7 @@ export const metadata: Metadata = {
     description: `Source-linked definitions of ${TERMS.length} AI-search, rendering, structured-data, and web-performance terms, with practical limits.`,
     type: "article",
     publishedTime: "2026-07-16",
-    modifiedTime: "2026-08-13",
+    modifiedTime: "2026-10-08",
     authors: ["Hassan Jamal"],
     url: "https://www.pandacodegen.com/blog/aeo-web-performance-glossary",
     images: [ogImageForPath("/blog/aeo-web-performance-glossary")],
@@ -169,7 +169,7 @@ const articleSchema = {
       "description": `Source-linked definitions of ${TERMS.length} AI-search, rendering, structured-data, and web-performance terms, including practical limitations.`,
       "image": ogImageUrlForPath("/blog/aeo-web-performance-glossary"),
       "datePublished": "2026-07-16T00:00:00-05:00",
-      "dateModified": "2026-08-13T00:00:00-05:00",
+      "dateModified": "2026-10-08T00:00:00-05:00",
       "citation": [
         "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
         "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
@@ -248,7 +248,7 @@ const articleSchema = {
       "description": `Source-linked definitions of ${TERMS.length} AI-search, rendering, structured-data, and web-performance terms, including practical limitations.`,
       "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
       "datePublished": "2026-07-16T00:00:00-05:00",
-      "dateModified": "2026-08-13T00:00:00-05:00",
+      "dateModified": "2026-10-08T00:00:00-05:00",
       "inLanguage": "en-US"
     }
   ]
@@ -278,8 +278,8 @@ export default function GlossaryPage() {
               Search, AI answers, page speed and whether a bot can read your site all get talked about as if one trick fixes them all. It does not. This source-linked glossary explains {TERMS.length} terms, how they connect, and where the evidence stops.
             </p>
             <BlogAuthor
-              date="Jul 16, 2026"
-              readTime="19 min read"
+              postId="aeo-web-performance-glossary" published="2026-07-16"
+              readTime="24 min read"
               bio="Hassan builds custom Next.js sites engineered to be fast for people and readable by AI search."
               linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
             />
@@ -420,7 +420,7 @@ export default function GlossaryPage() {
               example={<>Vague: &ldquo;Website speed has become increasingly important.&rdquo; Clearer: &ldquo;Measure real-user LCP, INP, and CLS before choosing a speed fix; a Lighthouse score alone is a lab result.&rdquo;</>}
               ask={<>Does the opening sentence answer the heading accurately, and do the next sentences provide evidence, conditions, and exceptions?</>}
             >
-              <BlogHighlight>Answer-first writing states the main answer early, then adds evidence and nuance.</BlogHighlight> It is a readability technique, not a fixed 40-to-60-word rule. Clear, self-contained passages can be easier for people and machines to interpret, but no copy pattern guarantees extraction or citation. <BlogHighlight>Why it matters:</BlogHighlight> AI engines lift passages out of context. They do not read your article from the top and follow the argument to its conclusion. An answer buried in paragraph four, after the scene-setting, is invisible to that process, which is why the introduction style most of us were taught at school works against you here.
+              <BlogHighlight>Answer-first writing states the main answer early, then adds evidence and nuance.</BlogHighlight> It is a readability technique, not a fixed 40-to-60-word rule. Clear, self-contained passages can be easier for people and machines to interpret, but no copy pattern guarantees extraction or citation. <BlogHighlight>Why it matters:</BlogHighlight> retrieval systems may select individual passages. Put the answer near its question and include enough context for it to stand alone. A later paragraph is not automatically invisible, and no paragraph position guarantees selection.
             </Term>
 
             <InsightBox variant="warning" label="How This Should Be Billed">
@@ -484,7 +484,7 @@ export default function GlossaryPage() {
               example={<>A stray &lt;meta name=&quot;robots&quot; content=&quot;noindex&quot;&gt; can prevent an affected page from appearing in Google. A shared-template error can affect many pages, which is why production output must be checked.</>}
               ask={<>&ldquo;Pull our raw HTML and show me our content is actually in it.&rdquo; And: &ldquo;When did you last check our robots.txt and for stray noindex tags?&rdquo; Both take a minute and both have killed real sites.</>}
             >
-              <BlogHighlight>Crawlability is whether an eligible crawler can reach and fetch a URL and access its important content.</BlogHighlight> Robots rules, noindex directives, authentication, server errors, unsupported rendering, and blocked resources can interfere. Crawlability is necessary for indexing by a crawler-based system, but it does not guarantee indexing, ranking, or citation. <BlogHighlight>Why it matters:</BlogHighlight> it is the gate before everything else on this page. You can have the best content, the cleanest markup and the fastest scores, and none of it counts if a bot cannot read the page. It is also the cheapest thing to check and the most embarrassing thing to get wrong.
+              <BlogHighlight>Crawlability is whether an eligible crawler can reach and fetch a URL and access its important content.</BlogHighlight> Robots rules, authentication, server errors, unsupported rendering, and blocked resources can interfere. A noindex directive controls indexing, not fetching; Google must be able to crawl the page to read it. Crawlability is necessary for indexing by a crawler-based system, but it does not guarantee indexing, ranking, or citation. <BlogHighlight>Why it matters:</BlogHighlight> it is the gate before everything else on this page. You can have the best content, the cleanest markup and the fastest scores, and none of it counts if a bot cannot read the page. It is also the cheapest thing to check and the most embarrassing thing to get wrong.
             </Term>
           </div>
 
@@ -563,7 +563,7 @@ export default function GlossaryPage() {
               example={<>An image or ad without reserved space loads late and pushes the content down as you reach for a link. You tap the wrong thing. That is CLS, and it is the one every reader has felt without knowing its name.</>}
               ask={<>&ldquo;Do our images and embeds reserve their space before they load?&rdquo; Width and height attributes, or an aspect ratio, fix most of this permanently.</>}
             >
-              <BlogHighlight>Cumulative Layout Shift measures how much the page moves under the reader while it is still loading.</BlogHighlight> It measures visual stability, is a unitless score rather than a time, and is usually caused by images, ads or embeds that arrive without reserved space. Google&apos;s good threshold is 0.1 or less at the 75th percentile. <BlogHighlight>Why it matters:</BlogHighlight> it is the only Core Web Vital that actively causes mistakes rather than delay, and on a checkout a mistake costs more than a wait.
+              <BlogHighlight>Cumulative Layout Shift measures the largest burst of unexpected layout shifts across the page lifecycle, including after initial load.</BlogHighlight> It measures visual stability, is a unitless score rather than a time, and is usually caused by images, ads or embeds that arrive without reserved space. Google&apos;s good threshold is 0.1 or less at the 75th percentile. <BlogHighlight>Why it matters:</BlogHighlight> it is the only Core Web Vital that actively causes mistakes rather than delay, and on a checkout a mistake costs more than a wait.
             </Term>
 
             <Term
@@ -609,7 +609,7 @@ export default function GlossaryPage() {
           </div>
 
           <section className="mt-10 rounded-2xl border border-stone-200 bg-white p-6 md:p-7">
-            <h2 className="text-xl font-serif font-bold text-charcoal mb-3">Primary references checked July 31, 2026</h2>
+            <h2 className="text-xl font-serif font-bold text-charcoal mb-3">Primary references checked October 8, 2026</h2>
             <p className="text-sm text-stone-500 leading-relaxed mb-4">
               Product behavior changes. These links support the definitions and limitations above; recheck them before using the glossary in a proposal or audit.
             </p>

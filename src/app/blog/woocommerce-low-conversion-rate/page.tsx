@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-16",
-        modifiedTime: "2026-08-25",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/woocommerce-low-conversion-rate")],
@@ -62,7 +62,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/woocommerce-low-conversion-rate"),
             datePublished: "2026-08-16T00:00:00-05:00",
-            dateModified: "2026-08-25T00:00:00-05:00",
+            dateModified: "2026-10-08T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -158,9 +158,8 @@ export default function WooCommerceLowConversionRatePage() {
                             WooCommerce creates from the ones every store has. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            No industry benchmark is quoted here, and no revenue figure is calculated for you. Both
-                            depend on your own catalogue and margin, and a number borrowed from someone else&apos;s
-                            store is worse than no number.
+                            Published benchmarks below have different samples and definitions. They are context, not a
+                            target or a revenue forecast for your store. Use your own funnel, catalogue and margin to diagnose the gap.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -168,7 +167,7 @@ export default function WooCommerceLowConversionRatePage() {
                       </div>
                     </header>
 
-                    <BlogAuthor
+                    <BlogAuthor postId="woocommerce-low-conversion-rate" published="2026-08-16"
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
                         bio="Hassan rebuilds WooCommerce stores that have outgrown the plugin stack holding them together."
@@ -214,16 +213,17 @@ export default function WooCommerceLowConversionRatePage() {
                         Nobody publishes one, and the organisations holding the best data decline to try. WooCommerce
                         itself publishes no benchmark at all, which is worth saying plainly because a figure attributed
                         to WooCommerce is being attributed to a source that does not exist. We went looking for the
-                        numbers everyone quotes, on {asOf("irp-conversion-rate-jul-2026")}, and the results are worth
+                        numbers everyone quotes, in {asOf("irp-conversion-rate-aug-2026")}, and the results are worth
                         your attention before you compare your store to any of them.
                     </BlogText>
                     <BlogText>
                         The most-quoted figure in this category is 2.66%, usually credited to Dynamic Yield and repeated
-                        by Shopify, ConvertCart and most benchmark round-ups. Re-read on 13 September 2026,{" "}
+                        by Shopify, ConvertCart and most benchmark round-ups. Re-read on 8 October 2026,{" "}
                         <a href="https://marketing.dynamicyield.com/benchmarks/" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Dynamic Yield&apos;s benchmark page</a>{" "}
-                        <BlogHighlight>publishes industry cuts but no single global average at all</BlogHighlight> — it
-                        gives Pet Care and Veterinary Services at 7.68% and Luxury and Jewelry at 0.72% for July, and
-                        nothing aggregate. So the number everyone attributes to Dynamic Yield is not currently on
+                        {/* 8 Oct 2026: the page moved on from July. It no longer names Pet Care at 7.68% or Luxury at 0.72%; September and twelve-month figures below. */}
+                        <BlogHighlight>publishes industry cuts but no single global average at all</BlogHighlight>. It
+                        puts Beauty and Personal Care highest in September at 5.21%, has Luxury and Jewelry lowest over
+                        the past twelve months at 0.69%, and gives nothing aggregate. So the number everyone attributes to Dynamic Yield is not currently on
                         Dynamic Yield&apos;s own page. Adobe&apos;s widely repeated
                         3.65% is sourced to &ldquo;the latest research&rdquo; with no study named, no sample, no
                         denominator, and no date on the page. Statista&apos;s table and its own prose disagree with each
@@ -233,8 +233,8 @@ export default function WooCommerceLowConversionRatePage() {
                     <BlogText>
                         The most transparent source we found is IRP Commerce, which calculates transactions divided by
                         sessions from live trading data and publishes monthly. It puts{" "}
-                        {spec("irp-conversion-rate-jul-2026").label.toLowerCase()} at{" "}
-                        {spec("irp-conversion-rate-jul-2026").value}. Read the qualifier before you use it: that is
+                        {spec("irp-conversion-rate-aug-2026").label.toLowerCase()} at{" "}
+                        {spec("irp-conversion-rate-aug-2026").value}. Read the qualifier before you use it: that is
                         B2C stores in Great Britain, Northern Ireland and Ireland, on IRP&apos;s own platform. It is not
                         a global average and it is not a WooCommerce figure.
                     </BlogText>
@@ -244,8 +244,9 @@ export default function WooCommerceLowConversionRatePage() {
                     <BlogText>
                         That is the finding that actually helps you. Within that single month, on one platform under one
                         definition, IRP&apos;s sectors ran from{" "}
-                        {spec("irp-conversion-spread-jul-2026").value}, Baby and Child at the bottom and Arts and Crafts
-                        at the top. A 9.5x range. Contentsquare, working from 99 billion sessions across more than six
+                        {spec("irp-conversion-spread-aug-2026").value}, Baby and Child at the bottom and Arts and Crafts
+                        at the top. {/* 8 Oct 2026: was July 2026, 0.55% to 5.23%, a 9.5x range. IRP now leads with August. */}A
+                        roughly 10x range. Contentsquare, working from 99 billion sessions across more than six
                         thousand sites, declines to publish an overall number at all and reports only cuts, among them
                         returning visitors at {spec("contentsquare-returning-vs-new-2026").value} for new ones.
                     </BlogText>
@@ -564,7 +565,8 @@ export default function WooCommerceLowConversionRatePage() {
                             something. If the answer turns out to be your offer rather than your stack, we will say so.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                            Book a 30-minute review <ArrowRight className="h-4 w-4" />
+                            {/* 8 Oct 2026: said 30-minute. The only Cal.com event this button opens (pandagen/discovery) is 15 minutes. */}
+                            Book a 15-minute call <ArrowRight className="h-4 w-4" />
                         </CalModalButton>
                     </section>
 

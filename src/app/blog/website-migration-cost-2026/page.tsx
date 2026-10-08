@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-06",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-migration-cost-2026")],
@@ -73,7 +73,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-06",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -118,7 +118,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-06",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -159,7 +159,7 @@ export default function WebsiteMigrationCostPage() {
                             and how much testing the launch needs. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 2, 2026 against current platform and Google documentation; export links re-checked August 1, 2026. Quote sourcing and pricing claims re-audited September 12, 2026.
+                            Reviewed August 2, 2026 against current platform and Google documentation; export links re-checked August 1, 2026. Quote sourcing and pricing claims re-audited September 12, 2026. Platform sections condensed and starting tiers re-checked against our published terms October 4, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -167,15 +167,12 @@ export default function WebsiteMigrationCostPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 6, 2026" readTime="13 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="website-migration-cost-2026" published="2026-05-06" readTime="13 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <BlogText>
                         Owners and developers on the platforms this page covers, quoted in their own words, with a link to each original post so you can check the context yourself.
                     </BlogText>
-                    <BlogQuote>
-                        We are not being killed by competition, I believe we have done this to ourselves. When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen.
-                    </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">Matt Mullenweg</strong> (WordPress co-founder) · Internal Slack post · April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a>. Context, added September 12, 2026: Automattic&apos;s board placed Mullenweg on a leave of absence on September 9, 2026. That is after this post and does not change what he said in April, but it is worth knowing when weighing the quote.</p>
+                    {/* 8 Oct 2026: removed quotation whose full source could not be independently rechecked. */}
                     <BlogQuote>
                         Every time you load a page or post, WP wants to retrieve info from the database. While that may have made sense in the beginning, we are long since past the point where the content on pages (and posts for that matter) don&apos;t change enough to matter. WP architecture should really have switched over to treating the site cache as the primary site, with the database being treated as the backup.
                     </BlogQuote>
@@ -189,14 +186,22 @@ export default function WebsiteMigrationCostPage() {
                         <MigrationVisual />
                     </div>
 
-                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
-                        <h2 className="mb-4 text-2xl font-bold text-charcoal">PandaCodeGen planning tiers</h2>
+                    <section id="short-answer" data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer: what a website migration costs</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            First work out which job you&apos;re buying. Moving the same site to a new host is a small
+                            job that many hosting companies do when you buy a plan, often free or for a small fixed fee.
+                            Moving to a different platform is a rebuild. Its price is set by how many pages, templates
+                            and records have to move, how much the old platform lets you export, what the site connects
+                            to, and whether your current URLs and rankings have to survive. Our own migrations are priced
+                            on those inputs, at a fixed price agreed before we start:
+                        </p>
                         <BlogList
                             items={[
-                                "Starter begins at $1,500 for a small, well-defined migration.",
-                                "Growth begins at $3,500 for more templates, structured content or integrations.",
-                                "Scale runs from $5,000 for broader or higher-risk migrations.",
-                                "Larger or unusual scope is discussed separately before signing.",
+                                "Starter, from $1,500: up to 7 pages, for a small, well-defined migration.",
+                                "Growth, from $3,500: 8 to 20 pages, a content model built around your own collections, and a full migration with a redirect map.",
+                                "Scale, from $5,000: more than 20 pages, a large catalogue, subscriptions or custom commerce logic, or more than one language.",
+                                "Anything larger or unusual is quoted after a scoping call, and the written proposal sets the price before work starts.",
                             ]}
                         />
                     </section>
@@ -218,21 +223,21 @@ export default function WebsiteMigrationCostPage() {
 
                     <BlogHeader id="cost-table">The seven-platform migration matrix</BlogHeader>
                     <BlogText>
-                        No platform hands you a complete, portable site. What each one exports sets the floor on what a migration costs, because whatever the export misses has to be rebuilt by hand. The right-hand column is where acceptance usually fails, and it is different for every source platform.
+                        No platform hands you a complete, portable site. What each one exports sets the floor on what a migration costs, because whatever the export misses has to be rebuilt by hand. The acceptance-risk column is where sign-off usually fails, and it&apos;s different for every source platform. The last column links the full cost guide for each one.
                     </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
-                        <table className="w-full min-w-[1100px] border-collapse text-left text-sm">
+                        <table className="w-full min-w-[1300px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
-                                <tr><th className="p-4">Source</th><th className="p-4">Export or extraction</th><th className="p-4">Common replacement work</th><th className="p-4">Key acceptance risk</th></tr>
+                                <tr><th className="p-4">Source</th><th className="p-4">Export or extraction</th><th className="p-4">Common replacement work</th><th className="p-4">Key acceptance risk</th><th className="p-4">Our starting point</th><th className="p-4">Full cost guide</th></tr>
                             </thead>
                             <tbody className="divide-y divide-stone-200 text-stone-700">
-                                <tr><td className="p-4 font-bold">WordPress</td><td className="p-4">XML, database, files, APIs or controlled extraction</td><td className="p-4">Theme, plugins, blocks, forms, search, users and hosting behavior</td><td className="p-4">URL, content, media, shortcode and plugin-equivalent coverage</td></tr>
-                                <tr><td className="p-4 font-bold">WooCommerce</td><td className="p-4">Products CSV plus orders, customers and extension-specific data</td><td className="p-4">Checkout, tax, fraud, inventory, fulfillment, accounts and subscriptions</td><td className="p-4">Financial and order-flow reconciliation</td></tr>
-                                <tr><td className="p-4 font-bold">Webflow</td><td className="p-4">Code ZIP plus separate CMS or ecommerce CSV exports</td><td className="p-4">CMS, forms, search, localization, ecommerce, users and code components</td><td className="p-4">Feature gaps beyond exported HTML, CSS, JavaScript and assets</td></tr>
-                                <tr><td className="p-4 font-bold">Wix</td><td className="p-4">CMS exports and other feature-specific exports or APIs where available</td><td className="p-4">Pages, media, blog, forms, bookings, members, apps and commerce</td><td className="p-4">Complete feature and content inventory before extraction</td></tr>
-                                <tr><td className="p-4 font-bold">Squarespace</td><td className="p-4">Partial WordPress XML plus manual or separate system work</td><td className="p-4">Excluded layouts, store, portfolio, products, media, forms and styles</td><td className="p-4">Export exclusions and design recreation</td></tr>
-                                <tr><td className="p-4 font-bold">Shopify</td><td className="p-4">Product and other admin exports plus APIs</td><td className="p-4">Storefront, checkout boundary, accounts, search, apps, analytics and consent</td><td className="p-4">Commerce continuity and app compatibility</td></tr>
-                                <tr><td className="p-4 font-bold">GoHighLevel</td><td className="p-4">Documented APIs, exports and controlled recreation</td><td className="p-4">Keep CRM or replace it; forms, funnels, calendars, automation and attribution</td><td className="p-4">Lead capture and workflow continuity</td></tr>
+                                <tr><td className="p-4 font-bold">WordPress</td><td className="p-4">XML, database, files, APIs or controlled extraction</td><td className="p-4">Theme, plugins, blocks, forms, search, users and hosting behavior</td><td className="p-4">URL, content, media, shortcode and plugin-equivalent coverage</td><td className="p-4">Starter, from $1,500, for a small site on a few templates</td><td className="p-4"><Link href="/blog/wordpress-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WordPress migration cost</Link></td></tr>
+                                <tr><td className="p-4 font-bold">WooCommerce</td><td className="p-4">Products CSV plus orders, customers and extension-specific data</td><td className="p-4">Checkout, tax, fraud, inventory, fulfillment, accounts and subscriptions</td><td className="p-4">Financial and order-flow reconciliation</td><td className="p-4">Starter, from $1,500, for a small catalogue; subscriptions or a large catalogue mean Scale, from $5,000</td><td className="p-4"><Link href="/blog/woocommerce-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WooCommerce migration cost</Link></td></tr>
+                                <tr><td className="p-4 font-bold">Webflow</td><td className="p-4">Code ZIP plus separate CMS or ecommerce CSV exports</td><td className="p-4">CMS, forms, search, localization, ecommerce, users and code components</td><td className="p-4">Feature gaps beyond exported HTML, CSS, JavaScript and assets</td><td className="p-4">Starter, from $1,500</td><td className="p-4"><Link href="/blog/webflow-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Webflow migration cost</Link></td></tr>
+                                <tr><td className="p-4 font-bold">Wix</td><td className="p-4">CMS exports and other feature-specific exports or APIs where available</td><td className="p-4">Pages, media, blog, forms, bookings, members, apps and commerce</td><td className="p-4">Complete feature and content inventory before extraction</td><td className="p-4">Starter, from $1,500</td><td className="p-4"><Link href="/blog/wix-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Wix migration cost</Link></td></tr>
+                                <tr><td className="p-4 font-bold">Squarespace</td><td className="p-4">Partial WordPress XML plus manual or separate system work</td><td className="p-4">Excluded layouts, store, portfolio, products, media, forms and styles</td><td className="p-4">Export exclusions and design recreation</td><td className="p-4">Starter, from $1,500</td><td className="p-4"><Link href="/blog/squarespace-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Squarespace migration cost</Link></td></tr>
+                                <tr><td className="p-4 font-bold">Shopify</td><td className="p-4">Product and other admin exports plus APIs</td><td className="p-4">Storefront, checkout boundary, accounts, search, apps, analytics and consent</td><td className="p-4">Commerce continuity and app compatibility</td><td className="p-4">Headless builds start at Scale, from $5,000</td><td className="p-4"><Link href="/blog/shopify-headless" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Headless Shopify cost</Link></td></tr>
+                                <tr><td className="p-4 font-bold">GoHighLevel</td><td className="p-4">Documented APIs, exports and controlled recreation</td><td className="p-4">Keep CRM or replace it; forms, funnels, calendars, automation and attribution</td><td className="p-4">Lead capture and workflow continuity</td><td className="p-4">Starter, from $1,500, for a site that keeps the CRM</td><td className="p-4"><Link href="/blog/gohighlevel-keep-crm-replace-website" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Keeping GoHighLevel, replacing the site</Link></td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -291,7 +296,7 @@ export default function WebsiteMigrationCostPage() {
                         The platform you are leaving changes how hard the export is. It does not set the price.
                     </BlogQuote>
 
-                    <BlogHeader id="what-changes-the-number">The three things a quote actually depends on</BlogHeader>
+                    <BlogHeader id="what-changes-the-number">What drives website migration cost on every platform</BlogHeader>
 
                     <div data-speakable="true">
                         <BlogText>
@@ -382,91 +387,113 @@ export default function WebsiteMigrationCostPage() {
                     />
 
                     <BlogText>
-                        The seven sections below give the starting figure for each source platform. They are
-                        PandaCodeGen&apos;s own published tiers, listed in full on the{" "}
+                        The platform summaries below give our starting point for each source platform and send you to
+                        the full guide for it. The figures are PandaCodeGen&apos;s own published tiers, listed in full on
+                        the{" "}
                         <Link href="/pricing" className="text-cognac hover:underline font-medium">pricing page</Link>,
                         and the accepted scope sets the final number. They are not a market rate for the industry.
                     </BlogText>
 
-                    <BlogHeader id="wordpress-migration-cost">WordPress migration cost</BlogHeader>
+                    <BlogHeader id="by-platform">Migration cost by platform</BlogHeader>
                     <BlogText>
-                        Most WordPress migrations we scope start at $1,500 for a bounded brochure site and $3,500 once
-                        there is structured content or a real plugin footprint. Plugin-heavy and multi-template sites
-                        run $5,000. What moves it is themes, templates, blocks, plugins, shortcodes, custom
-                        post types, fields, users, forms, search, media and hosting behavior. WordPress can export content, but a
-                        replacement must reproduce accepted functions and editorial workflows. A brochure site may fit
-                        Starter; structured or plugin-heavy sites may fit Growth, Scale or custom scope. The full
-                        breakdown, including why a host change is a different job entirely, is in our{" "}
-                        <Link href="/blog/wordpress-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WordPress migration cost guide</Link>.
+                        The method above applies to every platform. What changes from one platform to the next is how
+                        much the export gives you and which features have to be rebuilt by hand. Each summary below
+                        names that and our starting point, and the full guide for each platform has the inventory,
+                        the tier table and the redirect work.
                     </BlogText>
 
-                    <BlogHeader id="woocommerce-migration-cost">WooCommerce migration cost</BlogHeader>
+                    <h3 id="wordpress-migration-cost" className="mb-3 mt-8 text-xl font-bold text-charcoal">WordPress</h3>
                     <BlogText>
-                        WooCommerce migrations start at $5,000 and are the most likely of the seven to exceed the
-                        published tiers, because commerce carries obligations a brochure site does not. WooCommerce
-                        adds products, variants, pricing, inventory, customer and order records, tax, shipping,
-                        payments, fraud, refunds, subscriptions and extensions. Reconcile record counts and
-                        financial flows before and after migration. Before you price a rebuild, check whether you need
-                        one: our{" "}
-                        <Link href="/blog/woocommerce-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WooCommerce migration cost guide</Link>{" "}
-                        separates moving the data from rebuilding the store, and they are not the same purchase.
+                        WordPress exposes its database and a REST API, so content extraction can be scripted. The cost
+                        sits in what the export can&apos;t carry: page-builder layouts, plugins, shortcodes, custom
+                        fields, forms and search all have to be rebuilt or replaced. A small site on a few templates
+                        starts at Starter, from $1,500; structured content or a heavy plugin footprint moves it up a tier.
                     </BlogText>
-
-                    <BlogHeader id="webflow-migration-cost">Webflow migration cost</BlogHeader>
+                    <p className="mb-8 mt-3">
+                        <Link href="/blog/wordpress-migration-cost" className="inline-flex items-center gap-2 font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                            The full WordPress migration cost guide, including why a host change is a different job <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                        </Link>
+                    </p>
+                    <h3 id="woocommerce-migration-cost" className="mb-3 mt-8 text-xl font-bold text-charcoal">WooCommerce</h3>
                     <BlogText>
-                        Webflow migrations start at $1,500 and typically land at $3,500, because the export gives you
-                        less than people expect and the gap is rebuild work. Webflow code export covers HTML, CSS,
-                        JavaScript and assets on eligible paid Workspaces, while
-                        current documentation excludes working CMS, ecommerce, User Accounts, localized content beyond
-                        the primary locale, forms, search, password protection and code components. Page count must be
-                        normalized into templates and systems before choosing a tier, which is the whole subject of our{" "}
-                        <Link href="/blog/webflow-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Webflow migration cost guide</Link>. What Webflow
-                        charges you while you stay is covered separately in{" "}
-                        <Link href="/blog/webflow-true-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">what Webflow actually costs</Link>.
+                        A store carries obligations a brochure site doesn&apos;t: products and variants, customer and
+                        order records, tax, shipping, payments, refunds and extensions, all of which have to reconcile
+                        before and after the move. A small, bounded catalogue can start at Starter, from $1,500.
+                        Subscriptions, a large catalogue or custom commerce logic put it in Scale, from $5,000, or a
+                        custom quote.
                     </BlogText>
-
-                    <BlogHeader id="wix-migration-cost">Wix migration cost</BlogHeader>
+                    <p className="mb-8 mt-3">
+                        <Link href="/blog/woocommerce-migration-cost" className="inline-flex items-center gap-2 font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                            The WooCommerce migration cost guide: moving the data versus rebuilding the store <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                        </Link>
+                    </p>
+                    <h3 id="webflow-migration-cost" className="mb-3 mt-8 text-xl font-bold text-charcoal">Webflow</h3>
                     <BlogText>
-                        Wix migrations start at $1,500 and are usually the cheapest of the seven, because Wix sites are
-                        smaller on average and the export gives you almost nothing, so the work is a linear content
-                        rebuild rather than a data conversion. Scope depends on the editor generation, CMS collections,
-                        blog, media, forms, bookings, members, stores, apps and custom code. The CMS can export collections, but that does not
-                        establish a complete whole-site export. Inventory each feature and choose an extraction and
-                        replacement method. Our{" "}
-                        <Link href="/blog/wix-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Wix migration cost guide</Link>{" "}
-                        works through the four routes people actually take, cheapest first.
+                        Webflow&apos;s code export gives you the front end, not a working site: CMS, ecommerce, forms,
+                        search and localized content need to be rebuilt or moved separately, and{" "}
+                        <Link href="/blog/webflow-user-accounts-sunset-date-2026" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">User Accounts ended in January 2026</Link>
+                        , so a members area moves to a separate provider. Page count has to be turned
+                        into templates and systems before a tier means anything. Small, well-defined migrations start at
+                        Starter, from $1,500.
                     </BlogText>
-
-                    <BlogHeader id="squarespace-migration-cost">Squarespace migration cost</BlogHeader>
+                    <p className="mb-8 mt-3">
+                        <Link href="/blog/webflow-migration-cost" className="inline-flex items-center gap-2 font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                            The Webflow migration cost guide, with what the export leaves out <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                        </Link>
+                    </p>
+                    <h3 id="wix-migration-cost" className="mb-3 mt-8 text-xl font-bold text-charcoal">Wix</h3>
                     <BlogText>
-                        Squarespace migrations start at $1,500, reach $3,500 with a blog or Commerce, and start at
-                        $5,000 for a store with Member Areas or scheduling. The reason the range is wide is that
-                        Squarespace&apos;s current export is partial. Store and portfolio pages, product and video
-                        blocks, drafts, style settings and custom CSS are among the documented exclusions. Price the
-                        design, content and systems that must be recreated separately, and see our{" "}
-                        <Link href="/blog/squarespace-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Squarespace migration cost guide</Link>{" "}
-                        for the redirect problem specifically, which is the line most Squarespace quotes miss.
+                        Wix lets you export some data separately, such as CMS collections, but not the site itself, so
+                        most of the work is rebuilding pages and features from an inventory. Bookings, members,
+                        stores, apps and custom code each need their own decision. A small marketing site starts at
+                        Starter, from $1,500.
                     </BlogText>
-
-                    <BlogHeader id="shopify-migration-cost">Shopify and headless Shopify migration cost</BlogHeader>
+                    <p className="mb-8 mt-3">
+                        <Link href="/blog/wix-migration-cost" className="inline-flex items-center gap-2 font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                            The Wix migration cost guide and the four routes people take, cheapest first <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                        </Link>
+                    </p>
+                    <h3 id="squarespace-migration-cost" className="mb-3 mt-8 text-xl font-bold text-charcoal">Squarespace</h3>
                     <BlogText>
-                        Headless <Link href="/services/ecommerce" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Shopify</Link> migrations start at $5,000 and reach $10,000 or more, because the storefront is
-                        only part of the job. The first decision is whether Shopify remains the commerce backend or is
-                        replaced. A headless migration still
-                        needs search, accounts, analytics, consent, localization, app compatibility, preview,
-                        deployment and monitoring. A fully custom commerce system also assumes responsibility for
-                        checkout, tax, fraud, orders and operations.
+                        Squarespace&apos;s export is partial: store and portfolio pages, product and video blocks,
+                        drafts, style settings and custom CSS are among the documented exclusions, so the design and
+                        those systems are recreated rather than moved. A small presentation site starts at Starter,
+                        from $1,500. If search is your reason for leaving, read{" "}
+                        <Link href="/blog/is-squarespace-bad-for-seo" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">whether Squarespace is really bad for SEO</Link>{" "}
+                        before you price the move.
                     </BlogText>
-
-                    <BlogHeader id="gohighlevel-migration-cost">GoHighLevel website migration cost</BlogHeader>
+                    <p className="mb-8 mt-3">
+                        <Link href="/blog/squarespace-migration-cost" className="inline-flex items-center gap-2 font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                            The Squarespace migration cost guide, including the redirect line most quotes miss <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                        </Link>
+                    </p>
+                    <h3 id="shopify-migration-cost" className="mb-3 mt-8 text-xl font-bold text-charcoal">Shopify and headless Shopify</h3>
                     <BlogText>
-                        GoHighLevel migrations start at $1,500 for a hybrid that keeps the CRM and replaces only the
-                        public site, which is what most operators want, and $3,500 once there are several funnels and
-                        form integrations. A hybrid keeps GoHighLevel for CRM, calendars, automation and pipelines
-                        while replacing the public site. Define forms, contacts, attribution, webhooks, OAuth, failure handling and
-                        ownership. Do not promise an unchanged CRM bill or uninterrupted workflow without testing the
-                        accepted implementation.
+                        The first decision is whether Shopify stays as the commerce backend. A headless storefront still
+                        needs search, accounts, analytics, consent, app compatibility, preview and monitoring rebuilt
+                        around it. Replacing Shopify entirely also makes you responsible for checkout, tax, fraud,
+                        orders and operations. Our headless builds start at Scale, from $5,000.
                     </BlogText>
+                    <p className="mb-8 mt-3">
+                        <Link href="/blog/shopify-headless" className="inline-flex items-center gap-2 font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                            What headless Shopify costs, line by line <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                        </Link>
+                    </p>
+                    <h3 id="gohighlevel-migration-cost" className="mb-3 mt-8 text-xl font-bold text-charcoal">GoHighLevel</h3>
+                    <BlogText>
+                        Most operators keep GoHighLevel for the CRM, calendars, automation and pipelines and replace
+                        only the public site. The work is in the joins: forms, contacts, attribution, webhooks, failure
+                        handling and who owns each account. Don&apos;t accept a promise of an unchanged CRM bill or an
+                        uninterrupted workflow that hasn&apos;t been tested. A site that keeps the CRM starts at
+                        Starter, from $1,500. If speed is the reason you want to move, check{" "}
+                        <Link href="/blog/gohighlevel-website-speed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">what can be fixed inside GoHighLevel</Link>{" "}
+                        first.
+                    </BlogText>
+                    <p className="mb-8 mt-3">
+                        <Link href="/blog/gohighlevel-keep-crm-replace-website" className="inline-flex items-center gap-2 font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                            How to keep GoHighLevel and replace only the website <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                        </Link>
+                    </p>
 
                     <BlogHeader id="roi-math">Is a migration worth it? How to build the business case</BlogHeader>
                     <BlogText>
@@ -516,7 +543,7 @@ export default function WebsiteMigrationCostPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

@@ -10,9 +10,9 @@ import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 export default function GuidesList() {
   const latest = [...blogPosts].reverse().slice(0, 3);
   return (
-    <section aria-labelledby="guides-title" className="px-6 pb-24 md:px-10 md:pb-36" style={{ backgroundColor: T.paper }}>
+    <section aria-labelledby="guides-title" className="px-6 pb-16 md:px-10 md:pb-20" style={{ backgroundColor: T.paper }}>
       <div className="mx-auto max-w-[1440px]">
-        <div className="flex flex-wrap items-end justify-between gap-6 border-t pt-16 md:pt-24" style={{ borderColor: T.rule }}>
+        <div className="flex flex-wrap items-end justify-between gap-6 border-t pt-12 md:pt-16" style={{ borderColor: T.rule }}>
           <h2
             id="guides-title"
             style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.2rem, 4vw, 3.6rem)", lineHeight: 1, letterSpacing: "-0.02em" }}

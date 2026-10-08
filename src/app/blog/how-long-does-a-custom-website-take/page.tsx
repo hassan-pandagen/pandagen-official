@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-03",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-long-does-a-custom-website-take")],
@@ -64,7 +64,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/how-long-does-a-custom-website-take"),
             description,
             datePublished: "2026-06-03",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -106,7 +106,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-03",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -144,7 +144,7 @@ export default function WebsiteTimelineGuide() {
                             application do not share one honest duration. The reliable answer is a dependency-based
                             schedule attached to the signed scope.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Schedule and offer reviewed August 1, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Schedule and offer reviewed October 8, 2026.</p>
                       </div>
                       <div data-article-hero-screen>
                         <BlogCoverFigure id="how-long-does-a-custom-website-take" />
@@ -154,8 +154,8 @@ export default function WebsiteTimelineGuide() {
                     <BlogAuthor
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
-                        date="June 3, 2026"
-                        readTime="7 min read"
+                        postId="how-long-does-a-custom-website-take" published="2026-06-03"
+                        readTime="11 min read"
                         bio="Hassan scopes the migrations, the integrations, and what has to be true before a release is accepted."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
@@ -263,7 +263,7 @@ export default function WebsiteTimelineGuide() {
                                 </tr>
                                 <tr className="bg-stone-50">
                                     <td className="border border-stone-300 px-4 py-3 font-medium">Complex migration</td>
-                                    <td className="border border-stone-300 px-4 py-3">up to 6 weeks</td>
+                                    <td className="border border-stone-300 px-4 py-3">Scoped individually; may exceed 6 weeks</td>
                                     <td className="border border-stone-300 px-4 py-3">Content volume, redirects</td>
                                 </tr>
                             </tbody>
@@ -322,8 +322,7 @@ export default function WebsiteTimelineGuide() {
                     <BlogHeader>What the MyCustomPatches example does and does not show</BlogHeader>
                     <BlogText>
                         MyCustomPatches is an independent client, not a PandaCodeGen property, and its figures are owner-confirmed
-                        and published with permission. Its owner reports a delivery of about 22 days. We do not hold a dated
-                        record of that confirmation, so treat it as an owner statement for one accepted scope rather than an
+                        and published with permission. Its owner reports a delivery of about 22 days. Our central project record lists client-owner approval on July 21, 2026. Treat it as an owner statement for one accepted scope rather than an
                         audited figure, and not as a market average or a promise for the next site.
                         Without a public scope baseline, phase dates, paused-time policy and acceptance record, it
                         should not be used to infer that every project of a similar-looking size takes 22 days. The

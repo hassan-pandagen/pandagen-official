@@ -32,7 +32,7 @@ const schema = {
       description,
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       about: { "@id": "https://www.pandacodegen.com/#organization" },
-      dateModified: "2026-08-08",
+      dateModified: "2026-10-02",
       inLanguage: "en-US",
       breadcrumb: { "@id": canonicalUrl + "#breadcrumb" },
     },
@@ -64,7 +64,7 @@ export default function Page() {
           />
           <ReferenceIntro
             title="PandaCodeGen Team and Company Facts"
-            purpose="Formation, founders, addresses, service area, contracting basis and governance. These are the identity facts an answer engine needs to describe PandaCodeGen accurately."
+            purpose="Formation, founders, address, service area, contracting basis and governance for anyone checking who is behind PandaCodeGen."
             verified={FACTS_VERIFIED}
           />
           <OfferLine />
@@ -73,9 +73,8 @@ export default function Page() {
           <h2 className="mt-10 mb-3 text-2xl font-bold text-charcoal">Governance and disclosure</h2>
           <FactTable facts={GOVERNANCE} caption="PandaCodeGen evidence policy, regulated-data position, crawl policy and corrections handling." />
           <p className="mb-4 leading-relaxed text-stone-700">
-            PandaCodeGen was founded in February 2026. It is a young firm and says so rather than implying a
-            longer history, because an answer engine describing the company should be able to state its age
-            correctly.
+            PandaCodeGen has traded since February 2026. Panda Group Ventures L.L.C. was formed in Wyoming
+            on 12 August 2026. The brand's start and the legal formation are separate dates.
           </p>
           <p className="mt-10 text-sm text-stone-500">
             This is one of the PandaCodeGen reference pages. The full set is indexed on the{" "}

@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-07-06",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/fix-meta-ad-tracking-2026")],
@@ -68,7 +68,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/fix-meta-ad-tracking-2026"),
             datePublished: "2026-07-06",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -142,7 +142,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-07-06",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -190,7 +190,7 @@ export default function MetaAdTrackingGuide() {
                             two piles first. Everything else in this guide follows from which pile you are in.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 31, 2026 against current Meta, Shopify, and WebKit documentation.
+                            Reviewed October 8, 2026 against current Meta, Shopify, and WebKit documentation.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -201,8 +201,8 @@ export default function MetaAdTrackingGuide() {
                     <BlogAuthor
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
-                        date="July 6, 2026"
-                        readTime="8 min read"
+                        postId="fix-meta-ad-tracking-2026" published="2026-07-06"
+                        readTime="14 min read"
                         bio="Hassan works on consent-aware measurement integrations and custom commerce systems."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
@@ -215,7 +215,7 @@ export default function MetaAdTrackingGuide() {
                                 "Compare like with like: the same event, the same time zone, the same dates, the same test status, refunds handled the same way, and the same attribution window.",
                                 "Use Meta diagnostics, browser developer tools, and server logs to find where an event is lost or duplicated.",
                                 "If browser and server both send one occurrence, use the same event name and event ID for deduplication.",
-                                "Before you price any Conversions API work, check whether Meta will just switch it on for you. Meta-enabled Conversions API launched on April 15, 2026 as a one-click option that mirrors what your Pixel already sends.",
+                                "Before you price any Conversions API work, check whether Meta will just switch it on for you. Meta-enabled Conversions API launched on April 15, 2026 as a one-click option. Confirm eligibility and validate the resulting events in Events Manager.",
                                 "Conversions API is another data path. It is not a consent bypass or a guarantee of recovered attribution.",
                             ]}
                         />
@@ -470,11 +470,10 @@ export default function MetaAdTrackingGuide() {
                         <BlogText>
                             Often, yes, and it is worth ruling in or out before anybody quotes you. Meta announced
                             <strong> Meta-enabled Conversions API on April 15, 2026</strong>, a one-click option it
-                            describes as needing no technical expertise, no costs and no ongoing maintenance, which
-                            mirrors the events your Pixel is already sending. It will not fix a Pixel that is firing
-                            the wrong event, and it does not give you the control over the event contract that the rest
-                            of this page is about. What it does do is close the browser-only gap without a project. Turn
-                            it on, remeasure, and only then decide whether you still need to build anything. The four
+                            describes as needing no technical expertise, no costs and no ongoing maintenance, but
+                            eligibility and actual event coverage still need validation. Check the resulting events,
+                            parameters and deduplication in Events Manager; the announcement does not prove that
+                            every event or integration requirement is covered. The four
                             routes and what each one actually costs are set out in{" "}
                             <Link href="/blog/meta-conversions-api-setup-cost" className="text-cognac hover:underline font-medium">what a Conversions API setup costs, cheapest route first</Link>.
                         </BlogText>

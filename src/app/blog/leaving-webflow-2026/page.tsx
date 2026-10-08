@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         description: "Decide whether to stay, optimize, or migrate using current Webflow plan terms, total cost, export constraints, performance data, and SEO migration controls.",
         type: "article",
         publishedTime: "2026-04-06",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/leaving-webflow-2026",
         images: [ogImageForPath("/blog/leaving-webflow-2026")],
@@ -73,7 +73,7 @@ const articleSchema = {
             "description": "A practical framework for deciding whether to stay on Webflow, optimize the current implementation, or plan an SEO-safe migration.",
             "image": ogImageUrlForPath("/blog/leaving-webflow-2026"),
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-08-19T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -177,7 +177,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/leaving-webflow-2026") },
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-08-19T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#breadcrumb" },
             "inLanguage": "en-US",
         },
@@ -251,7 +251,7 @@ export default function LeavingWebflow2026Page() {
                         </p>
 
                         <BlogAuthor
-                            date="Updated Aug 3, 2026"
+                            postId="leaving-webflow-2026" published="2026-04-06"
                             readTime="17 min read"
                             bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He scopes platform migrations around content, integrations, performance, redirects, testing, launch, and handover."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
@@ -337,14 +337,13 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogText>
-                            A third deprecation lands sooner than either of those and attracts far less attention.
-                            Webflow&apos;s <a href="https://help.webflow.com/hc/en-us/articles/36046081578515-Feature-sunsets-deprecations" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">feature sunsets page</a>, read on August 3, 2026, states that the legacy Editor and legacy
-                            Editor whitelabeling will no longer be available <strong>starting August 4, 2026</strong>,
-                            and that existing legacy Editor users are automatically given a free client seat or a
-                            limited seat as part of the migration. If clients or non-technical colleagues still publish
-                            through the legacy Editor, that workflow moves to seats, roles and permissions rather than
-                            vanishing. It is worth checking who on your side is affected before the date rather than
-                            after it. The full sequence of Webflow sunsets is set out in{" "}
+                            A third deprecation followed those two.
+                            Webflow&apos;s <a href="https://help.webflow.com/hc/en-us/articles/48412420902675-Legacy-Editor-deprecation-FAQ" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">legacy Editor deprecation FAQ</a> confirms the legacy Editor and legacy
+                            Editor whitelabeling were removed on <strong>August 4, 2026</strong>,
+                            and that existing legacy Editor users were moved to a free client seat or a
+                            limited seat as part of the migration. If clients or non-technical colleagues used to publish
+                            through the legacy Editor, that workflow moved to seats, roles and permissions rather than
+                            vanishing, so check that each of them has the seat and role they need. The full sequence of Webflow sunsets is set out in{" "}
                             <Link href="/blog/webflow-user-accounts-sunset-date-2026" className="text-cognac underline underline-offset-2">our guide to the User Accounts sunset and the dates around it</Link>.
                         </BlogText>
 

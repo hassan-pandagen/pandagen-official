@@ -35,7 +35,7 @@ const founders = [
 
 export default function FoundersDark() {
   return (
-    <section aria-labelledby="founders-title" className="px-6 py-24 md:px-10 md:py-36" style={{ backgroundColor: T.dark, color: T.onDark }}>
+    <section aria-labelledby="founders-title" className="px-6 py-16 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
       <div className="mx-auto max-w-[1440px]">
         <div className="grid gap-10 lg:grid-cols-12">
           <h2
@@ -43,7 +43,7 @@ export default function FoundersDark() {
             className="lg:col-span-6"
             style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2.6rem, 5.4vw, 5.2rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}
           >
-            Founder-built, not farmed out.
+            <span style={{ color: T.onDarkAccent }}>Founder-built,</span> not farmed out.
           </h2>
           <p className="max-w-[34rem] self-end text-[17px] leading-[1.6] lg:col-span-5 lg:col-start-8" style={{ color: T.onDarkQuiet }}>
             When you book a call, Hassan answers. He writes every line of code. Imran leads marketing. Contracts
@@ -64,7 +64,7 @@ export default function FoundersDark() {
                   style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(3rem, 7vw, 6.6rem)", lineHeight: 0.92, letterSpacing: "-0.03em" }}
                 >
                   {f.first}
-                  <br />
+                  {" "}<br />
                   {f.last}
                 </h3>
               </div>

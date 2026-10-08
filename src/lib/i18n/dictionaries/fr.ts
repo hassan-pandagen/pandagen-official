@@ -34,17 +34,17 @@ const fr: Dictionary = {
     meta: {
       title: "Création de sites web et boutiques en ligne | PandaCodeGen",
       description:
-        "Sites web professionnels et boutiques en ligne sur mesure en Next.js, dont vous êtes pleinement propriétaire. À partir de 1 500 $. Périmètre et prix convenus avant le début des travaux.",
+        "Sites WordPress, sites sur mesure et boutiques en ligne. Travaillez directement avec les fondateurs, avec un devis écrit et une démonstration de votre éditeur.",
     },
     hero: {
-      eyebrow: "Éditeur de contenu · Formation · Code qui vous appartient",
+      eyebrow: "Contenu modifiable · Code qui vous appartient",
       title: "Des sites web conçus pour",
       titleAccent: "votre façon de travailler.",
       lead:
-        "Nous concevons et développons des sites web professionnels et des boutiques en ligne autour de la façon dont vos clients vous contactent et achètent. Votre équipe peut modifier le contenu, le code vous appartient, et chaque page est construite pour que Google et les assistants IA puissent la lire correctement. Lorsqu'un site existant doit être repris, nous planifions le transfert des contenus, des URL et des intégrations.",
+        "Un site WordPress simple, une boutique en ligne ou un projet sur mesure : parlez-en directement à Hassan et Imran. Nous vous aidons à choisir, convenons du prix et vous montrons comment modifier votre contenu, avec une démonstration en direct et des instructions écrites.",
     },
     summary:
-      "PandaCodeGen conçoit et développe des sites web professionnels et des boutiques en ligne rapides, en code Next.js sur mesure dont vous êtes pleinement propriétaire. Nous créons de nouveaux sites et refondons ou reconstruisons des sites existants en fonction du fonctionnement réel de votre entreprise. Lorsqu'un projet nécessite une migration, nous planifions la reprise de vos contenus, de vos URL et de vos intégrations. Les projets démarrent à 1 500 $, à prix fixe pour le périmètre écrit, sans taille de projet minimale ni facturation à l'heure. Vous recevez un éditeur de contenu, une formation et un code qui vous appartient.",
+      "PandaCodeGen crée des sites WordPress lorsque cette solution convient, ainsi que des sites et logiciels sur mesure. Les fondateurs vous accompagnent pour une création, une amélioration ou une migration. Les pages, fonctionnalités, accès, coûts de fonctionnement et étapes de remise sont convenus avant les travaux.",
     sections: [
       {
         title: "Des semaines, pas des mois",
@@ -92,7 +92,7 @@ const fr: Dictionary = {
       },
       {
         q: "Pourquoi ne pas simplement changer d'hébergeur WordPress ou ajouter un cache ?",
-        a: "Un hébergement plus rapide et la mise en cache aident, mais ne changent pas le modèle sous-jacent : WordPress assemble chaque page à la demande en interrogeant la base de données, en chargeant les extensions et en rendant le thème. Une construction sur mesure générée statiquement ou rendue côté serveur supprime cette étape d'assemblage au lieu de la masquer.",
+        a: "Oui. Nous vérifions ce qui pose problème sur votre site : images, hébergement, thème, extensions ou outils connectés. Une amélioration ciblée peut suffire. Nous proposons une migration si elle répond à vos besoins, avec les coûts et les compromis expliqués avant votre décision.",
       },
     ],
 
@@ -406,29 +406,29 @@ const fr: Dictionary = {
 
   services: {
     meta: {
-      title: "Services de migration web et d'ingénierie sur mesure | PandaCodeGen",
+      title: "Création de sites WordPress, développement et migration | PandaCodeGen",
       description:
-        "Migration de site web, diagnostic e-commerce et ingénierie web sur mesure, cadrés autour des preuves, de l'acceptation, de la bascule et de la remise du projet.",
+        "Sites WordPress, sites sur mesure et boutiques en ligne. Travaillez directement avec les fondateurs, avec un devis écrit et une démonstration de votre éditeur.",
     },
     hero: {
       eyebrow: "Ce que nous construisons",
       title: "Capacités et",
       titleAccent: "architecture.",
       lead:
-        "Trois piliers principaux. Un objectif : rendre votre activité plus rapide, moins coûteuse à exploiter et impossible à ignorer.",
+        "Un nouveau site, une amélioration ou une migration : nous choisissons avec vous le travail adapté à votre activité et à votre budget.",
     },
     summary:
-      "PandaCodeGen propose trois familles de prestations : la migration de site web depuis WordPress, Wix, Squarespace, Webflow, WooCommerce et GoHighLevel ; l'ingénierie web sur mesure pour les applications, portails et tableaux de bord ; et le commerce headless haute performance. Chaque prestation est chiffrée à prix fixe pour un périmètre écrit et porte un objectif de performance Lighthouse de 90+ à la livraison sur mobile et sur ordinateur, pour les pages représentatives nommées dans le périmètre, vérifié sur trois passages enregistrés.",
+      "PandaCodeGen crée des sites WordPress lorsque cette solution convient, ainsi que des sites et logiciels sur mesure. Les fondateurs vous accompagnent pour une création, une amélioration ou une migration. Les pages, fonctionnalités, accès, coûts de fonctionnement et étapes de remise sont convenus avant les travaux.",
     sections: [
       {
-        title: "01 · Migration WordPress",
+        title: "01 · Sites WordPress et migrations",
         body:
-          "Votre site WordPress est lent, se fait pirater ou casse régulièrement ? Nous vous déplaçons vers une plateforme moderne en code sur mesure, avec un inventaire des URL, un plan de redirections et une vérification avant bascule.",
+          "Besoin d’un site WordPress simple ? Nous pouvons le créer. Si vous avez déjà un site, nous examinons ce qui peut être amélioré et ce qui justifierait une migration vers un site sur mesure. Vous choisissez après avoir compris les options et leurs coûts.",
         bullets: [
-          "Plus de mises à jour d'extensions à surveiller",
-          "Surface d'attaque réduite : pas de vulnérabilités liées aux extensions",
-          "Transfert des contenus, des métadonnées et des redirections pris en charge",
-          "Objectif Lighthouse 90+ sur les pages représentatives convenues",
+          "Pages, formulaires et contenu définis dans le devis",
+          "Hébergement, licences et mises à jour : responsabilités convenues",
+          "En cas de migration, contenus, URL et redirections planifiés",
+          "Instructions écrites et démonstration des tâches de modification",
         ],
       },
       {

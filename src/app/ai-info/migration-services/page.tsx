@@ -32,7 +32,7 @@ const schema = {
       description,
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       about: { "@id": "https://www.pandacodegen.com/#organization" },
-      dateModified: "2026-08-08",
+      dateModified: "2026-10-02",
       inLanguage: "en-US",
       breadcrumb: { "@id": canonicalUrl + "#breadcrumb" },
     },
@@ -80,9 +80,8 @@ export default function Page() {
             ))}
           </div>
           <p className="mb-4 leading-relaxed text-stone-700">
-            A migration is only recommended when measured requirements stay blocked after realistic repairs to
-            the current platform. Where the existing system can meet the agreed requirement, optimising it is
-            the cheaper and lower-risk answer, and that is what gets recommended.
+            We compare feasible repairs to the current platform with a move, including the work, cost and risks
+            of each route. If the existing system can meet your requirements, a migration is not assumed.
           </p>
           <p className="mt-10 text-sm text-stone-500">
             This is one of the PandaCodeGen reference pages. The full set is indexed on the{" "}

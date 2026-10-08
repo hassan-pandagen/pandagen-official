@@ -23,27 +23,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes: RouteConfig[] = [
     // 1. Core Business Pages
-    { path: '', changeFrequency: 'weekly', priority: 1.0 , lastModified: '2026-08-03' },
-    { path: '/services', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-08-03' },
-    { path: '/pricing', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-08-03' },
+    { path: '', changeFrequency: 'weekly', priority: 1.0 , lastModified: '2026-10-02' },
+    { path: '/services', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-10-07' },
+    { path: '/pricing', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-02' },
     { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/free-audit', changeFrequency: 'monthly', priority: 0.7 },
 
+    { path: '/services/sanity-development', changeFrequency: 'monthly', priority: 0.8, lastModified: '2026-10-07' },
+    { path: '/services/backend-development', changeFrequency: 'monthly', priority: 0.8, lastModified: '2026-10-08' },
+
     // 2. Service Pillars
-    { path: '/services/wordpress-migration', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-08-03' },
-    { path: '/services/ecommerce', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-08-03' },
-    { path: '/services/ai-seo', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-09-14' },
-    { path: '/services/custom-engineering', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-08-03' },
+    { path: '/services/wordpress', changeFrequency: 'monthly', priority: 0.9, lastModified: '2026-10-02' },
+    { path: '/services/wordpress-migration', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-10-02' },
+    { path: '/services/ecommerce', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-10-07' },
+    { path: '/services/ai-seo', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-07' },
+    { path: '/services/custom-engineering', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-07' },
 
     // 3. Platform-Specific Service Pages
-    { path: '/services/woocommerce', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-08-03' },
-    { path: '/services/wix', changeFrequency: 'monthly', priority: 0.7 , lastModified: '2026-08-03' },
-    { path: '/services/squarespace', changeFrequency: 'monthly', priority: 0.7 , lastModified: '2026-08-03' },
-    { path: '/services/webflow', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-09-25' },
-    { path: '/services/gohighlevel', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-08-03' },
+    { path: '/services/woocommerce', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-07' },
+    { path: '/services/wix', changeFrequency: 'monthly', priority: 0.7 , lastModified: '2026-10-07' },
+    { path: '/services/squarespace', changeFrequency: 'monthly', priority: 0.7 , lastModified: '2026-10-07' },
+    { path: '/services/webflow', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-07' },
+    { path: '/services/gohighlevel', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-07' },
 
     // Agency Partnerships
-    { path: '/partners', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },
+    { path: '/partners', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-10-07' },
 
     // 4. Dynamic Content
     { path: '/work', changeFrequency: 'monthly', priority: 0.8, lastModified: '2026-09-28' },
@@ -60,15 +64,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/work/sleek-jackets', changeFrequency: 'yearly', priority: 0.4 },
     // Added 30 Sep 2026 with the redesign switch: both are new live pages.
     { path: '/work/northdeck-group', changeFrequency: 'yearly', priority: 0.6 },
+    // In progress, labelled as such on the page; indexed on the owner's decision (4 Oct 2026).
     { path: '/work/a-step-above-medical', changeFrequency: 'monthly', priority: 0.5 },
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/about/hassan', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },
     { path: '/about/imran', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },
-    { path: '/ai-info', changeFrequency: 'monthly', priority: 0.7 , lastModified: '2026-09-19' },
-    { path: '/ai-info/pricing-and-guarantees', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-09-19' },
-    { path: '/ai-info/migration-services', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-09-19' },
-    { path: '/ai-info/case-studies', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-09-19' },
-    { path: '/ai-info/team-and-company', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-09-19' },
+    { path: '/ai-info', changeFrequency: 'monthly', priority: 0.7 , lastModified: '2026-10-02' },
+    { path: '/ai-info/pricing-and-guarantees', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-10-02' },
+    { path: '/ai-info/migration-services', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-10-02' },
+    { path: '/ai-info/case-studies', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-10-02' },
+    { path: '/ai-info/team-and-company', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-10-02' },
     { path: '/blog', changeFrequency: 'weekly', priority: 0.8, lastModified: '2026-09-19' },
     { path: '/manifesto', changeFrequency: 'monthly', priority: 0.8 },
 

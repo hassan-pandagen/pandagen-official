@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: TITLE, description: DESC, type: "article",
         publishedTime: "2026-09-13T00:00:00-05:00",
-        modifiedTime: "2026-09-17T00:00:00+05:00",
+        modifiedTime: "2026-10-08T00:00:00+05:00",
         authors: ["Hassan Jamal"], url: CANONICAL, images: [ogImageForPath(URL_PATH)],
     },
     twitter: { card: "summary_large_image", title: TITLE, description: DESC },
@@ -44,7 +44,7 @@ const articleSchema = {
         {
             "@type": "Article", "@id": `${CANONICAL}#article`,
             "headline": TITLE, "description": DESC, "image": ogImageUrlForPath(URL_PATH),
-            "datePublished": "2026-09-13T00:00:00-05:00", "dateModified": "2026-09-17T00:00:00+05:00",
+            "datePublished": "2026-09-13T00:00:00-05:00", "dateModified": "2026-10-08T00:00:00+05:00",
             "author": {
                 "@type": "Person", "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal", "url": "https://www.pandacodegen.com/about/hassan",
@@ -63,7 +63,7 @@ const articleSchema = {
         {
             "@type": "WebPage", "@id": `${CANONICAL}#webpage`, "url": CANONICAL,
             "name": TITLE, "description": DESC, "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "datePublished": "2026-09-13T00:00:00-05:00", "dateModified": "2026-09-17T00:00:00+05:00", "inLanguage": "en-US",
+            "datePublished": "2026-09-13T00:00:00-05:00", "dateModified": "2026-10-08T00:00:00+05:00", "inLanguage": "en-US",
         },
     ],
 };
@@ -113,7 +113,7 @@ export default function IsItCheaperPage() {
                         for a real business. The decision changes with the features you need, the time you can give it,
                         and who will look after it once it is live.
                     </p>
-                    <BlogAuthor date="Sep 13, 2026" readTime="10 min read"
+                    <BlogAuthor postId="is-it-cheaper-to-build-your-own-website" published="2026-09-13" readTime="10 min read"
                         bio="Hassan builds websites, online stores and custom software at PandaCodeGen. We sell development services; this comparison includes situations where DIY is the better fit."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
                       </div>
@@ -121,7 +121,7 @@ export default function IsItCheaperPage() {
                     <BlogCoverFigure id="is-it-cheaper-to-build-your-own-website" />
                       </div>
                     </div>
-                    <p className="mt-3 text-sm text-stone-500">Updated <time dateTime="2026-09-17">September 17, 2026</time> · Prices and sources checked on that date.</p>
+                    <p className="mt-3 text-sm text-stone-500">Updated <time dateTime="2026-10-08">October 8, 2026</time> · Prices and sources checked on that date.</p>
                 </div>
             </section>
             <section className="px-4 md:px-6 pb-20">
@@ -159,8 +159,8 @@ export default function IsItCheaperPage() {
                     <BlogHeader id="what-it-costs">{sections.prices}</BlogHeader>
                     <BlogText>Start with the plan that supports your actual site. A free plan can be enough to try an idea. A business domain, payments, booking features or additional storage may require a paid plan or an extra service.</BlogText>
                     <div className="rounded-xl border border-stone-200 p-5 mb-8 text-stone-700 leading-relaxed space-y-4">
-                        <p><strong>Two published subscription examples, checked September 17, 2026:</strong></p>
-                        <p><a href="https://wordpress.com/pricing/?currency=USD" className={linkClass}>WordPress.com Personal</a> lists a US-dollar reference price of <strong>$4/month billed annually</strong>: $48 for a year of the plan. Hosting is included; an eligible domain is included for the first year. Domain renewal and services outside the plan need their own budget. This is hosted WordPress.com, not a quote for a self-hosted WordPress site.</p>
+                        <p><strong>Two published subscription examples, checked October 8, 2026:</strong></p>
+                        <p><a href="https://wordpress.com/pricing/?currency=USD" className={linkClass}>WordPress.com Personal</a> lists a US-dollar reference price of <strong>$4/month billed annually</strong>: $48 for the first year of the plan, which then auto-renews at $5/month ($60 a year). Hosting is included; an eligible domain is included for the first year. Domain renewal and services outside the plan need their own budget. This is hosted WordPress.com, not a quote for a self-hosted WordPress site.</p>
                         <p><a href="https://www.wix.com/blog/how-much-is-a-wix-website" className={linkClass}>Wix&apos;s published US pricing guide</a> lists <strong>Light at $17/month on annual billing</strong>: $204 for a year. It includes hosting and an eligible first-year domain. Light does not include accepting payments; compare a suitable higher plan if you need that.</p>
                         <p className="text-sm">These are plan prices, not completed-website quotes or equivalent feature bundles. Country, currency, tax, promotions and billing term can change the checkout total. Check both the first payment and renewal price before buying.</p>
                     </div>
@@ -254,7 +254,8 @@ export default function IsItCheaperPage() {
                             Ask a founder about your site <ArrowRight className="w-4 h-4 shrink-0" aria-hidden="true" />
                         </Link>
                     </section>
-                    <p className="text-sm text-stone-500 leading-relaxed">Updated September 17, 2026. This revision replaces the earlier blanket distinction between hobby and business sites with a scoped cost comparison, updates pricing language, and removes unrelated AI-readability and revenue figures. The cost example is illustrative. Sources are linked beside the relevant claims. <Link href="/editorial-policy" className={linkClass}>How we publish and correct information</Link>.</p>
+                    {/* 8 Oct 2026: the WordPress.com Personal line said "$48 for a year of the plan". WordPress.com's pricing page shows $4/month as the first-term yearly price, auto-renewing at $5/month, so $48 was only the first year. */}
+                    <p className="text-sm text-stone-500 leading-relaxed">Rechecked October 8, 2026: prices confirmed, and the WordPress.com renewal price added. Updated September 17, 2026. This revision replaces the earlier blanket distinction between hobby and business sites with a scoped cost comparison, updates pricing language, and removes unrelated AI-readability and revenue figures. The cost example is illustrative. Sources are linked beside the relevant claims. <Link href="/editorial-policy" className={linkClass}>How we publish and correct information</Link>.</p>
                     <div className="mt-12 pt-8 border-t border-stone-200"><TopicUpLink postId={postId} /></div>
                     <RelatedPosts currentPostId={postId} />
                 </article>

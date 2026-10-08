@@ -1,7 +1,7 @@
 import { FOUNDING_DATE } from "@/data/company-facts";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import { MyCustomPatchesCaseStudyPreview as RedesignMyCustomPatchesCaseStudy } from "@/app/preview/work/mycustompatches/Design";
+import { MyCustomPatchesCaseStudyPreview as RedesignMyCustomPatchesCaseStudy } from "@/components/pages/work/mycustompatches/Design";
 
 export const metadata: Metadata = {
     // Metadata renders the same verified facts as the body. Do not type a metric
@@ -9,27 +9,27 @@ export const metadata: Metadata = {
     // src/data/case-study-facts.json and scripts/metrics_guard.py fails the build
     // if one reappears. Metadata is where the last drift survived longest,
     // because nobody re-reads a <title> after correcting the body.
-    title: { absolute: "MyCustomPatches Case Study: 200+ URLs Off WordPress in 22 Days | PandaCodeGen" },
-    description: "A decade on WordPress, migrated to custom Next.js in 22 days. 200+ URLs on 13 templates, zero downtime, and no ranking losses recorded in the 30 days after launch. Performance figures temporarily withdrawn pending reconciliation. Full scope record and method inside.",
+    title: { absolute: "MyCustomPatches Case Study: Off WordPress in About 22 Days | PandaCodeGen" },
+    description: "A decade on WordPress, then a custom Next.js build delivered in about 22 days. The project record covers 13 templates and zero downtime at cutover. See the scope and client review.",
     openGraph: {
-        title: "MyCustomPatches: 200+ URLs Off WordPress in 22 Days",
-        description: "A decade-old WordPress site rebuilt in custom Next.js in 22 days. 200+ URLs across 13 templates, zero downtime at cutover, and no ranking losses recorded in the 30 days after launch. Performance figures withdrawn pending reconciliation.",
+        title: "MyCustomPatches: Off WordPress in About 22 Days",
+        description: "A decade-old WordPress store rebuilt in custom Next.js. The project record covers about 22 days, 13 templates and zero downtime at cutover.",
         type: "article",
         url: "https://www.pandacodegen.com/work/mycustompatches",
         images: [ogImageForPath("/work/mycustompatches")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "MyCustomPatches: 200+ URLs Off WordPress in 22 Days",
-        description: "200+ URLs on 13 templates, zero downtime, and no ranking losses recorded in the 30 days after launch. Performance figures withdrawn pending reconciliation.",
+        title: "MyCustomPatches: Off WordPress in About 22 Days",
+        description: "A custom Next.js rebuild delivered in about 22 days, with 13 templates and zero downtime recorded at cutover.",
     },
     alternates: { canonical: "/work/mycustompatches" },
 };
 
 const pageFaqs: { question: string; answer: string }[] = [
     {
-        question: "How did you migrate 200+ WordPress pages without losing SEO rankings?",
-        answer: "We inventoried more than 200 URLs, mapped the old paths to the rebuilt pages and added redirects where paths changed. The project record reports no ranking losses in the 30 days of post-launch Search Console monitoring. That observation has a defined window; it is not a guarantee about future rankings.",
+        question: "How did you handle URLs and search visibility during the WordPress move?",
+        answer: "We inventoried the existing paths, mapped them to the rebuilt pages and added redirects where paths changed. The project record reports no ranking losses in the 30 days of post-launch Search Console monitoring. That observation has a defined window; it is not a guarantee about future rankings. An earlier URL-count claim has been withdrawn after an owner correction.",
     },
     {
         question: "What made the rebuilt site faster than the WordPress original?",
@@ -55,8 +55,8 @@ const caseStudySchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/work/mycustompatches#article",
-            "headline": "MyCustomPatches: 200+ URLs Off WordPress in 22 Days",
-            "description": "A decade-old WordPress ecommerce site migrated to a custom Next.js build in about 22 days: 200+ URLs across 13 distinct templates, zero downtime at cutover, and no rankings lost in the 30 days of Search Console monitoring after launch. Performance figures are withdrawn pending reconciliation; the old hosting-cost figure is retired.",
+            "headline": "MyCustomPatches: Off WordPress in About 22 Days",
+            "description": "A decade-old WordPress ecommerce site migrated to a custom Next.js build in about 22 days, with 13 distinct templates and zero downtime recorded at cutover. The earlier URL count was withdrawn after an owner correction.",
             "image": ogImageUrlForPath("/work/mycustompatches"),
             "datePublished": "2026-03-04T00:00:00Z",
             "dateModified": "2026-09-28T00:00:00Z",

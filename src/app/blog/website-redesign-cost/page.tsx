@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-30",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-redesign-cost")],
@@ -67,7 +67,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-04-30",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -111,7 +111,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-04-30",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -149,14 +149,14 @@ export default function WebsiteRedesignCostPage() {
                             design system, content work, implementation, validation and rollout rather than a broad
                             market average.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed August 1, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Reviewed October 8, 2026.</p>
                       </div>
                       <div data-article-hero-screen>
                         <BlogCoverFigure id="website-redesign-cost" />
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 30, 2026" readTime="10 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="website-redesign-cost" published="2026-04-30" readTime="15 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -398,8 +398,9 @@ export default function WebsiteRedesignCostPage() {
 
                     <BlogHeader id="billing">Fixed price vs hourly work</BlogHeader>
                     <BlogText>
-                        We quote redesigns fixed, at $1,500, $3,500 or $5,000 depending on scope, and price
-                        anything outside that scope through an approved change request. Fixed price works when
+                        {/* 8 Oct 2026: said "fixed, at $1,500, $3,500 or $5,000", which read as three set prices. Each tier is a starting price and Scale has no ceiling (company-facts.ts COMMERCIAL). */}
+                        We quote redesigns at a fixed price, with tiers starting at $1,500, $3,500 and $5,000 depending
+                        on scope, and price anything outside that scope through an approved change request. Fixed price works when
                         deliverables, assumptions and review boundaries are defined. Hourly or weekly work fits
                         discovery, uncertain legacy systems or client-directed changes. Neither model guarantees
                         quality on its own, so the question is which one matches how well-defined your project actually
@@ -414,7 +415,9 @@ export default function WebsiteRedesignCostPage() {
                         <Link href="/blog/website-developer-agency" className="text-cognac hover:underline">what an agency should own</Link>{" "}
                         lists the roles to check, and{" "}
                         <Link href="/blog/cheap-web-developer" className="text-cognac hover:underline">how to vet a low-cost developer</Link>{" "}
-                        covers the evidence to request when the quote is the deciding factor.
+                        covers the evidence to request when the quote is the deciding factor. To see those checks
+                        applied to named firms, read our{" "}
+                        <Link href="/blog/top-custom-web-development-agencies-usa-2026" className="text-cognac hover:underline">disclosed shortlist of US custom development agencies</Link>.
                     </BlogText>
 
                     <BlogHeader id="cost-of-delay">How to evaluate the cost of no redesign</BlogHeader>
@@ -511,7 +514,7 @@ export default function WebsiteRedesignCostPage() {
 
                     <BlogHeader id="pandacodegen">PandaCodeGen offer and terms</BlogHeader>
                     <BlogText>
-                        We start with a <Link href="/contact" className="text-cognac hover:underline">free fit audit</Link> and use it to
+                        We start with a <Link href="/free-audit" className="text-cognac hover:underline">free fit audit</Link> (share your website URL and email) and use it to
                         prepare a migration or redesign plan. Recent{" "}
                         <Link href="/work" className="text-cognac hover:underline">project pages</Link> show the scope behind each build. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to failure to
                         deliver the signed scope, not a preference change after work starts. Starter includes 15
@@ -527,7 +530,7 @@ export default function WebsiteRedesignCostPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

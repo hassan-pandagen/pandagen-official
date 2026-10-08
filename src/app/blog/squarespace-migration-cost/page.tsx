@@ -20,13 +20,21 @@ const postId = "squarespace-migration-cost";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Squarespace Migration Cost 2026: What Leaving Costs";
+// TITLE PILOT (4 Oct 2026). The <title>, og:title and twitter:title below are a
+// test page in the 3-page title pilot logged in
+// docs/research/seo-skill-pack-audit-2026-10-04/TITLE_PILOT.md. The headline in
+// the JSON-LD and blog.ts keep the old title on purpose: only the search title is
+// under test. Once the redesign deploys, leave this title, the description and
+// the body alone until the 28-day read. To revert, restore the old title from
+// the ledger.
+const pilotTitle = "Squarespace Migration Cost in 2026: Our Prices, From $1,500";
 const description =
     "What it costs to move OFF Squarespace, not onto it. Price the migration from a complete inventory of URLs, content, commerce, scheduling, members, forms, integrations, SEO controls, testing and operating needs.";
 
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title,
+    title: pilotTitle,
     description,
     alternates: { canonical: `/blog/${postId}` },
     robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
@@ -38,16 +46,16 @@ export const metadata: Metadata = {
         "Squarespace SEO migration",
     ],
     openGraph: {
-        title,
+        title: pilotTitle,
         description,
         type: "article",
         publishedTime: "2026-04-09",
-        modifiedTime: "2026-08-19T00:00:00-05:00",
+        modifiedTime: "2026-10-08T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/squarespace-migration-cost")],
     },
-    twitter: { card: "summary_large_image", title, description },
+    twitter: { card: "summary_large_image", title: pilotTitle, description },
 };
 
 const sources = [
@@ -64,6 +72,14 @@ const sources = [
         name: "Squarespace: transaction and processing fees",
         url: "https://support.squarespace.com/hc/en-us/articles/27853679334157-Transaction-fees-and-payment-processing-rates",
     },
+    {
+        name: "Squarespace: domain transfer pricing and billing",
+        url: "https://support.squarespace.com/hc/en-us/articles/34134026801549-Domain-transfer-pricing-and-billing",
+    },
+    {
+        name: "Squarespace: transfer a domain",
+        url: "https://domains.squarespace.com/transfer-a-domain",
+    },
 ];
 
 const articleSchema = {
@@ -76,7 +92,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/squarespace-migration-cost"),
             description,
             datePublished: "2026-04-09",
-            dateModified: "2026-08-19T00:00:00-05:00",
+            dateModified: "2026-10-08T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -163,7 +179,7 @@ export default function SquarespaceMigrationCostPage() {
                             the site afterwards. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Squarespace and Google documentation.
+                            Reviewed October 8, 2026 against current Squarespace and Google documentation.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -171,7 +187,7 @@ export default function SquarespaceMigrationCostPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 9, 2026" readTime="5 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="squarespace-migration-cost" published="2026-04-09" readTime="11 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">PandaCodeGen planning tiers</h2>
@@ -330,15 +346,20 @@ export default function SquarespaceMigrationCostPage() {
                         registration, which you&apos;ll purchase through Squarespace.&quot;</em> The two things usually
                         left out of that sentence when it is repeated: <strong>it is an industry rule, not a Squarespace
                         one</strong>, so it applies in whichever direction you move and to whichever registrar you land
-                        on — and <strong>you keep the time already left on your registration, added on top of the extra
+                        on, and <strong>you keep the time already left on your registration, added on top of the extra
                         year</strong>. So it is a year brought forward, not a year lost. Squarespace also notes that
                         regular rather than promotional rates apply.
                     </BlogText>
 
+                    {/* 8 Oct 2026: this paragraph used to say the "$20 to $70" range appeared only in AI
+                        answers and forum threads. Squarespace's own transfer page
+                        (domains.squarespace.com/transfer-a-domain) now states it, so the paragraph says so. */}
                     <BlogText>
-                        What we deliberately do not publish is a dollar figure. Squarespace&apos;s pricing page says only
-                        that the cost depends on the TLD and sends you to a live lookup; the &quot;$20 to $70&quot; range
-                        circulating in AI answers and forum threads is not stated on that page.{" "}
+                        What we deliberately do not publish is a dollar figure. Squarespace&apos;s help article on
+                        transfer pricing says only that the cost depends on the TLD and sends you to a live lookup. Its
+                        domain transfer page does give a range, $20 to $70 USD depending on the TLD, but that is what
+                        Squarespace charges when a domain moves in. When you leave, the extra year is bought from the
+                        registrar you&apos;re moving to, at its price.{" "}
                         <strong>Price your own TLD at the registrar you are moving to, on the day you move.</strong> A
                         .com and a .io are not the same line item, and a range copied from a summary is not a quote.
                     </BlogText>
@@ -456,7 +477,7 @@ export default function SquarespaceMigrationCostPage() {
                     </ul>
 
                     <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                    {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
+                    {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} showHeading={false} />}
                     <TopicUpLink postId={postId} />
 
                     <RelatedPosts currentPostId={postId} />

@@ -32,7 +32,7 @@ const schema = {
       description,
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       about: { "@id": "https://www.pandacodegen.com/#organization" },
-      dateModified: "2026-08-08",
+      dateModified: "2026-10-02",
       inLanguage: "en-US",
       breadcrumb: { "@id": canonicalUrl + "#breadcrumb" },
     },
@@ -64,17 +64,17 @@ export default function Page() {
           />
           <ReferenceIntro
             title="PandaCodeGen Pricing and Guarantees"
-            purpose="Published starting prices, payment structure, refund terms, the performance acceptance target and what transfers on handover. Every figure here is a published starting point, not a quote."
+            purpose="Published custom-build starting prices, individually scoped WordPress work, payment structure, refund terms, the performance acceptance target and handover. Starting prices are not quotes."
             verified={FACTS_VERIFIED}
           />
           <FactTable facts={COMMERCIAL} caption="PandaCodeGen commercial terms: starting prices, payment structure, refunds, performance acceptance and ownership." />
 
           <h2 className="mt-10 mb-3 text-2xl font-bold text-charcoal">What these numbers are and are not</h2>
           <p className="mb-4 leading-relaxed text-stone-700">
-            They are starting points for a defined scope, published so a buyer can tell before contacting
-            anyone whether the range is plausible for their project. They are not quotes. Discovery adds or
-            removes pages and features, and the accepted written scope controls the final price and
-            deliverables.
+            The Starter, Growth and Scale figures are starting points for custom website builds, not quotes
+            for every project. WordPress builds and focused improvements are priced to their own scope.
+            Discovery adds or removes pages and features, and the accepted written scope controls the final
+            price and deliverables.
           </p>
           <p className="mb-4 leading-relaxed text-stone-700">
             The 90+ performance target is a lab acceptance criterion recorded against named representative

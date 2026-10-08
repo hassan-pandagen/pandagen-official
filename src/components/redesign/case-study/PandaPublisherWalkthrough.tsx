@@ -94,7 +94,7 @@ export default function PandaPublisherWalkthrough() {
       slug="panda-publisher"
       projectName="Panda Publisher"
       eyebrow="An author-services site, shown as a concept."
-      heading={<>A hard-to-picture service,<br />made concrete.</>}
+      heading={<>A hard-to-picture service,{" "}<br />made <em>concrete.</em></>}
       lead={<>The <strong>cover library</strong>, the <strong>services</strong> and their limits, and the <strong>journey</strong> that ends at one form.</>}
       navAriaLabel="Explore the Panda Publisher build"
       chapters={chapters}

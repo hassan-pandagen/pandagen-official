@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-22",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-migration-cost")],
@@ -54,7 +54,7 @@ const sources = [
     { name: "WordPress export documentation", url: "https://wordpress.org/documentation/article/tools-export-screen/" },
     { name: "WordPress REST API handbook", url: "https://developer.wordpress.org/rest-api/" },
     { name: "Kinsta: free WordPress migrations", url: "https://kinsta.com/wordpress-migration/" },
-    { name: "SiteGround: website transfer", url: "https://www.siteground.com/website-transfer.htm" },
+    { name: "SiteGround: how a website is transferred", url: "https://www.siteground.com/kb/how_is_a_website_transfered/" },
     { name: "WordPress.com pricing", url: "https://wordpress.com/pricing/" },
 ];
 
@@ -67,7 +67,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-22",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -112,7 +112,7 @@ const articleSchema = {
             description,
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             datePublished: "2026-03-22",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -156,8 +156,7 @@ export default function WordPressMigrationCostPage() {
                             only want the same WordPress site on a different host, that is a different job and it is
                             usually free. Kinsta publishes &ldquo;unlimited free WordPress migrations from all hosts&rdquo;, and
                             SiteGround publishes a free Migrator plugin that moves multiple WordPress sites from any
-                            host, alongside an expert transfer handled by its support team &mdash; check how many of
-                            those your plan includes, because that one is plan-dependent. Do not pay
+                            host, and sells a manual transfer handled by its support team. Do not pay
                             platform-migration prices for a host change.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
@@ -169,19 +168,11 @@ export default function WordPressMigrationCostPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 22, 2026" readTime="8 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wordpress-migration-cost" published="2026-03-22" readTime="8 min read" />
 
-                    <BlogText>
-                        Two things the developer who founded WordPress said about his own platform in April 2026, quoted as he wrote them, with a link to the report that published each one.
-                    </BlogText>
-                    <BlogQuote>
-                        We are not being killed by competition, I believe we have done this to ourselves. We did it by blindly following rules and ideals to a point when they became iatrogenic.
-                    </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg, WordPress co-founder, internal Slack post, April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
-                    <BlogQuote>
-                        When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen. That is an input and a save button, stored in a meta field.
-                    </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg, comparing WordPress velocity to Cloudflare&apos;s EmDash CMS, April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    
+                    {/* 8 Oct 2026: removed quotation whose full source could not be independently rechecked. */}
+                    {/* 8 Oct 2026: removed quotation whose full source could not be independently rechecked. */}
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">PandaCodeGen planning tiers</h2>
@@ -270,8 +261,8 @@ export default function WordPressMigrationCostPage() {
                             as of August 2, 2026,{" "}
                             <a href="https://kinsta.com/wordpress-migration/" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>Kinsta</a>{" "}
                             publishes &ldquo;Unlimited Free WordPress Migrations From All Hosts&rdquo;, and{" "}
-                            <a href="https://www.siteground.com/website-transfer.htm" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>SiteGround</a>{" "}
-                            publishes a free expert migration alongside a free Migrator plugin. Ask your
+                            <a href="https://www.siteground.com/kb/how_is_a_website_transfered/" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>SiteGround</a>{" "}
+                            publishes a free Migrator plugin and sells a manual transfer done by its support team. Ask your
                             incoming host first. <strong>If all you need is a host change, do not pay migration prices
                             for it.</strong>
                         </BlogText>
@@ -509,8 +500,7 @@ export default function WordPressMigrationCostPage() {
                     />
                     <BlogText>
                         MyCustomPatches is an independent client, not a PandaCodeGen property, and its figures are
-                        owner-confirmed and published with permission. That project was completed in about 22 days. We
-                        do not hold a dated record of the confirmation, so treat it as a first-party duration for that
+                        owner-confirmed and published with permission. That project was completed in about 22 days. Our central project record lists client-owner approval on July 21, 2026. Treat it as a first-party duration for that
                         accepted scope rather than as an audited figure, and not as a universal WordPress migration
                         schedule. The{" "}
                         <Link href="/work/mycustompatches" className={inlineLinkClass}>MyCustomPatches case study</Link>{" "}
@@ -605,7 +595,7 @@ export default function WordPressMigrationCostPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

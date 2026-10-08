@@ -1,0 +1,57 @@
+[
+  {
+    "path": "/services/sanity-development",
+    "status": 200,
+    "h1": "Sanity CMS websites. An editor for your team.",
+    "canonical": "https://www.pandacodegen.com/services/sanity-development",
+    "schema": "Service",
+    "descriptionMatchesSocial": true
+  },
+  {
+    "path": "/services/supabase-development",
+    "status": 200,
+    "h1": "Supabase backends. Built around your workflow.",
+    "canonical": "https://www.pandacodegen.com/services/supabase-development",
+    "schema": "Service",
+    "descriptionMatchesSocial": true
+  },
+  {
+    "path": "/blog/sanity-vs-wordpress",
+    "status": 200,
+    "h1": "Sanity vs WordPress: Which Editor Fits Your Website?",
+    "canonical": "https://www.pandacodegen.com/blog/sanity-vs-wordpress",
+    "schema": "Article",
+    "descriptionMatchesSocial": true
+  },
+  {
+    "path": "/blog/sanity-vs-supabase",
+    "status": 200,
+    "h1": "Sanity vs Supabase: CMS, Backend or Both?",
+    "canonical": "https://www.pandacodegen.com/blog/sanity-vs-supabase",
+    "schema": "Article",
+    "descriptionMatchesSocial": true
+  },
+  {
+    "path": "/blog/single-source-product-catalog",
+    "status": 200,
+    "h1": "One Product Catalog for Navigation, Quotes and Sitemap",
+    "canonical": "https://www.pandacodegen.com/blog/single-source-product-catalog",
+    "schema": "Article",
+    "descriptionMatchesSocial": true
+  },
+  {
+    "path": "/resources/product-catalog-example/catalog.mjs",
+    "status": 200,
+    "bytesMatchSource": true
+  },
+  {
+    "path": "/resources/product-catalog-example/catalog.test.mjs",
+    "status": 200,
+    "bytesMatchSource": true
+  },
+  {
+    "path": "/resources/product-catalog-example/LICENSE.txt",
+    "status": 200,
+    "bytesMatchSource": true
+  }
+]

@@ -1,4 +1,5 @@
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
+import FaqRows from "@/components/ui/FaqRows";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Case-study FAQ in the redesign's style, 30 Sep 2026, added when the /work
@@ -22,14 +23,7 @@ export default function CaseStudyFaqs({ faqs }: { faqs: CaseStudyFaq[] }) {
         <h2 id="case-study-faq-title" className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
           Questions about this project.
         </h2>
-        <dl className="mt-8 border-t" style={{ borderColor: T.rule }}>
-          {faqs.map((f) => (
-            <div key={f.question} className="grid gap-2 border-b py-6 md:grid-cols-12 md:gap-8" style={{ borderColor: T.rule }}>
-              <dt className="font-semibold md:col-span-4" style={{ color: T.ink }}>{f.question}</dt>
-              <dd className="text-[15px] leading-[1.65] md:col-span-8" style={{ color: T.body }}>{f.answer}</dd>
-            </div>
-          ))}
-        </dl>
+        <FaqRows className="mt-8" faqs={faqs} />
       </div>
     </section>
   );

@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-22",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/gohighlevel-website-speed")],
@@ -66,6 +66,18 @@ const sources = [
         name: "HighLevel: How to Improve Funnel & Website Page Speed",
         url: "https://help.gohighlevel.com/support/solutions/articles/155000006268-how-to-improve-funnel-website-page-speed",
     },
+    {
+        name: "HighLevel: FAQs and basic troubleshooting for funnels and websites",
+        url: "https://help.gohighlevel.com/support/solutions/articles/155000004983-faqs-basic-troubleshooting-funnels-websites-webinars",
+    },
+    {
+        name: "HighLevel: hydration event in custom code",
+        url: "https://help.gohighlevel.com/support/solutions/articles/155000002421-hydration-event-in-custom-code-in-funnels",
+    },
+    {
+        name: "HighLevel: using custom fonts in funnels and websites",
+        url: "https://help.gohighlevel.com/support/solutions/articles/155000005918-using-custom-font-in-funnels-and-websites",
+    },
 ];
 
 const articleSchema = {
@@ -78,7 +90,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/gohighlevel-website-speed"),
             datePublished: "2026-03-22",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -93,8 +105,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "GoHighLevel performance",
             keywords: ["GoHighLevel site slow", "GoHighLevel PageSpeed", "why is my GoHighLevel funnel slow", "GoHighLevel Core Web Vitals", "speed up GoHighLevel website", "GoHighLevel Next.js hybrid"],
-            wordCount: 3390,
-            timeRequired: "PT17M",
+            wordCount: 4550,
+            timeRequired: "PT23M",
             inLanguage: "en-US",
             about: [
                 { "@type": "SoftwareApplication", name: "HighLevel", alternateName: "GoHighLevel", sameAs: "https://www.gohighlevel.com" },
@@ -123,7 +135,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath("/blog/gohighlevel-website-speed") },
             datePublished: "2026-03-22",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -169,7 +181,7 @@ export default function HighLevelSpeedGuide() {
                             instead of trusting a quoted range.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 3, 2026 against current Google, Chrome and HighLevel primary guidance.
+                            Reviewed August 3, 2026 against current Google, Chrome and HighLevel primary guidance. HighLevel&apos;s speed guidance rechecked October 4, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -180,7 +192,7 @@ export default function HighLevelSpeedGuide() {
                     <BlogAuthor
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
-                        date="March 22, 2026"
+                        postId="gohighlevel-website-speed" published="2026-03-22"
                         readTime="11 min read"
                         bio="Hassan is PandaCodeGen's co-founder and lead engineer. He runs repeatable performance diagnostics and builds hybrid frontends that keep HighLevel as the CRM while the public site is served as custom Next.js."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
@@ -195,7 +207,7 @@ export default function HighLevelSpeedGuide() {
                         <p className="mb-4 text-sm leading-relaxed text-stone-700">
                             Most of what makes a GoHighLevel page slow is your own content, and you can fix it without
                             leaving the builder. What you can&apos;t change is how the platform renders and delivers the
-                            page. Work the fixable half first, measure your own routes (not a quoted score range), and
+                            page. Work the fixable half first, measure your own routes against HighLevel&apos;s own published benchmark (above 80 on mobile, above 95 on desktop), and
                             only cost a frontend replacement once the causes left are the ones you don&apos;t control. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <ul className="space-y-3 text-sm leading-relaxed text-stone-700">
@@ -284,12 +296,17 @@ export default function HighLevelSpeedGuide() {
                         <Link href="/blog/how-to-achieve-100-pagespeed" className={sourceLinkClass}>what a PageSpeed score represents</Link>{" "}
                         covers why the lab number moves between runs.
                     </BlogText>
-                    <InsightBox variant="info" label="Why there is no universal HighLevel score range">
-                        We don&apos;t publish a typical score range for HighLevel sites. A number like that only means
-                        something with the sampled URLs, the test profile, the run count and the dates attached;
-                        without them it tells you nothing about your own funnel. Treat any range quoted without that
-                        method behind it, ours included, as marketing, not measurement. Test your own routes and
-                        compare them against themselves over time.
+                    {/* 4 Oct 2026: the owner chose to quote HighLevel's own published benchmark. It is
+                        HighLevel's figure, attributed and dated, not a measurement of ours. */}
+                    <InsightBox variant="info" label="What score should a GoHighLevel page get?">
+                        HighLevel&apos;s own troubleshooting guide says a well-optimized GoHighLevel page
+                        &ldquo;typically scores: Above 80 on mobile, Above 95 on desktop&rdquo;, and that this
+                        includes pages with tracking codes and high-resolution images (
+                        <a href="https://help.gohighlevel.com/support/solutions/articles/155000004983" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>HighLevel Support Portal</a>,
+                        page modified 25 September 2026, read 4 October 2026). Use it as the target to aim for. It
+                        is HighLevel&apos;s figure, not a measurement of ours, and it doesn&apos;t say which pages,
+                        test settings or how many runs sit behind it, so compare your own routes against it under
+                        the test profile below, three runs at a time.
                     </InsightBox>
 
                     <BlogHeader id="record-a-defensible-test-profile">Record a defensible test profile</BlogHeader>
@@ -313,7 +330,7 @@ export default function HighLevelSpeedGuide() {
                         Lazy loading doesn&apos;t make the rest of a site irrelevant; every important template and
                         journey needs its own test. If you&apos;re starting from the symptom and not the platform, our
                         general{" "}
-                        <Link href="/blog/why-is-my-website-loading-so-slow" className={sourceLinkClass}>slow-site diagnostic order</Link>{" "}
+                        <Link href="/blog/how-to-speed-up-your-website" className={sourceLinkClass}>slow-site diagnostic order</Link>{" "}
                         applies to any stack.
                     </BlogText>
 
@@ -366,7 +383,7 @@ export default function HighLevelSpeedGuide() {
                     />
                     <BlogText>
                         HighLevel&apos;s current website overview documents mobile editing, tracking code, custom CSS and
-                        external JavaScript behavior. Use the builder&apos;s current controls and preview behavior as
+                        site settings such as image optimization. Use the builder&apos;s current controls and preview behavior as
                         part of the investigation. A platform feature can help, but only the retest proves what changed
                         on the route. The fixes for most of these are the same on any builder, and we list
                         them in{" "}
@@ -389,21 +406,86 @@ export default function HighLevelSpeedGuide() {
                             "Retest forms, calendars, attribution and consent after every performance change.",
                         ]}
                     />
+                    <h3 id="speed-up-step-by-step" className="mt-10 mb-4 text-2xl font-bold text-charcoal">How to speed up a GoHighLevel website, step by step</h3>
+                    <div data-speakable="true">
+                        <BlogText>
+                            To speed up a GoHighLevel website, switch on HighLevel&apos;s two speed settings, then make
+                            the page itself lighter, and test the same page in PageSpeed Insights before and after each
+                            step. Those two settings are HighLevel&apos;s built-in speed tools. For testing, it points
+                            you to PageSpeed Insights and GTmetrix. The nine steps below come from HighLevel&apos;s{" "}
+                            <a href="https://help.gohighlevel.com/support/solutions/articles/155000006268-how-to-improve-funnel-website-page-speed" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>page speed guide</a>{" "}
+                            and its{" "}
+                            <a href="https://help.gohighlevel.com/support/solutions/articles/155000004983-faqs-basic-troubleshooting-funnels-websites-webinars" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>funnel troubleshooting FAQ</a>,
+                            both updated September 25, 2026 and read on October 4, 2026. The same FAQ says
+                            HighLevel&apos;s dev team &ldquo;does not provide debugging support for improving page speed
+                            directly&rdquo;, so the testing is yours to do.
+                        </BlogText>
+                    </div>
+                    <ol className="my-6 list-decimal space-y-3 pl-6 text-lg leading-relaxed text-stone-700">
+                        <li>
+                            Switch on Optimize JavaScript in your funnel or website settings. HighLevel says it delays
+                            the hydration of non-essential JavaScript and tracking codes, which improves Total Blocking
+                            Time. If you have custom code that must run as soon as the page loads, check it still fires:
+                            HighLevel&apos;s{" "}
+                            <a href="https://help.gohighlevel.com/support/solutions/articles/155000002421-hydration-event-in-custom-code-in-funnels" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>custom code guide</a>{" "}
+                            says the setting can hold hydration back until the visitor interacts with the page.
+                        </li>
+                        <li>
+                            Switch on Image optimization in the same settings. You don&apos;t need a lazy-loading script
+                            as well: HighLevel adds <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">loading=&quot;lazy&quot;</code> to
+                            image elements on funnels, websites, store pages and webinar previews whether Image
+                            optimization is on or off.
+                        </li>
+                        <li>
+                            Shrink the images above the fold before you upload them. HighLevel&apos;s FAQ puts the line
+                            at under 200 KB for an above-the-fold image, to help mobile LCP. Its guide says to resize
+                            images close to the size they display at, use JPG or WebP for photos and keep PNG for
+                            graphics that need transparency. For hero images we work to about 150 KB, and we check the
+                            file that shipped in the browser&apos;s Network panel.
+                        </li>
+                        <li>
+                            Go through your tracking code and custom code elements. HighLevel&apos;s FAQ says to look for
+                            external scripts or CSS loaded through either one, and for code elements that inject
+                            third-party widgets. Head and body tracking codes are injected in the browser, so they
+                            won&apos;t show up in view-source. Watch them load in the Network panel instead, and remove
+                            pixels for campaigns that have ended.
+                        </li>
+                        <li>
+                            Move heavy elements below the fold. HighLevel names forms, calendars, review widgets and
+                            maps, and recommends its native forms and surveys over third-party embeds because they load
+                            faster.
+                        </li>
+                        <li>
+                            Take out what the page doesn&apos;t use: hidden or duplicate sections, extra rows and
+                            columns, animations and widgets. Keep video backgrounds to short, small loops, and reuse
+                            Global Sections instead of duplicating large layouts across pages.
+                        </li>
+                        <li>
+                            Upload brand fonts as .woff2 and only in the weights you use. HighLevel&apos;s{" "}
+                            <a href="https://help.gohighlevel.com/support/solutions/articles/155000005918-using-custom-font-in-funnels-and-websites" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>custom font article</a>{" "}
+                            accepts .ttf, .otf, .woff and .woff2 files, treats each style such as Bold or Italic as its
+                            own option in the font list, and recommends removing unused fonts for faster load times.
+                        </li>
+                        <li>
+                            Serve the site on a custom domain with SSL, set up so visitors don&apos;t pass through extra
+                            redirects on the way in.
+                        </li>
+                        <li>
+                            Retest every funnel step on mobile and desktop, not just the first one. Each step is its own
+                            page with its own elements and scripts, so a fast opt-in page doesn&apos;t mean the booking step
+                            after it is fast. Check that forms, calendars and tracking still work after each
+                            change.
+                        </li>
+                    </ol>
                     <BlogText>
-                        Use HighLevel&apos;s own controls before reaching for workarounds. Its current support article,{" "}
-                        <a href="https://help.gohighlevel.com/support/solutions/articles/155000006268-how-to-improve-funnel-website-page-speed" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>How to Improve Funnel &amp; Website Page Speed</a>,
-                        documents settings and practices worth applying first (checked August 3, 2026):
+                        Part of the speed work sits with HighLevel. Its guide notes that the platform now trims the page
+                        data it sends, cutting the average HTML document by about 10%, with nothing for you to change. If
+                        you&apos;ve worked through all nine steps and a page still misses your target, what&apos;s left
+                        is how HighLevel renders and delivers it.{" "}
+                        <a href="#architecture" className={sourceLinkClass}>What you control on a HighLevel page</a>{" "}
+                        has the checks to run on your own page, and that&apos;s the point where keeping the CRM and
+                        replacing the frontend is worth costing.
                     </BlogText>
-                    <BlogList
-                        items={[
-                            "Enable Optimize Javascript and Image optimization in funnel settings. These are platform toggles, not third-party plugins, and they're the closest thing HighLevel gives you to a rendering control.",
-                            "Use native HighLevel forms instead of third-party embeds where the requirement allows it, since an embedded form loads another vendor's script on your critical path.",
-                            "Resize images before you upload them, not after, and use WebP or JPG for photographs and PNG only where transparency is needed. As a working target, get hero images under about 150 KB and everything else well below that; hitting the figure is less important than checking what you shipped.",
-                            "Reuse blocks with HighLevel's Global Sections instead of duplicating a header, footer or CTA across pages. Duplicated blocks are edited in several places and loaded as separate work.",
-                            "Keep the domain setup clean with a custom domain and SSL so requests aren't spending time on avoidable redirects.",
-                            "Remove unused sections and flatten layouts. HighLevel calls this out directly, because nested rows and columns cost render time even when nothing is visible.",
-                        ]}
-                    />
                     <BlogText>
                         Don&apos;t switch off features just to improve a lab score. A fast page with a broken form,
                         inaccessible booking flow, missing consent control or inaccurate measurement has failed the
@@ -521,7 +603,7 @@ export default function HighLevelSpeedGuide() {
                         ]}
                     />
                     <BlogText>
-                        PandaCodeGen builds score 90 or better on <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Google PageSpeed</Link> on phone and desktop, on the
+                        PandaCodeGen tests agreed pages against a 90+ handover target on <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Google PageSpeed</Link> on phone and desktop, on the
                         pages named in your quote, tested three times. That is a test-bench score. It does
                         not promise rankings, traffic, leads, citations, ad performance or revenue. For how a
                         move like this is scoped and budgeted, see the{" "}
@@ -555,7 +637,7 @@ export default function HighLevelSpeedGuide() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
                     <TopicUpLink postId={postId} />

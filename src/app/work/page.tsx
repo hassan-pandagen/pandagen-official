@@ -1,6 +1,6 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import { WorkPreview, workIndexItems } from "@/app/preview/work/WorkIndexDesign";
+import { WorkPreview, workIndexItems } from "@/components/pages/work/WorkIndexDesign";
 
 export const metadata: Metadata = {
     title: "Website, Ecommerce & Software Projects",

@@ -65,7 +65,9 @@ type Row = {
 // page, which describes the project with its status. This also keeps the
 // section's sentence true: every screenshot here is a live site we built.
 //
-// Saforne: recorded as a client (CaseStudyGrid.tsx). On 24 Sep saforne.com did
+// Saforne: an independent client, confirmed by the owners on 4 Oct 2026 (talks
+// about a possible acquisition are under way; if that happens, relabel it
+// founder-affiliated everywhere). On 24 Sep saforne.com did
 // not respond and the build at dtc-brand-alpha.vercel.app reads "Design preview
 // / not yet for sale", so it is labelled Preview and links to that build.
 //
@@ -98,7 +100,7 @@ const clientWork = rows.filter((r) => r.relationship !== "Demo");
 
 export default function WorkIndex() {
   return (
-    <section aria-labelledby="work-title" className="relative px-6 py-24 md:px-10 md:py-32" style={{ backgroundColor: T.paper }}>
+    <section aria-labelledby="work-title" className="relative px-6 py-16 md:px-10 md:py-20" style={{ backgroundColor: T.paper }}>
       <div className="mx-auto max-w-[1440px]">
         <div className="grid gap-8 lg:grid-cols-12">
           <h2

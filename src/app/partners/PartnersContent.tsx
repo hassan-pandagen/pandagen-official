@@ -1,17 +1,20 @@
 "use client";
 
 import { motion } from "@/components/ui/motion";
-import { ArrowRight, ShieldCheck, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PartnerModels from "@/components/partners/PartnerModels";
+import FaqRows from "@/components/ui/FaqRows";
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import hover from "./PartnersHover.module.css";
 
 // Lazy load: QuoteModal pulls in framer-motion (~37KB gzipped). Stays out of the
 // Partners page static bundle until a partner clicks "Send brief" / opens the modal.
 const QuoteModal = dynamic(() => import("@/components/ui/QuoteModal"), { ssr: false });
+const anton = { className: "font-anton-face" };
 
 const processSteps = [
   {
@@ -77,36 +80,31 @@ const partnerFaqs = [
 
 export default function PartnersContent() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <main className="bg-paper min-h-screen overflow-x-hidden relative">
-      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
+    <main data-page="partners" className={`bg-paper min-h-screen overflow-x-hidden relative text-charcoal ${hover.root}`}>
 
       <Header onOpenQuote={() => setIsQuoteModalOpen(true)} />
 
       {/* 1. HERO — empathetic anti-middleman positioning */}
-      <section className="relative pt-24 md:pt-40 pb-14 md:pb-20 px-6 bg-paper overflow-hidden">
-        <div className="absolute top-20 left-1/3 w-[500px] h-[500px] bg-stone-200/40 blur-[150px] rounded-full pointer-events-none" />
-
-        <div className="container mx-auto max-w-5xl relative z-10">
+      <section className="relative border-b border-stone-300 bg-paper px-6 pb-12 pt-28 md:pb-14 md:pt-40">
+        <div className="mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs mb-8"
+            className="mb-7 font-mono text-xs font-bold uppercase tracking-[0.18em] text-cognac"
           >
-            <Users className="w-3.5 h-3.5 text-cognac" />
-            <span className="text-[11px] font-bold text-stone-600 uppercase tracking-[0.22em]">What Your Current Dev Partner Won&apos;t Tell You</span>
+            For agencies / white-label delivery
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-[2.5rem] md:text-[4.5rem] font-bold text-charcoal leading-[1.05] tracking-[-0.025em] mb-8 md:mb-10"
+            className={`mb-8 leading-[0.95] tracking-tight ${anton.className} ${hover.heroTitle}`}
           >
-            White label web development.
-            <span className="block font-serif italic text-cognac">You handle clients. We stay invisible.</span>
+            <span className="block">White-label web development.</span>
+            <span className="block text-cognac">Your client. Your brand.</span>
           </motion.h1>
 
           <motion.p
@@ -125,7 +123,7 @@ export default function PartnersContent() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-stone-600 max-w-2xl mb-5 leading-[1.7] font-medium"
           >
-            You&apos;re paying an offshore dev shop $50/hr and still missing deadlines. Or you&apos;re juggling three freelancers who all ghost you mid-project. Your client blames YOU when it breaks. You eat the margin hit to fix it.
+            Keep the client relationship while we handle the build. You review the scope, schedule and work before anything goes to your client.
           </motion.p>
 
           <motion.p
@@ -134,7 +132,7 @@ export default function PartnersContent() {
             transition={{ delay: 0.25 }}
             className="text-lg md:text-xl text-stone-600 max-w-2xl mb-10 leading-[1.7] font-medium"
           >
-            We ship in 3 weeks. Your client thinks you did it. No account managers. No middle-men. You talk to the engineer writing the code. We stay invisible. Your brand. Your client. Your margin.
+            Start with one project. We agree confidentiality, responsibilities, handover and your commercial terms in writing before work starts.
           </motion.p>
 
           <motion.div
@@ -145,11 +143,11 @@ export default function PartnersContent() {
           >
             <button
               onClick={() => setIsQuoteModalOpen(true)}
-              className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all inline-flex items-center justify-center gap-2 hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 bg-charcoal px-8 py-4 font-bold text-white transition-colors hover:bg-cognac"
             >
               Apply for Partnership <ArrowRight className="w-5 h-5" />
             </button>
-            <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"book_a_partner_call",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:border-stone-400 transition-all inline-flex items-center justify-center gap-2">
+            <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"book_a_partner_call",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="inline-flex items-center justify-center gap-2 border border-charcoal px-8 py-4 font-bold text-charcoal transition-colors hover:bg-charcoal hover:text-white">
                 Book a Partner Call
             </button>
           </motion.div>
@@ -157,48 +155,33 @@ export default function PartnersContent() {
       </section>
 
       {/* 2. PROOF STRIP — real numbers */}
-      <section className="container mx-auto px-6 pb-14 md:pb-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { value: "3", label: "Founding agency partners", sub: "mutual NDAs signed" },
-              { value: "First 3", label: "White-label builds shipped", sub: "under partner brands" },
-              { value: "Founding-rate", label: "Partner pricing available", sub: "for early partners" },
-              { value: "3 weeks", label: "Avg build time", sub: "vs 8-12 typical" },
-            ].map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="text-center p-5 md:p-6 bg-white border border-stone-300 rounded-2xl shadow-md"
-              >
-                <p className="text-2xl md:text-3xl font-black text-charcoal tracking-tight leading-none">{stat.value}</p>
-                <p className="text-xs text-stone-600 font-semibold mt-2 leading-snug">{stat.label}</p>
-                <p className="text-[10px] text-stone-600 uppercase tracking-widest mt-1">{stat.sub}</p>
-              </motion.div>
-            ))}
-          </div>
-          <p className="text-center text-xs text-stone-600 mt-4 italic">Numbers as of July 2026. Honest, not inflated.</p>
-          <p className="text-center text-sm text-stone-600 mt-3">
-            The proof is public: <Link href="/work" className="text-cognac font-bold hover:underline underline-offset-2">see the builds in our work portfolio</Link>.
-          </p>
+      <section className="px-6 py-12 md:py-16">
+        <div className="mx-auto grid max-w-6xl border-t border-stone-400 md:grid-cols-3">
+          {[
+            { label: "01 / Start small", title: "One scoped pilot", body: "Test the working relationship on a single project before discussing repeat work." },
+            { label: "02 / Keep control", title: "Your client relationship", body: "The NDA, communication route and handover are agreed with your agency." },
+            { label: "03 / See the work", title: "Public project records", body: "Review completed work and the relationship behind each example." },
+          ].map((item) => (
+            <div key={item.title} className={`border-b border-stone-400 py-7 md:pr-10 ${hover.proofCard}`}>
+              <p className="font-mono text-xs uppercase tracking-[0.16em] text-cognac">{item.label}</p>
+              <h2 className={`mt-4 text-3xl leading-none ${anton.className}`}>{item.title}</h2>
+              <p className="mt-4 leading-7 text-stone-700">{item.body}</p>
+            </div>
+          ))}
+          <Link href="/work" className={`col-span-full mt-5 font-bold text-cognac underline underline-offset-4 ${hover.textAction}`}>Review the work ↗</Link>
         </div>
       </section>
 
       {/* 3. HOW THE WHITE-LABEL WORKS */}
-      <section className="py-12 md:py-20 px-6 border-y border-stone-200 bg-white">
-        <div className="container mx-auto max-w-3xl">
-          <div className="text-center mb-10 md:mb-14">
-            <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">The White-Label Flow</p>
-            <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-4 tracking-tight leading-tight">
-              White-label web development, four steps. <span className="font-serif italic text-cognac">Zero surprises.</span>
-            </h2>
-            <p className="text-stone-600 max-w-xl mx-auto">Your client never knows we exist. You keep the relationship, the brand, and the margin.</p>
+      <section className="border-y border-stone-300 bg-[#F5F4F0] px-6 py-12 md:py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-10 md:mb-14">
+            <p className="mb-3 font-mono text-xs uppercase tracking-[0.16em] text-cognac">The white-label flow</p>
+            <h2 className={`text-4xl leading-none md:text-6xl ${anton.className}`}><span className="block">Four steps from</span>{" "}<span className="block text-cognac">brief to handover.</span></h2>
+            <p className="mt-5 max-w-xl text-stone-700">Your agency keeps the client relationship and approves each stage of the work.</p>
           </div>
 
-          <div className="space-y-8">
+          <div className="border-t border-stone-400">
             {processSteps.map((item, i) => (
               <motion.div
                 key={i}
@@ -206,21 +189,11 @@ export default function PartnersContent() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="flex gap-6 items-start"
+                className={`grid gap-4 border-b border-stone-400 py-7 md:grid-cols-[4rem_minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-8 md:py-9 ${hover.processRow}`}
               >
-                <div className="flex flex-col items-center shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-stone-50 border border-stone-200 flex items-center justify-center text-cognac font-mono font-bold text-sm">
-                    {item.step}
-                  </div>
-                  {i < processSteps.length - 1 && <div className="w-px h-8 bg-stone-200 mt-2" />}
-                </div>
-                <div className="pb-2">
-                  <div className="flex items-center gap-3 mb-1 flex-wrap">
-                    <h3 className="text-lg font-bold text-charcoal">{item.title}</h3>
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-stone-50 border border-stone-200 text-stone-600">{item.duration}</span>
-                  </div>
-                  <p className="text-stone-600 text-base leading-relaxed">{item.desc}</p>
-                </div>
+                <span className="font-mono text-xs font-bold text-cognac">{item.step}</span>
+                <h3 className={`text-2xl leading-none md:text-3xl ${anton.className}`}>{item.title}</h3>
+                <p className="leading-7 text-stone-700">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -236,7 +209,12 @@ export default function PartnersContent() {
           A commission rate is an offer we control, not an outcome we predict, so
           it belongs in the same category as the published price tiers. The
           competitor hourly comparison PricingTiers also strips is NOT reinstated. */}
+      <section className="bg-paper px-6 py-12 md:py-16">
+        <div className="mx-auto max-w-6xl">
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-cognac">Choose how we work together</p>
+          <h2 className={`mt-4 mb-12 text-4xl leading-none md:text-6xl ${anton.className}`}><span className="block">One project or</span>{" "}<span className="block text-cognac">an ongoing partnership.</span></h2>
       <PartnerModels
+        rowClassName={hover.modelRow}
         models={[
           {
             name: "Referral Partner",
@@ -282,59 +260,39 @@ export default function PartnersContent() {
         ]}
         footnote="Every partnership includes a mutual NDA, full source-code handoff, and your agency's brand on the delivery. Post-launch support is 15 to 30 days depending on the client's tier. These are the terms we open with, not a quote: scope, price, timing, tests, ownership and remedies are set in the accepted written project terms for each project."
       />
+        </div>
+      </section>
+
+      <section className="border-y border-stone-300 bg-paper px-6 py-12 md:py-16" aria-labelledby="partner-editor">
+        <div className="mx-auto max-w-6xl">
+          <h2 id="partner-editor" className="text-3xl font-bold text-charcoal md:text-5xl">White-label websites with a Sanity editor</h2>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">The pilot can cover a custom website, Sanity content models, agreed preview and publishing behavior, and an editor walkthrough under your agency's brand. Send representative content and the tasks your client needs to perform; the quote names the templates, migration, training and account handover.</p>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-stone-700">Customer accounts, private portals and custom backend workflows receive a separate scope. We agree who owns the Sanity project, repository and hosting accounts, and who handles support after your client accepts the work.</p>
+          <div className="mt-6 flex flex-wrap gap-6"><Link className="font-semibold text-cognac underline underline-offset-4" href="/services/sanity-development">See the Sanity service and real editor</Link><Link className="font-semibold text-cognac underline underline-offset-4" href="/services/backend-development">Scope a backend or portal</Link></div>
+        </div>
+      </section>
 
       {/* 5. FAQ */}
-      <section className="py-12 md:py-20 px-6 bg-white border-y border-stone-200">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="mb-4 text-center text-3xl font-bold text-charcoal md:text-4xl">Partner Questions</h2>
-          <p className="text-stone-600 text-center mb-10 md:mb-12">The specific stuff agency owners ask before they sign.</p>
-
-          <div className="space-y-3">
-            {partnerFaqs.map((faq, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.04 }}
-              >
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  aria-expanded={openFaq === i}
-                  className="w-full text-left p-5 rounded-xl bg-white border border-stone-200 hover:border-stone-300 transition-all"
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <h3 className="text-charcoal font-semibold text-base">{faq.q}</h3>
-                    <div className={`w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center shrink-0 transition-transform ${openFaq === i ? "rotate-45" : ""}`}>
-                      <span className="text-charcoal text-sm font-bold">+</span>
-                    </div>
-                  </div>
-                  <p className={`text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4 ${openFaq === i ? "block" : "hidden"}`}>{faq.a}</p>
-                </button>
-              </motion.div>
-            ))}
-          </div>
+      <section className="bg-paper px-6 py-12 md:py-16">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-3xl font-bold text-charcoal md:text-5xl">Partner questions</h2>
+          <p className="mt-4 mb-10 text-stone-700 md:mb-12">The specific questions agency owners ask before they sign.</p>
+          <FaqRows faqs={partnerFaqs.map(({ q, a }) => ({ question: q, answer: a }))} />
         </div>
       </section>
 
       {/* 6. FINAL CTA */}
-      <section className="py-12 md:py-20 px-6">
-        <div className="container mx-auto max-w-4xl bg-linear-to-br from-charcoal to-stone-900 rounded-[3rem] p-10 md:p-14 text-center text-white relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-cognac/20 blur-[120px] rounded-full pointer-events-none" />
-          <div className="relative z-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-xs font-bold uppercase tracking-[0.22em] text-cognac mb-6">
-              <ShieldCheck className="w-4 h-4" /> NDA-First Partnership
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">
-              Keep your client. <span className="font-serif italic text-cognac">Keep your margin.</span>
-            </h2>
-            <p className="text-stone-300 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              Apply today, NDA signed within 24 hours, first project quote within 48. You keep running your agency. We stay invisible.
+      <section className="bg-charcoal px-6 py-16 text-white md:py-20">
+        <div className="mx-auto max-w-6xl">
+            <p className="mb-6 font-mono text-xs uppercase tracking-[0.16em] text-orange-300">Start with a conversation</p>
+            <h2 className={`max-w-[17ch] text-4xl leading-none md:text-7xl ${anton.className}`}>Keep the relationship. Build with us.</h2>
+            <p className="mb-8 mt-7 max-w-2xl text-lg leading-8 text-stone-300">
+              Tell us about the project. We can discuss the working arrangement, then put the scope and terms in writing.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col gap-4 sm:flex-row">
               <button
                 onClick={() => setIsQuoteModalOpen(true)}
-                className="px-8 py-4 bg-white text-charcoal font-bold rounded-full hover:bg-stone-100 transition-all inline-flex items-center justify-center gap-2"
+                className="inline-flex items-center justify-center gap-2 bg-white px-8 py-4 font-bold text-charcoal hover:bg-orange-300"
               >
                 Apply for Partnership <ArrowRight className="w-5 h-5" />
               </button>
@@ -342,19 +300,18 @@ export default function PartnersContent() {
                 data-cal-namespace="discovery"
                 data-cal-link="pandagen/discovery"
                 data-cal-config='{"layout":"month_view"}'
-                className="px-8 py-4 bg-transparent border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all inline-flex items-center justify-center gap-2"
+                className="inline-flex items-center justify-center gap-2 border border-stone-500 px-8 py-4 font-bold text-white hover:border-white"
               >
                 Book a Partner Call
               </button>
             </div>
-          </div>
         </div>
       </section>
 
       {/* What the signed partner agreement actually pins down. Kept from the
           July 2026 remediation pass — it sets expectations without replacing
           the commercial case above it. */}
-      <section className="px-6 py-16 md:py-24 bg-paper" aria-labelledby="partner-agreement">
+      <section className="px-6 py-12 md:py-16 bg-paper" aria-labelledby="partner-agreement">
         <div className="mx-auto max-w-5xl">
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-cognac">Before we start</p>
           <h2 id="partner-agreement" className="mt-4 text-3xl font-bold text-charcoal md:text-5xl">
@@ -363,7 +320,7 @@ export default function PartnersContent() {
           <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-600">
             Everything above describes how we normally work. What actually binds either side is the signed partner agreement, which covers:
           </p>
-          <ul className="mt-9 grid gap-4 md:grid-cols-2">
+          <ul className="mt-9 grid border-t border-stone-400 md:grid-cols-2 md:gap-x-10">
             {[
               "Confidentiality and permitted client contact",
               "Branding and white-label boundaries",
@@ -374,7 +331,7 @@ export default function PartnersContent() {
               "Capacity, response targets, dependencies, and holidays",
               "How it ends, what we keep, what we delete, and what carries on",
             ].map((item) => (
-              <li key={item} className="rounded-2xl border border-stone-200 bg-white p-4 leading-7 text-stone-700">
+              <li key={item} className={`border-b border-stone-400 py-4 leading-7 text-stone-700 ${hover.agreementRow}`}>
                 <span aria-hidden="true" className="mr-3 inline-block h-px w-5 translate-y-[-4px] bg-cognac/40" />
                 {item}
               </li>

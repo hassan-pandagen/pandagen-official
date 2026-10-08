@@ -12,7 +12,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogHighlight, BlogQuote, BlogText } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import { periods, platforms, source, latest, peak, first, fallFromPeak, groupShare, year } from "@/data/market-share";
+import { periods, platforms, source, latest, peak, first, fallFromPeak, groupShare, flatFor, year } from "@/data/market-share";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
@@ -27,9 +27,20 @@ const wp = { now: latest("WordPress"), top: peak("WordPress"), off: fallFromPeak
 const selfHostedLost = Number((groupShare("self-hosted", 0) - groupShare("self-hosted")).toFixed(1));
 const buildersGained = Number((groupShare("hosted-builder") - groupShare("hosted-builder", 0)).toFixed(1));
 
+// 8 Oct 2026: the newest column is a dated reading, so the prose names its month
+// instead of calling it "today", and Webflow's flat run is counted from the data.
+// The 2026-08 column read 1.2% for Webflow in only two readings (Jan and Aug 2026),
+// not the three the text claimed.
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const readingName = (period: string) => `${MONTHS[Number(period.slice(5, 7)) - 1]} ${year(period)}`;
+const COUNT_WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+const webflowFlat = flatFor("Webflow");
+const webflowFlatWord = COUNT_WORDS[webflowFlat] ?? String(webflowFlat);
+const nowReading = readingName(wp.now.period);
+
 const title = `CMS Market Share 2015 to 2026: WordPress Peaked in ${year(wp.top.period)}`;
 const description =
-    `WordPress reached ${wp.top.value}% in ${year(wp.top.period)} and is at ${wp.now.value}% today. ` +
+    `WordPress reached ${wp.top.value}% in ${year(wp.top.period)} and is at ${wp.now.value}% in the ${nowReading} reading. ` +
     `Twelve years of measured CMS market share, what moved where, and what the numbers cannot tell you.`;
 
 export const dynamic = "force-static";
@@ -52,7 +63,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-15",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/cms-market-share-2026")],
@@ -70,7 +81,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/cms-market-share-2026"),
             datePublished: "2026-08-15T00:00:00-05:00",
-            dateModified: "2026-08-19T00:00:00-05:00",
+            dateModified: "2026-10-08T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -138,7 +149,9 @@ const articleSchema = {
 };
 
 // The columns worth showing. The full series lives in market-share.json.
-const SHOWN = ["2015-01", "2018-01", "2021-01", "2024-01", "2026-08"];
+// 8 Oct 2026: the last column follows the newest reading in the JSON instead of
+// being typed, so appending a reading can't leave the table on an old one.
+const SHOWN = ["2015-01", "2018-01", "2021-01", "2024-01", periods[periods.length - 1]];
 const shownIdx = SHOWN.map((p) => periods.indexOf(p));
 
 export default function CmsMarketShare2026Page() {
@@ -163,10 +176,11 @@ export default function CmsMarketShare2026Page() {
                             <span className="italic text-cognac">WordPress peaked in {year(wp.top.period)}</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
+                            {/* 8 Oct 2026: "today" and "three readings" replaced with values read from the data. */}
                             WordPress reached {wp.top.value}% of measured sites in {year(wp.top.period)} and sits at{" "}
-                            {wp.now.value}% today, {wp.off} points below its own high. The share it lost did not go
+                            {wp.now.value}% in the {nowReading} reading, {wp.off} points below its own high. The share it lost did not go
                             where most people assume, and the platform most often described as the future has not moved
-                            in three readings. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
+                            in {webflowFlatWord} readings. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Figures read from the source table on {source.verifiedAt}. Method and limits are stated in
@@ -178,7 +192,7 @@ export default function CmsMarketShare2026Page() {
                       </div>
                     </header>
 
-                    <BlogAuthor
+                    <BlogAuthor postId="cms-market-share-2026" published="2026-08-15"
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
                         bio="Hassan migrates production websites off these platforms, and writes the engineering guides on this site."
@@ -214,7 +228,7 @@ export default function CmsMarketShare2026Page() {
                                             <td key={n} className="px-4 py-3 text-right tabular-nums text-stone-600">
                                                 {pl.series[i] === null ? (
                                                     <>
-                                                        <span aria-hidden="true">—</span>
+                                                        <span aria-hidden="true">-</span>
                                                         <span className="sr-only">not listed in the source for this year</span>
                                                     </>
                                                 ) : (
@@ -256,7 +270,7 @@ export default function CmsMarketShare2026Page() {
                     <BlogText>
                         WordPress spent that period taking share, not losing it: {first("WordPress").value}% in 2015 up
                         to {wp.top.value}% by {year(wp.top.period)}. It consolidated the self-hosted market first, and
-                        only then began to give ground. Its {wp.now.value}% today is its lowest reading since 2017,
+                        only then began to give ground. Its {wp.now.value}% in {nowReading} is its lowest reading since 2017,
                         which is a real decline, and it is also still more than three times the entire hosted-builder
                         category combined.
                     </BlogText>
@@ -267,12 +281,13 @@ export default function CmsMarketShare2026Page() {
                         declining incumbent with an enormous lead.
                     </BlogText>
 
-                    <BlogHeader>Webflow has not moved in three readings</BlogHeader>
+                    {/* 8 Oct 2026: the reading count comes from the data. It said "three" while the data held two. */}
+                    <BlogHeader>Webflow has not moved in {webflowFlatWord} readings</BlogHeader>
                     <BlogText>
                         This one is worth naming plainly because we sell migrations off <Link href="/services/webflow" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Webflow</Link> and the number does not
                         flatter that business. Webflow entered the table in {year(first("Webflow").period)} at{" "}
                         {first("Webflow").value}% and reached {latest("Webflow").value}%. It has now recorded the same
-                        figure in three consecutive readings.
+                        figure in {webflowFlatWord} consecutive readings.
                     </BlogText>
                     <BlogText>
                         For a platform that occupies as much space in design conversation as Webflow does, sitting at{" "}
@@ -406,12 +421,12 @@ export default function CmsMarketShare2026Page() {
                             migration they do not need.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                            Book a 30-minute review <ArrowRight className="h-4 w-4" />
+                            Book a 15-minute review <ArrowRight className="h-4 w-4" />
                         </CalModalButton>
                     </section>
 
                     <BlogHeader>Frequently asked questions</BlogHeader>
-                    <FAQAccordion faqs={postFAQs} />
+                    <FAQAccordion faqs={postFAQs} showHeading={false} />
 
                     <TopicUpLink postId={postId} />
 

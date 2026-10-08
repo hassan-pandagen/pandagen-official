@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         description: pageDescription,
         type: "article",
         publishedTime: "2026-06-14",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/custom-website-5000-whats-included")],
@@ -69,7 +69,7 @@ const articleSchema = {
             description: pageDescription,
             image: ogImageUrlForPath("/blog/custom-website-5000-whats-included"),
             datePublished: "2026-06-14",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -111,7 +111,7 @@ const articleSchema = {
             description: pageDescription,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-14",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -156,15 +156,15 @@ export default function CustomWebsite5000Page() {
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             An agency that bills by the hour can only sell you the hours a budget buys. PandaCodeGen
-                            quotes the site: a custom Next.js site of up to 7 pages for a small business is $1,500, an 8 to
-                            20 page site with a CMS and every old link forwarded is $3,500, and the Scale tier this guide
+                            quotes the site: a custom Next.js site of up to 7 pages for a small business starts at $1,500, an 8 to
+                            20 page site with a CMS and every old link forwarded starts at $3,500, and the Scale tier this guide
                             covers starts at $5,000, for more than 20 pages, a large catalogue, subscriptions or custom commerce logic, or more than one language. Every tier is
                             fixed for the written scope and you own the code at handover. Your signed statement of
                             work decides the pages, features, migration controls, tests, support, exclusions, and
                             remedy. There is no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Offer terms reviewed July 31, 2026. A signed proposal or SOW controls if it differs from this guide.
+                            Offer terms reviewed October 8, 2026. A signed proposal or SOW controls if it differs from this guide.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -175,8 +175,8 @@ export default function CustomWebsite5000Page() {
                     <BlogAuthor
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
-                        date="June 14, 2026"
-                        readTime="9 min read"
+                        postId="custom-website-5000-whats-included" published="2026-06-14"
+                        readTime="11 min read"
                         bio="Hassan leads PandaCodeGen's engineering work on scoped, search-sensitive migrations and custom builds."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
@@ -194,7 +194,8 @@ export default function CustomWebsite5000Page() {
                         />
                     </section>
 
-                    <BlogHeader>Why $5,000 is a range entry, not a promise</BlogHeader>
+                    {/* 8 Oct 2026: this heading said "a range entry", and the paragraph below said "the Scale range". Both were left over from the old Scale price band retired on 9 Sep 2026. Scale starts at $5,000 with no published ceiling. */}
+                    <BlogHeader>Why $5,000 is a starting price, not a promise</BlogHeader>
                     <BlogText>
                         Two websites with thirty URLs can be completely different projects. One may contain static
                         marketing pages and a simple form. The other may include products, customer accounts, checkout,
@@ -202,7 +203,7 @@ export default function CustomWebsite5000Page() {
                         useful, but templates, integrations, data, risk, and acceptance work usually matter more.
                     </BlogText>
                     <BlogText>
-                        PandaCodeGen uses the Scale range for larger migrations, commerce frontends, custom lead
+                        PandaCodeGen uses the Scale tier for larger migrations, commerce frontends, custom lead
                         journeys, and integration-heavy builds. A project can move below or above a planning tier after
                         discovery. We document the reason before onboarding so a buyer can compare the actual work,
                         not just the headline. The tiers themselves sit on our{" "}
@@ -212,8 +213,9 @@ export default function CustomWebsite5000Page() {
                     </BlogText>
 
                     <div className="my-10 grid gap-4 sm:grid-cols-3">
-                        <StatCard stat="$1,500" label="Starter" context="Small, controlled migration scope" />
-                        <StatCard stat="$3,500" label="Growth" context="Broader content and CMS scope" />
+                        {/* 8 Oct 2026: Starter and Growth showed flat prices. All three tiers are starting prices. */}
+                        <StatCard stat="From $1,500" label="Starter" context="Small, controlled migration scope" />
+                        <StatCard stat="From $3,500" label="Growth" context="Broader content and CMS scope" />
                         <StatCard stat="From $5,000" label="Scale" context="Larger or integration-heavy scope" />
                     </div>
 
@@ -236,8 +238,9 @@ export default function CustomWebsite5000Page() {
                         unnecessary, or they are about to build you six templates and charge by URL.
                     </BlogText>
 
+                    {/* 8 Oct 2026: said "a planning range", wording from the retired Scale price range. */}
                     <BlogQuote>
-                        The Scale tier is a planning range, not a fixed package. The signed statement of work decides what you actually get.
+                        The Scale tier is a starting price, not a fixed package. The signed statement of work decides what you actually get.
                     </BlogQuote>
 
                     <BlogHeader>What a Scale build normally contains</BlogHeader>
@@ -433,7 +436,9 @@ export default function CustomWebsite5000Page() {
                         <Link href="/blog/cheap-web-developer" className="text-cognac hover:underline font-medium">what a low quoted rate leaves out</Link>{" "}
                         and{" "}
                         <Link href="/blog/website-developer-agency" className="text-cognac hover:underline font-medium">how to assess a development agency</Link>{" "}
-                        expand on the same checklist.
+                        expand on the same checklist, and our{" "}
+                        <Link href="/blog/top-custom-web-development-agencies-usa-2026" className="text-cognac hover:underline font-medium">shortlist of US custom web development agencies</Link>{" "}
+                        shows it used on named firms.
                     </BlogText>
 
                     <BlogHeader>Which tier should you start with?</BlogHeader>

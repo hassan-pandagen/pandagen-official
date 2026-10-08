@@ -80,7 +80,7 @@ export default function PageContent() {
               See How It Works <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
-          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your store URL when you book. We run your checkout speed live, show you what the measurement does and does not establish, and give you a fixed quote. <span className="text-charcoal font-medium">Any size of store. There is no minimum project size.</span></p>
+          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">15-min call. Drop your store URL when you book. We run your checkout speed live, show you what the measurement does and does not establish, and give you a fixed quote. <span className="text-charcoal font-medium">Any size of store. There is no minimum project size.</span></p>
 
           {/* Trust line */}
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="text-xs text-stone-600 mt-4">
@@ -626,7 +626,7 @@ export default function PageContent() {
             </div>
             <div className="flex items-start gap-4">
               <Link href="/about/imran" className="shrink-0">
-                <Image src="/team/imran.png" alt="Imran" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
+                <Image src="/team/imran-editorial.png" alt="Imran" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>

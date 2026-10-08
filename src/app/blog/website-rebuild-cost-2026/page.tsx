@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-19",
-        modifiedTime: "2026-09-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-rebuild-cost-2026")],
@@ -65,7 +65,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/website-rebuild-cost-2026"),
             description,
             datePublished: "2026-04-19",
-            dateModified: "2026-09-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -143,22 +143,17 @@ export default function WebsiteRebuildCostPage() {
                             or content system. Price it as a coordinated strategy, design, engineering and migration
                             project, not as a universal market band.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed September 19, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Reviewed October 8, 2026.</p>
                       </div>
                       <div data-article-hero-screen>
                         <BlogCoverFigure id="website-rebuild-cost-2026" />
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 19, 2026" readTime="13 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="website-rebuild-cost-2026" published="2026-04-19" readTime="13 min read" />
 
-                    <BlogText>
-                        One voice worth hearing before any pricing table is the founder of WordPress, quoted word for word from his own post, with a link to the report that carried it.
-                    </BlogText>
-                    <BlogQuote>
-                        We are not being killed by competition, I believe we have done this to ourselves. When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen.
-                    </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg, WordPress co-founder, internal Slack post, April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    
+                    {/* 8 Oct 2026: removed quotation whose full source could not be independently rechecked. */}
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -311,7 +306,7 @@ export default function WebsiteRebuildCostPage() {
                             code, blog migration with every URL listed and a redirect map, a 90+ Lighthouse target on
                             mobile and desktop evidenced by three passing runs per agreed page, third-party costs listed
                             before approval, and 30 business days of support. <strong>Our $1,500 Starter is not that
-                            job</strong> — it is up to 7 pages, and comparing it to a 20-page agency rebuild
+                            job</strong>. It is up to 7 pages, and comparing it to a 20-page agency rebuild
                             is the same scope error this page warns about everywhere else.
                         </BlogText>
 
@@ -347,7 +342,9 @@ export default function WebsiteRebuildCostPage() {
                         <Link href="/blog/squarespace-migration-cost" className={linkClass}>Squarespace</Link>,{" "}
                         <Link href="/blog/wix-migration-cost" className={linkClass}>Wix</Link>. For stores,{" "}
                         <Link href="/blog/shopify-vs-custom-website" className={linkClass}>Shopify compared with a custom build</Link>{" "}
-                        covers what commerce continuity adds to the scope. Our{" "}
+                        covers what commerce continuity adds to the scope. If the site runs on GoHighLevel,{" "}
+                        <Link href="/blog/gohighlevel-keep-crm-replace-website" className={linkClass}>keeping the CRM and replacing only the website</Link>{" "}
+                        is a separate scope, and our hybrid builds start at $1,500. Our{" "}
                         <Link href="/services/wordpress-migration" className={linkClass}>WordPress migration service</Link>{" "}
                         page describes how we run the extraction and replacement steps in practice.
                     </BlogText>
@@ -436,20 +433,11 @@ export default function WebsiteRebuildCostPage() {
                         ]}
                     />
                     <BlogText>
-                        Two of those have a rough number attached that is worth budgeting against. Content work is
-                        commonly quoted somewhere in the region of <strong>$100 to $300 per page</strong> to rewrite or
-                        port existing copy, which is why a 30-page site and a 300-page site diverge on content long
-                        before they diverge on build. And <strong>ongoing maintenance is usually estimated at 15 to 20
-                        percent of the original build cost per year</strong>, covering hosting, security patching,
-                        dependency updates and small changes.
-                    </BlogText>
-                    <BlogText>
-                        Run that second one before you sign anything. A $30,000 build carrying 18 percent annual
-                        maintenance is roughly $5,400 a year, which is another $16,000 across three years, and it is
-                        the line most often left out of the comparison entirely. If you are weighing options over that
-                        horizon rather than at the point of purchase,{" "}
-                        <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className={linkClass}>the three-year cost comparison</Link>{" "}
-                        works the same arithmetic through in full.
+                        Obtain separate quotes for content and maintenance. Content effort depends on research,
+                        subject expertise, approvals and how much can be reused. Maintenance depends on integrations,
+                        support hours, response expectations and update ownership. Neither has a universal per-page
+                        rate or percentage of the original build price. Compare three-year totals using the same
+                        deliverables and explicit usage assumptions.
                     </BlogText>
 
                     <BlogHeader id="when-not-to-rebuild">When a rebuild does not make sense</BlogHeader>
@@ -490,7 +478,7 @@ export default function WebsiteRebuildCostPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

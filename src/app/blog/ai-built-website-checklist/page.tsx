@@ -158,7 +158,7 @@ export default function AiBuiltWebsiteChecklistPage() {
                         what those checks cover on your site, and whether the enquiry, booking or purchase your
                         customer started actually completed.
                     </p>
-                    <BlogAuthor date="Sep 17, 2026" readTime="14 min read"
+                    <BlogAuthor postId="ai-built-website-checklist" published="2026-09-17" readTime="14 min read"
                         bio="Hassan builds websites, online stores and custom software at PandaCodeGen. We sell development services; this guide includes the checks you can complete yourself without hiring anyone."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
                       </div>
@@ -228,6 +228,7 @@ export default function AiBuiltWebsiteChecklistPage() {
                         <li>The intended inbox receives it, and the responsible person can reply to the test address.</li>
                         <li>The customer receives the confirmation or auto-reply, if your form sends one.</li>
                     </ol>
+                    <BlogText>If the CRM is GoHighLevel and the site lives somewhere else, <Link href="/blog/gohighlevel-keep-crm-replace-website" className={linkClass}>our guide to keeping GoHighLevel behind a separate website</Link> covers how that hand-off is wired and the ways it fails quietly.</BlogText>
                     <BlogText>Email status needs interpretation. Resend distinguishes a sending request from delivery to the recipient&apos;s mail server. Neither status proves that a person saw the message. Search all mail rather than the inbox alone, including spam and any promotions or updates tab, and check the customer-side address for the auto-reply as well as your own. <a href="https://resend.com/docs/webhooks/event-types" className={linkClass}>Resend&apos;s event definitions</a></BlogText>
                     <BlogText>If the message is missing or lands in spam, check the sending provider&apos;s delivery details and domain-verification status. Ask your provider or administrator to verify the SPF and DKIM setup required for your sending domain or subdomain, using that provider&apos;s instructions. <a href="https://knowledge.workspace.google.com/admin/support/troubleshooting/troubleshoot-gmail-not-getting-contact-form-messages" className={linkClass}>Google Workspace contact form troubleshooting</a> <a href="https://resend.com/docs/add-a-domain" className={linkClass}>Resend domain verification</a> For Google Workspace recipients, an administrator can also inspect Email Log Search. Correct authentication addresses one class of problem; it does not guarantee inbox placement.</BlogText>
                     <BlogText><strong>Pass:</strong> you can trace the test to the person or system meant to handle it. Save the reference, time and delivery result. If you only saw a success screen, delivery remains unverified. Where a provider hides logs, record the inbox result and ask support about the missing stage.</BlogText>

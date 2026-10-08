@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-05",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-plugins-destroy-speed")],
@@ -53,7 +53,8 @@ export const metadata: Metadata = {
 const sources = [
     { name: "WordPress Site Health", url: "https://wordpress.org/documentation/article/site-health-screen/" },
     { name: "WordPress debugging", url: "https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/" },
-    { name: "WordPress plugin dependencies", url: "https://developer.wordpress.org/plugins/wordpress-org/common-issues/#wordpress-plugin-dependencies" },
+    // 8 Oct 2026: the old #wordpress-plugin-dependencies anchor no longer exists; the Plugin Dependencies note now sits under "Changing active plugins".
+    { name: "WordPress plugin dependencies", url: "https://developer.wordpress.org/plugins/wordpress-org/common-issues/#changing-active-plugins" },
     { name: "WordPress performance resources", url: "https://make.wordpress.org/performance/handbook/" },
 ];
 
@@ -67,7 +68,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-plugins-destroy-speed"),
             description,
             datePublished: "2026-02-05",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -144,7 +145,7 @@ export default function WordPressPluginPerformancePage() {
                             queries, remote calls, background jobs or cache bypasses on the affected journey.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed against current WordPress and Google guidance on July 24, 2026.
+                            Reviewed against current WordPress and Google guidance on October 8, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -152,7 +153,7 @@ export default function WordPressPluginPerformancePage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 5, 2026" readTime="6 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wordpress-plugins-destroy-speed" published="2026-02-05" readTime="12 min read" />
 
                     <BlogText>
                         Two WordPress developers put the database problem more bluntly than we would, in a thread from April 2026. Their words are unchanged and each one links to the original comment.
@@ -204,7 +205,7 @@ export default function WordPressPluginPerformancePage() {
                     </div>
                     <BlogText>
                         Plugins cost you more than speed. In April 2026, Patchstack published analyses of two supply-chain
-                        compromises reaching WordPress sites through plugin update channels &mdash;{" "}
+                        compromises reaching WordPress sites through plugin update channels:{" "}
                         <a href="https://patchstack.com/articles/critical-supply-chain-compromise-in-smart-slider-3-pro-full-malware-analysis/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">one affecting a commercial slider plugin</a>{" "}
                         and{" "}
                         <a href="https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">one affecting a portfolio of more than twenty</a>.
@@ -247,6 +248,13 @@ export default function WordPressPluginPerformancePage() {
                             </tbody>
                         </table>
                     </div>
+
+                    <BlogText>
+                        The lifecycle row is your security exposure as well. A plugin nobody maintains is a patch that
+                        may never come, and{" "}
+                        <Link href="/blog/wordpress-plugin-security-2026" className="text-cognac hover:underline">how one 2026 plugin vulnerability was exploited and patched</Link>{" "}
+                        shows what that gap costs.
+                    </BlogText>
 
                     <BlogQuote>
                         A plugin count is not a performance score. One plugin doing real damage matters more than ten sitting idle.
@@ -309,7 +317,7 @@ export default function WordPressPluginPerformancePage() {
                     />
                     <BlogText>
                         <a href="https://wordpress.org/plugins/query-monitor/" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Query Monitor</a>{" "}
-                        is the practical instrument for the server side of this, read August 3, 2026. It reports the database
+                        is the practical instrument for the server side of this, read October 8, 2026. It reports the database
                         queries fired during a single request with the component responsible for each, the hooks that
                         ran, HTTP API calls made during the request, and the scripts and styles enqueued.{" "}
                         <strong>The panel that answers the question directly is Queries → Queries by Component:</strong>{" "}
@@ -527,7 +535,7 @@ export default function WordPressPluginPerformancePage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

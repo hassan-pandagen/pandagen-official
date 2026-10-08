@@ -1,7 +1,9 @@
 "use client";
 
+import PlatformPortabilityCover from "@/components/blog/PlatformPortabilityCover";
 import { ArrowRight, Filter } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -82,6 +84,15 @@ function CardMeta({ article, parents }: { article: BlogPostMeta; parents: Parent
   );
 }
 
+function BlogCover({ article, sizes }: { article: BlogPostMeta; sizes: string }) {
+  if (article.id === "website-portability") return <PlatformPortabilityCover />;
+  return (
+    <div className="relative h-full min-h-44 w-full bg-stone-100">
+      <Image src={`/blog-covers/${article.id}.webp?v=20261001`} alt={`Blog cover for ${article.title}`} fill unoptimized sizes={sizes} className="object-cover" />
+    </div>
+  );
+}
+
 // Interactive filter + article list, wrapped in Suspense because it calls useSearchParams()
 function BlogArticlesSection({ articles, parents }: { articles: BlogPostMeta[]; parents: ParentMap }) {
   const router = useRouter();
@@ -149,28 +160,7 @@ function BlogArticlesSection({ articles, parents }: { articles: BlogPostMeta[]; 
             {/* Hero: full width and compact */}
             <Link href={`/blog/${heroArticle.id}`} className="group block">
               <div className="relative rounded-[2.5rem] overflow-hidden border border-stone-200 bg-white grid md:grid-cols-2 hover:border-stone-300 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <div
-                  className="relative overflow-hidden flex flex-col justify-center p-8 sm:p-10 min-h-[220px] border-b md:border-b-0 md:border-r"
-                  style={{ backgroundColor: heroDisplay.bgTint, borderColor: heroDisplay.border }}
-                >
-                  <div
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 w-fit"
-                    style={{ backgroundColor: `${heroDisplay.statColor}18`, color: heroDisplay.statColor, border: `1px solid ${heroDisplay.border}` }}
-                  >
-                    Featured
-                  </div>
-                  <div className="text-5xl md:text-6xl font-black leading-none break-words" style={{ color: heroDisplay.statColor }}>
-                    {heroDisplay.stat}
-                  </div>
-                  <div className="text-xs font-bold uppercase tracking-widest mt-3" style={{ color: heroDisplay.statColor }}>
-                    {heroDisplay.label}
-                  </div>
-                  <div className="absolute right-0 top-0 h-full w-1/2 opacity-[0.06] pointer-events-none overflow-hidden">
-                    <svg aria-hidden="true" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                      <path d="M0 100 L100 0 L100 100 Z" style={{ fill: heroDisplay.statColor }} />
-                    </svg>
-                  </div>
-                </div>
+                <BlogCover article={heroArticle} sizes="(min-width: 768px) 50vw, 100vw" />
                 <div className="p-8 sm:p-10 flex flex-col justify-center">
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-4">
                     <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: heroDisplay.statColor }}>{heroArticle.category}</span>
@@ -198,22 +188,7 @@ function BlogArticlesSection({ articles, parents }: { articles: BlogPostMeta[]; 
                   return (
                     <Link key={article.id} href={`/blog/${article.id}`} className="group block h-full">
                       <div className="relative rounded-4xl overflow-hidden border border-stone-200 bg-white grid grid-cols-1 sm:grid-cols-[160px_1fr] hover:border-stone-300 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 h-full">
-                        <div
-                          className="relative overflow-hidden flex flex-col justify-center p-7 border-b sm:border-b-0 sm:border-r"
-                          style={{ backgroundColor: sd.bgTint, borderColor: sd.border }}
-                        >
-                          <div className="text-2xl md:text-3xl font-black leading-none break-words" style={{ color: sd.statColor }}>
-                            {sd.stat}
-                          </div>
-                          <div className="text-[10px] font-bold uppercase tracking-wider mt-2" style={{ color: sd.statColor }}>
-                            {sd.label}
-                          </div>
-                          <div className="absolute right-0 top-0 h-full w-1/2 opacity-[0.06] pointer-events-none overflow-hidden">
-                            <svg aria-hidden="true" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                              <path d="M0 100 L100 0 L100 100 Z" style={{ fill: sd.statColor }} />
-                            </svg>
-                          </div>
-                        </div>
+                        <BlogCover article={article} sizes="(min-width: 640px) 160px, 100vw" />
                         <div className="p-7 flex flex-col justify-center">
                           <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-3">
                             <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: sd.statColor }}>{article.category}</span>
@@ -252,41 +227,8 @@ function BlogArticlesSection({ articles, parents }: { articles: BlogPostMeta[]; 
                 href={`/blog/${article.id}`}
                 className="group bg-white border border-stone-200 rounded-2xl overflow-hidden hover:border-stone-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
               >
-                {/* Light-mode data header with tinted background and colored stat */}
-                <div
-                  className="p-6 relative overflow-hidden shrink-0"
-                  style={{
-                    backgroundColor: display.bgTint,
-                    borderBottom: `1px solid ${display.border}`,
-                  }}
-                >
-                  {/* Category label */}
-                  <div className="flex justify-between items-start mb-5">
-                    <span
-                      className="text-xs font-bold uppercase tracking-widest"
-                      style={{ color: display.statColor }}
-                    >
-                      {article.category}
-                    </span>
-                  </div>
-
-                  {/* Big stat */}
-                  <div className="text-4xl font-black leading-none break-words" style={{ color: display.statColor }}>
-                    {display.stat}
-                  </div>
-                  <div
-                    className="text-xs font-bold uppercase tracking-wider mt-2"
-                    style={{ color: display.statColor }}
-                  >
-                    {display.label}
-                  </div>
-
-                  {/* Decorative triangle */}
-                  <div className="absolute right-0 top-0 h-full w-1/2 opacity-[0.06] pointer-events-none overflow-hidden">
-                    <svg aria-hidden="true" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                      <path d="M0 100 L100 0 L100 100 Z" style={{ fill: display.statColor }} />
-                    </svg>
-                  </div>
+                <div className="relative aspect-[8/5] overflow-hidden">
+                  <BlogCover article={article} sizes="(min-width: 768px) 33vw, 100vw" />
                 </div>
 
                 {/* Card body */}

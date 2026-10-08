@@ -69,7 +69,7 @@ export default function MyCustomPatchesWalkthrough() {
       slug="mycustompatches"
       projectName="MyCustomPatches"
       eyebrow="One storefront, one template, one process."
-      heading={<>A store built on one template,<br />backed by a real process.</>}
+      heading={<>A store built on one <em>template,</em>{" "}<br />backed by a real process.</>}
       lead={<>The <strong>storefront</strong> customers browse, the <strong>product template</strong> that runs every category page, and the <strong>order process</strong> behind each purchase.</>}
       navAriaLabel="Explore the MyCustomPatches build"
       chapters={chapters}

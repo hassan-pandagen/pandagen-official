@@ -1,25 +1,18 @@
 "use client";
 
 import type { CSSProperties, ReactNode } from "react";
-import { hasConsent } from "@/components/consent/ConsentProvider";
 
-// "Chat with our experts". If the visitor has already allowed live chat, this
-// opens the human chat (Tawk.to) exactly as ServicesHub does. If they have not,
-// it opens the founders' enquiry form instead of the cookie settings dialog:
-// the owner found a settings panel a confusing answer to "chat" (24 Sep 2026).
-// Chat still never loads without consent. Deliberately NOT the AI assistant:
-// the label says experts, and a bot is not one.
+// "Chat with our experts". Opens the chat panel (7 Oct 2026, replacing the
+// Tawk.to widget). When Hassan is online the panel offers to chat with him
+// directly; when he isn't, it offers a call or a message, and the assistant
+// can answer general questions in the meantime.
 export default function ChatExpertsButton({ className, style, children }: { className?: string; style?: CSSProperties; children: ReactNode }) {
   return (
     <button
       type="button"
       className={className}
       style={style}
-      onClick={() => {
-        const openChat = (window as { __openChat?: () => void }).__openChat;
-        if (hasConsent("functional") && openChat) openChat();
-        else window.dispatchEvent(new Event("open-quote-modal"));
-      }}
+      onClick={() => window.dispatchEvent(new Event("open-assistant"))}
     >
       {children}
     </button>

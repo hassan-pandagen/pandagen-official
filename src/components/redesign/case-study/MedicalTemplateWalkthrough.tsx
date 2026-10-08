@@ -73,7 +73,7 @@ export default function MedicalTemplateWalkthrough() {
       slug="medical-template"
       projectName="Medical Template"
       eyebrow="A practice website, shown with fictional content."
-      heading={<>What a clinic site<br />could look like.</>}
+      heading={<>What a clinic site{" "}<br /><em>could look like.</em></>}
       lead={<>The <strong>homepage</strong> a patient lands on, and the <strong>procedure pages</strong> behind it.</>}
       navAriaLabel="Explore the Medical Template build"
       chapters={chapters}

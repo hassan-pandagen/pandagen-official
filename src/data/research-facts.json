@@ -1,5 +1,29 @@
 {
   "findings": {
+    "almanac-2025-cms-cwv": {
+      "study": "Web Almanac 2025, CMS chapter",
+      "publisher": "HTTP Archive",
+      "value": "Wix 74%, WordPress 45%",
+      "statement": "74% of Wix sites met all three Core Web Vitals on mobile in the 2025 Web Almanac, against 45% of WordPress sites, and the same chapter measured Wix's median mobile JavaScript at 1,634 KB, the highest of the platforms it compared",
+      "note": "Favourable to Wix on Core Web Vitals and unfavourable on JavaScript weight. Publish both halves together.",
+      "method": "HTTP Archive's July 2025 crawl, with Core Web Vitals from the Chrome UX Report for June 2025. A site passes when LCP, INP and CLS are all good at the 75th percentile on mobile.",
+      "limitation": "Association, not causation. Sites on each platform differ in size, age and content, and a platform average says nothing about any one site.",
+      "publishedYear": "2025",
+      "verifiedAt": "2026-10-04",
+      "source": "https://almanac.httparchive.org/en/2025/cms"
+    },
+    "cwv-tech-report-2026-08-wix": {
+      "study": "HTTP Archive Core Web Vitals Technology Report, August 2026",
+      "publisher": "HTTP Archive",
+      "value": "Wix 81.2%, WordPress 48.7%",
+      "statement": "In August 2026, 81.2% of Wix origins in the Chrome UX Report (154,240 of 189,924) had good Core Web Vitals on mobile, against 48.7% of WordPress origins (1,341,493 of 2,752,367)",
+      "note": "The percentages are our arithmetic from the counts the report's public API returns. Do not mix them with the Web Almanac figures in one comparison: the two count different sets of sites.",
+      "method": "Read from the report's public API (cdn.httparchive.org/v1/cwv, geo and rank set to all) on 4 Oct 2026. Good means LCP, INP and CLS all pass at the 75th percentile for the origin.",
+      "limitation": "Covers only origins with enough Chrome traffic to appear in the Chrome UX Report. Association, not causation.",
+      "publishedYear": "2026",
+      "verifiedAt": "2026-10-04",
+      "source": "https://httparchive.org/reports/techreport/tech?tech=Wix"
+    },
     "wcag-failure-rate-2026": {
       "study": "The WebAIM Million 2026",
       "publisher": "WebAIM, Institute for Disability Research, Policy and Practice, Utah State University",
@@ -9,7 +33,7 @@
       "method": "Automated evaluation with the WAVE stand-alone API against the rendered DOM after scripting and styles were applied. Sample: 1,000,000 home pages, tested February 2026.",
       "limitation": "Automated testing detects a subset of WCAG failures. A page with no detected errors is not necessarily conformant.",
       "publishedYear": "2026",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-10-08",
       "source": "https://webaim.org/projects/million/"
     },
     "errors-per-page-2026": {
@@ -20,7 +44,7 @@
       "method": "Same sample and tooling as the conformance figure. 1,000,000 home pages, February 2026.",
       "limitation": "Counts detected errors, not user impact. One error can affect many users and many errors can affect none.",
       "publishedYear": "2026",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-10-08",
       "source": "https://webaim.org/projects/million/"
     },
     "cms-errors-2026": {
@@ -32,7 +56,7 @@
       "method": "CMS detected per home page, errors averaged within each group. 1,000,000 home page sample, February 2026.",
       "limitation": "Association, not causation. CMS choice correlates with site age, budget and builder skill, none of which were controlled for.",
       "publishedYear": "2026",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-10-08",
       "source": "https://webaim.org/projects/million/"
     },
     "framework-errors-2026": {
@@ -44,7 +68,7 @@
       "method": "Framework detected per home page, errors averaged within each group. 1,000,000 home page sample, February 2026.",
       "limitation": "Association, not causation, and the sample is home pages only.",
       "publishedYear": "2026",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-10-08",
       "source": "https://webaim.org/projects/million/"
     },
     "ecommerce-errors-2026": {
@@ -55,7 +79,7 @@
       "method": "Platform detected per home page, errors averaged within each group. 1,000,000 home page sample, February 2026.",
       "limitation": "Association, not causation. Ecommerce home pages are more complex than the sample average, which alone raises error counts.",
       "publishedYear": "2026",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-10-08",
       "source": "https://webaim.org/projects/million/"
     },
     "top-failure-types-2026": {
@@ -67,11 +91,11 @@
       "method": "Failure types counted across the 1,000,000 home page sample, February 2026.",
       "limitation": "Automated detection. Contrast and missing alt text are reliably machine-detectable; many other failure types are not.",
       "publishedYear": "2026",
-      "verifiedAt": "2026-08-13",
+      "verifiedAt": "2026-10-08",
       "source": "https://webaim.org/projects/million/"
     },
     "ada-federal-filings-fy2025": {
-      "study": "Federal Judicial Caseload Statistics",
+      "study": "Judicial Business 2025, Table C-2",
       "publisher": "Administrative Office of the United States Courts",
       "value": "9,718",
       "statement": "Federal district courts recorded 9,718 civil filings under the nature-of-suit code ADA-Other in the twelve months ending 30 September 2025, up from 9,030",
@@ -79,19 +103,20 @@
       "method": "Case counts by nature-of-suit code, twelve months ending 30 September 2025.",
       "limitation": "ADA-Other is a broad code. It is not a count of web accessibility lawsuits specifically.",
       "publishedYear": "2025",
-      "verifiedAt": "2026-08-13",
-      "source": "https://www.uscourts.gov/statistics-reports"
+      "verifiedAt": "2026-10-08",
+      "source": "https://www.uscourts.gov/data-news/data-tables/2025/09/30/judicial-business/c-2"
     },
     "nextjs-adoption-2026": {
       "study": "Usage statistics and market share of Next.js",
       "publisher": "W3Techs, Q-Success",
-      "value": "3.2% of all websites",
-      "statement": "Next.js is used by 4.2% of websites whose JavaScript library is known, which is 3.2% of all websites",
+      "value": "3.5% of all websites",
+      "statement": "Next.js is used by 4.6% of websites whose JavaScript library is known, which is 3.5% of all websites",
       "note": "Cite this WITH the Sanity figure, never alone. The asymmetry is the point: the framework is mainstream and the CMS beside it is not.",
-      "method": "Detection by signature across W3Techs' survey of the top 10 million sites. The 4.2% denominator is sites with an identified JavaScript library; the 3.2% denominator is all surveyed sites.",
+      "method": "Detection by signature across W3Techs' survey of the top 10 million sites. The 4.6% denominator is sites with an identified JavaScript library; the 3.5% denominator is all surveyed sites.",
       "limitation": "Detection by signature, so sites that strip their fingerprint are absent. Share of existing sites is not share of new builds.",
       "publishedYear": "2026",
-      "verifiedAt": "2026-08-17",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 90,
       "source": "https://w3techs.com/technologies/details/js-nextjs"
     },
     "sanity-adoption-2026": {
@@ -103,7 +128,8 @@
       "method": "Detection by signature across W3Techs' survey of the top 10 million sites, among sites with an identified CMS.",
       "limitation": "Below the publisher's reporting threshold, so no exact value or trend is available. Headless CMSs are also harder to fingerprint than server-rendered ones, which may understate them.",
       "publishedYear": "2026",
-      "verifiedAt": "2026-08-17",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 90,
       "source": "https://w3techs.com/technologies/details/cm-sanity"
     }
   }

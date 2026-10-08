@@ -65,7 +65,7 @@ export default function PandaPatchesWalkthrough() {
       slug="panda"
       projectName="Panda Patches"
       eyebrow="One business. Three connected parts."
-      heading={<>Your customers shop.<br />Your team keeps things moving.</>}
+      heading={<>Your customers <em>shop.</em>{" "}<br />Your team keeps things <em>moving.</em></>}
       lead={<>The <strong>storefront</strong> customers see, the <strong>content editor</strong> your team controls, and the <strong>operations system</strong> behind each order.</>}
       navAriaLabel="Explore the Panda Patches build"
       chapters={chapters}

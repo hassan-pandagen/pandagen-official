@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { ogImageForPath } from "@/lib/seo/og";
-import { NorthDeckGroupCaseStudyPreview as RedesignNorthDeckGroupCaseStudy } from "@/app/preview/work/northdeck-group/Design";
+import { NorthDeckGroupCaseStudyPreview as RedesignNorthDeckGroupCaseStudy } from "@/components/pages/work/northdeck-group/Design";
 
 // 30 Sep 2026: new live route, from the redesign built as
 // /preview/work/northdeck-group. An independent client (the owners' own
 // statement); facts come from the project's README, see the preview file.
-// No case-study-facts.json entry yet, so the page carries its own
-// disclosure; add an entry once the owners want it in /ai-info and llms.txt.
+// 4 Oct 2026: added to case-study-facts.json (owners confirmed an independent
+// client; their review is still pending), so the build-time disclosure check
+// now covers it. The page still renders its own copy of the same sentence.
 
 const title = "NorthDeck Group: a Website for Security Systems and Back-Office Services";
 const description =

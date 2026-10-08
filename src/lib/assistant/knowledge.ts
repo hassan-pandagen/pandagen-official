@@ -29,7 +29,8 @@ import "server-only";
 import { createHash } from "node:crypto";
 import { buildLlmsTxt } from "@/data/llms-txt";
 import { pricingFaqs } from "@/data/pricing-faqs";
-import { serviceFaqs } from "@/data/service-faqs";
+import { previewFaqs, previewServiceFaqs } from "@/components/pages/services/preview-faqs";
+import { migrationFaqs } from "@/data/wordpress-migration-faqs";
 import { blogPosts } from "@/data/blog";
 import { PROJECTS } from "@/data/company-facts";
 import { allCaseStudySlugs, caseStudy, verifiedMetrics } from "@/data/case-study-facts";
@@ -99,7 +100,11 @@ function faqPassages(): Passage[] {
   pricingFaqs.forEach((f, i) =>
     out.push({ id: `pricing-${i}`, title: f.q, text: `${f.q}\n${f.a}`, url: `${BASE}/pricing` }),
   );
-  for (const [service, faqs] of Object.entries(serviceFaqs)) {
+  const currentServiceFaqs = {
+    ...Object.fromEntries(Object.keys(previewFaqs).map(slug => [slug, previewServiceFaqs(slug)])),
+    "wordpress-migration": migrationFaqs(),
+  };
+  for (const [service, faqs] of Object.entries(currentServiceFaqs)) {
     faqs.forEach((f, i) =>
       out.push({ id: `svc-${service}-${i}`, title: f.q, text: `${f.q}\n${f.a}`, url: `${BASE}/services/${service}` }),
     );
@@ -282,18 +287,29 @@ const PLATFORMS: [RegExp, string][] = [
   [/squarespace/i, "squarespace"],
   [/gohighlevel|high ?level|\bghl\b/i, "gohighlevel"],
   [/\b(apps?|software|portal|crm|dashboard|internal tools?)\b/i, "custom-engineering"],
-  [/wordpress|\bwp\b|elementor|divi/i, "wordpress-migration"],
 ];
 
 function platformsIn(query: string): string[] {
-  return PLATFORMS.filter(([re]) => re.test(query)).map(([, service]) => service);
+  const services = PLATFORMS.filter(([re]) => re.test(query)).map(([, service]) => service);
+  if (/wordpress|\bwp\b|elementor|divi/i.test(query)) {
+    services.push(/migrat|move (away|from)|leav|next\.?js|headless/i.test(query) ? "wordpress-migration" : "wordpress");
+  }
+  return services;
 }
 
-const COST = /\b(costs?|prices?|pricing|how much|budget|afford|expensive|cheap|quotes?|rates?|fees?)\b|\$/i;
+// "packages" and "retainer" added 3 Oct 2026: "Do you have monthly packages?"
+// counted as not asking about cost, so the answer couldn't name the AI SEO price.
+const COST = /\b(costs?|prices?|pricing|how much|budget|afford|expensive|cheap|quotes?|rates?|fees?|packages?|retainers?)\b|\$/i;
 const STORE = /\b(stores?|shops?|e-?commerce|products?|catalog(ue)?s?|skus?|woocommerce|shopify)\b/i;
 const PRODUCT_COUNT = /\b\d{2,}\s*(products?|items?|skus?)\b/i;
 
 const TOPICS: Topic[] = [
+  {
+    name: "WordPress choice",
+    ask: (q) => /wordpress|\bwp\b|elementor|divi/i.test(q),
+    pin: (p) => p.id.startsWith("svc-wordpress-") && /^will you build on wordpress/i.test(p.title),
+    probe: "Can you build me a simple WordPress site?",
+  },
   {
     name: "payment",
     ask: (q) => /\b(pay|paying|paid|payments?|deposits?|instal+ments?|up ?front|split|financ\w*|invoices?)\b/i.test(q),
@@ -307,14 +323,12 @@ const TOPICS: Topic[] = [
       /\b(how long|how quickly|how soon|how fast can|timelines?|turnaround|weeks?|months?|deadline|go live|launch (by|date))\b/i.test(q),
     expand: "how long take weeks",
     pin: (p, q) => {
-      if (!p.id.startsWith("svc-") || !/^how long/i.test(p.title)) return false;
-      // With no platform named, Squarespace's answer carries the general range
-      // ("two to four weeks for most sites, 1 to 2 weeks up to 7 pages") and
-      // WooCommerce's or Webflow's the per-tier ranges. The rules tell the
-      // model not to name a platform the visitor did not mention.
       const named = platformsIn(q);
-      const want = named.length ? named : ["squarespace", STORE.test(q) ? "woocommerce" : "webflow"];
-      return want.some((s) => p.id.startsWith(`svc-${s}-`));
+      // General planning ranges live in the commercial facts. A named
+      // platform's visible timeline answer takes priority where one exists.
+      if (!named.length) return /commercial terms/i.test(p.title);
+      return p.id.startsWith("svc-") && /^how long/i.test(p.title) &&
+        named.some((s) => p.url === `${BASE}/services/${s}`);
     },
     probe: "How long does a website take?",
   },
@@ -323,7 +337,9 @@ const TOPICS: Topic[] = [
     ask: (q) =>
       /\b(portfolio|examples?|case stud(y|ies)|past (work|projects?|clients?)|previous (work|projects?|clients?)|your (work|projects?|clients?)|work (you'?ve|you have)? ?done|(sites?|websites?|stores?) you('ve| have)? built|who have you (built|worked)|show me|samples?|references?|testimonials?|reviews?)\b/i.test(
         q,
-      ),
+      ) ||
+      // "Do you have an ecommerce client I can talk to?" (3 Oct 2026 persona test)
+      /\b((\w+ )?clients? (i|we) (can|could) (talk|speak)|(talk|speak) (to|with) (a |an |one of )?(your )?(\w+ )?(clients?|customers?)|(do you have|have you had) (any |an? )?(\w+ )?clients?)\b/i.test(q),
     pin: (p, q) =>
       /^project records$/i.test(p.title) ||
       p.id.startsWith("work-") ||
@@ -334,8 +350,43 @@ const TOPICS: Topic[] = [
     name: "platform pricing",
     ask: (q) => (COST.test(q) || PRODUCT_COUNT.test(q)) && platformsIn(q).length > 0,
     pin: (p, q) =>
-      p.id.startsWith("svc-") && /^how much/i.test(p.title) && platformsIn(q).some((s) => p.id.startsWith(`svc-${s}-`)),
+      p.id.startsWith("svc-") && /cost|pricing/i.test(p.title) && platformsIn(q).some((s) => p.url === `${BASE}/services/${s}`),
     probe: "How much does a WooCommerce migration cost?",
+  },
+  // 3 Oct 2026: "Can you cut my Shopify app bill?" and "How long would a
+  // headless Shopify build take?" both got "we don't have that detail" while
+  // the app-costs and headless articles sat unused, so they are pinned.
+  {
+    name: "Shopify apps",
+    ask: (q) => (/shopify/i.test(q) && /\b(apps?|subscriptions?|bill|fees)\b/i.test(q)) || /\bapps? (bill|costs?|creep|fees)\b/i.test(q),
+    pin: (p) =>
+      p.id === "blog-shopify-app-costs-real-monthly-bill" ||
+      (p.id.startsWith("blog-shopify-app-costs-real-monthly-bill-") &&
+        /^(What Shopify apps can I replace|What is Shopify app creep|When does a custom Shopify storefront)/i.test(p.text)),
+    probe: "Can you cut my Shopify app bill?",
+  },
+  {
+    name: "headless Shopify",
+    ask: (q) => /\b(headless|hydrogen|storefront api)\b/i.test(q) && !/wordpress|\bwp\b/i.test(q),
+    pin: (p) =>
+      /^Does a headless Shopify store replace Shopify checkout/i.test(p.title) ||
+      p.id === "blog-shopify-headless" ||
+      (p.id.startsWith("blog-shopify-headless-") && /^(Is headless Shopify worth|Can I still use Shopify apps)/i.test(p.text)),
+    probe: "Can you build a headless Shopify store?",
+  },
+  // 7 Oct 2026: "how can i have a new website" matched blog passages on the
+  // words "new" and "website" and got a vague answer with no steps. Questions
+  // about how to start, or how working with us goes, now always get the FAQs
+  // that describe it: what happens before the quote, accepting it, paying.
+  {
+    name: "getting started",
+    ask: (q) =>
+      /\b(how (can|do|would|should) (i|we) (get|have|start|begin|order|buy|hire|work with)|get(ting)? started|where (do|should) (i|we) (start|begin)|how (does|do) (it|this|you|working with you) work|(what'?s|what is|whats) the (process|first step|next step)|next steps?|your process|how to (start|begin|get a|hire)|(i|we) (want|need|would like|'?d like) (a |an )?(new )?(website|site|web ?site|online store|store|shop))\b/i.test(q),
+    expand: "what happens before you quote written quote",
+    pin: (p) =>
+      p.id.startsWith("pricing-") &&
+      /^(what happens before you quote|do i need a long contract|when do i pay|what support is included)/i.test(p.title),
+    probe: "How can I have a new website?",
   },
   {
     name: "editing",

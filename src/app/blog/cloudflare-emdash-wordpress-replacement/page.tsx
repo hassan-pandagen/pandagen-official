@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         description: pageDescription,
         type: "article",
         publishedTime: "2026-04-04",
-        modifiedTime: "2026-10-04T00:00:00-05:00",
+        modifiedTime: "2026-10-08T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement",
         images: [ogImageForPath("/blog/cloudflare-emdash-wordpress-replacement")],
@@ -80,7 +80,7 @@ const articleSchema = {
             "description": pageDescription,
             "image": ogImageUrlForPath("/blog/cloudflare-emdash-wordpress-replacement"),
             "datePublished": "2026-04-04T00:00:00-05:00",
-            "dateModified": "2026-10-04T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -123,6 +123,11 @@ const articleSchema = {
                 "cssSelector": ["h1", "h2", "[data-speakable='true']"],
             },
             "citation": [
+                {
+                    "@type": "CreativeWork",
+                    "name": "EmDash 1.0 (the project's own announcement)",
+                    "url": "https://emdashcms.com/blog/emdash-1-0",
+                },
                 {
                     "@type": "CreativeWork",
                     "name": "Cloudflare: Introducing EmDash",
@@ -198,7 +203,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/cloudflare-emdash-wordpress-replacement") },
             "datePublished": "2026-04-04T00:00:00-05:00",
-            "dateModified": "2026-10-04T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#breadcrumb" },
             "inLanguage": "en-US",
         },
@@ -242,15 +247,15 @@ export default function CloudflareEmDashPage() {
                         </h1>
 
                         <p className="mb-6 text-xl leading-relaxed text-stone-600">
-                            Cloudflare calls EmDash the spiritual successor to WordPress. When we first wrote this guide in April it was a beta preview. It isn&apos;t anymore: EmDash 1.0 shipped on {v("emdash-1-0-release-date")}, and Cloudflare says it is &quot;ready to power a production website&quot;. Version {v("emdash-current-version")} followed on 1 October. Stable software and a mature ecosystem are different things, though. The new plugin registry listed {v("emdash-registry-plugin-count")} entries on 4 October, and EmDash runs only inside Astro, so it is not an option for a Next.js site. Here is how to compare EmDash, WordPress and a custom rebuild on the evidence. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
+                            Cloudflare calls EmDash the spiritual successor to WordPress. When we first wrote this guide in April it was a beta preview. It isn&apos;t anymore: EmDash 1.0 shipped on {v("emdash-1-0-release-date")}, and Cloudflare says it is &quot;ready to power a production website&quot;. Version 1.1 followed on 1 October and version {v("emdash-current-version")} on 6 October. Stable software and a mature ecosystem are different things, though. The new plugin registry listed {v("emdash-registry-plugin-count")} entries on 4 October, and EmDash runs only inside Astro, so it is not an option for a Next.js site. Here is how to compare EmDash, WordPress and a custom rebuild on the evidence. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
 
                         <BlogAuthor
-                            date="Apr 4, 2026"
+                            postId="cloudflare-emdash-wordpress-replacement" published="2026-04-04"
                             readTime="19 min read"
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
-                        <p className="mt-2 text-xs text-stone-500">Updated October 4, 2026 for EmDash 1.0. Release, repository and registry figures were read from npm, GitHub&apos;s public API and the EmDash plugin registry that day, and anyone can repeat the check.</p>
+                        <p className="mt-2 text-xs text-stone-500">Updated October 8, 2026 for EmDash 1.2. Release figures were read from npm that day; repository and registry figures from GitHub&apos;s public API and the EmDash plugin registry on October 4. Anyone can repeat the check.</p>
                         </div>
                         <div data-article-hero-screen>
                             <BlogCoverFigure id="cloudflare-emdash-wordpress-replacement" />
@@ -278,7 +283,7 @@ export default function CloudflareEmDashPage() {
                             <a href="https://blog.cloudflare.com/emdash-cms-plugin-registry/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
                                 EmDash 1.0
                             </a>{" "}
-                            and called it <BlogHighlight>&quot;a stable, free, and open source CMS built on Astro&quot;</BlogHighlight>. The release notes add the promise that matters most to anyone building on it: from 1.0, breaking changes ship only in a new major version. One loose end is worth knowing about. The status section of the repository&apos;s README still said &quot;beta preview&quot; when we read it on October 3, so go by the release notes, not the README.
+                            and called it <BlogHighlight>&quot;a stable, free, and open source CMS built on Astro&quot;</BlogHighlight>. The release notes add the promise that matters most to anyone building on it: from 1.0, breaking changes ship only in a new major version. The repository&apos;s README now says the same: the core packages are stable, while first-party plugins and plugin tooling are still on 0.x and can change between minor releases.
                         </BlogText>
 
                         <BlogText>
@@ -286,7 +291,7 @@ export default function CloudflareEmDashPage() {
                             <a href="https://github.com/emdash-cms/emdash" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
                                 official EmDash repository
                             </a>
-                            , it is a full-stack TypeScript CMS built on Astro. It has an admin panel, custom content types, rich-text editing, drafts, revisions, scheduled publishing, media management, authentication, roles, a REST API, search, starter templates, a plugin API, an MCP server, and WordPress import. Version 1.1 added a publishing calendar, HTML and embed blocks that run in sandboxed iframes, and Microsoft Entra ID sign-in.
+                            , it is a full-stack TypeScript CMS built on Astro. It has an admin panel, custom content types, rich-text editing, drafts, revisions, scheduled publishing, media management, authentication, roles, a REST API, search, starter templates, a plugin API, an MCP server, and WordPress import. Version 1.1 added a publishing calendar, HTML and embed blocks that run in sandboxed iframes, and Microsoft Entra ID sign-in. Version 1.2, on 6 October, added a redesigned editor, video blocks and a tool for moving a site to a new domain.
                         </BlogText>
 
                         <BlogQuote>
@@ -305,8 +310,9 @@ export default function CloudflareEmDashPage() {
                             The billing model is the part a WordPress owner should look at hardest, because it is the one
                             that changes the monthly number rather than the feature list. Workers spins up an isolate when
                             a request arrives, scales back to zero when traffic stops, and{" "}
-                            <BlogHighlight>bills for CPU time</BlogHighlight> rather than for a server that runs whether
-                            anyone visits or not. On a site with uneven traffic that is a genuinely different cost shape
+                            <BlogHighlight>bills for requests and CPU time</BlogHighlight> rather than for a server that
+                            runs whether anyone visits or not. The Workers Paid plan has a $5 monthly minimum, which
+                            includes 10 million requests and 30 million CPU milliseconds. On a site with uneven traffic that is a genuinely different cost shape
                             from a VPS. It is a shape, though, not a discount: usage pricing rewards a quiet site and
                             charges more for inefficient code, so the saving depends on what you run, not on the platform
                             you picked. New EmDash projects deploy on the Workers free plan. Turning on sandboxed plugins
@@ -327,7 +333,7 @@ export default function CloudflareEmDashPage() {
                         <div data-speakable="true">
                             <BlogText>
                                 No, and the announcement date is the only reason to wonder. Cloudflare published EmDash on
-                                April 1, 2026, and the project&apos;s own 1.0 announcement admits that &quot;a lot of people
+                                April 1, 2026, and the project&apos;s own <a href="https://emdashcms.com/blog/emdash-1-0" className="underline underline-offset-2">1.0 announcement</a> admits that &quot;a lot of people
                                 thought it wasn&apos;t real&quot;. Here is the check anyone can repeat. Read from GitHub&apos;s public API on
                                 October 4, 2026, six months after the announcement, the{" "}
                                 <BlogHighlight>emdash-cms/emdash</BlogHighlight> repository was created on April 1, 2026,
@@ -346,7 +352,7 @@ export default function CloudflareEmDashPage() {
                                 emdash-cms/wp-emdash
                             </a>
                             , the WordPress-side transition plugins, last pushed July 6, 2026 and licensed GPL-3.0 rather
-                            than MIT because a WordPress plugin has to be, and{" "}
+                            than MIT, in line with the GPL licensing WordPress plugins normally use, and{" "}
                             <a href="https://github.com/emdash-cms/templates" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
                                 emdash-cms/templates
                             </a>
@@ -357,9 +363,9 @@ export default function CloudflareEmDashPage() {
                         <InsightBox variant="info" label="What the version numbers say">
                             The 1.0 release is tagged <code>emdash@1.0.1</code> and was published on{" "}
                             {v("emdash-1-0-release-date")}; <code>emdash@{v("emdash-current-version")}</code> followed
-                            on 1 October. The core packages (emdash, admin, auth, blocks and the Cloudflare adapter) are
-                            all on 1.1.0, while some side packages are still 0.x, including the Node.js sandbox runner,{" "}
-                            <code>@emdash-cms/sandbox-workerd@0.9.2</code>. One trap: npm also lists an{" "}
+                            on 6 October. The core packages (emdash, admin, auth, blocks and the Cloudflare adapter) are
+                            all on 1.2.0, while some side packages are still 0.x, including the Node.js sandbox runner,{" "}
+                            <code>@emdash-cms/sandbox-workerd@0.9.3</code>. One trap: npm also lists an{" "}
                             <code>emdash@1.0.0</code> from 27 April 2026 that was later deprecated. It isn&apos;t the 1.0
                             release, so date the 1.0 from the GitHub release, not from the version number.
                         </InsightBox>
@@ -375,7 +381,8 @@ export default function CloudflareEmDashPage() {
                             <a href="https://patchstack.com/whitepaper/state-of-wordpress-security-in-2025/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
                                 2025 Patchstack security report
                             </a>
-                            . That report says 96% of recorded WordPress vulnerabilities in its 2024 ecosystem dataset were found in plugins. This is not the same as saying 96% of WordPress sites are compromised, or that every installed plugin is vulnerable. The defensible conclusion is narrower: third-party extensions are a major part of the WordPress attack surface and require disciplined inventory, updates, access control, testing, and removal when they are no longer needed.
+                            . That report says 96% of recorded WordPress vulnerabilities in its 2024 ecosystem dataset were found in plugins. This is not the same as saying 96% of WordPress sites are compromised, or that every installed plugin is vulnerable. The defensible conclusion is narrower: third-party extensions are a major part of the WordPress attack surface and require disciplined inventory, updates, access control, testing, and removal when they are no longer needed. For how one real plugin flaw played out in 2026, from the public exploit to the patch, see{" "}
+                            <Link href="/blog/wordpress-plugin-security-2026" className={sourceLinkClass}>our WordPress plugin security write-up</Link>.
                         </BlogText>
 
                         <BlogText>
@@ -387,7 +394,7 @@ export default function CloudflareEmDashPage() {
                         </InsightBox>
 
                         <BlogText>
-                            Since 1.0 the sandbox isn&apos;t Cloudflare-only. On Node.js, EmDash starts workerd, the open-source Workers runtime, as a separate process and runs each plugin as an isolated service inside it, with the same manifests and permission-gated APIs. Each plugin gets its own private storage but no access to the site&apos;s content, users, secrets, filesystem or network. The two runtimes don&apos;t enforce the same limits, though. According to the{" "}
+                            Since late May 2026 the sandbox hasn&apos;t been Cloudflare-only. On Node.js, EmDash starts workerd, the open-source Workers runtime, as a separate process and runs each plugin as an isolated service inside it, with the same manifests and permission-gated APIs. Each plugin gets its own private storage but no access to the site&apos;s content, media, users, secrets, filesystem or network, unless the plugin declares that access and the site administrator approves it. The two runtimes don&apos;t enforce the same limits, though. According to the{" "}
                             <a href="https://docs.emdashcms.com/deployment/plugin-sandbox/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
                                 sandbox documentation
                             </a>
@@ -401,7 +408,7 @@ export default function CloudflareEmDashPage() {
                             <a href="https://plugins.emdashcms.com/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
                                 plugins.emdashcms.com
                             </a>
-                            . Site owners can find, inspect and install sandboxed plugins from it, and authors publish with an account on AT Protocol, the open network behind Bluesky, so no single company controls the listing. Only free plugins are listed today; Cloudflare says it aims to add paid ones. On 4 October 2026 the registry showed {v("emdash-registry-plugin-count")} entries, one of them a test entry. They cover contact forms, SEO checks, analytics, email sending through Resend or SMTP, image optimization and AI alt text. That&apos;s a real start and a long way from WordPress&apos;s plugin directory.
+                            . Site owners can find, inspect and install sandboxed plugins from it, and authors publish with an account on AT Protocol, the open network behind Bluesky, so publishers keep control of their plugins and other catalogs can list them, while EmDash&apos;s own catalog moderates what it shows. The registry supports only free plugins today; Cloudflare says it aims to add paid ones. On 4 October 2026 the registry showed {v("emdash-registry-plugin-count")} entries, one of them a test entry. They cover contact forms, SEO checks, analytics, email sending through Resend or SMTP, image optimization and AI alt text. That&apos;s a real start and a long way from WordPress&apos;s plugin directory.
                         </BlogText>
 
                         <BlogHeader>EmDash vs WordPress is a requirements comparison</BlogHeader>
@@ -489,9 +496,9 @@ export default function CloudflareEmDashPage() {
                             </a>
                             , and Cloudflare reports normal load of about 75 requests a second with spikes above 5,000.
                             In its 1.0 post Cloudflare also named Avulux, which converted a custom microsite to EmDash
-                            after what it called the maintenance burden of WordPress; Empress, a multi-site platform
+                            after what Cloudflare called the maintenance burden of WordPress; Empress, a multi-site platform
                             built on EmDash; Urumi, a WooCommerce specialist building EmDash&apos;s first e-commerce
-                            plugin; and Lexington Themes, which sells 44 Astro themes with EmDash versions. These are the
+                            plugin; and Lexington Themes, which offers 44 Astro themes with EmDash versions. These are the
                             names Cloudflare chose to feature. Nobody publishes a count of live EmDash sites, so treat
                             them as early adopters, not a market share.
                         </BlogText>
@@ -526,7 +533,7 @@ export default function CloudflareEmDashPage() {
                         <BlogHeader>Is EmDash locked to Cloudflare?</BlogHeader>
 
                         <BlogText>
-                            Less than it was. EmDash runs on Cloudflare or on a Node.js server, with documented alternatives for the database, file storage and sessions, and since 1.0 the plugin sandbox runs on Node.js too. The project&apos;s 1.0 post goes further: &quot;There is no lock-in, because all features work anywhere that you can deploy Node.js apps.&quot; What still changes when you move is how tightly plugins are held. Off Cloudflare, the CPU and subrequest limits aren&apos;t enforced, so moving runtimes can weaken one security property even though the content and the application move with you.
+                            Less than it was. EmDash runs on Cloudflare or on a Node.js server, with documented alternatives for the database, file storage and sessions, and since May 2026 the plugin sandbox runs on Node.js too. The project&apos;s 1.0 post goes further: &quot;There is no lock-in, because all features work anywhere that you can deploy Node.js apps.&quot; What still changes when you move is how tightly plugins are held. Off Cloudflare, the CPU and subrequest limits aren&apos;t enforced, so moving runtimes can weaken one security property even though the content and the application move with you.
                         </BlogText>
 
                         <BlogText>
@@ -624,7 +631,7 @@ export default function CloudflareEmDashPage() {
                         <h2 className="mb-5 text-2xl font-bold text-stone-900">Cloudflare EmDash vs WordPress in one minute</h2>
                         <ol className="list-inside list-decimal space-y-3 leading-relaxed text-stone-700">
                             <li><strong>EmDash reached 1.0 on {v("emdash-1-0-release-date")}:</strong> the software is stable by its makers&apos; account, but the ecosystem around it is six months old, so test it against your own project before trusting it in production.</li>
-                            <li><strong>The security model is real, but it only goes so far:</strong> plugins run sandboxed on Cloudflare and, since 1.0, on Node.js, with fewer limits enforced on Node.js. You still have to secure everything around them yourself.</li>
+                            <li><strong>The security model is real, but it only goes so far:</strong> plugins run sandboxed on Cloudflare and, since May 2026, on Node.js, with fewer limits enforced on Node.js. You still have to secure everything around them yourself.</li>
                             <li><strong>It runs on Cloudflare or Node.js, and only with Astro:</strong> there is no Next.js version. Cloudflare&apos;s Next.js project, Vinext, is a separate product.</li>
                             <li><strong>WordPress is not automatically the wrong answer:</strong> if it is looked after and it does what your team needs, it can still be the right call.</li>
                             <li><strong>What protects your search traffic is discipline, not the framework:</strong> mapping every URL, getting the redirects right, checking the content came across, testing it, watching it afterwards, and being able to roll back.</li>

@@ -1,17 +1,17 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
-import ServiceDetailPreview from "@/app/preview/services/ServiceDetailPreview";
-import { servicePreview } from "@/app/preview/services/service-data";
-import { previewServiceFaqs } from "@/app/preview/services/preview-faqs";
+import ServiceDetailPreview from "@/components/pages/services/ServiceDetailPreview";
+import { servicePreview } from "@/components/pages/services/service-data";
+import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 // 30 Sep 2026: renders the redesign (built under /preview/services). Metadata
 // stay here; the FAQ structured data now comes from the FAQs the redesign shows.
 
 
 const path = "/services/gohighlevel";
-const name = "GoHighLevel Website & CRM Integration";
-const description = "Evaluate and scope a custom website or frontend that connects to GoHighLevel CRM, forms, calendars, and automations without making unsupported speed or ranking promises.";
+const name = "GoHighLevel Website Speed & Custom Builds";
+const description = "GHL site slow or outgrown the builder? Improve your pages, or keep GoHighLevel CRM and connect a custom site to forms, calendars and pipelines.";
 
 export const metadata: Metadata = {
   title: name,

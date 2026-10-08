@@ -113,7 +113,7 @@ export default function EmblematicStudioWalkthrough() {
       slug="emblematic"
       projectName="Emblematic Studio"
       eyebrow="One registry. Three things worth seeing."
-      heading={<>Compare eight materials<br />side by side.</>}
+      heading={<>Compare eight <em>materials</em>{" "}<br />side by side.</>}
       lead={<>The <strong>catalogue</strong> a visitor browses, one <strong>material page</strong> studied in depth, and the <strong>project brief</strong> that turns a description into a quote.</>}
       navAriaLabel="Explore the Emblematic Studio build"
       chapters={chapters}

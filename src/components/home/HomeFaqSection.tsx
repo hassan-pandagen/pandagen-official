@@ -1,4 +1,5 @@
 
+import FaqRows from "@/components/ui/FaqRows";
 
 interface Faq {
   q: string;
@@ -31,19 +32,7 @@ export default function HomeFaqSection({ faqs }: { faqs: Faq[] }) {
         >
           Common questions about working with us
         </h2>
-        <div className="divide-y divide-stone-200">
-          {faqs.map((faq, i) => (
-            <div key={i} className="py-5">
-              <h3 className="flex items-start gap-3 text-base md:text-lg font-semibold text-charcoal">
-                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cognac" aria-hidden="true" />
-                <span>{faq.q}</span>
-              </h3>
-              <p className="mt-3 text-base leading-relaxed text-stone-600">
-                {faq.a}
-              </p>
-            </div>
-          ))}
-        </div>
+        <FaqRows faqs={faqs.map(({ q, a }) => ({ question: q, answer: a }))} />
       </div>
     </section>
   );

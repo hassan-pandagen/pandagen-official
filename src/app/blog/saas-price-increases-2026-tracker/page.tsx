@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-31",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/saas-price-increases-2026-tracker")],
@@ -80,7 +80,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/saas-price-increases-2026-tracker"),
             description,
             datePublished: "2026-05-31",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -95,8 +95,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Software procurement",
             inLanguage: "en-US",
-            wordCount: 1804,
-            timeRequired: "PT9M",
+            wordCount: 2137,
+            timeRequired: "PT11M",
             about: [
                 { "@type": "Thing", name: "Software as a service", sameAs: ["https://en.wikipedia.org/wiki/Software_as_a_service"] },
                 { "@type": "Thing", name: "Microsoft 365", sameAs: ["https://www.microsoft.com/microsoft-365"] },
@@ -123,7 +123,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-31",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -165,8 +165,8 @@ export default function SaasPriceIncreases2026TrackerPage() {
                             standard, and says plainly what each one does and does not tell you about your own invoice.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Every vendor claim below carries its own read date at the claim. The Microsoft row was rechecked August 1, 2026;
-                            the Webflow and Klaviyo rows were last checked July 24, 2026 and are the older of the three. A tracker is only
+                            Every vendor claim below carries its own read date at the claim. All three rows were rechecked against the
+                            vendors&apos; own pages on October 8, 2026. A tracker is only
                             as current as its most recent check, so open the linked vendor page before acting on any figure here.
                             Vendor dashboards, contracts and invoices remain the source of truth for a specific account.
                         </p>
@@ -176,7 +176,7 @@ export default function SaasPriceIncreases2026TrackerPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 31, 2026" readTime="5 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="saas-price-increases-2026-tracker" published="2026-05-31" readTime="11 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The verified watchlist</h2>
@@ -251,7 +251,7 @@ export default function SaasPriceIncreases2026TrackerPage() {
 
                     <BlogHeader>Microsoft 365: the July 1, 2026 change</BlogHeader>
                     <BlogText>
-                        Microsoft&apos;s <a href="https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">licensing and packaging update page</a>, read August 1, 2026, lists U.S. commercial price changes effective July 1, 2026 for
+                        Microsoft&apos;s <a href="https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">licensing and packaging update page</a>, read October 8, 2026, lists U.S. commercial price changes effective July 1, 2026 for
                         selected Enterprise, Business, Frontline and standalone products. It lists Business Basic with
                         Teams moving from $6 to $7 and Business Standard with Teams from $12.50 to $14, while Business
                         Premium remains listed at $22. Existing customers remain on their current price until the
@@ -280,7 +280,7 @@ export default function SaasPriceIncreases2026TrackerPage() {
 
                     <BlogHeader>Webflow: phased plan restructuring</BlogHeader>
                     <BlogText>
-                        Webflow&apos;s <a href="https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">May 2026 plan update article</a>, read July 24, 2026, says new Site-plan purchases changed May 13, 2026. It
+                        Webflow&apos;s <a href="https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">May 2026 plan update article</a>, read October 8, 2026, says new Site-plan purchases changed May 13, 2026. It
                         combined CMS and Business into Premium, listed Premium at $25 per month billed yearly or $39
                         monthly, and included 20,000 CMS items. Existing-site timing differs: June 29, 2026 for some accounts
                         and November 16 for Freelancer, Agency or legacy-pricing accounts, then at renewal or a billable
@@ -302,7 +302,7 @@ export default function SaasPriceIncreases2026TrackerPage() {
 
                     <BlogHeader>Klaviyo: a 2025 billing-unit change still relevant in 2026</BlogHeader>
                     <BlogText>
-                        Klaviyo&apos;s <a href="https://help.klaviyo.com/hc/en-us/articles/33136281415451" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">billing-change FAQ</a>, read July 24, 2026, says that from February 18, 2025 credit-card customers had to use an
+                        Klaviyo&apos;s <a href="https://help.klaviyo.com/hc/en-us/articles/33136281415451" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">billing-change FAQ</a>, read October 8, 2026, says that from February 18, 2025 credit-card customers had to use an
                         email plan that matched or exceeded active-profile count. It also introduced optional flexible
                         sending and auto-downgrade behavior. This is not a 2026 price increase, so it is labeled here
                         as an earlier billing-policy change that can affect a 2026 invoice.
@@ -341,7 +341,7 @@ export default function SaasPriceIncreases2026TrackerPage() {
                     />
                     <BlogText>
                         Once the tracker holds those fields, it feeds directly into the review steps in our{" "}
-                        <Link href="/blog/how-to-cut-saas-bill-2026" className="text-cognac hover:underline font-medium">guide to reducing a software bill</Link>.
+                        <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">eight-step SaaS pricing audit</Link>.
                     </BlogText>
 
                     <BlogHeader>Match the response to the type of change</BlogHeader>
@@ -408,7 +408,7 @@ export default function SaasPriceIncreases2026TrackerPage() {
                     </section>
 
                     <BlogHeader>Frequently asked questions</BlogHeader>
-                    <FAQAccordion faqs={postFAQs} />
+                    <FAQAccordion faqs={postFAQs} showHeading={false} />
                     <TopicUpLink postId={postId} />
 
                     <RelatedPosts currentPostId={postId} />

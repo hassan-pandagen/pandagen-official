@@ -6,5 +6,5 @@ export default function ContactLayout({
 }: {
   children: React.ReactNode
 }) {
-  return <RestyledShell kind="commercial">{children}</RestyledShell>
+  return <RestyledShell kind="commercial" footerLinksOnly>{children}</RestyledShell>
 }

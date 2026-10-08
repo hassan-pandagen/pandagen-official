@@ -99,7 +99,7 @@ export const GOOGLE_UPDATES: readonly GoogleUpdate[] = [
 
 /** The dashboard's own earliest entry, so the page can state its coverage window. */
 export const REGISTER_START = 'November 2021';
-export const REGISTER_UPDATED = '4 October 2026';
+export const REGISTER_UPDATED = '8 October 2026';
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 

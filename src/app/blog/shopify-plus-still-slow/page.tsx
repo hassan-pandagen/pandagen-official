@@ -12,6 +12,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { spec } from "@/data/spec-facts";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-06",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-plus-still-slow")],
@@ -65,6 +66,22 @@ const sources = [
         url: "https://shopify.dev/docs/storefronts/themes/best-practices/performance",
     },
     {
+        name: "Shopify: Shopify Scripts deprecation (changelog)",
+        url: "https://shopify.dev/changelog/shopify-scripts-will-be-deprecated-on-june-30-2026",
+    },
+    {
+        name: "Shopify: checkout.liquid support status",
+        url: "https://shopify.dev/docs/storefronts/themes/architecture/layouts/checkout-liquid",
+    },
+    {
+        name: "Shopify: checkout UI extensions",
+        url: "https://shopify.dev/docs/api/checkout-ui-extensions/latest",
+    },
+    {
+        name: "Chrome UX Report API (28-day field data)",
+        url: "https://developer.chrome.com/docs/crux/api",
+    },
+    {
         name: "Shopify Storefront API reference",
         url: "https://shopify.dev/docs/api/storefront/latest",
     },
@@ -84,7 +101,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-plus-still-slow"),
             description,
             datePublished: "2026-02-06",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -166,7 +183,7 @@ export default function ShopifyPlusStillSlowPage() {
                             meets the requirements you have agreed. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Shopify documentation.
+                            Reviewed October 8, 2026 against current Shopify documentation.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -174,7 +191,7 @@ export default function ShopifyPlusStillSlowPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 6, 2026" readTime="10 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="shopify-plus-still-slow" published="2026-02-06" readTime="10 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The correct starting point</h2>
@@ -236,7 +253,7 @@ export default function ShopifyPlusStillSlowPage() {
                     <BlogList
                         items={[
                             "The integration load is heavier as a result. Plus merchants commonly run classes of system a smaller store does not: ERP or inventory sync, loyalty, subscriptions, personalisation, tax and compliance. Each tends to contribute its own script to the storefront, and the theme layer gives you no built-in way to isolate or defer them per route.",
-                            "Checkout customisation moved. Stores that built custom logic into checkout.liquid have to rebuild it as checkout extensions. Careless extensions put scripts back into checkout, and checkout is the one place a Plus store can be slow in a way a smaller store never is.",
+                            "Checkout customisation moved. Shopify no longer supports checkout.liquid for the information, shipping and payment steps, and Plus stores lost it on the Thank you and Order status pages on August 28, 2025. Shopify Scripts, the customisations many Plus checkouts relied on, stopped running on June 30, 2026, so that logic now lives in Shopify Functions or an app. Checkout UI extensions run in an isolated sandbox with no access to the checkout page itself, so they cannot add the page scripts that slow a storefront. When checkout is slow, look at the functions, apps and services it calls, and keep that evidence separate from the storefront (step 4).",
                             "Catalogue scale is a per-request cost. Collection and search templates get more expensive as SKU and variant counts grow, because that markup is produced per request rather than served pre-built. It is why benchmarks taken on small catalogues describe a different store than yours.",
                             "Multi-market and multi-currency add work to the same templates. Every additional locale or currency is more logic on the routes that already do the most.",
                         ]}
@@ -267,8 +284,7 @@ export default function ShopifyPlusStillSlowPage() {
                         ]}
                     />
                     <BlogText>
-                        Do not collapse all five into “the site is slow.” Each requires different evidence, owners and
-                        acceptance criteria. If the vitals themselves need defining first, start with{" "}
+                        If the vitals themselves need defining first, start with{" "}
                         <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline font-medium">what LCP, INP and CLS measure</Link>.
                     </BlogText>
 
@@ -276,14 +292,15 @@ export default function ShopifyPlusStillSlowPage() {
                     <BlogText>
                         Shopify&apos;s <Link href="/blog/aeo-web-performance-glossary" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Web Performance</Link> reports provide real-user LCP, INP and CLS over time, by URL and
                         by page type. The summary uses the 75th percentile and separates device experiences. Review
-                        releases and traffic changes across the same period.
+                        releases and traffic changes across the same period: the report draws changes in your store as
+                        numbered lines on its graph, so you can line a regression up with what changed.
                     </BlogText>
                     <BlogList
                         items={[
                             "Prioritize routes with both poor experience and material traffic or business importance.",
                             "Compare mobile and desktop rather than averaging them together.",
                             "Separate templates and markets that carry different content or integrations.",
-                            "Allow for Shopify's documented reporting delay before closing the investigation: the web performance report lags real traffic, so a change made today does not appear in it today. Check the current delay in your own dashboard rather than assuming it.",
+                            `Allow for Shopify's reporting delay before closing the investigation: Shopify says the report can be delayed by ${spec("shopify-speed-report-lag").value} and keeps only the last ${spec("shopify-speed-report-retention").value}, so read a change no sooner than a day and a half after it ships.`,
                         ]}
                     />
 
@@ -382,22 +399,27 @@ export default function ShopifyPlusStillSlowPage() {
 
                     <BlogHeader>7. Agree what done actually looks like</BlogHeader>
                     <BlogText>
-                        A 90-plus Lighthouse target can be an accepted delivery term under recorded conditions. It should not be restated as a permanent guarantee for every route, visitor, app state or future release. Six things make the term enforceable, and the run count and the recorded conditions are what separate a criterion from a screenshot.
+                        A 90-plus Lighthouse target can be an accepted delivery term under recorded conditions. It should not be restated as a permanent guarantee for every route, visitor, app state or future release. Five things make the term enforceable, and the run count and the recorded conditions are what separate a criterion from a screenshot.
                     </BlogText>
                     <BlogList
                         items={[
                             "Name representative routes, devices and required page states.",
                             "Record network, geography, cache, consent and authentication conditions.",
-                            "Run three consecutive mobile and desktop tests for each agreed representative page and profile.",
+                            "Run three consecutive mobile and desktop tests for each agreed representative page and profile, and require every run to reach the target, not their average.",
                             "Require functional, accessibility, SEO, analytics and error checks.",
-                            "Monitor real-user Core Web Vitals after launch.",
                             "Define the remedy in the signed scope if an agreed target is missed.",
                         ]}
                     />
                     <BlogText>
-                        A 90-plus Lighthouse target can be an accepted delivery term under recorded conditions. It should
-                        not be restated as a permanent guarantee for every route, visitor, app state or future release.
-                        The method behind that kind of target is described in{" "}
+                        Monitoring after launch is a separate job from acceptance. Re-run the same lab test on the same
+                        pages and settings on a schedule, because it shows a regression within days of the app install
+                        or theme change that caused it. Chrome&apos;s real-user data is a 28-day rolling average, so
+                        field numbers take weeks to move after a change. Keep reading both: Shopify&apos;s theme
+                        guidance suggests Lighthouse CI for the lab side, and the Web Performance report covers what
+                        customers experience.
+                    </BlogText>
+                    <BlogText>
+                        The method behind a 90-plus target is described in{" "}
                         <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline font-medium">how we approach PageSpeed scores</Link>.
                     </BlogText>
 

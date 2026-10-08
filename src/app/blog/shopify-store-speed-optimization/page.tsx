@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         description: "Measure real Shopify performance by template, diagnose themes, apps, images, scripts, and fonts, then choose a controlled optimization or headless plan.",
         type: "article",
         publishedTime: "2026-05-12T00:00:00-05:00",
-        modifiedTime: "2026-08-20T00:00:00-05:00",
+        modifiedTime: "2026-10-01T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-store-speed-optimization",
         images: [ogImageForPath("/blog/shopify-store-speed-optimization")],
@@ -69,7 +69,7 @@ const articleSchema = {
             "description": "A practical Shopify speed optimization guide covering field and lab data, Core Web Vitals, themes, apps, images, scripts, and headless decisions.",
             "image": ogImageUrlForPath("/blog/shopify-store-speed-optimization"),
             "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-08-20T00:00:00-05:00",
+            "dateModified": "2026-10-01T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -125,7 +125,7 @@ const articleSchema = {
             "name": "Shopify Store Speed Optimization: What Actually Works (2026)",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-08-20T00:00:00-05:00",
+            "dateModified": "2026-10-01T00:00:00-05:00",
             "inLanguage": "en-US",
         },
         {
@@ -164,7 +164,7 @@ export default function ShopifySpeedOptimizationPage() {
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-tight tracking-tight mb-6">
                             Shopify Store Speed Optimization: <span className="font-serif italic text-cognac">What Actually Works</span>
                         </h1>
-                        <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Updated August 1, 2026" readTime="17 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                        <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="shopify-store-speed-optimization" published="2026-05-12" readTime="17 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
                           </div>
                           <div data-article-hero-screen>
                         <BlogCoverFigure id="shopify-store-speed-optimization" />
@@ -276,7 +276,7 @@ export default function ShopifySpeedOptimizationPage() {
 
                             <BlogText>
                                 Shopify already provides global hosting, a CDN, compression, caching, image transformations, and CSS and JavaScript minification where applicable. That makes server-level advice such as adding another generic CDN or changing Shopify&apos;s cache headers a poor starting point. Focus on the storefront features that your team controls. Our walkthrough of <Link href="/blog/shopify-dawn-theme-slow" className={sourceLink}>diagnosing a slow Shopify theme</Link> covers the section-level inspection in more depth, and <Link href="/blog/shopify-plus-still-slow" className={sourceLink}>why a Plus plan doesn&apos;t change the storefront model</Link> explains what upgrading doesn&apos;t fix. The platform-agnostic version of this diagnosis is in{" "}
-                                <Link href="/blog/why-is-my-website-loading-so-slow" className={sourceLink}>why a website loads slowly</Link>.
+                                <Link href="/blog/how-to-speed-up-your-website" className={sourceLink}>how to find what slows a website down</Link>.
                             </BlogText>
 
                             <div className="grid gap-4 md:grid-cols-2 my-6">
@@ -317,7 +317,7 @@ export default function ShopifySpeedOptimizationPage() {
                             <BlogHeader>A Shopify Theme Performance Code Review</BlogHeader>
 
                             <BlogText>
-                                A theme review should answer where code loads, when it executes, and which customer task it supports. <a href="https://shopify.dev/docs/storefronts/themes/best-practices/performance" target="_blank" rel="noopener noreferrer" className={sourceLink}>Shopify&apos;s official theme guidance</a> recommends using HTML and CSS for basic functionality where possible, avoiding parser-blocking scripts, limiting external frameworks, loading non-critical resources later, serving assets from Shopify, and using responsive images. Theme Check can flag large bundles, remote assets, parser-blocking JavaScript, and cross-file CSS dependencies. Neither this guidance nor the Theme Store requirements page publishes a specific minified JavaScript bundle size target, so treat &ldquo;does this feature earn its code&rdquo; as a judgement call informed by the trace, not a number to hit.
+                                A theme review should answer where code loads, when it executes, and which customer task it supports. <a href="https://shopify.dev/docs/storefronts/themes/best-practices/performance" target="_blank" rel="noopener noreferrer" className={sourceLink}>Shopify&apos;s official theme guidance</a> recommends using HTML and CSS for basic functionality where possible, avoiding parser-blocking scripts, limiting external frameworks, loading non-critical resources later, serving assets from Shopify, and using responsive images. Theme Check can flag large bundles, remote assets, parser-blocking JavaScript, and cross-file CSS dependencies. Neither this guidance nor the Theme Store requirements page publishes a JavaScript bundle size target. Shopify&apos;s Theme Check linter does flag large JavaScript files, but that is a lint rule, not a speed target, so treat &ldquo;does this feature earn its code&rdquo; as a judgement call informed by the trace, not a number to hit.
                             </BlogText>
 
                             <div className="grid gap-4 md:grid-cols-2 my-6">
@@ -386,7 +386,7 @@ export default function ShopifySpeedOptimizationPage() {
                             </BlogText>
 
                             <BlogText>
-                                Shopify&apos;s app guidance recommends theme app extensions, Shopify-hosted assets, and loading resources only on the pages that need them. It sets no numeric threshold for app impact and publishes no page-type weighting, only that an app should show low or no negative impact on real merchant stores over time. Knowing there&apos;s no number saves you hunting for one: test your own product, collection and home templates directly instead of assuming Shopify grades them on a published curve. When testing removal, preserve consent, analytics attribution, subscriptions, reviews, search, localization, accessibility, and checkout behavior. A faster page that breaks a required customer journey isn&apos;t an optimization.
+                                Shopify&apos;s app guidance recommends theme app extensions, Shopify-hosted assets, and loading resources only on the pages that need them. It sets no numeric threshold for app impact, only that an app should show low or no negative impact on real merchant stores over time. It does publish how it weights pages when it tests an app&apos;s Lighthouse impact: home 17%, product 40%, collection 43%. Test those three templates on your own store, product and collection first. When testing removal, preserve consent, analytics attribution, subscriptions, reviews, search, localization, accessibility, and checkout behavior. A faster page that breaks a required customer journey isn&apos;t an optimization.
                             </BlogText>
 
                             <BlogQuote>
@@ -445,7 +445,7 @@ export default function ShopifySpeedOptimizationPage() {
                             </BlogText>
 
                             <BlogText>
-                                Upgrading your <a href={spec("shopify-plan-basic").source} target="_blank" rel="noopener noreferrer" className={sourceLink}>plan tier</a> doesn&apos;t change the rendering model your theme uses. Basic runs {spec("shopify-plan-basic").value}, Grow {spec("shopify-plan-grow").value}, Advanced {spec("shopify-plan-advanced").value}, and Plus {spec("shopify-plan-plus").value} as of {asOf("shopify-plan-plus")}, and all four serve the same theme through the same storefront rendering path. What changes between tiers is checkout customization, staff accounts, reporting depth and negotiated rates, not how fast a Liquid page renders. We cover the specific Plus case in <Link href="/blog/shopify-plus-still-slow" className={sourceLink}>why Plus doesn&apos;t fix a slow storefront</Link>.
+                                Upgrading your <a href={spec("shopify-plan-basic").source} target="_blank" rel="noopener noreferrer" className={sourceLink}>plan tier</a> doesn&apos;t change the rendering model your theme uses. Basic runs {spec("shopify-plan-basic").value}, Grow {spec("shopify-plan-grow").value}, Advanced {spec("shopify-plan-advanced").value}, and Plus {spec("shopify-plan-plus").value} as of {asOf("shopify-plan-plus")}, and all four serve the same theme through the same storefront rendering path. What changes between tiers is staff accounts, card rates, inventory locations, API rate limits and, on Plus only, full checkout customization, not how fast a Liquid page renders. We cover the specific Plus case in <Link href="/blog/shopify-plus-still-slow" className={sourceLink}>why Plus doesn&apos;t fix a slow storefront</Link>.
                             </BlogText>
 
                             <div className="overflow-x-auto my-6" tabIndex={0} role="region" aria-label="Scrollable table">
@@ -471,7 +471,7 @@ export default function ShopifySpeedOptimizationPage() {
                             </BlogText>
 
                             <BlogQuote>
-                                A higher plan tier buys you checkout customization and reporting depth. It doesn&apos;t buy your theme a faster rendering model.
+                                A higher plan tier buys you more staff accounts, lower card rates and, on Plus, full checkout customization. It doesn&apos;t buy your theme a faster rendering model.
                             </BlogQuote>
 
                             <BlogHeader>A Controlled Shopify Optimization and Migration Plan</BlogHeader>
@@ -546,7 +546,7 @@ export default function ShopifySpeedOptimizationPage() {
                             <div className="grid gap-3">
                                 {[
                                     { href: "/blog/core-web-vitals-explained", label: "Core Web Vitals: Field Metrics and Practical Diagnostics" },
-                                    { href: "/blog/why-is-my-website-loading-so-slow", label: "Why Is My Website Loading So Slow? 12 Causes and Fixes" },
+                                    { href: "/blog/how-to-speed-up-your-website", label: "How to Speed Up Your Website: 12 Checks" },
                                     { href: "/blog/shopify-headless", label: "When a Headless Shopify Storefront Makes Sense" },
                                     { href: "/blog/shopify-dawn-theme-slow", label: "Diagnosing Shopify Theme Performance" },
                                     { href: "/blog/shopify-app-costs-real-monthly-bill", label: "How to Audit Shopify App Cost and Storefront Impact" },

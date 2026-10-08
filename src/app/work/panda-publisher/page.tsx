@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { ogImageForPath } from "@/lib/seo/og";
-import { PandaPublisherCaseStudyPreview as RedesignPandaPublisherCaseStudy } from "@/app/preview/work/panda-publisher/Design";
+import { caseStudy, disclosure } from "@/data/case-study-facts";
+import { PandaPublisherCaseStudyPreview as RedesignPandaPublisherCaseStudy } from "@/components/pages/work/panda-publisher/Design";
 
 const canonicalUrl = "https://www.pandacodegen.com/work/panda-publisher";
-const title = "Panda Publisher: an Author Services Concept Build";
+// 4 Oct 2026: shortened (title was 64 characters with the brand, description
+// 182). Each item in the description is a walkthrough chapter on this page.
+const title = "Panda Publisher: an Author Services Concept";
 const description =
-    "An author-services website concept built by PandaCodeGen: a cover gallery, service pages and an enquiry path from idea to launch. Concept build, not an operating publishing business.";
+    "An author-services site concept with no real publisher behind it: a cover gallery, services that state their limits, a nine-chapter journey and one form.";
 
 export const metadata: Metadata = {
     title: { absolute: `${title} | PandaCodeGen` },
@@ -21,10 +24,55 @@ export const metadata: Metadata = {
     alternates: { canonical: "/work/panda-publisher" },
 };
 
+// Page-level structured data, added 4 Oct 2026 after the SEO audit found these
+// concept pages carried none. It describes only what the page shows: a page
+// about a demo site we built, marked as a demo through the same relationship
+// and disclosure text the page renders from case-study-facts.json. It claims
+// no results, reviews or client.
+const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            inLanguage: "en-US",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
+            about: { "@id": `${canonicalUrl}#demo` },
+            publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": `${canonicalUrl}#demo`,
+            name: "Panda Publisher",
+            url: "https://pandapublisher-eight.vercel.app/",
+            genre: "Portfolio demo",
+            creativeWorkStatus: caseStudy("panda-publisher").relationship,
+            description: disclosure("panda-publisher"),
+            creator: { "@id": "https://www.pandacodegen.com/#organization" },
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Work", item: "https://www.pandacodegen.com/work" },
+                { "@type": "ListItem", position: 3, name: "Panda Publisher", item: canonicalUrl },
+            ],
+        },
+    ],
+};
+
 // 30 Sep 2026: this page now renders the redesign (built as /preview/work/panda-publisher).
 // Metadata stays in this file.
 export default function PandaPublisherCaseStudy() {
     return (
-        <RedesignPandaPublisherCaseStudy />
+        <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+            <RedesignPandaPublisherCaseStudy />
+        </>
     );
 }

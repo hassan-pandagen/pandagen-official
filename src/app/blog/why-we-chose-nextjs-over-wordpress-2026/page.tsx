@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-04",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/why-we-chose-nextjs-over-wordpress-2026")],
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 
 const sources = [
     { name: "Next.js rendering", url: "https://nextjs.org/docs/app/getting-started/server-and-client-components" },
-    { name: "Next.js caching", url: "https://nextjs.org/docs/app/guides/caching" },
+    { name: "Next.js caching", url: "https://nextjs.org/docs/app/getting-started/caching" },
     { name: "WordPress hardening", url: "https://developer.wordpress.org/advanced-administration/security/hardening/" },
     { name: "WordPress plugins", url: "https://wordpress.org/documentation/article/manage-plugins/" },
     { name: "WordPress performance", url: "https://make.wordpress.org/performance/handbook/measuring-performance/" },
@@ -70,7 +70,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/why-we-chose-nextjs-over-wordpress-2026"),
             description,
             datePublished: "2026-03-04",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -147,14 +147,14 @@ export default function WhyWeChooseNextJsPage() {
                             Next.js when a client needs a deliberately engineered presentation layer and can own its
                             operating model. We do not treat WordPress as automatically slow, insecure or wrong.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed against current primary documentation on July 24, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Reviewed against current primary documentation on October 8, 2026.</p>
                       </div>
                       <div data-article-hero-screen>
                         <BlogCoverFigure id="why-we-chose-nextjs-over-wordpress-2026" />
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 4, 2026" readTime="9 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="why-we-chose-nextjs-over-wordpress-2026" published="2026-03-04" readTime="9 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The honest reason</h2>
@@ -217,8 +217,8 @@ export default function WhyWeChooseNextJsPage() {
                         We do not publish a <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> score range for either platform. A score belongs to a specific
                         page, build, hosting setup and test condition rather than to the platform name, so a range
                         quoted without that context tells you nothing about what your own site would score. Test your
-                        representative routes yourself and compare them against themselves over time. Every page named in your quote scores 90 or better on Google
-                        PageSpeed on phone and desktop, tested three times before we hand it over.
+                        representative routes yourself and compare them against themselves over time. Our agreed pages are tested against a 90+ Lighthouse handover target on phone and desktop,
+                        with three recorded runs under the conditions in the written scope. It is a lab target, not a field-performance or ranking guarantee.
                     </InsightBox>
 
                     <BlogQuote>
@@ -244,7 +244,10 @@ export default function WhyWeChooseNextJsPage() {
                         <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">review of WordPress AI plugin security</Link>{" "}
                         works through the runtime side of that, and it applies the same standard to the stack we run
                         now: a custom build still carries packages, a build pipeline and service providers, and
-                        somebody still has to own patching.
+                        somebody still has to own patching. How fast that patch lands matters as much as whether one
+                        exists, which{" "}
+                        <Link href="/blog/wordpress-plugin-security-2026" className="text-cognac hover:underline">our account of a 2026 WordPress plugin flaw</Link>{" "}
+                        measures on both stacks.
                     </BlogText>
                     <BlogText>
                         WordPress advises keeping software current, limiting access, using trusted sources, backups and
@@ -259,7 +262,7 @@ export default function WhyWeChooseNextJsPage() {
                     <BlogText>
                         One argument gets made in our favour that we will not use, because on our own stack it is not
                         true. You will read that a Next.js site has <strong>no exposed database and no admin URL to
-                        attack</strong> — no <code className="rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">/wp-admin</code>{" "}
+                        attack</strong>: no <code className="rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">/wp-admin</code>{" "}
                         to brute-force. The first half is fair: there is no PHP plugin runtime and no database sitting
                         behind the web tier where a plugin can reach it.
                     </BlogText>
@@ -296,7 +299,8 @@ export default function WhyWeChooseNextJsPage() {
 
                     <BlogHeader id="first-party-example">What we can say about MyCustomPatches</BlogHeader>
                     <BlogText>
-                        MyCustomPatches is an independent client, not a PandaCodeGen property, and its figures are owner-confirmed and published with permission. The client's owner reports a delivery of about 22 days. We do not hold a dated record of that confirmation, so treat it as an owner statement rather than an audited figure. That is a first-party
+                        {/* 8 Oct 2026: "We do not hold a dated record of that confirmation" reversed. case-study-facts.json holds the delivery figure as an owner-approved project record dated 21 July 2026, the same underclaim fixed on /services on 15 Sep. */}
+                        MyCustomPatches is an independent client, not a PandaCodeGen property, and its figures are owner-confirmed and published with permission. The client's owner reports a delivery of about 22 days, recorded in a project record the owner approved on July 21, 2026. It is still an owner statement rather than an audited figure. That is a first-party
                         timeline for one scope, not a market benchmark or promise. We do not attach performance, ranking,
                         conversion, hosting or revenue figures to it. Numbers like those mean something only with the
                         measurement period, method and comparable baseline stated beside them, and one site&apos;s
@@ -334,8 +338,10 @@ export default function WhyWeChooseNextJsPage() {
                     <BlogText>
                         Requirements in the second line usually become{" "}
                         <Link href="/services/custom-engineering" className="text-cognac hover:underline">custom engineering</Link>{" "}
-                        rather than another extension. For the broader replacement question, see{" "}
-                        <Link href="/blog/wordpress-killer" className="text-cognac hover:underline">what actually replaces WordPress</Link>.
+                        rather than another extension. If someone else will build it,{" "}
+                        <Link href="/blog/top-nextjs-agencies-2026" className="text-cognac hover:underline">our disclosed list of Next.js agencies</Link>{" "}
+                        sets out what to verify. For the broader replacement question, see{" "}
+                        <Link href="/blog/cloudflare-emdash-wordpress-replacement" className="text-cognac hover:underline">how Cloudflare&apos;s EmDash compares as a WordPress replacement</Link>.
                     </BlogText>
 
                     <BlogHeader id="seo">What happens to SEO during migration?</BlogHeader>
@@ -371,7 +377,7 @@ export default function WhyWeChooseNextJsPage() {
 
                     <BlogHeader id="offer">PandaCodeGen offer and terms</BlogHeader>
                     <BlogText>
-                        We start with a free fit audit and prepare an SEO-safe migration plan when migration is
+                        We start with a <Link href="/free-audit" className="text-cognac hover:underline">free fit audit</Link> (share your website URL and email) and prepare an SEO-safe migration plan when migration is
                         justified. PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and Scale
                         from $5,000. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund
                         is tied to failure to deliver the signed scope. Starter includes 15 business days of launch
@@ -383,7 +389,7 @@ export default function WhyWeChooseNextJsPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

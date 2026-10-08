@@ -21,13 +21,21 @@ const postId = "how-to-achieve-100-pagespeed";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "How to Reach 90+ PageSpeed: A Repeatable 2026 Process";
+// TITLE PILOT (4 Oct 2026). The <title>, og:title and twitter:title below are a
+// test page in the 3-page title pilot logged in
+// docs/research/seo-skill-pack-audit-2026-10-04/TITLE_PILOT.md. The headline in
+// the JSON-LD and blog.ts keep the old title on purpose: only the search title is
+// under test. Once the redesign deploys, leave this title, the description and
+// the body alone until the 28-day read. To revert, restore the old title from
+// the ledger.
+const pilotTitle = "PageSpeed Analysis: What Your Score Means and 8 Steps to 90+";
 const description =
     "An eight-step Lighthouse and Core Web Vitals process for improving representative pages, recording test conditions and avoiding false 100-score promises.";
 
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title,
+    title: pilotTitle,
     description,
     alternates: { canonical: `/blog/${postId}` },
     robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
@@ -39,16 +47,16 @@ export const metadata: Metadata = {
         "Core Web Vitals optimization",
     ],
     openGraph: {
-        title,
+        title: pilotTitle,
         description,
         type: "article",
         publishedTime: "2026-02-17",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-to-achieve-100-pagespeed")],
     },
-    twitter: { card: "summary_large_image", title, description },
+    twitter: { card: "summary_large_image", title: pilotTitle, description },
 };
 
 const sources = [
@@ -68,7 +76,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-02-17",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -113,7 +121,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             datePublished: "2026-02-17",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -155,7 +163,7 @@ export default function PageSpeedProcessGuide() {
                             nobody can hold that.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Every threshold and metric definition here was re-checked against Chrome&apos;s primary Lighthouse documentation on August 3, 2026. Where a claim can be verified in your own browser, this page tells you how to verify it rather than asking you to take a citation on trust.
+                            Every threshold and metric definition here was re-checked against Chrome&apos;s primary Lighthouse documentation on October 8, 2026. Where a claim can be verified in your own browser, this page tells you how to verify it rather than asking you to take a citation on trust.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -163,7 +171,7 @@ export default function PageSpeedProcessGuide() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="February 17, 2026" readTime="7 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="how-to-achieve-100-pagespeed" published="2026-02-17" readTime="11 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">First understand the number</h2>
@@ -236,7 +244,7 @@ export default function PageSpeedProcessGuide() {
                         collection, cart, form, calendar and authenticated state. Pick pages that represent the accepted
                         scope and important visitor journeys. The homepage alone does not prove the rest of the site. If
                         you are still working out which routes hurt, our walkthrough of{" "}
-                        <Link href="/blog/why-is-my-website-loading-so-slow" className="text-cognac hover:underline">
+                        <Link href="/blog/how-to-speed-up-your-website" className="text-cognac hover:underline">
                             why a website loads slowly
                         </Link>{" "}
                         narrows the list first.

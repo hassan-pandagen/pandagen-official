@@ -44,11 +44,8 @@ const navItems: NavItem[] = [
 // opened the only service menu on the site, and it told them this firm rebuilds
 // other people's sites.
 //
-// What a buyer is buying now leads; the platform they are leaving is grouped after
-// it and still named, because those pages rank and convert on those exact words.
-// Do not delete the platform entries: "wordpress alternative" and its siblings are
-// the terms with published volume. This is an ordering and labelling change only,
-// and no URL moved.
+// What a buyer can build leads; platform-specific options follow. Keep the
+// destinations reachable without assuming someone wants to leave a platform.
 const services = [
   { name: "All Services", href: "/services" },
   // What you are buying.
@@ -56,11 +53,11 @@ const services = [
   { name: "Online stores", href: "/services/ecommerce" },
   { name: "Custom software", href: "/services/custom-engineering" },
   { name: "AI SEO", href: "/services/ai-seo" },
-  // The platform you are leaving, if you have one.
-  { name: "Leaving WordPress", href: "/services/wordpress-migration" },
-  { name: "Leaving WooCommerce", href: "/services/woocommerce" },
-  { name: "Leaving Wix", href: "/services/wix" },
-  { name: "Leaving Squarespace", href: "/services/squarespace" },
+  // Platform-specific options.
+  { name: "WordPress: build or move", href: "/services/wordpress-migration" },
+  { name: "WooCommerce stores", href: "/services/woocommerce" },
+  { name: "Wix websites", href: "/services/wix" },
+  { name: "Squarespace websites", href: "/services/squarespace" },
   { name: "Webflow", href: "/services/webflow" },
   { name: "GoHighLevel", href: "/services/gohighlevel" },
 ];
@@ -87,6 +84,7 @@ const aboutLinks = [
 
 export default function Header({ onOpenQuote }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(null);
@@ -99,12 +97,29 @@ export default function Header({ onOpenQuote }: HeaderProps) {
   const handleOpenQuote = onOpenQuote ?? (() => setInternalQuoteOpen(true));
 
   useEffect(() => {
+    let previousY = window.scrollY;
+    let frame = 0;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        const currentY = window.scrollY;
+        setIsScrolled(currentY > 50);
+        if (currentY < 80 || isMobileMenuOpen || openDropdown) {
+          setIsHidden(false);
+        } else if (Math.abs(currentY - previousY) > 6) {
+          setIsHidden(currentY > previousY);
+        }
+        previousY = currentY;
+        frame = 0;
+      });
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, [isMobileMenuOpen, openDropdown]);
 
   // Let any CTA across the site open the quote modal via a window event,
   // e.g. an "Talk to the founders" button. Keeps the modal a single instance.
@@ -211,14 +226,16 @@ export default function Header({ onOpenQuote }: HeaderProps) {
   return (
     <>
       <header
+        onFocusCapture={() => setIsHidden(false)}
         className={cn(
           // Not transition-all: that animated `padding` too, reflowing the
           // header's children for 300ms while the user is still scrolling.
-          "fixed top-0 left-0 right-0 z-[60] transition-[background-color,box-shadow,border-color] duration-300",
+          "fixed top-0 left-0 right-0 z-[60] transition-[transform,background-color,box-shadow,border-color] duration-300 motion-reduce:transition-none",
           // Translucent + blur so content reads as passing under the bar, and a
           // shadow rather than a 1px rule for the edge. At /95 with no blur the
           // page text ghosted through instead.
           "backdrop-blur-xl backdrop-saturate-150",
+          isHidden ? "-translate-y-full pointer-events-none" : "translate-y-0",
           isScrolled
             ? "bg-white/75 py-3 shadow-card"
             : "bg-paper/70 py-5"

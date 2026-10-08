@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-15",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-vs-nextjs")],
@@ -59,7 +59,7 @@ const sources = [
     { name: "WordPress export documentation", url: "https://wordpress.org/documentation/article/tools-export-screen/" },
     { name: "WordPress hardening guide", url: "https://developer.wordpress.org/advanced-administration/security/hardening/" },
     { name: "Next.js server and client components", url: "https://nextjs.org/docs/app/getting-started/server-and-client-components" },
-    { name: "Next.js caching guide", url: "https://nextjs.org/docs/app/guides/caching" },
+    { name: "Next.js caching guide", url: "https://nextjs.org/docs/app/getting-started/caching" },
     { name: "Next.js production checklist", url: "https://nextjs.org/docs/app/guides/production-checklist" },
     { name: "Next.js data security guide", url: "https://nextjs.org/docs/app/guides/data-security" },
     { name: "W3Techs: WordPress usage statistics", url: "https://w3techs.com/technologies/details/cm-wordpress" },
@@ -75,7 +75,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-vs-nextjs"),
             description,
             datePublished: "2026-03-15",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -156,7 +156,7 @@ export default function WordPressVsNextJsPage() {
                             finished builds rather than the two names.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed against current WordPress, Next.js and Google documentation on July 24, 2026.
+                            Reviewed against current WordPress, Next.js and Google documentation on October 8, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -164,15 +164,12 @@ export default function WordPressVsNextJsPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 15, 2026" readTime="8 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wordpress-vs-nextjs" published="2026-03-15" readTime="15 min read" />
 
                     <BlogText>
-                        What the WordPress founder and two working developers said about the platform in April 2026, quoted as written and linked to where they said it.
+                        Two developers describe their experience of WordPress below. Their attributed opinions give context; they are not comparative security measurements.
                     </BlogText>
-                    <BlogQuote>
-                        We are operating at a level of collective delusion that is quite impressive. We keep driving away some of the most valuable people and rejecting them when they try to contribute.
-                    </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg (WordPress co-founder) · April 14, 2026 · reported by The Repository · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    {/* 8 Oct 2026: removed quotation whose full source could not be independently rechecked. */}
                     <BlogQuote>
                         Of course - CMS should just generate a static HTML + CSS - ONCE and then just let nginx serve it - instead of hammering the DB every-single-time (unless someone installed enough caching plugins to fix this)
                     </BlogQuote>
@@ -232,7 +229,8 @@ export default function WordPressVsNextJsPage() {
                         <a href="https://blog.cloudflare.com/emdash-wordpress/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">its own launch post</a>{" "}
                         as the spiritual successor to WordPress. Read from{" "}
                         <a href="https://github.com/emdash-cms/emdash" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">the project repository</a>{" "}
-                        on October 4, 2026 it had reached version 1.0, released on 28 September 2026. It runs only
+                        on October 8, 2026 it was at version 1.2.0, released on 6 October, after its first 1.0
+                        release on 28 September 2026. It runs only
                         inside Astro, though, so it isn&apos;t a CMS you can put behind a Next.js site. Our{" "}
                         <Link href="/blog/cloudflare-emdash-wordpress-replacement" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">full review of EmDash</Link>{" "}
                         has the dated figures. A comparison written as WordPress against Next.js is already narrower
@@ -253,20 +251,20 @@ export default function WordPressVsNextJsPage() {
                         <BlogText>
                             No, and we build in Next.js, so take that as evidence rather than modesty.{" "}
                             <a href="https://w3techs.com/technologies/details/cm-wordpress" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">W3Techs</a>{" "}
-                            reported on <strong>12 September 2026</strong> that WordPress is used by{" "}
-                            <strong>40.3% of all websites</strong>, and by <strong>58.8% of websites whose content
-                            management system is known</strong>. Both figures move: they read 41.2% and 59.1% in
-                            August 2026, so re-read them rather than quoting this sentence. A platform running two-fifths of the web is not
+                            reported on <strong>7 October 2026</strong> that WordPress is used by{" "}
+                            <strong>40.1% of all websites</strong>, and by <strong>58.6% of websites whose content
+                            management system is known</strong>. Both figures move: they read 40.3% and 58.8% on
+                            12 September 2026, so re-read them rather than quoting this sentence. A platform running two-fifths of the web is not
                             obsolete, and any argument that starts by assuming it is has skipped the part where you
                             check.
                         </BlogText>
                     </div>
                     <BlogText>
                         Those two percentages are the ones most often confused, including by summaries of this
-                        question. <strong>40.3% is the share of every site on the web. 58.8% is the share of sites
+                        question. <strong>40.1% is the share of every site on the web. 58.6% is the share of sites
                         where a CMS could be detected at all.</strong> Quoting the second as though it were the first
-                        overstates WordPress by half, and quoting a rounded &quot;43% of the web&quot; — as several
-                        widely-repeated answers currently do — is not the figure W3Techs publishes. If you cite a
+                        overstates WordPress by half, and quoting a rounded &quot;43% of the web&quot;, as several
+                        widely-repeated answers currently do, is not the figure W3Techs publishes. If you cite a
                         share number, name the measurer and the month, because these are detector estimates from a
                         sample rather than a census.
                     </BlogText>
@@ -390,6 +388,12 @@ export default function WordPressVsNextJsPage() {
                         data. {finding("cms-errors-2026").limitation}
                     </BlogText>
                     <BlogText>
+                        The same constraint is the SEO trade-off on a hosted builder: fewer ways to break the markup
+                        and fewer ways to change it.{" "}
+                        <Link href="/blog/is-squarespace-bad-for-seo" className="text-cognac hover:underline">Our Squarespace SEO review</Link>{" "}
+                        shows where that line falls on one platform.
+                    </BlogText>
+                    <BlogText>
                         Method, so the numbers can be checked rather than taken:{" "}
                         {finding("cms-errors-2026").method} Full report:{" "}
                         <a
@@ -431,29 +435,63 @@ export default function WordPressVsNextJsPage() {
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-stone-200 text-stone-700">
-                                <tr><td className="p-4 font-bold">Third-party code on the server</td><td className="p-4">Plugins and themes execute PHP with database access</td><td className="p-4">npm packages execute at build time; at request time it is your own server code, route handlers and middleware</td></tr>
-                                <tr><td className="p-4 font-bold">Public admin endpoint</td><td className="p-4">A login route is reachable by default unless you move or restrict it</td><td className="p-4">No application login unless you build one; CMS auth sits with the CMS provider</td></tr>
-                                <tr><td className="p-4 font-bold">Writable directories</td><td className="p-4">Uploads and cache paths are writable at runtime</td><td className="p-4">Static build output is immutable; uploads handled by a storage provider</td></tr>
+                                <tr><td className="p-4 font-bold">Third-party code on the server</td><td className="p-4">Plugins and themes execute PHP with database access</td><td className="p-4">Framework and third-party packages can execute during installation, builds, server requests and in browser bundles</td></tr>
+                                <tr><td className="p-4 font-bold">Public admin endpoint</td><td className="p-4">A login route is reachable by default unless you move or restrict it</td><td className="p-4">No built-in content administration; application and CMS authentication depend on the chosen services and deployment</td></tr>
+                                <tr><td className="p-4 font-bold">Writable directories</td><td className="p-4">Uploads and cache paths are writable at runtime</td><td className="p-4">Static artifacts can be read-only; runtime writes and upload permissions depend on hosting and storage design</td></tr>
                                 <tr><td className="p-4 font-bold">Dependency risk</td><td className="p-4">Core, theme and every plugin, each on its own release schedule</td><td className="p-4">Framework and the full transitive npm tree, pinned by lockfile</td></tr>
-                                <tr><td className="p-4 font-bold">Supply chain</td><td className="p-4">Plugin updates pulled into a live site</td><td className="p-4">Build pipeline and CI credentials: compromise happens before deploy</td></tr>
-                                <tr><td className="p-4 font-bold">Secrets</td><td className="p-4">Config file on the server</td><td className="p-4">Host environment variables and provider tokens</td></tr>
+                                <tr><td className="p-4 font-bold">Supply chain</td><td className="p-4">Compromised releases can reach sites through updates; staging and release controls can limit exposure</td><td className="p-4">Malicious dependencies can steal build credentials or ship into server and browser code</td></tr>
+                                <tr><td className="p-4 font-bold">Secrets</td><td className="p-4">Server configuration, database credentials and integration tokens</td><td className="p-4">Host environment variables and provider tokens</td></tr>
                                 <tr><td className="p-4 font-bold">Blast radius of one bad update</td><td className="p-4">Can affect the live site immediately</td><td className="p-4">A build-breaking change fails to deploy; a change that builds cleanly still ships</td></tr>
                             </tbody>
                         </table>
                     </div>
-                    <InsightBox variant="warning" label="Read this honestly">
-                        Neither column is &ldquo;secure.&rdquo; They carry different shapes of risk, and where the risk
-                        sits is the difference worth understanding. On WordPress it sits at runtime, in third-party code
-                        executing on your server against your database. On Next.js it sits earlier, in dependencies and
-                        the build pipeline, so a change that breaks the build never reaches production. Which of those
-                        is safer depends entirely on which one your team is set up to watch, and we sell the second, so
-                        weigh that sentence accordingly. What is not in dispute: this is not the same as having no
-                        attack surface, and anyone telling you a static site cannot be compromised is selling something.
-                        Both models require someone to own patching. If nobody owns it, both end up vulnerable.
-                        Our <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">review of WordPress security risk in 2026</Link> and
-                        the <Link href="/blog/wordpress-april-2026-evidence" className="text-cognac hover:underline">April 2026 evidence behind it</Link> go
-                        through the runtime side in detail.
+                    <InsightBox variant="warning" label="What the comparison supports">
+                        A controlled deployment can keep an unreviewed dependency update away from production.
+                        A successful build does not detect every malicious change, and Next.js dependencies can
+                        execute at runtime too. WordPress can also use staged updates and restricted deployment
+                        permissions. The advantage comes from the architecture and release process you actually
+                        operate, with someone responsible for patches, monitoring and recovery.
                     </InsightBox>
+                    <BlogHeader id="plugin-buyouts">Can buying a plugin put existing websites at risk?</BlogHeader>
+                    <BlogText>
+                        Yes, when the buyer gains control of its releases. In its April 2026{' '}
+                        <a href="https://www.patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">EssentialPlugin investigation</a>,
+                        Patchstack documented an acquisition followed by backdoored updates and later remote
+                        activation. An already-installed plugin can therefore become a delivery route for malware.
+                        Buying a plugin license alone does not grant permission to publish updates to everyone
+                        else; control of the publisher or release credentials is the critical distinction.
+                    </BlogText>
+                    <BlogText>
+                        npm also has documented malicious-package campaigns. GitHub&apos;s{' '}
+                        <a href="https://github.blog/security/supply-chain-security/strengthening-supply-chain-security-preparing-for-the-next-malware-campaign/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Shai-Hulud analysis</a>{' '}
+                        describes credential theft through package installation. A compromised developer machine
+                        or build runner can expose credentials before anything is deployed. These incident reports
+                        do not provide comparable rates per website or installation, so they cannot establish that
+                        npm attacks are rarer or less exploitable than WordPress attacks.
+                    </BlogText>
+                    <BlogHeader id="security-recovery">How does fixing a security issue compare?</BlogHeader>
+                    <BlogText>
+                        Separate a vulnerable version from a confirmed compromise. Our practical comparison below
+                        assumes that the team can access the application, hosting and relevant logs. The repair scope
+                        depends on what executed and what it could access, not just the framework name.
+                    </BlogText>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Security repair comparison">
+                        <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100"><tr><th className="p-4">Situation</th><th className="p-4">WordPress</th><th className="p-4">Next.js and npm</th></tr></thead>
+                            <tbody className="divide-y divide-stone-200">
+                                <tr><td className="p-4">Vulnerable version, no compromise established</td><td className="p-4">Identify the affected core, theme or plugin edition and version. Apply the trusted fix, test key flows and update every affected installation.</td><td className="p-4">Identify direct and transitive affected packages. Update the dependency and lockfile, test, rebuild and redeploy every affected environment.</td></tr>
+                                <tr><td className="p-4">Malware or unauthorized access found</td><td className="p-4">Contain access and preserve evidence. Check files, database content, privileged users, scheduled tasks and persistent backdoors; restore or rebuild from a known-clean state and rotate exposed credentials.</td><td className="p-4">Contain affected machines and runners and preserve evidence. Revoke exposed tokens, investigate repositories and provider accounts, rebuild in a clean environment from trusted dependencies and redeploy.</td></tr>
+                                <tr><td className="p-4">After recovery</td><td className="p-4">Verify the original entry point is closed, check for remaining persistence and monitor for reinfection or spam.</td><td className="p-4">Verify the entry point is closed, inspect affected services and artifacts, and monitor for credential reuse or reinfection.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        Patching closes a known vulnerability; it does not remove every backdoor or undo stolen data.
+                        Rolling back a deployment cannot revoke a leaked token. Neither platform has a universal
+                        repair time or cost. For a smaller public website, fewer privileged integrations and static
+                        delivery where suitable can reduce exposure, while authenticated features and APIs still
+                        need their own security work.
+                    </BlogText>
 
                     <BlogHeader id="features">Plugin ecosystem versus assembled services</BlogHeader>
                     <BlogText>
@@ -571,7 +609,7 @@ export default function WordPressVsNextJsPage() {
                     <BlogText>
                         <Link href="/work/mycustompatches" className="text-cognac hover:underline">MyCustomPatches</Link> is an independent client, not a PandaCodeGen property, and its figures are
                         owner-confirmed and published with permission. The owner reports a delivery of about 22 days.
-                        We do not hold a dated record of that confirmation, so treat it as an owner statement for one
+                        Our central project record lists client-owner approval on July 21, 2026. Treat it as an owner statement for one
                         accepted scope rather than an audited figure. We attach no speed or conversion figures to it,
                         because one site&apos;s numbers depend on its own hosting, content, traffic and tracking setup,
                         and they would not predict what your migration produces. Judge the example on what it is: one
@@ -598,7 +636,7 @@ export default function WordPressVsNextJsPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

@@ -52,10 +52,10 @@ function LocaleNav({ locale }: { locale: "fr" | "de" }) {
   );
 }
 
-export default function RestyledShell({ kind, locale, children }: { kind: RestyledKind; locale?: "fr" | "de"; children: ReactNode }) {
+export default function RestyledShell({ kind, locale, footerLinksOnly = false, children }: { kind: RestyledKind; locale?: "fr" | "de"; footerLinksOnly?: boolean; children: ReactNode }) {
   const isLocale = kind === "locale" && locale;
   return (
-    <PreviewShell condensed contentTag="div" showChrome={!isLocale}>
+    <PreviewShell condensed contentTag="div" showChrome={!isLocale} footerLinksOnly={footerLinksOnly}>
       {isLocale && <LocaleNav locale={locale} />}
       <div className={styles.surface} data-kind={kind} data-locale={isLocale ? locale : undefined} lang={isLocale ? locale : undefined}>
         {children}

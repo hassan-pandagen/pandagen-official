@@ -1,6 +1,6 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import AboutPreview from "@/app/preview/about/page";
+import AboutPreview from "@/components/pages/about/AboutDesign";
 import { FOUNDING_DATE } from "@/data/company-facts";
 import { alternatesFor } from "@/lib/i18n/config";
 

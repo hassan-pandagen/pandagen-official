@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-04",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/gohighlevel-keep-crm-replace-website")],
@@ -69,7 +69,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-04",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -113,7 +113,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-04",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -158,7 +158,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                             does not end at launch.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 3, 2026 against current HighLevel developer and support documentation.
+                            Reviewed October 8, 2026 against current HighLevel developer and support documentation.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -169,25 +169,26 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                     <BlogAuthor
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
-                        date="May 4, 2026"
-                        readTime="9 min read"
+                        postId="gohighlevel-keep-crm-replace-website" published="2026-05-04"
+                        readTime="13 min read"
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         bio="Hassan designs CRM-connected websites and search-sensitive migrations."
                     />
 
                     <BlogText>
-                        Agency owners and developers have been describing the same website-builder problem on the HighLevel Ideas board and r/gohighlevel since 2024. These are their words, unedited, with a link to each original post.
+                        Agency owners and developers have been describing the same website-builder problem on the HighLevel Ideas board and r/gohighlevel since 2024. These are their words, shortened where marked, with a link to each original post.
                     </BlogText>
 
+                    {/* 8 Oct 2026: the first two quotes were reworded and the second one joined two comments from different threads. Both now match the cited posts word for word, and the second notes that HighLevel has marked that request complete. */}
                     <BlogQuote>
-                        Mobile takes 3 to 5 seconds on average to load sites. GHL fonts alone took a whole second to load.
+                        Mobile takes 3-5 seconds on average to load sites! … GHL&apos;s fonts alone took a whole second to load.
                     </BlogQuote>
                     <p className="text-xs text-stone-500 mt-1 mb-4">Viktar Saikouski, GHL Ideas Board, May 7, 2025 · <a href="https://ideas.gohighlevel.com/website/p/extremely-slow-mobile-website-load-speed" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <BlogQuote>
-                        I tested dozens of sites. None are above 50 on mobile performance. The best I can get on any HighLevel site is 47.
+                        I&apos;m not sure if this was ever fixed or not but the issue still exists! Best I can get on any highlevel site is 47 on mobile performance!
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">Jeffrey Lemoine, GHL Ideas Board, November 27, 2024 · <a href="https://ideas.gohighlevel.com/website/p/fix-mobile-page-speed" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Jeffrey Lemoine, GHL Ideas Board, November 27, 2024. HighLevel has since marked this request complete. · <a href="https://ideas.gohighlevel.com/website/p/fix-mobile-page-speed" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <BlogQuote>
                         I stripped everything off of the page. No images, no google fonts, no tracking js, no css, nothing. Just arial text on plain page. Page speed is extremely slow for such a basic page. … I love GHL but fear I&apos;m going to have to move to another LP solution due to these horrible load times.
@@ -236,7 +237,10 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         The split is the first thing to agree, because it decides how much integration you are taking
                         on. Anything the public sees and search engines read moves to the frontend, whether that frontend is Next.js, WordPress or Webflow. The integration questions below are the same in all three; only the build effort differs. Anything that runs
                         the business stays in HighLevel. Anything that crosses between the two is an integration
-                        somebody has to own after launch.
+                        somebody has to own after launch. If you are choosing between HighLevel&apos;s own builder and
+                        WordPress for that frontend, our{" "}
+                        <Link href="/blog/gohighlevel-vs-wordpress" className={sourceLinkClass}>GoHighLevel vs WordPress comparison</Link>{" "}
+                        sets the two side by side.
                     </BlogText>
                     <div className="my-8 grid gap-5 md:grid-cols-2">
                         <div className="rounded-2xl border border-stone-200 bg-stone-50 p-6">
@@ -331,18 +335,19 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         2.0 with scoped access for marketplace applications and also describes Private Integration
                         Tokens, sent as a bearer token alongside a Version header such as 2021-07-28, with scopes
                         chosen at creation. HighLevel&apos;s support documentation states that legacy API keys run on
+                        {/* 8 Oct 2026: was "keys unused for 90 days are deleted automatically". HighLevel's Private Integrations article now says they "may be marked as Expired". */}
                         API v1.0, which has reached end-of-life, that new v1 key creation is no longer supported, and
-                        that keys unused for 90 days are deleted automatically. If a tutorial tells you to paste an
-                        API key into your website, that instruction is out of date. HighLevel&apos;s OAuth FAQ
-                        currently publishes marketplace-app limits of 100 requests per 10 seconds and 200,000
-                        requests per day, per app per resource, and returns X-RateLimit-Max, X-RateLimit-Remaining,
+                        that keys unused for more than 90 days may be marked as expired. If a tutorial tells you to paste an
+                        API key into your website, that instruction is out of date. HighLevel&apos;s OAuth FAQ and
+                        rate-limits page currently publish marketplace-app limits of 100 requests per 10 seconds and 200,000
+                        requests per day, per app per resource, and the API returns X-RateLimit-Max, X-RateLimit-Remaining,
                         X-RateLimit-Limit-Daily and X-RateLimit-Daily-Remaining headers so you can see where you
                         stand. Available resources, versions, scopes and limits must still be checked for the target
                         account when the project is scoped, because these numbers are the vendor&apos;s to change.
                     </BlogText>
                     <BlogText>
                         HighLevel&apos;s support documentation also shows its website builder includes SEO metadata,
-                        mobile editing, tracking code, custom CSS, and external JavaScript behavior. This is an
+                        mobile editing, tracking code and custom CSS. This is an
                         architecture choice, not proof that every native HighLevel site is broken.
                     </BlogText>
 
@@ -409,12 +414,13 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         with Ed25519 as the current header, to be used whenever it is present. The legacy
                         RSA-SHA256 header{" "}
                         <code className="rounded bg-stone-100 px-1.5 py-0.5 text-sm">X-WH-Signature</code>{" "}
+                        {/* 8 Oct 2026: this called September 1, 2026 a live deadline. That date has passed, and the guide (read today) still gives it without saying whether the switch has happened. */}
                         is documented as deprecated on September 1, 2026, after which webhooks are signed with
-                        the Ed25519 header only. That date is fixed,
-                        so this is a live deadline rather than a future one. If you have inherited a HighLevel
+                        the Ed25519 header only. That date has now passed, and when we read the guide on October 8,
+                        2026 it still gave the same date without saying whether the switch had happened. If you have inherited a HighLevel
                         integration, search the codebase for that legacy string now: anything still verifying
                         against it alone will start rejecting or, worse, silently accepting unverified webhooks
-                        once the switch happens. Recheck the guide before release, because vendor dates move.
+                        once the legacy header stops arriving. Recheck the guide before release, because vendor dates move.
                     </BlogText>
                     <BlogList
                         items={[

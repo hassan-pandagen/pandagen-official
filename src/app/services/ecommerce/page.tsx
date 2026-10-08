@@ -1,22 +1,25 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import ServiceDetailPreview from "@/app/preview/services/ServiceDetailPreview";
-import { servicePreview } from "@/app/preview/services/service-data";
-import { previewServiceFaqs } from "@/app/preview/services/preview-faqs";
+import ServicePageSchema from "@/components/services/ServicePageSchema";
+import ServiceDetailPreview from "@/components/pages/services/ServiceDetailPreview";
+import { servicePreview } from "@/components/pages/services/service-data";
+import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 // 30 Sep 2026: renders the redesign (built under /preview/services). Metadata
 // stay here; the FAQ structured data now comes from the FAQs the redesign shows.
 
 
 const canonical = "https://www.pandacodegen.com/services/ecommerce";
+const name = "Shopify & WooCommerce Ecommerce Development";
+const description = "Build or improve a Shopify or WooCommerce store. Plan products, checkout and orders together, with a custom storefront where the requirements justify it.";
 
 export const metadata: Metadata = {
-  title: "Shopify & WooCommerce Storefront Engineering",
-  description: "Evaluate theme repair, headless storefronts, and replatforming for Shopify or WooCommerce using measured constraints, operating costs, risks, and acceptance criteria.",
+  title: name,
+  description,
   alternates: { canonical: "/services/ecommerce" },
   openGraph: {
-    title: "Shopify & WooCommerce Storefront Engineering | PandaCodeGen",
-    description: "A measured path from storefront constraint to a scoped commerce architecture and migration plan.",
+    title: `${name} | PandaCodeGen`,
+    description,
     url: canonical,
     siteName: "PandaCodeGen",
     type: "website",
@@ -24,50 +27,24 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shopify & WooCommerce Storefront Engineering | PandaCodeGen",
-    description: "A measured path from storefront constraint to a scoped commerce architecture and migration plan.",
+    title: `${name} | PandaCodeGen`,
+    description,
   },
 };
 
 export default function EcommercePage() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": `${canonical}#webpage`,
-        url: canonical,
-        name: "Shopify & WooCommerce Storefront Engineering",
-        description: "A diagnostic and delivery approach for Shopify and WooCommerce storefront repair, headless architecture, and replatforming.",
-        isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
-        inLanguage: "en-US",
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
-          { "@type": "ListItem", position: 2, name: "Services", item: "https://www.pandacodegen.com/services" },
-          { "@type": "ListItem", position: 3, name: "E-commerce", item: canonical },
-        ],
-      },
-      {
-        // Same list the redesign renders, so the schema cannot assert an answer
-        // the visitor cannot see. This page builds its graph inline rather than
-        // using ServicePageSchema, which is why the node is spelled out here.
-        "@type": "FAQPage",
-        "@id": `${canonical}#faq`,
-        mainEntity: previewServiceFaqs("ecommerce").map((faq) => ({
-          "@type": "Question",
-          name: faq.q,
-          acceptedAnswer: { "@type": "Answer", text: faq.a },
-        })),
-      },
-    ],
-  };
-
+  // 4 Oct 2026: switched from an inline graph to ServicePageSchema, which emits the
+  // same WebPage, BreadcrumbList and FAQPage nodes (FAQs from the list the redesign
+  // renders) plus the Service node for the "What you keep" section on this page.
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <ServicePageSchema
+        path="/services/ecommerce"
+        name={name}
+        description={description}
+        breadcrumb="E-commerce"
+        faqs={previewServiceFaqs("ecommerce")}
+      />
       <ServiceDetailPreview service={servicePreview("ecommerce")} />
     </>
   );

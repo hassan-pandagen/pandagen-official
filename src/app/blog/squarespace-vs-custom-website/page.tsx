@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-14",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/squarespace-vs-custom-website")],
@@ -80,7 +80,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/squarespace-vs-custom-website"),
             description,
             datePublished: "2026-04-14",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -164,7 +164,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                             performance, ownership and total cost, not a fixed PageSpeed or payback claim.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Squarespace and Google documentation.
+                            Reviewed October 8, 2026 against current Squarespace and Google documentation.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -172,7 +172,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 14, 2026" readTime="6 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="squarespace-vs-custom-website" published="2026-04-14" readTime="10 min read" />
 
                     <BlogText>
                         Squarespace users wrote the following themselves, on r/squarespace, about the editor, mobile layouts and an outage. Each quote links to the post it came from.
@@ -225,12 +225,12 @@ export default function SquarespaceVsCustomWebsitePage() {
                         with the roles and content types the team uses.
                     </BlogText>
                     <BlogText>
-                        One workflow question deserves a separate answer: what the next redesign costs. Squarespace 7.1
-                        may offer no template-swap action, and where it does not, a change of layout direction is rebuilt page by page in the
-                        editor and the cost scales with the number of pages. On a custom build the design layer is
-                        separate from the content store, so templates and components can change while the content stays
-                        where it is. Confirm the current behavior in Squarespace&apos;s documentation before planning a
-                        rebrand around either assumption.
+                        {/* 8 Oct 2026: was "may offer no template-swap action ... confirm the current behavior". Squarespace's help article "What's my site's version and template?" says "It's not possible to switch templates on version 7.1", so the hedge is gone. */}
+                        One workflow question deserves a separate answer: what the next redesign costs. Squarespace&apos;s
+                        help center says it isn&apos;t possible to switch templates on version 7.1, so a change of layout
+                        direction is rebuilt page by page in the editor and the cost scales with the number of pages. On a
+                        custom build the design layer is separate from the content store, so templates and components can
+                        change while the content stays where it is.
                     </BlogText>
 
                     <BlogQuote>
@@ -271,7 +271,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                         is marketing sending, with its own quota, and its free access is a small number of trial blasts
                         rather than a recurring monthly allowance. Counting Campaigns into the cost of operational
                         booking mail inflates the Squarespace total against a custom build, and we are not going to do
-                        that. Checked 13 September 2026.
+                        that. Checked 8 October 2026.
                     </BlogText>
                     <BlogText>
                         The same questions apply to the other managed builders. We run them for{" "}
@@ -284,7 +284,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                     <BlogHeader id="completely-custom">Can you make a completely custom website on Squarespace?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Visually, close to it. Structurally, no — and the boundary is specific enough to check
+                            Visually, close to it. Structurally, no, and the boundary is specific enough to check
                             against your own requirements rather than argue about. Custom CSS and code injection let you
                             change how a Squarespace site looks and behaves to a degree most visitors would never
                             identify as a template. What you cannot change is the layer underneath the design.
@@ -298,7 +298,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                         items={[
                             "robots.txt is generated and not editable. You get two checkboxes, not a file. If your crawl strategy needs directives beyond those, it cannot be expressed.",
                             "Squarespace emits six schema types automatically and they cannot be edited or removed. You can add markup through code injection, but you cannot stop the platform's own from being emitted, so a conflict is resolved in the platform's favour.",
-                            "Redirects are entered line by line with no file import. That is an ergonomic limit at ten URLs and a project cost at a thousand.",
+                            "URL mappings can be pasted in bulk and collection patterns can reduce repetition. Budget for creating and testing the redirect map; effort depends on URL patterns and exceptions, not a claim that each line must be typed manually.",
                             "The export is partial. Layout pages, one blog and selected blocks come out; store pages, portfolio and other page types, product and video blocks, drafts, style settings and your custom CSS do not.",
                         ]}
                     />
@@ -379,7 +379,9 @@ export default function SquarespaceVsCustomWebsitePage() {
                         Squarespace&apos;s XML export includes selected content but excludes several page types, store
                         pages, product and video blocks, drafts, style settings and custom CSS. A custom migration must
                         independently inventory and transform those excluded systems. For the target, require content
-                        and data export, account control, repository access and documented handoff.
+                        and data export, account control, repository access and documented handoff. Our{" "}
+                        <Link href="/blog/website-portability" className="text-cognac hover:underline">platform export comparison</Link>{" "}
+                        lists what Squarespace&apos;s export covers row by row, next to seven other platforms.
                     </BlogText>
                     <BlogText>
                         Treat the domain and mailboxes as a separate work item from the site. Confirm who holds the

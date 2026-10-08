@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-30",
-        modifiedTime: "2026-09-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-to-speed-up-your-website")],
@@ -71,7 +71,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-04-30",
-            dateModified: "2026-09-29",
+            dateModified: "2026-10-08",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -114,7 +114,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-04-30",
-            dateModified: "2026-09-29",
+            dateModified: "2026-10-08",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -153,22 +153,28 @@ function WebsiteSpeedGuideContent({ preview = false }: { preview?: boolean }) {
                             a platform name or one score.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Last reviewed September 19, 2026. Sources and testing notes are linked throughout.
+                            Last reviewed October 8, 2026, including the Core Web Vitals thresholds on web.dev. Sources and testing notes are linked throughout.
                         </p>
                         </div>
                         <div data-article-hero-screen data-website-example>
                             <figure>
-                                <Image src="/blog-covers/how-to-speed-up-your-website.webp?v=20260930" alt="Illustrative website beside a page inspection panel for images, scripts and server response" width={1200} height={750} sizes="(min-width: 900px) 480px, 90vw" unoptimized />
+                                <Image src="/blog-covers/how-to-speed-up-your-website.webp?v=20261001" alt="Developer inspecting a website and its network requests on a desktop monitor" width={1200} height={750} sizes="(min-width: 900px) 480px, 90vw" unoptimized />
                             </figure>
                         </div>
                     </header>
 
-                    {preview ? <div data-article-byline className="flex items-center gap-3"><Image src="/team/hassan.png" alt="Hassan Jamal" width={56} height={56} className="h-14 w-14 object-cover" /><p><Link href="/about/hassan" className="font-semibold underline underline-offset-4">Hassan Jamal</Link><span className="block text-sm">Co-founder and Lead Engineer · April 30, 2026 · 14 min read</span></p></div> : <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="April 30, 2026" readTime="14 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />}
+                    {preview ? <div data-article-byline className="flex items-center gap-3"><Image src="/team/hassan.png" alt="Hassan Jamal" width={56} height={56} className="h-14 w-14 object-cover" /><p><Link href="/about/hassan" className="font-semibold underline underline-offset-4">Hassan Jamal</Link><span className="block text-sm">Co-founder and Lead Engineer · April 30, 2026 · 14 min read</span></p></div> : <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="how-to-speed-up-your-website" published="2026-04-30" readTime="14 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />}
                     <BlogHeader id="where-to-start">Start with the page that feels slow</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             You do not need to work through all twelve checks. Choose one page that matters to your
                             visitors, get a result for that page, and start with the part causing the wait.
+                        </BlogText>
+                        <BlogText>
+                            Name what feels slow before you test it. A blank first screen, a hero image that arrives
+                            late, a menu that ignores a tap and a form that freezes after you submit it are different
+                            problems, and each needs different evidence and a different fix. One homepage score
+                            can&apos;t stand for every visitor, page, device and interaction.
                         </BlogText>
 
                         <ArticleContents initiallyOpen={false} />
@@ -290,8 +296,8 @@ function WebsiteSpeedGuideContent({ preview = false }: { preview?: boolean }) {
                     <BlogText>
                         So we measured this page the way a crawler sees it. Requesting it as GPTBot on 13 September 2026
                         returned <strong>716,835 bytes of HTML uncompressed</strong>, of which{" "}
-                        <strong>64.1% is inline script, 23.3% inline CSS, 9.1% markup and 3.5% readable text</strong>
-                        &mdash; about 4,081 words in 24.8 KB. Before you read that as bloat, here is what it actually
+                        <strong>64.1% is inline script, 23.3% inline CSS, 9.1% markup and 3.5% readable text</strong>,
+                        about 4,081 words in 24.8 KB. Before you read that as bloat, here is what it actually
                         is. Most of that script is the React Server Component payload Next.js inlines so the browser can
                         hydrate without a second request, and it contains a serialised copy of the same sentences that
                         are already in the HTML. The content is genuinely in the document twice, by design. Compression
@@ -337,8 +343,8 @@ function WebsiteSpeedGuideContent({ preview = false }: { preview?: boolean }) {
                         Test representative templates and states: home, long content, search, product, collection, form,
                         cart, account and error. A homepage result cannot prove a page with different content, scripts
                         or interaction. Record the release and page state with the baseline. If you are still working
-                        out the symptom, start with{" "}
-                        <Link href="/blog/why-is-my-website-loading-so-slow" className="text-cognac hover:underline">why a site loads slowly</Link>{" "}
+                        out the symptom, read{" "}
+                        <a href="#fast-for-you" className="text-cognac hover:underline">why a site can seem fast to you and slow to everyone else</a>{" "}
                         and come back to this list.
                     </BlogText>
 
@@ -359,6 +365,29 @@ function WebsiteSpeedGuideContent({ preview = false }: { preview?: boolean }) {
                         at or under 0.1. Those are the numbers to design an acceptance test around. A <a href="https://developer.chrome.com/docs/lighthouse/performance/performance-scoring" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Lighthouse
                         performance score</a> is a weighted summary of lab metrics, not a fourth vital and not a ranking
                         cutoff.
+                    </BlogText>
+                    <BlogText>
+                        Google&apos;s{" "}
+                        <a href="https://web.dev/articles/defining-core-web-vitals-thresholds" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">threshold article on web.dev</a>,
+                        checked October 8, 2026, also sets where poor begins: above 4 seconds for LCP, above 500
+                        milliseconds for INP and above 0.25 for CLS. Every one of those lines is judged at the 75th
+                        percentile of visits.
+                    </BlogText>
+
+                    <BlogHeader id="fast-for-you">Why it seems fast to you and slow to everyone else</BlogHeader>
+                    <BlogText>
+                        This is usually where an owner starts doubting the report. You open your own site on a good
+                        phone, on your own network, with the images already in your browser cache from the last time
+                        you looked. Someone arriving for the first time on a mid-range Android over mobile data
+                        downloads all of it from scratch. Those are two different page loads, and only one of them is
+                        being measured.
+                    </BlogText>
+                    <BlogText>
+                        The 75th percentile settles the argument. Your site isn&apos;t graded on its average visit;
+                        it&apos;s graded at roughly the slowest quarter of visits, which is why a site can feel fine every
+                        time you check it and still be assessed as poor. To see what your visitors see, test on a
+                        throttled mobile profile with an empty cache. When your impression and the field data
+                        disagree, the field data is the one describing your customers.
                     </BlogText>
 
                     <BlogHeader id="which-tool">Which tool answers which question</BlogHeader>

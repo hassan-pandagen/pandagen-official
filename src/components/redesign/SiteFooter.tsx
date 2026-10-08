@@ -17,8 +17,11 @@ import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 // ─────────────────────────────────────────────────────────────────────────────
 
 const services = [
+  { href: "/services/wordpress", text: "WordPress Websites" },
   { href: "/services/wordpress-migration", text: "WordPress Migration" },
   { href: "/services/custom-engineering", text: "Custom software" },
+  { href: "/services/sanity-development", text: "Sanity CMS Development" },
+  { href: "/services/backend-development", text: "Backend Development" },
   { href: "/services/ai-seo", text: "AI SEO" },
   { href: "/services/ecommerce", text: "E-Commerce" },
   { href: "/services/wix", text: "Wix Migration" },
@@ -31,7 +34,7 @@ const services = [
 const company = [
   { href: "/work", title: "Project Evidence", desc: "Method, permission, and publication controls." },
   { href: "/partners", title: "Agency Pilot", desc: "Test one scoped engagement first." },
-  { href: "/about", title: "About", desc: "Migration delivery standards." },
+  { href: "/about", title: "About", desc: "Meet the founders and see how they work." },
   { href: "/about/hassan", title: "Hassan Jamal", desc: "Co-founder and Lead Engineer." },
   { href: "/about/imran", title: "Imran Raza Ladhani", desc: "Co-founder and Head of Marketing." },
   { href: "/blog", title: "Engineering Blog", desc: "Deep dives into Next.js and performance." },
@@ -41,7 +44,7 @@ const company = [
 
 const resources = [
   { href: "/pricing", title: "Example Scopes", desc: "Price drivers and proposal controls." },
-  { href: "/services", title: "Migration Services", desc: "Platform and engineering options." },
+  { href: "/services", title: "Services", desc: "WordPress, custom builds, migrations and engineering." },
   { href: "/ai-info", title: "Facts and Figures", desc: "Pricing, team, case studies and guarantees, stated plainly." },
   { href: "/security", title: "Security", desc: "Reporting and disclosure process." },
   { href: "/editorial-policy", title: "Editorial Policy", desc: "Sources, evidence, freshness, and corrections." },
@@ -58,21 +61,22 @@ function Heading({ children }: { children: ReactNode }) {
   );
 }
 
-export default function SiteFooter() {
+export default function SiteFooter({ compactTop = false, linksOnly = false }: { compactTop?: boolean; linksOnly?: boolean }) {
   return (
     <footer style={{ backgroundColor: T.dark, color: T.onDark }}>
       {/* Closing block. Copy unchanged. */}
-      <section aria-labelledby="closing-title" className="px-6 pb-20 pt-28 md:px-10 md:pb-28 md:pt-40">
+      {!linksOnly && <section aria-labelledby="closing-title" className={`px-6 pb-16 md:px-10 md:pb-20 ${compactTop ? "pt-10 md:pt-12" : "pt-16 md:pt-20"}`}>
         <div className="mx-auto max-w-[1440px] text-center">
           <p className="text-[12px] uppercase tracking-[0.16em]" style={{ fontFamily: MONO, color: T.onDarkQuiet }}>
             Work directly with the founders
           </p>
           <h2
             id="closing-title"
-            className="mx-auto mt-6 max-w-[12ch]"
-            style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(3.2rem, 9vw, 9rem)", lineHeight: 0.92, letterSpacing: "-0.03em" }}
+            className="mx-auto mt-6"
+            style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(3.2rem, 8vw, 8.5rem)", lineHeight: 0.92, letterSpacing: "-0.03em" }}
           >
-            Have something in mind?
+            <span className="block">Have something</span>{" "}
+            <span className="block" style={{ color: T.onDarkAccent }}>in mind?</span>
           </h2>
           <p className="mx-auto mt-8 max-w-[36rem] text-[18px] leading-[1.6]" style={{ color: T.onDarkQuiet }}>
             A new website, a store to improve, or a workflow to simplify. Tell Hassan or Imran what you need, even if you
@@ -102,7 +106,7 @@ export default function SiteFooter() {
             A founder replies by email, usually within one business day. No obligation to start a project.
           </p>
         </div>
-      </section>
+      </section>}
 
       {/* Links. */}
       <div className="border-t px-6 pb-10 pt-16 md:px-10" style={{ borderColor: T.onDarkRule }}>
@@ -129,7 +133,7 @@ export default function SiteFooter() {
               <li>
                 <address className="not-italic" style={{ color: T.onDarkQuiet }}>
                   12250 S Kirkwood Rd, Apt 1128
-                  <br />
+                  {" "}<br />
                   Stafford, TX 77477, United States
                 </address>
               </li>

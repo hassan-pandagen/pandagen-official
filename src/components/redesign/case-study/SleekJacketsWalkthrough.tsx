@@ -72,7 +72,7 @@ export default function SleekJacketsWalkthrough() {
       slug="sleek-jackets"
       projectName="Sleek Jackets"
       eyebrow="An outerwear store, in private preview."
-      heading={<>A storefront that lets<br />the product lead.</>}
+      heading={<>A storefront that lets{" "}<br />the product <em>lead.</em></>}
       lead={<>The <strong>storefront</strong> a shopper lands on, and the <strong>collection</strong> behind it.</>}
       navAriaLabel="Explore the Sleek Jackets build"
       chapters={chapters}

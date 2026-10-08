@@ -1,3 +1,4 @@
+import FaqRows from "./FaqRows";
 
 interface FAQ {
   question: string;
@@ -26,8 +27,21 @@ interface FAQ {
  * hydration cost and any collapse-driven layout shift.
  *
  * Deliberately a server component: no state, no 'use client', no JS shipped.
+ *
+ * showHeading={false} is for a page that already writes its own FAQ heading
+ * right above this block. On 4 Oct 2026, 49 blog posts showed two H2s in a row
+ * ("Frequently asked questions" from the post, then "Frequently Asked Questions"
+ * from here). The post's heading stays because it carries the #faq anchor the
+ * in-page contents links to. Only the heading is dropped; the answers stay visible.
  */
-export function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
+export function FAQAccordion({ faqs, showHeading = true }: { faqs: FAQ[]; showHeading?: boolean }) {
+  if (!showHeading) {
+    return (
+      <section className="mb-0">
+        <FaqRows faqs={faqs} />
+      </section>
+    );
+  }
   return (
     <section className="mt-10 md:mt-20 mb-0" aria-labelledby="faq-heading">
       <h2
@@ -36,22 +50,7 @@ export function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
       >
         Frequently Asked Questions
       </h2>
-      <div className="space-y-4">
-        {faqs.map((faq, i) => (
-          <div
-            key={i}
-            className="border border-gray-200 rounded-2xl bg-white p-6"
-          >
-            <h3 className="flex items-start gap-3 text-lg font-semibold text-charcoal">
-              <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cognac" aria-hidden="true" />
-              <span>{faq.question}</span>
-            </h3>
-            <p className="mt-3 border-t border-gray-200 pt-4 text-base leading-relaxed text-stone-600">
-              {faq.answer}
-            </p>
-          </div>
-        ))}
-      </div>
+      <FaqRows faqs={faqs} />
     </section>
   );
 }

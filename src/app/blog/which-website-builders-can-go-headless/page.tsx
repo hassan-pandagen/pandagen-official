@@ -65,7 +65,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-18",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/which-website-builders-can-go-headless")],
@@ -83,7 +83,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/which-website-builders-can-go-headless"),
             datePublished: "2026-08-18T00:00:00-05:00",
-            dateModified: "2026-08-19T00:00:00-05:00",
+            dateModified: "2026-10-08T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -171,10 +171,10 @@ const PLATFORMS = [
     },
     {
         name: "GoHighLevel",
-        content: "Unclear",
+        content: "Partial",
         commerce: "No",
-        verdict: "Not established",
-        note: "Business operations APIs; content delivery not confirmed",
+        verdict: "Validate scope",
+        note: "Blog endpoints are documented; test body fields, media and access before choosing an architecture",
     },
 ];
 
@@ -209,7 +209,7 @@ export default function WhichBuildersHeadlessPage() {
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Three of the six can: Shopify, WooCommerce and Wix. Webflow cannot in the usual sense and
                             has deliberately built the reverse. Squarespace cannot at all, and does not use the word
-                            once in its developer documentation. GoHighLevel publishes no confirmed content API. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
+                            once in its developer documentation. GoHighLevel documents blog-post APIs; validate the fields and account access needed for your frontend. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Every claim here was read off the vendor&apos;s own API documentation in {checkedOn}, not
@@ -224,7 +224,7 @@ export default function WhichBuildersHeadlessPage() {
                     <BlogAuthor
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
-                        date="18 August 2026"
+                        postId="which-website-builders-can-go-headless" published="2026-08-18"
                         readTime="10 min"
                     />
 
@@ -303,8 +303,10 @@ export default function WhichBuildersHeadlessPage() {
                         model and a consistent API pattern. Read {asOf("wix-headless-price")}.
                     </BlogText>
                     <BlogText>
-                        Wix also offers something the others do not: hosted pages for checkout, booking and ticket
-                        purchase flows that you can redirect into rather than rebuild. For a small team that wants a
+                        Wix offers hosted pages for checkout, booking and ticket purchase flows that you can redirect
+                        into rather than rebuild. Hosted checkout is not unique to Wix:{" "}
+                        <a href="https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/cart/manage" className="text-cognac underline">Shopify also provides a checkout URL</a>{" "}
+                        for a custom storefront to hand off to its checkout. For a small team that wants a
                         custom front end without owning payment-flow edge cases, that is a real shortcut, and it is an
                         honest one because Wix documents it as such rather than pretending the custom path is easy.
                         Wix Headless also carries SOC 2 Type II, HIPAA and GDPR compliance, which matters if you are in
@@ -372,19 +374,19 @@ export default function WhichBuildersHeadlessPage() {
                         assume a full rebuild rather than a staged one.
                     </BlogText>
 
-                    <BlogHeader>GoHighLevel: business APIs, but no confirmed content API</BlogHeader>
+                    <BlogHeader>GoHighLevel: documented blog and business APIs</BlogHeader>
                     <BlogText>
-                        GoHighLevel publishes {spec("gohighlevel-api-scope").value}. Those are operations APIs, and
-                        they are good ones for what they do. What we could not confirm is whether GoHighLevel can serve
-                        page or blog content to an external front end. Checked {asOf("gohighlevel-api-scope")}.
+                        GoHighLevel publishes {spec("gohighlevel-api-scope").value}. It also documents{" "}
+                        <a href="https://marketplace.gohighlevel.com/docs/2021-07-28/ghl/blogs/get-blog-post/" className="text-cognac underline">blog-post listing</a>{" "}
+                        by blog ID, with pagination and publication-status filters, and a Get Blog Post by ID endpoint.
+                        Documentation checked October 8, 2026.
                     </BlogText>
                     <BlogText>
-                        Blogs and Funnels APIs are listed in the developer portal navigation, but the endpoint
-                        documentation is rendered client-side and neither a direct fetch nor a parse reached the field
-                        definitions. We are recording that as unestablished rather than guessing, because the
-                        difference between an API that returns post metadata and one that returns post body content is
-                        the entire question, and getting it wrong in either direction would mislead someone planning a
-                        build.
+                        A documented endpoint is not a tested integration. Before using it as the content backend,
+                        validate authorization, post-body fields, media, pagination, drafts and publishing behavior
+                        against the target account. Blog access does not establish that complete builder layouts,
+                        funnels and page behavior can be exported unchanged. Our earlier wording overstated the gap
+                        by describing content APIs as unconfirmed.
                     </BlogText>
                     <BlogText>
                         For agencies, the pattern that works regardless is the one we already recommend:{" "}
@@ -393,6 +395,13 @@ export default function WhichBuildersHeadlessPage() {
                         </Link>
                         . The CRM, calendar and payment integrations are the reason people stay, and none of them
                         require GoHighLevel to render the pages.
+                    </BlogText>
+                    <BlogText>
+                        If the complaint is that the pages are slow rather than that the content is locked in, start
+                        with{" "}
+                        <Link href="/blog/gohighlevel-website-speed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">what you can and can&apos;t fix on a slow GoHighLevel page</Link>
+                        . Agencies picking a builder for client sites can compare the options in{" "}
+                        <Link href="/blog/best-website-builder-for-gohighlevel-agencies" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">our GoHighLevel website builder comparison</Link>.
                     </BlogText>
 
                     <BlogQuote>
@@ -415,7 +424,7 @@ export default function WhichBuildersHeadlessPage() {
                             <ul className="space-y-2.5 text-sm leading-relaxed text-stone-700">
                                 <li><strong className="text-charcoal">Webflow.</strong> Runs it in reverse: you bring your code to Webflow rather than Webflow content to you</li>
                                 <li><strong className="text-charcoal">Squarespace.</strong> Nine APIs, all back-office, no content and no storefront</li>
-                                <li><strong className="text-charcoal">GoHighLevel.</strong> Business operations APIs; content delivery not established</li>
+                                <li><strong className="text-charcoal">GoHighLevel.</strong> Blog-post and operations APIs; validate required content fields and account access</li>
                             </ul>
                         </div>
                     </div>
@@ -495,7 +504,7 @@ export default function WhichBuildersHeadlessPage() {
                     <BlogText>
                         Three specific limits are worth stating. Plan requirements were not confirmed for Shopify or
                         Squarespace, because neither states them on the pages checked, so assume your tier may matter.
-                        GoHighLevel&apos;s content APIs are unestablished for the reason given above. And all of this
+                        GoHighLevel&apos;s blog endpoints are documented, but we have not tested a complete content-delivery integration here. And all of this
                         is dated: these are other companies&apos; APIs, they change without telling us, and the check
                         date against each claim is there so you can judge how much to trust it.
                     </BlogText>
@@ -509,9 +518,10 @@ export default function WhichBuildersHeadlessPage() {
                         to migrate, because it costs nothing to evaluate.
                     </BlogText>
                     <BlogText>
-                        If you are on Squarespace or GoHighLevel and want a custom front end, there is no incremental
-                        route, and the decision is a rebuild. That is not a reason to rush one. It is a reason to be
-                        clear that the choice is binary before you start, rather than discovering it three weeks in.
+                        For Squarespace, inventory the export and API gaps before planning a replacement frontend.
+                        For GoHighLevel, a staged approach can retain CRM workflows and test blog delivery before
+                        replacing other pages. Neither route should be sold as a complete layout export or a
+                        risk-free switch.
                     </BlogText>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
@@ -526,12 +536,12 @@ export default function WhichBuildersHeadlessPage() {
                             starts with that assessment rather than with a rebuild.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                            Book a 30-minute review <ArrowRight className="h-4 w-4" />
+                            Book a 15-minute review <ArrowRight className="h-4 w-4" />
                         </CalModalButton>
                     </section>
 
                     <BlogHeader>Frequently asked questions</BlogHeader>
-                    <FAQAccordion faqs={postFAQs} />
+                    <FAQAccordion faqs={postFAQs} showHeading={false} />
 
                     <BlogHeader>Primary sources</BlogHeader>
                     <BlogText>

@@ -79,7 +79,7 @@ export default function PageContent() {
               See How It Works <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
-          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your WordPress URL when you book. We run your PageSpeed live and give you a <span className="text-charcoal font-medium">fixed migration quote on the spot.</span></p>
+          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">15-min call. Drop your WordPress URL when you book. We run your PageSpeed live and give you a <span className="text-charcoal font-medium">fixed migration quote on the spot.</span></p>
         </div>
       </section>
 
@@ -185,7 +185,7 @@ export default function PageContent() {
           <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Customer-first, not profit-first</p>
             <p className="text-stone-300 leading-relaxed">
-              <Link href="/free-audit" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Free audit</Link> at pandacodegen.com requires no email, no Calendly, no sales pitch. Drop your URL, receive a PageSpeed reading and a list of things worth investigating. A separate free 30-minute consultation call with co-founder Hassan Jamal is available for deeper review of competing agency quotes. We will tell you honestly if a competing quote is fair, or if migration does not make sense for your situation.
+              <Link href="/free-audit" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Free audit</Link> at pandacodegen.com requires no email, no Calendly, no sales pitch. Drop your URL, receive a PageSpeed reading and a list of things worth investigating. A separate free 15-minute consultation call with co-founder Hassan Jamal is available for deeper review of competing agency quotes. We will tell you honestly if a competing quote is fair, or if migration does not make sense for your situation.
             </p>
           </div>
           <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
@@ -629,7 +629,7 @@ export default function PageContent() {
               { href: "/blog/wordpress-vs-nextjs", title: "WordPress vs Next.js", desc: "Choose by operating capability, not by which platform is better." },
               { href: "/blog/wordpress-plugins-destroy-speed", title: "How Plugins Destroy Your Speed", desc: "Why plugin count proves nothing, and what to measure instead." },
               { href: "/blog/wordpress-ai-security-risk-2026", title: "WordPress AI Security Risk 2026", desc: "Reading the AI-plugin advisories precisely, and what to patch." },
-              { href: "/blog/wordpress-killer", title: "The WordPress Killer", desc: "Build the three-year cost from your own invoices, not from an average." },
+              { href: "/blog/wordpress-vs-custom-code-real-cost-3-years", title: "WordPress vs Custom Code: 3-Year Cost", desc: "Build the three-year cost from your own invoices, not from an average." },
               { href: "/blog/elementor-kills-seo", title: "Elementor Kills SEO", desc: "How to test whether your own Elementor templates are the problem." },
               { href: "/blog/wordpress-traffic-drop-speed", title: "WordPress Traffic Drop Fix", desc: "Find the cause before the fix, and check speed last rather than first." },
               { href: "/blog/how-to-fix-slow-wordpress", title: "How to Fix Slow WordPress", desc: "An evidence-led order: environment, caching, assets, then code." },
@@ -663,7 +663,7 @@ export default function PageContent() {
             </div>
             <div className="flex items-start gap-4">
               <Link href="/about/imran" className="shrink-0">
-                <Image src="/team/imran.png" alt="Imran" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
+                <Image src="/team/imran-editorial.png" alt="Imran" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
               </Link>
               <div>
                 <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>

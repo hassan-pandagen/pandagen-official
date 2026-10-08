@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-04",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/spending-more-on-ads-fewer-orders-tracking")],
@@ -56,9 +56,11 @@ export const metadata: Metadata = {
 };
 
 const sources = [
+    // 8 Oct 2026: the old link pointed at the Messenger Help Center copy of this article. Same
+    // article id on the Business Help Center, titled "Set up and install the Meta Pixel".
     {
-        name: "Meta: set up the Meta pixel and Conversions API",
-        url: "https://www.facebook.com/help/messenger-app/952192354843755",
+        name: "Meta: set up and install the Meta Pixel",
+        url: "https://www.facebook.com/business/help/952192354843755",
     },
     {
         name: "Meta Business Tools overview",
@@ -96,7 +98,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/spending-more-on-ads-fewer-orders-tracking"),
             description,
             datePublished: "2026-06-04",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -139,7 +141,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-04",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -181,7 +183,7 @@ export default function SpendingMoreOnAdsTrackingPage() {
                             platform reporting before changing campaigns or promising that server events will fix them.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 1, 2026 against current Meta and Google guidance.
+                            Reviewed October 8, 2026 against current Meta and Google guidance.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -189,7 +191,7 @@ export default function SpendingMoreOnAdsTrackingPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jun 4, 2026" readTime="9 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="spending-more-on-ads-fewer-orders-tracking" published="2026-06-04" readTime="12 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Separate four questions</h2>
@@ -233,7 +235,7 @@ export default function SpendingMoreOnAdsTrackingPage() {
                     />
                     <InsightBox variant="info">
                         <strong>The test that splits this in one sitting.</strong> Count the orders in your own system
-                        of record — the store admin, the ERP, the payment processor — for an exact date range, then
+                        of record (the store admin, the ERP, the payment processor) for an exact date range, then
                         compare that count against what the ad platform reports as conversions for the same range and
                         the same campaigns. If real orders held steady while platform-reported conversions fell,{" "}
                         <strong>you have fewer recorded orders, not fewer orders</strong>, and the problem is
@@ -243,10 +245,10 @@ export default function SpendingMoreOnAdsTrackingPage() {
                     </InsightBox>
 
                     <BlogText>
-                        That distinction is missing from most advice on this symptom. The usual explanations —{" "}
-                        <strong>audience saturation</strong>, creative fatigue, broad or colder{" "}
+                        That distinction is missing from most advice on this symptom. The usual explanations{" "}
+                        (<strong>audience saturation</strong>, creative fatigue, broad or colder{" "}
                         <strong>targeting</strong> as budget rises, and disrupting the{" "}
-                        <strong>learning phase</strong> by scaling too fast — are all real, all common, and all
+                        <strong>learning phase</strong> by scaling too fast) are all real, all common, and all
                         assume the orders genuinely are not happening. They are the right answers to a demand problem.
                         None of them can explain a case where the orders arrived, the money cleared, and the platform
                         simply never heard about it. That case looks identical from the ad dashboard, and it is the
@@ -331,26 +333,15 @@ export default function SpendingMoreOnAdsTrackingPage() {
 
                     <BlogHeader>Is Meta&apos;s free Conversions API enough on its own?</BlogHeader>
                     <BlogText>
-                        Often it is a sensible first move, and it is worth understanding exactly what it changes. Meta
-                        announced a Meta-enabled Conversions API on April 15, 2026: a one-click setup inside Events
-                        Manager, free, hosted by Meta, needing no developer. It mirrors the events your Pixel is already
-                        sending and handles deduplication for you.
-                    </BlogText>
-                    <BlogText>
-                        That word <BlogHighlight>mirrors</BlogHighlight> is the part to sit with. It gives those events a
-                        second delivery path that does not depend on the browser finishing its work, which is a real
-                        improvement if your problem is events failing to arrive. It does not enrich them. If your Pixel
-                        currently sends an email address and little else, the mirrored server copy sends an email address
-                        and little else, only more reliably. Meta also documents narrower support for the harder cases,
-                        including subscription renewals, predicted lifetime value and custom deduplication logic, which
-                        still point to a partner or custom integration.
+                        Meta announced a Meta-enabled Conversions API on April 15, 2026 as a one-click
+                        option. Check availability for your account before commissioning custom work. The announcement
+                        does not by itself verify the payload, matching or deduplication for your business events.
                     </BlogText>
                     <InsightBox variant="tip" label="How to decide between the free path and a build">
-                        Turn the free setup on first. It costs an afternoon at most. Then reconcile again using the
-                        method above. If your gap closes, you are finished and you have saved the money. If events are
-                        arriving but matching poorly, or the events that matter to you are the ones the mirrored setup
-                        does not cover well, that is the point where a custom integration earns its cost. Deciding in
-                        that order means you never pay for a build to fix a problem a free toggle would have closed.
+                        Test eligible setup options in Events Manager against your event requirements. Reconcile
+                        transactions and inspect matching and deduplication. If a requirement remains unmet, record
+                        that gap before pricing a partner or custom integration. Do not assume that a server-side
+                        connection automatically repairs incorrect source data or covers subscription and offline events.
                     </InsightBox>
                     <BlogText>
                         On the numbers Meta publishes alongside it, its April 15, 2026 announcement states that

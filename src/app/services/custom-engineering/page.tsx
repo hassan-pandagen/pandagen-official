@@ -1,9 +1,9 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
-import ServiceDetailPreview from "@/app/preview/services/ServiceDetailPreview";
-import { servicePreview } from "@/app/preview/services/service-data";
-import { previewServiceFaqs } from "@/app/preview/services/preview-faqs";
+import ServiceDetailPreview from "@/components/pages/services/ServiceDetailPreview";
+import { servicePreview } from "@/components/pages/services/service-data";
+import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 // 30 Sep 2026: renders the redesign (built under /preview/services). Metadata
 // stay here; the FAQ structured data now comes from the FAQs the redesign shows.
@@ -11,11 +11,9 @@ import { previewServiceFaqs } from "@/app/preview/services/preview-faqs";
 
 const path = "/services/custom-engineering";
 const name = "Custom Web Development Agency";
-// Targets the terms with measured demand: "web development agency" 4,400/mo and
-// "custom web development" 1,000/mo, both LOW paid competition (Keyword Planner,
-// 18 Aug 2026). The reporting clause is the differentiator, not a keyword bet:
-// its own terms return ZERO_SEARCH_VOLUME. See docs/research/keyword-gap-2026-08-18.md.
-const description = "Custom web development agency building Next.js applications, dashboards and internal tools, with reporting that shows which channel your leads actually came from.";
+// Retain the custom web development target while describing the work now visible
+// on the page. Attribution requires its own agreed implementation and scope.
+const description = "Custom web development for portals, dashboards and internal tools. Work with the founders on data, integrations, permissions and handover.";
 
 export const metadata: Metadata = {
   title: name,

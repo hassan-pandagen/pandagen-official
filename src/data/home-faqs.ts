@@ -38,11 +38,11 @@ export const homeFaqs = [
   },
   {
     q: "Do you have a minimum project size?",
-    a: "No. We start at $1,500 for a site of up to 7 pages, and a small project is quoted the same way as a large one. Most custom Next.js agencies will not start below $10,000, and several will not start below $50,000, so a small business is often told no before it gets a price. You get a fixed price before we begin either way.",
+    a: "No. A small site or a focused improvement is welcome. Custom website builds start at $1,500 for up to 7 pages. If WordPress is the right fit, we can build on WordPress too, and quote that work to its own scope. We agree the price and what is included in writing before work starts.",
   },
   {
     q: "How much does WordPress to Next.js migration cost?",
-    a: "From $1,500 for a business site of up to 7 pages. From $3,500 for 8 to 20 pages with your blog moved and every old link forwarded, which is what most people pick. From $5,000 for a large catalogue, subscriptions, custom checkout logic, more than 20 pages, or more than one language. A simple store of a few products starts at Starter, at $1,500. Anything bigger is quoted after a call. The price is fixed before we start and your written quote has the exact figure. Your content, your Google settings and your design all come across. The representative pages named in your scope are tested to 90 or better on Lighthouse, mobile and desktop. No monthly plugin fees, and you own the code. The representative pages named in your quote score 90 or better on Google's Lighthouse lab test on phone and desktop, and we test three times before handover. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
+    a: "A focused custom rebuild starts at $1,500. Growth starts at $3,500 for 8 to 20 pages, and Scale starts at $5,000 for larger or more complex work. A WordPress-to-Next.js move needs an inventory first: we check the pages, URLs, content, plugins, forms, store data and integrations that must be kept or replaced. Your written quote names the new editing setup, redirect plan, testing, provider costs and final price. If your current WordPress site can meet the need with a smaller improvement, we can scope that instead.",
   },
   {
     q: "How does the free AI website audit work?",
@@ -50,7 +50,7 @@ export const homeFaqs = [
   },
   {
     q: "How much faster will my site be after migrating from WordPress or Shopify?",
-    a: "Most WordPress and Shopify sites we look at take 3 to 8 seconds to load. We build for under a second, and the representative pages named in your scope score 90 or better on Lighthouse, Google's lab test, on phone and desktop. We test three times and show you the results. That lab score is the condition we deliver. The number PageSpeed shows at the top of the report is different: it is Chrome User Experience Report field data, collected from your actual visitors over 28 days, and it depends on their devices, their networks and whatever gets added to the site later. We keep measuring that with you rather than promise it.",
+    a: "We measure your current pages before promising a change. A move alone cannot guarantee a load time or a search result. For a custom build, the representative pages named in the written scope have a 90+ Lighthouse handover target on mobile and desktop, checked across three recorded runs. We also look at real-visitor data where it is available, because devices, networks and later changes affect the experience people actually get. If the problem can be fixed on your current platform, we will discuss that route too.",
   },
   {
     q: "Do you work with Shopify stores?",
@@ -62,6 +62,6 @@ export const homeFaqs = [
   },
   {
     q: "Why not just use a faster WordPress host or a caching plugin?",
-    a: "Faster hosting and caching help, but they do not change the underlying model: WordPress assembles each page on request by querying the database, loading plugins and rendering the theme. Caching plugins such as WP Rocket or W3 Total Cache put a static copy in front of that work, which helps until the cache misses, the page is personalised or a plugin update changes the output. A statically generated or server-rendered custom build removes the assembly step instead of hiding it, which is why the improvement holds up under load and after updates.",
+    a: "That may be the right answer. Hosting, caching, images and plugin choices can make a WordPress site work well for the business that owns it. We review what is actually slow, what you need to edit and what the site costs to run. If WordPress still fits, we can improve or build on it. If the design or workflow calls for a custom build, we explain the tradeoffs and migration work before you decide.",
   },
 ];

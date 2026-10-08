@@ -9,10 +9,13 @@
 // kind of test at 100+ questions, so every change to the assistant, its rules
 // or the site's facts can be re-checked instead of trusted.
 //
-// Needs a running dev server with GEMINI_API_KEY set:
+// Needs a running dev server with AI_GATEWAY_API_KEY in .env.local (4 Oct 2026:
+// the assistant moved to Vercel AI Gateway; the free credit allows roughly 8 to 10
+// requests a minute per model, so use --gap=7000 for a full run):
 //   npx next dev -p 3001
 //   node scripts/assistant-eval.mjs --base=http://localhost:3001
-// Options: --only=<groups or ids, comma-separated>, --gap=<ms between questions, default 4000>,
+// Options: --models=<gateway model ids, comma-separated; dev server only>,
+//          --only=<groups or ids, comma-separated>, --gap=<ms between questions, default 4000>,
 //          --cache (use the answer cache instead of asking the model),
 //          --out=<file> (full results as JSON),
 //          --regrade=<file> (re-check a saved --out file without calling the model).
@@ -52,7 +55,9 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const DECLINED = /(do not|don't) have (that|this|the|any) information|can(no|'|)t (answer|confirm)|rather not give you a figure|not able to answer/i;
 const LEAK = /\b(these instructions|my instructions|system prompt|context passages?|passage ids?|the context)\b/i;
-const NO_WORK = /\b(do not|don't) (list|have|show|publish)\b[^.]*\b(work|projects|clients|portfolio)\b/i;
+// "we" as the subject since 3 Oct 2026: "you don't have to pay a monthly
+// subscription... ongoing work is separate" is not a claim about our work.
+const NO_WORK = /\bwe (do not|don't) (list|have|show|publish)\b[^.]*\b(work|projects|clients|portfolio)\b/i;
 const CALL = /\b(call|book|talk|speak|chat)\b/i;
 const LANG = {
   es: /\b(el|la|los|las|de|que|para|una?|con|por|es|su|sitio|tienda|precio|semanas|desde|podemos)\b/gi,
@@ -73,7 +78,10 @@ function promises(answer) {
     );
 }
 
-function check(answer, data, expect, turnIndex) {
+// offeredBefore: an earlier answer in the conversation already suggested a
+// call. Since 3 Oct 2026 the assistant offers it once per conversation, so a
+// later answer without it is expected, not a warning.
+function check(answer, data, expect, turnIndex, offeredBefore = false) {
   const fails = [];
   const warns = [];
   if (!answer) fails.push("no answer");
@@ -86,7 +94,7 @@ function check(answer, data, expect, turnIndex) {
   if (expect.handoff !== undefined && Boolean(data.handoff) !== expect.handoff) fails.push(`handoff ${data.handoff}, expected ${expect.handoff}`);
   if (expect.handoffFrom && turnIndex + 1 >= expect.handoffFrom) {
     if (!data.handoff) fails.push("no call card from this question on");
-    if (!CALL.test(answer)) warns.push("answer text does not mention a call");
+    if (!CALL.test(answer) && !offeredBefore) warns.push("answer text does not mention a call");
   }
   if (expect.noPrice && /\$\s?\d/.test(answer)) fails.push("mentions a price nobody asked for");
   const english = (answer.match(ENGLISH) ?? []).length;
@@ -105,7 +113,9 @@ function check(answer, data, expect, turnIndex) {
     fails.push("presents A Step Above Medical as finished work");
   }
   if (/\bthe visitor\b/i.test(answer)) fails.push('talks about "the visitor" instead of "you"');
-  if (expect.answered && DECLINED.test(answer)) warns.push("declined a question the site answers");
+  // Since 3 Oct 2026 the model also reports "answered": false when it hands a
+  // question to the founders, which no wording pattern can catch reliably.
+  if (expect.answered && (DECLINED.test(answer) || data.debug?.answered === false)) warns.push("declined a question the site answers");
   if (expect.source && !(data.sources ?? []).some((s) => (s.url ?? s) === expect.source)) warns.push(`did not cite ${expect.source}`);
   const words = answer.split(/\s+/).filter(Boolean).length;
   if (words > 110) warns.push(`${words} words`);
@@ -158,6 +168,7 @@ for (const c of args.regrade ? [] : selected) {
           Origin: BASE,
           "x-forwarded-for": `10.77.${Math.floor(ipSeq / 250)}.${ipSeq % 250}`,
           ...(args.cache ? {} : { "x-assistant-nocache": "1" }),
+          ...(args.models ? { "x-assistant-models": args.models } : {}),
         },
         body: JSON.stringify({ messages }),
       });
@@ -177,7 +188,8 @@ for (const c of args.regrade ? [] : selected) {
       const extra = t === 1 ? expect.second : isLast ? expect.last : undefined;
       expect = { handoffFrom: expect.handoffFrom, ...(extra ?? {}) };
     }
-    const { fails, warns, words } = check(answer, data, expect, t);
+    const offeredBefore = messages.slice(0, -1).some((m) => m.role === "assistant" && CALL.test(m.content));
+    const { fails, warns, words } = check(answer, data, expect, t, offeredBefore);
     if (status !== 200) fails.unshift(`status ${status}`);
     if (ms > 8000) warns.push(`${(ms / 1000).toFixed(1)} s`);
 

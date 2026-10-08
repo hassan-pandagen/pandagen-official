@@ -19,9 +19,9 @@ const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalB
 const postId = "shopify-app-costs-real-monthly-bill";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "Shopify App Costs 2026: Published Prices, Checked Aug 2";
+const title = "Shopify App Costs 2026: Published Prices, Checked Oct 4";
 const description =
-    "Published entry prices for 15 common Shopify apps, checked August 2, 2026, plus Shopify's four app charge types and what uninstalling does and does not cancel.";
+    "Published entry prices for 15 common Shopify apps, rechecked October 4, 2026, plus Shopify's four app charge types and what uninstalling does and does not cancel.";
 
 export const dynamic = "force-static";
 
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-19",
-        modifiedTime: "2026-08-19T00:00:00-05:00",
+        modifiedTime: "2026-10-04T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-app-costs-real-monthly-bill")],
@@ -68,6 +68,14 @@ const sources = [
         url: "https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing",
     },
     {
+        name: "Shopify: about billing for your app (developer docs)",
+        url: "https://shopify.dev/docs/apps/launch/billing",
+    },
+    {
+        name: "Shopify: managing apps and app spending limits",
+        url: "https://help.shopify.com/en/manual/apps/managing-apps",
+    },
+    {
         name: "Shopify: overview of web performance",
         url: "https://help.shopify.com/en/manual/online-store/web-performance/overview",
     },
@@ -86,7 +94,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-19",
-            dateModified: "2026-08-19T00:00:00-05:00",
+            dateModified: "2026-10-04T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -101,8 +109,8 @@ const articleSchema = {
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Shopify",
-            wordCount: 3181,
-            timeRequired: "PT16M",
+            wordCount: 3941,
+            timeRequired: "PT20M",
             about: [
                 { "@type": "Thing", name: "Shopify app costs" },
                 { "@type": "Thing", name: "Software subscription auditing" },
@@ -132,7 +140,7 @@ const articleSchema = {
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             datePublished: "2026-03-19",
-            dateModified: "2026-08-19T00:00:00-05:00",
+            dateModified: "2026-10-04T00:00:00-05:00",
             inLanguage: "en-US",
         },
         {
@@ -173,12 +181,12 @@ export default function ShopifyAppCostsPage() {
                             $100 a month each: Gorgias Starter $10, Judge.me Awesome $15, Smile Essential $15, PageFly
                             Builder $24, Vitals All-in-One $29.99, Loox Convert $49.99, and Recharge Starter $99 plus
                             1.49% and 19&cent; per transaction. Every figure comes from the vendor&apos;s own Shopify App
-                            Store listing or pricing page, checked August 2, 2026, and each is linked in the table below.
+                            Store listing or pricing page, checked August 2, 2026 and again on October 4, 2026, and each is linked in the table below.
                             Your actual bill isn&apos;t the sum of those numbers. It&apos;s Shopify-billed subscriptions,
                             usage charges, externally billed services and the operational dependencies each app creates.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 2, 2026 against current Shopify documentation.
+                            Reviewed August 2, 2026 against current Shopify documentation. App prices and Shopify&apos;s billing pages rechecked October 4, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -186,7 +194,7 @@ export default function ShopifyAppCostsPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 19, 2026" readTime="9 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="shopify-app-costs-real-monthly-bill" published="2026-03-19" readTime="9 min read" />
 
                     <BlogText>
                         Three r/shopify voices on the app bill, in their own words: a six-year merchant whose apps are a third of the bill, a reply on what replacing an app with custom work costs, and a one-line test for keeping any app. Each is linked so you can read the full thread.
@@ -288,13 +296,62 @@ export default function ShopifyAppCostsPage() {
                     </BlogText>
                     <BlogText>
                         Usage meters are limited to five active meters per plan and six pricing tiers per meter, they
-                        bill monthly, and Shopify notes that usage caps are not currently supported, which is why a
-                        usage-metered app can produce a bill nobody budgeted for: there&apos;s no ceiling to set.
-                        Checked August 2, 2026 against{" "}
-                        <a href="https://help.shopify.com/en/manual/your-account/manage-billing/your-invoice/apps" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shopify&apos;s guide to app charges on your bills</a>{" "}
+                        bill monthly, and on Shopify App Pricing usage caps are not currently supported, which is why a
+                        usage-metered app can produce a bill nobody budgeted for. Apps that still bill through
+                        Shopify&apos;s older Billing API can include a spending limit, and Shopify shows it under{" "}
+                        <strong>Settings &rarr; Apps</strong>, in each app&apos;s Billing and usage charges section.
+                        You can raise that limit in your admin but not lower it; to lower it, Shopify says to contact
+                        the app developer. Checked August 2 and October 4, 2026 against{" "}
+                        <a href="https://help.shopify.com/en/manual/your-account/manage-billing/your-invoice/apps" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shopify&apos;s guide to app charges on your bills</a>,{" "}
+                        <a href="https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shopify App Pricing</a>{" "}
                         and{" "}
-                        <a href="https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shopify App Pricing</a>.
+                        <a href="https://help.shopify.com/en/manual/apps/managing-apps#increase-app-spending-limits" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shopify&apos;s guide to managing apps</a>.
                     </BlogText>
+
+                    <h3 id="how-app-pricing-works" className="mt-10 mb-4 text-2xl font-bold text-charcoal">How Shopify app pricing works</h3>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Shopify apps charge in one of six ways: a free plan, a flat monthly or yearly fee, usage-based
+                            pricing, a flat fee plus usage, a fee plus a share of each transaction, or a one-time purchase.
+                            Shopify requires App Store apps to use its billing, so app charges normally land on your
+                            Shopify invoice, although some vendors also bill for their own services outside Shopify. Each
+                            app runs its own 30-day billing cycle, and Shopify adds what it owes to your next 30-day
+                            Shopify bill, so a usage charge from one app cycle can be split across two Shopify bills.
+                            Browsing the App Store is free and many apps are free to install. What you pay depends on the
+                            plan you approve in each app.
+                        </BlogText>
+                    </div>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
+                        <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Pricing model</th><th className="p-4">How it&apos;s billed</th><th className="p-4">Example, checked October 4, 2026</th><th className="p-4">What to check</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4 font-bold">Free plan</td><td className="p-4">Nothing, up to a limit</td><td className="p-4">Judge.me Forever Free; Klaviyo free to 250 email contacts</td><td className="p-4">The limit that moves you onto a paid tier</td></tr>
+                                <tr><td className="p-4 font-bold">Flat recurring fee</td><td className="p-4">Fixed charge every 30 days, or yearly at a discount</td><td className="p-4">Shogun Build $39/mo, or $31/mo billed yearly</td><td className="p-4">Whether you&apos;re on monthly or annual billing</td></tr>
+                                <tr><td className="p-4 font-bold">Usage-based</td><td className="p-4">Varies with use over the app&apos;s 30-day cycle</td><td className="p-4">Postscript Starter: $49/mo minimum spend, then $0.009 per SMS</td><td className="p-4">The spending limit and current usage in Settings &rarr; Apps</td></tr>
+                                <tr><td className="p-4 font-bold">Flat fee plus usage</td><td className="p-4">Both, on the same bill</td><td className="p-4">Loox Convert $49.99/mo with 300 orders, then $50 per extra 300</td><td className="p-4">How close your volume runs to the next band</td></tr>
+                                <tr><td className="p-4 font-bold">Fee plus a share of transactions</td><td className="p-4">Platform fee plus a percentage of what the app processes</td><td className="p-4">Recharge Starter $99/mo plus 1.49% and 19&cent;; Bold Launch $24.99/mo plus 2%</td><td className="p-4">The percentage against your own subscription revenue</td></tr>
+                                <tr><td className="p-4 font-bold">One-time purchase</td><td className="p-4">A single charge on its own invoice, not your regular bill</td><td className="p-4">A one-off service such as moving data between platforms</td><td className="p-4">The separate invoice</td></tr>
+                                <tr><td className="p-4 font-bold">Billed outside Shopify</td><td className="p-4">Charged by the vendor directly, never on the Shopify bill</td><td className="p-4">Attentive, Klaviyo, Yotpo and Recharge listings say charges may be billed separately</td><td className="p-4">Card statements and the vendor&apos;s own account</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        A few billing rules from{" "}
+                        <a href="https://help.shopify.com/en/manual/your-account/manage-billing/your-invoice/apps" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shopify&apos;s app charges guide</a>{" "}
+                        explain most of the surprises, read October 4, 2026:
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "An app can have only one active recurring charge, so changing plans means approving a new charge that replaces the old one.",
+                            "Upgrading mid-cycle is prorated. Shopify's own example: on a $5 plan, upgrading to a $15 plan on day 15 of 30 costs $5 + ($15 - $5) x 15/30 = $10 for that cycle.",
+                            "Downgrading mid-cycle earns an application credit for the difference, which you can spend on future app charges.",
+                            "Charges start when you approve the plan, so uninstalling a few days after installing can still leave a charge on your next bill.",
+                            "Refunds for app charges are the app developer's decision, even when the charge appears on your Shopify bill. Shopify says it can't guarantee them.",
+                            "Free trials are set per plan. On October 4, 2026 the listings in our table showed trials from 7 days (Gorgias, Vitals, Tidio) to 60 days (Recharge Starter), and every App Store listing we checked said its charges are billed in USD.",
+                        ]}
+                    />
 
                     <BlogHeader>3. Find charges outside Shopify</BlogHeader>
                     <BlogText>
@@ -302,7 +359,7 @@ export default function ShopifyAppCostsPage() {
                         appear on the Shopify bill. Check card and bank records, team email, password management and
                         procurement systems. Confirm which workspace and subscription it is before anyone cancels it. Once you have the
                         full list,{" "}
-                        <Link href="/blog/how-to-cut-saas-bill-2026" className={sourceLinkClass}>our method for cutting a software bill</Link>{" "}
+                        <Link href="/blog/saas-software-pricing-audit-2026" className={sourceLinkClass}>our method for auditing a software bill</Link>{" "}
                         is the next step.
                     </BlogText>
                     <InsightBox variant="info" label="What uninstalling does and doesn't cancel">
@@ -311,39 +368,42 @@ export default function ShopifyAppCostsPage() {
                         apps it&apos;s explicit: &ldquo;Uninstalling the app from your Shopify admin doesn&apos;t cancel
                         external charges.&rdquo; Cancel those in the vendor&apos;s own account, confirm the cancellation
                         in writing, and if you want the current cycle refunded, Shopify says to contact the app developer
-                        before uninstalling. Read from <a href="https://help.shopify.com/en/manual/apps/uninstalling-apps" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shopify&apos;s uninstalling-apps documentation</a> on August 2, 2026.
+                        before uninstalling. Read from <a href="https://help.shopify.com/en/manual/apps/uninstalling-apps" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shopify&apos;s uninstalling-apps documentation</a> on August 2, 2026 and unchanged on October 4, 2026.
                     </InsightBox>
 
-                    <BlogHeader id="published-prices">What the common apps publish, checked August 2, 2026</BlogHeader>
+                    <BlogHeader id="published-prices">What the common apps publish, checked August 2 and October 4, 2026</BlogHeader>
                     <BlogText>
                         An expensive app bill is rarely one expensive app. It&apos;s a stack that grew one decision at a
                         time. Below is the published entry price for a common set of them, taken from
-                        each vendor&apos;s own Shopify App Store listing or pricing page on August 2, 2026. Prices move, so
-                        recheck before you budget, and record what your store paid, not the list price.
+                        each vendor&apos;s own Shopify App Store listing or pricing page on August 2, 2026. We rechecked every
+                        row on October 4, 2026. Fourteen prices were unchanged. Okendo&apos;s row changed: its pricing page
+                        now shows a price for each order band, where our August row said it published none. A few other
+                        rows gained detail. Prices move, so recheck before you budget, and record what your
+                        store paid, not the list price.
                         We log vendor price movements in our{" "}
                         <Link href="/blog/saas-price-increases-2026-tracker" className={sourceLinkClass}>running log of software price changes</Link>.
                     </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
-                                <tr><th className="p-4">Category</th><th className="p-4">App</th><th className="p-4">Published price, August 2, 2026</th><th className="p-4">Source</th></tr>
+                                <tr><th className="p-4">Category</th><th className="p-4">App</th><th className="p-4">Published price, checked August 2 and October 4, 2026</th><th className="p-4">Source</th></tr>
                             </thead>
                             <tbody className="divide-y divide-stone-200 text-stone-700">
-                                <tr><td className="p-4 font-bold">Email and SMS</td><td className="p-4">Klaviyo</td><td className="p-4">Free to 250 contacts; Email from $20/mo at 251&ndash;500 contacts; SMS from $15/mo for 1,250 credits</td><td className="p-4"><a href="https://apps.shopify.com/klaviyo-email-marketing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Email and SMS</td><td className="p-4">Klaviyo</td><td className="p-4">Free to 250 email contacts and 150 SMS/MMS credits; Email from $20/mo at 251 to 500 contacts; SMS from $15/mo for 1,250 credits, carrier fees included</td><td className="p-4"><a href="https://apps.shopify.com/klaviyo-email-marketing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
                                 <tr><td className="p-4 font-bold">SMS</td><td className="p-4">Postscript</td><td className="p-4">Starter free to install with a $49/mo minimum spend, then $0.009/SMS; Growth $100/mo; Professional $500/mo, plus carrier fees</td><td className="p-4"><a href="https://apps.shopify.com/postscript-sms-marketing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
                                 <tr><td className="p-4 font-bold">Email and SMS</td><td className="p-4">Attentive</td><td className="p-4">Free to install, no published price. The listing states charges may be billed by Attentive separately from your Shopify invoice</td><td className="p-4"><a href="https://apps.shopify.com/attentive" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
                                 <tr><td className="p-4 font-bold">Reviews</td><td className="p-4">Judge.me</td><td className="p-4">Forever Free $0, including Google rich snippets and Shop app sync; Awesome $15/mo</td><td className="p-4"><a href="https://apps.shopify.com/judgeme" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
                                 <tr><td className="p-4 font-bold">Reviews</td><td className="p-4">Loox</td><td className="p-4">Beginner free; Convert $49.99/mo including 300 orders, then $50 per additional 300; Unlimited $299.99/mo</td><td className="p-4"><a href="https://apps.shopify.com/loox" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
                                 <tr><td className="p-4 font-bold">Reviews</td><td className="p-4">Yotpo</td><td className="p-4">Free to 50 monthly orders; Starter $15/mo; Pro $119/mo, varying with order volume. The listing notes charges may be billed separately from your Shopify invoice</td><td className="p-4"><a href="https://apps.shopify.com/yotpo-social-reviews" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Reviews</td><td className="p-4">Okendo</td><td className="p-4">Tiered by monthly order volume across five bands from 0&ndash;200 to 10,001+. Okendo does not publish the tier prices; request a quote and record it in your register</td><td className="p-4"><a href="https://www.okendo.io/pricing/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Okendo pricing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Subscriptions</td><td className="p-4">Recharge</td><td className="p-4">Starter $99/mo plus 1.49% and 19&cent; per transaction; Plus $499/mo plus 1.34% and 19&cent;; Custom volume-based</td><td className="p-4"><a href="https://getrecharge.com/pricing/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Recharge pricing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Reviews</td><td className="p-4">Okendo</td><td className="p-4">Reviews, by monthly orders: free to 50 on the App Store listing; $19/mo to 200; $119/mo to 1,500; $299/mo to 3,500; $499/mo to 10,000; custom above that. Loyalty, quizzes, referrals and surveys are priced separately</td><td className="p-4"><a href="https://www.okendo.io/pricing/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Okendo pricing</a> and <a href="https://apps.shopify.com/okendo-reviews" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Subscriptions</td><td className="p-4">Recharge</td><td className="p-4">Starter $99/mo plus 1.49% and 19&cent; per transaction; Plus $499/mo plus 1.34% and 19&cent;; Custom volume-based. The App Store listing also shows a $25/mo plan with no transaction fees for the first 50 subscribers</td><td className="p-4"><a href="https://getrecharge.com/pricing/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Recharge pricing</a></td></tr>
                                 <tr><td className="p-4 font-bold">Subscriptions</td><td className="p-4">Bold Subscriptions</td><td className="p-4">Launch $24.99/mo plus 2%; Grow $49.99/mo plus 1%; Scale $74.99/mo plus 0.9%</td><td className="p-4"><a href="https://apps.shopify.com/bold-subscriptions" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
                                 <tr><td className="p-4 font-bold">Helpdesk</td><td className="p-4">Gorgias</td><td className="p-4">Starter $10/mo with $0.40 per additional ticket; Basic $60/mo; Pro $360/mo; Advanced $900/mo</td><td className="p-4"><a href="https://apps.shopify.com/helpdesk" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Helpdesk</td><td className="p-4">Tidio</td><td className="p-4">Free $0; Starter $24.17/mo; Growth from $49.17/mo; Plus from $300/mo plus usage</td><td className="p-4"><a href="https://www.tidio.com/pricing/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Tidio pricing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Helpdesk</td><td className="p-4">Tidio</td><td className="p-4">Free $0; Starter $24.17/mo and Growth from $49.17/mo when billed annually ($29 and from $59 billed monthly); Plus from $300/mo plus usage</td><td className="p-4"><a href="https://www.tidio.com/pricing/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Tidio pricing</a></td></tr>
                                 <tr><td className="p-4 font-bold">Loyalty</td><td className="p-4">Smile</td><td className="p-4">Free to 200 monthly orders; Essential $15/mo to 500; Standard $79/mo to 1,000; Growth $199/mo including 2,500, then $20 per additional 100</td><td className="p-4"><a href="https://smile.io/pricing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Smile pricing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Page building</td><td className="p-4">PageFly</td><td className="p-4">Free $0; Builder $24/mo; Optimize $39/mo; Accelerate $99/mo; Power $199/mo</td><td className="p-4"><a href="https://pagefly.io/pages/pricing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>PageFly pricing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Page building</td><td className="p-4">PageFly</td><td className="p-4">Free $0; Builder from $24/mo; Optimize from $39/mo; Accelerate $99/mo; Power $199/mo. Builder and Optimize rise with the slots and credits you choose</td><td className="p-4"><a href="https://pagefly.io/pages/pricing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>PageFly pricing</a></td></tr>
                                 <tr><td className="p-4 font-bold">Page building</td><td className="p-4">Shogun</td><td className="p-4">Draft Mode $0; Build $39/mo; Grow $199/mo; Advanced $499/mo</td><td className="p-4"><a href="https://getshogun.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shogun pricing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Theme extensions</td><td className="p-4">Vitals</td><td className="p-4">All-in-One $29.99/mo. The listing states usage fees start after roughly $1,000/mo in Vitals-attributed sales, from $10/mo</td><td className="p-4"><a href="https://apps.shopify.com/vitals" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Theme extensions</td><td className="p-4">Vitals</td><td className="p-4">All-in-One $29.99/mo. The listing states usage fees start after roughly $1,000/mo in Vitals-attributed sales, from $10/mo, and for Visitor Recordings volume</td><td className="p-4"><a href="https://apps.shopify.com/vitals" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -530,8 +590,8 @@ export default function ShopifyAppCostsPage() {
                         That date has passed. If your operation depended on Stocky for purchase orders, transfers or
                         demand forecasting, it&apos;s already unavailable and its APIs stopped on the same date, so
                         anything that called them is failing now. It was delisted from the App Store in
-                        February 2026. Shopify has said it provides read-only access for a limited time without
-                        publishing an end date, so exporting purchase orders, stock counts and supplier records is the
+                        February 2026. Shopify says you&apos;ll have read-only access to export your data for at least
+                        90 days after August 31, 2026, so exporting purchase orders, stock counts and supplier records is the
                         one step still worth doing today. This was never a cost decision.
                     </InsightBox>
                     <BlogText>

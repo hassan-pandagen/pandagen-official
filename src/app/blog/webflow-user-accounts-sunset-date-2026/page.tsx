@@ -54,7 +54,7 @@ const sources = [
     { name: "Webflow User Accounts sunset", url: "https://help.webflow.com/hc/en-us/articles/36046006227731-User-Accounts-sunset" },
     { name: "Webflow deprecation announcement", url: "https://webflow.com/updates/deprecating-logic-and-user-accounts" },
     { name: "Webflow import and export user accounts", url: "https://help.webflow.com/hc/en-us/articles/33961370848275-Import-export-user-accounts" },
-    { name: "Webflow feature sunsets and deprecations", url: "https://help.webflow.com/hc/en-us/articles/36046081578515-Feature-sunsets-deprecations" },
+    { name: "Webflow legacy Editor deprecation FAQ", url: "https://help.webflow.com/hc/en-us/articles/48412420902675-Legacy-Editor-deprecation-FAQ" },
     { name: "Webflow Logic sunset", url: "https://help.webflow.com/hc/en-us/articles/36045959707667-Logic-sunset" },
     { name: "Webflow code export limitations", url: "https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code" },
 ];
@@ -164,7 +164,7 @@ export default function WebflowUserAccountsSunsetPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 22, 2026" readTime="8 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="webflow-user-accounts-sunset-date-2026" published="2026-04-22" readTime="8 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Verified status</h2>
@@ -176,19 +176,18 @@ export default function WebflowUserAccountsSunsetPage() {
                                 "User Accounts functionality, dedicated APIs and webhooks ended January 29, 2026.",
                                 "For sites still using it, Webflow says account data was not migrated to the CMS.",
                                 "Webflow recommended Outseta, Memberstack or another ecosystem provider, not one mandatory replacement.",
-                                "A separate Webflow removal is still ahead: the legacy Editor and its whitelabeling become unavailable from August 4, 2026.",
+                                "Webflow also removed the legacy Editor and its whitelabeling on August 4, 2026.",
                             ]}
                         />
                     </section>
 
-                    <InsightBox variant="warning" label="A second Webflow date, and this one is not behind you">
-                        This page covers a completed sunset. Webflow&apos;s{" "}
-                        <a href="https://help.webflow.com/hc/en-us/articles/36046081578515-Feature-sunsets-deprecations" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>feature sunsets page</a>{" "}
-                        also lists the legacy Editor and legacy Editor whitelabeling as unavailable from
-                        <strong> August 4, 2026</strong>, with migration to client and limited seats having begun on
-                        May 4, 2026 and migrated users assigned the Content editor role. If clients or colleagues
-                        publish through the legacy Editor, that is a different change on a different date, and it is
-                        the one still in front of you rather than behind you.
+                    <InsightBox variant="warning" label="A second Webflow change, completed in August">
+                        This page covers a completed sunset. Webflow also removed the legacy Editor and legacy Editor
+                        whitelabeling on <strong>August 4, 2026</strong>, after moving users to client and limited seats
+                        from May 4, 2026 and giving migrated users the Content editor role (see Webflow&apos;s{" "}
+                        <a href="https://help.webflow.com/hc/en-us/articles/48412420902675-Legacy-Editor-deprecation-FAQ" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>legacy Editor deprecation FAQ</a>).
+                        If clients or colleagues used to publish through the legacy Editor, check they now have the seat
+                        and role they need.
                     </InsightBox>
 
                     <div className="my-8 grid gap-4 sm:grid-cols-4">
@@ -348,8 +347,8 @@ export default function WebflowUserAccountsSunsetPage() {
                     <BlogText>
                         Both, depending on what membership is worth to you. A managed provider fixes the outage now and
                         moves the deprecation decision from Webflow&apos;s roadmap onto that provider&apos;s roadmap; it
-                        does not remove the decision. Webflow User Accounts was itself positioned as the durable
-                        answer when Webflow launched memberships. It ran roughly four years, and the mechanism that ended it,
+                        does not remove the decision. Webflow User Accounts was itself Webflow&apos;s own answer
+                        when it launched memberships. It ran a little over three years, and the mechanism that ended it,
                         a vendor deciding a feature no longer fits its strategy, applies equally to whichever provider you
                         move to next. If you are weighing the platform itself rather than just the membership layer, our{" "}
                         <Link href="/blog/webflow-vs-custom-website" className={sourceLinkClass}>Webflow versus custom website comparison</Link>{" "}
@@ -496,7 +495,7 @@ export default function WebflowUserAccountsSunsetPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader>Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

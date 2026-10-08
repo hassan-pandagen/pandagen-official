@@ -1,4 +1,5 @@
 import type { ServiceFaq } from "@/data/service-faqs";
+import { OUR_HANDOVER, OWNERSHIP_ON_HANDOVER, SERVICE_PORTABILITY } from "@/data/platform-portability";
 
 type ServicePageSchemaProps = {
   path: string;
@@ -17,6 +18,7 @@ type ServicePageSchemaProps = {
 
 export default function ServicePageSchema({ path, name, description, breadcrumb, faqs }: ServicePageSchemaProps) {
   const canonical = `https://www.pandacodegen.com${path}`;
+  const showsHandover = Boolean(SERVICE_PORTABILITY[path.split("/").pop() ?? ""]);
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -28,6 +30,18 @@ export default function ServicePageSchema({ path, name, description, breadcrumb,
         description,
         isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
         inLanguage: "en-US",
+      },
+      // Every service gets its visible offer. The detailed handover assertions
+      // remain conditional on rendering OwnershipCompare on that page.
+      {
+            "@type": "Service",
+            "@id": `${canonical}#service`,
+            name,
+            serviceType: breadcrumb,
+            url: canonical,
+            provider: { "@id": "https://www.pandacodegen.com/#organization" },
+            description: showsHandover ? `${description} ${OWNERSHIP_ON_HANDOVER}` : description,
+            ...(showsHandover ? { serviceOutput: OUR_HANDOVER.map((item) => ({ "@type": "Thing", name: item.label, description: item.detail })) } : {}),
       },
       {
         "@type": "BreadcrumbList",

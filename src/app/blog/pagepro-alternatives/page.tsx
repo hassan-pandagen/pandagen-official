@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-02",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/pagepro-alternatives")],
@@ -70,7 +70,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-02",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -114,7 +114,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-02",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
@@ -162,7 +162,7 @@ export default function PageproAlternativesPage() {
                             landing-page software product also sold under the PagePro name.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 3, 2026. Disclosure: PandaCodeGen wrote this page and is one of the providers
+                            Reviewed October 8, 2026. Disclosure: PandaCodeGen wrote this page and is one of the providers
                             discussed, so our commercial interest is explicit.
                         </p>
                       </div>
@@ -171,7 +171,7 @@ export default function PageproAlternativesPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 2, 2026" readTime="5 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="pagepro-alternatives" published="2026-05-02" readTime="10 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">A defensible shortlist</h2>
@@ -180,7 +180,7 @@ export default function PageproAlternativesPage() {
                                 "Pagepro presents itself as a Next.js, Sanity and Expo development agency focused on replatforming, CMS migration and SEO preservation. Confirm its current engagement types and how each is scoped directly with Pagepro.",
                                 "Naturaily currently lists custom web, headless, Shopify, ecommerce, design and support services.",
                                 "Blazity currently lists AI engineering, performance, modernization, applications and technical consulting.",
-                                "PandaCodeGen's primary offer is SEO-conscious migration planning and delivery for revenue-generating sites.",
+                                "PandaCodeGen builds business websites and online stores, and improves or manages existing sites. Migrations and integrations are scoped when needed.",
                                 "All that tells you is what each firm says it does. It does not tell you they cost the same, work to the same standard, or get the same results.",
                             ]}
                         />
@@ -260,7 +260,7 @@ export default function PageproAlternativesPage() {
                                 </tr>
                                 <tr>
                                     <td className="p-4 font-bold">PandaCodeGen</td>
-                                    <td className="p-4">SEO-conscious migrations and custom web delivery</td>
+                                    <td className="p-4">Business websites, online stores and ongoing website support</td>
                                     <td className="p-4">Accepted scope, capacity, relevant evidence, price and legal terms</td>
                                 </tr>
                             </tbody>
@@ -272,7 +272,8 @@ export default function PageproAlternativesPage() {
                         Pagepro presents three named engagement types it describes as fixed-scope and predictably
                         priced, and describes itself as dedicated to Next.js, Sanity and CMS migration with SEO and
                         <Link href="/blog/core-web-vitals-explained" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Core Web Vitals</Link> at the core, which is consistent with how it described itself earlier in the
-                        year. Both corrections are to our summaries, not to anything either firm did wrong.
+                        year. Both corrections are to our summaries, not to anything either firm did wrong. We
+                        checked the three agency rows again on October 8, 2026 and they still match each firm&apos;s own pages.
                     </BlogText>
                     <BlogText>
                         We are showing this working because a comparison page is only as good as the date on each
@@ -370,7 +371,7 @@ export default function PageproAlternativesPage() {
                     <BlogHeader>PandaCodeGen pricing and terms</BlogHeader>
                     <BlogText>
                         PandaCodeGen publishes planning tiers at $1,500, $3,500 and $5,000. The recommended
-                        path is a free fit audit, then an accepted paid blueprint or migration sprint where appropriate.
+                        path is a free fit audit, then a written proposal for the build, improvements or migration you need. Share your website URL and email through our <Link href="/free-audit" className={sourceLinkClass}>free audit page</Link> to receive the findings.
                         Extra pages or features are estimated through change control. Published tiers are not evidence
                         that another provider is overpriced or that the scopes are equivalent. The current figures and
                         what each tier includes are on the{" "}
@@ -439,7 +440,7 @@ export default function PageproAlternativesPage() {
                     </section>
 
                     <BlogHeader>Frequently asked questions</BlogHeader>
-                    <FAQAccordion faqs={postFAQs} />
+                    <FAQAccordion faqs={postFAQs} showHeading={false} />
                     <TopicUpLink postId={postId} />
 
                     <RelatedPosts currentPostId={postId} />

@@ -5,7 +5,6 @@ import FacebookPixel from "@/components/FacebookPixel";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import MicrosoftClarity from "@/components/MicrosoftClarity";
 import WebVitalsReporter from "@/components/WebVitalsReporter";
-import TawkToChat from "@/components/TawkToChat";
 import CalEmbed from "@/components/ui/CalEmbed";
 import { useConsent } from "./ConsentProvider";
 
@@ -20,10 +19,11 @@ export default function ConsentManagedServices() {
 
   return (
     <>
-      {/* These stay mounted so blocked booking/chat CTAs can open a just-in-time
-          preference prompt. They make no vendor request until permitted. */}
+      {/* Stays mounted so a blocked booking CTA can open a just-in-time
+          preference prompt. It makes no vendor request until permitted.
+          Tawk.to was removed 7 Oct 2026: live chat now runs inside the
+          assistant panel through /api/live-chat. */}
       <CalEmbed />
-      <TawkToChat />
 
       {/* Moved OUT of the consent gate 14 Sep 2026. Vercel Web Analytics is
           cookieless -- a visitor is a hash of the request, valid one day and

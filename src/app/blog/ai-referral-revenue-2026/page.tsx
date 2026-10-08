@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title, description, type: "article",
-        publishedTime: "2026-08-18", modifiedTime: "2026-08-19",
+        publishedTime: "2026-08-18", modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"], url: canonicalUrl,
         images: [ogImageForPath("/blog/ai-referral-revenue-2026")],
     },
@@ -64,7 +64,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/ai-referral-revenue-2026"),
             datePublished: "2026-08-18T00:00:00-05:00",
-            dateModified: "2026-08-19T00:00:00-05:00",
+            dateModified: "2026-10-08T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -159,14 +159,14 @@ export default function AiReferralRevenuePage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="18 August 2026" readTime="11 min" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="ai-referral-revenue-2026" published="2026-08-18" readTime="11 min" />
 
                     <BlogHeader>Why almost nobody else can publish this</BlogHeader>
                     <BlogText>
-                        <BlogHighlight>Most businesses report close to zero AI traffic because of how they measure, not because of what happened.</BlogHighlight>{" "}
-                        ChatGPT strips the referrer on many links, its mobile apps pass nothing at all, and a large
-                        share of people read an answer, close it, and type the company name into a browser. Every one of
-                        those lands in a Direct bucket, or nowhere.
+                        <BlogHighlight>Referrer-only attribution can miss AI-assisted discovery.</BlogHighlight>{" "}
+                        Referrers and campaign parameters vary by link and client. A later direct visit or brand search
+                        may not retain the earlier AI interaction. This dataset cannot measure how often that happens
+                        elsewhere, so missing attribution alone does not prove a large hidden AI audience.
                     </BlogText>
                     <BlogText>
                         So a business measuring referrer alone sees a rounding error and concludes AI sends no
@@ -397,12 +397,12 @@ export default function AiReferralRevenuePage() {
                             builds the reporting layer that makes this visible, on the same stack this store runs on.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                            Book a 30-minute review <ArrowRight className="h-4 w-4" />
+                            Book a 15-minute review <ArrowRight className="h-4 w-4" />
                         </CalModalButton>
                     </section>
 
                     <BlogHeader>Frequently asked questions</BlogHeader>
-                    <FAQAccordion faqs={postFAQs} />
+                    <FAQAccordion faqs={postFAQs} showHeading={false} />
 
                     <BlogHeader>Method</BlogHeader>
                     <BlogText>

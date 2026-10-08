@@ -23,14 +23,9 @@
           "id": "urls-migrated",
           "label": "URLs migrated",
           "value": "200+",
-          "status": "verified",
-          "method": {
-            "kind": "record",
-            "date": "2026-07-21",
-            "note": "URL inventory taken before cutover."
-          },
-          "approvedBy": "Client owner",
-          "approvedDate": "2026-07-21"
+          "status": "withdrawn",
+          "withdrawnDate": "2026-10-03",
+          "withdrawnReason": "The owner corrected the previously published 200+ URL count. No replacement count is approved, so this figure must not be published."
         },
         {
           "id": "templates",
@@ -106,6 +101,14 @@
       "name": "Emblematic Studio",
       "relationship": "Independent client",
       "href": "/work/emblematic-studio",
+      "disclosure": "Independent client. PandaCodeGen has no ownership or financial stake in the business.",
+      "metrics": []
+    },
+    "northdeck-group": {
+      "name": "NorthDeck Group",
+      "relationship": "Independent client",
+      "href": "/work/northdeck-group",
+      "url": "northdeckgroup.com",
       "disclosure": "Independent client. PandaCodeGen has no ownership or financial stake in the business.",
       "metrics": []
     },

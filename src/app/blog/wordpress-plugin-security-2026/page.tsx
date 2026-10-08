@@ -22,7 +22,7 @@ const postFAQs = blogPosts.find((p) => p.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "WordPress Plugin Security in 2026: Speed Is the Only Real Defence";
 const description =
-    "In one week a critical authentication bypass was exploited in a WordPress SSO plugin and a critical remote code execution was patched in Next.js. What a site owner controls is not whether a vulnerability appears, but how fast the fix lands.";
+    "Within ten days in August 2026, attacks on a critical authentication bypass in a WordPress SSO plugin were reported and a critical remote code execution was patched in Next.js. What a site owner controls is not whether a vulnerability appears, but how fast the fix lands.";
 
 export const dynamic = "force-static";
 
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-27",
-        modifiedTime: "2026-09-05",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath(`/blog/${postId}`)],
@@ -66,7 +66,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath(`/blog/${postId}`),
             datePublished: "2026-08-27T00:00:00-05:00",
-            dateModified: "2026-09-05T00:00:00-05:00",
+            dateModified: "2026-10-08T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -86,7 +86,10 @@ const articleSchema = {
                 { "@type": "CreativeWork", name: "NVD: CVE-2026-61979", url: "https://nvd.nist.gov/vuln/detail/CVE-2026-61979" },
                 { "@type": "CreativeWork", name: "NVD: CVE-2026-15013", url: "https://nvd.nist.gov/vuln/detail/CVE-2026-15013" },
                 { "@type": "CreativeWork", name: "NVD: CVE-2026-57807", url: "https://nvd.nist.gov/vuln/detail/CVE-2026-57807" },
-                { "@type": "CreativeWork", name: "Patchstack: One slug, seven editions", url: "https://patchstack.com/articles/one-slug-seven-editions/" },
+                { "@type": "CreativeWork", name: "Patchstack: One slug, seven editions", url: "https://patchstack.com/articles/one-slug-seven-editions-the-miniorange-saml-sso-bug-that-let-anyone-log-in-as-your-wordpress-admin/" },
+                { "@type": "CreativeWork", name: "NVD: CVE-2026-19842", url: "https://nvd.nist.gov/vuln/detail/CVE-2026-19842" },
+                { "@type": "CreativeWork", name: "Wordfence: attackers exploiting Elementor Pro", url: "https://www.wordfence.com/blog/2026/09/attackers-actively-exploiting-critical-vulnerability-in-elementor-pro-plugin/" },
+                { "@type": "CreativeWork", name: "Wordfence: attackers exploiting Super Forms", url: "https://www.wordfence.com/blog/2026/09/attackers-actively-exploiting-critical-vulnerability-in-super-forms-plugin/" },
                 { "@type": "CreativeWork", name: "Next.js: August 2026 Security Release", url: "https://nextjs.org/blog/august-2026-security-release" },
                 { "@type": "CreativeWork", name: "Full Disclosure: SAML signature algorithm confusion", url: "https://seclists.org/fulldisclosure/2026/Aug/33" },
                 { "@type": "CreativeWork", name: "WordPress.org: SAML Single Sign On plugin", url: "https://wordpress.org/plugins/miniorange-saml-20-single-sign-on/" },
@@ -155,15 +158,16 @@ export default function WordPressPluginSecurity2026Page() {
                             <span className="italic text-cognac">nothing is secure, only fast</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            In the last week of August 2026, a critical authentication bypass was being exploited in a
-                            WordPress single sign-on plugin, and a critical remote code execution was disclosed and
-                            patched in Next.js. Both ecosystems shipped a critical vulnerability in the same week. We
+                            In the second half of August 2026, attempts to exploit a critical authentication bypass in a
+                            WordPress single sign-on plugin were reported, and a critical remote code execution was
+                            disclosed and patched in Next.js. Both landed within ten days of each other. We
                             patched the second one on our own site, which is why this is not an article about how custom
                             code is safe.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Every CVE number, score, version and date below was read at its primary record on 26 August
-                            2026 and is linked. Where two sources disagree, both are given.
+                            The SSO and Next.js figures were read at their primary records on 26 August 2026, the Super
+                            Forms and Elementor Pro figures on 5 September, and all of them rechecked on 8 October 2026.
+                            Every source is linked. Where two sources disagree, both are given.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -171,7 +175,7 @@ export default function WordPressPluginSecurity2026Page() {
                       </div>
                     </header>
 
-                    <BlogAuthor
+                    <BlogAuthor postId="wordpress-plugin-security-2026" published="2026-08-27"
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
                         bio="Hassan rebuilds WordPress and Shopify stores as custom Next.js applications, and patches the dependencies underneath them."
@@ -184,8 +188,8 @@ export default function WordPressPluginSecurity2026Page() {
                             comparison.
                         </BlogHighlight>{" "}
                         A vulnerability appearing is not the variable you control. Both WordPress and the framework this
-                        site runs on produced a critical, unauthenticated, remote vulnerability inside the same seven
-                        days. What differed was everything that happened afterwards: whether the advisory named your
+                        site runs on had a critical, unauthenticated, remote vulnerability in the news within ten days of
+                        each other. What differed was everything that happened afterwards: whether the advisory named your
                         version, whether a database could list it, whether a scanner could see it, and how many steps
                         the fix took.
                     </BlogText>
@@ -279,15 +283,15 @@ export default function WordPressPluginSecurity2026Page() {
 
                     <BlogHeader id="exploit-window">How long was a working exploit public before anyone noticed?</BlogHeader>
                     <BlogText>
-                        Eighteen days. A full disclosure with a proof-of-concept and a Docker lab was posted to the{" "}
-                        <a href="https://seclists.org/fulldisclosure/2026/Aug/33" target="_blank" rel="noopener noreferrer" className={sourceLink}>Full Disclosure mailing list on 29 July 2026</a>{" "}
-                        for the algorithm-confusion variant, including a full chain to administrator. DigitalOcean
-                        detected an anomalous WordPress admin session on 16 August and shared a working reproduction on
-                        17 August.
+                        About three weeks. A proof-of-concept with a Docker lab for the algorithm-confusion variant,
+                        including a full chain to administrator, was public on GitHub from 27 July 2026, and a write-up
+                        dated 29 July reached the{" "}
+                        <a href="https://seclists.org/fulldisclosure/2026/Aug/33" target="_blank" rel="noopener noreferrer" className={sourceLink}>Full Disclosure mailing list</a>{" "}
+                        in early August. DigitalOcean detected an attempted WordPress admin session on 16 August and
+                        shared a working reproduction on 17 August.
                     </BlogText>
                     <BlogText>
-                        Patchstack published six scanning IP addresses spread across Brussels, Abuja, Frankfurt and two
-                        US cloud providers, and characterised the traffic as opportunistic scanning rather than a
+                        Patchstack published six scanning IP addresses in Belgium, Nigeria, Germany and the US, and characterised the traffic as opportunistic scanning rather than a
                         targeted campaign. No source publishes attack volumes or compromise counts, so we do not either.
                     </BlogText>
 
@@ -361,29 +365,32 @@ export default function WordPressPluginSecurity2026Page() {
                         inside the same ecosystem.
                     </BlogText>
 
-                    <BlogHeader id="patch-available-not-applied">The September attacks invert this, and that case is worse</BlogHeader>
+                    <BlogHeader id="patch-available-not-applied">The summer attacks invert this, and that case is worse</BlogHeader>
                     <BlogText>
-                        Between July and September 2026 two WordPress plugins were attacked at scale while a fix was
-                        already published for both. Wordfence blocked more than 250,000 attempts against Super Forms and
-                        close to 190,000 against Elementor Pro. Neither campaign relied on a hidden edition, a silent
-                        changelog or an advisory that named the wrong version. Both vendors did the disclosure work
-                        correctly and hundreds of thousands of sites were attacked anyway.
+                        {/* 8 Oct 2026: corrected against Wordfence's 2 and 3 Sep posts and the CVE records. */}
+                        In July and August 2026 two WordPress plugins were attacked at scale while a fix was already
+                        published for both. By early September Wordfence had blocked more than 250,000 attempts against
+                        Super Forms and more than 190,000 against Elementor Pro. Neither campaign relied on a hidden
+                        edition, a silent changelog or an advisory that named the wrong version. Both vendors did the
+                        disclosure work correctly, and attackers sent hundreds of thousands of exploit attempts anyway.
                     </BlogText>
                     <BlogText>
                         CVE-2026-14894 is an unauthenticated arbitrary file upload in Super Forms, scored CVSS 9.8,
                         caused by a public AJAX endpoint that performed no file-type validation and no capability check.
-                        Super Forms 6.3.314 fixed it in the first week of July 2026 and Wordfence published the advisory
-                        on 9 July. Attacks began on 14 July, five days after that advisory, and peaked above 40,000
-                        requests in a single day on 18 August. Sites were still being compromised five weeks after the
-                        fix shipped.
+                        Super Forms 6.3.314 fixed it on 8 July 2026 and Wordfence published the advisory on 9 July.
+                        Attacks began on 14 July, five days after that advisory, and were heaviest between 18 and 25
+                        August, peaking above 40,000 requests in a single day. Attackers were still hammering unpatched
+                        sites six weeks after the fix shipped.
                     </BlogText>
                     <BlogText>
-                        CVE-2026-32475 is the same class of flaw in Elementor Pro, also scored CVSS 9.8, reachable on
-                        any site with a published Form widget carrying at least one File Upload field. Patchstack
-                        disclosed it and Elementor released 4.2.2 on 19 August 2026. Exploitation started the same day,
-                        and Wordfence blocked close to 190,000 attempts over the following four days across a plugin
-                        with more than six million active installations. Elementor&apos;s response time was effectively
-                        zero, and it did not protect the sites that had not applied the update.
+                        CVE-2026-32475 is the same class of flaw in Elementor Pro, scored 9.0 on its CVE record and 9.8
+                        by Wordfence, reachable on any site with a published Form widget that has at least one File
+                        Upload field not marked as required (the default). Patchstack and Wordfence both published it on
+                        19 August 2026, the day Elementor released 4.2.2. Exploitation started the same day. By 2
+                        September Wordfence had blocked more than 190,000 attempts, most of them between 19 and 23
+                        August, against a plugin Wordfence puts at more than six million installations. Elementor
+                        shipped the fix the day the flaw went public, and that did not protect the sites that had not
+                        applied the update.
                     </BlogText>
                     <BlogText>
                         Read against the miniOrange case, these two say something the four questions above do not cover.
@@ -399,9 +406,9 @@ export default function WordPressPluginSecurity2026Page() {
                     <BlogText>
                         Both flaws also share a shape worth recognising in your own stack. A form that accepts file
                         uploads from the public is a code path where an unauthenticated stranger writes a file to your
-                        server, and it turns on validation that is easy to get subtly wrong. Super Forms and Elementor
-                        Pro both failed on an array-shaped submission where the first element was empty and the second
-                        carried the payload. If you run any plugin that accepts public uploads, that is the input worth
+                        server, and it turns on validation that is easy to get subtly wrong. Elementor Pro failed on an
+                        array-shaped submission where the first element was empty and the second carried the payload,
+                        and Super Forms never checked the file type at all. If you run any plugin that accepts public uploads, that is the input worth
                         asking about first.
                     </BlogText>
 
@@ -409,7 +416,7 @@ export default function WordPressPluginSecurity2026Page() {
                     <BlogList
                         items={[
                             "Identify your edition, not just your version number. Free, Standard, Premium, Enterprise and VIP use separate version series, so a version alone tells you nothing about whether you are patched.",
-                            "Free edition is patched at 5.4.5. For the paid lines, compare against the matrix miniOrange supplied on 18 August 2026 rather than assuming the dashboard would have told you.",
+                            "The free edition needs 5.4.7 or later. 5.4.5 fixed the two bypasses above, but a third flaw, CVE-2026-19842 (CVSS 8.8, published 19 August 2026), stayed open until 5.4.7: the plugin stored a SAML certificate without checking its signature, and an administrator could be led to trust it in one click. The current free release is 6.0.0. For the paid lines, compare against the matrix miniOrange supplied on 18 August 2026 rather than assuming the dashboard would have told you.",
                             "If the dashboard offers no update and you are on an older line, expect a manual upload. The absence of an update prompt is not evidence that you are current.",
                             "Audit for administrator accounts you do not recognise, and for recent logins to accounts that should be dormant. Exploitation was underway before the advisories covered the paid editions, so a clean scan today does not describe last month.",
                             "Check the separate OAuth plugin too. CVE-2026-57807 is a CVSS 9.8 authentication bypass affecting that plugin through 38.5.8, disclosed in July.",
@@ -438,16 +445,17 @@ export default function WordPressPluginSecurity2026Page() {
                     <BlogHeader id="honest-conclusion">So is a custom build safer?</BlogHeader>
                     <BlogText>
                         On the evidence of this one week, no, and we would be contradicting our own patch notes to say
-                        otherwise. A custom Next.js application has fewer moving parts than a WordPress install carrying
-                        forty plugins, and a smaller third-party surface is a real advantage over time. It is not
-                        immunity. The framework underneath it shipped a 9.5 unauthenticated remote code execution while
-                        this article was being researched.
+                        otherwise. A custom application can remove the need for particular privileged plugins,
+                        but its npm dependency tree and external services also need an inventory. Fewer WordPress
+                        plugins does not establish fewer dependencies or lower overall risk. The framework underneath
+                        it shipped a 9.5 unauthenticated remote code execution while this article was being researched.
                     </BlogText>
                     <BlogText>
-                        What a smaller surface buys you is that the four questions above have answers. Fewer
-                        dependencies, each one publicly versioned, each one covered by an advisory feed, each one
-                        updatable by a command that leaves an audit trail. That is not the same as being secure. It is
-                        being able to move quickly when you are not.
+                        The useful advantage is a controlled release process: inventory dependencies, review updates,
+                        test critical flows and deploy a known artifact. WordPress can also use staged releases.
+                        Neither a passing build nor an advisory scan proves the absence of malware. Our{' '}
+                        <Link href="/blog/wordpress-vs-nextjs#security-recovery" className={inlineLink}>security repair comparison</Link>{' '}
+                        explains why patching and compromise recovery require different work.
                     </BlogText>
                     <BlogText>
                         If you are weighing the platform question more broadly, our{" "}
@@ -458,7 +466,12 @@ export default function WordPressPluginSecurity2026Page() {
                         <Link href="/blog/wordpress-plugins-destroy-speed" className={inlineLink}>
                             how plugin stacks affect site speed
                         </Link>{" "}
-                        covers the performance half of the same trade-off.
+                        covers the performance half of the same trade-off. Cloudflare pitched EmDash&apos;s sandboxed
+                        plugins at the same problem, and{" "}
+                        <Link href="/blog/cloudflare-emdash-wordpress-replacement" className={inlineLink}>
+                            our EmDash review
+                        </Link>{" "}
+                        covers what that sandbox does and doesn&apos;t change.
                     </BlogText>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
@@ -473,7 +486,7 @@ export default function WordPressPluginSecurity2026Page() {
                             next step is a look at the actual install rather than a score.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                            Book a 30-minute review <ArrowRight className="h-4 w-4" />
+                            Book a 15-minute review <ArrowRight className="h-4 w-4" />
                         </CalModalButton>
                     </section>
 

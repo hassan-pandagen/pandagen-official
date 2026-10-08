@@ -81,7 +81,7 @@ export default function Ladies4JesusWalkthrough() {
       slug="ladies4jesus"
       projectName="Ladies 4 Jesus"
       eyebrow="One community. Two things worth seeing."
-      heading={<>A community she runs,<br />and the editor behind it.</>}
+      heading={<>A community she <em>runs,</em>{" "}<br />and the editor behind it.</>}
       lead={<>The <strong>community</strong> visitors find, and the <strong>content editor</strong> the owner uses to run it alone.</>}
       navAriaLabel="Explore the Ladies 4 Jesus build"
       chapters={chapters}

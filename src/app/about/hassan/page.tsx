@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Code2, FileCheck2, Gauge, Route } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import FounderRoleStack from "@/components/about/FounderRoleStack";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { blogPosts } from "@/data/blog";
 import { ogImageForPath } from "@/lib/seo/og";
 
 export const metadata: Metadata = {
-  title: "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen",
+  // absolute: this title already ends in "PandaCodeGen", so the root "%s | PandaCodeGen"
+  // template would print the brand twice (SEO audit, 4 Oct 2026).
+  title: { absolute: "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen" },
   description: "Meet Hassan Jamal, PandaCodeGen co-founder and Lead Engineer for custom website and store builds, Next.js implementation, performance, migrations, and technical delivery.",
   alternates: { canonical: "/about/hassan" },
   openGraph: {
@@ -73,100 +76,65 @@ const profileSchema = {
 
 const responsibilities = [
   {
-    icon: Route,
-    title: "Migration implementation",
-    body: "Take the approved plan for URLs, content, redirects, integrations, analytics and cutover, and turn it into something in production you can actually test.",
+    title: "Tell Hassan what you picture",
+    body: "Show Hassan the site or store you have in mind, the pages you want, and what frustrates you about your current setup. He helps turn that into a clear plan and tells you what it will take to build.",
   },
   {
-    icon: Code2,
-    title: "Engineering delivery",
-    body: "Build and review what the scope names: the Next.js application, the editing interfaces, the forms, the integrations, and handing over the code.",
+    title: "Watch the idea take shape",
+    body: "He writes the code for the pages, editing tools, forms and connections you agreed on. You see working versions and can say what needs changing before launch.",
   },
   {
-    icon: Gauge,
-    title: "Measured quality",
-    body: "Record the devices, pages, runs, accessibility checks and conditions you agreed. One lab score is not a business outcome.",
+    title: "Leave with a site you own",
+    body: "He checks the site before launch, then hands over the code and accounts. You get documentation and a live walkthrough of how to edit your content. If anything is unclear, you can ask Hassan or Imran directly.",
   },
 ];
 
 export default function HassanProfilePage() {
   const recentPosts = blogPosts.filter((post) => post.author === "Hassan").slice(0, 6);
+  const [featuredPost, ...morePosts] = recentPosts;
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-paper text-charcoal">
+    <main className="min-h-screen overflow-x-clip bg-paper text-charcoal">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema) }} />
       <Header />
 
       <section className="border-b border-stone-300 px-6 pb-16 pt-28 md:pb-24 md:pt-40">
         <div className="mx-auto max-w-6xl">
-          <Link href="/about" className="inline-flex min-h-11 items-center text-sm font-semibold text-stone-700 hover:text-cognac">
-            Back to PandaCodeGen
-          </Link>
-          <div className="mt-8 grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-            <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-[2rem] border border-stone-300 bg-stone-200 shadow-elevated">
+          <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
+            <Link href="/about" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-stone-700 hover:text-cognac">
+              <ArrowLeft className="h-4 w-4" aria-hidden="true" /> Back to PandaCodeGen
+            </Link>
+            <a href="#hassan-press" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-cognac underline underline-offset-4 hover:text-charcoal">
+              Quoted in Woman&rsquo;s World <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+          <div className="mt-6 grid gap-7 sm:mt-8 sm:gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+            <div className="relative aspect-square w-full max-w-xs overflow-hidden border border-stone-300 bg-stone-200 sm:max-w-sm">
               <Image
                 src="/team/hassan.png"
                 alt="Hassan Jamal, co-founder of PandaCodeGen"
                 fill
                 sizes="(max-width: 431px) calc(100vw - 48px), 384px"
                 loading="eager"
-                className="object-cover"
+                className="object-contain"
               />
             </div>
             <div className="border-l-2 border-cognac pl-5 md:pl-8">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Co-founder and Lead Engineer</p>
               <h1 className="mt-4 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">Hassan Jamal</h1>
               <p className="mt-7 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
-                Hassan leads implementation at PandaCodeGen. His work covers custom Next.js websites and stores built from scratch, applications and integrations, performance engineering, technical QA, SEO-safe migrations when there is a site to move, and the handover required to keep clients in control of their platform.
+                Tell Hassan the website or store you have in mind. You speak with the founders directly, and you do not need to know how to code. Hassan works out the build with you, shows you a working version, and explains how to use and edit it before handover.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">
+                <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 bg-charcoal px-6 font-bold text-white hover:bg-cognac">
                   Talk to the founders <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
-                <a href="https://github.com/hassan-pandagen" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-400 bg-white px-6 font-bold hover:border-charcoal">
+                <a href="https://github.com/hassan-pandagen" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center border border-stone-400 px-6 font-bold hover:border-charcoal">
                   Review public GitHub activity
                 </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="px-6 py-16 md:py-24" aria-labelledby="hassan-responsibilities">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Delivery responsibility</p>
-          <h2 id="hassan-responsibilities" className="mt-3 max-w-3xl text-3xl font-bold md:text-5xl">Engineering follows the written plan.</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {responsibilities.map(({ icon: Icon, title, body }) => (
-              <article key={title} className="rounded-3xl border border-stone-300 bg-white p-7">
-                <Icon className="h-7 w-7 text-cognac" aria-hidden="true" />
-                <h3 className="mt-5 text-xl font-bold">{title}</h3>
-                <p className="mt-3 leading-7 text-stone-700">{body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-charcoal px-6 py-16 text-white md:py-24" aria-labelledby="hassan-standard">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <FileCheck2 className="h-8 w-8 text-orange-300" aria-hidden="true" />
-            <h2 id="hassan-standard" className="mt-5 text-3xl font-bold md:text-5xl">What the engineering claim should mean</h2>
-          </div>
-          <ul className="space-y-4">
-            {[
-              "Every URL, redirect, canonical, piece of metadata and structured-data block gets checked against the inventory.",
-              "Performance is measured on the pages, profiles and conditions you agreed to sign off against.",
-              "Rankings, revenue, field traffic, and third-party behavior are monitored outcomes, not universal guarantees.",
-              "The client receives the repository, accounts, documentation, and licenses described in the accepted terms.",
-            ].map((item) => (
-              <li key={item} className="flex gap-3 rounded-2xl border border-stone-700 bg-stone-900 p-5 text-stone-200">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-orange-300" aria-hidden="true" />
-                <span className="leading-7">{item}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
@@ -183,9 +151,9 @@ export default function HassanProfilePage() {
               careful paragraph directly beneath it, which says only that he was
               quoted on how that work operates. An H2 on an entity page is a strong
               signal about what this company IS, and "AI expert" is not it. */}
-          <h2 id="hassan-press" className="mt-3 text-3xl font-bold md:text-4xl">Quoted in Woman&rsquo;s World</h2>
-          <div className="mt-6 rounded-2xl border border-stone-300 bg-stone-50 p-6 md:p-8">
-            <p className="text-lg leading-8 text-stone-700">
+          <h2 id="hassan-press" className="mt-3 scroll-mt-28 text-3xl font-bold md:text-4xl">Quoted in Woman&rsquo;s World</h2>
+          <div className="mt-8 border-y border-stone-400 py-6 md:py-8">
+            <p className="max-w-4xl text-lg leading-8 text-stone-700">
               <a
                 href="https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay"
                 target="_blank"
@@ -195,36 +163,89 @@ export default function HassanProfilePage() {
                 Woman&rsquo;s World
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>{" "}
-              quoted Hassan Jamal, co-founder and lead engineer at PandaCodeGen, on how remote AI-training
-              work actually operates. The article is public, names him directly, and links back here.
+              quoted Hassan Jamal, co-founder and lead engineer at PandaCodeGen, on how remote AI-training work operates.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="px-6 py-16 md:py-24" aria-labelledby="hassan-writing">
+      <FounderRoleStack id="hassan-responsibilities" eyebrow="Work with the engineer" heading="Your vision. Hassan builds it." roles={responsibilities} />
+
+      <section className="border-b border-stone-300 bg-paper px-6 py-16 text-charcoal md:py-24" aria-labelledby="hassan-standard">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Before handover</p>
+            <h2 id="hassan-standard" className="mt-5 text-3xl font-bold md:text-5xl">How you know the work is ready</h2>
+          </div>
+          <ol className="border-t border-stone-400">
+            {[
+              "Old links, page details and forms are checked when a site moves.",
+              "Speed and accessibility are tested on the pages and devices agreed for your project.",
+              "Search traffic and sales can change for reasons outside the site, so no fixed result is promised.",
+              "Your team receives the code, account access and handover documents listed in the agreement.",
+            ].map((item, index) => (
+              <li key={item} className="flex gap-5 border-b border-stone-400 py-5 text-stone-700">
+                <span className="font-mono text-xs font-bold text-cognac">0{index + 1}</span>
+                <span className="leading-7">{item}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="border-t border-stone-300 px-6 py-16 md:py-24" aria-labelledby="hassan-writing">
         <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div className="flex flex-col gap-4 border-b border-stone-400 pb-8 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Engineering journal</p>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Hassan&apos;s writing</p>
               <h2 id="hassan-writing" className="mt-3 text-3xl font-bold md:text-5xl">Recent articles by Hassan</h2>
             </div>
             <Link href="/blog" className="inline-flex min-h-11 items-center gap-2 font-bold text-charcoal hover:text-cognac">
               Browse all articles <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {recentPosts.map((post) => (
-              <article key={post.id} className="flex flex-col rounded-3xl border border-stone-300 bg-white p-6">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-cognac">{post.category}</p>
-                <h3 className="mt-3 text-xl font-bold leading-snug">{post.title}</h3>
-                <p className="mt-3 line-clamp-3 leading-7 text-stone-700">{post.excerpt}</p>
-                <Link href={`/blog/${post.id}`} className="mt-6 inline-flex min-h-11 items-center gap-2 font-bold hover:text-cognac">
-                  Read article <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          {featuredPost && (
+            <article className="grid border-b border-stone-400 lg:grid-cols-[0.95fr_1.05fr]">
+              <div className="flex flex-col justify-between bg-charcoal px-6 py-8 text-white sm:px-9 sm:py-10 lg:min-h-[390px] lg:px-12 lg:py-12">
+                <div>
+                  <p className="font-mono text-xs font-bold uppercase tracking-[0.17em] text-orange-300">01 / Latest article · {featuredPost.category} · {featuredPost.readTime} read</p>
+                  <h3 className="mt-8 max-w-xl font-serif text-3xl leading-tight sm:text-4xl lg:text-[2.7rem]">
+                    <Link href={`/blog/${featuredPost.id}`} className="hover:text-orange-300">{featuredPost.title}</Link>
+                  </h3>
+                  <p className="mt-6 max-w-lg text-base leading-7 text-stone-300">{featuredPost.excerpt}</p>
+                </div>
+                <Link href={`/blog/${featuredPost.id}`} className="mt-8 inline-flex min-h-11 w-fit items-center gap-2 border-b border-orange-300 font-bold text-orange-300 hover:text-white">
+                  Read the article <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
-              </article>
+              </div>
+              <Link href={`/blog/${featuredPost.id}`} aria-label={`Read ${featuredPost.title}`} className="relative block min-h-64 overflow-hidden bg-stone-300 sm:min-h-80 lg:min-h-full">
+                <Image
+                  src={`/blog-covers/${featuredPost.id}.webp`}
+                  alt=""
+                  fill
+                  sizes="(max-width: 1023px) 100vw, 55vw"
+                  className="object-cover transition-transform duration-500 hover:scale-[1.03] motion-reduce:transition-none"
+                />
+              </Link>
+            </article>
+          )}
+          <ol className="border-b border-stone-400">
+            {morePosts.map((post, index) => (
+              <li key={post.id} className="group grid gap-3 border-t border-stone-400 py-6 first:border-t-0 sm:grid-cols-[3rem_minmax(0,1fr)_auto] sm:gap-6 md:items-start md:py-8 lg:grid-cols-[3rem_minmax(0,1.1fr)_minmax(0,0.9fr)_2rem] lg:gap-8">
+                <span className="pt-1 font-mono text-xs font-bold tracking-[0.18em] text-cognac">{String(index + 2).padStart(2, "0")}</span>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-cognac">{post.category} · {post.readTime} read</p>
+                  <h3 className="mt-2 max-w-lg text-xl font-bold leading-snug md:text-2xl">
+                    <Link href={`/blog/${post.id}`} className="hover:text-cognac">{post.title}</Link>
+                  </h3>
+                </div>
+                <p className="max-w-lg text-sm leading-6 text-stone-700 sm:col-start-2 lg:col-start-3 lg:text-base lg:leading-7">{post.excerpt}</p>
+                <Link href={`/blog/${post.id}`} aria-label={`Read ${post.title}`} className="hidden min-h-11 items-start justify-end pt-1 text-cognac transition-transform group-hover:translate-x-1 lg:flex">
+                  <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                </Link>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 

@@ -403,3 +403,44 @@
     padding: 52px 20px 64px;
   }
 }
+
+/* The cover is part of the article opening, and links use the same warm cue
+   as the commercial pages without turning body copy into a button. */
+.surface :global(main article > header[data-article-hero="split"] [data-article-hero-screen]),
+.surface :global(main [data-article-hero-variant="nested"] [data-article-hero-screen]) {
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+.surface :global(main article > header[data-article-hero="split"] [data-article-hero-screen]:hover),
+.surface :global(main [data-article-hero-variant="nested"] [data-article-hero-screen]:hover) {
+  box-shadow: 12px 12px 0 #ad3d0b;
+  transform: translateY(-3px);
+}
+.surface :global(main article > header a:hover),
+.surface :global(main article > header a:focus-visible) {
+  color: #fff !important;
+  text-decoration-thickness: 2px;
+}
+.surface :global(main article :is(p, li) a:hover:not(:where([class*="bg-charcoal"], [class*="bg-stone-9"], [class*="bg-black"]) *)),
+.surface :global(main article :is(p, li) a:focus-visible:not(:where([class*="bg-charcoal"], [class*="bg-stone-9"], [class*="bg-black"]) *)) {
+  color: #ad3d0b;
+  text-decoration-thickness: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .surface :global(main article > header[data-article-hero="split"] [data-article-hero-screen]),
+  .surface :global(main [data-article-hero-variant="nested"] [data-article-hero-screen]) { transition: none; }
+  .surface :global(main article > header[data-article-hero="split"] [data-article-hero-screen]:hover),
+  .surface :global(main [data-article-hero-variant="nested"] [data-article-hero-screen]:hover) { transform: none; }
+}
+
+/* Mobile navigation occupies its own space in the document flow. */
+@media(max-width:760px){
+.surface :global(main:has(article > header[data-article-hero="split"])){padding-top:32px!important}
+.surface :global(main article:has(> [data-article-hero-variant="nested"])){padding-top:0!important}
+.surface :global(main){padding-top:32px!important}
+.surface :global(main:has(> header)){padding-top:0!important}
+.surface :global(main article){padding-top:0!important}
+.surface :global(main section:has(article)),
+.surface :global(main section:has([data-article-hero-variant="nested"])){padding-top:0!important}
+.surface :global(main article > header),
+.surface :global(main [data-article-hero-variant="nested"]){padding-top:32px!important}
+}

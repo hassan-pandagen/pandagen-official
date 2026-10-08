@@ -37,7 +37,7 @@ const caseStudyImages: Record<string, string> = {
 
 const profileImages: Record<string, string> = {
   "/about/hassan": "/team/hassan.png",
-  "/about/imran": "/team/imran.png",
+  "/about/imran": "/team/imran-editorial.png",
 };
 
 function classify(path: string): OgVariant {

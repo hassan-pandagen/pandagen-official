@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-07",
+  "sender": "hassan@mail.pandacodegen.com",
+  "authorization": "Owner requested 3 or 5 daily relevant backlink outreach emails; selected target up to 3, existing maximum 5 and 15-minute spacing retained.",
+  "first": {
+    "body": {
+      "fromAddress": "hassan@mail.pandacodegen.com",
+      "toAddress": "editor@cooperpress.com",
+      "subject": "Frontend Focus suggestion: keeping a product catalogue in sync",
+      "mailFormat": "plaintext",
+      "encoding": "UTF-8",
+      "askReceipt": "no",
+      "includeSignature": false,
+      "content": "Hi Cooperpress editors,\n\nI'm Hassan, a co-founder and developer at PandaCodeGen. I have a project write-up that may interest Frontend Focus readers:\nhttps://www.pandacodegen.com/work/emblematic-studio\n\nFor this independent client's Next.js site, one typed product registry drives navigation, product pages, related cards, quote options and the sitemap. The write-up explains the choices behind a mostly prerendered catalogue, server-side quote validation, and reduced-motion behavior. It also documents the limits of the in-memory rate limiter and why we left out a database.\n\nThis is our own build record, rather than an independent review. If the implementation decisions are useful for a future roundup, you're welcome to consider it. No worries if it isn't a fit.\n\nThanks,\nHassan Jamal\nPandaCodeGen\nhttps://www.pandacodegen.com"
+    },
+    "messageId": "1791386728351155300",
+    "sentAt": "2026-10-07T15:25:28.344Z",
+    "status": "sent_verified_in_sent_folder"
+  },
+  "second": {
+    "body": {
+      "fromAddress": "hassan@mail.pandacodegen.com",
+      "toAddress": "erfan@nextjsweekly.com",
+      "subject": "Next.js Weekly project suggestion: moderation and upload cleanup",
+      "mailFormat": "plaintext",
+      "encoding": "UTF-8",
+      "askReceipt": "no",
+      "includeSignature": false,
+      "isSchedule": true,
+      "scheduleType": 1,
+      "content": "Hi Erfan,\n\nI'm Hassan, a co-founder and developer at PandaCodeGen. Your newsletter covers Next.js projects, and I thought this small production build might be useful to readers:\nhttps://www.pandacodegen.com/work/ladies-4-jesus\n\nWe rebuilt an independent client's community site with Next.js and Sanity. Visitor submissions remain pending until approved in Studio. The write-up covers two separate video cleanup paths: deleting a file when its submission is rejected, and sweeping uploads abandoned before a submission exists. It also explains which changes the owner can publish and which still require a developer.\n\nThis is our own project record. If those implementation choices fit a future issue, please consider it; there's no request for a particular link or wording.\n\nThanks,\nHassan Jamal\nPandaCodeGen\nhttps://www.pandacodegen.com",
+      "timeZone": "Asia/Karachi"
+    },
+    "response": {
+      "status": "success",
+      "data": {
+        "status": {
+          "code": 200,
+          "description": "success"
+        },
+        "data": {
+          "subject": "Next.js Weekly project suggestion: moderation and upload cleanup",
+          "includeSignature": false,
+          "timeZone": "Asia/Karachi",
+          "messageId": "1791386991903155000",
+          "encoding": "UTF-8",
+          "toAddress": "erfan@nextjsweekly.com",
+          "content": "Hi Erfan,\n\nI'm Hassan, a co-founder and developer at PandaCodeGen. Your newsletter covers Next.js projects, and I thought this small production build might be useful to readers:\nhttps://www.pandacodegen.com/work/ladies-4-jesus\n\nWe rebuilt an independent client's community site with Next.js and Sanity. Visitor submissions remain pending until approved in Studio. The write-up covers two separate video cleanup paths: deleting a file when its submission is rejected, and sweeping uploads abandoned before a submission exists. It also explains which changes the owner can publish and which still require a developer.\n\nThis is our own project record. If those implementation choices fit a future issue, please consider it; there's no request for a particular link or wording.\n\nThanks,\nHassan Jamal\nPandaCodeGen\nhttps://www.pandacodegen.com",
+          "scheduleType": "1",
+          "askReceipt": "no",
+          "fromAddress": "hassan@mail.pandacodegen.com",
+          "mailFormat": "plaintext",
+          "mailId": "<1a116fc3d13.dd947e7321429.973273119306703220@mail.pandacodegen.com>",
+          "isSchedule": true
+        }
+      }
+    },
+    "status": "scheduled_verified_in_outbox",
+    "scheduleRequested": "one hour after submission; Asia/Karachi"
+  },
+  "third": {
+    "body": {
+      "fromAddress": "hassan@mail.pandacodegen.com",
+      "toAddress": "jakub@bonobopress.com",
+      "subject": "Programming Digest suggestion: permissions in an operations app",
+      "mailFormat": "plaintext",
+      "encoding": "UTF-8",
+      "askReceipt": "no",
+      "includeSignature": false,
+      "isSchedule": true,
+      "scheduleType": 2,
+      "timeZone": "Asia/Karachi",
+      "content": "Hi Jakub,\n\nI'm Hassan, a co-founder and developer at PandaCodeGen. I found your contact on Bonobo Press and wanted to suggest a project write-up for Programming Digest:\nhttps://www.pandacodegen.com/work/enterprise-ops\n\nIt documents an operations app built around a Supabase backend: an order lifecycle with change history, agent-specific access enforced in the database as well as the UI, and invoice sending designed for repeated payment notifications. We also describe where monitoring coverage stops, rather than implying every serverless function is covered.\n\nFor context, this runs our co-founder's Panda Patches business. It is our own production system, not an independent client case study. If the engineering decisions fit a future issue, please consider the write-up.\n\nThanks,\nHassan Jamal\nPandaCodeGen\nhttps://www.pandacodegen.com"
+    },
+    "response": {
+      "status": "success",
+      "data": {
+        "status": {
+          "code": 200,
+          "description": "success"
+        },
+        "data": {
+          "subject": "Programming Digest suggestion: permissions in an operations app",
+          "includeSignature": false,
+          "timeZone": "Asia/Karachi",
+          "messageId": "1791387222941155100",
+          "encoding": "UTF-8",
+          "toAddress": "jakub@bonobopress.com",
+          "content": "Hi Jakub,\n\nI'm Hassan, a co-founder and developer at PandaCodeGen. I found your contact on Bonobo Press and wanted to suggest a project write-up for Programming Digest:\nhttps://www.pandacodegen.com/work/enterprise-ops\n\nIt documents an operations app built around a Supabase backend: an order lifecycle with change history, agent-specific access enforced in the database as well as the UI, and invoice sending designed for repeated payment notifications. We also describe where monitoring coverage stops, rather than implying every serverless function is covered.\n\nFor context, this runs our co-founder's Panda Patches business. It is our own production system, not an independent client case study. If the engineering decisions fit a future issue, please consider the write-up.\n\nThanks,\nHassan Jamal\nPandaCodeGen\nhttps://www.pandacodegen.com",
+          "scheduleType": "2",
+          "askReceipt": "no",
+          "fromAddress": "hassan@mail.pandacodegen.com",
+          "mailFormat": "plaintext",
+          "mailId": "<1a116ffc394.2ea58080318299.5692820023870010892@mail.pandacodegen.com>",
+          "isSchedule": true
+        }
+      }
+    },
+    "status": "scheduled_verified_in_outbox",
+    "scheduleRequested": "two hours after submission; Asia/Karachi"
+  },
+  "outbox": {
+    "status": "success",
+    "data": {
+      "status": {
+        "code": 200,
+        "description": "success"
+      },
+      "data": [
+        {
+          "sentDateInGMT": "1791412422000",
+          "subject": "Programming Digest suggestion: permissions in an operations app",
+          "receivedTime": "1791387222936",
+          "messageId": "1791387222941155100",
+          "toAddress": "&lt;jakub@bonobopress.com&gt;",
+          "folderId": "2189899000000008028"
+        },
+        {
+          "sentDateInGMT": "1791412191000",
+          "subject": "Next.js Weekly project suggestion: moderation and upload cleanup",
+          "receivedTime": "1791386991896",
+          "messageId": "1791386991903155000",
+          "toAddress": "&lt;erfan@nextjsweekly.com&gt;",
+          "folderId": "2189899000000008028"
+        }
+      ]
+    }
+  },
+  "scheduleVerification": "Zoho returned success and the two messages appear in Outbox. listEmails sentDateInGMT is not independently verified as scheduled delivery time; preset one-hour and two-hour requests were accepted. Confirm actual Sent receipts later; do not resend scheduled messages."
+}

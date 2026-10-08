@@ -5,24 +5,24 @@
     "url": "https://w3techs.com/technologies/history_overview/content_management/ms/y",
     "method": "Share of the top 10 million websites, among sites whose content management system is identified. Surveyed by W3Techs; readings are taken 1 January of each year, plus a current reading.",
     "limitation": "Identification is by detectable signature, so sites that hide or strip their CMS fingerprint are absent. Share of existing sites is not share of new builds, and the top 10 million skews toward established sites.",
-    "currency": "W3Techs updates continuously, so the 2026-08 column is a dated reading and not a live figure. Spot-checked 13 September 2026: WordPress read 58.8% of known-CMS sites and 40.3% of all websites, against 59.0% in the 2026-08 column here. Re-read before quoting the current number.",
- "verifiedAt": "2026-08-15",
- "spotCheckedAt": "2026-09-13"
+    "currency": "W3Techs updates continuously, so the 2026-10 column is a dated reading and not a live figure. It holds the figures W3Techs showed for 7 October 2026, read on 8 October 2026: WordPress at 58.6% of known-CMS sites and 40.1% of all websites. Re-read before quoting the current number.",
+    "verifiedAt": "2026-10-08",
+    "spotCheckedAt": "2026-10-08"
   },
   "periods": [
     "2015-01", "2016-01", "2017-01", "2018-01", "2019-01", "2020-01",
-    "2021-01", "2022-01", "2023-01", "2024-01", "2025-01", "2026-01", "2026-08"
+    "2021-01", "2022-01", "2023-01", "2024-01", "2025-01", "2026-01", "2026-08", "2026-10"
   ],
   "platforms": [
-    { "name": "WordPress", "group": "self-hosted", "series": [60.7, 58.8, 58.5, 60.0, 59.7, 62.1, 64.1, 65.2, 63.7, 62.9, 62.0, 60.2, 59.0] },
-    { "name": "Shopify", "group": "hosted-commerce", "series": [0.7, 1.0, 1.3, 1.8, 2.6, 3.4, 5.2, 6.6, 5.7, 6.0, 6.7, 7.0, 7.7] },
-    { "name": "Wix", "group": "hosted-builder", "series": [0.3, 0.4, 0.6, 0.9, 1.8, 2.3, 2.4, 2.9, 3.6, 3.8, 4.6, 5.8, 6.1] },
-    { "name": "Squarespace", "group": "hosted-builder", "series": [0.5, 0.8, 1.1, 1.5, 2.6, 2.7, 2.3, 2.7, 3.0, 3.0, 3.2, 3.4, 3.5] },
-    { "name": "Joomla", "group": "self-hosted", "series": [8.6, 7.5, 7.2, 6.5, 5.4, 4.6, 3.6, 2.6, 2.7, 2.5, 2.2, 1.9, 1.7] },
-    { "name": "Tilda", "group": "hosted-builder", "series": [null, null, null, null, 0.1, 0.2, 0.4, 0.5, 0.5, 0.6, 0.8, 1.1, 1.2] },
-    { "name": "Webflow", "group": "hosted-builder", "series": [null, null, null, null, 0.2, 0.2, 0.4, 0.7, 0.9, 1.0, 1.1, 1.2, 1.2] },
-    { "name": "Duda", "group": "hosted-builder", "series": [0.2, 0.2, 0.1, 0.1, 0.2, 0.2, 0.2, 0.3, 0.5, 0.6, 0.8, 1.0, 1.1] },
-    { "name": "Drupal", "group": "self-hosted", "series": [5.1, 4.9, 4.8, 4.6, 3.5, 3.0, 2.5, 2.0, 1.8, 1.6, 1.3, 1.1, 1.0] },
-    { "name": "GoDaddy Website Builder", "group": "hosted-builder", "series": [0.2, 0.1, 0.1, 0.1, 0.3, 0.4, 0.4, 0.4, 0.5, 0.6, 0.8, 0.9, 0.9] }
+    { "name": "WordPress", "group": "self-hosted", "series": [60.7, 58.8, 58.5, 60.0, 59.7, 62.1, 64.1, 65.2, 63.7, 62.9, 62.0, 60.2, 59.0, 58.6] },
+    { "name": "Shopify", "group": "hosted-commerce", "series": [0.7, 1.0, 1.3, 1.8, 2.6, 3.4, 5.2, 6.6, 5.7, 6.0, 6.7, 7.0, 7.7, 7.8] },
+    { "name": "Wix", "group": "hosted-builder", "series": [0.3, 0.4, 0.6, 0.9, 1.8, 2.3, 2.4, 2.9, 3.6, 3.8, 4.6, 5.8, 6.1, 6.1] },
+    { "name": "Squarespace", "group": "hosted-builder", "series": [0.5, 0.8, 1.1, 1.5, 2.6, 2.7, 2.3, 2.7, 3.0, 3.0, 3.2, 3.4, 3.5, 3.6] },
+    { "name": "Joomla", "group": "self-hosted", "series": [8.6, 7.5, 7.2, 6.5, 5.4, 4.6, 3.6, 2.6, 2.7, 2.5, 2.2, 1.9, 1.7, 1.6] },
+    { "name": "Tilda", "group": "hosted-builder", "series": [null, null, null, null, 0.1, 0.2, 0.4, 0.5, 0.5, 0.6, 0.8, 1.1, 1.2, 1.2] },
+    { "name": "Webflow", "group": "hosted-builder", "series": [null, null, null, null, 0.2, 0.2, 0.4, 0.7, 0.9, 1.0, 1.1, 1.2, 1.2, 1.2] },
+    { "name": "Duda", "group": "hosted-builder", "series": [0.2, 0.2, 0.1, 0.1, 0.2, 0.2, 0.2, 0.3, 0.5, 0.6, 0.8, 1.0, 1.1, 1.1] },
+    { "name": "Drupal", "group": "self-hosted", "series": [5.1, 4.9, 4.8, 4.6, 3.5, 3.0, 2.5, 2.0, 1.8, 1.6, 1.3, 1.1, 1.0, 0.9] },
+    { "name": "GoDaddy Website Builder", "group": "hosted-builder", "series": [0.2, 0.1, 0.1, 0.1, 0.3, 0.4, 0.4, 0.4, 0.5, 0.6, 0.8, 0.9, 0.9, 0.9] }
   ]
 }

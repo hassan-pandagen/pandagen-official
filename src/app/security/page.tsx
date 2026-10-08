@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import PreviewShell from "@/components/redesign/PreviewShell";
+import styles from "@/components/redesign/PrinciplePages.module.css";
 import { ogImageForPath } from "@/lib/seo/og";
+
+const reportEmail = "mailto:info@pandacodegen.com?subject=Security%20report";
 
 export const metadata: Metadata = {
   title: { absolute: "Security Reporting | PandaCodeGen" },
@@ -23,7 +25,6 @@ export const metadata: Metadata = {
   },
 };
 
-// The five legal pages were the only indexable routes without structured data.
 const pageSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -47,41 +48,108 @@ const pageSchema = {
   ],
 };
 
+const reportDetails = [
+  "The affected URL or component",
+  "Minimal steps that reproduce the issue",
+  "What you expected and what happened",
+  "The potential impact, without personal data or credentials",
+];
+
+const responseSteps = [
+  { title: "Send it privately", body: "Email the report to info@pandacodegen.com with the subject Security report. Please do not publish details in an issue or social post while we investigate." },
+  { title: "We assess the report", body: "We review reproducibility, affected systems and potential severity. We may ask for clarification using the contact details you provide." },
+  { title: "We share material updates", body: "We use your contact details for relevant updates. This public page does not promise a fixed response or remediation deadline." },
+];
+
 export default function SecurityPage() {
   return (
-    <main className="min-h-screen bg-paper text-charcoal">
+    <PreviewShell condensed>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Header />
-      <div className="container mx-auto max-w-3xl px-6 pb-24 pt-28 md:pt-36">
-        <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-cognac">
-          Responsible disclosure
-        </p>
-        <h1 className="text-4xl font-bold tracking-tight md:text-6xl">Report a security issue</h1>
-        <p className="mt-6 text-lg leading-relaxed text-stone-600">
-          Please report suspected vulnerabilities privately so we can investigate them without putting visitors or customer data at risk.
-        </p>
+      <div className={styles.page}>
+        <header className={`${styles.hero} ${styles.heroLight}`}>
+          <div className={styles.wrap}>
+            <div className={styles.heroTop}>
+              <span className={styles.eyebrow}>PandaCodeGen / Security reporting</span>
+              <span className={styles.meta}>Private disclosure channel</span>
+            </div>
+            <div className={styles.heroGrid}>
+              <h1>Report a <span className={styles.heroAccent}>security issue.</span></h1>
+              <div className={styles.heroAside}>
+                <p>Found a suspected vulnerability in our public website or first-party APIs? Tell us privately so we can investigate without exposing visitors or customer data.</p>
+                <a className={styles.heroAction} href={reportEmail}>Email a security report <span aria-hidden="true">↗</span></a>
+                <p className={styles.byline}>Send to info@pandacodegen.com with the subject “Security report.”</p>
+              </div>
+            </div>
+          </div>
+        </header>
 
-        <section className="mt-12 border-t border-stone-200 pt-8" aria-labelledby="reporting">
-          <h2 id="reporting" className="text-2xl font-bold">How to report</h2>
-          <p className="mt-4 leading-relaxed text-stone-600">
-            Email <a className="font-semibold text-cognac underline underline-offset-4" href="mailto:info@pandacodegen.com?subject=Security%20report">info@pandacodegen.com</a> with the subject <strong>Security report</strong>. Include the affected URL or component, minimal reproduction steps, expected and observed behavior, and the potential impact.
-          </p>
-          <p className="mt-4 leading-relaxed text-stone-600">
-            Use test data and the minimum activity needed to demonstrate the issue. Do not include credentials, personal data, destructive payloads, or details in a public issue.
-          </p>
+        <nav className={styles.jumpNav} aria-label="On this page">
+          <div className={`${styles.wrap} ${styles.jumpNavInner}`}>
+            <a href="#report">01 / What to send</a>
+            <a href="#scope">02 / Scope and boundaries</a>
+            <a href="#response">03 / What happens next</a>
+          </div>
+        </nav>
+
+        <section id="report" className={styles.securityIntro} aria-labelledby="report-title">
+          <div className={`${styles.wrap} ${styles.splitGrid}`}>
+            <div><span className={styles.sectionNumber}>01 / A useful report</span><h2 id="report-title">Enough detail to investigate. No sensitive data.</h2></div>
+            <div className={styles.splitCopy}>
+              <p>Use test data and the minimum activity needed to demonstrate the issue. A concise report helps us reproduce it without unnecessary access or disruption.</p>
+              <ol className={styles.securityList}>
+                {reportDetails.map((detail, index) => <li key={detail}><span>{String(index + 1).padStart(2, "0")}</span>{detail}</li>)}
+              </ol>
+            </div>
+          </div>
         </section>
 
-        <section className="mt-10" aria-labelledby="scope">
-          <h2 id="scope" className="text-2xl font-bold">Scope and response</h2>
-          <p className="mt-4 leading-relaxed text-stone-600">
-            The public website and its first-party API routes are in scope. Third-party services follow their own disclosure programs. Social engineering, denial-of-service testing, traffic that degrades the service, and accessing another person&apos;s data are out of scope.
-          </p>
-          <p className="mt-4 leading-relaxed text-stone-600">
-            Reports are triaged by severity and reproducibility. We use provided contact details for material updates, but this public policy does not promise a fixed response or remediation deadline.
-          </p>
+        <section id="scope" className={styles.scopeSection} aria-labelledby="scope-title">
+          <div className={styles.wrap}>
+            <span className={styles.sectionNumber}>02 / Scope and boundaries</span>
+            <div className={styles.sectionHead}>
+              <h2 id="scope-title">Keep the test limited to our systems.</h2>
+              <p>Third-party services have their own disclosure channels. Please avoid activity that could harm availability or expose someone else&apos;s information.</p>
+            </div>
+            <div className={styles.scopeGrid}>
+              <div className={styles.scopeColumn}>
+                <h3>In scope</h3>
+                <ul><li>The public PandaCodeGen website</li><li>Its first-party API routes</li><li>Minimal, non-destructive verification using test data</li></ul>
+              </div>
+              <div className={styles.scopeColumn}>
+                <h3>Out of scope</h3>
+                <ul><li>Third-party services and accounts</li><li>Social engineering or denial-of-service testing</li><li>Traffic that degrades the service or access to another person&apos;s data</li></ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="response" className={styles.processSection} aria-labelledby="response-title">
+          <div className={styles.wrap}>
+            <div className={styles.sectionHead}>
+              <div><span className={styles.sectionNumber}>03 / After you write</span><h2 id="response-title">A clear reporting path.</h2></div>
+              <p>Reports are triaged by severity and reproducibility. We keep the communication private while the issue is assessed.</p>
+            </div>
+            <ol className={styles.processList}>
+              {responseSteps.map((step, index) => (
+                <li key={step.title} className={styles.processRow}>
+                  <span className={styles.rowNumber}>{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{step.title}</h3>
+                  <p>{step.body}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        <section className={styles.securityClose} aria-labelledby="security-close-title">
+          <div className={styles.wrap}>
+            <span className={styles.sectionNumber}>Private channel</span>
+            <h2 id="security-close-title">Ready to send the report?</h2>
+            <p>Use the subject “Security report” and include only the details needed to reproduce the issue safely.</p>
+            <a className={styles.heroAction} href={reportEmail}>info@pandacodegen.com <span aria-hidden="true">↗</span></a>
+          </div>
         </section>
       </div>
-      <Footer />
-    </main>
+    </PreviewShell>
   );
 }

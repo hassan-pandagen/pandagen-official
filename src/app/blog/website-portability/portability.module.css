@@ -1,0 +1,97 @@
+/* 4 Oct 2026: tables for /blog/website-portability. Every cell is rendered from
+   src/data/platform-portability.ts. The matrix compares eight platforms and our
+   own column, so on wide screens it breaks out of the reading column, and below
+   720px each row stacks into a two-column grid of "platform: status" pairs. The
+   explicit ARIA roles in page.tsx keep both tables announced as tables when the
+   stacked layout changes their display. */
+
+.matrixWrap { margin: 28px 0 12px; }
+@media (min-width: 1000px) {
+  .matrixWrap { width: min(1040px, calc(100vw - 48px)); position: relative; left: 50%; transform: translateX(-50%); }
+}
+
+.matrix { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 13px; line-height: 1.4; color: #3a3733; background: #f5f4f0; }
+.matrix caption { caption-side: top; text-align: left; padding: 0 0 12px; font-size: 14px; line-height: 1.55; color: #5e5b55; }
+.matrix thead th { font-size: 12.5px; font-weight: 650; color: #1c1917; text-align: left; vertical-align: bottom; padding: 12px 6px; border-bottom: 2px solid #1c1917; }
+.matrix thead th a { color: inherit; text-decoration: underline; text-decoration-color: rgba(122, 46, 14, 0.4); text-underline-offset: 3px; }
+.matrix thead th a:hover, .matrix thead th a:focus-visible { color: #7a2e0e; }
+.itemCol { width: 19%; }
+.matrix tbody th { font-size: 13px; font-weight: 650; color: #1c1917; text-align: left; padding: 10px 8px 10px 6px; vertical-align: top; }
+.matrix tbody tr { border-bottom: 1px solid rgba(28, 25, 23, 0.16); }
+.matrix td { padding: 10px 6px; vertical-align: top; font-weight: 600; }
+.oursHead { background: #f1e4d9; }
+
+/* Status fills: text on fill is 7:1 or better for all three. */
+.exports { background: #e2ece4; color: #14532d; }
+.partial { background: #f8ead8; color: #7a2e0e; }
+.stays { background: #7a2e0e; color: #fff; }
+.none { color: #6b6660; font-weight: 400; font-style: italic; }
+.account { background: #f1e4d9; color: #1c1917; }
+.yours { background: #f1e4d9; color: #14532d; }
+.matrix td + td, .matrix th + td { border-left: 2px solid #f5f4f0; }
+
+.mobileLabel { display: none; }
+.legend { margin: 14px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13px; line-height: 1.5; color: #5e5b55; }
+.legend li { display: flex; gap: 8px; align-items: baseline; max-width: 100%; }
+.swatch { display: inline-block; flex: none; min-width: 64px; padding: 2px 6px; font-weight: 600; text-align: center; }
+
+@media (max-width: 719px) {
+  .matrix caption { display: block; }
+  .matrix thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+  .matrix, .matrix tbody, .matrix th, .matrix td { display: block; width: 100%; }
+  .matrix tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4px; padding: 16px 0; }
+  .matrix tbody th { grid-column: 1 / -1; padding: 0 0 6px; font-size: 15px; }
+  .matrix td { padding: 7px 9px; border: 0 !important; }
+  .mobileLabel { display: block; font-size: 11px; font-weight: 500; font-style: normal; letter-spacing: 0.02em; opacity: 0.85; margin-bottom: 2px; }
+  .itemCol { width: auto; }
+}
+
+/* Per-platform tables: what the platform's own help pages say, row by row. */
+.detailTable { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 22px 0 8px; font-size: 15px; line-height: 1.6; color: #3a3733; }
+.detailTable caption { caption-side: top; text-align: left; padding: 0 0 10px; font-size: 13px; color: #5e5b55; }
+.detailTable thead th { font-size: 12px; font-weight: 650; letter-spacing: 0.04em; text-transform: uppercase; color: #5e5b55; text-align: left; padding: 8px 12px 8px 0; border-bottom: 1px solid rgba(28, 25, 23, 0.3); }
+.detailTable tbody tr { border-bottom: 1px solid rgba(28, 25, 23, 0.14); }
+.detailTable tbody th { width: 27%; text-align: left; vertical-align: top; padding: 14px 14px 14px 0; font-size: 15px; font-weight: 650; color: #1c1917; }
+.detailTable td { vertical-align: top; padding: 14px 0; }
+.chip { display: inline-block; font-size: 12px; font-weight: 650; padding: 2px 8px; margin-bottom: 6px; }
+.detail { margin: 0; }
+.quote { display: block; margin: 8px 0 0; padding-left: 12px; border-left: 2px solid rgba(122, 46, 14, 0.35); font-size: 13.5px; line-height: 1.55; color: #5e5b55; font-style: italic; }
+.sourceRow { display: flex; flex-wrap: wrap; gap: 2px 16px; margin-top: 6px; font-size: 13px; }
+.sourceRow a { color: #7a2e0e; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.sourceRow a:hover, .sourceRow a:focus-visible { color: #ad3d0b; }
+/* The quoted sentence sits behind a disclosure so the table scans as a table;
+   it stays in the HTML for anyone, or any crawler, checking the row. */
+.detailTable details.evidence { margin: 6px 0 0; padding: 0; background: transparent; border: 0; }
+.detailTable details.evidence summary { cursor: pointer; font-size: 13px; color: #5e5b55; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; width: fit-content; }
+.detailTable details.evidence summary:hover, .detailTable details.evidence summary:focus-visible { color: #7a2e0e; }
+.plans { display: block; margin-top: 6px; font-size: 13px; color: #5e5b55; }
+
+@media (max-width: 559px) {
+  .detailTable thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+  .detailTable, .detailTable tbody, .detailTable tr, .detailTable th, .detailTable td { display: block; width: 100% !important; }
+  .detailTable caption { display: block; width: 100%; }
+  .detailTable tbody tr { padding: 14px 0; }
+  .detailTable tbody th { padding: 0 0 6px; }
+  .detailTable td { padding: 0; }
+}
+
+/* Short "leaves / stays" summary under each platform heading. */
+.summary { margin: 18px 0 4px; padding: 0; list-style: none; border-top: 1px solid rgba(28, 25, 23, 0.18); }
+.summary li { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 4px 16px; padding: 10px 0; border-bottom: 1px solid rgba(28, 25, 23, 0.18); font-size: 15px; line-height: 1.55; }
+.summary b { color: #1c1917; }
+@media (max-width: 559px) { .summary li { grid-template-columns: 1fr; } }
+
+/* Our handover list. */
+.keep { margin: 22px 0; padding: 0; list-style: none; border-top: 1px solid rgba(28, 25, 23, 0.2); }
+.keep li { display: grid; grid-template-columns: minmax(150px, 0.34fr) minmax(0, 1fr); gap: 6px 22px; padding: 16px 0; border-bottom: 1px solid rgba(28, 25, 23, 0.16); font-size: 16px; line-height: 1.6; }
+.keep b { color: #1c1917; }
+.keep p { margin: 0; color: #3a3733; }
+@media (max-width: 559px) { .keep li { grid-template-columns: 1fr; } }
+
+.canon { margin: 22px 0; padding: 18px 20px; background: #f1e4d9; border-left: 3px solid #ad3d0b; font-size: 16px; line-height: 1.65; color: #1c1917; }
+.canon p { margin: 0; }
+.canon p + p { margin-top: 8px; font-size: 13px; color: #5e5b55; }
+
+.sourceList { margin: 18px 0; padding-left: 20px; font-size: 14px; line-height: 1.6; color: #3a3733; }
+.sourceList li { margin: 4px 0; overflow-wrap: anywhere; }
+.sourceList a { color: #7a2e0e; text-decoration: underline; text-underline-offset: 3px; }

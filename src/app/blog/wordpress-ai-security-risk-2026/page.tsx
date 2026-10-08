@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-23",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-ai-security-risk-2026")],
@@ -92,7 +92,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-ai-security-risk-2026"),
             description,
             datePublished: "2026-06-23",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -171,7 +171,7 @@ export default function WordPressAiSecurityRiskPage() {
                             caught using the hole.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Advisory and plugin-directory snapshot checked July 24, 2026. Security records can change after publication.
+                            Advisory and plugin-directory records rechecked October 8, 2026. Security records can change after publication.
                         </p>
                         <p className="mt-3 text-sm leading-relaxed text-stone-600">
                             Disclosure: PandaCodeGen sells migrations off WordPress, so we have a commercial interest
@@ -186,7 +186,7 @@ export default function WordPressAiSecurityRiskPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jun 23, 2026" readTime="7 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wordpress-ai-security-risk-2026" published="2026-06-23" readTime="12 min read" />
 
                     <BlogText>
                         Two WooCommerce developers reacting to the April 2026 Essential Plugin backdoor, quoted word for word from r/woocommerce with a link to the thread.
@@ -220,13 +220,19 @@ export default function WordPressAiSecurityRiskPage() {
                         />
                     </section>
 
+                    {/* 8 Oct 2026: this box said 3.6.2 (July 16) with 100,000-plus installs, read July 24, and that a store on the current release was clear. Newer advisories cover 3.6.2, so it no longer is. */}
                     <InsightBox variant="warning" label="This is not a compromise count">
                         The <a href="https://wordpress.org/plugins/ai-engine/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline">WordPress.org directory listing</a> showed
-                        AI Engine version 3.6.2, last updated July 16, 2026, and
-                        100,000-plus active installations when read on July 24, 2026. That installation figure is not
-                        the number of vulnerable, exposed or compromised sites. Every advisory listed below is
-                        addressed in a released version at or before 3.6.2, so a store on a current supported release
-                        is not carrying these specific issues.
+                        AI Engine version 3.8.4, released October 8, 2026, and
+                        90,000-plus active installations when read on October 8, 2026. That installation figure is not
+                        the number of vulnerable, exposed or compromised sites. Every advisory in the table below is
+                        fixed in a version at or before 3.6.2, but 3.6.2 is no longer safe: Wordfence has published
+                        five more AI Engine advisories since our July 24 snapshot, the latest (CVE-2026-96561, September
+                        30) covering 3.8.0 and earlier. The directory changelog records two further security fixes in 3.8.4:
+                        permission checks for chatbot shortcode overrides and administrator-only access to the settings
+                        search endpoint. Review the current vendor release before updating; the older table is not a
+                        complete current patch checklist. Updating closes addressed paths but does not establish that
+                        a previously exposed site was never compromised.
                     </InsightBox>
 
                     <div className="my-8 grid gap-4 sm:grid-cols-4">
@@ -258,7 +264,8 @@ export default function WordPressAiSecurityRiskPage() {
                     <BlogHeader id="advisories">What the dated AI Engine advisories actually say</BlogHeader>
                     <BlogText>
                         The following entries are a July 24, 2026 snapshot of public Wordfence records. They are examples,
-                        not a complete replacement for a current vulnerability scan. Read the authoritative record
+                        not a complete replacement for a current vulnerability scan, and newer advisories have been
+                        published since (see the box above). Read the authoritative record
                         before acting because affected versions, conditions and remediation can differ.
                     </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
@@ -294,7 +301,7 @@ export default function WordPressAiSecurityRiskPage() {
                                 <tr>
                                     <td className="p-4 font-bold"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0746" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">CVE-2026-0746</a></td>
                                     <td className="p-4">3.3.2 and earlier</td>
-                                    <td className="p-4">Authenticated Subscriber or higher as recorded in the linked entry</td>
+                                    <td className="p-4">Authenticated Subscriber or higher, with the plugin&apos;s Public API enabled and allow_url_fopen on at the server</td>
                                     <td className="p-4">Open the linked record for the patched version, then update past it</td>
                                 </tr>
                             </tbody>
@@ -369,7 +376,7 @@ export default function WordPressAiSecurityRiskPage() {
                     </BlogText>
                     <BlogList
                         items={[
-                            "Check where the key is actually stored. WordPress plugins commonly persist third-party provider keys in the wp_options table, and a value written there in plain text is readable by anything that reaches the database -- which is what makes an ordinary SQL injection elsewhere on the site a credential disclosure rather than a data read.",
+                            "Check where the key is actually stored. WordPress plugins commonly persist third-party provider keys in the wp_options table, and a value written there in plain text is readable by anything that reaches the database. That is what makes an ordinary SQL injection elsewhere on the site a credential disclosure rather than a data read.",
                             "Do not place secrets in public URLs, source control, analytics, chat transcripts or support screenshots.",
                             "Store secrets in an appropriate server-side secret mechanism and limit who can read them.",
                             "Use separate credentials for development, staging and production.",
@@ -460,12 +467,15 @@ export default function WordPressAiSecurityRiskPage() {
                         No single advisory proves that every WordPress site is unsafe or that custom software is
                         automatically secure. What decides your risk is what the software can do, how much of it is
                         reachable from outside, whether anyone patches it, who is allowed in, and how it is run day to
-                        day. A custom application still uses frameworks, packages and service providers. Compare
+                        day.{" "}
+                        <Link href="/blog/wordpress-plugin-security-2026" className="text-cognac hover:underline">Our write-up of the 2026 SSO plugin flaw</Link>{" "}
+                        shows how long a working exploit can sit in public before a patch is applied. A custom
+                        application still uses frameworks, packages and service providers. Compare
                         concrete requirements and the team&apos;s ability to maintain each option. We set the two
                         architectures side by side in{" "}
                         <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress compared with Next.js</Link>{" "}
                         and examine the wider replacement question in{" "}
-                        <Link href="/blog/wordpress-killer" className="text-cognac hover:underline">what actually replaces WordPress</Link>. Where
+                        <Link href="/blog/cloudflare-emdash-wordpress-replacement" className="text-cognac hover:underline">our review of EmDash and its sandboxed-plugin pitch</Link>. Where
                         repair is the better answer, our{" "}
                         <Link href="/services/wordpress-migration" className="text-cognac hover:underline">WordPress work</Link>{" "}
                         covers that path.
@@ -517,7 +527,7 @@ export default function WordPressAiSecurityRiskPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

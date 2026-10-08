@@ -76,7 +76,7 @@ export const metadata: Metadata = {
         description: `Every ranking update on Google's Search Status Dashboard, with start dates and rollout lengths. The median core update takes ${UPDATE_STATS.medianCoreDays} days to finish rolling out.`,
         type: "article",
         publishedTime: "2026-04-09T00:00:00-05:00",
-        modifiedTime: "2026-10-04",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/google-algorithm-updates",
         images: [ogImageForPath("/blog/google-algorithm-updates")],
@@ -98,7 +98,7 @@ const articleSchema = {
             "description": `A dated register of all ${UPDATE_STATS.total} ranking updates Google has confirmed since ${REGISTER_START}, transcribed from the Search Status Dashboard, with an evidence-led method for diagnosing whether an update affected your site.`,
             "image": ogImageUrlForPath("/blog/google-algorithm-updates"),
             "datePublished": "2026-04-09T00:00:00-05:00",
-            "dateModified": "2026-10-04T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -138,8 +138,8 @@ const articleSchema = {
             "description": `Every ranking update listed on Google's Search Status Dashboard from ${REGISTER_START} onward, with the update name, rollout start date and Google's stated rollout duration. ${GOOGLE_UPDATES.length} entries.`,
             "creator": { "@id": "https://www.pandacodegen.com/#organization" },
             "isBasedOn": DASHBOARD_URL,
-            "dateModified": "2026-10-04",
-            "temporalCoverage": "2021-11-03/2026-06-26",
+            "dateModified": "2026-10-08",
+            "temporalCoverage": "2021-11-03/2026-10-08",
             "variableMeasured": ["Update name", "Rollout start date", "Rollout duration"],
             "license": "https://creativecommons.org/licenses/by/4.0/",
         },
@@ -161,7 +161,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/google-algorithm-updates") },
             "datePublished": "2026-04-09T00:00:00-05:00",
-            "dateModified": "2026-10-04T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/google-algorithm-updates#breadcrumb" },
             "inLanguage": "en-US",
         },
@@ -204,7 +204,7 @@ export default function GoogleAlgorithmUpdatesPage() {
                         </p>
 
                         <BlogAuthor
-                            date="Apr 9, 2026, updated Oct 4, 2026"
+                            postId="google-algorithm-updates" published="2026-04-09"
                             readTime="15 min read"
                             bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He does the speed testing and the technical SEO, and runs migrations with the before-and-after numbers written down."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
@@ -260,8 +260,9 @@ export default function GoogleAlgorithmUpdatesPage() {
                             </InsightBox>
                         )}
 
+                        {/* 8 Oct 2026: this used to say Google "began publishing this history" in November 2021. The dashboard's incident pages for the November 2021 spam update and the September 2022 core and product reviews updates show they were posted on 22 Mar 2023, so the record reaches back to November 2021 but wasn't published then. */}
                         <BlogText>
-                            Google began publishing this history in {REGISTER_START}. Updates before that date were announced through blog posts and social accounts rather than a structured record, so they are not included here. Two entries are labelled &ldquo;ranking issue&rdquo; rather than an update, which is how Google logs a bug it later corrected.
+                            Google&apos;s history on the dashboard goes back to {REGISTER_START}. Updates before that date were announced through blog posts and social accounts rather than a structured record, so they are not included here. Two entries are labelled &ldquo;ranking issue&rdquo; rather than an update, which is how Google logs a bug it later corrected.
                         </BlogText>
 
                         <div className="my-8 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
@@ -319,7 +320,8 @@ export default function GoogleAlgorithmUpdatesPage() {
                         <BlogList items={[
                             `Wait for Google to mark the rollout complete, then wait a further full week before comparing. On a median core update that is roughly three weeks from the announcement.`,
                             `Spam updates move faster: the ${UPDATE_STATS.latest.name} finished in ${UPDATE_STATS.latest.duration}, and the March 2026 spam update in 19 hours 30 minutes. A same-week diagnosis is more defensible there.`,
-                            "Two core updates have overlapped with other announced updates in the same window (March 2024, December 2024). When that happens, attributing a change to one of them is guesswork.",
+                            // 8 Oct 2026: this said two core updates overlapped (March 2024, December 2024). The dashboard shows the December 2024 core update ended 18 Dec and the spam update began 19 Dec, so they never overlapped. Four core updates did share a window with another announced update.
+                            "Four core updates have overlapped with another announced update in the same window (September 2022, October 2023, November 2023 and March 2024). When that happens, attributing a change to one of them is guesswork.",
                             "Google publishes a name, a start, and an end. It does not publish what the update weighted, which pages it favoured, or a recovery timeline.",
                         ]} />
 
@@ -366,7 +368,7 @@ export default function GoogleAlgorithmUpdatesPage() {
                         </BlogText>
 
                         <BlogText>
-                            Performance can also interact with other technical conditions. Unavailable servers, blocked resources, unstable rendering, excessive client-side work, or a broken mobile experience may affect crawling, rendering, accessibility and conversion. Those are specific defects to test. Our walkthrough of <Link href="/blog/why-is-my-website-loading-so-slow" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">why a website loads slowly</Link> covers how to isolate each one. They are not evidence that Google applied a universal slow-site penalty.
+                            Performance can also interact with other technical conditions. Unavailable servers, blocked resources, unstable rendering, excessive client-side work, or a broken mobile experience may affect crawling, rendering, accessibility and conversion. Those are specific defects to test. Our <Link href="/blog/how-to-speed-up-your-website" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">twelve checks for a slow website</Link> cover how to isolate each one. They are not evidence that Google applied a universal slow-site penalty.
                         </BlogText>
 
                         <BlogText>
@@ -382,8 +384,9 @@ export default function GoogleAlgorithmUpdatesPage() {
 
                         <BlogHeader>How to Separate an Algorithm Update From a Problem You Caused</BlogHeader>
 
+                        {/* 8 Oct 2026: the wait-a-week advice was credited to Google's traffic-drop page. It's on the core-updates page; the traffic-drop page covers seasonality and year-over-year comparison. */}
                         <BlogText>
-                            Start with a controlled comparison, not a site-wide rewrite. Google&apos;s <a href="https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">traffic-drop guidance</a> recommends confirming that the rollout has finished, waiting at least a full week, and comparing a post-rollout week with a week before the rollout. Keep seasonality in mind, and use a year-over-year comparison when the business has enough history.
+                            Start with a controlled comparison, not a site-wide rewrite. Google&apos;s <a href="https://developers.google.com/search/docs/appearance/core-updates" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">core-update guidance</a> recommends waiting at least a full week after the rollout has finished, then comparing that week with a week before the rollout started. Its <a href="https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">traffic-drop guidance</a> adds: keep seasonality in mind, and use a year-over-year comparison when the business has enough history.
                         </BlogText>
 
                         <BlogText>

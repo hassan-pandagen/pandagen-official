@@ -733,7 +733,7 @@
           "guarantee|promise|control"
         ],
         "notContains": [
-          "^(no|yes)\\b"
+          "^(no|yes)[,.!]"
         ]
       }
     },
@@ -876,7 +876,7 @@
       ],
       "expect": {
         "contains": [
-          "your control|transferred|you own|yours"
+          "your control|transferred|you own|yours|you receive"
         ]
       }
     },

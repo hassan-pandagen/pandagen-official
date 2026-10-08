@@ -4,9 +4,15 @@
 // Importing 'server-only' enforces that this file never reaches the browser bundle.
 // Client components must receive blog data via props from a server-component parent.
 import 'server-only';
+import { stackGuidePosts } from './stack-guides';
 import { UPDATE_STATS, REGISTER_START, inProgressUpdate, longDate } from './google-updates';
 import { COMMERCIAL } from './company-facts';
 import { asOf, spec } from './spec-facts';
+import { finding } from './research-facts';
+import { OWNERSHIP_ON_HANDOVER, PORTABILITY_CHECKED_LABEL, portabilityFact, type PlatformId, type PortabilityItem } from './platform-portability';
+
+/** A platform-portability row's plain-English detail, for the website-portability FAQs. Never retype these. */
+const portable = (platform: PlatformId, item: PortabilityItem) => portabilityFact(platform, item)?.detail ?? '';
 
 export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking' | 'cost' | 'performance' | 'security' | 'aicommerce' | 'hosting' | 'webflow' | 'migration';
 
@@ -30,9 +36,8 @@ export interface BlogPost {
   // Feeds FAQPage JSON-LD. NOT a Google rich-result lever any more: Google's own
   // docs carry a deprecation notice saying the FAQ rich result stopped appearing
   // in Search on 7 May 2026, and the feature documentation was removed on
-  // 15 June 2026. Verified at the primary source 28 Aug 2026. Kept because Bing,
-  // Perplexity and RAG crawlers still read it, which is the audience this site
-  // is built for. Never add it for a Google SERP appearance.
+  // 15 June 2026. Kept as a machine-readable mirror of useful visible answers.
+  // No established citation boost is attributed to the markup itself.
   faqs?: FAQ[];
   // Optional per-post overrides for the blog card illustration. If omitted, falls back to
   // the illustrationType default in BlogPageClient's cardDisplay map. Use these when
@@ -42,6 +47,53 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  ...stackGuidePosts,
+    {
+      id: "is-wix-bad-for-seo",
+      cardStat: "10 controls",
+      cardStatLabel: "What Wix lets you edit, and the limit on each",
+      title: "Is Wix Bad for SEO? What Wix Controls in 2026",
+      excerpt: "Wix renders pages on the server and lets you edit titles, slugs, canonicals, robots.txt, redirects and JSON-LD. Its real SEO limits, from Wix's own docs.",
+      category: "SEO",
+      readTime: "13 min",
+      date: "Oct 4",
+      author: "Hassan",
+      role: "Co-founder, Lead Engineer",
+      featured: false,
+      illustrationType: "ranking",
+      lastModified: "2026-10-04",
+      faqs: [
+        { question: "Is Wix bad for SEO?", answer: "No. Wix renders pages on the server, so search engines and AI crawlers get the content in the HTML, and it lets you edit titles, meta descriptions, slugs, canonical tags, robots.txt, 301 redirects and JSON-LD structured data. Its limits are specific: blog posts keep a prefix you can rename but not remove, a site holds up to 5,000 redirects, and each page takes up to five structured data markups. Check those against what you publish before blaming the platform." },
+        { question: "Does Google rank Wix sites lower than other websites?", answer: "No. In a 2022 Google Search Central video, Google's John Mueller said Google's systems don't look for any particular content management system to treat it differently, and focus on the final page rather than how it was made. He named Wix among the platforms that can create pages that work well in search." },
+        { question: "Can you remove /post/ from Wix blog URLs?", answer: "No. Wix's Help Center says the post prefix can be renamed but not removed entirely, and the blog and post prefixes can't share a name, so an address like /blog/post-title isn't possible. Store product pages are different: Wix says you can remove the product-page prefix in SEO Settings." },
+        { question: "Do Wix sites pass Core Web Vitals?", answer: `On average, more often than WordPress sites. ${finding("almanac-2025-cms-cwv").statement} (HTTP Archive, Web Almanac 2025). Platform averages don't predict any one site, so check your own pages in Wix's Site Speed dashboard and in Google Search Console.` },
+        { question: "How many redirects can a Wix site have?", answer: "Up to 5,000 per site, according to Wix's Help Center, imported up to 500 at a time from a CSV file. 301 redirects only work on a custom domain, you can't redirect from the homepage, and changing a blog post's slug doesn't create a redirect automatically the way it does for ordinary pages." },
+        { question: "Should I move off Wix to improve my SEO?", answer: "Only if a specific Wix limit blocks something you need, such as a blog at /blog/post-title, more than 5,000 redirects, or structured data beyond five markups a page. Run the seven checks in this guide first. Each one either finds a setting you can fix inside Wix or rules that cause out." },
+      ],
+    },
+    {
+      id: "gohighlevel-vs-wordpress",
+      cardStat: "2 setups",
+      cardStatLabel: "HighLevel's builder, or WordPress on the same CRM",
+      title: "GoHighLevel vs WordPress for Your Website (2026)",
+      excerpt: "HighLevel's builder or WordPress connected to the HighLevel CRM? Forms, calendars, tracking, speed, SEO control, cost and upkeep, from both vendors' docs.",
+      category: "GoHighLevel",
+      readTime: "15 min",
+      date: "Oct 4",
+      author: "Hassan",
+      role: "Co-founder, Lead Engineer",
+      featured: false,
+      illustrationType: "code",
+      lastModified: "2026-10-04",
+      faqs: [
+        { question: "Is GoHighLevel or WordPress better for a business website?", answer: "For funnels and landing pages for paid traffic, HighLevel's builder is the simpler choice: it's included in every HighLevel plan, and its forms, calendars and attribution need no connector. For a content-led site that has to rank, WordPress connected to HighLevel gives more control over URLs, the blog and the sitemap, at the cost of hosting and updates someone has to own. HighLevel stays the CRM either way." },
+        { question: "Can I use WordPress with GoHighLevel?", answer: "Yes. HighLevel publishes a free LeadConnector plugin on WordPress.org that adds HighLevel forms, surveys, calendars, chat and review widgets to WordPress pages, and can import funnel steps as pages. You can also paste a form or calendar embed code into a Custom HTML block, or track your existing WordPress forms with HighLevel's External Tracking script." },
+        { question: "Does GoHighLevel include WordPress hosting?", answer: `No. HighLevel sells WordPress hosting as an optional add-on, starting at ${spec("gohighlevel-wordpress-hosting-price").value} as of ${asOf("gohighlevel-wordpress-hosting-price")}, and its help center says all WordPress hosting plans are in addition to a HighLevel plan. You can also host WordPress anywhere else and connect it to HighLevel the same way.` },
+        { question: "Will my HighLevel workflows still run if my website is on WordPress?", answer: "Yes, as long as leads still reach HighLevel: through a HighLevel form, calendar or survey embedded in WordPress, or through a form HighLevel's External Tracking script supports, such as Gravity Forms, WPForms or Contact Form 7. HighLevel says External Tracking doesn't support forms embedded through iframes or third-party widgets. Submit a test lead and check the workflow fires before launch." },
+        { question: "Is GoHighLevel or WordPress better for SEO?", answer: "WordPress gives you more control. Its core publishes a sitemap automatically and lets you choose your permalink structure, and its plugins cover most other SEO needs. HighLevel covers titles, meta descriptions, a schema generator and 301 redirects, but its sitemap is generated by hand, its blog uses fixed /b/ and /post/ paths, and we found no HighLevel help article on editing robots.txt for builder sites." },
+        { question: "Which is faster, GoHighLevel or WordPress?", answer: "Neither has a fixed speed. HighLevel says a well-optimized HighLevel page typically scores above 80 on mobile and above 95 on desktop in PageSpeed tests. A WordPress site's speed depends on its host, theme and plugins. Measure the same page under the same test on whichever platform you are considering." },
+      ],
+    },
     {
       id: "ai-built-website-checklist",
       cardStat: "8 checks",
@@ -77,12 +129,12 @@ export const blogPosts: BlogPost[] = [
       role: "Co-founder, Lead Engineer",
       featured: false,
       illustrationType: "cost",
-      lastModified: "2026-09-17",
+      lastModified: "2026-10-08",
       faqs: [
         { question: "Is it cheaper to build your own website or hire someone?", answer: "DIY usually reduces upfront cash spending when a template and supported features fit. Include subscriptions, extras and your time, then compare them with a written quote for the same scope. Hiring can save work, but still takes your briefing and review time. Neither option is always cheaper over the life of the site." },
         { question: "What is the cheapest way to build a small-business website?", answer: "Start with the smallest plan that covers your actual requirements, prepare your content and use the included features before buying extras. Check the domain and plan renewal prices. A free plan can help you test an idea, but may not include your own domain or the payment and booking features you need." },
         { question: "Can I build a business website myself without coding?", answer: "Yes, if a builder's templates and supported features cover the job. Budget time for writing, setup, mobile checks and testing enquiries or orders. You can hire someone for one difficult task without commissioning a whole custom website." },
-        { question: "Is $1,500 a good price for a website?", answer: `It depends on the scope, revisions, handover and support. PandaCodeGen's Starter offer is: ${COMMERCIAL.find(fact => fact.label === 'Starter')?.value ?? ''} Compare the written deliverables and ongoing bills, not just the starting price. Hosting is agreed per client; maintenance is separately scoped and quoted.` },
+        { question: "Is $1,500 a good price for a website?", answer: `It depends on the scope, revisions, handover and support. PandaCodeGen's Starter offer is: ${COMMERCIAL.find(fact => fact.label === 'Starter')?.value ?? ''} Compare the written deliverables and ongoing bills, not just the starting price. Hosting is included on our maintenance or SEO packages if you want it, and otherwise agreed per client; maintenance is separately scoped and quoted.` },
         { question: "Are AI website builders cheaper than hiring a developer?", answer: "They can lower the cost of creating and editing a site, but the subscription is only part of the total. Include hosting or cloud usage, connected services, your checking time and any paid help. Some tools provide testing and monitoring; verify the features and limits of your chosen plan." },
         { question: "How much does a website cost per month after it is built?", answer: "Add the actual platform or hosting charge, domain renewal spread over the year, email, paid tools, usage or payment fees, and any agreed maintenance. Avoid charging hosting twice when it is included in a builder plan. There is no single monthly total that fits a brochure site, an online store and a custom application." },
         { question: "Do I own my website if I pay someone to build it?", answer: "Check the contract for control of the domain, content, accounts and custom source code. Third-party platform software, plugins and assets can remain licensed rather than owned. PandaCodeGen transfers or creates the custom source, design files, CMS models, documentation and production accounts under client control at handover." },
@@ -91,7 +143,7 @@ export const blogPosts: BlogPost[] = [
     {
       id: "what-is-llms-txt",
       cardStat: "97%",
-      cardStatLabel: "of llms.txt files got zero AI requests in May 2026",
+      cardStatLabel: "of llms.txt files got zero requests in May 2026",
       title: "What Is llms.txt? Here Is Ours, and Who Actually Reads It",
       excerpt: "llms.txt explained with our real, live file: the format, who genuinely reads it in 2026, and the two vendor claims everyone repeats that turn out to be unsourced.",
       category: "AEO",
@@ -101,16 +153,16 @@ export const blogPosts: BlogPost[] = [
       role: "Co-founder, Lead Engineer",
       featured: false,
       illustrationType: "code",
-      lastModified: "2026-09-13",
+      lastModified: "2026-10-08",
       faqs: [
         { question: "What is an llms.txt file?", answer: "llms.txt is a plain Markdown text file at the root of your website (yoursite.com/llms.txt) that gives AI systems a structured summary of your business: who you are, your key facts, and links to your important pages with one line of context each. It was proposed by Jeremy Howard of Answer.AI in September 2024. Think of it as a welcome sheet for AI assistants, next to robots.txt (permissions) and sitemap.xml (inventory)." },
-        { question: "Does Google use llms.txt?", answer: "Google Search does not. Google's June 2026 documentation states plainly that llms.txt plays no role in rankings or AI Overviews. But Google's PageSpeed Insights does score it: the Agentic Browsing category added in May 2026 checks for a compliant llms.txt as one of its three tests. So it will not rank you, but Google's own quality tooling rewards having one." },
-        { question: "Which AI systems actually read llms.txt in 2026?", answer: "The heaviest confirmed users are AI coding tools like Cursor and GitHub Copilot, and Google's PageSpeed Agentic Browsing category scores the file. Beyond that, be careful what you believe. Perplexity and Anthropic both publish an llms.txt for their own documentation, and that gets widely misreported as confirmation that their products read yours. We could not find an official statement from either company saying so. OpenAI has made no commitment, though GPTBot is the most frequent fetcher of llms.txt files in tracked server logs. Adoption is real but early: most llms.txt files still receive few direct requests, so treat the file as one cheap layer, not a strategy." },
+        { question: "Does Google use llms.txt?", answer: "Google Search does not. Google's AI optimization guide says you don't need llms.txt or other AI text files to appear in Google Search, including its generative AI features, because Search itself doesn't use them. Google's Lighthouse does check the file: the Agentic Browsing category added in May 2026 tests an llms.txt you publish against the format, and marks a missing file as not applicable rather than failed. So it will not rank you, and the check only matters once you publish one." },
+        { question: "Which AI systems actually read llms.txt in 2026?", answer: "The heaviest confirmed users are AI coding tools like Cursor and GitHub Copilot, and Google's PageSpeed Agentic Browsing category checks the file if you publish one. Beyond that, be careful what you believe. Perplexity and Anthropic both publish an llms.txt for their own documentation, and that gets widely misreported as confirmation that their products read yours. We could not find an official statement from either company saying so. OpenAI has made no commitment, though GPTBot fetched llms.txt files more than any other AI bot in Ahrefs' server-log study. Adoption is real but early: most llms.txt files still receive no requests at all (97% in Ahrefs' May 2026 data), so treat the file as one cheap layer, not a strategy." },
         { question: "What should an llms.txt file contain?", answer: "The spec asks for an H1 with your name, a one-paragraph blockquote summary, and H2 sections of annotated links to your key pages. Beyond the spec, the highest-value additions are a \"how AI assistants should describe us\" instruction section, key facts written as short single-fact sentences, verifiable case-study numbers, and the questions where recommending you is the right answer. Keep every claim identical to what your website says." },
-        { question: "What is the difference between llms.txt and llms-full.txt?", answer: "llms.txt is the map: a short index of your important pages with one line of context each. llms-full.txt is the cargo: the complete text of your key pages inlined into one large file, so an AI tool can ingest your whole knowledge base in a single request. Documentation-heavy products like Stripe and Anthropic publish llms-full.txt; a typical business site only needs llms.txt." },
+        { question: "What is the difference between llms.txt and llms-full.txt?", answer: "llms.txt is the map: a short index of your important pages with one line of context each. llms-full.txt is the cargo: the complete text of your key pages inlined into one large file, so an AI tool can ingest your whole knowledge base in a single request. Documentation-heavy products like Anthropic and Perplexity publish llms-full.txt; a typical business site only needs llms.txt." },
         { question: "llms.txt vs robots.txt: what is the difference?", answer: "robots.txt tells crawlers what they are allowed to access; llms.txt tells AI systems what your site means and which pages matter. They do opposite jobs: one restricts, the other explains. A site should have both, plus sitemap.xml for inventory. None of the three replaces the others." },
         { question: "Does llms.txt improve SEO rankings?", answer: "No. Google Search ignores it, so it has zero direct ranking effect. Its value is in AI visibility: the systems that demonstrably read it (AI coding tools, and Google's own PageSpeed check) get your facts in clean, quotable form, which makes accurate citations more likely. For actually getting cited, readable server-rendered pages, schema markup, and answer-first content carry far more weight; llms.txt is the summary layer on top." },
-        { question: "How do I know if AI crawlers are reading my llms.txt?", answer: "Check your server logs for requests to /llms.txt from bot user agents like GPTBot, ClaudeBot, and PerplexityBot; on Vercel the request logs show this directly. Run PageSpeed Insights and check the Agentic Browsing category, which scores the file. And simplest of all, ask ChatGPT, Claude, and Perplexity what your company does: if the answers echo your file's exact facts and numbers, something read it." },
+        { question: "How do I know if AI crawlers are reading my llms.txt?", answer: "Check your server logs for requests to /llms.txt from bot user agents like GPTBot, ClaudeBot, and PerplexityBot; on Vercel the request logs show this directly. Run PageSpeed Insights and check the Agentic Browsing category, which checks the file. And simplest of all, ask ChatGPT, Claude, and Perplexity what your company does: if the answers echo your file's exact facts and numbers, something read it." },
       ],
     },
     {
@@ -126,12 +178,12 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "code",
-      lastModified: "2026-08-07",
+      lastModified: "2026-10-08",
       faqs: [
         { question: "Is Sanity better than WordPress for Next.js?", answer: "Not universally. Compare the current products on the same content model, editor tasks, preview, localization, permissions, integrations, portability, security, support and three-year operating cost. The correct choice depends on the team and accepted requirements." },
         { question: "Do I need to know code to edit a Sanity website?", answer: "Editors can use a configured Sanity Studio without changing application code, but a developer normally designs and maintains the content schema, integrations, preview, validation and deployment. Test the real editor tasks before accepting the workflow." },
         { question: "How much does a Next.js + Sanity website cost?", answer: "Our tiers start at $1,500, $3,500 and $5,000, and a Next.js plus Sanity build usually lands in the middle two because the content model is the work. Sanity's own plan sits on top of that: it is free to start, and Growth adds private datasets, broader roles and pay-as-you-go capacity rather than more datasets or a bigger API allowance, which are identical on both plans. Model the seat count, because that is the line that grows." },
-        { question: "Is Sanity free?", answer: "Sanity currently lists a $0 Free plan for individuals and smaller projects: 2 datasets, public only, and a 10,000-document limit. Growth is currently $15 per seat per month. It raises documents to 25,000 and lets the same 2 datasets be private, and it adds broader roles and pay-as-you-go capacity. It does not raise the other meters: API requests (250k/month), API CDN requests (1m/month), assets (100GB) and bandwidth (100GB) are identical on both plans, and only Growth can exceed them by paying. Checked 12 September 2026; recheck the official pricing page before approval." },
+        { question: "Is Sanity free?", answer: "Sanity currently lists a $0 Free plan for individuals and smaller projects: 2 datasets, public only, and a 10,000-document limit. Growth is currently $15 per seat per month. It raises documents to 25,000 and lets the same 2 datasets be private, and it adds broader roles and pay-as-you-go capacity. It does not raise the other meters: API requests (250k/month), API CDN requests (1m/month), assets (100GB) and bandwidth (100GB) are identical on both plans, and only Growth can exceed them by paying. Checked 8 October 2026; recheck the official pricing page before approval." },
         { question: "Can Sanity handle multiple languages?", answer: "Sanity documents field-level and document-level localization patterns. The project must still implement translation relationships, slugs, fallbacks, locale routes, hreflang, canonicals, sitemaps, preview and publishing rules." },
         { question: "Sanity vs Contentful: which is better for Next.js?", answer: "There is no universal winner. Compare current plans and implementations on content structure, editor workflow, localization, permissions, APIs, preview, portability, security, support, usage and total operating cost." },
       ]
@@ -141,7 +193,7 @@ export const blogPosts: BlogPost[] = [
     cardStat: "26 terms",
     cardStatLabel: "AI-search, rendering & performance jargon defined in plain English",
     title: "AEO & Web Performance Glossary: 26 Terms Defined (2026)",
-    excerpt: "A source-linked map of 23 AI-search, rendering, structured-data, and web-performance terms, including what each term does and does not prove.",
+    excerpt: "A source-linked map of 26 AI-search, rendering, structured-data, and web-performance terms, including what each term does and does not prove.",
     category: "AEO",
     readTime: "24 min",
     date: "Jul 16",
@@ -149,7 +201,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "code",
-    lastModified: "2026-08-13",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "What is the difference between AEO and GEO?", answer: "AEO and GEO are overlapping industry labels for work intended to improve eligibility and clarity in search and generative answers. There is no universally settled boundary. The practical foundation remains crawlable, useful, evidence-led content, clear entities, and accurate technical implementation; none guarantees inclusion or citation." },
       { question: "What is the difference between CSR and SSR?", answer: "Client-Side Rendering uses browser JavaScript to create some or all content after the initial response; Server-Side Rendering returns rendered HTML from the server. Rendering support varies across crawlers and products, so important public content is safer when present in initial or server-rendered HTML. CSR alone does not prove that a site will be invisible." },
@@ -171,11 +223,11 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "ranking",
-      lastModified: "2026-08-19",
+      lastModified: "2026-10-08",
       faqs: [
-        { question: "Why is my Lovable site not showing up on Google?", answer: "First confirm that the latest project is publicly published, the intended URL is indexable, robots and noindex controls allow crawling, the sitemap and canonical use the correct host, and Google Search Console has inspected the exact page. Current Lovable apps use server-side rendering or verified-crawler pre-rendering, so an empty-shell diagnosis must be demonstrated rather than assumed." },
+        { question: "Why is my Lovable site not showing up on Google?", answer: "First confirm that the latest project is publicly published, the intended URL is indexable, robots rules allow crawling and noindex directives do not exclude the page from indexing, the sitemap and canonical use the correct host, and Google Search Console has inspected the exact page. Current Lovable apps use server-side rendering or verified-crawler pre-rendering, so an empty-shell diagnosis must be demonstrated rather than assumed." },
         { question: "Do ChatGPT and Claude crawlers run JavaScript?", answer: "Do not apply Googlebot's rendering behavior to every AI product. OpenAI and Anthropic document product-specific user agents and robots controls, but those controls do not promise full browser-style JavaScript execution on every page. Keep important public content in the initial or server-rendered HTML, verify the response for the named user agent, review current provider documentation, and use server logs rather than an assumption." },
-        { question: "Can I fix Lovable SEO without leaving Lovable?", answer: "Often, yes. Lovable documents an SEO and AI search review covering metadata, robots, sitemap, structured data, indexing, performance, accessibility and mobile usability, plus a Search Console workflow when its connector is enabled. Fix and verify the measured issue before deciding to migrate." },
+        { question: "Can I fix Lovable SEO without leaving Lovable?", answer: "Often, yes. Lovable documents an SEO and AI search review covering metadata, robots, sitemap, structured data and indexing, plus a Search Console workflow when its connector is enabled. The review no longer checks page speed, accessibility or mobile usability, so run PageSpeed Insights for those. Fix and verify the measured issue before deciding to migrate." },
         { question: "How much does it cost to migrate a Lovable app to Next.js?", answer: "Lovable exports a working codebase, so this is a refactor rather than a rebuild, which usually puts it in our $1,500 to $3,500 range. What moves it up is anything the prototype faked: auth, payments, a real content model, or data that has to survive the move. Price those individually rather than as one lump." },
         { question: "Google shows the wrong Lovable domain. What should I check?", answer: "Choose the intended primary custom domain, verify redirects and canonicals across connected hosts, publish the current configuration, verify the correct Search Console property, submit its sitemap and inspect priority URLs. Confirm live behavior instead of assuming every older subdomain is still reachable." },
         { question: "Is v0 better than Lovable for SEO?", answer: "A universal winner is not supported here. Compare the current products against the same route-level requirements and inspect the deployed output. Rendering, metadata, content, links, performance, ownership and operational fit all matter; no builder guarantees indexing or ranking." },
@@ -195,7 +247,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "conversion",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Why do Meta and my store show different conversion totals?", answer: "They may answer different questions. Reconcile the same event definition, time zone, date range, order state, test and refund treatment, and attribution window. Separate event delivery from ad attribution before calling the integration broken." },
       { question: "Why is my Meta Pixel not firing?", answer: "Check consent state, the expected Pixel or dataset ID, duplicate or stale integrations, browser requests, script errors, navigation timing, extensions and vendor diagnostics. Diagnose the affected session instead of assuming one universal cause." },
@@ -220,7 +272,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "migration",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "How much does it cost to migrate off Wix?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with complex work scoped separately. Final price depends on templates, content, CMS data, commerce, apps, integrations, redesign, SEO, accessibility, QA, cutover and support." },
       { question: "Can I export my Wix site and import it somewhere else?", answer: "Do not treat Wix as one universal full-site export. Wix currently documents separate export or transfer paths for CMS collections, contacts, physical products, orders and site ownership. Design, layout, app behavior, digital products and target compatibility need item-by-item discovery and may require rebuilding." },
@@ -245,7 +297,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "cost",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "How much does it cost to migrate off WooCommerce to a custom site?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with commerce, subscriptions, regulated data and complex integrations potentially requiring custom scope. Final price follows the signed inventory and acceptance criteria." },
       { question: "Will I lose my SEO rankings during the migration?", answer: "Product and category URLs carry the revenue, so map those first and in full, including variations, out-of-stock items and paginated archives. Keep the product structured data matching what is visible on the page. Search engines control indexing and recovery timing, so the measurable goal is that nothing 404s and nothing loses its structured data, not a promised ranking." },
@@ -267,7 +319,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "performance",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "When should I optimize WooCommerce instead of rebuilding?", answer: "Optimize when WooCommerce capabilities and editing fit, measured bottlenecks are repairable, and the team can maintain hosting, extensions, security and operations. Compare the repaired option with headless and replacement using the same acceptance criteria." },
       { question: "How much does it cost to move from WooCommerce to a custom website?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with complex commerce scoped separately. Final price depends on the capability, data, integration, design, compliance, testing, cutover and support inventory." },
@@ -291,10 +343,10 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "aicommerce",
-    lastModified: "2026-08-29",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "My PageSpeed report says Agentic Browsing 0 of 3. What does that mean?", answer: "It means none of the three checks Google currently scores in that category passed on the page you tested. The category is experimental and the checks are narrow, so a 0 of 3 is not a verdict on whether an assistant can read your site at all. It is a signal that the specific things Google decided to measure are absent. Run the report again on your most commercial page rather than the home page, because the checks are per-URL and the page you want cited is usually not the one you tested first." },
-      { question: "How do I fix a failing Agentic Browsing score?", answer: "Open the category in the report and read which of the three checks failed, because the fix differs for each and none of them is a setting you toggle. Two are about whether the page states plainly what it is and what can be done on it; the third is WebMCP, which most sites will see as not applicable. Fixing the readable-content checks is ordinary content and markup work rather than anything AI-specific, which is why the honest advice is usually to fix the page rather than to add a file." },
+      { question: "How do I fix a failing Agentic Browsing score?", answer: "Open the category in the report and read which of the three checks failed: the accessibility tree, layout shift, or llms.txt. The fix differs for each and none of them is a setting you toggle. The WebMCP and ai-catalog.json audits usually show as not applicable and don't count toward the three. Fixing the accessibility and layout checks is ordinary content and markup work rather than anything AI-specific, which is why the honest advice is usually to fix the page rather than to add a file." },
       { question: "Does a low Agentic Browsing score mean ChatGPT cannot read my site?", answer: "No, and treating the two as the same thing is the most common misreading. Agentic Browsing is a Google Lighthouse category measuring three specific things on one URL. It says nothing about what ChatGPT, Claude or Perplexity can fetch, because none of those publish a comparable score. A site can fail all three checks and still be quoted by an assistant, and it can pass all three and never be mentioned. The score is a technical hint, not a visibility measurement." },
       { question: "What is Agentic Browsing in Google PageSpeed Insights?", answer: "Agentic Browsing is an experimental Lighthouse category documented by the Chrome team. It uses deterministic checks and reports a fractional pass ratio plus individual pass, warning, or error results rather than a weighted 0-to-100 score. It is not a Google Search ranking score and does not prove that any particular agent can complete a task." },
       { question: "What does the Agentic Browsing score actually check?", answer: "Chrome's May 2026 documentation groups the checks around WebMCP integration, agent-relevant accessibility, layout stability, and llms.txt discoverability. The exact result depends on the Lighthouse and Chrome versions, page state, and registered tools. Because the category is experimental, record the environment and review individual audit details instead of relying only on the ratio." },
@@ -317,11 +369,11 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "cost",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "How much does a custom website cost with PandaCodeGen in 2026?", answer: "PandaCodeGen's planning tiers begin at $1,500 for Starter and $3,500 for Growth, while Scale starts at $5,000. The accepted proposal or SOW sets the final price after the page, template, content, integration, data, migration, security, compliance, and acceptance scope is known." },
       { question: "What is included in a custom website starting at $5,000?", answer: "Scale can include a custom Next.js frontend, content editing, URL and metadata migration, redirects, integrations, responsive implementation, security and accessibility work, performance acceptance tests, staged launch, documentation, and support. Only the items in the accepted SOW are included; the tier itself is not a universal feature bundle." },
-      { question: "Why is it a $5,000 range instead of one fixed price?", answer: "Page count alone does not describe the work. Templates, content states, commerce, accounts, forms, data, CRM, tracking, consent, localization, search, third parties, migration history, and acceptance risk can change the scope. PandaCodeGen documents a fixed project quote or another agreed structure after discovery." },
+      { question: "Why is $5,000 a starting price instead of one fixed price?", answer: "Page count alone does not describe the work. Templates, content states, commerce, accounts, forms, data, CRM, tracking, consent, localization, search, third parties, migration history, and acceptance risk can change the scope. PandaCodeGen documents a fixed project quote or another agreed structure after discovery." },
       { question: "How do payment and refunds work?", answer: "A common payment structure is 30% at onboarding and 70% at the delivery milestone defined in the accepted terms, although another schedule can be agreed. Refund triggers, amount, cure process, cancellation, and work-in-progress treatment are contract-specific. The intended up-to-100% remedy applies when PandaCodeGen fails to deliver the signed scope under the agreement, not as an unconditional change-of-mind promise." },
       { question: "What support is included?", answer: "Package discussions start with 15 business days for Starter and 30 business days for Growth and Scale. The accepted terms define the start event and coverage, normally defects in signed deliverables and stated minor adjustments. New features, extra pages, client changes, and third-party changes are separately scoped unless the agreement says otherwise." },
       { question: "Do I own the code, and can I change providers?", answer: "The client keeps its content, data, brand assets, and client-controlled accounts. Rights in paid custom deliverables and repository transfer follow the accepted terms, normally after full payment. PandaCodeGen retains reusable internal tools, templates, methods, and pre-existing code; third-party components retain their original licenses." },
@@ -340,7 +392,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "conversion",
-      lastModified: "2026-08-19",
+      lastModified: "2026-10-08",
       faqs: [
         { question: "How much does Meta Conversions API setup cost in 2026?", answer: "There is no responsible universal price. Quote the exact event set, source systems, consent requirements, matching data, browser and server deduplication, testing, reconciliation, monitoring, processors and support. PandaCodeGen can include an accepted CAPI scope in a Scale project starting at $5,000, but that starting tier is not a quote for every implementation." },
         { question: "Is the Meta pixel enough on its own?", answer: "It depends on the accepted measurement requirements and observed event coverage. Meta documents using Conversions API alongside the pixel for a more reliable connection, but the actual gap must be reconciled against the site's system of record. Server delivery does not bypass consent, privacy obligations or Meta's terms." },
@@ -363,7 +415,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "conversion",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       {
         question: "Why are my ad costs going up but my orders staying flat?",
@@ -404,7 +456,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "ranking",
-    lastModified: "2026-08-01",
+    lastModified: "2026-10-08",
     faqs: [
       {
         question: "Will I lose my Google rankings if I migrate my website?",
@@ -420,7 +472,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: "Besides redirects, what else can hurt SEO during a migration?",
-        answer: "Watch the shape, not the size. A brief dip that recovers is what reprocessing looks like. A slow decline that never bottoms out means something is structurally wrong, usually a redirect chain, a canonical pointing somewhere unintended, or a template that dropped content nobody noticed. Compare like-for-like date ranges in Search Console by page and query, not sitewide totals."
+        answer: "Four things that don't show up as an obvious error: titles, descriptions and structured data dropped or reset to platform defaults; a new build that's slower for real visitors; broken internal links, navigation or breadcrumbs; and a wrong canonical tag or an accidental robots.txt block. Check all four before and after launch."
       },
       {
         question: "Does moving to a faster platform like Next.js help or hurt SEO?",
@@ -445,7 +497,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "performance",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       {
         question: "How long does it take to build a custom website in 2026?",
@@ -473,7 +525,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: "Did PandaCodeGen deliver MyCustomPatches in 22 days?",
-        answer: "The owner has approved that first-party 22-day delivery figure. It is a project example, not a market average or promise. A comparison still needs the project's inventory, scope, phase dates, paused-time policy, review rounds and definition of delivery."
+        answer: "MyCustomPatches' owner reports a delivery of about 22 days. It is a project example, not a market average or promise. A comparison still needs the project's inventory, scope, phase dates, paused-time policy, review rounds and definition of delivery."
       }
     ]
   },
@@ -490,7 +542,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "code",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       {
         question: "Do I own my website if an agency builds it?",
@@ -525,13 +577,13 @@ export const blogPosts: BlogPost[] = [
       title: "SaaS Price Changes in 2026: A Verified Watchlist",
       excerpt: "A primary-source watchlist for Microsoft 365, Webflow and Klaviyo billing changes, with effective-date, renewal, unit and invoice checks.",
     category: "Pricing",
-      readTime: "9 min",
+      readTime: "11 min",
     date: "May 31",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "saas",
-      lastModified: "2026-08-19",
+      lastModified: "2026-10-08",
       faqs: [
         { question: "Which SaaS changes are verified in this watchlist?", answer: "The page covers Microsoft's July 1, 2026 commercial Microsoft 365 changes, Webflow's phased May 2026 Site-plan restructure, and Klaviyo's February 2025 active-profile billing policy because it can still affect 2026 invoices. Each row links to a primary vendor source." },
         { question: "How much did SaaS prices increase in 2026?", answer: "There is no universal percentage. The result depends on vendor, SKU, region, channel, contract, renewal, billed units, usage and discounts. Calculate each change from the account's current invoice and dated renewal quote." },
@@ -554,37 +606,14 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "code",
-    lastModified: "2026-08-01",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Should I build or buy software in 2026?", answer: "Buy is usually the stronger baseline when the workflow is common, the current product meets the requirements, time-to-value matters, and vendor limits are acceptable. Build becomes defensible when a stable, differentiated workflow, integration, control, portability, or cost requirement cannot be met responsibly by current products. Compare both options from one requirements list, operating model, risk register, and time horizon." },
-      { question: "Is it cheaper to build a custom CRM than pay for HubSpot or Salesforce?", answer: "That depends on the workflow, and the comparison is usually set up wrong before the numbers are even gathered. You are weighing a licence fee against a build cost, when the real comparison is against building plus running it forever: the support, the integrations, the person who fixes it when it breaks at month thirty. Decide per workflow rather than against the whole bill. There is no common outcome to quote you; run the comparison per workflow rather than against the whole bill." },
+      { question: "Is it cheaper to build a custom CRM than pay for HubSpot or Salesforce?", answer: "That depends on the workflow, and the comparison is usually set up wrong before the numbers are even gathered. You are weighing a licence fee against a build cost, when the real comparison is against building plus running it forever: the support, the integrations, the person who fixes it when it breaks at month thirty. There is no common outcome to quote you; run the comparison per workflow rather than against the whole bill." },
       { question: "What percentage of companies are replacing SaaS with custom software?", answer: "Do not use one vendor survey as a universal market rate or as proof that your workflow should be rebuilt. Check the sample, respondent type, question wording, geography, publication date, and sponsor. The build-or-buy decision still depends on your current system, accepted requirements, quotes, risks, and operating capability." },
       { question: "What is the real 3-year cost of SaaS versus custom software?", answer: "Model the same workflow and demand across both paths. SaaS includes subscriptions, seats, contacts, usage, implementation, integrations, support, renewal terms, and exit work. Custom includes discovery, build, data migration, hosting, services, monitoring, security, maintenance, support, change requests, internal ownership, and exit documentation. Run conservative, base, and adverse scenarios; there is no universal crossover month." },
       { question: "When does SaaS still make more sense than building custom?", answer: "SaaS often makes more sense when the workflow is standard, the product already satisfies security and integration requirements, deployment speed matters, switching costs are acceptable, and the buyer does not want to operate the capability. Validate the current plan, limits, data terms, export path, support, renewal exposure, and exit cost before deciding." },
       { question: "Does AI make building custom software cheaper in 2026?", answer: "AI tools may reduce time on some research, coding, testing, and documentation tasks, but they do not remove requirements, architecture, review, security, accessibility, data, integration, QA, deployment, maintenance, or accountability. Measure the actual delivery and defect data for the team and scope; do not apply a universal discount or timeline reduction." }
-    ]
-  },
-  {
-    id: "how-to-cut-saas-bill-2026",
-    cardStat: "5 steps",
-    cardStatLabel: "Inventory, verify, right-size, compare and measure",
-    title: "How to Cut a SaaS Bill in 2026: An Evidence-First Audit",
-    excerpt: "Inventory recurring software, verify usage and obligations, remove or consolidate safely and measure the realized result.",
-    category: "Pricing",
-    readTime: "8 min",
-    date: "May 31",
-    author: "Hassan",
-    role: "Co-founder, Lead Engineer",
-    featured: true,
-    illustrationType: "cost",
-    lastModified: "2026-08-19",
-    faqs: [
-      { question: "What is the fastest way to cut a SaaS bill without cancelling anything?", answer: "Build a ledger of every charge, account, plan, commitment, renewal, owner, user, integration, data class and exit condition. Verify real use and business value, right-size safely, compare candidates under a common requirements matrix, and measure realized savings after switching and operating costs." },
-      { question: "What is the cheapest alternative to an expensive SaaS tool?", answer: "There is no stable universal equivalent. Compare current official quotes for the required country, billing term, seats and usage, then test must-have workflows, data, integrations, access, security, support, export and exit. A lower list price can cost more after migration and missing capability." },
-      { question: "How much can a SaaS audit save?", answer: "The result depends on the starting ledger, commitments, actual use, replacement scope, migration cost, internal time and residual vendor spend. This repository does not support a universal percentage. Forecast base and high-cost scenarios, then replace assumptions with invoices after the change." },
-      { question: "Should I cancel a tool when no one logged in recently?", answer: "Login recency is one signal, not a complete decision. Some accounts support service operation, emergency access, approvals or infrequent critical work. Confirm owner, workflow, data, legal, security, export, integration and recovery requirements before removing access or quantity." },
-      { question: "When should custom software replace SaaS?", answer: "Consider it when a stable, differentiated workflow has clear requirements and the total cost and constraints of the vendor can be compared with discovery, build, migration, infrastructure, security, maintenance, support, operators and exit. No universal savings or payback is promised." },
-      { question: "Does uninstalling a Shopify app stop billing?", answer: "Shopify's current guidance says uninstalling a paid app stops future recurring charges billed through Shopify, although a pending current-cycle charge may remain. External subscriptions charged by the developer must be cancelled separately. Review billing location, data and workflow effects before uninstalling." }
     ]
   },
     {
@@ -594,20 +623,23 @@ export const blogPosts: BlogPost[] = [
       title: "2026 SaaS Pricing Audit: An Evidence-First Method",
       excerpt: "Audit software cost with invoices, contracts, usage, billing units, renewal dates, security, integrations and exit requirements before deciding what to retain or replace.",
     category: "Pricing",
-      readTime: "12 min",
-    date: "May 26",
+      readTime: "15 min",
+    date: "May 31",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "saas",
-      lastModified: "2026-08-19",
+      lastModified: "2026-10-08",
       faqs: [
         { question: "How much is the average business spending on SaaS in 2026?", answer: "A general benchmark does not establish your stack cost. Reconcile at least twelve months of card, bank, accounts-payable and app-marketplace charges, then map each item to the exact account, SKU, owner, usage, contract and renewal." },
         { question: "What is the 2026 SaaS inflation rate?", answer: "This audit does not apply one market-wide rate to every contract. Vendor, SKU, region, billing channel, renewal, discount and billed quantity differ. Use the official change notice and the account's renewal quote and invoice." },
         { question: "Which software companies changed pricing in 2026?", answer: "The related primary-source watchlist currently covers Microsoft's July 2026 commercial Microsoft 365 changes and Webflow's phased May 2026 plan restructure, plus Klaviyo's February 2025 billing-policy change because it can still affect 2026 invoices. It is not presented as an exhaustive market list." },
         { question: "How do I audit my SaaS bill in 2026?", answer: "Reconcile invoices and contracts, normalize SKU and billed units, measure meaningful use, map data and workflow dependencies, verify cancellation rules, and assign retain, right-size, consolidate, replace or investigate. Retain dated evidence and rollback for every change." },
         { question: "When does building custom software beat paying for SaaS?", answer: "The answer depends on the current system, requirements, evidence, vendor terms, operating costs, and accepted project scope. Validate mutable facts at their primary source and do not treat an example as a ranking, performance, revenue, delivery, ownership, or refund promise." },
-        { question: "What is the cheapest way to replace a CRM?", answer: "There is no universal cheapest path. Define the required data, roles, workflows, reporting, integrations, compliance, migration, support and exit first. Compare current vendor quotes with a scoped custom option including hosting, maintenance, security, internal time and adoption." }
+        { question: "What is the cheapest way to replace a CRM?", answer: "There is no universal cheapest path. Define the required data, roles, workflows, reporting, integrations, compliance, migration, support and exit first. Compare current vendor quotes with a scoped custom option including hosting, maintenance, security, internal time and adoption." },
+        { question: "Should I cancel a tool when no one logged in recently?", answer: "Login recency is one signal, not a complete decision. Some accounts support service operation, emergency access, approvals or infrequent critical work. Confirm the owner, workflow, data, legal, security, export, integration and recovery requirements before removing access or reducing the quantity." },
+        { question: "How much can a SaaS audit save?", answer: "It depends on the starting ledger, commitments, actual use, replacement scope, migration cost, internal time and residual vendor spend, so we don't publish a universal percentage. Forecast a base case and a high-cost case, then replace the assumptions with invoices once the change has taken effect." },
+        { question: "Does uninstalling a Shopify app stop billing?", answer: "Shopify's help page, checked October 4, 2026, says uninstalling a paid app cancels future recurring charges, although you might still be billed for the current billing cycle. Charges an app bills outside Shopify are not cancelled by uninstalling, so cancel those in the app's own billing settings or with the developer, and contact the developer before uninstalling if you want a refund." }
       ]
   },
   {
@@ -623,7 +655,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "code",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Who are the top Next.js development agencies in 2026?", answer: "This disclosed shortlist includes Bejamas, Blazity, Brainhub, FocusReactive, Naturaily, Netguru, Pagepro and PandaCodeGen. It is not an objective ranking. Compare each provider's current first-party evidence, assigned team, relevant references, scope, acceptance, ownership, support and current quote." },
       { question: "Which Next.js agency has the lowest published minimum project size?", answer: "PandaCodeGen publishes starting tiers of $1,500 Starter, $3,500 Growth and $5,000 Scale. The article does not claim that other providers' changing minimums or quotes are lower or higher. Obtain current like-for-like proposals before comparing price." },
@@ -649,7 +681,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "security",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "What happened to Smart Slider 3 Pro in April 2026?", answer: "Patchstack reported that compromised update infrastructure distributed Smart Slider 3 Pro version 3.5.1.35 on April 7 for approximately six hours. It said the Pro release contained a remote-access toolkit, the free WordPress.org edition was not affected, and 3.5.1.36 was the clean release. Sites that installed the affected build should follow the current vendor incident guidance." },
       { question: "What happened to EssentialPlugin in April 2026?", answer: "Patchstack reported that the vendor changed hands in 2025 and that the new owner introduced backdoor code across more than 20 plugins. It said the code was activated on April 5 and that the WordPress Plugin Review team closed affected listings and pushed a forced security update on April 7. Applicability and compromise still require site-specific evidence." },
@@ -672,7 +704,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "code",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "How long does it take to get cited by AI engines on a new website?", answer: "There is no reliable fixed timeline. Providers independently control crawling, inclusion, recommendation, and citation. Track provider reports, referrals, and dated manual observations separately, and do not infer a citation from ordinary Search Console impressions or zero clicks." },
       { question: "What is an AI-info page and why does it matter?", answer: "An AI-info page is a governed reference page for public company facts such as services, pricing approach, contact methods, coverage, evidence labels, and limitations. It can reduce factual drift across a site, but it is not a provider requirement or citation guarantee." },
@@ -682,7 +714,7 @@ export const blogPosts: BlogPost[] = [
       { question: "What does the AEO setup cost and who does it?", answer: "Price the actual work: crawler and indexation checks, content and entity governance, source review, structured data, accessibility, analytics, consent, testing, and ongoing updates. It may be a focused audit, an optimization scope, or part of a migration. PandaCodeGen's published tiers are planning anchors only; the accepted proposal names the owners, deliverables, evidence, support, and price." },
       { question: "Can you add AEO controls to my existing website without rebuilding it?", answer: "Often. The right approach depends on the current rendering, CMS, templates, crawler access, content quality, structured data, governance, and measurement setup. Audit the existing site first; a migration is justified only when the current platform or implementation prevents the agreed requirements." },
       { question: "How do I get my business recommended by ChatGPT?", answer: "Nobody can make that happen, and any agency that says otherwise is selling something. What you can do is be the source worth quoting: answer the question directly in the first two sentences, publish a fact the other sources do not have, and put a date and a method on it. That is a bet on being useful, not a mechanism, and no one controls the outcome." },
-      { question: "What does it take for ChatGPT to recommend a website?", answer: "Something to say that its other sources do not say. Every model builds an answer from several pages, so matching what everyone else already covers earns nothing. A dated first-hand observation, a primary-source correction, or a number you computed and showed your working for gives it a reason to reach for your page rather than the four that agree with each other." },
+      { question: "What does it take for ChatGPT to recommend a website?", answer: "Something to say that its other sources do not say. Systems differ in how they retrieve and select sources; repeating existing coverage alone provides no assurance of selection. A dated first-hand observation, a primary-source correction, or a number you computed and showed your working for gives it a reason to reach for your page rather than the four that agree with each other." },
       { question: "How do I optimize my website to appear in AI search answers?", answer: "Answer-first paragraphs, real headings and lists rather than styled divs, entities named explicitly instead of a vague noun like the platform, and facts stated where they can be lifted out of context. Then give it something to lift that is yours. Structure makes a page extractable; only original content makes it worth extracting, and no amount of markup substitutes for the second part." },
       { question: "What is AI search optimization (AEO) and how does it work?", answer: "AEO is a working term for making public information crawlable, clear, useful, attributable, and measurable across answer systems. Provider behavior varies and changes. Structured data and concise answers can improve clarity, but no technique guarantees crawling, inclusion, ranking, recommendation, or citation." }
     ]
@@ -700,7 +732,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "code",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Is web development dead because of AI?", answer: "No. AI can assist research, coding and testing, but the buyer still needs accountable requirements, architecture, security, accessibility, privacy, integration, validation and ownership decisions. Evaluate the named team and its evidence rather than assuming tool use guarantees speed or quality." },
       { question: "What is the 3 second rule in website design?", answer: "It is a planning heuristic, not a universal abandonment point or Google requirement. Use your own real-user and funnel evidence. Google publishes Core Web Vitals thresholds for field experience, but passing them does not guarantee rankings, conversion or revenue." },
@@ -722,7 +754,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "cost",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Can I build a website for free?", answer: "Some vendors offer no-cost or trial plans, but eligibility, branding, domains, features, usage and commercial terms differ. Infrastructure, domain, email, apps, payment, content, maintenance and internal time can still cost money. Check the current official plan and do not assume a personal free tier fits commercial use." },
       { question: "How much does a one-page website cost?", answer: "Price the actual copy, design states, form or payment flow, analytics, consent, accessibility, responsive behavior, integrations, QA, launch and support. PandaCodeGen's Starter planning anchor begins at $1,500, but the accepted scope determines whether a one-page project fits." },
@@ -733,29 +765,6 @@ export const blogPosts: BlogPost[] = [
       { question: "Is $1,500 a good price for a website?", answer: "It is a fair price for a small site with a genuinely bounded scope: a few templates, content you supply, no migration of an existing set of URLs, and no integrations beyond a form and analytics. That is what PandaCodeGen's Starter tier covers. The same number is a warning sign once the brief includes a store, logins, a CRM connection, or moving an existing set of pages without losing their addresses. Ask the vendor which of testing, redirect mapping, accessibility and account handover sits inside the number." },
       { question: "How much does a website cost per month?", answer: "The monthly cost is rarely one line. It combines hosting or platform fees, per-seat charges for tools and business email, apps and extensions, payment processing, analytics and monitoring, and the internal hours spent publishing and maintaining. Per-seat pricing is the most commonly underestimated part, because a price quoted per user multiplies by the number of people who need access. Build the figure from current vendor quotes for your own country, billing term and expected usage rather than assuming a single number." },
       { question: "Why is owning a website so expensive?", answer: "Most of the price is skilled time rather than software. Design, development, content migration, testing, accessibility, launch and handover are people-hours, and the recurring bill is mostly subscriptions and maintenance rather than raw hosting. Cost rises fastest where the work is unbounded: undefined acceptance criteria, open-ended revisions, and scope that was discussed but never written down." }
-    ]
-  },
-  {
-    id: "why-is-my-website-loading-so-slow",
-    cardStat: "12 causes",
-    cardStatLabel: "across network, origin, browser, and platform",
-    title: "Why Is My Website Loading So Slow? 12 Causes + Fixes",
-    excerpt: "Find the slow layer before paying for the wrong fix. This measurement-first guide covers field data, lab traces, templates, media, scripts, hosting, and platform constraints.",
-    category: "Performance",
-    readTime: "14 min",
-    date: "May 13",
-    author: "Hassan",
-    role: "Co-founder, Lead Engineer",
-    featured: false,
-    illustrationType: "speed",
-    lastModified: "2026-08-19",
-    faqs: [
-      { question: "What is the 3 second rule in website design?", answer: "The 3 second rule is a planning heuristic, not a Google requirement or a universal abandonment point. Different pages, devices, networks, audiences, and tasks produce different behavior. Use your own real-user performance and analytics data, then evaluate loading, responsiveness, layout stability, conversion, and engagement together." },
-      { question: "Why is my website slow but my internet connection is fast?", answer: "Your connection is only one layer. Origin response, cache misses, redirects, large media, fonts, JavaScript, third parties and main-thread work can delay the page. Use a request waterfall and performance trace under recorded conditions to find the slow layer." },
-      { question: "Why are websites so laggy on mobile devices?", answer: "Mobile devices can expose slower processors, constrained networks, large responsive images, main-thread JavaScript, layout shifts, and touch handlers that are less noticeable on a desktop. Google uses the mobile version of content for mobile-first indexing, but a mobile Lighthouse score does not directly determine rankings. Test representative devices and templates instead of assuming one cause." },
-      { question: "How fast should a website load to rank well on Google?", answer: "Google's good Core Web Vitals thresholds are LCP at or below 2.5 seconds, INP at or below 200 milliseconds, and CLS at or below 0.1, assessed at the 75th percentile. These are user-experience targets, not a guaranteed ranking formula or Lighthouse score cutoff. Strong content, relevance, accessibility, security, and overall page experience still matter." },
-      { question: "Can a caching plugin alone fix a slow WordPress site?", answer: "Caching can reduce repeated server and delivery work, but it cannot repair every cause. It does not automatically remove expensive third parties, reduce all main-thread JavaScript, correct oversized media or fix a slow dynamic interaction. Measure before and after with functional checks." },
-      { question: "Does switching web hosting make a website faster?", answer: "It can when current server time, worker limits, database latency, storage or region is a measured bottleneck. Hosting will not automatically fix frontend JavaScript, media, third parties or application queries. Capture resource and trace evidence before moving, then retest the same routes." }
     ]
   },
   {
@@ -771,7 +780,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "performance",
-    lastModified: "2026-08-20",
+    lastModified: "2026-10-01",
     faqs: [
       { question: "How long does Shopify speed optimization take?", answer: "Speed work is measured in days, not weeks, when it's diagnostic and not a rebuild. Establish a baseline on your busiest product page first, change one thing at a time, and re-measure under the same conditions. Most of the elapsed time is waiting for field data to accumulate, which is why the report window counts for more than the working hours." },
       { question: "Do Shopify speed booster apps actually improve performance?", answer: "Sometimes, and rarely as much as the listing implies. Measure your own storefront before and after installing one, on the same route under the same conditions, because a booster app is itself more JavaScript. Shopify already serves WebP and compresses images automatically, so an app promising image optimisation is often charging you for something the platform does for free." },
@@ -794,7 +803,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "ranking",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Why do some people say Squarespace is bad for SEO?", answer: "Some properties have performance, scale, integration, editing or technical-control constraints, but a platform label does not diagnose an individual site. Audit crawlability, rendered output, content, search data and representative route performance before assigning a cause." },
       { question: "What are the main SEO limitations of Squarespace?", answer: "Four are structural rather than settings you forgot. You cannot edit robots.txt, only tick two crawler checkboxes. Blog posts sit under a collection prefix. Redirects have no CSV import, so a large migration is pasted by hand. Squarespace emits six schema types automatically that you cannot edit or remove, so your own markup sits alongside them rather than replacing them. Everything else people blame on the platform is usually a page control that was never filled in." },
@@ -817,17 +826,17 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'performance',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Will my HighLevel workflows still fire after the website moves?", answer: "Only if the integration still produces each workflow's real trigger and required fields. Inventory contact, form, appointment, tag, opportunity and other dependencies, then run accepted end-to-end tests. Do not assume that creating a contact reproduces every prior event." },
       { question: "Do I cancel HighLevel for a hybrid website?", answer: "The hybrid model normally keeps HighLevel for the resources named in the accepted scope. Confirm the account's current plan, add-ons, usage charges and required capabilities directly in HighLevel before quoting. The website project does not guarantee an unchanged vendor bill." },
       { question: "How do calendar bookings work?", answer: "An approved HighLevel embed may be the smallest path. A custom interface may use currently supported calendar and appointment APIs with the required scopes. Compare accessibility, styling, performance, time-zone handling, conflicts, cancellation, rescheduling and maintenance before choosing." },
       { question: "Can I keep SaaS Mode and agency operations?", answer: "Potentially, because the public frontend and HighLevel account can remain separate. Verify every needed sub-account, billing, portal, workflow and operational dependency in the target account. The migration scope only protects functions it explicitly inventories and tests." },
       { question: "How long does the GHL hybrid migration take?", answer: "The frontend build runs on its own schedule; the integration is what needs testing time. Budget separately for mapping every form field, firing every workflow in a non-production path and confirming failure handling, because a workflow that stops firing silently is the failure mode here. Your HighLevel account and existing site stay live throughout." },
-      { question: "What happens if HighLevel changes its API or webhooks?", answer: "Version and vendor change risk remains. Use current supported endpoints and scopes, verify webhook signatures, make handlers idempotent, monitor failures and keep an update owner. HighLevel's July 2026 guide says the legacy webhook signature is scheduled for deprecation on September 1, 2026; recheck before release." },
+      { question: "What happens if HighLevel changes its API or webhooks?", answer: "Version and vendor change risk remains. Use current supported endpoints and scopes, verify webhook signatures, make handlers idempotent, monitor failures and keep an update owner. HighLevel's webhook guide gives September 1, 2026 as the date the legacy X-WH-Signature header is deprecated, after which webhooks are signed only with X-GHL-Signature. That date has passed, so verify X-GHL-Signature now and recheck the guide before release." },
       { question: "Can I move back to a native HighLevel website?", answer: "Plan reversibility before launch: preserve the old configuration, record DNS and redirects, define account and repository control, and write rollback steps. Whether source code or accounts transfer depends on the accepted project terms and third-party licenses." },
       { question: "Does a Next.js frontend guarantee better SEO or leads?", answer: "No. It can provide more implementation control, but search engines, visitors and advertising platforms control downstream outcomes. Preserve URLs and search output, measure representative performance, and monitor post-launch results without assuming causation." },
-      { question: "Do I need a GoHighLevel API key to send website form leads into the CRM?", answer: "No, and HighLevel's own documentation advises against it. HighLevel states that legacy API keys run on API v1.0, which has reached end-of-life, that new v1 key creation is no longer supported, and that keys unused for 90 days are deleted automatically. Use a Private Integration Token with only the scopes you need, or OAuth 2.0 for a marketplace app, and keep the credential server-side." },
+      { question: "Do I need a GoHighLevel API key to send website form leads into the CRM?", answer: "No, and HighLevel's own documentation advises against it. HighLevel states that legacy API keys run on API v1.0, which has reached end-of-life, that new v1 key creation is no longer supported, and that keys unused for more than 90 days may be marked as expired. Use a Private Integration Token with only the scopes you need, or OAuth 2.0 for a marketplace app, and keep the credential server-side." },
       { question: "Can I connect a WordPress or Webflow site to GoHighLevel instead of Next.js?", answer: "Yes. The integration surface is the same regardless of frontend: server-side form handling under a scoped credential, signed webhooks for events coming back, and a monitored owner for both. The framework changes the build effort and the level of rendering control you get, not the CRM contract." },
     ]
   },
@@ -844,7 +853,7 @@ export const blogPosts: BlogPost[] = [
       role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-      lastModified: "2026-08-19",
+      lastModified: "2026-10-08",
       faqs: [
         { question: "Is Pagepro a fit for a small business?", answer: "Ask Pagepro for a current written proposal for the exact scope. Company size alone does not establish fit. Compare engagement model, team, relevant evidence, price, timeline, acceptance, support, ownership, licensing and total operating cost." },
         { question: "How much does Pagepro charge?", answer: "This page does not repeat a third-party profile rate as a current Pagepro price. Request a dated written proposal and confirm whether it covers discovery, a fixed deliverable, time and materials, a retainer or dedicated capacity. Compare it only with equivalent scope." },
@@ -868,7 +877,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "How long does a website redesign take from start to launch?", answer: "A redesign is usually faster than a migration because the platform, the data and most of the URLs stay put. What sets the schedule is the number of distinct templates and the number of people who have to approve them. Two approvers and four templates is a different project from six approvers and fourteen templates, at the same page count." },
       { question: "How often should a business redesign its website?", answer: "There is no universal redesign cycle. Act when evidence shows the experience, accessibility, content system or brand no longer meets current requirements and a redesign is the smallest sufficient intervention. Site age alone is not a business case." },
@@ -892,7 +901,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Is hiring a cheap web developer safe for my business website?", answer: "It can be, and the price is not what tells you. What tells you is whether you can point at a deliverable when each payment falls due, whether the contract says who owns the code and the accounts, and whether the developer can show you finished work rather than a capability list. Cheap and careful exist together; cheap and undefined do not." },
             {
@@ -906,7 +915,7 @@ export const blogPosts: BlogPost[] = [
       { question: "Should I hire a cheap web developer overseas or locally?", answer: "Location alone does not determine quality, cost, or communication. Compare legal counterparty, time-zone overlap, language, response expectations, security practices, payment method, insurance where needed, data location, dispute terms, portfolio evidence, and the named people doing the work. Use the same due-diligence standard for local and remote vendors." },
       { question: "What is the difference between a cheap web developer and a website builder?", answer: "A developer sells scoped labor and deliverables; a website builder licenses a managed platform and editor. Either path may still involve templates, subscriptions, custom code, hosting, support, and vendor limits. Compare the actual output, accounts, export path, ownership and licenses, security duties, performance evidence, accessibility, maintenance, and total cost." },
       { question: "Can ChatGPT build me a website?", answer: "An AI assistant can produce markup, styling and component code, and that code still has to be hosted, connected to a domain, tested, secured and maintained by somebody. Decide who holds the hosting, domain, repository and analytics accounts, who is accountable when a form stops delivering, and what the acceptance test is, because those questions are identical whether a person or a model wrote the code. On the content side, Google's own guidance states that using automation including AI generation is not itself a violation, but producing content primarily to manipulate search rankings is a spam-policy violation, and it recommends disclosure where a reader would reasonably ask how the page was made." },
-      { question: "Who is the cheapest website builder?", answer: "The cheapest headline plan and the cheapest outcome are rarely the same plan, so read each vendor's own pricing page rather than a comparison article, then price the exit as well as the entry. WordPress.com, for example, publishes a free tier that does not include a custom domain, with its Personal plan at $4 per month billed annually and its Business plan at $25 per month billed annually, checked August 2, 2026. On the exit side, Squarespace's own export documentation lists content that does not export, including index, portfolio and store pages, custom CSS and style settings. A builder that is cheap to enter and expensive to leave is not cheap." },
+      { question: "Who is the cheapest website builder?", answer: "The cheapest headline plan and the cheapest outcome are rarely the same plan, so read each vendor's own pricing page rather than a comparison article, then price the exit as well as the entry. WordPress.com, for example, publishes a free tier that does not include a custom domain, with its Personal plan at $4 per month billed annually, renewing at $5, and its Business plan at $25 per month billed annually, renewing at $28, checked October 8, 2026. On the exit side, Squarespace's own export documentation lists content that does not export, including index, portfolio and store pages, custom CSS and style settings. A builder that is cheap to enter and expensive to leave is not cheap." },
     ]
   },
   {
@@ -922,7 +931,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'speed',
-    lastModified: "2026-09-29",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "What is the 3 second rule in website design?", answer: "It is a planning heuristic, not a Google requirement or universal abandonment point. Different routes, devices, networks, audiences and tasks behave differently. Use the property's field performance and funnel evidence rather than applying one cutoff to every visitor." },
       { question: "Does website speed affect Google rankings?", answer: "Google uses Core Web Vitals in broader ranking systems but says good scores do not guarantee top rankings and relevance remains fundamental. Lighthouse is a lab diagnostic, not a direct ranking cutoff. Diagnose search changes with Search Console, content, links, indexing and release evidence." },
@@ -930,7 +939,10 @@ export const blogPosts: BlogPost[] = [
       { question: "What are the best tips to optimize website speed and performance?", answer: "The usual list is compress images to WebP or AVIF, minify CSS and JavaScript, use a CDN, enable caching, defer non-critical scripts and cut redirect chains. All of it is real work, but the list is sorted by how easy each item is to describe rather than by how much time it gives back. Get a number first: run PageSpeed Insights on one specific URL and read the Chrome field data panel above the score. Below 50, an oversized LCP image or render-blocking CSS in the head is almost always dominating, so start there. Between 50 and 89, script execution and third-party tags are usually splitting the remaining time. At 90 or above the lab score is no longer the constraint and you should be looking at field INP and CLS instead. Minifying a site whose real problem is a 2MB hero image saves kilobytes and changes nothing." },
       { question: "Can a CDN alone make my website fast?", answer: "A CDN can reduce delivery distance and cache eligible responses, but it cannot automatically fix origin compute, database work, cache misses, oversized media, render-blocking resources, JavaScript, layout shifts or third parties. Measure the request path before choosing the fix." },
       { question: "How long does it take to optimize a slow website?", answer: "Diagnosis is hours; the fixes are days; confirming they worked takes weeks because field data accumulates over a rolling window. That last part is what people get wrong, treating a same-day lab score as proof. Change one thing at a time, record the conditions, and wait for the field data before concluding anything." },
-      { question: "Is AMP required for fast mobile pages or Google rankings?", answer: "No. AMP is not required for eligibility in Google's mobile search experiences. Choose an architecture from the site's product, content, performance and maintenance requirements, then verify field and lab results. Server rendering, static generation or edge delivery do not automatically make a page fast." }
+      { question: "Is AMP required for fast mobile pages or Google rankings?", answer: "No. AMP is not required for eligibility in Google's mobile search experiences. Choose an architecture from the site's product, content, performance and maintenance requirements, then verify field and lab results. Server rendering, static generation or edge delivery do not automatically make a page fast." },
+      { question: "Why is my website slow but my internet connection is fast?", answer: "Your connection is only one layer. Origin response, cache misses, redirects, large media, fonts, JavaScript, third parties and main-thread work can all delay the page. You may also be loading it from your own browser cache. Use a request waterfall and a performance trace under recorded conditions to find the slow layer." },
+      { question: "Why are websites so laggy on mobile devices?", answer: "Phones can expose slower processors, constrained networks, large responsive images, main-thread JavaScript, layout shifts and touch handlers that are less noticeable on a desktop. Test representative devices and templates on a throttled mobile profile instead of assuming one cause." },
+      { question: "Does switching web hosting make a website faster?", answer: "It can when server time, worker limits, database latency, storage or region is a measured bottleneck. Hosting will not fix front-end JavaScript, media, third parties or slow application queries. Capture timing and trace evidence before moving, then retest the same pages." }
     ]
   },
   {
@@ -941,14 +953,14 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Scope WordPress, WooCommerce, Webflow, Wix, Squarespace, Shopify and GoHighLevel migrations from current export limits, replacement work and acceptance evidence.",
     category: "Pricing",
     readTime: "13 min",
-    date: "Apr 29",
+    date: "May 6",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'migration',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
-      { question: "How much does a website migration cost in 2026?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale. Final price depends on the route, template, content, data, feature, integration, compliance, QA, cutover and support scope. These are PandaCodeGen planning anchors, not market averages." },
+      { question: "How much does a website migration cost in 2026?", answer: "It depends on the job. Moving the same site to a new host is often free or a small fixed fee from the new host. Moving to a different platform is a rebuild, priced on the pages, templates, data and integrations that have to move and on whether your URLs must survive. PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale. These are PandaCodeGen planning anchors, not market averages." },
       { question: "Why can two migration quotes differ so much?", answer: "The quotes may cover different inventories, design changes, content work, integrations, accessibility, SEO safeguards, testing, governance, ownership or support. Normalize the statements of work before attributing the difference to markup or quality." },
       { question: "Will I lose my Google rankings during migration?", answer: "It depends entirely on which job you are buying. A host-to-host transfer keeps every URL and normally changes nothing search engines can see. A platform migration changes the URL shape, the rendering and often the content, and needs a mapped destination for every old address. Confuse the two and you will either overpay for a transfer or under-scope a rebuild." },
       { question: "How long does a website migration take?", answer: "A host-to-host transfer is often same-day and many hosts do it free. A platform migration is weeks, and the variable is template count, content quality and approval speed rather than page count. Establishing which of the two you are buying will tell you more about the timeline than any published range will." },
@@ -965,7 +977,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "shopify-stocky-sunset-date-2026",
     title: "Shopify Stocky Sunset: August 31, 2026 Migration Guide",
-    excerpt: "Shopify says Stocky cannot manage inventory after August 31, 2026. What to export, why suppliers require manual recreation, which APIs stop, and how to compare replacement workflows.",
+    excerpt: "Shopify says Stocky stopped managing inventory on August 31, 2026. What to export while read-only access lasts, why suppliers have to be recreated by hand, which APIs stopped, and how to compare replacements.",
     category: "Shopify",
     readTime: "10 min",
     date: "Apr 25",
@@ -973,18 +985,18 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'saas',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     cardStat: "Aug 31",
     cardStatLabel: "Shopify Stocky sunset",
     faqs: [
-      { question: "What is the Shopify Stocky sunset date?", answer: "Shopify says Stocky can no longer be used to manage inventory after August 31, 2026. Stocky APIs stop on that date, while read-only access remains for an unspecified period. Shopify delisted Stocky from the App Store on February 2, 2026. These facts were rechecked in Shopify's transition guide on July 24, 2026." },
-      { question: "What features are lost when Stocky sunsets in August 2026?", answer: "Shopify says historical purchase orders and stocktakes do not move automatically, suppliers cannot be exported, Stocky APIs stop, and some Stocky-specific features may work differently or may not yet exist in Shopify Admin. Inventory the exact workflows your team uses and test each against Shopify's current transition guide before choosing a replacement." },
+      { question: "What is the Shopify Stocky sunset date?", answer: "Stocky stopped managing inventory on August 31, 2026, and its APIs stopped the same day. Shopify says you keep read-only access to export your data for at least 90 days after that date, so until at least November 29, 2026. Shopify delisted Stocky from the App Store on February 2, 2026, so it can't be reinstalled. These facts were rechecked in Shopify's transition guide on October 8, 2026." },
+      { question: "What features were lost when Stocky shut down on August 31, 2026?", answer: "Shopify says historical purchase orders and stocktakes do not move automatically, suppliers cannot be exported, Stocky APIs stopped, and some Stocky-specific features may work differently or may not yet exist in Shopify Admin. Inventory the exact workflows your team uses and test each against Shopify's current transition guide before choosing a replacement." },
       { question: "What replaces Stocky in native Shopify inventory tools?", answer: "Shopify's current guide points merchants to Shopify Admin and Shopify POS for transfers, purchase orders, quantity adjustments, inventory history, in-store workflows, APIs, Shopify Flow, and other current inventory capabilities. Some Stocky-specific workflows differ or may not yet be available, so verify requirements against the live account and current documentation." },
       { question: "Should I migrate to Sumtracker, Fabrikator, Prediko, or another inventory app?", answer: "Compare Shopify Admin, current inventory apps, and custom software against verified workflow fit, data migration, APIs, security, support, portability, vendor terms, internal capability, time to implement, and total cost. No option is a permanent fix, and custom software still depends on maintainers, hosting, services, and third-party components." },
       { question: "What does it cost to rebuild Shopify headless with custom inventory?", answer: "A headless rebuild with custom inventory sits beyond our standard tiers and is scoped separately, because the inventory logic is bespoke by definition. Before pricing it, check whether an existing app already covers your workflow. Replacing Stocky is usually a purchasing decision, and only becomes an engineering one if nothing on the market fits how you actually order." },
-      { question: "How do I export my Stocky data before August 31, 2026?", answer: "Use Stocky's built-in reports to export the historical records you need, verify the exports, store them securely, and document retention and access. Shopify says suppliers cannot be exported, so recreate and validate required supplier data manually. Do not rely on the unspecified post-cutoff read-only period as the retention plan." },
+      { question: "How do I export my Stocky data now that it has shut down?", answer: "Use Stocky's built-in reports during the read-only period, which Shopify says lasts at least 90 days after August 31, 2026. Export the historical records you need, verify the exports, store them securely, and document retention and access. Shopify says suppliers cannot be exported, so recreate and validate required supplier data manually. Don't rely on the read-only period as your retention plan, because Shopify hasn't said when it ends." },
       { question: "Why did Shopify deprecate Stocky?", answer: "The current Shopify help pages document the transition and replacement capabilities but do not provide a basis for attributing a broader motive. Plan from the announced dates, export limitations, API cutoff and workflow differences rather than speculating about why Shopify made the product decision." },
-      { question: "How long does a Shopify headless rebuild with custom inventory take?", answer: "Work backwards from August 31, 2026, because that is when access ends rather than a date you can negotiate. Export what you need first and separately from choosing a replacement, so that if the replacement decision takes longer than expected you still hold your own data. Do not leave the export until the week before." },
+      { question: "How long does a Shopify headless rebuild with custom inventory take?", answer: "Inventory management in Stocky ended on August 31, 2026, and read-only export access lasts at least 90 days after that. Export what you need first and separately from choosing a replacement, so that if the replacement decision takes longer than expected you still hold your own data. Do not leave the export until the week before." },
     ]
   },
   {
@@ -1025,7 +1037,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-09-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "How much does a website rebuild cost in 2026?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale. A rebuild can require custom scope when strategy, content, applications, data, compliance or governance expands. Final price belongs to a signed statement of work." },
       { question: "What's the difference between a website rebuild, a redesign, and a migration?", answer: "A redesign changes the experience while retaining the current platform. A migration changes the platform while preserving much of the approved structure and experience. A rebuild changes the platform and materially reworks the structure, experience or content system." },
@@ -1050,10 +1062,10 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'conversion',
-    lastModified: "2026-08-25",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Why is my WooCommerce conversion rate low?", answer: "A low conversion rate has at least four unrelated causes: traffic quality, offer and pricing, funnel friction, and technical performance. WooCommerce only contributes to some of them. Before spending anything, find which of the four funnel transitions actually changed: landing to product view, product view to add to cart, add to cart to checkout started, or checkout started to order placed." },
-      { question: "What is a good WooCommerce conversion rate?", answer: "WooCommerce publishes no benchmark, so any figure credited to it has no source behind it. The third-party numbers do not hold up well either: the 2.66% usually attributed to Dynamic Yield renders as 0% on that company's own benchmark page as of August 2026, and Adobe's 3.65% cites only 'the latest research' with no study, sample or date named. IRP Commerce is the most transparent, publishing 2.22% for UK and Irish B2C stores in July 2026 on a transactions-divided-by-sessions basis. Its own sectors ran from 0.55% to 5.23% in that same month, a 9.5x spread wider than the disagreement between publishers, which is the real answer: your category matters more than any average. GA4 shows your industry's median and 25th and 75th percentiles inside your own property, and that is the only benchmark that has ever measured your store." },
+      { question: "What is a good WooCommerce conversion rate?", answer: "WooCommerce publishes no benchmark, so any figure credited to it has no source behind it. The third-party numbers do not hold up well either: the 2.66% usually attributed to Dynamic Yield is not on that company's own benchmark page, which publishes industry cuts but no single global average as of October 2026, and Adobe's 3.65% cites only 'the latest research' with no study, sample or date named. IRP Commerce is the most transparent, publishing 2.23% for UK and Irish B2C stores in August 2026 on a transactions-divided-by-sessions basis. Its own sectors ran from 0.57% to 5.81% in that same month, a roughly 10x spread wider than the disagreement between publishers, which is the real answer: your category matters more than any average. GA4 shows your industry's median and 25th and 75th percentiles inside your own property, and that is the only benchmark that has ever measured your store." },
       { question: "Do WooCommerce cart fragments hurt conversion?", answer: "They can, and the symptom is specific. Cart fragments are an AJAX request that keeps the mini-cart accurate. Since WooCommerce 7.8 the script is only enqueued on views that render the Cart widget rather than on every page, which is how it behaved before that release, but it still loads wherever that widget appears, wherever a plugin registers it as a dependency, and in themes that hard-code the widget into their templates. It cannot be cached because it carries per-visitor state. The visible effect is a cart count that arrives late or briefly shows the wrong number, which reads to a shopper as the add-to-cart click not working. Duplicate line quantities in your orders are worth checking for directly. Checked August 2026." },
       { question: "Does site speed improve WooCommerce conversion rate?", answer: "It might, and nobody can tell you by how much before measuring your store. Treat a speed improvement as a hypothesis to test rather than a result you have already earned: pick the funnel stage you expect to move, record it before the change, and check it against the same window a month later. Anyone quoting a percentage lift before touching your site is quoting a different shop." },
       { question: "Is a slow WooCommerce admin costing me sales?", answer: "No. Customers never see wp-admin. Backend slowness is worth fixing because it costs staff time on order processing and inventory work, but it is not a storefront problem. Keeping the two separate matters, because conflating them is how a store ends up buying hosting to solve an add-to-cart problem." },
@@ -1062,10 +1074,10 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "which-website-builders-can-go-headless",
-    cardStat: "3 of 6",
-    cardStatLabel: "Builders that genuinely support headless",
+    cardStat: "6 platforms",
+    cardStatLabel: "Content, commerce and API limits compared",
     title: "Which Website Builders Can Actually Go Headless in 2026",
-    excerpt: "Checked against each platform's own API documentation rather than its marketing. Shopify, WooCommerce and Wix genuinely support it, Webflow runs the idea in the opposite direction, and Squarespace does not mention headless once.",
+    excerpt: "Compare Shopify, WooCommerce, Wix, Webflow, Squarespace and GoHighLevel by content APIs, checkout, authentication and the limits to test before choosing a custom frontend.",
     category: "Research",
     readTime: "10 min",
     date: "Aug 18",
@@ -1073,11 +1085,11 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'code',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
-      { question: "Can you use Squarespace headless?", answer: "No. Squarespace publishes nine APIs and every one of them is back-office: Analytics, Contacts, Discounts, Inventory, Orders, Products, Profiles, Transactions and Webhook Subscriptions. There is no API that returns page or blog content, and no storefront or checkout API, so there is nothing to render a custom front end from. The word headless does not appear on the Squarespace developer portal. Checked 17 August 2026." },
-      { question: "Is Wix Headless free?", answer: "Wix Headless is free to start. Wix states that a premium plan is required to unlock payments, in-depth analytics and custom domains, so a real commercial site will need one. The free tier is enough to build and evaluate against your own content. Checked 17 August 2026." },
-      { question: "Can Webflow be used headless?", answer: "Not in the usual sense, and Webflow appears to have chosen a different direction on purpose. The Data API reads CMS collection items, but the larger developer surface moves the other way: DevLink exports Webflow components as React into your codebase, and Webflow Cloud deploys your Astro or Next.js application onto Webflow infrastructure. So rather than taking Webflow content out to your host, you bring your code to theirs." },
+      { question: "Can you use Squarespace headless?", answer: "No. Squarespace publishes nine APIs and every one of them is back-office: Analytics, Contacts, Discounts, Inventory, Orders, Products, Profiles, Transactions and Webhook Subscriptions. There is no API that returns page or blog content, and no storefront or checkout API, so there is nothing to render a custom front end from. The word headless does not appear on the Squarespace developer portal. Checked 8 October 2026." },
+      { question: "Is Wix Headless free?", answer: "Wix Headless is free to start. Wix states that a premium plan is required to unlock payments, in-depth analytics and custom domains, so a real commercial site will need one. The free tier is enough to build and evaluate against your own content. Checked 8 October 2026." },
+      { question: "Can Webflow be used headless?", answer: "Not in the usual sense, and Webflow appears to have chosen a different direction on purpose. The Data API reads CMS collection items, but the larger developer surface moves the other way: DevLink exports Webflow components as React into your codebase and brings your own React components into Webflow, and Webflow Cloud deploys your Next.js, Astro, React, Vue or Svelte application onto Webflow infrastructure. So rather than taking Webflow content out to your host, you bring your code to theirs." },
       { question: "Does WooCommerce have a headless API?", answer: "Yes, and it takes two of them. The REST API at /wp-json/wc/v3/ is authenticated and administrative, covering products, orders, customers and reports, with no cart or checkout endpoints at all. The Store API at /wp-json/wc/store/v1/ is unauthenticated and customer-facing, and it is the one carrying cart, checkout and product browsing. A headless WooCommerce storefront uses both, which is the detail most guides omit." },
       { question: "Which website builder is best for going headless?", answer: "Shopify, if you are selling. Its Storefront API is GraphQL only and returns pages, blogs and articles alongside products, collections, cart and checkout, so one API serves both the shop and the surrounding content site. WooCommerce is the most open but needs two APIs and your own hosting. Wix is the surprise, with genuine coverage across eCommerce, bookings, events, memberships, CMS and blog under one auth model." }
     ]
@@ -1095,13 +1107,13 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'aicommerce',
-    lastModified: "2026-08-31",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "How do I track whether AI search mentions my site?", answer: "Open Google Search Console and go to Performance, then Generative AI. The report breaks out how often your URLs appeared in AI Overviews and AI Mode, separately from ordinary results, and it costs nothing. Most published advice on this question recommends buying a monitoring product first, which is worth doing only once you have read the free report and found it insufficient for a specific reason you can name." },
       { question: "Does an AI impression mean my brand was named in the answer?", answer: "No, and this is the most common misreading of the report. An impression records that your URL was shown as a source in an AI experience. It does not record whether the generated answer text used your company name, described you accurately, or recommended you. Presence as a citation and presence in the prose are two different things, and Search Console only measures the first." },
-      { question: "How evenly is AI visibility spread across a website?", answer: "On our own site, not evenly at all. Across 77 pages carrying any AI impressions between roughly late May and 25 August 2026, one page accounted for 3,627 of 6,700 total impressions, or 54 percent. The top three pages held 66 percent and the top ten held 87 percent. Thirty-one pages, two fifths of the set, sat on five impressions or fewer and contributed 1.2 percent of the total between them." },
-      { question: "Does AI visibility follow ordinary search rankings?", answer: "Mostly, with real exceptions. Comparing AI impressions against ordinary clicks across the 76 pages present in both reports gives a Spearman rank correlation of 0.79, so the two broadly move together. The exceptions are the interesting part: one page drew 383 AI impressions against a single ordinary click, and another drew 116 AI impressions against none at all." },
-      { question: "Why does the Search Console query report show fewer clicks than the pages report?", answer: "Because Google anonymises queries that too few people searched, and the export is capped at 1,000 rows. In our 25 August 2026 export the pages report totalled 243 clicks while the query report showed 48. Four fifths of the clicks were absent from the query file, so any click-through rate calculated from queries alone would have been wrong by a wide margin." },
+      { question: "How evenly is AI visibility spread across a website?", answer: "On our own site, not evenly at all. Across 77 pages carrying any AI impressions between 18 May and 13 August 2026, one page accounted for 3,627 of 6,700 total impressions, or 54 percent. The top three pages held 66 percent and the top ten held 87 percent. Thirty-one pages, two fifths of the set, sat on five impressions or fewer and contributed 1.2 percent of the total between them." },
+      { question: "Does AI visibility follow ordinary search rankings?", answer: "Our analysis does not compare ranking positions. It compares AI impressions against ordinary search clicks across 76 pages, with a Spearman correlation of 0.79 between those two measures. The exceptions are the interesting part: one page drew 383 AI impressions against a single ordinary click, and another drew 116 AI impressions against none at all." },
+      { question: "Why does the Search Console query report show fewer clicks than the pages report?", answer: "Because Google anonymises queries that too few people searched, and the export is capped at 1,000 rows. In our 25 August 2026 export the pages report totalled 243 clicks while the query report showed 48. The query file omits much of the property total. CTR for returned query rows is still valid when clicks and impressions have the same scope and filters; do not combine a partial numerator with a property-wide denominator." },
       { question: "Can Search Console tell me which prompts triggered an AI answer?", answer: "No. The Generative AI report supports filtering by URL, country, device and date, and our own export from 25 August 2026 carried impressions and nothing else. There is no prompt or query dimension. If you need to know what someone asked, you have to test prompts against the assistants yourself and record what comes back." }
     ]
   },
@@ -1118,10 +1130,10 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'aicommerce',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Do AI assistants like ChatGPT actually generate sales?", answer: "Yes, measurably. Across 1 March to 18 August 2026, a store we operate recorded 63 orders worth $16,783.76 attributed to AI assistants, out of 760 orders and $271,620.61 total. That is 6.2% of all revenue, or 9.2% of acquisition revenue once repeat orders are excluded. ChatGPT alone produced $11,614.78. This is one business in one vertical, so it is evidence that it happens, not a benchmark for your business." },
-      { question: "Why do most businesses report almost no AI traffic?", answer: "Because referrer-based tracking undercounts it badly. ChatGPT strips referrers on many links, its mobile apps do not pass them at all, and a large share of people read an AI answer and then type the company name into a browser directly, which lands in the Direct bucket. A business measuring referrer alone will see close to zero and conclude AI sends no traffic. We capture referrer where it survives and ask the customer where it does not, which is the only reason these numbers are not zero." },
+      { question: "Why do most businesses report almost no AI traffic?", answer: "Referrer-only tracking can miss AI-assisted discovery. Links and clients can carry referrers or campaign parameters, while later direct visits and brand searches may lose that context. This does not establish the size of an unmeasured audience. A business measuring referrer alone will see close to zero and conclude AI sends no traffic. We capture referrer where it survives and ask the customer where it does not, which is the only reason these numbers are not zero." },
       { question: "How much revenue did ChatGPT generate compared to Google Ads?", answer: "ChatGPT produced $11,614.78 from 51 orders. Google Ads produced $1,733.35 from 5 orders. That is 6.7 times more revenue from ChatGPT, from a channel with no ad spend attached to it, over the same six-month window in the same store." },
       { question: "Which AI assistant sends the most valuable customers?", answer: "By volume, ChatGPT, with 51 of the 63 AI-attributed orders. By order value, Claude, at an average order value of $630.00 against a site average of $357.40. That Claude figure rests on four orders, which is far too small a sample to rely on, and it is reported here with the sample size attached rather than as a finding." },
       { question: "Do AI referrals have a lower average order value?", answer: "Yes, on the evidence available. In this store ChatGPT's average order was $227.74 against a site average of $357.40. Visibility Labs found the same direction at much larger scale, analysing 94 seven and eight-figure ecommerce brands across 2025: ChatGPT average order value of $204 against $238 for non-branded organic, a 14.3% gap. In that study ChatGPT still produced more revenue per session, 10.3% more, because it converted better. Two independent samples agreeing on the direction is stronger than either on its own." },
@@ -1130,10 +1142,10 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "cms-market-share-2026",
-    cardStat: "65.2% → 59.0%",
-    cardStatLabel: "WordPress share, 2022 peak to today",
+    cardStat: "65.2% → 58.6%",
+    cardStatLabel: "WordPress share, 2022 peak to October 2026",
     title: "CMS Market Share 2015 to 2026: WordPress Peaked in 2022",
-    excerpt: "Twelve years of measured CMS market share. WordPress peaked at 65.2% in 2022 and is at 59.0% in the August 2026 reading, self-hosted platforms lost 12.7 points while hosted builders gained 12.8, and Webflow has not moved in three readings.",
+    excerpt: "Twelve years of measured CMS market share. WordPress peaked at 65.2% in 2022 and is at 58.6% in the October 2026 reading, self-hosted platforms lost 13.3 points while hosted builders gained 12.9, and Webflow has not moved in three readings.",
     category: "Research",
     readTime: "9 min",
     date: "Aug 15",
@@ -1141,11 +1153,11 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'traffic',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
-      { question: "What is WordPress's market share in 2026?", answer: "WordPress is at 59.0% of the top ten million websites with an identified CMS, read on 15 August 2026, and 58.8% when re-checked on 13 September 2026. That is its lowest reading since 2017 and 6.2 points below its peak of 65.2% in January 2022." },
-      { question: "Is WordPress losing market share?", answer: "Yes, and it has been since 2022. WordPress rose from 60.7% in 2015 to a peak of 65.2% in January 2022, then declined in every subsequent yearly reading to 59.0%. It remains more than three times the size of the entire hosted site-builder category combined, so it is a declining incumbent with a very large lead rather than a collapsing one." },
-      { question: "Who took WordPress's market share?", answer: "Mostly nobody, because the losses in the self-hosted category were concentrated elsewhere. Joomla fell from 8.6% to 1.7% and Drupal from 5.1% to 1.0%, each losing about four fifths of their share. Across the period self-hosted platforms lost 12.7 points and hosted site builders gained 12.8, which is close to a straight transfer." },
+      { question: "What is WordPress's market share in 2026?", answer: "WordPress is at 58.6% of the top ten million websites with an identified CMS in W3Techs' 7 October 2026 reading. That is its lowest reading since 2017 and 6.6 points below its peak of 65.2% in January 2022." },
+      { question: "Is WordPress losing market share?", answer: "Yes, and it has been since 2022. WordPress rose from 60.7% in 2015 to a peak of 65.2% in January 2022, then declined in every subsequent yearly reading to 58.6%. It remains more than three times the size of the entire hosted site-builder category combined, so it is a declining incumbent with a very large lead rather than a collapsing one." },
+      { question: "Who took WordPress's market share?", answer: "Mostly nobody, because the losses in the self-hosted category were concentrated elsewhere. Joomla fell from 8.6% to 1.6% and Drupal from 5.1% to 0.9%, each losing about four fifths of their share. Across the period self-hosted platforms lost 13.3 points and hosted site builders gained 12.9, which is close to a straight transfer." },
       { question: "What is Webflow's market share?", answer: "Webflow is at 1.2% of measured sites and has recorded the same figure in three consecutive readings. Tilda is at the same 1.2% and Duda at 1.1%, so the builder share is more spread across small platforms than design-industry discussion suggests." },
       { question: "Does market share tell you which CMS to choose?", answer: "No. Share of existing sites is a lagging indicator, because the denominator is full of sites built years ago that nobody has touched, so a platform every new project chose from tomorrow would take years to show up. Platform choice turns on your content model, team, integrations and what you are willing to operate." }
     ]
@@ -1163,11 +1175,11 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'code',
-    lastModified: "2026-08-13",
+    lastModified: "2026-10-08",
     faqs: [
-      { question: "What does WCAG AA mean?", answer: "WCAG success criteria are graded A, AA and AAA, and the levels are cumulative. Level A is the minimum, level AA is the practical target that almost every accessibility law and procurement rule points at, and level AAA is an enhancement the W3C states is not required as a general policy for whole sites because some content cannot satisfy it." },
+      { question: "What does WCAG AA mean?", answer: "WCAG success criteria are graded A, AA and AAA, and the levels are cumulative. Level A is the minimum, level AA is the practical target that almost every accessibility law and procurement rule points at, and level AAA is an enhancement the W3C recommends against requiring as a general policy for whole sites because some content cannot satisfy it." },
       { question: "Is WCAG a law?", answer: "No. WCAG is a technical standard published by the World Wide Web Consortium. It feels like a law because nearly every accessibility law, procurement rule and audit points at it, but the adopting law decides which version, which conformance level and who it applies to." },
-      { question: "Does a perfect Lighthouse accessibility score mean my site is accessible?", answer: "No. The Lighthouse accessibility score is a weighted result from a set of automated axe-core checks, and Google's own documentation states that a perfect score does not mean the page is accessible. Automated checks cover only what can be automated, so the score is a useful smoke test and a poor acceptance criterion." },
+      { question: "Does a perfect Lighthouse accessibility score mean my site is accessible?", answer: "No. The Lighthouse accessibility score is a weighted result from a set of automated axe-core checks, and Lighthouse's own report says automatic detection can only detect a subset of issues and does not guarantee accessibility, so a perfect score is not proof the page is accessible. Automated checks cover only what can be automated, so the score is a useful smoke test and a poor acceptance criterion." },
       { question: "Is a placeholder the same as a form label?", answer: "No. A placeholder disappears the moment someone types, is often rendered in grey too light to read, and is not reliably announced by assistive technology. A visible label programmatically associated with the input is the accessible version, and it also helps every other user of the form." },
       { question: "Do accessibility overlays make a website compliant?", answer: "An overlay is a third-party script that tries to correct problems in the browser after the page loads. It sits on top of markup it did not author, so it does not change the contrast ratio a designer chose or write the alternative text nobody wrote. Those remain decisions about your own content." },
       { question: "Is skipping a heading level a WCAG failure?", answer: "Not in itself at level AA, despite how often it is reported as one. The genuine problems are headings that are missing, inaccurate, or applied for visual size rather than structure. An audit that leads with skipped heading levels is usually a tool export being presented as an assessment." },
@@ -1187,11 +1199,11 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'traffic',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "What percentage of websites are accessible?", answer: "In the 2026 WebAIM Million, 95.9% of the top one million home pages had detected WCAG 2 failures, up from 94.8% in 2025. That is automated testing of home pages only, so it detects a subset of failures and a page with no detected errors is not necessarily conformant." },
-      { question: "Is web accessibility getting better or worse?", answer: "It got worse in 2026. The 95.9% failure rate reversed six consecutive years of small improvements. Average page element counts rose 22.5% in the same year, so growing page complexity is the likeliest mechanism rather than a decline in effort." },
-      { question: "What are the most common accessibility errors?", answer: "Six failure types accounted for 96% of all detected errors in the 2026 WebAIM Million. Low contrast text appeared on 83.9% of home pages, missing alternative text on 53.1% and missing form input labels on 52.8%. These are also among the cheapest failures to fix." },
+      { question: "Is web accessibility getting better or worse?", answer: "It got worse in 2026. The 95.9% failure rate reversed six consecutive years of small improvements. Average page element counts rose 14.3% in the same year, so growing page complexity is the likeliest mechanism rather than a decline in effort." },
+      { question: "What are the most common accessibility errors?", answer: "Six failure types accounted for 96% of all detected errors in the 2026 WebAIM Million. Low contrast text appeared on 83.9% of home pages, missing alternative text on 53.1% and missing form input labels on 51%. These are also among the cheapest failures to fix." },
       { question: "Which CMS or platform has the fewest accessibility errors?", answer: "In the 2026 WebAIM Million, Squarespace home pages averaged 33.0 detected errors and Wix 33.3, both better than WordPress at 52.8 and Drupal at 41.2. Shopify averaged 75.1, well above the sample average. These figures are association rather than causation, because platform choice correlates with site age, budget and builder skill, none of which were controlled for." },
       { question: "How many website accessibility lawsuits are filed each year?", answer: "Federal district courts recorded 9,718 civil filings under the nature-of-suit code ADA-Other in the twelve months ending 30 September 2025, up from 9,030. That code is broader than web accessibility and counts filings rather than judgments, so it is an indicator of volume and not legal advice about any specific business." },
       { question: "Does passing an automated accessibility test mean my site is compliant?", answer: "No. Automated testing detects a subset of WCAG failures. A page can pass every automated check and still be unusable with a screen reader, because judgements like whether alternative text is accurate or whether a reading order makes sense cannot be made by a machine." }
@@ -1205,12 +1217,12 @@ export const blogPosts: BlogPost[] = [
     excerpt: "What LCP, INP, and CLS measure, how field and lab data differ, and how to investigate business impact without inventing a ranking or revenue number.",
     category: "SEO",
     readTime: "11 min",
-    date: "Apr 16",
+    date: "May 6",
     author: "Hassan",
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'speed',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "What are Core Web Vitals in plain English?", answer: "Core Web Vitals are three field metrics for real-user loading performance, responsiveness, and visual stability: LCP, INP, and CLS. They help identify experience problems but do not calculate a guaranteed ranking, conversion, or revenue outcome." },
       { question: "Why do Core Web Vitals matter for my business?", answer: "They measure parts of the experience visitors receive and contribute to Google's broader page-experience systems. Their commercial importance depends on the affected routes, audience, funnel, and first-party data. A pass does not guarantee rankings or revenue." },
@@ -1233,11 +1245,11 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'speed',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Can I export my Squarespace website to another platform?", answer: "Partially. Squarespace exports selected content to a WordPress XML file, including one blog and some layout-page content. Its current documentation lists exclusions such as store and portfolio pages, product and video blocks, drafts, style settings and custom CSS. Inventory and test the actual site instead of assuming every asset or system exports." },
       { question: "How much does it cost to migrate from Squarespace to a custom website?", answer: "PandaCodeGen's planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale. Final price depends on pages, templates, content, excluded export data, design, commerce, scheduling, integrations, SEO, analytics, accessibility, QA, launch and support." },
-      { question: "Will I lose my Google rankings if I leave Squarespace?", answer: "Moving off Squarespace means the collection prefix in your URLs goes away, so the mapping is a rewrite and every address needs a destination. What you gain is control over rendered output and structured data, which Squarespace emits automatically and does not let you edit. Neither the loss nor the gain is a ranking promise; both are things you can verify in a crawl." },
+      { question: "Will I lose my Google rankings if I leave Squarespace?", answer: "Moving off Squarespace doesn't force new URLs: a custom build can keep the same paths, including collection prefixes such as /blog/, so map every address and add a 301 redirect wherever one changes. What you gain is control over rendered output and structured data, which Squarespace emits automatically and does not let you edit. Neither the loss nor the gain is a ranking promise; both are things you can verify in a crawl." },
       { question: "Is Squarespace good enough for a small business in 2026?", answer: "Yes, when its managed editor, supported features and current cost meet the business requirements. Optimize or redesign in place when the platform fits but the implementation does not. Consider custom when required experience, data, integrations or delivery control justifies the added engineering responsibility." },
       { question: "Why is my Squarespace site slow even with optimized images?", answer: "Images are one input. Measure representative routes and investigate page size, fonts, custom code, third parties, embeds, redirects, consent state and platform-controlled work. Squarespace's current guidance recommends keeping page size at or below 5 MB where possible, but there is no universal platform score." },
       { question: "How does Squarespace compare to a custom website on PageSpeed?", answer: "Neither has a universal score. Test comparable representative routes under recorded mobile and desktop conditions, then inspect field Core Web Vitals where available. A custom implementation offers more control but can still be slow if code, media, data or third parties are poorly managed." }
@@ -1256,7 +1268,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'webflow',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Can I export my Wix website to another platform?", answer: "Wix documents separate export or transfer paths for some assets, including CMS collections, contacts, physical products, orders and site ownership. There is no single universal export that reproduces every page, design and app behavior on another platform. Inventory each content and data type before estimating migration." },
       { question: "How much does it cost to migrate from Wix to a custom website?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with custom scope where needed. Final price depends on pages, templates, CMS data, commerce, apps, design, integrations, SEO, accessibility, QA, launch and support." },
@@ -1279,7 +1291,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'cost',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "How much does it cost to migrate from Squarespace?", answer: "PandaCodeGen's planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale. Final price depends on pages, templates, export gaps, content, design, commerce, scheduling, integrations, SEO, analytics, accessibility, QA, launch and support." },
       { question: "What does Squarespace actually cost per year?", answer: "Use the current account, invoices and payment statements. Include the site plan, domain, email, scheduling, campaigns, digital products, extensions, transaction and processing fees, custom work and internal administration. Plans and fees can vary by account, product, country and processor." },
@@ -1289,7 +1301,7 @@ export const blogPosts: BlogPost[] = [
       { question: "What is Squarespace's mobile PageSpeed score?", answer: "Squarespace has no universal mobile score. Measure representative routes with field data where available and repeated lab tests under a recorded device, network, consent and page state." },
       { question: "Should I leave Squarespace because of a price increase?", answer: "Not automatically. Reconcile the actual new invoice, use of each feature, alternatives, migration scope and ongoing operating cost. Optimize or change plans when the platform still fits; migrate only when the complete case supports it." },
       { question: "Can I transfer my Squarespace website to another host?", answer: "The domain transfers. The site does not transfer as a working website. Squarespace exports certain content to a WordPress-format XML file rather than a complete portable copy: its current guidance lists layout pages, one blog and selected blocks as exportable, while excluding store pages, portfolio and other page types, product and video blocks, drafts, style settings and custom CSS. The honest planning statement is therefore that you are rebuilding the site and migrating the content and the domain, not moving a site. Price it from an inventory of what does not export rather than from the page count." },
-      { question: "How much does it cost to transfer a domain away from Squarespace?", answer: "Moving a domain between registrars is free, but ICANN's transfer policy requires a one-year extension of the registration, purchased from the registrar you move to. Squarespace states it as: 'The transfer is free, but ICANN requires a one-year extension of your domain registration, which you'll purchase through Squarespace.' Two things usually get dropped when that is repeated: it is an industry rule rather than a Squarespace one, so it applies in whichever direction you move, and you keep the time already left on your registration on top of the extra year, so it is a year brought forward rather than a year lost. The price depends on your TLD and Squarespace does not publish a range on its pricing page, so check your own TLD at the registrar you are moving to on the day you move." }
+      { question: "How much does it cost to transfer a domain away from Squarespace?", answer: "Moving a domain between registrars is free, but ICANN's transfer policy requires a one-year extension of the registration, purchased from the registrar you move to. Squarespace states it as: 'The transfer is free, but ICANN requires a one-year extension of your domain registration, which you'll purchase through Squarespace.' Two things usually get dropped when that is repeated: it is an industry rule rather than a Squarespace one, so it applies in whichever direction you move, and you keep the time already left on your registration on top of the extra year, so it is a year brought forward rather than a year lost. The price depends on your TLD. Squarespace's transfer page gives $20 to $70 USD for a domain moving to Squarespace, but when you leave, the extra year is bought from the registrar you're moving to, so check your own TLD there on the day you move." }
     ]
   },
   {
@@ -1305,7 +1317,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'ranking',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Who is the best custom web development agency in the USA for 2026?", answer: "There is no objective best agency for every project. Match the provider to the platform, migration, commerce, brand, editorial or product problem, then verify the assigned team, comparable work, references, scope, acceptance, ownership, support and current terms." },
       { question: "How much does a custom web development agency in the USA charge?", answer: "Price depends on pages, content, design, data, integrations, accessibility, SEO, security, QA, launch and support. PandaCodeGen publishes $1,500 Starter, $3,500 Growth and $5,000 Scale starting tiers. Other providers must be compared through current like-for-like proposals, not an undated market average." },
@@ -1329,11 +1341,11 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-01",
     faqs: [
       { question: "Why is my Divi website slow?", answer: "The cause can be server response, cache behavior, Divi or compatibility-mode assets, plugins, child-theme code, database work, media, fonts, tags, embeds, or application logic. Measure representative routes with field data where available and repeat controlled lab tests before assigning the cause." },
       { question: "What PageSpeed score does a Divi site typically get?", answer: "There's no defensible universal score. Divi version, modules, templates, media, plugins, hosting, cache, third parties, consent state, device, network, and test version all affect the result. Record the conditions and inspect individual metrics and diagnostics instead of using a platform-wide range." },
-      { question: "Is Divi 5 still in beta?", answer: "No. Elegant Themes officially ended the beta on February 26, 2026. Its update log listed Divi 5.9.0, checked August 2, 2026 when this article was reviewed. Existing sites should still back up, test on staging, run the migrator, inspect unsupported modules, and verify routes that use backward compatibility mode." },
+      { question: "Is Divi 5 still in beta?", answer: "No. Elegant Themes officially ended the beta on February 26, 2026. Its update log lists Divi 5.14, released September 28, 2026, checked October 8, 2026. Existing sites should still back up, test on staging, run the migrator, inspect unsupported modules, and verify routes that use backward compatibility mode." },
       { question: "Can caching plugins fix Divi speed problems?", answer: "Caching can reduce repeated server and delivery work, but it doesn't fix every cause. On its own it can't remove expensive third parties, repair a slow interaction, reserve missing layout space, or convert an unsupported legacy module. Change one measured group at a time and retest." },
       { question: "How much does it cost to migrate from Divi?", answer: "PandaCodeGen's planning tiers start at $1,500 for Starter and $3,500 for Growth, while Scale starts at $5,000. Final price depends on the accepted URL, template, content, integration, data, design, security, testing, launch, and support scope." },
       { question: "Will I lose Google rankings when I migrate away from Divi?", answer: "A controlled migration reduces avoidable technical risk through a dated URL inventory, stable URLs where practical, page-level redirect mapping, accurate metadata and canonicals, rendered-output checks, sitemap submission, rollback planning, and Search Console monitoring. Search engines still control crawling, indexing, traffic, rankings, and timing, so those outcomes are not guaranteed." },
@@ -1355,7 +1367,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Why is my Wix website slow?", answer: "Possible causes include heavy pages, media, fonts, animation, apps, custom code, third parties, redirects, consent state and platform-controlled work. Segment Wix field data where available and reproduce the affected route with controlled lab tests before assigning a cause." },
       { question: "What PageSpeed score does a Wix site get?", answer: "There is no defensible universal Wix score. Lighthouse results vary by URL, content, device, network, test version and run. Use field Core Web Vitals for real-user experience where data exists and repeat lab tests under recorded conditions for diagnosis." },
@@ -1377,7 +1389,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'webflow',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Is Webflow worth it in 2026?", answer: "Webflow can still be a strong fit when a marketing team values visual editing, the current Site and Workspace plans fit the budget, and the platform supports the next two to three years of content and integration needs. Review your actual account terms, bandwidth usage, add-ons, roadmap, performance data, and governance requirements instead of deciding from one plan change or incident." },
       { question: "When should a business leave Webflow?", answer: "Consider leaving when several structural constraints overlap: recurring cost no longer matches value, product logic or integrations exceed the supported model, export limitations create unacceptable dependency, governance requires client-controlled infrastructure, or measured performance problems remain after a focused optimization pass. One low PageSpeed score or one outage is not a complete migration case." },
@@ -1402,12 +1414,12 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'plugins',
-    lastModified: "2026-10-04",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "What is Cloudflare EmDash?", answer: `EmDash is an open-source content management system announced by Cloudflare on April 1, 2026. Cloudflare describes it as the spiritual successor to WordPress. It is a TypeScript CMS that runs inside an Astro site, with an admin panel, structured content, authentication, media, sandboxed plugins, WordPress import, and Cloudflare or Node.js hosting. Version 1.0 shipped on ${spec("emdash-1-0-release-date").value} and Cloudflare now calls it stable; the current release is ${spec("emdash-current-version").value}.` },
       { question: "Is Cloudflare EmDash an April Fools joke?", answer: `No, and the announcement date is the only reason to wonder. Cloudflare published EmDash on April 1, 2026. Read from GitHub's public API on October 4, 2026, six months later, the emdash-cms/emdash repository was created on April 1, 2026, was last pushed to on October 3, 2026, and carries 13,326 stars, 1,259 forks and 365 open issues and pull requests under an MIT licence. It shipped version 1.0 on ${spec("emdash-1-0-release-date").value}. Two more first-party repositories are still moving: emdash-cms/wp-emdash, the WordPress-side transition plugins, pushed 6 July, and emdash-cms/templates, pushed 1 October. Anyone can repeat that check in a minute.` },
       { question: "Is EmDash production ready, or still beta?", answer: `It is out of beta. EmDash 1.0 shipped on ${spec("emdash-1-0-release-date").value}, and Cloudflare calls it ready to power a production website. From 1.0, breaking changes ship only in a new major version, and the current release is ${spec("emdash-current-version").value}. Stable software is not the same as a mature ecosystem: the plugin registry listed ${spec("emdash-registry-plugin-count").value} entries on 4 October 2026. Production readiness is a property of a specific system and operating plan, not of the CMS, so pilot it against your hardest integration before setting a launch date.` },
-      { question: "Does EmDash have any plugins yet?", answer: `Yes, and since 1.0 there is an official place to find them. The EmDash plugin registry at plugins.emdashcms.com, built on AT Protocol, listed ${spec("emdash-registry-plugin-count").value} entries on 4 October 2026, one of them a test entry, covering contact forms, SEO checks, analytics, email sending, image optimisation and AI alt text. Only free plugins are listed so far; Cloudflare says it aims to add paid ones. Each plugin runs sandboxed with its own storage and declared permissions. It is a real start and still a small fraction of WordPress's plugin directory, which remains the biggest practical difference between them.` },
+      { question: "Does EmDash have any plugins yet?", answer: `Yes, and since 1.0 there is an official place to find them. The EmDash plugin registry at plugins.emdashcms.com, built on AT Protocol, listed ${spec("emdash-registry-plugin-count").value} entries on 4 October 2026, one of them a test entry, covering contact forms, SEO checks, analytics, email sending, image optimisation and AI alt text. The registry supports only free plugins today; Cloudflare says it aims to add paid ones. Each plugin runs sandboxed with its own storage and declared permissions. It is a real start and still a small fraction of WordPress's plugin directory, which remains the biggest practical difference between them.` },
       { question: "Does EmDash work with Next.js?", answer: "No. EmDash runs inside an Astro application, so the CMS and the website are one deployed app, not a content service a Next.js front end can call, and its documentation and release notes listed no Next.js integration on 4 October 2026. Cloudflare's Next.js release that week was a separate product, Vinext 1.0, which runs existing Next.js apps on Vite so they can deploy to the Workers free plan, Netlify or AWS Lambda. A Next.js site that needs a CMS pairs with a headless one such as Sanity instead." },
       { question: "Is EmDash a complete WordPress replacement in 2026?", answer: `Not as a universal one-for-one replacement. EmDash reached 1.0 in September 2026 and has a solid feature set, but its extension and support ecosystem is six months old. Compare the exact content model, editorial workflow, integrations, permissions, operations, and recovery requirements before treating it as a production replacement.` },
       { question: "Should a business use EmDash in production?", answer: `That depends on the property's risk and requirements. A low-risk pilot suits a team that can test and maintain a platform that only reached 1.0 in September 2026. A revenue-critical, regulated, or integration-heavy property needs a representative pilot, security review, backup and recovery tests, upgrade plan, observability, and a documented rollback path before approval.` },
@@ -1415,7 +1427,7 @@ export const blogPosts: BlogPost[] = [
       { question: "Will moving from WordPress to EmDash or Next.js preserve SEO rankings?", answer: "Moving WordPress to EmDash, or anywhere else, changes technical search signals and needs a mapped destination for every old URL. EmDash publishes a WordPress import path, but importing content is not the same as preserving addresses. Treat the URL map as a separate deliverable from the content migration, and test the redirects before cutover rather than after." },
       { question: "Is EmDash free to host, and how much does a WordPress migration cost?", answer: `EmDash is MIT-licensed, so the software costs nothing, and new projects deploy on the Cloudflare Workers free plan. Usage beyond the free allowances is billed, and turning on sandboxed plugins on Cloudflare needs the ${spec("emdash-sandbox-cloudflare-plan").value} plan. On Node.js you pay for whatever server runs it. Migration cost depends on your WordPress site, not on EmDash, and our tiers start at $1,500, $3,500 and $5,000.` },
       { question: "Does EmDash have a page builder or a theme marketplace?", answer: `No drag-and-drop page builder, and no theme switcher in the admin. Editors can add and reorder blocks that a developer has defined and edit text in place, but a theme is a whole Astro project chosen at the start, sold or shared outside the admin. For most WordPress owners that is the deciding fact, not anything about the architecture. If the people who maintain your site currently work by moving sections around and swapping themes, migrating does not fail on infrastructure, it fails the first time somebody needs to change a layout and finds the job now belongs to a developer. Answer that staffing question before running a technical pilot, not after.` },
-      { question: "How does EmDash hosting billing actually work?", answer: `Cloudflare Workers spins up an isolate when a request arrives, scales back to zero when traffic stops, and bills for CPU time, not for a server running whether or not anyone visits. On a site with uneven traffic that is a genuinely different cost shape from a VPS, but it is a shape, not a discount: usage-based pricing rewards a quiet site and charges more for inefficient code, so what you save depends on what you run. EmDash also has an official x402 add-on package, which allows per-article payments without a subscription or an account, relevant only if you actually sell content.` },
+      { question: "How does EmDash hosting billing actually work?", answer: `Cloudflare Workers spins up an isolate when a request arrives, scales back to zero when traffic stops, and bills for requests and CPU time, not for a server running whether or not anyone visits. The Workers Paid plan has a $5 monthly minimum. On a site with uneven traffic that is a genuinely different cost shape from a VPS, but it is a shape, not a discount: usage-based pricing rewards a quiet site and charges more for inefficient code, so what you save depends on what you run. EmDash also has an official x402 add-on package, which allows per-article payments without a subscription or an account, relevant only if you actually sell content.` },
     ]
   },
   {
@@ -1431,7 +1443,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'ranking',
-    lastModified: "2026-10-04",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "What is the latest Google algorithm update?", answer: `${inProgressUpdate ? `The most recent update on Google's Search Status Dashboard is the ${inProgressUpdate.name}, which began rolling out on ${longDate(inProgressUpdate.start)} and is still rolling out${inProgressUpdate.expectedRollout ? ` (Google says it may take ${inProgressUpdate.expectedRollout})` : ''}. The last one to finish was the ${UPDATE_STATS.latest.name}, which began on ${longDate(UPDATE_STATS.latest.start)} and took ${UPDATE_STATS.latest.duration} to complete.` : `The most recent update on Google's Search Status Dashboard is the ${UPDATE_STATS.latest.name}, which began rolling out on ${longDate(UPDATE_STATS.latest.start)} and took ${UPDATE_STATS.latest.duration} to complete.`} The most recent core update is the ${UPDATE_STATS.latestCore.name}, which started ${longDate(UPDATE_STATS.latestCore.start)} and ran for ${UPDATE_STATS.latestCore.duration}. Google announces a name, a start date and a completion date for each one, and nothing about which ranking factors changed.` },
       { question: "How long does a Google core update take to roll out?", answer: `Across the ${UPDATE_STATS.coreCount} core updates Google has dated on its Search Status Dashboard, the median rollout is ${UPDATE_STATS.medianCoreDays} days. The shortest was the ${UPDATE_STATS.shortestCore.name} at ${UPDATE_STATS.shortestCore.duration}; the longest was the ${UPDATE_STATS.longestCore.name} at ${UPDATE_STATS.longestCore.duration}. None has completed in under six days, so a traffic comparison run in the first week of a core update is measuring a half-applied change.` },
@@ -1476,7 +1488,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'cost',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "When should I switch from Shopify to a custom website?", answer: "Do not switch from a headline threshold. Compare required experience, checkout, integrations, data, performance, current cost and operating capability. A theme optimization may solve implementation problems; headless can change the storefront while retaining Shopify commerce; fully custom transfers more responsibility." },
       { question: "How much does a custom ecommerce website cost compared to Shopify?", answer: "PandaCodeGen's planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, but commerce scope can exceed those ranges. Compare current Shopify plans, apps, fees and internal work with migration, providers, maintenance, security, support and team time." },
@@ -1498,7 +1510,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Why is my Squarespace site slow?", answer: "Possible causes include heavy pages, media, fonts, custom code, third parties, embeds, redirects, consent state and platform-controlled work. Measure representative routes with field data where available and repeated lab tests before assigning the cause." },
       { question: "Can I fix Squarespace speed without leaving the platform?", answer: "Often, depending on the measured cause. Follow Squarespace's current page-size and media guidance, reduce unnecessary fonts and third parties, review custom code and redirects, and retest. Platform-controlled constraints remain, but migration is not the automatic first step." },
@@ -1514,13 +1526,13 @@ export const blogPosts: BlogPost[] = [
     title: "WooCommerce Too Slow? A 2026 Diagnosis and Fix Guide",
     excerpt: "Diagnose a slow WooCommerce store with field data, lab tests, server traces and transaction checks. Prioritize repairs before considering headless or replacement.",
     category: "WooCommerce",
-    readTime: "16 min",
+    readTime: "25 min",
     date: "Mar 25",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-04",
     faqs: [
       { question: "Why is my WooCommerce store slow?", answer: "The cause may be hosting, caching, extensions, theme code, media, database work, third parties or background operations. Use real-user field data, controlled lab tests, server traces and transaction checks to isolate the affected layer before changing architecture." },
       { question: "What PageSpeed score should WooCommerce aim for?", answer: "There's no universal platform score. A Lighthouse score of 90 or above is the tool's good-score band, not a Google ranking threshold. Contractual targets should name representative pages, profiles, environment and repeated runs while field Core Web Vitals track real-user experience." },
@@ -1528,7 +1540,8 @@ export const blogPosts: BlogPost[] = [
       { question: "Can I fix WooCommerce speed without rebuilding?", answer: "Often. Repair errors and resource limits, configure safe caching, optimize assets, profile queries and extensions, and retest representative journeys. Consider headless or replacement only when the capabilities, measured constraints and operating model justify added migration risk." },
       { question: "What is the best alternative to WooCommerce for speed?", answer: "There's no universal fastest platform. Compare optimized WooCommerce, headless WooCommerce and replacement against the same catalog, scripts, transaction flows, field metrics, lab conditions and operating responsibilities." },
       { question: "How do I speed up WooCommerce?", answer: "Build a baseline, fix errors and resource exhaustion, configure caching with commerce exclusions, optimize measured assets and queries, isolate extension and third-party impact, and retest functional and performance acceptance after each change." },
-      { question: "Why is WooCommerce add to cart slow?", answer: "Because the click is a server round trip, not a local update. WooCommerce runs WordPress, resolves the product, checks stock and pricing, matches the variation on variable products, writes the cart to the session, then returns a fragment so the mini-cart can redraw. In a browser network panel it appears as wc-ajax=get_refreshed_fragments. The response differs per visitor, so it can't be served from a page cache and lands on PHP every time. Any extension hooked into the add-to-cart action, such as bundles, add-ons, subscriptions, live shipping or dynamic pricing, runs inside that same request. A common and overlooked cause is more than one mini-cart on the page: a theme cart, a slide-out cart plugin and a page-builder cart widget can each refresh fragments on the same click." },
+      { question: "Why is WooCommerce add to cart slow?", answer: "Because the click is a server round trip, not a local update. WooCommerce runs WordPress, resolves the product, checks stock and pricing, matches the variation on variable products, writes the cart to the session, then returns the updated mini-cart in the same response. In a browser network panel it appears as wc-ajax=add_to_cart, or as /wc/store/v1/cart/add-item on a block-based store. The response differs per visitor, so it can't be served from a page cache and lands on PHP every time. Any extension hooked into the add-to-cart action, such as bundles, add-ons, subscriptions, live shipping or dynamic pricing, runs inside that same request. A common and overlooked cause is more than one mini-cart on the page: a theme cart, a slide-out cart plugin and a page-builder cart widget can each refresh fragments on the same click." },
+      { question: "Why is WooCommerce checkout slow?", answer: "Checkout can't be served from a page cache, so every load and every recalculation runs on the server. On the classic checkout, typing an address queues a wc-ajax=update_order_review request one second after the last keystroke, and changing the shipping method sends one straight away; each recalculates shipping and totals. On the block checkout, the default for new stores since WooCommerce 8.3, the same changes go to the Store API. Live carrier rates, payment and fraud services, and extensions hooked into checkout all add to those requests. Time each one in your browser's Network panel, and check that shipping Debug mode is off, because WooCommerce says it bypasses the shipping rate cache. Read from WooCommerce's docs and source code on October 4, 2026." },
       { question: "How do I enable HPOS in WooCommerce?", answer: "Go to WooCommerce > Settings > Advanced > Features in wp-admin. High-Performance Order Storage has been the default for new installations since WooCommerce 8.2, so an older store may still be on the legacy post tables. Compatibility mode keeps both sets of tables in sync while you transition, which is the safe way to migrate but means orders are written twice until you turn it off. Test on a production-like copy, confirm every extension declares compatibility, and keep a rollback plan. HPOS improves order-data operations; it isn't a storefront speed fix." },
       { question: "What server does WooCommerce actually need?", answer: "WooCommerce's own server requirements list PHP 8.3 or greater, MySQL 8.0 or greater or MariaDB 10.6 or greater, and a WordPress memory limit of 256 MB or greater. A store running below those is being held back by its environment before any optimization work begins, so check them before buying a caching plugin. Checked August 2, 2026." },
     ]
@@ -1552,8 +1565,8 @@ export const blogPosts: BlogPost[] = [
       { question: "What factors increase the cost of a Webflow migration project?", answer: "Unique templates, CMS relationships, localization, interactions, ecommerce, membership, forms, search, integrations, content cleanup, redesign, accessibility, security, SEO, compressed schedules and additional reviewers can all expand scope. Quantify them from the live inventory." },
       { question: "What are the ongoing costs after a Webflow migration?", answer: "Include hosting, bandwidth, builds, CMS, database, forms, email, search, analytics, monitoring, backups, security, domains, support and internal time. Free allowances are not permanent commercial-cost promises, and exact cost depends on the chosen providers and usage." },
       { question: "How much should we budget for a Webflow migration for a 50 to 100 page site?", answer: "Most sites this size land in PandaCodeGen's Growth or Scale tier, so from $3,500 for Growth or from $5,000 for Scale, and which one depends on template count rather than URL count. Fifty URLs can be five templates repeated with different content or fifty unique layouts, and those are not the same job. Group the URLs into templates and CMS Collections before budgeting. These are our prices, not a market average." },
-      { question: "How much does it cost to host a Webflow site?", answer: "Read on Webflow's own pricing page on August 2, 2026: Site plans are Starter at $0, Basic at $15/mo billed yearly and Premium at $25/mo billed yearly, quoted per site in USD before tax. Basic is for sites that do not need a CMS, so a single Collection puts you on Premium. Team is $2,500/mo on an annual contract and includes a site and Workspace, rechecked September 18, 2026. Do not add a separate Site plan charge for the included site; additional sites and extras require a Webflow quote. Enterprise is quoted on request. Ecommerce is a separate plan at $29, $74 or $212/mo, and Optimize, Analyze and Localize are usage-priced add-ons on top." },
-      { question: "Do I have to pay per page to migrate my content?", answer: "Usually not, and you can check it yourself in about twenty minutes. Webflow's CMS import documentation states that CSVs exported from other content management systems like WordPress are typically already compatible, and that hundreds or thousands of items import in one pass. A per-page rate is only honest where the import genuinely breaks: rich text that is not HTML, image columns with broken or non-direct URLs, self-hosted video, number columns containing currency symbols or thousands separators, file fields which accept no imported data at all, and option columns with more than 100 distinct values." },
+      { question: "How much does it cost to host a Webflow site?", answer: "Read on Webflow's own pricing page on August 2, 2026: Site plans are Starter at $0, Basic at $15/mo billed yearly and Premium at $25/mo billed yearly, quoted per site in USD before tax. Basic is for sites that do not need a CMS, so a single Collection puts you on Premium. Team is $2,500/mo on an annual contract and includes a site and Workspace, rechecked September 18, 2026. Do not add a separate Site plan charge for the included site; additional sites and extras require a Webflow quote. Enterprise is quoted on request. Ecommerce is a separate plan at $29, $74 or $212/mo, and Optimize, Analyze and Localize are add-ons on top, Localize priced per added locale." },
+      { question: "Do I have to pay per page to migrate my content?", answer: "Usually not, and you can check it yourself in about twenty minutes. Webflow's CMS import documentation states that CSVs exported from other content management systems like WordPress are typically already compatible, and that hundreds or thousands of items import in one pass. A per-page rate is only honest where the import genuinely breaks: rich text whose markup does not display as it did in the old editor, image columns with broken or non-direct URLs, self-hosted video, number columns containing currency symbols or thousands separators, file fields which accept no imported data at all, and option columns with more than 100 distinct values." },
       { question: "Will I lose my Google rankings when migrating from Webflow to Next.js?", answer: "Webflow slugs are yours already, so the URL mapping is often lighter here than on Wix or Squarespace. The risk sits in what does not export: Collection-driven pages, localized content, site search and gated areas are rebuilt rather than transferred, and a rebuilt template is where content quietly goes missing. Diff the rendered output route by route." },
       { question: "How long does a Webflow migration take?", answer: "Weeks rather than months, set by template count and by how much of the site does not export. Your Webflow site keeps running throughout, so the pressure is on approvals rather than downtime. The cutover itself is short; what takes time is testing that every rebuilt Collection template renders what the original did." },
     ]
@@ -1571,7 +1584,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'migration',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "How much does a WordPress to Next.js migration cost in 2026?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with complex commerce and application work scoped separately. Final price follows the accepted URL, template, content, plugin, data, integration, quality, cutover and support scope." },
       { question: "How long does a WordPress to Next.js migration take?", answer: "A host transfer can be same-day. A platform rebuild is weeks, and MyCustomPatches, an owner-confirmed PandaCodeGen delivery example, completed in about 22 days. That is one project, not a standard, and the variable is template count and content readiness rather than page count. The existing site stays live until cutover." },
@@ -1588,15 +1601,15 @@ export const blogPosts: BlogPost[] = [
     title: "GoHighLevel Site Slow? Diagnose and Fix It in 2026",
     excerpt: "A measured workflow for PageSpeed, Core Web Vitals, in-platform fixes and deciding whether a hybrid frontend is justified.",
     category: "GoHighLevel",
-    readTime: "17 min",
+    readTime: "23 min",
     date: "Mar 22",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'performance',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
-      { question: "What PageSpeed score does a typical GoHighLevel site get?", answer: "There's no defensible universal score. Results vary by URL, content, custom code, media, fonts, third parties, consent state, cache, device, network, location and tool version. Keep field data and at least three comparable lab runs for each agreed representative page and profile." },
+      { question: "What PageSpeed score does a typical GoHighLevel site get?", answer: "HighLevel's own troubleshooting guide (modified 25 September 2026) says a well-optimized GoHighLevel page typically scores above 80 on mobile and above 95 on desktop, including pages with tracking codes and high-resolution images. That's HighLevel's figure, not one we measured, and results still vary by page, custom code, media, third parties, device and network, so compare your own pages against it with at least three runs each." },
       { question: "Does a low mobile Lighthouse score directly hurt rankings?", answer: "Lighthouse is a lab diagnostic, not a direct ranking grade. Google uses Core Web Vitals in its ranking systems but says good scores don't guarantee top rankings and relevance remains fundamental. Review field data, search output, content and the rest of the page experience." },
       { question: "Will migrating HighLevel pages preserve every automation?", answer: "Only if every real trigger, required field and downstream behavior is inventoried and tested. A custom form that creates a contact won't, on its own, recreate the form, appointment, tag, attribution or opportunity events your existing workflows use." },
       { question: "Can editors update a separate frontend?", answer: "Yes, when the accepted scope includes a suitable CMS and content model. Editing, preview, permissions, publishing, media, rollback and training depend on the system you choose and how it's built; no CMS works exactly like HighLevel's builder." },
@@ -1605,13 +1618,13 @@ export const blogPosts: BlogPost[] = [
       { question: "Will custom form submissions reach HighLevel pipelines?", answer: "They can, through a supported, scoped integration. Test authentication, validation, spam controls, duplicate settings, field mapping, the specific workflow trigger, errors, retries and notifications. A contact appearing in HighLevel doesn't prove the whole pipeline works." },
       { question: "Does PandaCodeGen guarantee 90+ PageSpeed?", answer: "A 90+ Lighthouse target applies only when accepted project terms name representative pages, mobile and desktop profiles, the exact environment, three passing runs per page and profile, exclusions and remedy. It is not a ranking, lead, conversion or revenue guarantee." },
       { question: "Are GoHighLevel websites good for SEO?", answer: "HighLevel sites are indexable and can rank. The platform doesn't block search engines, and it gives you control of titles, descriptions, URLs, headings and alt text. What it constrains is the delivery layer. That's what Core Web Vitals pick up, and they're one input among many, not the deciding one. Most HighLevel sites that underperform in search are losing on thin pages, one landing page trying to rank for everything, no internal linking and no topical depth, not on speed. Those are content decisions, and you can fix them without changing platform." },
-      { question: "How do I make GoHighLevel faster?", answer: "Start with HighLevel's own controls: enable Optimize Javascript and Image optimization in funnel settings, use native HighLevel forms instead of third-party embeds, and reuse blocks with Global Sections so headers, footers and CTAs aren't duplicated. Then resize and compress images before you upload them, remove unused sections, duplicate mobile or desktop blocks and inherited template code, reduce font variants, and defer or replace heavy embeds such as chat and calendars. Retest forms, calendars, attribution and consent after every change, and measure the same route under the same test profile before and after, so you know what moved." },
+      { question: "How do I make GoHighLevel faster?", answer: "Start with HighLevel's own controls: enable Optimize Javascript and Image optimization in funnel settings, use native HighLevel forms instead of third-party embeds, and reuse blocks with Global Sections so headers, footers and CTAs aren't duplicated. Then resize and compress images before you upload them (HighLevel's troubleshooting FAQ, read October 4, 2026, puts above-the-fold images at under 200 KB), check tracking code and custom code elements for third-party scripts, move forms, calendars, review widgets and maps below the fold, remove unused sections, duplicate mobile or desktop blocks and inherited template code, reduce font variants, and defer or replace heavy embeds such as chat and calendars. Retest forms, calendars, attribution and consent after every change, and measure the same route under the same test profile before and after, so you know what moved." },
     ]
   },
   {
     id: "best-website-builder-for-gohighlevel-agencies",
     cardStat: "6 options",
-    cardStatLabel: "Compared with July 2026 primary vendor sources",
+    cardStatLabel: "Compared with October 2026 primary vendor sources",
     title: "Best Website Builder for GoHighLevel Agencies in 2026",
     excerpt: "Compare GHL Native, Simvoly, SiteSwan, Duda, Webflow, and custom Next.js by integration, branding, ownership, current costs, and repeatable performance tests.",
     category: "GoHighLevel",
@@ -1621,11 +1634,11 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "performance",
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "What is the best website builder for a GoHighLevel agency?", answer: "Start with the native HighLevel builder, because it is already paid for and it removes an integration boundary. Three conditions overturn that default: the client's pages carry organic search revenue the native implementation demonstrably cannot serve after you have applied HighLevel's own speed guidance; the agency needs branded management surfaces HighLevel does not brand, which is where Duda's White Label plan earns its price; or the site needs bespoke frontend engineering no builder's extension points reach, which is where a custom build starts. If none of those describes your client, the honest recommendation is the one you are already paying for." },
-      { question: "What does GoHighLevel actually cost per client site at scale?", answer: "The plan fee is flat but several add-ons are not, and that is what breaks an agency margin model. Read from HighLevel's own pricing page on August 2, 2026: plans are $97 Starter (3 sub-accounts), $297 Unlimited and $497 Agency Pro, with unlimited contacts and users on all three. The Branded Client Portal App is $49/month per sub-account, the AI Employee Growth Plan $50/month per sub-account, the AI Employee Unlimited Plan $97/month per sub-account, and dedicated email IPs $59/month per IP. A thirty-client agency enabling the branded portal for everyone adds $1,470 a month to a $297 plan. Conversation AI, Voice AI, Reviews AI, email and SMS marketing and calling all carry usage-based charges on top; Agency Pro is the plan that lets you rebill those with markup, while Unlimited rebills at cost." },
-      { question: "Does GoHighLevel have an AI website builder?", answer: "Not under the names currently circulating. Community summaries and AI answers describe an AI Studio or Vibe Code builder that clones an existing site or generates pages from a text prompt, and neither name appears on HighLevel's own pricing page, read August 2, 2026. What that page lists among core features is Funnel AI and Content AI, alongside Conversation AI, Voice AI and Reviews AI, three of which carry usage-based charges. Check the capability inside your own sub-account before promising site generation to a client, and price the usage line while you are there." },
+      { question: "What does GoHighLevel actually cost per client site at scale?", answer: "The plan fee is flat but several add-ons are not, and that is what breaks an agency margin model. Read from HighLevel's own pricing page on October 8, 2026: plans are $97 Starter (3 sub-accounts), $297 Unlimited and $497 Agency Pro, with unlimited contacts and users on all three. The Branded Client Portal App is $49/month per sub-account, the AI Employee Growth Plan $50/month per sub-account, the AI Employee Unlimited Plan $97/month per sub-account, and dedicated email IPs $59/month per IP. A thirty-client agency enabling the branded portal for everyone adds $1,470 a month to a $297 plan. Conversation AI, Voice AI, Reviews AI, email and SMS marketing and calling all carry usage-based charges on top; Agency Pro is the plan that lets you rebill those with markup, while Unlimited rebills at cost." },
+      { question: "Does GoHighLevel have an AI website builder?", answer: "Not under the names currently circulating. Community summaries and AI answers describe an AI Studio or Vibe Code builder that clones an existing site or generates pages from a text prompt, and neither name appears on HighLevel's own pricing page, read October 8, 2026. What that page lists among core features is Funnel AI and Content AI, alongside Conversation AI, Voice AI and Reviews AI, three of which carry usage-based charges. Check the capability inside your own sub-account before promising site generation to a client, and price the usage line while you are there." },
       { question: "Can you build a website outside GoHighLevel and still capture leads into the GHL CRM?", answer: "Yes, when the selected frontend and HighLevel plan support the scoped integration. Use a supported form, API, inbound webhook, embed, or middleware path, then test authentication, required fields, consent, spam controls, duplicates, workflow triggers, error handling, retries, and notifications before launch." },
       { question: "Does switching website builders break my existing GHL automations or pipelines?", answer: "It can if event names, field mapping, attribution, calendars, triggers, or credentials change. Inventory every current form and workflow, build a mapping, test expected and failure cases in a non-production path, and keep rollback controls. Existing automations are preserved only when the accepted migration scope and tests prove the required behavior." },
       { question: "Is the GoHighLevel native website builder good enough for organic SEO?", answer: "The answer depends on the actual implementation, not the platform label. Inspect initial and rendered HTML, metadata, canonicals, sitemap, redirects, structured data, internal links, status codes, and field Core Web Vitals where available. HighLevel also publishes current page-speed guidance. Optimize and test first; migrate only if agreed requirements remain blocked." },
@@ -1641,16 +1654,17 @@ export const blogPosts: BlogPost[] = [
     title: "Shopify App Costs in 2026: Audit the Real Bill",
     excerpt: "Reconcile Shopify-billed charges, external subscriptions, usage, workflows, data and performance before you keep, replace or remove an app.",
     category: "Shopify",
-    readTime: "16 min",
+    readTime: "20 min",
     date: "Mar 19",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-04",
     faqs: [
       { question: "How much does Shopify take from a $100 sale?", answer: "It depends far more on whether you use Shopify Payments than on your plan. With Shopify Payments you pay the published card rate for your country and plan and no additional transaction fee. With any other gateway, Shopify charges a third-party payment provider fee on top of whatever that gateway takes: read from Shopify's own pricing page on August 2, 2026, that is 2% on Basic, 1% on Grow, 0.6% on Advanced and 0.2% on Plus, so $2.00, $1.00, $0.60 or $0.20 on a $100 sale before your gateway takes anything. Card rates are quoted per country and shopify.com/pricing geo-redirects, so read the rate on your own market's pricing page or in the Payments section of your admin, not in an article." },
-      { question: "How much do Shopify apps cost per month?", answer: "Individual app prices published on August 2, 2026 range from free to a few hundred dollars a month per app. Common entry tiers: Gorgias Starter $10, Judge.me Awesome $15, Smile Essential $15, PageFly Builder $24, Vitals All-in-One $29.99, Loox Convert $49.99, and Recharge Starter $99 plus 1.49% and 19 cents per transaction. Some apps, including Okendo and Attentive, don't publish tier prices at all. There's no reliable universal total, because volume-metered pricing means the bill tracks your list size, order count or message volume. Export your Shopify bills, card statements and vendor invoices, then separate subscription, usage, transaction, one-time, tax and external charges. Public list prices might not match your legacy, annual, promotional or negotiated terms." },
+      { question: "How much do Shopify apps cost per month?", answer: "Individual app prices published on August 2, 2026, and rechecked on October 4, 2026, range from free to a few hundred dollars a month per app. Common entry tiers: Gorgias Starter $10, Judge.me Awesome $15, Smile Essential $15, Okendo reviews $19 up to 200 orders, PageFly Builder from $24, Vitals All-in-One $29.99, Loox Convert $49.99, and Recharge Starter $99 plus 1.49% and 19 cents per transaction. Some apps, such as Attentive, don't publish a price at all. There's no reliable universal total, because volume-metered pricing means the bill tracks your list size, order count or message volume. Export your Shopify bills, card statements and vendor invoices, then separate subscription, usage, transaction, one-time, tax and external charges. Public list prices might not match your legacy, annual, promotional or negotiated terms." },
+      { question: "How does Shopify app pricing work?", answer: "Each app sets its own plans: a free plan, a flat monthly or yearly fee, usage-based pricing, a flat fee plus usage, a fee plus a share of each transaction, or a one-time purchase. Shopify requires App Store apps to use its billing, so charges normally appear on your Shopify invoice. Each app runs its own 30-day cycle, and Shopify adds what it owes to your next 30-day bill. Upgrading mid-cycle is prorated, downgrading earns an application credit, and an app can have only one active recurring charge. Some vendors also bill outside Shopify, so those charges never reach your Shopify bill. Read from Shopify's help center and developer docs on October 4, 2026." },
       { question: "Does uninstalling a Shopify app cancel the subscription?", answer: "Shopify says uninstalling a Shopify-billed paid app cancels future recurring charges, although a charge for the current billing cycle can still appear. Uninstalling doesn't cancel a subscription billed outside Shopify, so cancel that directly with the provider." },
       { question: "What is the cheapest alternative to a Shopify app?", answer: "The lowest list price doesn't tell you two apps are equivalent. Compare current vendor terms against the same requirements, usage, data, integrations, support, performance and exit criteria, then test the candidate before replacing the production app." },
       { question: "What Shopify apps can I replace with native features?", answer: "That depends on the store's current Shopify plan, requirements and the latest native capabilities. Map the accepted workflow and verify it in a safe store or theme preview before removing the app, because data, automation and storefront behavior can depend on it." },
@@ -1724,7 +1738,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'performance',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "How long does it take to migrate WordPress to Next.js?", answer: "Weeks, and the schedule is set by how many distinct templates your theme actually renders rather than by post count. Content moves in bulk through the REST API or an export; templates are rebuilt one at a time. Plugin-provided functionality is the wildcard, because each one has to be replaced or deliberately dropped." },
       { question: "Will I lose my Google rankings when migrating from WordPress to Next.js?", answer: "WordPress permalinks can usually be reproduced exactly in Next.js, so this migration can be near-neutral on addresses if you decide to keep them. Most losses come from the rendering change instead: check that every template ships its content in the initial HTML rather than assembling it client-side, and compare a representative page's rendered output on both sides." },
@@ -1741,12 +1755,12 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Compare WordPress and Next.js across architecture, editing, performance, SEO, security, integrations, total cost, ownership and migration risk without universal score claims.",
     category: "WordPress",
     readTime: "15 min",
-    date: "Mar 11",
+    date: "Mar 15",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'performance',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Is WordPress or Next.js better for SEO?", answer: "Neither framework guarantees better SEO. Both can produce crawlable, indexable, fast pages or serious technical defects. Compare content workflow, rendered output, URL control, canonicals, structured data, internal links, performance, security, maintenance, and team capability for the actual requirements." },
       { question: "How much faster is Next.js than WordPress?", answer: "There is no universal difference. Compare representative routes with the same content, features and third parties using field data where available and repeated lab tests under recorded conditions. WordPress and Next.js performance both depend on implementation, infrastructure and operations." },
@@ -1768,7 +1782,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'ranking',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Does website speed affect SEO rankings?", answer: "Google uses Core Web Vitals in its broader ranking systems, but says good scores do not guarantee top rankings and relevance remains fundamental. Performance is one part of page experience, not a fixed ranking formula." },
       { question: "What PageSpeed score do I need for good Google rankings?", answer: "Google publishes no Lighthouse score that guarantees ranking. Lighthouse is a lab diagnostic. Use URL-level field Core Web Vitals where available, fix real experience problems and evaluate content, links, indexing and other search factors separately." },
@@ -1790,7 +1804,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'conversion',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Why is my Shopify Dawn theme slow?", answer: "Dawn is a performance-oriented reference theme, but production results also depend on media, apps, tags, third-party code, custom sections, content and user conditions. Use Shopify's real-user reports and controlled route tests to identify the actual contributor." },
       { question: "What PageSpeed score does Shopify Dawn get?", answer: "Dawn has no universal PageSpeed score or fixed ceiling. Test representative home, collection, product and cart states under a recorded mobile and desktop profile, repeat the runs and use field Core Web Vitals where enough traffic exists." },
@@ -1812,7 +1826,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'saas',
-    lastModified: "2026-09-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "What is white-label web development?", answer: "It is a delivery arrangement in which an agency leads the client relationship while another team performs defined development work. Branding, disclosure, access, confidentiality, ownership and support must be written into the partner and client terms." },
       { question: "What margin can an agency make?", answer: "There is no promised margin. Use the partner's project-specific quote, then price your sales, strategy, creative, management, revisions, risk, tax, payment fees and support. The agency controls its retail price and remains responsible for its own economics." },
@@ -1835,7 +1849,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'code',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Why does PandaCodeGen choose Next.js for some migrations?", answer: "It can provide deliberate rendering, routing, data and deployment control when those capabilities match the brief. The decision follows measurable requirements and operating ownership. It is not based on a claim that every Next.js site is fast or every WordPress site is slow." },
       { question: "When is WordPress the better choice?", answer: "WordPress can be the better fit when its editing workflow, ecosystem and maintained extensions serve the required capabilities and the team can operate updates, security and performance. Repairing a suitable implementation may be lower risk than migrating." },
@@ -1857,13 +1871,15 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'cost',
-    lastModified: "2026-09-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "What is the total cost of WordPress over three years?", answer: "Calculate it from actual hosting, software, support and incident invoices plus internal operating labor, planned roadmap work and any exit work inside the period. There is no representative total for every WordPress business site." },
       { question: "Is a custom website cheaper than WordPress long term?", answer: "Sometimes, but not automatically. Compare the same capabilities, demand, service level and period. Include custom build and migration, providers, dependencies, releases, support, internal labor and exit. Publish payback only when the inputs are visible and verified." },
       { question: "What WordPress costs should the model include?", answer: "Include hosting, CDN, backup, themes, plugins, external services, update and QA labor, content operations, support, security, recovery, roadmap changes and exit. Use current invoices, contracts and recorded work rather than public averages." },
       { question: "Does WordPress cost more than Wix or Squarespace?", answer: "There is no universal ordering. Compare current plans, add-ons, software, services, internal work, required features, change cost, portability and support under the same three-year assumptions." },
       { question: "How should security incidents be modeled?", answer: "Use the organization's incident history or an approved risk method for each architecture. Include response labor, external invoices, downtime, recovery, support and legal or notification work where relevant. Custom code also has dependencies, data, providers and an attack surface." },
+      { question: "Is WordPress still worth it in 2026?", answer: "Yes when its editorial workflow and maintained capabilities fit, measured quality is acceptable or repairable, and the team can own updates, security and operations. Migration is worth pricing when verified constraints and a complete target plan justify its added cost and risk." },
+      { question: "What is the best alternative to WordPress?", answer: "There is no universal best alternative. Compare optimizing in place, a WordPress rebuild, headless WordPress and a different custom or managed platform against the same content, features, data, quality, ownership and operating requirements." },
     ]
   },
   {
@@ -1879,7 +1895,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'aicommerce',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       {
         question: "What is Google's Universal Commerce Protocol (UCP)?",
@@ -1887,7 +1903,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: "Can customers really buy from my store without visiting my website?",
-        answer: "Google's UCP guide describes direct buying in Google surfaces and native or approved embedded checkout paths. Availability depends on merchant access, approval, product, country, surface, payment provider and current requirements, so it is not accurate to promise this for every store or shopper."
+        answer: "Google's UCP guide describes direct buying in Google surfaces and native or embedded checkout paths. Availability depends on merchant access, approval, product, country, surface, payment provider and current requirements, so it is not accurate to promise this for every store or shopper."
       },
       {
         question: "Which e-commerce platforms are ready for Google UCP?",
@@ -1911,7 +1927,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: "What happens to my website traffic when customers buy through Google AI?",
-        answer: "Expect fewer sessions and the same or better orders, and measure both rather than one. If a purchase completes inside Google's surface, the session may never reach your analytics while the order still arrives. That is why store owners misread this as a traffic collapse. Reconcile order counts against sessions before concluding anything about demand."
+        answer: "Measure orders and sessions separately; neither an order increase nor a traffic decrease is guaranteed. If a purchase completes inside Google's surface, the session may never reach your analytics while the order still arrives. That is why store owners misread this as a traffic collapse. Reconcile order counts against sessions before concluding anything about demand."
       },
       {
         question: "How much does it cost to make my store UCP-ready?",
@@ -1924,7 +1940,7 @@ export const blogPosts: BlogPost[] = [
     cardStat: "7",
     cardStatLabel: "plugin editions under one slug, six patched with no advisory",
     title: "WordPress Plugin Security in 2026: Speed Is the Only Real Defence",
-    excerpt: "In one week, a critical authentication bypass was exploited in a WordPress SSO plugin and a critical remote code execution was patched in Next.js. Nothing on the internet is secure. What a site owner controls is how fast a fix lands, and this is what that difference actually looked like.",
+    excerpt: "Within ten days in August 2026, attacks on a critical authentication bypass in a WordPress SSO plugin were reported and a critical remote code execution was patched in Next.js. Nothing on the internet is secure. What a site owner controls is how fast a fix lands, and this is what that difference actually looked like.",
     category: "WordPress",
     readTime: "11 min",
     date: "Aug 27",
@@ -1932,17 +1948,17 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'security',
-    lastModified: "2026-09-05",
+    lastModified: "2026-10-08",
     faqs: [
-      { question: "What is CVE-2026-32475 in Elementor Pro?", answer: "An unauthenticated arbitrary file upload in Elementor Pro scored CVSS 9.8, affecting versions up to and including 4.2.1 and fixed in 4.2.2. A site is reachable only if it has a published Form widget carrying at least one File Upload field. The submission is sent as an array where the first element is empty and the second carries a PHP payload, which bypasses validation; the file lands in /wp-content/uploads/elementor/forms/ under a random name with the attacker-supplied .php extension and can then be requested directly. Patchstack disclosed it, Elementor released 4.2.2 on 19 August 2026, exploitation began the same day, and Wordfence blocked close to 190,000 attempts over the following four days. Elementor Pro reports more than six million active installations. Checked 5 September 2026." },
-      { question: "What is CVE-2026-14894 in Super Forms?", answer: "An unauthenticated arbitrary file upload in the Super Forms drag and drop form builder, scored CVSS 9.8, affecting versions up to and including 6.3.313 and fixed in 6.3.314. A public AJAX endpoint performed neither file-type validation nor a capability check, so an unauthenticated attacker could write an executable PHP file and reach remote code execution. Super Forms 6.3.314 shipped in the first week of July 2026 and Wordfence published the advisory on 9 July. Attacks began on 14 July and peaked above 40,000 requests in a single day on 18 August, with more than 250,000 attempts blocked. Checked 5 September 2026." },
-      { question: "If my plugin is patched, why did my site still get attacked?", answer: "Because a published fix and an installed fix are different things, and the attacks in July and August 2026 ran against sites where the patch was already available for download. Elementor released 4.2.2 on the same day exploitation of CVE-2026-32475 started, and Super Forms had been patched for five weeks before the CVE-2026-14894 campaign peaked on 18 August. Neither vendor withheld information. What decided the outcome was whether the site owner applied the update, and how quickly. Audit for unexpected PHP files under your uploads directory and for administrator accounts you do not recognise, because a clean scan today does not describe last month." },
-      { question: "Is WordPress less secure than a custom-coded site?", answer: "Not in the way the question implies. In the last week of August 2026 a critical authentication bypass was under active exploitation in a WordPress SSO plugin, and a critical unauthenticated remote code execution was disclosed and patched in Next.js. Both ecosystems shipped critical vulnerabilities in the same week. What differed was the response path: whether the advisory named the affected versions, whether vulnerability databases could see them, whether a scanner would flag your install, and how many steps the fix took. Those four things are measurable. Platform choice on its own is not a security outcome." },
-      { question: "What is CVE-2026-15981?", answer: "An authentication bypass in miniOrange's SAML Single Sign On plugin for WordPress, scored CVSS 9.8. The plugin's mo_saml_validate_signature() function ran a loose boolean check on the value returned by PHP's openssl_verify(). That function is tri-state: 1 for a valid signature, 0 for invalid, and -1 when OpenSSL itself errors. In PHP, -1 is truthy. An attacker who sent a deliberately malformed signature triggered the error path, and the plugin treated the error as a successful verification, logging them in as any existing user including an administrator. Fixed in free-edition 5.4.5. Checked 26 August 2026." },
+      { question: "What is CVE-2026-32475 in Elementor Pro?", answer: "An unauthenticated arbitrary file upload in Elementor Pro, scored 9.0 on its CVE record and 9.8 by Wordfence, affecting versions up to and including 4.2.1 and fixed in 4.2.2. A site is reachable only if it has a published Form widget with at least one File Upload field not marked as required, which is the default. The submission is sent as an array where the first element is empty and the second carries a PHP payload, which bypasses validation; the file lands in /wp-content/uploads/elementor/forms/ under a random name with the attacker-supplied .php extension and can then be requested directly. Patchstack and Wordfence published it on 19 August 2026, the day Elementor released 4.2.2, and exploitation began the same day. By 2 September Wordfence had blocked more than 190,000 attempts, most of them between 19 and 23 August. Wordfence puts Elementor Pro at more than six million installations. Checked 8 October 2026." },
+      { question: "What is CVE-2026-14894 in Super Forms?", answer: "An unauthenticated arbitrary file upload in the Super Forms drag and drop form builder, scored CVSS 9.8, affecting versions up to and including 6.3.313 and fixed in 6.3.314. A public AJAX endpoint performed neither file-type validation nor a capability check, so an unauthenticated attacker could write an executable PHP file and reach remote code execution. Super Forms 6.3.314 shipped on 8 July 2026 and Wordfence published the advisory on 9 July. Attacks began on 14 July and were heaviest between 18 and 25 August, peaking above 40,000 requests in a single day, with more than 250,000 attempts blocked. Checked 8 October 2026." },
+      { question: "If my plugin is patched, why did my site still get attacked?", answer: "Because a published fix and an installed fix are different things, and the attacks in July and August 2026 ran against sites where the patch was already available for download. Elementor released 4.2.2 on the same day exploitation of CVE-2026-32475 started, and Super Forms had been patched for about six weeks before the CVE-2026-14894 campaign hit its heaviest week, from 18 August. Neither vendor withheld information. What decided the outcome was whether the site owner applied the update, and how quickly. Audit for unexpected PHP files under your uploads directory and for administrator accounts you do not recognise, because a clean scan today does not describe last month." },
+      { question: "Is WordPress less secure than a custom-coded site?", answer: "Not in the way the question implies. In the second half of August 2026, attempts to exploit a critical authentication bypass in a WordPress SSO plugin were reported, and a critical unauthenticated remote code execution was disclosed and patched in Next.js, within ten days of each other. What differed was the response path: whether the advisory named the affected versions, whether vulnerability databases could see them, whether a scanner would flag your install, and how many steps the fix took. Those four things are measurable. Platform choice on its own is not a security outcome." },
+      { question: "What is CVE-2026-15981?", answer: "An authentication bypass in miniOrange's SAML Single Sign On plugin for WordPress, scored CVSS 9.8. The plugin's mo_saml_validate_signature() function ran a loose boolean check on the value returned by PHP's openssl_verify(). That function is tri-state: 1 for a valid signature, 0 for invalid, and -1 when OpenSSL itself errors. In PHP, -1 is truthy. An attacker who sent a deliberately malformed signature triggered the error path, and the plugin treated the error as a successful verification, logging them in as any existing user including an administrator. Fixed in free-edition 5.4.5, but a separate flaw, CVE-2026-19842, stayed open until 5.4.7, so run 5.4.7 or later. Checked 8 October 2026." },
       { question: "Why did vulnerability scanners report vulnerable WordPress sites as safe?", answer: "Because seven independently versioned product editions ship under one plugin slug, and the public advisories covered only the free one. Patchstack reported on 21 August 2026 that the six paid editions were patched with no public changelog entry and no advisory, so no vulnerability database listed them and affected sites were reported as unaffected. That changed on 18 August 2026, when miniOrange supplied the full edition and version matrix and Patchstack updated its database. Until then, the scanner, the dashboard and the database were all blind at once." },
-      { question: "How long was a working exploit public before the attacks were noticed?", answer: "A full disclosure including a proof-of-concept and a Docker lab was posted to the Full Disclosure mailing list on 29 July 2026 for the algorithm-confusion variant. DigitalOcean detected an anomalous WordPress admin session on 16 August 2026 and shared a working reproduction on 17 August. That is eighteen days between a weaponised public exploit and the first reported detection. Patchstack characterised the traffic as opportunistic scanning rather than a targeted campaign." },
+      { question: "How long was a working exploit public before the attacks were noticed?", answer: "About three weeks. A proof-of-concept with a Docker lab for the algorithm-confusion variant was public on GitHub from 27 July 2026, and a write-up dated 29 July reached the Full Disclosure mailing list in early August. DigitalOcean detected an attempted WordPress admin session on 16 August 2026 and shared a working reproduction on 17 August. Patchstack characterised the traffic as opportunistic scanning rather than a targeted campaign." },
       { question: "How fast should a critical vulnerability be patched?", answer: "Fast enough that the window between a public exploit and your fix is short, which means the practical questions are how you find out and how many steps the fix takes. On a maintained dependency the path is: an advisory names the patched version, an automated audit surfaces it, one command applies it, and a build confirms nothing broke. Where an advisory does not name your edition, no database lists it and your dashboard shows no update, that path does not exist and the clock keeps running. Ask any provider to describe their actual sequence rather than promising a response time." },
-      { question: "What should I do if I run the miniOrange SAML plugin?", answer: "Check which edition you run, not just the version number, because the seven editions use separate version series and a Standard 16.x install will not be offered a jump to the patched 17.x line through the normal dashboard update. Free edition is patched at 5.4.5. Compare your edition against the matrix miniOrange supplied to Patchstack on 18 August 2026, upgrade by manual upload if the dashboard offers nothing, then audit for unexpected administrator accounts and recent logins, because exploitation was already underway before the advisories covered the paid editions." }
+      { question: "What should I do if I run the miniOrange SAML plugin?", answer: "Check which edition you run, not just the version number, because the seven editions use separate version series and a Standard 16.x install will not be offered a jump to the patched 17.x line through the normal dashboard update. The free edition needs 5.4.7 or later, because a third flaw, CVE-2026-19842, stayed open after 5.4.5. Compare your edition against the matrix miniOrange supplied to Patchstack on 18 August 2026, upgrade by manual upload if the dashboard offers nothing, then audit for unexpected administrator accounts and recent logins, because exploitation was already underway before the advisories covered the paid editions." }
     ]
   },
   {
@@ -1958,7 +1974,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'security',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       {
         question: "What are WordPress Abilities and the MCP Adapter?",
@@ -1974,33 +1990,12 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: "Did the AI Engine advisory mean 100,000 sites were hacked?",
-        answer: "No. WordPress.org's 100,000-plus figure was the plugin's active-installation band, not a count of exposed or compromised sites. Applicability depends on version and configuration, while compromise requires site-specific evidence."
+        answer: "No. WordPress.org's 100,000-plus figure was the plugin's active-installation band when Wordfence reported the flaw, not a count of exposed or compromised sites. The listing showed 90,000-plus on 8 October 2026. Applicability depends on version and configuration, while compromise requires site-specific evidence."
       },
       {
         question: "Should I use WordPress for sites that handle sensitive data?",
         answer: "The decision depends on required capabilities, data classification, regulatory duties and the team's ability to maintain the full stack. WordPress and custom systems both require dependency, access, secret, logging, backup and incident controls. Do not assume either architecture is automatically secure."
       }
-    ]
-  },
-  {
-    id: "wordpress-killer",
-    cardStat: "TCO",
-    cardStatLabel: "Invoices, labor, roadmap, incidents and exit",
-    title: "WordPress 3-Year Cost in 2026: An Invoice-Led TCO Guide",
-    excerpt: "Calculate three-year WordPress cost from invoices, internal work, incidents and planned changes, then compare repair and migration under the same requirements.",
-    category: "WordPress",
-    readTime: "10 min",
-    date: "Feb 8",
-    author: "Hassan",
-    role: "Co-founder, Lead Engineer",
-    featured: false,
-    illustrationType: 'wordpress',
-    lastModified: "2026-08-19",
-    faqs: [
-      { question: "How much does WordPress really cost per year?", answer: "Use the site's hosting, software, support and incident invoices plus internal operating labor and approved roadmap work. Public averages do not represent every WordPress site, contract or team." },
-      { question: "Is WordPress still worth it in 2026?", answer: "Yes when its editorial workflow and maintained capabilities fit, measured quality is acceptable or repairable, and the team can own updates, security and operations. Migration is worth pricing when verified constraints and a complete target plan justify its added cost and risk." },
-      { question: "What is the best alternative to WordPress?", answer: "There is no universal best alternative. Compare optimize-in-place, a WordPress rebuild, headless WordPress and a different custom or managed platform against the same content, features, data, quality, ownership and operating requirements." },
-      { question: "How do I compare WordPress with a custom site financially?", answer: "Use the same three-year period, capabilities, traffic, quality and service level. Include initial work, providers, software, labor, roadmap, incidents and exit for both options. Keep hypothetical ranking or revenue benefits outside the base case unless first-party evidence supports them." }
     ]
   },
   {
@@ -2042,9 +2037,9 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'code',
-    lastModified: "2026-09-05",
+    lastModified: "2026-10-08",
     faqs: [
-      { question: "Is Elementor Pro safe to use in September 2026?", answer: "Elementor Pro 4.2.2 and later is patched against CVE-2026-32475, an unauthenticated arbitrary file upload scored CVSS 9.8 that affected versions up to and including 4.2.1. Patchstack disclosed it and Elementor shipped 4.2.2 on 19 August 2026. A site was only reachable if it had a published Form widget carrying at least one File Upload field. Exploitation began the same day the patch was released and Wordfence blocked close to 190,000 attempts in the following four days, so the deciding factor was whether the update had been applied rather than how quickly Elementor responded. This is a security question and it is separate from the SEO question this article answers. Checked 5 September 2026." },
+      { question: "Is Elementor Pro safe to use after the August 2026 file upload flaw?", answer: "Yes, on version 4.2.2 or later. CVE-2026-32475 was an unauthenticated arbitrary file upload in Elementor Pro up to and including 4.2.1. Patchstack, which issued the CVE, rates it 9.0 out of 10 and Wordfence rates it 9.8. It was made public and fixed in 4.2.2 on 19 August 2026. A site was only reachable if it had a published Form widget with at least one File Upload field not set to required, which is the default. Exploitation began the same day, and by 2 September 2026 Wordfence had blocked more than 190,000 attempts, so what decided the outcome was whether the update had been applied. This is a security question, separate from the SEO question this article answers. Checked 8 October 2026." },
       { question: "Does Elementor hurt SEO?", answer: "Elementor does not carry one Google penalty or ranking outcome. Audit crawlability, initial and rendered content, indexing controls, metadata, canonicals, internal links, structured data, content quality, and field Core Web Vitals. Then compare Search Console around releases while accounting for other changes." },
       { question: "Does Elementor slow down WordPress?", answer: "Elementor contributes markup and assets, but site performance also depends on theme structure, plugins, media, fonts, third parties, hosting, cache, consent, page state, and visitor conditions. Measure representative routes and identify the actual contributor instead of using a universal platform score." },
       { question: "Which Elementor performance features should I check?", answer: "Elementor's June 2026 help page lists stable features for optimized image loading, optimized Gutenberg loading, and lazy-loaded background images, plus experimental features such as optimized control loading and element caching. Recheck current status, test on staging, and verify templates and interactions before production." },
@@ -2065,7 +2060,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'plugins',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       {
         question: "Why is my WordPress site so slow?",
@@ -2098,7 +2093,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'cost',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       {
         question: "Why is my Shopify Plus store still slow?",
@@ -2131,7 +2126,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'traffic',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       {
         question: "Why is my website traffic decreasing?",
@@ -2162,7 +2157,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'sales',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "How much money am I losing from a slow Shopify store?", answer: "Do not multiply a universal loss-per-second statistic. Join route-level field performance to sessions, device, traffic source and funnel outcomes, then model low, central and high scenarios from your own data. Report assumptions and uncertainty." },
       { question: "Why is my Shopify store slow on mobile?", answer: "Measure representative templates and investigate theme code, sections, apps, pixels, consent, images, fonts, video, liquid work, network and platform behavior. Mobile hardware and networks often expose work that a desktop test hides, but the cause is property-specific." },
@@ -2181,7 +2176,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'conversion',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       { question: "Why is my Shopify conversion rate low?", answer: "A store-wide average does not identify a cause. Segment the funnel by route, device, market, product, traffic source, customer type and period, then investigate offer, pricing, inventory, merchandising, errors, checkout and performance within the affected segment." },
       { question: "What is a good conversion rate for Shopify?", answer: "Use your own historical conversion rate segmented by traffic source, device, market, product, new versus returning visitors, and funnel step. Public averages mix unlike stores. Performance can contribute to friction, but it does not explain the whole conversion difference or guarantee a multiplier." },
@@ -2202,7 +2197,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'ranking',
-    lastModified: "2026-09-19",
+    lastModified: "2026-10-08",
     faqs: [
       {
         question: "Why does my competitor rank higher on Google than me?",
@@ -2239,7 +2234,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       {
         question: "What is a good PageSpeed score?",
@@ -2280,7 +2275,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'performance',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-08",
     faqs: [
       {
         question: "Why is my WordPress site so slow?",
@@ -2353,5 +2348,33 @@ export const blogPosts: BlogPost[] = [
         answer: "Potential benefits include experience flexibility, multiple touchpoints and explicit rendering choices. Costs include another application, API dependencies, preview and search integration, consent and analytics work, regression testing, security, monitoring and ongoing engineering ownership."
       }
     ]
+  },
+  // Added 4 Oct 2026 at the END of the array on purpose: getRelatedPostIds breaks
+  // ties by array position for pages that show a title-pilot card, so a new post
+  // placed higher could displace a pilot page's related-card links mid-pilot.
+  // FAQ answers read their platform facts from platform-portability.ts.
+  {
+    id: "website-portability",
+    cardStat: "8 platforms",
+    cardStatLabel: "export docs read and quoted on 8 Oct 2026",
+    title: "Can You Export Your Website? What 8 Platforms Let You Take",
+    excerpt: "What Wix, Squarespace, Webflow, Shopify, WooCommerce, GoHighLevel and WordPress let you export, from their own help pages, and what to save before you cancel.",
+    category: "Guide",
+    readTime: "35 min",
+    date: "Oct 4",
+    author: "Hassan",
+    role: "Co-founder, Lead Engineer",
+    featured: false,
+    illustrationType: "migration",
+    lastModified: "2026-10-08",
+    faqs: [
+      { question: "Can I export my Wix website?", answer: `Not as a working site. ${portable('wix', 'design')} What does export, according to Wix's help center as read on ${PORTABILITY_CHECKED_LABEL}: CMS collections, physical products, contacts and orders. ${portable('wix', 'posts')}` },
+      { question: "Can I move my website from Squarespace to another platform?", answer: `Partly. ${portable('squarespace', 'design')} ${portable('squarespace', 'pages')} ${portable('squarespace', 'posts')} Products, contacts and orders export to CSV separately.` },
+      { question: "Can I export my Webflow site and host it somewhere else?", answer: `Yes, with limits. ${portable('webflow', 'design')} ${portable('webflow', 'collections')}` },
+      { question: "Can I export my GoHighLevel website?", answer: `Not in a form you can edit elsewhere. ${portable('gohighlevel', 'design')} ${portable('gohighlevel', 'pages')} Contacts, orders and media folders do export.` },
+      { question: "Which website platforms have the least vendor lock-in?", answer: `Of the eight platforms we checked on ${PORTABILITY_CHECKED_LABEL}, self-hosted WordPress and WooCommerce are the two where the whole site moves. ${portable('wordpress', 'design')} Both are open source under the GPL. Shopify's products, customers and orders export to CSV, but its theme is written for Shopify stores.` },
+      { question: "What should I export before cancelling a website builder?", answer: "Run every export the platform documents for products, customers, orders, collections and posts, and download the images you uploaded. Then crawl the live site for every URL and page title, screenshot each page template, list your forms and integrations, and check who the registrant on the domain is. Do it while the site is live: a cancelled site can't be crawled." },
+      { question: "What do I keep at the end of a PandaCodeGen build?", answer: `From our published terms: ${OWNERSHIP_ON_HANDOVER}` },
+    ],
   },
 ];

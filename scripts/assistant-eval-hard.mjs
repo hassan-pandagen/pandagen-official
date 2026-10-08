@@ -9,10 +9,13 @@
 // kind of test at 100+ questions, so every change to the assistant, its rules
 // or the site's facts can be re-checked instead of trusted.
 //
-// Needs a running dev server with GEMINI_API_KEY set:
+// Needs a running dev server with AI_GATEWAY_API_KEY in .env.local (4 Oct 2026:
+// the assistant moved to Vercel AI Gateway; the free credit allows roughly 8 to 10
+// requests a minute per model, so use --gap=7000 for a full run):
 //   npx next dev -p 3001
 //   node scripts/assistant-eval.mjs --base=http://localhost:3001
-// Options: --only=<groups or ids, comma-separated>, --gap=<ms between questions, default 4000>,
+// Options: --models=<gateway model ids, comma-separated; dev server only>,
+//          --only=<groups or ids, comma-separated>, --gap=<ms between questions, default 4000>,
 //          --cache (use the answer cache instead of asking the model),
 //          --out=<file> (full results as JSON),
 //          --regrade=<file> (re-check a saved --out file without calling the model).
@@ -158,6 +161,7 @@ for (const c of args.regrade ? [] : selected) {
           Origin: BASE,
           "x-forwarded-for": `10.77.${Math.floor(ipSeq / 250)}.${ipSeq % 250}`,
           ...(args.cache ? {} : { "x-assistant-nocache": "1" }),
+          ...(args.models ? { "x-assistant-models": args.models } : {}),
         },
         body: JSON.stringify({ messages }),
       });

@@ -24,19 +24,19 @@ import { DISPLAY, T } from "@/components/redesign/tokens";
 
 export default function PricingFinder() {
   return (
-    <section aria-labelledby="pricing-title" className="px-6 py-20 md:px-10 md:py-28" style={{ backgroundColor: T.paper }}>
+    <section aria-labelledby="pricing-title" className="px-6 py-14 md:px-10 md:py-20" style={{ backgroundColor: T.paper }}>
       <div className="mx-auto grid max-w-[1440px] gap-6 border-t pt-12 md:grid-cols-12" style={{ borderColor: T.rule }}>
         <h2
           id="pricing-title"
           className="md:col-span-5"
           style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(1.8rem, 3.2vw, 2.8rem)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
         >
-          Business websites and online stores, from $1,500.
+          A <span style={{ color: T.accentText }}>clear price</span> before we build.
         </h2>
         <div className="md:col-span-6 md:col-start-6">
           <p className="max-w-[36rem] text-[18px] leading-[1.6]" style={{ color: T.body }}>
-            Your quote covers the pages, features and connections your business needs. We agree the scope and price
-            before work starts.
+            Custom websites start at $1,500. WordPress builds are quoted to scope. Your proposal names the pages,
+            features, connections and final price before work starts.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link href="/pricing" className="cta-solid inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[16px] font-medium" style={{ backgroundColor: T.ink, color: T.paper }}>

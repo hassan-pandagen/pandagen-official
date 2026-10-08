@@ -308,10 +308,14 @@ export function validateQuoteScalarFields(formData: FormData): QuoteScalarFields
   }
 
   const name = scalar(formData, "name", 100, { required: true });
-  const email = scalar(formData, "email", 254, { required: true });
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new QuoteRequestError(400, "Invalid email address.");
-
+  // 5 Oct 2026: email OR phone, at least one. The website assistant's inline form
+  // asks for whichever the visitor will give; the full forms still require email
+  // in the browser. Whatever is given must look valid.
+  const email = scalar(formData, "email", 254);
   const phone = scalar(formData, "phone", 50);
+  if (!email && !phone) throw new QuoteRequestError(400, "Please add an email address or a phone number.");
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new QuoteRequestError(400, "Invalid email address.");
+  if (phone && (phone.replace(/\D/g, "").length < 7 || !/^[+\d\s().-]+$/.test(phone))) throw new QuoteRequestError(400, "Invalid phone number.");
   const service = allowlisted(scalar(formData, "service", 100), ALLOWED_SERVICES, "Invalid service selection.");
   const locale = allowlisted(scalar(formData, "locale", 8), ALLOWED_LOCALES, "Invalid locale.");
   const details = scalar(formData, "details", 5_000, { multiline: true });

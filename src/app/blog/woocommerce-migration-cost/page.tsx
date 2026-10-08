@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-08",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/woocommerce-migration-cost")],
@@ -74,7 +74,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/woocommerce-migration-cost"),
             datePublished: "2026-05-08",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -117,7 +117,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-08",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -155,14 +155,14 @@ export default function WooCommerceMigrationCostPage() {
                             payments and extensions all have to line up afterwards, and the shop has to keep trading
                             while it happens. That is what sets the price, far more than how many pages you have.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed against current WooCommerce and Google documentation on July 31, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Reviewed against current WooCommerce and Google documentation on October 8, 2026.</p>
                       </div>
                       <div data-article-hero-screen>
                         <BlogCoverFigure id="woocommerce-migration-cost" />
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 8, 2026" readTime="10 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="woocommerce-migration-cost" published="2026-05-08" readTime="13 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <div className="my-10">
                         <CostStackAnimation />
@@ -196,11 +196,12 @@ export default function WooCommerceMigrationCostPage() {
                     </div>
 
                     <BlogHeader id="data-vs-rebuild">Do you need your data moved, or your store rebuilt?</BlogHeader>
+                    {/* 8 Oct 2026: this named Shopify's "Store Importer". That listing now says the app is not available; Shopify's free replacement is Store Migration (apps.shopify.com/store-migration), which moves product and customer data. */}
                     <div data-speakable="true">
                         <BlogText>
                             <strong>If you only need the products, customers and orders to arrive somewhere else, do not
                             pay agency prices for it.</strong> Moving to Shopify or BigCommerce, that is a self-service
-                            job: Shopify publishes a free Store Importer, and paid services like Cart2Cart and
+                            job: Shopify publishes a free Store Migration app for product and customer data, and paid services like Cart2Cart and
                             LitExtension exist specifically to run catalog and order transfers for a fee that is
                             usually a small fraction of any build quote. If a vendor is charging you four figures purely
                             to move the data, ask which of those they are using.
@@ -480,7 +481,7 @@ export default function WooCommerceMigrationCostPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

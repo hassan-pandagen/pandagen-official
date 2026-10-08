@@ -326,7 +326,7 @@ export default function WebflowPageContent() {
 
           <div id="uptime" className="scroll-mt-24 mt-8 rounded-2xl border border-stone-200 bg-white p-6">
             <h3 className="text-xl font-bold text-charcoal mb-3">Hosting and support are part of the quote</h3>
-            <p className="text-stone-600 leading-relaxed text-sm">Hosting is agreed per client, including the account and any charge. Some clients host with us at no extra charge; others are billed for it. Hosting can move to your account on request or when the engagement ends. The quote also sets backup and support responsibilities. A new platform still has service dependencies and outage risk.</p>
+            <p className="text-stone-600 leading-relaxed text-sm">On a maintenance or SEO package, hosting on our Vercel account is included if you want it. Outside a package, hosting is agreed per client, including the account and any charge. Hosting can move to your account on request or when the engagement ends. The quote also sets backup and support responsibilities. A new platform still has service dependencies and outage risk.</p>
           </div>
           <p className="mt-6 text-sm text-stone-600">For current plan and renewal questions, use <a href="https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-4">Webflow&apos;s official guidance</a> alongside your invoices. Our <Link href="/blog/webflow-true-cost" className="text-cognac underline underline-offset-4">Webflow cost guide</Link> explains which ongoing costs to include.</p>
         </div>

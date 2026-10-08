@@ -1,9 +1,9 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
-import ServiceDetailPreview from "@/app/preview/services/ServiceDetailPreview";
-import { servicePreview } from "@/app/preview/services/service-data";
-import { previewServiceFaqs } from "@/app/preview/services/preview-faqs";
+import ServiceDetailPreview from "@/components/pages/services/ServiceDetailPreview";
+import { servicePreview } from "@/components/pages/services/service-data";
+import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 // 30 Sep 2026: renders the redesign (built under /preview/services). Metadata
 // stay here; the FAQ structured data now comes from the FAQs the redesign shows.
@@ -11,7 +11,7 @@ import { previewServiceFaqs } from "@/app/preview/services/preview-faqs";
 
 const path = "/services/squarespace";
 const name = "Squarespace Website Migration";
-const description = "Plan a Squarespace migration around content, URLs, metadata, forms, integrations, accessibility, analytics, launch validation, rollback, and ownership.";
+const description = "Improve your Squarespace site or migrate to a custom site with a Sanity editor your team can use. Plan content, commerce, scheduling and redirects.";
 
 export const metadata: Metadata = {
   title: name,

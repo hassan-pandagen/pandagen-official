@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-
 export function proxy() {
     const response = NextResponse.next();
 
@@ -35,15 +34,15 @@ export function proxy() {
         "Content-Security-Policy-Report-Only",
         [
             "default-src 'self'",
-            `script-src 'self' 'unsafe-inline'${devScriptSources} https://embed.tawk.to https://*.tawk.to https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://widget.trustpilot.com https://cal.com https://app.cal.com https://va.vercel-scripts.com https://www.googletagmanager.com`,
-            "style-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com https://api.fontshare.com",
-            "img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://www.facebook.com https://*.facebook.com https://*.tawk.to https://embed.tawk.to https://widget.trustpilot.com https://cal.com https://app.cal.com",
-            "font-src 'self' data: https://*.tawk.to https://cal.com https://app.cal.com https://cdn.fontshare.com",
-            "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com https://www.facebook.com https://connect.facebook.net https://*.tawk.to wss://*.tawk.to https://cal.com https://app.cal.com https://api.cal.com https://vitals.vercel-insights.com",
-            "frame-src https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com https://widget.trustpilot.com",
+            `script-src 'self' 'unsafe-inline'${devScriptSources} https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://widget.trustpilot.com https://cal.com https://app.cal.com https://va.vercel-scripts.com https://www.googletagmanager.com`,
+            "style-src 'self' 'unsafe-inline' https://cal.com https://app.cal.com",
+            "img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://www.facebook.com https://*.facebook.com https://widget.trustpilot.com https://cal.com https://app.cal.com",
+            "font-src 'self' data: https://cal.com https://app.cal.com",
+            "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com https://www.facebook.com https://connect.facebook.net https://cal.com https://app.cal.com https://api.cal.com https://vitals.vercel-insights.com",
+            "frame-src https://cal.com https://app.cal.com https://widget.trustpilot.com",
             "worker-src 'self' blob:",
             "manifest-src 'self'",
-            "media-src 'self' https://*.tawk.to",
+            "media-src 'self'",
             "object-src 'none'",
             "base-uri 'self'",
             "form-action 'self'",

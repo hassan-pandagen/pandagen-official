@@ -1,17 +1,17 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
-import ServiceDetailPreview from "@/app/preview/services/ServiceDetailPreview";
-import { servicePreview } from "@/app/preview/services/service-data";
-import { previewServiceFaqs } from "@/app/preview/services/preview-faqs";
+import ServiceDetailPreview from "@/components/pages/services/ServiceDetailPreview";
+import { servicePreview } from "@/components/pages/services/service-data";
+import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 // 30 Sep 2026: renders the redesign (built under /preview/services). Metadata
 // stay here; the FAQ structured data now comes from the FAQs the redesign shows.
 
 
 const path = "/services/woocommerce";
-const name = "WooCommerce Storefront Migration";
-const description = "Evaluate and scope WooCommerce theme repair, a headless storefront, or replatforming around customer journeys, data, integrations, performance, operations, and launch risk.";
+const name = "WooCommerce Development, Speed & Migration";
+const description = "Build or improve a WooCommerce storefront, or plan a migration. Compare the options for checkout, products, orders and launch before committing to a scope.";
 
 export const metadata: Metadata = {
   title: name,
@@ -22,5 +22,5 @@ export const metadata: Metadata = {
 };
 
 export default function WooCommerceServicePage() {
-  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="WooCommerce migration" faqs={previewServiceFaqs("woocommerce")} /><ServiceDetailPreview service={servicePreview("woocommerce")} /></>;
+  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="WooCommerce development" faqs={previewServiceFaqs("woocommerce")} /><ServiceDetailPreview service={servicePreview("woocommerce")} /></>;
 }

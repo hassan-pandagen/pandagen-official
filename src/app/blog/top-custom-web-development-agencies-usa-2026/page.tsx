@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-08",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/top-custom-web-development-agencies-usa-2026")],
@@ -73,7 +73,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/top-custom-web-development-agencies-usa-2026"),
             description,
             datePublished: "2026-04-08",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -140,7 +140,8 @@ const companies = [
     {
         name: "Baunfire",
         type: "Agency",
-        publicFocus: "Brand-led web design and development for technology companies",
+        // 8 Oct 2026: was "for technology companies". Baunfire's own site says it builds for "industry-leading brands and startups in Silicon Valley" and doesn't say technology companies.
+        publicFocus: "Brand-led web design and development for Silicon Valley brands and startups",
         verify: "Comparable B2B work, content scope, development stack and ongoing support",
         url: "https://www.baunfire.com/",
     },
@@ -175,7 +176,7 @@ const companies = [
     {
         name: "PandaCodeGen",
         type: "Publisher",
-        publicFocus: "SEO-safe migrations and custom Next.js delivery",
+        publicFocus: "Business websites, online stores and ongoing website support",
         verify: "Signed scope, acceptance evidence, ownership terms and relevant first-party work",
         url: "https://www.pandacodegen.com/services",
     },
@@ -227,7 +228,7 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                             itself.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Researched July 24, 2026. Service pages change, so confirm scope and terms directly.
+                            Researched July 24, 2026 and rechecked October 8, 2026. Service pages change, so confirm scope and terms directly.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -235,22 +236,19 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 8, 2026" readTime="5 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="top-custom-web-development-agencies-usa-2026" published="2026-04-08" readTime="11 min read" />
 
                     <BlogText>
-                        Two people close to the WordPress and WooCommerce ecosystem, quoted in their own words, with a link to each original post so you can read the whole thread.
+                        A WooCommerce practitioner describes the tradeoffs below. This is an attributed opinion, not comparative security or cost data.
                     </BlogText>
-                    <BlogQuote>
-                        We are not being killed by competition, I believe we have done this to ourselves. We keep driving away some of the most valuable people and rejecting them when they try to contribute.
-                    </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">Matt Mullenweg</strong> (WordPress founder) · April 14, 2026 · reported by The Repository · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    {/* 8 Oct 2026: removed quotation whose full source could not be independently rechecked. */}
                     <BlogQuote>
                         Plugin fatigue: people mention WooCommerce not working out of the box for their usecase, or having to install 30+ plugins and then when something goes wrong, troubleshooting becomes a nightmare. Fear of updating: people are scared that updating might break something basically. … Performance: people mentioning the store becoming sluggish.
                     </BlogQuote>
                     <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/sunyatasattva</strong> (WooCommerce Core team lead, writing personally, not officially) · r/woocommerce · Apr 20, 2026 · 21 upvotes · <a href="https://www.reddit.com/r/woocommerce/comments/1sqom3t/i_am_a_woocommerce_core_team_lead_advocating_for/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <InsightBox variant="warning" label="Commercial disclosure">
-                        Every company below is described from its own public pages, read on 13 September 2026.
+                        Every company below is described from its own public pages, read again on 8 October 2026.
                         Positioning changes, so check each site on the day you shortlist.
                         PandaCodeGen publishes this article, sells web-development services, and appears in the
                         shortlist. We do not rank ourselves first or claim independent superiority. Agencies are listed first in alphabetical order, then the two talent marketplaces, because they are different things to buy. Position within each group carries no ranking, and no placement was purchased.
@@ -359,6 +357,8 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                     <BlogText>
                         <a href="https://10up.com/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>10up</a>
                         {" "}publicly emphasizes enterprise WordPress, content-management solutions and digital tools.
+                        Since May 2025, 10up has been the name of Fueled&apos;s WordPress practice, so confirm which
+                        company you&apos;d be contracting with.
                         <a href="https://www.baunfire.com/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}> Baunfire</a>
                         {" "}describes a Silicon Valley web-focused design and development practice.
                         <a href="https://upstatement.com/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}> Upstatement</a>
@@ -403,11 +403,7 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
 
                     <BlogHeader>Where PandaCodeGen may fit</BlogHeader>
                     <BlogText>
-                        PandaCodeGen focuses on SEO-safe migrations for revenue-generating{" "}
-                        <Link href="/services/wordpress-migration" className="text-cognac hover:underline">WordPress</Link>,{" "}
-                        <Link href="/services/webflow" className="text-cognac hover:underline">Webflow</Link> and{" "}
-                        <Link href="/services/gohighlevel" className="text-cognac hover:underline">GoHighLevel</Link> sites, plus scoped{" "}
-                        <Link href="/services/custom-engineering" className="text-cognac hover:underline">custom application work</Link>.{" "}
+                        PandaCodeGen builds <Link href="/services" className="text-cognac hover:underline">business websites</Link> and <Link href="/services/ecommerce" className="text-cognac hover:underline">online stores</Link>, including custom builds and WordPress sites. We also improve and manage existing websites, with migrations, integrations and custom application work scoped to the business. {" "}
                         <Link href="/pricing" className="text-cognac hover:underline">Public starting tiers</Link> are $1,500 Starter,
                         $3,500 Growth and $5,000 Scale, with larger work discussed separately. Standard
                         payment is 30 percent at onboarding and 70 percent on delivery, subject to the signed project
@@ -504,10 +500,10 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
 
                     <BlogHeader>Sources and limitations</BlogHeader>
                     <BlogText>
-                        Two entries are not United States providers. Codeable and Lemon.io are talent marketplaces
-                        headquartered outside the US, included because American buyers routinely use them rather than
-                        because they meet the geography in this article&apos;s title. The rest position themselves as US providers on their own sites; we did not independently verify any company&apos;s headquarters. Company descriptions were checked against the official pages linked in the
-                        table on July 24, 2026. We did not independently verify unpublished staffing, pricing, availability, delivery quality. Ask each provider for a dated proposal and directly
+                        {/* 8 Oct 2026: removed "headquartered outside the US". We couldn't source it, and Lemon.io's own terms of use are governed by Delaware law. */}
+                        Two entries are not agencies. Codeable and Lemon.io are talent marketplaces, included because
+                        American buyers routinely use them rather than because they are US agencies. The rest position themselves as US providers on their own sites; we did not independently verify any company&apos;s headquarters. Company descriptions were checked against the official pages linked in the
+                        table on July 24, 2026 and again on October 8, 2026. We did not independently verify unpublished staffing, pricing, availability or delivery quality. Ask each provider for a dated proposal and directly
                         contactable references for comparable work.
                     </BlogText>
 
@@ -524,7 +520,7 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader>Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

@@ -36,7 +36,7 @@ export function OfferLine() {
     );
 }
 
-/** Shared page shell: title, one-line purpose, verified date, then the content. */
+/** Shared page shell: title, purpose and the original evidence-review date. */
 export function ReferenceIntro({
     title,
     purpose,
@@ -58,8 +58,8 @@ export function ReferenceIntro({
                 {purpose}
             </p>
             <p className="mt-4 text-xs text-stone-500">
-                Every value on this page was checked against source on {verified}. Figures that can change
-                carry the date they were checked. This page states facts about PandaCodeGen only.
+                Original evidence review: {verified}. Service and pricing details may be updated separately;
+                the accepted written agreement sets the terms of a project.
             </p>
         </header>
     );

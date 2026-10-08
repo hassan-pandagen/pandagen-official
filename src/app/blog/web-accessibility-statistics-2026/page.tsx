@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-13",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/web-accessibility-statistics-2026")],
@@ -75,7 +75,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/web-accessibility-statistics-2026"),
             datePublished: "2026-08-13",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -166,7 +166,7 @@ export default function WebAccessibilityStatistics2026Page() {
                             matters, and where the legal exposure sits, along with the parts the data cannot settle. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Figures verified against their sources on 13 August 2026. Each one is stated with the method
+                            Figures verified against their sources on 8 October 2026. Each one is stated with the method
                             behind it, because an accessibility percentage without a method is not a measurement.
                         </p>
                       </div>
@@ -175,7 +175,7 @@ export default function WebAccessibilityStatistics2026Page() {
                       </div>
                     </header>
 
-                    <BlogAuthor
+                    <BlogAuthor postId="web-accessibility-statistics-2026" published="2026-08-13"
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
                         bio="Hassan builds and migrates production websites, and writes the engineering guides on this site."
@@ -190,8 +190,9 @@ export default function WebAccessibilityStatistics2026Page() {
                         The percentage is not the interesting part. It has sat above 94% every year the study has run, and
                         a number that high stops carrying information. {finding("wcag-failure-rate-2026").note}
                     </BlogText>
+                    {/* 8 Oct 2026: said element counts rose 22.5% in a year. The WebAIM Million 2026 says 14.3% (to 1,437 elements per home page); 22.5% isn't the 2026 figure. */}
                     <BlogText>
-                        Home pages also got more complex. Average page element counts rose 22.5% in a single year, which
+                        Home pages also got more complex. Average page element counts rose 14.3% in a single year, which
                         is the likeliest mechanism: more elements means more places for a failure to occur, and the
                         failure rate rose alongside the complexity rather than independently of it.
                     </BlogText>
@@ -251,7 +252,10 @@ export default function WebAccessibilityStatistics2026Page() {
                         Squarespace and Wix scored better than WordPress. The likely reason is the same constraint that
                         frustrates people who outgrow those platforms: a hosted builder decides your markup, and markup
                         you cannot edit is markup you cannot break. If you are never going to change anything
-                        structural, that limitation is working in your favour.
+                        structural, that limitation is working in your favour. The same trade shows up in search,
+                        which{" "}
+                        <Link href="/blog/is-squarespace-bad-for-seo" className="text-cognac hover:underline">our review of whether Squarespace is bad for SEO</Link>{" "}
+                        works through.
                     </BlogText>
                     <BlogText>
                         The framework breakdown runs the other way. {finding("framework-errors-2026").statement}. And
@@ -353,20 +357,20 @@ export default function WebAccessibilityStatistics2026Page() {
                         replace, which we learned by trying the find and replace first and adding 51 new failures.
                     </BlogText>
                     <BlogText>
-                        <BlogHighlight>All 138 pages now report zero detected violations</BlogHighlight>, first
-                        confirmed on three consecutive runs and re-checked every time a page is added, most recently on
-                        18 August 2026. The scanner is in our repository, reads the sitemap so new pages are covered
-                        automatically, and runs against a local build before anything ships.
+                        <BlogHighlight>The recorded 18 August 2026 scan reported zero detected violations across 138 pages</BlogHighlight>,
+                        following three consecutive clean runs. That is a historical result for the version tested,
+                        not a current certification of the October redesign. The scanner reads the sitemap; the new
+                        release needs its own automated and manual accessibility checks.
                     </BlogText>
                     <BlogText>
                         Two things that number is not. It is not comparable to the 95.9% above, because that study uses
                         WAVE and we used axe-core, and comparing counts across tools is a measurement error rather than
                         a result. And zero detected violations is not conformance, for the same reason it is not
-                        conformance for anybody else on this page. It means the machine-checkable part is clean.
+                        conformance for anybody else on this page. It means that scan detected none of the issues covered by its rules on those pages at that time.
                     </BlogText>
                     <BlogText>
                         We are publishing the before number because the 95.9% figure includes sites built by people who
-                        know all of this. We were one of them. The useful part is not that we are now at zero, it is
+                        know all of this. We were one of them. The useful part of that historical result is
                         that finding out took one afternoon and a free tool, on a site nobody had ever scanned.
                     </BlogText>
 
@@ -401,12 +405,12 @@ export default function WebAccessibilityStatistics2026Page() {
                         <CalModalButton
                             className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100"
                         >
-                            Book a 30-minute review <ArrowRight className="h-4 w-4" />
+                            Book a 15-minute review <ArrowRight className="h-4 w-4" />
                         </CalModalButton>
                     </section>
 
                     <BlogHeader>Frequently asked questions</BlogHeader>
-                    <FAQAccordion faqs={postFAQs} />
+                    <FAQAccordion faqs={postFAQs} showHeading={false} />
 
                     <BlogText>
                         Related reading:{" "}

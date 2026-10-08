@@ -22,7 +22,8 @@ const ROW = 88; // px, heading row height; also the stacking step
 const NAV = 96; // px, clearance under the floating nav
 
 const platforms = [
-  { name: "WordPress", href: "/services/wordpress-migration" },
+  { name: "WordPress websites", href: "/services/wordpress" },
+  { name: "WordPress migration", href: "/services/wordpress-migration" },
   { name: "Shopify", href: "/services/ecommerce" },
   { name: "WooCommerce", href: "/services/woocommerce" },
   { name: "Wix", href: "/services/wix" },
@@ -41,15 +42,15 @@ type Service = {
 
 const services: Service[] = [
   {
-    title: "Migrations & New Builds",
+    title: "Website Builds & Migrations",
     // Plain-English editing line, verbatim from the homepage FAQ (home-faqs.ts,
     // "do I need a developer every time"), swapped in for the owner (24 Sep):
     // the inventory description read too technical for this spot. The
     // inventory work is real and still happens; it now sits in the note below.
-    body: "You get a website that is simple to run yourself. Sign in, change the words, swap a photo, update your opening hours or add a staff member, and the live site updates in about a minute. No deploy, no ticket and no developer.",
+    body: "Start with a simple WordPress website or a custom build around your business. We agree what your team can edit, then show you how to change the text, images and business details. You get written instructions and a live walkthrough with the founders.",
     note: {
       label: "Already have a website?",
-      text: "We list every page, every piece of content, your analytics, your forms and everything they connect to, then test the switchover against criteria you sign off. A custom storefront can still use Shopify for products and payments, a new site can keep your GoHighLevel CRM, and WordPress can stay as the editor if that suits you. You decide what stays; we work it out with you before quoting.",
+      text: "We can improve what you have or plan a move when it solves a real problem. Your quote names the content, URLs, forms and connections included in the work. We explain what stays, what changes and what it costs to run before you decide.",
     },
     link: { label: "Explore all services", href: "/services" },
     list: true,
@@ -106,7 +107,7 @@ export default function ServicesStack() {
                 <ArrowDownLeft className="h-7 w-7 justify-self-end md:col-span-1" style={{ color: T.onDarkQuiet }} aria-hidden="true" />
               </div>
 
-              <div className="grid gap-8 pb-20 pt-6 md:grid-cols-12 md:pb-28 md:pt-8">
+              <div className="grid gap-8 pb-14 pt-6 md:grid-cols-12 md:pb-20 md:pt-8">
                 <div className="md:col-span-6 md:col-start-6">
                   <p className="max-w-[36rem] text-[18px] leading-[1.6]" style={{ color: T.onDark }}>
                     {s.body}
@@ -155,14 +156,14 @@ export default function ServicesStack() {
   }
 
   return (
-    <section aria-labelledby="services-title" className="relative px-6 pb-24 pt-24 md:px-10 md:pb-40 md:pt-32" style={{ backgroundColor: T.dark, color: T.onDark }}>
+    <section aria-labelledby="services-title" className="relative px-6 pb-16 pt-16 md:px-10 md:pb-24 md:pt-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
       <div className="mx-auto max-w-[1440px]">
         <h2
           id="services-title"
           className="max-w-[32ch]"
-          style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2.6rem, 4.6vw, 4.4rem)", lineHeight: 1, letterSpacing: "-0.02em" }}
+          style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2.6rem, 4.6vw, 4.4rem)", lineHeight: 1.1, letterSpacing: "-0.02em", paddingBottom: "0.08em" }}
         >
-          Engineered around how your business runs, and what can break.
+          Engineered around how your <span style={{ color: T.onDarkAccent }}>business runs,</span> and what can break.
         </h2>
 
         {/* One grid: see the note at the top of the file. */}

@@ -1,9 +1,9 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
-import ServiceDetailPreview from "@/app/preview/services/ServiceDetailPreview";
-import { servicePreview } from "@/app/preview/services/service-data";
-import { previewServiceFaqs } from "@/app/preview/services/preview-faqs";
+import ServiceDetailPreview from "@/components/pages/services/ServiceDetailPreview";
+import { servicePreview } from "@/components/pages/services/service-data";
+import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 // 30 Sep 2026: renders the redesign (built under /preview/services). Metadata
 // stay here; the FAQ structured data now comes from the FAQs the redesign shows.
@@ -11,7 +11,7 @@ import { previewServiceFaqs } from "@/app/preview/services/preview-faqs";
 
 const path = "/services/webflow";
 const name = "Webflow Optimization & Migration Services";
-const description = "Get help with slow Webflow pages, CMS limits, forms and integrations. Scope improvements or a Next.js rebuild. Custom rebuilds from $1,500.";
+const description = "Improve a Webflow website or plan a new build. Review pages, CMS, forms and integrations, then compare focused improvements with a scoped Next.js build.";
 
 export const metadata: Metadata = {
   title: name,

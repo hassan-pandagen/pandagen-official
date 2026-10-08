@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-07-23",
-        modifiedTime: "2026-08-07",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/nextjs-sanity-stack")],
@@ -71,7 +71,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/nextjs-sanity-stack"),
             datePublished: "2026-07-23",
-            dateModified: "2026-08-07",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -137,6 +137,7 @@ export default function NextjsSanityStackPage() {
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
                 <article className="mx-auto max-w-4xl px-5 sm:px-8">
                     <Breadcrumb items={postCrumbs(postId, "Next.js and Sanity")} />
+                    <p className="mt-6 text-base leading-relaxed">Choosing a service? See <Link href="/services/sanity-development" className="underline">Sanity CMS development</Link> and the real client editor. For the decision first, compare <Link href="/blog/sanity-vs-wordpress" className="underline">Sanity vs WordPress</Link> or <Link href="/blog/sanity-vs-supabase" className="underline">Sanity vs Supabase</Link>.</p>
                     <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
@@ -154,7 +155,7 @@ export default function NextjsSanityStackPage() {
                             it is popular. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Assessed July 24, 2026 against current Sanity, Next.js and Google documentation. Pricing rechecked July 31, 2026.
+                            Updated October 7, 2026 with buying guides and service scope. Vendor pricing has its own dated review in the cost section below.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -162,7 +163,7 @@ export default function NextjsSanityStackPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="July 23, 2026" readTime="11 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="nextjs-sanity-stack" published="2026-07-23" readTime="16 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The decision in one minute</h2>
@@ -222,13 +223,12 @@ export default function NextjsSanityStackPage() {
                         When a 90-plus target is accepted, PandaCodeGen names representative pages, mobile and desktop
                         profiles and three recorded passing runs per page and profile in the signed terms.
                     </InsightBox>
-                    <InsightBox variant="info" label="What 25 document types looks like in practice">
-                        Panda Patches runs on this stack. Its Sanity Studio carries 25 registered document types,
-                        covering products, blog posts, FAQs, location pages, patch styles and company facts, among
-                        others. That number is the honest answer to &ldquo;how much modeling is this?&rdquo; A brochure
-                        site does not need 25. A catalog with categories, guides and reusable company facts gets there
-                        faster than most people expect, and every one of those types is a decision someone has to make
-                        before an editor can touch it. Disclosure: Panda Patches is owned and operated by <Link href="/about/imran" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Imran</Link> Raza
+                    <InsightBox variant="info" label="What a Sanity content model looks like in practice">
+                        Panda Patches runs on this stack. Its editor organizes content into models for products,
+                        blog posts, FAQs, location pages, patch styles and company facts. A document type is a
+                        reusable set of fields for one kind of content, not an uploaded PDF or a count of pages.
+                        A product type, for example, can hold many individual product entries. The right set of
+                        types depends on what the team needs to edit and reuse. Disclosure: Panda Patches is owned and operated by <Link href="/about/imran" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Imran</Link> Raza
                         Ladhani, a PandaCodeGen co-founder. PandaCodeGen built and maintains its platform and holds no
                         ownership stake, so treat this as operating experience rather than an independent client
                         reference.
@@ -266,7 +266,7 @@ export default function NextjsSanityStackPage() {
                         <BlogText>
                             <a href="https://www.ladies4jesus.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Ladies 4 Jesus</a>{" "}
                             went live on this stack and is public, so nothing below has to be taken on trust. It runs
-                            Next.js 16.2.7 on the App Router with React 19.2 and Tailwind v4, with Sanity v6 as the CMS
+                            Next.js 16 on the App Router with React 19.2 and Tailwind v4, with Sanity v6 as the CMS
                             and Vercel for hosting. The content model is nine schemas: two singletons for site settings
                             and one page, and seven document types for devotionals, testimonies, questions, generic
                             pages, comments, contact messages and content reports.
@@ -351,7 +351,7 @@ export default function NextjsSanityStackPage() {
 
                     <BlogHeader>Current Sanity pricing needs careful reading</BlogHeader>
                     <BlogText>
-                        Sanity&apos;s pricing page, rechecked on 13 September 2026, lists Free at $0 for individuals experimenting or shipping
+                        Sanity&apos;s pricing page, rechecked on 8 October 2026, lists Free at $0 for individuals experimenting or shipping
                         smaller projects, with up to 20 seats, two permission roles and two public-only datasets. It
                         lists Growth at $15 per seat per month with up to 50 seats and five roles. Growth does not
                         raise the dataset count: it is still two, but they can be private rather than public only.
@@ -362,7 +362,7 @@ export default function NextjsSanityStackPage() {
                         bandwidth you get, how many assets and webhooks, how many roles, and which features are
                         included. The document cap is the one most likely to bind first: <strong>10,000 on Free and
                         25,000 on Growth</strong>, and drafts count toward it. The other meters do not move between
-                        those two plans at all &mdash; API requests (250,000/month), API CDN requests (1 million/month),
+                        those two plans at all: API requests (250,000/month), API CDN requests (1 million/month),
                         assets (100 GB) and bandwidth (100 GB) are identical on Free and Growth, and only Growth can
                         exceed them by paying. Free is not accurately described as covering “most business websites.” Match dataset
                         privacy, editor roles, document volume, usage, preview, scheduling, security and support needs
@@ -415,7 +415,10 @@ export default function NextjsSanityStackPage() {
                     <BlogText>
                         <BlogHighlight>What follows from it is a hiring and continuity question, not a quality one.</BlogHighlight>{" "}
                         A niche CMS means a smaller pool of people who have used it, and a slower answer when you search
-                        for a problem. That is a real cost and it is separate from whether the software is good. Weigh it
+                        for a problem. That is a real cost and it is separate from whether the software is good. If
+                        you will hire for it, ask each candidate what they have shipped on this stack;{" "}
+                        <Link href="/blog/top-nextjs-agencies-2026" className={sourceLinkClass}>our Next.js agency shortlist</Link>{" "}
+                        lists the other questions worth asking. Weigh it
                         against the thing the next section is about, which is whether the editing experience actually
                         works for the person who has to use it every week.
                     </BlogText>
@@ -429,7 +432,9 @@ export default function NextjsSanityStackPage() {
                         WordPress, Contentful, Payload, Storyblok, Sanity and file-based content have different strengths,
                         licensing, deployment and operating models. If anyone tells you Sanity is safer, cheaper, faster or more flexible, ask what they compared it
                         against, on what date, and whether both sides covered the same scope. Judge the plan you would
-                        actually be on and the way it would actually be built.
+                        actually be on and the way it would actually be built. Newer options belong on the same list;{" "}
+                        <Link href="/blog/cloudflare-emdash-wordpress-replacement" className={sourceLinkClass}>our review of Cloudflare&apos;s EmDash CMS</Link>{" "}
+                        applies these questions to one of them.
                     </BlogText>
                     <BlogList
                         items={[
@@ -578,7 +583,7 @@ export default function NextjsSanityStackPage() {
                     </section>
 
                     <BlogHeader>Frequently asked questions</BlogHeader>
-                    <FAQAccordion faqs={postFAQs} />
+                    <FAQAccordion faqs={postFAQs} showHeading={false} />
                     <TopicUpLink postId={postId} />
 
                     <RelatedPosts currentPostId={postId} />

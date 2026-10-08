@@ -17,6 +17,13 @@ export type OgContent = {
 type StaticOgContent = Omit<OgContent, "path" | "version">;
 
 const staticPages: Record<string, StaticOgContent> = {
+  "/services/backend-development": { title: "Backend Development: Supabase, Postgres & APIs", label: "Website and application development", description: "Databases, sign-in, file storage and admin screens for your business. Usually built on Supabase, or around the database you already have." },
+  "/services/sanity-development": { title: "Sanity CMS & Next.js Website Development", label: "Website and application development", description: "Custom websites with a Sanity editor your team can use. Scope content models, migration, preview, publishing and an editing walkthrough with the founders." },
+  "/services/wordpress": {
+    title: "WordPress Website Design & Development",
+    label: "WordPress Websites",
+    description: "A website your team can update, with a written quote and a live walkthrough. Work directly with the founders.",
+  },
   "/": {
     title: "Custom Website Design & Development",
     label: "PandaCodeGen",
@@ -93,24 +100,24 @@ const staticPages: Record<string, StaticOgContent> = {
     description: "New website builds, redesigns and migrations, online stores and custom software, scoped in writing before work starts.",
   },
   "/services/custom-engineering": {
-    title: "Custom Software",
-    label: "Complex Requirements",
-    description: "Custom application and integration work scoped around explicit requirements, acceptance criteria, ownership, and handover.",
+    title: "Custom Web Development Agency",
+    label: "Custom Engineering service",
+    description: "Custom web development for portals, dashboards and internal tools. Work with the founders on data, integrations, permissions and handover.",
   },
   "/services/ecommerce": {
-    title: "Ecommerce Engineering",
-    label: "Commerce Systems",
-    description: "Storefront, catalog, checkout, payment, analytics, integration, and operational requirements mapped as one system.",
+    title: "Shopify & WooCommerce Ecommerce Development",
+    label: "Ecommerce service",
+    description: "Build or improve a Shopify or WooCommerce store. Plan products, checkout and orders together, with a custom storefront where the requirements justify it.",
   },
   "/services/gohighlevel": {
-    title: "GoHighLevel Website Migration",
-    label: "Migration Service",
-    description: "Keep the CRM workflows that work while replacing a constrained public website with a controlled frontend.",
+    title: "GoHighLevel Website Speed & Custom Builds",
+    label: "Gohighlevel service",
+    description: "GHL site slow or outgrown the builder? Improve your pages, or keep GoHighLevel CRM and connect a custom site to forms, calendars and pipelines.",
   },
   "/services/squarespace": {
     title: "Squarespace Website Migration",
-    label: "Migration Service",
-    description: "Move content, forms, domains, analytics, URLs, and integrations with a documented cutover and redirect plan.",
+    label: "Squarespace service",
+    description: "Improve your Squarespace site or migrate to a custom site with a Sanity editor your team can use. Plan content, commerce, scheduling and redirects.",
   },
   "/services/webflow": {
     title: "Webflow Optimization & Migration Services",
@@ -119,13 +126,13 @@ const staticPages: Record<string, StaticOgContent> = {
   },
   "/services/wix": {
     title: "Wix Website Migration",
-    label: "Migration Service",
-    description: "Inventory the current site, apps, content, forms, domains, analytics, and search signals before rebuilding.",
+    label: "Wix service",
+    description: "Improve your Wix site or move to a custom website with a Sanity editor your team can use. Plan content, forms, integrations and URL redirects.",
   },
   "/services/woocommerce": {
-    title: "WooCommerce Migration",
-    label: "Commerce Migration",
-    description: "Protect catalog, customers, orders, checkout, payments, integrations, URLs, and operating workflows during change.",
+    title: "WooCommerce Development, Speed & Migration",
+    label: "Woocommerce service",
+    description: "Build or improve a WooCommerce storefront, or plan a migration. Compare the options for checkout, products, orders and launch before committing to a scope.",
   },
   "/services/wordpress-migration": {
     title: "WordPress Migration",
@@ -224,7 +231,7 @@ export function ogImageUrlForPath(path: string) {
   const content = ogContentForPath(path);
   if (content.path.startsWith("/blog/")) {
     const post = blogPosts.find((candidate) => `/blog/${candidate.id}` === content.path);
-    if (post) return new URL(`/blog-covers/og/${post.id}.webp?v=20260929c`, SITE_URL).toString();
+    if (post) return new URL(`/blog-covers/og/${post.id}.webp?v=20261001`, SITE_URL).toString();
   }
   const url = new URL("/og", SITE_URL);
   url.searchParams.set("path", content.path);

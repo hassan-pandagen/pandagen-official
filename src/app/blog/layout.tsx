@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PreviewShell from "@/components/redesign/PreviewShell";
+import ArticleReadingCue from "@/components/blog/ArticleReadingCue";
 import styles from "./BlogRedesign.module.css";
 
 // Blog posts opt out of the root "%s | PandaCodeGen" title template: post titles
@@ -17,7 +18,10 @@ export const metadata: Metadata = {
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
   return (
     <PreviewShell condensed contentTag="div">
-      <div className={styles.surface}>{children}</div>
+      <div className={styles.surface}>
+        {children}
+        <ArticleReadingCue />
+      </div>
     </PreviewShell>
   );
 }

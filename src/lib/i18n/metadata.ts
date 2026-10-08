@@ -19,17 +19,22 @@ import { getDictionary, type TranslatedLocale } from "./dictionaries";
 export function localeMetadata(locale: TranslatedLocale, page: LocalizedPage): Metadata {
   const { meta } = getDictionary(locale)[page];
   const url = urlFor(page, locale);
+  const description = page === "services"
+    ? locale === "fr"
+      ? "Sites WordPress, boutiques en ligne, logiciels sur mesure et migrations. Comparez les options selon votre projet, avec un devis écrit avant les travaux."
+      : "WordPress-Websites, Onlineshops, individuelle Software und Migrationen. Vergleichen Sie die passende Lösung und erhalten Sie vor Beginn ein schriftliches Angebot."
+    : meta.description;
 
   return {
     title: { absolute: meta.title },
-    description: meta.description,
+    description,
     alternates: alternatesFor(page, locale),
     openGraph: {
       type: "website",
       url,
       siteName: "PandaCodeGen",
       title: meta.title,
-      description: meta.description,
+      description,
       locale: localeTags[locale].replace("-", "_"),
       alternateLocale: locales
         .filter((other) => other !== locale)
@@ -39,7 +44,7 @@ export function localeMetadata(locale: TranslatedLocale, page: LocalizedPage): M
     twitter: {
       card: "summary_large_image",
       title: meta.title,
-      description: meta.description,
+      description,
       images: [ogImageForPath(routes[page].en)],
     },
   };

@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-20",
-        modifiedTime: "2026-09-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-vs-custom-code-real-cost-3-years")],
@@ -68,7 +68,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-vs-custom-code-real-cost-3-years"),
             description,
             datePublished: "2026-02-20",
-            dateModified: "2026-09-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -147,22 +147,19 @@ export default function WordPressVsCustomCostPage() {
                             page gives you instead is the arithmetic: the same capabilities, demand and labor on both
                             sides, with every term visible so the result can be checked rather than taken on trust.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Platform and commercial references checked September 19, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Platform and commercial references checked October 8, 2026.</p>
                       </div>
                       <div data-article-hero-screen>
                         <BlogCoverFigure id="wordpress-vs-custom-code-real-cost-3-years" />
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 20, 2026" readTime="11 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wordpress-vs-custom-code-real-cost-3-years" published="2026-02-20" readTime="11 min read" />
 
                     <BlogText>
-                        Before the model, here is how the founder of WordPress and two people who run it every day described the platform in April 2026. The words are theirs, and each links to the original post.
+                        Before the model, here are two practitioners describing their experience of WordPress. Their opinions are context, not measured cost inputs.
                     </BlogText>
-                    <BlogQuote>
-                        We are not being killed by competition, I believe we have done this to ourselves. When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen.
-                    </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg (WordPress co-founder) · April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    {/* 8 Oct 2026: removed quotation whose full source could not be independently rechecked. */}
                     <BlogQuote>
                         Every time you load a page or post, WP wants to retrieve info from the database. While that may have made sense in the beginning, we are long since past the point where the content on pages (and posts for that matter) don&apos;t change enough to matter. WP architecture should really have switched over to treating the site cache as the primary site, with the database being treated as the backup.
                     </BlogQuote>
@@ -224,7 +221,7 @@ export default function WordPressVsCustomCostPage() {
                         architectural version of this comparison, see{" "}
                         <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress compared with Next.js</Link>{" "}
                         and{" "}
-                        <Link href="/blog/wordpress-killer" className="text-cognac hover:underline">what actually replaces WordPress</Link>.
+                        <Link href="/blog/cloudflare-emdash-wordpress-replacement" className="text-cognac hover:underline">what Cloudflare built as a WordPress replacement</Link>.
                     </BlogText>
 
                     <BlogHeader id="requirements">Freeze a shared capability baseline</BlogHeader>
@@ -320,6 +317,30 @@ export default function WordPressVsCustomCostPage() {
                         show where the hours usually go.
                     </BlogText>
 
+                    <BlogHeader id="invoices">Collect the recurring invoices first</BlogHeader>
+                    <BlogText>
+                        Start the WordPress column with what you already pay, because the real number is rarely the one
+                        people quote from memory. Pull the last twelve months of invoices and renewal notices and sort
+                        them into six groups. Work from what was billed, not from the list of installed plugins: the
+                        lines that get forgotten are the annual renewals and the support retainer that has been
+                        running since launch.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Hosting, the CDN, storage, backups, a staging site and your domain",
+                            "Your theme, the page builder, and the plugins doing forms, SEO, security, caching and media",
+                            "Commerce, subscriptions, bookings, memberships and payment-related extensions",
+                            "Search, email sending, analytics, the consent banner, chat, monitoring, and anything wiring them together",
+                            "Agency, freelancer, care-plan and emergency-support retainers",
+                            "Taxes, currency, overages, seats and annual renewal changes",
+                        ]}
+                    />
+                    <BlogText>
+                        Public list prices can differ from what you pay on a contracted, grandfathered, promotional or
+                        usage-based plan, so the invoice wins. For every line, note who is billed, when it renews, how
+                        much of it you actually use, what depends on it, and what breaks if you cancel it.
+                    </BlogText>
+
                     <BlogHeader id="custom-inputs">Custom-code inputs</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
@@ -389,12 +410,12 @@ export default function WordPressVsCustomCostPage() {
                                 </thead>
                                 <tbody>
                                     {[
-                                        ["Build or setup", "$500 – $3,000", "$3,500 (our Growth package)"],
-                                        ["Hosting, 3 years", "$300 – $900", "$720 – $1,500"],
-                                        ["Plugins, themes, licences, 3 years", "$150 – $600", "$0"],
-                                        ["Outsourced maintenance, 3 years", "$0 self-managed, or $1,500 – $4,500", "$0 – $1,500"],
+                                        ["Build or setup", "$500 to $3,000", "$3,500 (our Growth package)"],
+                                        ["Hosting, 3 years", "$300 to $900", "$720 to $1,500"],
+                                        ["Plugins, themes, licences, 3 years", "$150 to $600", "$0"],
+                                        ["Outsourced maintenance, 3 years", "$0 self-managed, or $1,500 to $4,500", "$0 to $1,500"],
                                         ["Internal time, 2 hrs/month at $50", "$3,600", "$3,600"],
-                                        ["Three-year total", "$4,550 – $12,600", "$7,820 – $10,100"],
+                                        ["Three-year total", "$4,550 to $12,600", "$7,820 to $10,100"],
                                     ].map(([line, wp, custom], idx, arr) => (
                                         <tr key={line} className={`border-t border-stone-200 align-top ${idx === arr.length - 1 ? "bg-stone-50 font-bold text-charcoal" : ""}`}>
                                             <td className="px-4 py-3">{line}</td>
@@ -444,6 +465,14 @@ export default function WordPressVsCustomCostPage() {
                         privileges, patch ownership, secret management, logging, backups and response. Base incident
                         costs on the organization&apos;s history or an approved risk method, not a generic hack-cost
                         average.
+                    </BlogText>
+                    <BlogText>
+                        For incidents you&apos;ve already had, write down the hours spent responding, what outside help
+                        invoiced, how long the site was down, the transactions that failed, what recovering the data
+                        took, the extra support load, any legal review and who you had to notify. Keep possible future
+                        incidents in a separately labelled contingency line. For the exposure behind that line on a
+                        WordPress site, read our review of{" "}
+                        <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">WordPress security risk in 2026</Link>.
                     </BlogText>
 
                     <BlogHeader id="performance">Performance and business effect</BlogHeader>
@@ -525,6 +554,27 @@ export default function WordPressVsCustomCostPage() {
                         <Link href="/blog/do-you-own-your-website" className="text-cognac hover:underline">do you own your website</Link>.
                     </BlogText>
 
+                    <BlogHeader id="three-options">Price three options, not two</BlogHeader>
+                    <BlogText>
+                        &ldquo;WordPress or custom&rdquo; hides a third choice: fixing the site you
+                        have without leaving WordPress. Put all three through the same model, with the same inputs.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Maintain: keep the current build but fund it properly. Update supported software, retire unused or overlapping plugins, pay for routine QA, security, backups and incident readiness, and replace fragile integrations only where the evidence says to.",
+                            "Optimize or rebuild within WordPress: a new theme or template system, a hosting change, database repair or plugin consolidation can fix measured problems while your content and editors stay where they are. Price the staging, QA, launch and retraining too.",
+                            "Migrate to a custom stack: discovery, design, build, content and data migration, replacing what the plugins did, search continuity, testing, cutover and support, plus the hosting, CMS and engineering time to run it afterwards.",
+                        ]}
+                    />
+                    <BlogText>
+                        Page-builder debt is often what decides between the second and third options, so test it
+                        directly with{" "}
+                        <Link href="/blog/elementor-kills-seo" className="text-cognac hover:underline">how Elementor affects SEO</Link>{" "}
+                        and{" "}
+                        <Link href="/blog/divi-theme-slow" className="text-cognac hover:underline">why Divi sites load slowly</Link>{" "}
+                        before you price a rebuild.
+                    </BlogText>
+
                     <BlogHeader id="choose-wordpress">When WordPress may win</BlogHeader>
                     <BlogText>
                         WordPress may be the lower-risk and lower-cost choice when the current workflows fit, maintained
@@ -547,7 +597,7 @@ export default function WordPressVsCustomCostPage() {
 
                     <BlogHeader id="terms">PandaCodeGen as one quote input</BlogHeader>
                     <BlogText>
-                        PandaCodeGen planning tiers are $1,500 Starter, $3,500 Growth and $5,000 Scale,
+                        PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale,
                         with custom work scoped separately. A common payment option is 30 percent at onboarding and 70 percent
                         on delivery. Use your written quote as the input and compare it with an equivalent
                         WordPress option covering the same work. These starting tiers do not prove three-year savings. The tier
@@ -560,7 +610,7 @@ export default function WordPressVsCustomCostPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

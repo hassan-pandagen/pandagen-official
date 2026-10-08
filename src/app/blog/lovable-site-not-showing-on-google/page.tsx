@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-07-12",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/lovable-site-not-showing-on-google")],
@@ -81,7 +81,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/lovable-site-not-showing-on-google"),
             datePublished: "2026-07-12",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -124,7 +124,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-07-12",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -172,7 +172,7 @@ export default function LovableSiteNotShowingPage() {
                             you for a rebuild. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Checked against current Lovable and Google documentation on July 31, 2026.
+                            Checked against current Lovable and Google documentation on October 8, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -180,7 +180,7 @@ export default function LovableSiteNotShowingPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="July 12, 2026" readTime="7 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="lovable-site-not-showing-on-google" published="2026-07-12" readTime="10 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <div className="my-10">
                         <CrawlerBlindAnimation />
@@ -287,18 +287,22 @@ export default function LovableSiteNotShowingPage() {
                     </InsightBox>
 
                     <BlogHeader>Step 2: use Lovable&apos;s current review</BlogHeader>
+                    {/* 8 Oct 2026: this list used to include performance, accessibility and mobile usability.
+                        Lovable's SEO docs now say the review no longer runs Lighthouse audits and doesn't report
+                        on those three, and point to PageSpeed Insights instead. */}
                     <BlogText>
                         Lovable&apos;s SEO and AI search review checks metadata, Open Graph data, structured data,
-                        content structure, robots.txt, sitemap, indexing, performance, accessibility and mobile
-                        usability. Published projects receive additional live checks. The scan does not rerun
-                        automatically on every publish, so run it again after a material change and confirm the result
-                        reflects the latest code.
+                        content structure, robots.txt, sitemap and indexing. It no longer runs Lighthouse, so it
+                        doesn&apos;t report on page speed, accessibility or mobile usability; Lovable sends you to
+                        PageSpeed Insights for those. Published projects receive additional live checks. The scan does
+                        not rerun automatically on every publish, so run it again after a material change and confirm
+                        the result reflects the latest code.
                     </BlogText>
                     <BlogText>
                         Lovable also documents a Google Search Console workflow when its connector is enabled. Verify
                         the intended property, publish the latest routes and submit the current sitemap. A passing
-                        platform scan is useful technical evidence, not a promise that a page will rank. Treat the
-                        performance part of that scan the way our{" "}
+                        platform scan is useful technical evidence, not a promise that a page will rank. Run the
+                        speed checks in PageSpeed Insights the way our{" "}
                         <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">
                             repeatable PageSpeed process
                         </Link>{" "}
@@ -476,7 +480,7 @@ export default function LovableSiteNotShowingPage() {
                         Correction, July 24, 2026: an earlier version of this article said Lovable, Bolt and Replit all
                         deliver an empty shell to every crawler, and presented migrating to Next.js as the fix.
                         Lovable&apos;s documentation contradicts that, and the byte counts quoted were not reproducible.
-                        The article was rewritten around the documented behavior. Sources rechecked July 31, 2026.
+                        The article was rewritten around the documented behavior. Sources rechecked October 8, 2026.
                     </p>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
@@ -493,7 +497,7 @@ export default function LovableSiteNotShowingPage() {
                     </section>
 
                     <BlogHeader>Frequently asked questions</BlogHeader>
-                    <FAQAccordion faqs={postFAQs} />
+                    <FAQAccordion faqs={postFAQs} showHeading={false} />
                     <TopicUpLink postId={postId} />
 
                     <RelatedPosts currentPostId={postId} />

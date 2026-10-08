@@ -48,15 +48,24 @@ const nextConfig = {
   // 8. Catch malformed URLs (e.g. pandacodegen.com/$ from broken external links)
   async redirects() {
     return [
+      // 8 Oct 2026: the Supabase service page became /services/backend-development before
+      // launch; this keeps any early link working.
+      { source: '/services/supabase-development', destination: '/services/backend-development', permanent: true },
       // The four granular /ai-info reference pages were RESTORED on 8 Aug 2026.
       // They were consolidated in July to stop the same fact drifting across pages;
       // that risk is now handled by src/data/company-facts.ts holding each fact once
       // and every page importing it, so the surface is back without the drift.
       // competitor-comparison stays redirected: a factual page about other companies
       // would need vendor pricing this environment cannot verify.
+      // Retargeted 4 Oct 2026 from /pricing to the Next.js agency shortlist. The URL
+      // still drew 515 impressions in the 90 days to 3 Oct, 339 of them on "bejamas
+      // vs pagepro" (position 6.7), and top-nextjs-agencies-2026 ranked 3.7 on that
+      // same query. A comparison search should land on the disclosed shortlist that
+      // covers both agencies, not on our price list. The reason above is about not
+      // rebuilding the page, and it still holds; it never argued for /pricing.
       {
         source: '/ai-info/competitor-comparison',
-        destination: '/pricing',
+        destination: '/blog/top-nextjs-agencies-2026',
         permanent: true,
       },
       // /blog/topic has no index of its own: the hub list lives above the fold
@@ -98,6 +107,32 @@ const nextConfig = {
       {
         source: '/blog/google-march-2026-update',
         destination: '/blog/google-algorithm-updates',
+        permanent: true,
+      },
+      // Three same-intent merges, 4 Oct 2026 (SEO audit, docs/research/
+      // seo-skill-pack-audit-2026-10-04/D-quality-and-duplicates.md, Cluster 4).
+      // Each pair answered one question twice and neither losing page earned a
+      // click in the 90 days to 3 Oct, so little search traffic was at stake. The
+      // unique, still-accurate sections and FAQs were moved into the survivor first.
+      //   wordpress-killer (17 impressions) -> the three-year cost model (18, 1 click)
+      //   how-to-cut-saas-bill-2026 (10) -> saas-software-pricing-audit-2026 (724)
+      //   why-is-my-website-loading-so-slow (28) -> how-to-speed-up-your-website (37)
+      // The fourth pair in the audit (shopify-slow-losing-sales) was NOT merged: it
+      // had more impressions than its proposed survivor and ranked for different
+      // queries (sales decline, growth slowing), so it keeps its own URL.
+      {
+        source: '/blog/wordpress-killer',
+        destination: '/blog/wordpress-vs-custom-code-real-cost-3-years',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-cut-saas-bill-2026',
+        destination: '/blog/saas-software-pricing-audit-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/why-is-my-website-loading-so-slow',
+        destination: '/blog/how-to-speed-up-your-website',
         permanent: true,
       },
       // Panda CodeLab was taken off the portfolio on 30 Sep 2026 (owner's call).

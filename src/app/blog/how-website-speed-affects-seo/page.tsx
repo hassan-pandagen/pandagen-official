@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-09",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-website-speed-affects-seo")],
@@ -64,7 +64,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/how-website-speed-affects-seo"),
             description,
             datePublished: "2026-03-09",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -142,7 +142,7 @@ export default function SpeedAndSeoGuide() {
                             fundamental. There is no universal “100 milliseconds equals one percent” rule.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 3, 2026 against current Google Search and PageSpeed guidance.
+                            Reviewed October 8, 2026 against current Google Search and PageSpeed guidance.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -150,7 +150,7 @@ export default function SpeedAndSeoGuide() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="March 9, 2026" readTime="5 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="how-website-speed-affects-seo" published="2026-03-09" readTime="10 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The defensible answer</h2>
@@ -197,7 +197,7 @@ export default function SpeedAndSeoGuide() {
 
                     <BlogHeader>What Google confirms about Core Web Vitals</BlogHeader>
                     <BlogText>
-                        Google&apos;s guidance, as read on August 3, 2026, defines Core Web Vitals as real-user metrics for loading,
+                        Google&apos;s guidance, as read on October 8, 2026, defines Core Web Vitals as real-user metrics for loading,
                         responsiveness and visual stability. At the 75th percentile, the published “good” thresholds are
                         LCP within 2.5 seconds, INP within 200 milliseconds and CLS at or below 0.1. Google says its
                         ranking systems use these metrics, while also stating that strong page experience does not
@@ -246,8 +246,8 @@ export default function SpeedAndSeoGuide() {
                     <BlogText>
                         Several mechanisms can produce that pattern, and they are worth separating before deciding what
                         to fix. The technical side is covered in{" "}
-                        <Link href="/blog/why-is-my-website-loading-so-slow" className="text-cognac hover:underline">
-                            why a website loads slowly
+                        <Link href="/blog/how-to-speed-up-your-website" className="text-cognac hover:underline">
+                            how to find what slows a website down
                         </Link>
                         , and the search side in our{" "}
                         <Link href="/blog/why-competitor-outranks-you" className="text-cognac hover:underline">
@@ -411,6 +411,10 @@ export default function SpeedAndSeoGuide() {
                         or{" "}
                         <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline">
                             diagnosing a Shopify Dawn theme
+                        </Link>
+                        . On GoHighLevel, the same check is{" "}
+                        <Link href="/blog/gohighlevel-website-speed" className="text-cognac hover:underline">
+                            speeding up a GoHighLevel website
                         </Link>
                         .
                     </BlogText>

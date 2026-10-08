@@ -14,8 +14,8 @@ const sourceKeys = [
 ];
 export const photoSources = Object.fromEntries(sourceKeys.map((key) => [key, `${key}.webp`]));
 
-// Every article gets an explicit subject choice. The grid should read as an
-// editorial collection, with screen photographs reserved for product topics.
+// Every article has a candidate photo, but generate-blog-covers.mjs keeps each
+// source photo on one article only. Other articles use distinct editorial art.
 const coverByArticle = {
   "ai-built-website-checklist": "site-plan",
   "is-it-cheaper-to-build-your-own-website": "invoice-detail",
@@ -105,6 +105,16 @@ const coverByArticle = {
   "how-to-achieve-100-pagespeed": "performance-alt",
   "how-to-fix-slow-wordpress": "stopwatch-phone",
   "what-is-headless-commerce": "code-notes",
+  // 4 Oct 2026: contract-handover stays with do-you-own-your-website, so this
+  // post uses unique/website-portability.webp. That file is a placeholder drawn
+  // locally from the post's own comparison data (no image API was available);
+  // replace it with a generated editorial photograph like the other unique covers.
+  "website-portability": "contract-handover",
+  // 4 Oct 2026: these two use unique/<id>.webp, which are tighter crops of the
+  // search-closeup and wordpress-screen photographs (no image API was available
+  // locally). Replace them with generated editorial photographs when one is.
+  "is-wix-bad-for-seo": "search-closeup",
+  "gohighlevel-vs-wordpress": "wordpress-screen",
 };
 
 export function photoFor(post) {

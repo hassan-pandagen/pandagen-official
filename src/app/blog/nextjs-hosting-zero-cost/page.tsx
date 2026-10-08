@@ -171,7 +171,7 @@ export default function NextjsHostingZeroCostPage() {
                         </p>
 
                         <BlogAuthor
-                            date="Mar 13, 2026"
+                            postId="nextjs-hosting-zero-cost" published="2026-03-13"
                             readTime="22 min read"
                             bio="Hassan is PandaCodeGen's co-founder and lead engineer. He plans Next.js migrations around four things: speed you can measure, search traffic that survives the move, code someone else can maintain, and infrastructure the client owns."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
@@ -364,7 +364,7 @@ export default function NextjsHostingZeroCostPage() {
 
                         <BlogList items={[
                             `Fast Data Transfer on Vercel's Hobby plan: ${spec("vercel-hobby-fast-data-transfer").value}, as of ${asOf("vercel-hobby-fast-data-transfer")}.`,
-                            `Fast Origin Transfer on Vercel's Hobby plan: ${spec("vercel-hobby-fast-origin-transfer").value}, as of ${asOf("vercel-hobby-fast-origin-transfer")}. This is the cap that gets left out of the comparisons, and on an uncached or image-heavy site it is reached long before the 100 GB Fast Data Transfer figure.`,
+                            `Fast Origin Transfer on Vercel's Hobby plan: ${spec("vercel-hobby-fast-origin-transfer").value}, as of ${asOf("vercel-hobby-fast-origin-transfer")}. This is the cap that gets left out of the comparisons. Vercel meters it on requests the CDN cannot answer from cache, so an uncached or dynamic site uses it up faster than a well-cached one.`,
                             `CDN Requests (Vercel's new name for Edge Requests): ${spec("vercel-hobby-cdn-requests").value}.`,
                             "Function Invocations: 1,000,000 included.",
                             "Active CPU: 4 CPU-hours. Provisioned Memory: 360 GB-hours.",
@@ -484,9 +484,9 @@ export default function NextjsHostingZeroCostPage() {
                             set to. If a Hobby project is approaching a limit, the two things that
                             move the number most are reducing page weight and serving large media from storage designed
                             for it instead of shipping it with the deployment, keeping in mind the shared-allowance point
-                            above. Our guides to <Link href="/blog/why-is-my-website-loading-so-slow" className="text-cognac hover:underline">tracing a slow-loading site</Link> and{" "}
-                            <Link href="/blog/how-to-speed-up-your-website" className="text-cognac hover:underline">speeding up a website</Link> both
-                            start with page weight, which is the same lever.
+                            above. Our guide to{" "}
+                            <Link href="/blog/how-to-speed-up-your-website" className="text-cognac hover:underline">speeding up a website</Link>{" "}
+                            measures page weight early, which is the same lever.
                         </BlogText>
 
                         <BlogHeader id="commercial-use">Can You Use the Vercel Free Plan for a Business Site?</BlogHeader>
@@ -517,8 +517,7 @@ export default function NextjsHostingZeroCostPage() {
                         ]} />
 
                         <BlogText>
-                            Donations used to be on that list. Vercel&apos;s guidelines now say the opposite: asking for
-                            donations does not count as commercial usage.
+                            Asking for donations does not count as commercial usage under Vercel&apos;s guidelines.
                         </BlogText>
 
                         <BlogText>
@@ -632,7 +631,7 @@ export default function NextjsHostingZeroCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Cloudflare Workers.</strong> Cloudflare&apos;s current Next.js guide uses the OpenNext adapter on Workers and documents broad App Router, Pages Router, SSR, SSG, ISR, Server Actions, and streaming support, with some feature-specific limitations. Compare Workers pricing and limits with the app&apos;s traffic, compute, image, cache, and operational needs. Source: <a href="https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Cloudflare&apos;s Next.js deployment guide</a>.
+                            <strong>Cloudflare Workers.</strong> Cloudflare&apos;s current Next.js guide recommends vinext, a tool in beta that reimplements the Next.js API on Vite, and keeps the OpenNext adapter as the path for existing apps that cannot move yet. Compare Workers pricing and limits with the app&apos;s traffic, compute, image, cache, and operational needs. Source: <a href="https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Cloudflare&apos;s Next.js deployment guide</a>.
                         </BlogText>
 
                         <BlogText>

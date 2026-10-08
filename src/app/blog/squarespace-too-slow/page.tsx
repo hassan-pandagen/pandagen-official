@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-27",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/squarespace-too-slow")],
@@ -79,7 +79,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/squarespace-too-slow"),
             description,
             datePublished: "2026-03-27",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -163,7 +163,7 @@ export default function SquarespaceTooSlowPage() {
                             name as the cause or migration as the only fix.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Squarespace and Google documentation.
+                            Reviewed October 8, 2026 against current Squarespace and Google documentation.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -171,7 +171,7 @@ export default function SquarespaceTooSlowPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 27, 2026" readTime="5 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="squarespace-too-slow" published="2026-03-27" readTime="5 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The diagnostic sequence</h2>
@@ -245,8 +245,8 @@ export default function SquarespaceTooSlowPage() {
                             never loads the Squarespace dashboard, so a laggy editor changes nothing about what a
                             customer experiences. Separate them in two minutes: open the published URL in a private
                             window, signed out, on a different device or network. If that loads acceptably and only the
-                            editor drags, nothing else on this page applies to your problem — and checking on a phone
-                            settles it either way, because editor lag is desktop-only by definition.
+                            editor drags, nothing else on this page applies to your problem. Checking the live page on a
+                            phone, signed out, is a quick second test, because visitors never load the editor.
                         </BlogText>
                     </div>
                     <InsightBox variant="info" label="Why there is no platform score ceiling here">
@@ -260,7 +260,7 @@ export default function SquarespaceTooSlowPage() {
                     <BlogText>
                         <Link href="/blog/core-web-vitals-explained" className={inlineLinkClass}>Core Web Vitals explained</Link>{" "}
                         sets out what each of those metrics records, and{" "}
-                        <Link href="/blog/why-is-my-website-loading-so-slow" className={inlineLinkClass}>why a website loads slowly</Link>{" "}
+                        <Link href="/blog/how-to-speed-up-your-website" className={inlineLinkClass}>our general speed checklist</Link>{" "}
                         runs the same diagnosis without assuming a platform.
                     </BlogText>
 
@@ -283,19 +283,20 @@ export default function SquarespaceTooSlowPage() {
 
                     <BlogHeader>How much does Squarespace page weight cost you?</BlogHeader>
                     <BlogText>
-                        Squarespace publishes four specific budgets on its page-size guidance, and they are worth having
-                        in front of you before you start deleting things. Verbatim, it says to{" "}
-                        <strong>keep each page to 5 MB or less</strong>, that{" "}
+                        Squarespace publishes five specific budgets on its page-size guidance, and they are worth having
+                        in front of you before you start deleting things. In its own words, it says to{" "}
+                        <strong>keep each page on your site to 5 MB or less</strong>, that{" "}
                         <strong>1 MB is the safest size for cellular connections</strong>, to{" "}
-                        <strong>ensure there are no more than 60 blocks per page</strong>, and to{" "}
-                        <strong>keep images below 500 KB with a width of 1500px to 2500px</strong>.
+                        <strong>ensure there are no more than 60 blocks per page</strong>, to{" "}
+                        <strong>keep images below 500 KB with a width of 1500px to 2500px</strong>, and to{" "}
+                        <strong>limit galleries to 50 images each</strong>.
                     </BlogText>
                     <BlogText>
-                        Those four are the fastest audit available on this platform because every one of them is
+                        Those five are the fastest audit available on this platform because every one of them is
                         countable without a tool: open the page, count the blocks, check the largest image.{" "}
                         <strong>They are vendor guidance, not a guarantee of any particular LCP or Lighthouse
                         score</strong>, and a page can sit
-                        inside all four and still be slow for a reason further down this list. But a page that breaks
+                        inside all five and still be slow for a reason further down this list. But a page that breaks
                         them has an explanation before you measure anything, and the 60-block ceiling in particular
                         catches long single-page designs that look fine in the editor and load nothing like it.
                         Use a network trace to confirm which content actually matters on the real route.
@@ -480,7 +481,7 @@ export default function SquarespaceTooSlowPage() {
                     </BlogText>
 
                     <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                    {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
+                    {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} showHeading={false} />}
                     <TopicUpLink postId={postId} />
 
                     <RelatedPosts currentPostId={postId} />

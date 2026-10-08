@@ -1,5 +1,22 @@
-import { permanentRedirect } from "next/navigation";
+import type { Metadata } from "next";
+import ServicePageSchema from "@/components/services/ServicePageSchema";
+import ServiceDetailPreview from "@/components/pages/services/ServiceDetailPreview";
+import { servicePreview } from "@/components/pages/services/service-data";
+import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
+import { ogImageForPath } from "@/lib/seo/og";
+
+const path = "/services/wordpress";
+const name = "WordPress Website Design & Development";
+const description = "WordPress websites for small businesses, with a written quote, content editing, documentation and a live walkthrough. Work directly with Hassan and Imran.";
+
+export const metadata: Metadata = {
+  title: name,
+  description,
+  alternates: { canonical: path },
+  openGraph: { title: `${name} | PandaCodeGen`, description, url: `https://www.pandacodegen.com${path}`, type: "website", images: [ogImageForPath(path)] },
+  twitter: { card: "summary_large_image", title: `${name} | PandaCodeGen`, description, images: [ogImageForPath(path)] },
+};
 
 export default function WordPressServicePage() {
-  permanentRedirect("/services/wordpress-migration");
+  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="WordPress websites" faqs={previewServiceFaqs("wordpress")} /><ServiceDetailPreview service={servicePreview("wordpress")} /></>;
 }

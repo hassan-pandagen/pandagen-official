@@ -14,16 +14,16 @@ import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 // Badges follow reviews.ts: "Unprompted" is Trustpilot's own label and is shown
 // as Trustpilot's; "Verified" is Clutch's. No aggregate rating anywhere.
 //
-// The featured quote is Waqas Ahmed's because it is the one about the thing
-// this page is selling, and it is short enough to set large without cutting.
+// Lead with Etoy's account of deciding to trust the team, then show Waqas's
+// Emblematic Studio review beside the linked project in the review grid.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const FEATURED = "emblematic-studio";
+const FEATURED = "ladies-4-jesus";
+const GRID_ORDER = ["emblematic-studio", "mycustompatches", "ladies-4-jesus", "marshall-james"] as const;
 
 // Website named beside a review, ONLY where reviews.ts sets `caseStudy`, i.e.
-// where the site already publishes that client relationship. Marshall James and
-// James Peace have no case study, and reviews.ts is explicit that a Trustpilot
-// review is not permission to name their business here.
+// where the site already publishes that client relationship. Marshall James has
+// no case study, and a Trustpilot review alone is not permission to name one.
 const SITE_BY_CASE: Record<string, string> = {
   "/work/ladies-4-jesus": "Ladies 4 Jesus",
   "/work/emblematic-studio": "Emblematic Studio",
@@ -31,8 +31,8 @@ const SITE_BY_CASE: Record<string, string> = {
 };
 
 // Same screenshots WorkIndex.tsx already uses. Only reviews with both a case
-// study and a screenshot on file get the hover flip below; the other two
-// reviews (no case study) keep the plain dark-invert hover.
+// study and a screenshot on file get the hover flip below; Marshall's review
+// (no case study) keeps the plain dark-invert hover.
 const SITE_IMAGE_BY_CASE: Record<string, string> = {
   "/work/ladies-4-jesus": "/work/ladies-4-jesus.png",
   "/work/emblematic-studio": "/work/emblematic-studio.png",
@@ -47,10 +47,10 @@ function badge(r: ClientReview) {
 
 export default function ProofSection() {
   const featured = CLIENT_REVIEWS.find((r) => r.id === FEATURED)!;
-  const rest = CLIENT_REVIEWS.filter((r) => r.id !== FEATURED);
+  const rest = GRID_ORDER.map((id) => CLIENT_REVIEWS.find((r) => r.id === id)!);
 
   return (
-    <section aria-labelledby="proof-title" className="px-6 py-24 md:px-10 md:py-36" style={{ backgroundColor: T.paperHi }}>
+    <section aria-labelledby="proof-title" className="px-6 py-16 md:px-10 md:py-20" style={{ backgroundColor: T.paperHi }}>
       <div className="mx-auto max-w-[1440px]">
         <div className="grid gap-10 lg:grid-cols-12">
           <h2
@@ -58,13 +58,12 @@ export default function ProofSection() {
             className="lg:col-span-6"
             style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.6rem, 5.4vw, 5.2rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}
           >
-            What our clients say.
+            What our <span style={{ color: T.accentText }}>clients say.</span>
           </h2>
           <div className="lg:col-span-5 lg:col-start-8">
             <p className="text-[17px] leading-[1.6]" style={{ color: T.body }}>
-              Short excerpts from our public review pages, linked so you can read each one in full. Four of them
-              carry Trustpilot&rsquo;s own &ldquo;unprompted&rdquo; label, meaning the client left it without being
-              asked.
+              Short excerpts from our public review pages, linked so you can read each one in full. The
+              Trustpilot reviews carry that platform&rsquo;s &ldquo;unprompted&rdquo; label.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               {[
@@ -90,8 +89,8 @@ export default function ProofSection() {
         {/* Featured quote, set large. */}
         <figure className="mt-20 border-t pt-12 md:mt-28 md:pt-16" style={{ borderColor: T.rule }}>
           <blockquote
-            className="max-w-[22ch]"
-            style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.2rem, 5vw, 4.6rem)", lineHeight: 1.04, letterSpacing: "-0.02em" }}
+            className="max-w-[30ch]"
+            style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3.8rem)", lineHeight: 1.08, letterSpacing: "-0.02em" }}
           >
             <span aria-hidden="true" style={{ color: T.accent }}>&ldquo;</span>
             {featured.quote}
@@ -114,7 +113,8 @@ export default function ProofSection() {
           </figcaption>
         </figure>
 
-        {/* The other reviews, verbatim, on a hairline grid. */}
+        {/* Four compact reviews in the requested order. Etoy also appears above
+            as the featured quote, and her card links to the project image. */}
         <ul className="mt-16 grid border-t md:grid-cols-2 lg:grid-cols-4" style={{ borderColor: T.rule }}>
           {rest.map((r, i) => {
             const siteImage = r.caseStudy ? SITE_IMAGE_BY_CASE[r.caseStudy] : undefined;
@@ -153,21 +153,19 @@ export default function ProofSection() {
                   {siteImage && (
                     <Link
                       href={r.caseStudy!}
-                      className="proof-face proof-face-back absolute inset-0 block"
+                      className="proof-face proof-face-back absolute inset-0 flex flex-col gap-4 p-4"
                       aria-label={`Visit the ${SITE_BY_CASE[r.caseStudy!]} website`}
+                      style={{ backgroundColor: T.paper, color: T.ink }}
                     >
-                      <Image src={siteImage} alt="" fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover object-top" />
-                      <span
-                        aria-hidden="true"
-                        className="absolute inset-0"
-                        style={{ background: "linear-gradient(to top, rgba(28,25,23,0.9), rgba(28,25,23,0) 60%)" }}
-                      />
-                      <span
-                        className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 px-5 py-5 text-[15px] font-medium"
-                        style={{ color: T.onDark }}
-                      >
-                        {SITE_BY_CASE[r.caseStudy!]}
-                        <ArrowUpRight className="h-5 w-5 shrink-0" aria-hidden="true" />
+                      <span className="relative block w-full shrink-0 overflow-hidden border border-[#1C1917]/15 bg-white aspect-video">
+                        <Image src={siteImage} alt="" fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-contain" />
+                      </span>
+                      <span className="mt-auto block border-t border-[#1C1917]/20 pt-4">
+                        <span className="block text-[10px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.accentText }}>Completed client site</span>
+                        <span className="mt-2 flex items-center justify-between gap-3 text-[17px] font-semibold">
+                          {SITE_BY_CASE[r.caseStudy!]}
+                          <ArrowUpRight className="h-5 w-5 shrink-0" aria-hidden="true" />
+                        </span>
                       </span>
                     </Link>
                   )}
@@ -207,7 +205,7 @@ export default function ProofSection() {
               We built its platform but hold no ownership stake. It is presented as operating experience, not as an
               independent client endorsement.
             </p>
-            <Link href="/work" className="mt-4 inline-flex items-center gap-2 text-[15px] font-medium" style={{ color: T.ink }}>
+            <Link href="/work" className="proof-records-link mt-4 inline-flex items-center gap-2 border-b border-transparent pb-1 text-[15px] font-medium" style={{ color: T.ink }}>
               See the project records <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
@@ -217,6 +215,10 @@ export default function ProofSection() {
       <style>{`
         .proof-btn { transition: background-color .25s ease, color .25s ease; }
         .proof-btn:hover, .proof-btn:focus-visible { background-color: ${T.ink}; color: ${T.paper} !important; }
+        .proof-records-link { transition: color .25s ease, border-color .25s ease; }
+        .proof-records-link svg { transition: transform .25s ease; }
+        .proof-records-link:hover, .proof-records-link:focus-visible { color: ${T.accentText} !important; border-color: currentColor; }
+        .proof-records-link:hover svg, .proof-records-link:focus-visible svg { transform: translateX(4px); }
         .proof-card { transition: background-color .35s ease; }
         .proof-card :is(.proof-quote, .proof-name, .proof-meta, .proof-badge, .proof-source) { transition: color .35s ease; }
         .proof-card:hover, .proof-card:focus-within { background-color: ${T.dark}; }
@@ -229,7 +231,7 @@ export default function ProofSection() {
         .proof-card-flip:hover .proof-flip, .proof-card-flip:focus-within .proof-flip { transform: rotateY(180deg); }
         .proof-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
         .proof-face-back { transform: rotateY(180deg); }
-        @media (prefers-reduced-motion: reduce) { .proof-card, .proof-card *, .proof-card-flip .proof-flip { transition: none !important; } }
+        @media (prefers-reduced-motion: reduce) { .proof-card, .proof-card *, .proof-card-flip .proof-flip, .proof-records-link, .proof-records-link svg { transition: none !important; } }
       `}</style>
     </section>
   );

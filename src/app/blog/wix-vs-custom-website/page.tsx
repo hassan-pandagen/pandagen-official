@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-12",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wix-vs-custom-website")],
@@ -69,7 +69,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wix-vs-custom-website"),
             description,
             datePublished: "2026-04-12",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -150,14 +150,14 @@ export default function WixVsCustomWebsitePage() {
                             the engineering work that comes with that. Neither one is always faster, always cheaper,
                             always safer, or always better for search. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed against current primary documentation on July 24, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Reviewed against current primary documentation on October 8, 2026.</p>
                       </div>
                       <div data-article-hero-screen>
                         <BlogCoverFigure id="wix-vs-custom-website" />
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 12, 2026" readTime="6 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wix-vs-custom-website" published="2026-04-12" readTime="12 min read" />
 
                     <BlogText>
                         Three Wix users on r/WIX in 2026, in their own words: one who paid for a rebuild and still gave up, one whose plan price more than doubled, and one who says Wix pays for itself. Each quote links to the original post.
@@ -298,16 +298,20 @@ export default function WixVsCustomWebsitePage() {
                         <Link href="/blog/will-migrating-hurt-my-seo" className={inlineLinkClass}>what a migration does to search visibility</Link>,
                         and the speed side of page experience in{" "}
                         <Link href="/blog/how-website-speed-affects-seo" className={inlineLinkClass}>how site speed relates to search performance</Link>.
+                        Each Wix control and its documented limit is listed in{" "}
+                        <Link href="/blog/is-wix-bad-for-seo" className={inlineLinkClass}>is Wix bad for SEO</Link>.
                     </BlogText>
 
                     <BlogHeader id="export">Export, portability and ownership</BlogHeader>
                     <BlogText>
-                        Checked against Wix&apos;s support documentation on July 31, 2026: Wix documents separate CSV exports for CMS collections, contacts, physical products and orders, says digital-product export is unsupported, and limits each product CSV to 5,000 rows,
+                        Checked against Wix&apos;s support documentation on October 8, 2026: Wix documents separate CSV exports for CMS collections, contacts, physical products and orders, says digital-product export is unsupported, and limits each product CSV to 5,000 rows,
                         plus transfer of eligible sites and services between Wix accounts. Those paths do not establish
                         one complete importable application for another stack. A custom contract should define the
                         repository, deliverables, data, domain, provider accounts, pre-existing code and licenses.
                         We unpack what those terms mean in practice in{" "}
-                        <Link href="/blog/do-you-own-your-website" className={inlineLinkClass}>do you actually own your website</Link>.
+                        <Link href="/blog/do-you-own-your-website" className={inlineLinkClass}>do you actually own your website</Link>,
+                        and set Wix&apos;s exports beside seven other platforms in{" "}
+                        <Link href="/blog/website-portability" className={inlineLinkClass}>what each website platform lets you export</Link>.
                     </BlogText>
 
                     <BlogHeader id="security">Security and maintenance</BlogHeader>
@@ -359,10 +363,10 @@ export default function WixVsCustomWebsitePage() {
                         For a sense of the actual range rather than &ldquo;weeks or months&rdquo;, two of our own
                         projects are published with their details:{" "}
                         <Link href="/work/mycustompatches" className={inlineLinkClass}>MyCustomPatches</Link>{" "}
-                        moved every page, product and blog post to a custom build in <strong>about 22 days</strong>,
+                        moved from WordPress to a custom build in <strong>about 22 days</strong>,{/* 8 Oct 2026: was "moved every page, product and blog post", stronger than the case study, which withdrew its URL count. It was a WordPress move, not a Wix one. */}
                         and <Link href="/work/enterprise-ops" className={inlineLinkClass}>an operations platform</Link>{" "}
                         with {requiredMetric("enterprise-ops", "edge-functions")} edge functions and live profit calculations has been in <strong>continuous
-                        development for ten months</strong>. The spread between them is scope and integration count, not the choice of custom code. Decision
+                        development since November 2025</strong>.{/* 8 Oct 2026: was "for ten months", which had gone stale. The enterprise-ops case study dates the start to November 2025. */} The spread between them is scope and integration count, not the choice of custom code. Decision
                         latency on your side moves it more than most people expect.
                     </BlogText>
 
@@ -441,7 +445,7 @@ export default function WixVsCustomWebsitePage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

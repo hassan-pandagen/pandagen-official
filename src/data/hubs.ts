@@ -17,7 +17,7 @@
 //   resolve to the service page. See `parentForPost`.
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { clusters, type Cluster } from './topical-map';
+import { clusters, HUB_PRIORITY, PRIMARY_HUB_OVERRIDE, type Cluster } from './topical-map';
 
 export interface Hub {
     /** URL segment under /blog/topic/. Deliberately never equal to a /services slug. */
@@ -139,7 +139,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
             'Guides on commissioning custom web development: what a given budget includes, how long a build takes, what build-versus-buy actually compares, and who owns the result.',
         moneyAnchor: 'our custom engineering service',
         intro: [
-            'Custom development is bought less often than templated platforms, so buyers usually have less to compare against and fewer reference points for whether a quote is reasonable. The guides here are mostly about that gap.',
+            'Start with the work: publishing content, running a store or operating a private application. The Sanity and WordPress comparison helps you choose an editor; Sanity vs Supabase separates publishing from backend requirements. The product catalog example shows one implementation pattern you can download and inspect.',
             'The questions that repeat are practical. What does a given budget actually include once you subtract discovery, content, and revisions. How long does a build take, and which parts of that timeline depend on you rather than the developer. What does build-versus-buy compare when the subscription is cheap now and the switching cost arrives later. Who owns the code, the design files, and the production accounts when the project ends.',
             'That last one is worth stating plainly because it is the easiest to leave unasked and the most expensive to get wrong. Ownership should be written into the terms, not inferred from goodwill, and it should cover source code, design files, content models, and the accounts the site runs on.',
             'These posts describe how we scope and hand over work, which is one approach rather than the only one. The written project terms are what govern any specific engagement; website copy is not the agreement. If you are scoping a build now, [[money]] sets out the stack, the acceptance criteria, and what is excluded.',
@@ -257,32 +257,6 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
             'For a store where the architecture decision is already made, [[money]] covers the build scope.',
         ],
     },
-};
-
-/**
- * When a post belongs to more than one hub cluster, this order decides its
- * canonical parent: earlier wins. Platform clusters outrank cross-cutting
- * concept clusters, because "the Shopify one" is how readers and search
- * queries actually name those posts.
- */
-const HUB_PRIORITY: string[] = [
-    'wordpress', 'shopify', 'webflow', 'squarespace',
-    'custom', 'agency', 'migration', 'pricing',
-    'ecommerce-strategy', 'performance', 'seo-aeo',
-];
-
-/**
- * Posts where the priority order picks the wrong parent, with the reason.
- * Kept explicit rather than encoded as more priority rules, because three
- * exceptions are easier to audit than a rule that produces them.
- */
-const PRIMARY_HUB_OVERRIDE: Record<string, string> = {
-    // A glossary of AI-search vocabulary that happens to include perf terms.
-    'aeo-web-performance-glossary': 'seo-aeo',
-    // An indexing problem, not a migration one. The site was never migrated.
-    'lovable-site-not-showing-on-google': 'seo-aeo',
-    // Ad tracking moved into ecommerce-strategy with the tracking-ads merge.
-    'meta-conversions-api-setup-cost': 'ecommerce-strategy',
 };
 
 /** Every generated hub, in HUB_PRIORITY order. */

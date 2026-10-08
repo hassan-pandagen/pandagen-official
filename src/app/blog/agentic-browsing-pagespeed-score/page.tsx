@@ -21,8 +21,17 @@ const postFAQs = blogPosts.find(p => p.id === "agentic-browsing-pagespeed-score"
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
+// TITLE PILOT (4 Oct 2026). The <title>, og:title and twitter:title below are a
+// test page in the 3-page title pilot logged in
+// docs/research/seo-skill-pack-audit-2026-10-04/TITLE_PILOT.md. The headline in
+// the JSON-LD and blog.ts keep the old title on purpose: only the search title is
+// under test. Once the redesign deploys, leave this title, the description and
+// the body alone until the 28-day read. To revert, restore the old title from
+// the ledger.
+const pilotTitle = "Lighthouse Agentic Browsing Score: The 3 Checks and Fixes";
+
 export const metadata: Metadata = {
-    title: "Lighthouse Agentic Browsing Checks Explained (2026)",
+    title: pilotTitle,
     description: "A source-linked guide to Lighthouse's experimental Agentic Browsing checks, their limits, and a dated PandaCodeGen snapshot.",
     alternates: { canonical: "/blog/agentic-browsing-pagespeed-score" },
     keywords: [
@@ -41,18 +50,18 @@ export const metadata: Metadata = {
     ],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "Lighthouse Agentic Browsing Checks Explained (2026)",
+        title: pilotTitle,
         description: "What the experimental Lighthouse category checks, what its pass ratio does not prove, and a dated PandaCodeGen snapshot.",
         type: "article",
         publishedTime: "2026-06-19T00:00:00-05:00",
-        modifiedTime: "2026-08-29T00:00:00-05:00",
+        modifiedTime: "2026-10-08T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score",
         images: [ogImageForPath("/blog/agentic-browsing-pagespeed-score")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Lighthouse Agentic Browsing Checks Explained (2026)",
+        title: pilotTitle,
         description: "A source-linked explanation of the experimental category, its pass ratio, WebMCP requirements, and limits.",
     },
 };
@@ -67,7 +76,7 @@ const articleSchema = {
             "description": "A source-linked guide to Lighthouse's experimental Agentic Browsing category, its pass ratio, WebMCP requirements, and a dated PandaCodeGen snapshot.",
             "image": ogImageUrlForPath("/blog/agentic-browsing-pagespeed-score"),
             "datePublished": "2026-06-19T00:00:00-05:00",
-            "dateModified": "2026-08-29T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -125,7 +134,7 @@ const articleSchema = {
             "description": "What Lighthouse's experimental Agentic Browsing category checks, what its pass ratio does not prove, and a dated PandaCodeGen snapshot.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-06-19T00:00:00-05:00",
-            "dateModified": "2026-08-29T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "inLanguage": "en-US"
         },
     ]
@@ -154,7 +163,7 @@ export default function AgenticBrowsingPage() {
                             In May 2026 the Chrome team documented an experimental Lighthouse category called Agentic Browsing. It does not give you a 0-to-100 score. It tells you how many checks passed out of how many, and what each one found. This guide covers what those checks actually measure, and what they cannot tell you: whether you will rank, whether an AI will recommend you, whether people will complete a purchase, or whether you will sell more.
                         </p>
                         <BlogAuthor
-                            date="Updated Jul 31, 2026"
+                            postId="agentic-browsing-pagespeed-score" published="2026-06-19"
                             readTime="9 min read"
                             bio="Hassan builds and migrates Next.js sites, and writes down how rendering, accessibility, layout stability and performance get signed off."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
@@ -176,7 +185,7 @@ export default function AgenticBrowsingPage() {
                         <p className="font-bold text-charcoal mb-3 text-sm uppercase tracking-wide">The Short Answer</p>
                         <ul className="space-y-2 text-sm text-stone-700">
                             <li className="flex items-start gap-2"><Sparkles className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Chrome documents Agentic Browsing as an experimental Lighthouse category based on proposed standards.</li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> It reports a pass ratio and individual results for WebMCP, agent-relevant accessibility, layout stability, and llms.txt discoverability.</li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> It reports a pass ratio and individual results for WebMCP, agent-relevant accessibility, layout stability, and discoverability through llms.txt and, since September 2026, ai-catalog.json.</li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Chrome&apos;s current documentation requires Chrome 150 or later; WebMCP audits also require the WebMCP origin trial.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> A June 20, 2026 PandaCodeGen screenshot recorded 3/3 under Lighthouse 13.4.0 and HeadlessChromium 146.0.7680.177. That is a historical snapshot, not a current universal result.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> A separate Panda Patches dashboard recorded $7,419.18 across 27 internally AI-tagged orders. The owner-approved screenshot is first-party, not independently audited, and does not connect those orders to this Lighthouse result.</li>
@@ -391,19 +400,22 @@ export default function AgenticBrowsingPage() {
                     <BlogHeader id="the-three-checks">Which three checks make up the score?</BlogHeader>
 
                     <BlogText>
-                        Six audits exist in the category and most sites are scored on three of them. We confirmed this
-                        against the PageSpeed Insights API on 29 August 2026 rather than from other write-ups, several
-                        of which disagree about whether the denominator is three or four. It is neither, fixed: the
-                        three WebMCP audits report &ldquo;not applicable&rdquo; on any site that has not implemented
-                        WebMCP, which today is nearly every site, so those drop out of the count and the remaining
-                        three are what you are scored on.
+                        {/* 8 Oct 2026: Lighthouse 13.5.0 (18 Sep 2026) added ard-schema as a seventh audit. */}
+                        Seven audits now sit in the category, and most sites are scored on three of them. Lighthouse
+                        13.5.0, released September 18, 2026, added a seventh that checks an ai-catalog.json file. We
+                        confirmed the count against the PageSpeed Insights API on 29 August and again on 8 October
+                        2026, not from other write-ups, several of which disagree about whether the denominator is
+                        three or four. It isn&apos;t fixed: the three WebMCP audits and the new ai-catalog.json audit
+                        report &ldquo;not applicable&rdquo; on any site that hasn&apos;t set them up, which today is
+                        nearly every site, so those drop out of the count and the remaining three are what you are
+                        scored on.
                     </BlogText>
 
                     <div className="overflow-x-auto">
                         <table className="w-full border-collapse text-left text-sm">
                             <caption className="mb-3 text-left text-sm text-stone-500">
                                 Audits returned by the PageSpeed Insights API under the agentic-browsing category,
-                                verified 29 August 2026. Audit identifiers are Google&apos;s own.
+                                verified 29 August 2026 and rechecked 8 October 2026. Audit identifiers are Google&apos;s own.
                             </caption>
                             <thead>
                                 <tr className="border-b border-stone-300">
@@ -418,14 +430,16 @@ export default function AgenticBrowsingPage() {
                                 <tr className="border-b border-stone-200"><td className="p-3"><code>llms-txt</code></td><td className="p-3">Yes</td><td className="p-3">Whether an llms.txt file exists and follows the recommendations</td></tr>
                                 <tr className="border-b border-stone-200"><td className="p-3"><code>webmcp-form-coverage</code></td><td className="p-3">No</td><td className="p-3">Not applicable without WebMCP</td></tr>
                                 <tr className="border-b border-stone-200"><td className="p-3"><code>webmcp-registered-tools</code></td><td className="p-3">No</td><td className="p-3">Not applicable without WebMCP</td></tr>
-                                <tr><td className="p-3"><code>webmcp-schema-validity</code></td><td className="p-3">No</td><td className="p-3">Not applicable without WebMCP</td></tr>
+                                <tr className="border-b border-stone-200"><td className="p-3"><code>webmcp-schema-validity</code></td><td className="p-3">No</td><td className="p-3">Not applicable without WebMCP</td></tr>
+                                <tr><td className="p-3"><code>ard-schema</code></td><td className="p-3">No</td><td className="p-3">Whether an ai-catalog.json file is valid. Not applicable if you don&apos;t publish one (added in Lighthouse 13.5.0)</td></tr>
                             </tbody>
                         </table>
                     </div>
 
                     <BlogText>
                         This is why two sites can show different denominators and neither is broken. Implement WebMCP
-                        and the count grows; skip it, as almost everyone has, and you are scored out of three.
+                        or publish an ai-catalog.json file and the count grows; skip both, as almost everyone has, and
+                        you are scored out of three.
                     </BlogText>
 
                     <BlogHeader id="what-well-formed-means">What does &ldquo;well-formed&rdquo; actually mean?</BlogHeader>
@@ -618,7 +632,7 @@ export default function AgenticBrowsingPage() {
                     </section>
 
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>
-                    <FAQAccordion faqs={postFAQs} />
+                    <FAQAccordion faqs={postFAQs} showHeading={false} />
 
                     <section className="mb-10 mt-8 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>

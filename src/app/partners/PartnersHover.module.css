@@ -1,0 +1,16 @@
+.root :global(section button){transition:background-color .22s ease,border-color .22s ease,color .22s ease,box-shadow .22s ease,transform .22s ease}
+.root .heroTitle{max-width:none;font-size:clamp(3.5rem,5.1vw,6.25rem)!important;text-wrap:initial}
+.heroTitle span{white-space:nowrap}
+@media(max-width:900px){.heroTitle span{white-space:normal}}
+.root :global(section button:hover),.root :global(section button:focus-visible){background:#ad3d0b!important;border-color:#ad3d0b!important;color:#fff!important;box-shadow:6px 6px 0 #c59a81;transform:translateY(-3px)}
+.root :global(section button:focus-visible),.root :global(section a:focus-visible){outline:2px solid #ad3d0b;outline-offset:4px}
+.textAction{transition:color .2s ease,text-decoration-color .2s ease}
+.textAction:hover,.textAction:focus-visible{color:#ad3d0b;text-decoration-thickness:2px}
+.proofCard,.processRow,.agreementRow,.modelRow{transition:background-color .22s ease,box-shadow .22s ease,transform .22s ease}
+.modelRow{margin-inline:-clamp(16px,2vw,28px);padding-inline:clamp(16px,2vw,28px)}
+.proofCard:hover,.processRow:hover,.agreementRow:hover,.modelRow:hover{background:#f1e4d9;box-shadow:inset 4px 0 #ad3d0b;transform:translateY(-3px)}
+.proofCard:hover :global(h2),.processRow:hover :global(h3){color:#7a2e0e}
+@media(prefers-reduced-motion:reduce){
+  .root :global(section button),.textAction,.proofCard,.processRow,.agreementRow,.modelRow{transition:none}
+  .root :global(section button:hover),.root :global(section button:focus-visible),.proofCard:hover,.processRow:hover,.agreementRow:hover,.modelRow:hover{transform:none}
+}

@@ -1,0 +1,51 @@
+.section{background:#ebe9e4;color:#1c1917;padding:clamp(58px,5.5vw,84px) 0;scroll-margin-top:82px}
+.section.dark{background:#1c1917;color:#ebe9e4}
+.wrap{width:min(100% - 48px,1392px);margin-inline:auto}
+.sectionHead{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,430px);gap:40px;align-items:end;margin-bottom:34px}
+.eyebrow,.projectIndex,.relationship,.screenBar,.screenBottom{font:600 11px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.12em}
+.eyebrow{color:#7a2e0e;margin-bottom:16px}
+.dark .eyebrow{color:#e8763a}
+.sectionTitle{font:400 clamp(3.8rem,6.2vw,7rem)/.92 var(--display),Impact,sans-serif;text-transform:uppercase;letter-spacing:-.035em}
+.sectionDescription{font-size:17px;line-height:1.65;color:#5e5b55;max-width:430px}
+.dark .sectionDescription{color:#c6c2ba}
+.theatre{display:grid;grid-template-columns:minmax(0,1.85fr) minmax(300px,.7fr);min-height:500px;background:#1c1917;color:#ebe9e4;border:1px solid #61554b;box-shadow:18px 18px 0 rgba(28,25,23,.12)}
+.dark .theatre{border-color:#716157;box-shadow:18px 18px 0 rgba(0,0,0,.3)}
+.screen{min-width:0;display:flex;flex-direction:column;border-right:1px solid #514840}
+.screenBar,.screenBottom{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px;color:#c6c2ba}
+.screenBar{border-bottom:1px solid #514840}
+.screenBottom{border-top:1px solid #514840}
+.screenDots{display:flex;gap:5px}
+.screenDots i{width:7px;height:7px;border:1px solid #e8763a;border-radius:50%}
+.screenImage{position:relative;flex:1;min-height:390px;background:#0f0e0d;overflow:hidden}
+.fullImage{object-fit:contain;object-position:center center;animation:screenReveal .35s ease both}
+.projectInfo{display:flex;flex-direction:column;min-width:0;padding:clamp(26px,2.3vw,38px)}
+.projectIndex{color:#e8763a;margin-bottom:clamp(24px,3.5vw,50px)}
+.relationship{color:#c6c2ba;margin-bottom:14px}
+.projectTitle{font:400 clamp(2.3rem,2.7vw,3.4rem)/.98 var(--display),Impact,sans-serif;text-transform:uppercase;overflow-wrap:normal;word-break:normal;hyphens:none}
+.projectLabel{font-size:18px;line-height:1.5;color:#c6c2ba;margin-top:22px}
+.status{display:inline-block;align-self:start;border:1px solid #e8763a;color:#ffb889;font:600 12px/1.5 ui-monospace,monospace;margin-top:22px;padding:9px 11px}
+.infoBottom{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-top:auto;padding-top:44px}
+.projectLink{display:inline-flex;align-items:center;gap:12px;color:#ffb889;font-size:15px;font-weight:700;text-decoration:underline;text-underline-offset:5px}
+.projectLink:hover,.projectLink:focus-visible{color:#fff}
+.controls{display:flex;gap:7px}
+.controls button{display:grid;place-items:center;width:42px;height:42px;border:1px solid #716157;color:#ebe9e4;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.controls button:hover,.controls button:focus-visible{background:#ad3d0b;border-color:#e8763a;transform:translateY(-2px)}
+.filmstrip{display:flex;gap:12px;overflow-x:auto;padding:22px 2px 18px;scrollbar-color:#ad3d0b transparent}
+.frame{flex:1 0 170px;min-width:0;text-align:left;color:inherit;background:transparent;border:1px solid rgba(28,25,23,.24);cursor:pointer;padding:8px;transition:background .22s,border-color .22s,box-shadow .22s,transform .22s}
+.dark .frame{border-color:rgba(235,233,228,.26)}
+.frame:hover,.frame:focus-visible,.frame.active{background:#fff;border-color:#ad3d0b;box-shadow:inset 0 3px #ad3d0b,0 10px 20px rgba(28,25,23,.12);color:#1c1917;transform:translateY(-3px)}
+.frameImage{position:relative;display:block;aspect-ratio:1.85;overflow:hidden;background:#d8d3ca}
+.frameImage img{object-fit:cover;object-position:top center}
+.frameMeta{display:flex;justify-content:space-between;gap:9px;align-items:center;min-height:45px;padding:7px 3px 0;font-size:12px;font-weight:700;line-height:1.3}
+.frameMeta>span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.frameMeta>span:last-child{color:#ad3d0b}
+.projectDirectory{margin-top:4px;font-size:13px}
+.projectDirectory summary{display:list-item;width:max-content;max-width:100%;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.projectDirectory nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.projectDirectory a{display:inline-flex;align-items:center;gap:7px;border:1px solid currentColor;padding:8px 10px;text-decoration:none}
+.projectDirectory a:hover,.projectDirectory a:focus-visible{color:#ad3d0b}
+.dark .projectDirectory a:hover,.dark .projectDirectory a:focus-visible{color:#ffb889}
+@keyframes screenReveal{from{opacity:.4;transform:scale(1.015)}to{opacity:1;transform:scale(1)}}
+@media(max-width:1050px){.theatre{grid-template-columns:1fr}.screen{border-right:0;border-bottom:1px solid #514840}.screenImage{min-height:0;aspect-ratio:1.9}.projectInfo{min-height:260px}.projectIndex{margin-bottom:30px}.infoBottom{padding-top:28px}}
+@media(max-width:700px){.wrap{width:min(100% - 36px,1392px)}.sectionHead{grid-template-columns:1fr;gap:16px}.sectionTitle{font-size:clamp(3.2rem,12vw,5.5rem)}.sectionDescription{font-size:16px}.theatre{box-shadow:9px 9px 0 rgba(28,25,23,.12)}.screenBar,.screenBottom{padding:11px 12px;font-size:9px}.screenImage{aspect-ratio:1.75}.projectInfo{min-height:270px;padding:24px}.projectIndex{margin-bottom:22px}.projectTitle{font-size:clamp(2.5rem,9vw,3.7rem)}.filmstrip{margin-right:-18px;padding-right:18px}.frame{flex-basis:154px}}
+@media(prefers-reduced-motion:reduce){.fullImage{animation:none}.frame,.controls button{transition:none}.frame:hover,.frame:focus-visible,.frame.active,.controls button:hover,.controls button:focus-visible{transform:none}}

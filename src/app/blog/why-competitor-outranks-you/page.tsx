@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-15",
-        modifiedTime: "2026-09-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/why-competitor-outranks-you")],
@@ -56,6 +56,8 @@ const sources = [
     { name: "Google: Search Console performance report", url: "https://support.google.com/webmasters/answer/7576553" },
     { name: "Google: spam policies for web search", url: "https://developers.google.com/search/docs/essentials/spam-policies" },
     { name: "Google: AI features and your website", url: "https://developers.google.com/search/docs/appearance/ai-features" },
+    // 8 Oct 2026: the "July 2026 guidance" in the AI section is this guide (last updated 2026-07-10). The ai-features page above was last updated 2025-12-10.
+    { name: "Google: optimizing for generative AI features", url: "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" },
     { name: "Bing AI Performance", url: "https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview" },
 ];
 
@@ -69,7 +71,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/why-competitor-outranks-you"),
             description,
             datePublished: "2026-02-15",
-            dateModified: "2026-09-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -146,14 +148,14 @@ export default function WhyCompetitorOutranksYouPage() {
                             place, the same device, the same day, the same kind of result. Then make the smallest fix
                             your evidence actually supports. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed against current Google and Bing guidance on September 19, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Reviewed against current Google and Bing guidance on October 8, 2026.</p>
                       </div>
                       <div data-article-hero-screen>
                         <BlogCoverFigure id="why-competitor-outranks-you" />
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 15, 2026" readTime="7 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="why-competitor-outranks-you" published="2026-02-15" readTime="11 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -315,11 +317,12 @@ export default function WhyCompetitorOutranksYouPage() {
                             universal weight you can apply to this query. What will not explain it is the number most
                             tools put in front of you:{" "}
                             <strong>&quot;Domain Authority&quot; is a third-party estimate, not a Google metric.</strong>{" "}
-                            Google has said repeatedly that it does not use domain authority, and that its ranking
-                            systems work at the level of individual pages rather than assigning a site-wide authority
-                            score.
+                            Google has said repeatedly that it does not use domain authority. Its ranking systems guide
+                            says they are designed to work at the level of individual pages, though site-wide signals
+                            and classifiers also contribute.
                         </BlogText>
                     </div>
+                    {/* 8 Oct 2026: the old text said Google ranks pages "rather than assigning a site-wide authority score". Google's ranking systems guide (developers.google.com/search/docs/appearance/ranking-systems-guide) says ranking works at page level but "Site-wide signals and classifiers are also used". */}
                     <BlogText>
                         That distinction changes what you should actually go and look at. Comparing DA 43 against DA 51
                         tells you how two vendors guess Google works. Comparing link profiles page by page tells you
@@ -330,15 +333,15 @@ export default function WhyCompetitorOutranksYouPage() {
                             "Compare the RANKING PAGE, not the domain. Pull the referring domains pointing at the specific competitor URL that outranks you, not at their homepage. A site-wide total says nothing about why one page wins.",
                             "Count distinct referring domains rather than total links. Fifty links from one directory are one relationship; five links from five industry publications are five.",
                             "Read what the linking pages are about. A link from a page on the same topic carries context a footer link on an unrelated site does not.",
-                            "Check whether the links were earned by something specific -- original data, a tool, a case study with numbers -- because that tells you what you would have to build rather than who you would have to email.",
+                            "Check whether the links were earned by something specific (original data, a tool, a case study with numbers), because that tells you what you would have to build rather than who you would have to email.",
                             "Note the ones you cannot replicate. A competitor with a decade of press coverage or a parent company's link equity is not a gap you close this quarter, and recognising that is more useful than a plan that assumes you can.",
                         ]}
                     />
                     <BlogText>
                         Two honest cautions. <strong>Buying links is a link-spam policy violation</strong>, and the
                         pitch usually arrives quoting exactly the third-party score described above, which is a
-                        reliable signal about the seller. And a link gap is the slowest of the seven groups to close
-                        — which is precisely why it is worth diagnosing early rather than discovering after six months
+                        reliable signal about the seller. And a link gap is the slowest of the seven groups to close,
+                        which is precisely why it is worth diagnosing early rather than discovering after six months
                         of rewriting content that was never the problem.
                     </BlogText>
 
@@ -449,7 +452,7 @@ export default function WhyCompetitorOutranksYouPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

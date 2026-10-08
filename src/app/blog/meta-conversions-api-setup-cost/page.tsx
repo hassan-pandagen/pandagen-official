@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-14",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/meta-conversions-api-setup-cost")],
@@ -78,7 +78,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/meta-conversions-api-setup-cost"),
             description,
             datePublished: "2026-06-14",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -121,7 +121,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-14",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -166,7 +166,7 @@ export default function MetaCAPISetupCostPage() {
                             or extra sales.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 31, 2026 against current Meta documentation and founder-affiliated first-party evidence.
+                            Reviewed October 8, 2026 against current Meta documentation and founder-affiliated first-party evidence.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -174,7 +174,7 @@ export default function MetaCAPISetupCostPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="June 14, 2026" readTime="18 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="meta-conversions-api-setup-cost" published="2026-06-14" readTime="18 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">What a responsible estimate covers</h2>
@@ -241,7 +241,7 @@ export default function MetaCAPISetupCostPage() {
                     </div>
                     <BlogList
                         items={[
-                            "Meta-enabled Conversions API. Meta announced this on April 15, 2026 and describes it as a one-click option requiring \u201cno technical expertise, no costs, no ongoing maintenance\u201d. It mirrors what your Pixel already sends, so it fixes delivery rather than payload. It is free, it takes minutes, and it post-dates most cost articles you will find. Turn it on before you price anything.",
+                            "Meta-enabled Conversions API. Meta announced this on April 15, 2026 and describes it as a one-click option requiring \u201cno technical expertise, no costs, no ongoing maintenance\u201d. Confirm eligibility, event coverage, matching and deduplication in Events Manager before deciding whether a custom integration is needed. The announcement alone does not establish coverage of every business event.",
                             "A platform or partner integration. If you are on Shopify, WooCommerce or a similar platform, the native integration is included in what you already pay and is usually a setting rather than a project. Same rule: free first.",
                             "Meta's Conversions API Gateway, or a hosted server-side container. A monthly service fee plus whatever infrastructure it runs on. Worth it when you need to send events the Pixel cannot see, or to control payload across several destinations at once.",
                             "A custom server-side build. This is the only route with real engineering in it, and the only one where a four-figure number is honest. You are paying for event mapping, identifier handling, consent, deduplication, retries, logging and the tests that prove it works.",
@@ -475,7 +475,8 @@ export default function MetaCAPISetupCostPage() {
 
                     <BlogHeader>What actually moves the price</BlogHeader>
                     <BlogText>
-                        A Conversions API integration sits in our Scale tier at $5,000; our Starter and Growth tiers, at $1,500 and $3,500, do not include one. What moves a quote within Scale is scope rather than the platform. We will not print a market range we cannot stand behind. What we can give you is the set of
+                        {/* 8 Oct 2026: tier prices are starting points ("from"), per company-facts.ts; Scale has no published ceiling. */}
+                        A Conversions API integration sits in our Scale tier, from $5,000; our Starter and Growth tiers, from $1,500 and $3,500, do not include one. What moves a quote within Scale is scope rather than the platform. We will not print a market range we cannot stand behind. What we can give you is the set of
                         variables that decide whether a build sits at the bottom or the top of whatever quote you are
                         given, so you can push a vendor on the ones that apply to you.
                     </BlogText>
@@ -538,8 +539,9 @@ export default function MetaCAPISetupCostPage() {
                     </BlogText>
                     <BlogText>
                         For clarity on where it sits in the tiers: Starter from $1,500 and Growth from $3,500 do not
-                        include a Conversions API integration. Scale runs $5,000, and an accepted scope at
-                        that tier is where the integration belongs. At the upper end of Scale we can add event-quality
+                        include a Conversions API integration. {/* 8 Oct 2026: this said "Scale runs $5,000" and offered extras "at the upper end of Scale". Both came from the retired Scale price range (see retired-claims.json). Scale now starts at $5,000 with no published ceiling. */}
+                        Scale starts at $5,000, and an accepted scope at
+                        that tier is where the integration belongs. On larger Scale projects we can add event-quality
                         and reconciliation monitoring you can read yourself, and fold ongoing measurement work into a
                         retainer. See the <Link href="/pricing" className="text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">pricing page</Link> for the full breakdown.
                     </BlogText>
@@ -609,7 +611,7 @@ export default function MetaCAPISetupCostPage() {
                     </section>
 
                     <BlogHeader>Frequently asked questions</BlogHeader>
-                    <FAQAccordion faqs={postFAQs} />
+                    <FAQAccordion faqs={postFAQs} showHeading={false} />
 
                     <section className="mt-12">
                         <h2 className="mb-3 text-xl font-bold text-charcoal">Related reading</h2>

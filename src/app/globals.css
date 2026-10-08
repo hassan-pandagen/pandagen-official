@@ -536,8 +536,6 @@ body {
   contain: layout style paint;
 }
 
-/* ── Tawk.to: no auto-popup, passive chat only (see TawkToChat.tsx) ── */
-
 /* ── Responsive table: stacks rows as cards on mobile ──
    Industry standard pattern used by Stripe docs, GitHub, Linear, Shopify.
 

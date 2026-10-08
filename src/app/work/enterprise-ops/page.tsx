@@ -2,7 +2,7 @@ import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION } from "@/data/company-facts";
 import { requiredMetric } from "@/data/case-study-facts";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import { EnterpriseOpsCaseStudyPreview as RedesignEnterpriseOpsCaseStudy } from "@/app/preview/work/enterprise-ops/Design";
+import { EnterpriseOpsCaseStudyPreview as RedesignEnterpriseOpsCaseStudy } from "@/components/pages/work/enterprise-ops/Design";
 
 // 30 Sep 2026: "26 Edge Functions" and "86 tracked migrations" were typed into
 // this file in six places and went stale when the CRM grew to 36 and 191, and

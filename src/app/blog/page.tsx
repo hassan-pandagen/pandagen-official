@@ -1,6 +1,6 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import { BlogIndexDesign } from "@/app/preview/blog/BlogIndexDesign";
+import { BlogIndexDesign } from "@/components/pages/blog/BlogIndexDesign";
 import { blogPosts } from "@/data/blog";
 import { hubs, hubPostIds, parentForPost } from "@/data/hubs";
 

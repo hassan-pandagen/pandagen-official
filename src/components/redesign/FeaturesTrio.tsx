@@ -33,16 +33,21 @@ function fitTags(fit: string): string[] {
 
 export default function FeaturesTrio() {
   return (
-    <section aria-labelledby="features-title" className="px-6 py-24 md:px-10 md:py-36" style={{ backgroundColor: T.paperHi }}>
+    <section aria-labelledby="features-title" className="px-6 py-16 md:px-10 md:py-20" style={{ backgroundColor: T.paperHi }}>
       <div className="mx-auto max-w-[1440px]">
         <div className="grid gap-10 lg:grid-cols-12">
-          <h2
-            id="features-title"
-            className="max-w-[36ch] lg:col-span-7"
-            style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.6rem, 4.6vw, 4.4rem)", lineHeight: 1, letterSpacing: "-0.02em" }}
-          >
-            {businessFeatureCopy.heading}
-          </h2>
+          <div className="lg:col-span-7">
+            <p className="mb-5 text-[12px] uppercase tracking-[0.16em]" style={{ fontFamily: MONO, color: T.accentText }}>
+              Examples of what we can build
+            </p>
+            <h2
+              id="features-title"
+              className="max-w-[36ch]"
+              style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.6rem, 4.6vw, 4.4rem)", lineHeight: 1, letterSpacing: "-0.02em" }}
+            >
+              {businessFeatureCopy.heading}
+            </h2>
+          </div>
           <p className="max-w-[34rem] self-end text-[17px] leading-[1.6] lg:col-span-5" style={{ color: T.body }}>
             {businessFeatureCopy.intro}
           </p>
@@ -105,7 +110,7 @@ export default function FeaturesTrio() {
         </ol>
         </MotionConfig>
 
-        <div className="mt-16 grid gap-8 border-t pt-10 md:grid-cols-12" style={{ borderColor: T.rule }}>
+        <div className="mt-12 grid gap-8 border-t pt-8 md:grid-cols-12" style={{ borderColor: T.rule }}>
           <p className="max-w-[46rem] text-[16px] leading-[1.7] md:col-span-8" style={{ color: T.body }}>
             {businessFeatureCopy.costs}
           </p>
@@ -125,16 +130,17 @@ export default function FeaturesTrio() {
       </div>
 
       <style>{`
-        .feature-col { transition: background-color .3s ease, box-shadow .3s ease; }
+        .feature-col { transition: background-color .3s ease, box-shadow .3s ease, transform .3s ease; }
         .feature-col:hover, .feature-col:focus-within {
-          background-color: ${T.paper};
-          box-shadow: inset 0 -3px 0 ${T.accent};
+          background-color: #fff;
+          box-shadow: inset 0 4px 0 ${T.accent}, 0 18px 25px rgba(28,25,23,.1);
+          transform: translateY(-4px);
         }
         .feature-num { transition: color .3s ease; }
         .feature-col:hover .feature-num, .feature-col:focus-within .feature-num { color: ${T.ink}; }
         .cta-solid { transition: background-color .3s ease, color .3s ease; }
         .cta-solid:hover, .cta-solid:focus-visible { background-color: ${T.accent} !important; color: #FFFFFF !important; }
-        @media (prefers-reduced-motion: reduce) { .feature-col, .feature-num, .cta-solid { transition: none; } }
+        @media (prefers-reduced-motion: reduce) { .feature-col, .feature-num, .cta-solid { transition: none; } .feature-col:hover, .feature-col:focus-within { transform: none; } }
       `}</style>
     </section>
   );

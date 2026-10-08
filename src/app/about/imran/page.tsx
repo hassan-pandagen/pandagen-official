@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BarChart3, CheckCircle2, FileCheck2, Megaphone, Target } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import FounderRoleStack from "@/components/about/FounderRoleStack";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { ogImageForPath } from "@/lib/seo/og";
 
 export const metadata: Metadata = {
-  title: "Imran Raza Ladhani | Co-founder and Head of Marketing at PandaCodeGen",
+  // absolute: this title already ends in "PandaCodeGen", so the root "%s | PandaCodeGen"
+  // template would print the brand twice (SEO audit, 4 Oct 2026).
+  title: { absolute: "Imran Raza Ladhani | Co-founder and Head of Marketing at PandaCodeGen" },
   description: "Meet Imran Raza Ladhani, PandaCodeGen co-founder and Head of Marketing. He focuses on positioning, the customer journey, and how the agency explains and presents its work.",
   alternates: { canonical: "/about/imran" },
   openGraph: {
@@ -69,17 +72,14 @@ const profileSchema = {
 
 const responsibilities = [
   {
-    icon: Target,
     title: "Positioning and audience",
     body: "Define who a website needs to reach, what those visitors need to understand, and which claims the business can support with real evidence.",
   },
   {
-    icon: Megaphone,
     title: "Clearer website messaging",
     body: "Turn the offer, service pages, project examples, and calls to action into a coherent path from first visit to enquiry.",
   },
   {
-    icon: BarChart3,
     title: "Marketing and measurement",
     body: "Decide what to learn from enquiries and site behaviour, then use that feedback to improve the message and customer journey without inventing outcomes.",
   },
@@ -87,24 +87,24 @@ const responsibilities = [
 
 export default function ImranProfilePage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-paper text-charcoal">
+    <main className="min-h-screen overflow-x-clip bg-paper text-charcoal">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema) }} />
       <Header />
 
       <section className="border-b border-stone-300 px-6 pb-16 pt-28 md:pb-24 md:pt-40">
         <div className="mx-auto max-w-6xl">
-          <Link href="/about" className="inline-flex min-h-11 items-center text-sm font-semibold text-stone-700 hover:text-cognac">
-            Back to PandaCodeGen
+          <Link href="/about" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-stone-700 hover:text-cognac">
+            <ArrowLeft className="h-4 w-4" aria-hidden="true" /> Back to PandaCodeGen
           </Link>
-          <div className="mt-8 grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-            <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-[2rem] border border-stone-300 bg-charcoal shadow-elevated">
+          <div className="mt-8 grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+            <div className="relative aspect-square w-full max-w-sm overflow-hidden border border-stone-300 bg-charcoal">
               <Image
                 src="/team/imran-editorial.png"
                 alt="Imran Raza Ladhani, co-founder of PandaCodeGen"
                 fill
                 sizes="(max-width: 431px) calc(100vw - 48px), 384px"
                 loading="eager"
-                className="object-cover"
+                className="object-cover object-[50%_25%]"
               />
             </div>
             <div className="border-l-2 border-cognac pl-5 md:pl-8">
@@ -114,10 +114,10 @@ export default function ImranProfilePage() {
                 Imran brings marketing experience across different fields to PandaCodeGen. He leads how we position the offer, explain real project work, and shape the customer journey from a first question to a useful conversation.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">
+                <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 bg-charcoal px-6 font-bold text-white hover:bg-cognac">
                   Talk to the founders <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
-                <a href="https://www.linkedin.com/in/imran-raza-ladhani/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-400 bg-white px-6 font-bold hover:border-charcoal">
+                <a href="https://www.linkedin.com/in/imran-raza-ladhani/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center border border-stone-400 px-6 font-bold hover:border-charcoal">
                   View LinkedIn profile
                 </a>
               </div>
@@ -126,37 +126,23 @@ export default function ImranProfilePage() {
         </div>
       </section>
 
-      <section className="px-6 py-16 md:py-24" aria-labelledby="imran-responsibilities">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Marketing responsibility</p>
-          <h2 id="imran-responsibilities" className="mt-3 max-w-3xl text-3xl font-bold md:text-5xl">A website should make the business easier to understand.</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {responsibilities.map(({ icon: Icon, title, body }) => (
-              <article key={title} className="rounded-3xl border border-stone-300 bg-white p-7">
-                <Icon className="h-7 w-7 text-cognac" aria-hidden="true" />
-                <h3 className="mt-5 text-xl font-bold">{title}</h3>
-                <p className="mt-3 leading-7 text-stone-700">{body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FounderRoleStack id="imran-responsibilities" eyebrow="Imran’s role" heading="Make the business easier to understand." roles={responsibilities} />
 
-      <section className="bg-charcoal px-6 py-16 text-white md:py-24" aria-labelledby="marketing-review">
+      <section className="bg-paper px-6 py-16 text-charcoal md:py-24" aria-labelledby="marketing-review">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <Megaphone className="h-8 w-8 text-orange-300" aria-hidden="true" />
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Before launch</p>
             <h2 id="marketing-review" className="mt-5 text-3xl font-bold md:text-5xl">Questions answered before a page goes live</h2>
           </div>
-          <ul className="space-y-4">
+          <ul className="border-t border-stone-400">
             {[
               "Who needs this page, and what decision are they trying to make?",
               "What can we show from real work to make the offer credible?",
               "Does the route from the first answer to the next action make sense?",
               "Which enquiries and behaviours will tell us what to improve after launch?",
-            ].map((item) => (
-              <li key={item} className="flex gap-3 rounded-2xl border border-stone-700 bg-stone-900 p-5 text-stone-200">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-orange-300" aria-hidden="true" />
+            ].map((item, index) => (
+              <li key={item} className="flex gap-5 border-b border-stone-400 py-5 text-stone-700">
+                <span className="font-mono text-xs font-bold text-cognac">0{index + 1}</span>
                 <span className="leading-7">{item}</span>
               </li>
             ))}
@@ -165,16 +151,15 @@ export default function ImranProfilePage() {
       </section>
 
       <section className="px-6 py-16 md:py-24" aria-labelledby="owner-operator-evidence">
-        <div className="mx-auto max-w-5xl rounded-[2.5rem] border border-cognac/30 bg-[#faf7f2] p-8 md:p-12">
-          <FileCheck2 className="h-8 w-8 text-cognac" aria-hidden="true" />
-          <p className="mt-6 text-sm font-bold uppercase tracking-[0.2em] text-cognac">Owner-operated reference</p>
+        <div className="mx-auto max-w-5xl border-t border-stone-400 pt-10">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Owner-operated reference</p>
           <h2 id="owner-operator-evidence" className="mt-3 text-3xl font-bold md:text-5xl">Imran owns Panda Patches. It is not a client testimonial.</h2>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">
             <Link href="/work/panda-patches" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Panda Patches</Link> is owned and operated by Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform, and Imran holds a stake in both companies, so this is not an arm’s-length client relationship. It provides an owner-operated example of catalogue, checkout, customer journey, and technical decisions. Any public performance, cost, or revenue figure still needs its date, source, definition, and measurement conditions; a founder-affiliated project is not independent client proof.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link href="/work" className="inline-flex min-h-12 items-center justify-center rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">See the project records</Link>
-            <a href="https://www.pandapatches.com" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-400 bg-white px-6 font-bold hover:border-charcoal">Visit Panda Patches</a>
+            <Link href="/work" className="inline-flex min-h-12 items-center justify-center bg-charcoal px-6 font-bold text-white hover:bg-cognac">See the project records</Link>
+            <a href="https://www.pandapatches.com" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center border border-stone-400 px-6 font-bold hover:border-charcoal">Visit Panda Patches</a>
           </div>
         </div>
       </section>

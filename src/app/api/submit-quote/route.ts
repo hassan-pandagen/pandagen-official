@@ -149,7 +149,7 @@ export async function POST(request: NextRequest) {
     const response = await getResend().emails.send({
       from: process.env.RESEND_FROM_EMAIL || "noreply@pandacodegen.com",
       to: process.env.QUOTE_RECIPIENT_EMAIL || "info@pandacodegen.com",
-      replyTo: fields.email,
+      ...(fields.email ? { replyTo: fields.email } : {}),
       subject: `${subjectPrefix}New website request from ${fields.name}`,
       html: `
         <div style="font-family:Arial,sans-serif;max-width:680px;margin:0 auto;background:#f5f5f4;padding:24px;border-radius:12px;color:#1c1917">
@@ -158,7 +158,7 @@ export async function POST(request: NextRequest) {
           <div style="background:#fff;padding:20px;border-radius:8px">
             ${detailRow("Name", fields.name)}
             ${detailRow("Reply language", replyLanguage)}
-            <p style="margin:10px 0"><strong>Email:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></p>
+            ${safeEmail ? `<p style="margin:10px 0"><strong>Email:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></p>` : `<p style="margin:10px 0"><strong>Email:</strong> none given, reply by phone</p>`}
             ${safePhone ? `<p style="margin:10px 0"><strong>Phone:</strong> <a href="tel:${safePhone}">${safePhone}</a></p>` : ""}
             ${detailRow("Current website", fields.currentUrl)}
             ${detailRow("Current platform", fields.currentPlatform)}

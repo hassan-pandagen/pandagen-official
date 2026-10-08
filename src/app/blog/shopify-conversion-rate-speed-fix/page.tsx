@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-11",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-conversion-rate-speed-fix")],
@@ -92,7 +92,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-conversion-rate-speed-fix"),
             description,
             datePublished: "2026-02-11",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -173,7 +173,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                             intervention before assigning revenue to speed. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Shopify documentation.
+                            Reviewed October 8, 2026 against current Shopify documentation.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -181,7 +181,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 11, 2026" readTime="6 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="shopify-conversion-rate-speed-fix" published="2026-02-11" readTime="16 min read" />
 
                     <BlogText>
                         The quotes below are Shopify merchants describing what moved, or wrecked, their conversion rate, in their own words. The link after each one goes to the original post.
@@ -244,8 +244,8 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         together.&quot;</strong> Shopify also states plainly that{" "}
                         <strong>&quot;conversion depends on many factors beyond speed&quot;</strong>. That is a
                         correlation across a population of stores, described carefully. Most repetitions of this
-                        statistic — including Google&apos;s own AI summary for this question, which renders it as
-                        &quot;conversion rates drop by about 3.5%&quot; — quietly convert it into a causal promise the
+                        statistic, including Google&apos;s own AI summary for this question, which renders it as
+                        &quot;conversion rates drop by about 3.5%&quot;, quietly convert it into a causal promise the
                         source never made.
                     </BlogText>
                     <BlogText>
@@ -255,7 +255,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         items={[
                             "As a correlation, it says fast stores and high-converting stores are the same stores. It does not say your store converts 3.5% better for each 100ms you remove, because the stores that are fast also tend to be the ones with fewer apps, cleaner themes, better merchandising and more competent operators.",
                             "It is a population figure, not a per-store coefficient. You cannot multiply your own latency saving by 3.5% and forecast revenue from it. Anyone who quotes it that way in a proposal is selling you arithmetic that the underlying study does not support.",
-                            "It is still a reason to act. A relationship that survives across a large population of real stores is evidence that speed belongs on the list of things worth fixing -- it just is not evidence of what fixing it will pay you.",
+                            "It is still a reason to act. A relationship that survives across a large population of real stores is evidence that speed belongs on the list of things worth fixing. It just is not evidence of what fixing it will pay you.",
                             "The only figure that predicts YOUR outcome is your own measurement. That is what the rest of this page is for: a before-and-after on a segmented funnel, with the intervention isolated, so the number you end up quoting is one you actually observed.",
                         ]}
                     />

@@ -248,7 +248,7 @@ export const clusters: Cluster[] = [
       'wordpress-april-2026-evidence', 'divi-theme-slow', 'cloudflare-emdash-wordpress-replacement',
       'wordpress-migration-cost', 'how-to-migrate-wordpress-to-nextjs', 'wordpress-vs-nextjs',
       'why-we-chose-nextjs-over-wordpress-2026', 'nextjs-sanity-stack', 'wordpress-vs-custom-code-real-cost-3-years',
-      'wordpress-ai-security-risk-2026', 'wordpress-plugin-security-2026', 'wordpress-killer', 'elementor-kills-seo',
+      'wordpress-ai-security-risk-2026', 'wordpress-plugin-security-2026', 'elementor-kills-seo',
       'wordpress-plugins-destroy-speed', 'wordpress-traffic-drop-speed', 'how-to-fix-slow-wordpress',
       // Market-share research: the WordPress peak is the reason a migration
       // conversation is happening at all, so it belongs with the migration cluster.
@@ -294,7 +294,7 @@ export const clusters: Cluster[] = [
     serviceOwned: true,
     entityIds: ['wix', 'nextjs'],
     relatedClusterIds: ['webflow', 'squarespace', 'custom'],
-    postIds: ['wix-too-slow', 'wix-vs-custom-website', 'wix-migration-cost'],
+    postIds: ['wix-too-slow', 'wix-vs-custom-website', 'wix-migration-cost', 'is-wix-bad-for-seo'],
   },
   {
     id: 'squarespace',
@@ -311,7 +311,7 @@ export const clusters: Cluster[] = [
     serviceOwned: true,
     entityIds: ['gohighlevel', 'nextjs'],
     relatedClusterIds: ['custom', 'agency', 'performance'],
-    postIds: ['gohighlevel-keep-crm-replace-website', 'gohighlevel-website-speed', 'best-website-builder-for-gohighlevel-agencies'],
+    postIds: ['gohighlevel-keep-crm-replace-website', 'gohighlevel-website-speed', 'best-website-builder-for-gohighlevel-agencies', 'gohighlevel-vs-wordpress'],
   },
   {
     id: 'custom',
@@ -321,11 +321,15 @@ export const clusters: Cluster[] = [
     relatedClusterIds: ['wordpress', 'shopify', 'pricing', 'agency'],
     caseStudyHrefs: ['/work/emblematic-studio', '/work/ladies-4-jesus', '/work/panda-patches'],
     postIds: [
+      'sanity-vs-wordpress', 'sanity-vs-supabase', 'product-catalog-website-without-cart',
       'woocommerce-vs-custom-website',
       'custom-website-5000-whats-included', 'how-long-does-a-custom-website-take', 'do-you-own-your-website',
       'build-vs-buy-software-2026-cost-comparison',
       'ai-built-website-checklist',
       'is-it-cheaper-to-build-your-own-website', 'meta-conversions-api-setup-cost',
+      // 4 Oct 2026: what each platform lets you export. Primary hub is this one
+      // (ownership is the custom cluster's question); it also sits in `migration`.
+      'website-portability',
     ],
   },
   {
@@ -350,7 +354,7 @@ export const clusters: Cluster[] = [
     entityIds: ['core-web-vitals', 'nextjs'],
     relatedClusterIds: ['seo-aeo', 'wordpress', 'shopify'],
     postIds: [
-      'why-is-my-website-loading-so-slow', 'how-to-speed-up-your-website', 'how-to-achieve-100-pagespeed',
+      'how-to-speed-up-your-website', 'how-to-achieve-100-pagespeed',
       'nextjs-hosting-zero-cost', 'core-web-vitals-explained', 'how-website-speed-affects-seo',
       'aeo-web-performance-glossary',
       // Accessibility sits here for now because it shares this cluster's premise:
@@ -368,8 +372,11 @@ export const clusters: Cluster[] = [
     entityIds: ['saas-cost', 'custom-engineering'],
     relatedClusterIds: ['custom', 'migration', 'agency'],
     postIds: [
-      'saas-price-increases-2026-tracker', 'how-to-cut-saas-bill-2026', 'saas-software-pricing-audit-2026',
+      'saas-price-increases-2026-tracker', 'saas-software-pricing-audit-2026',
       'how-much-does-a-website-cost', 'website-redesign-cost', 'website-rebuild-cost-2026',
+      // 8 Oct 2026: the monthly vendor bill for our usual stack, the running-cost
+      // companion to how-much-does-a-website-cost.
+      'website-monthly-running-cost',
     ],
   },
   {
@@ -382,7 +389,7 @@ export const clusters: Cluster[] = [
     entityIds: ['nextjs'],
     relatedClusterIds: ['wordpress', 'webflow', 'seo-aeo', 'pricing'],
     caseStudyHrefs: ['/work/ladies-4-jesus', '/work/mycustompatches'],
-    postIds: ['will-migrating-hurt-my-seo', 'website-migration-cost-2026', 'woocommerce-migration-cost', 'lovable-site-not-showing-on-google'],
+    postIds: ['will-migrating-hurt-my-seo', 'website-migration-cost-2026', 'woocommerce-migration-cost', 'lovable-site-not-showing-on-google', 'website-portability'],
   },
   {
     id: 'seo-aeo',
@@ -431,6 +438,40 @@ export const clusters: Cluster[] = [
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
+// PRIMARY HUB ORDER
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Moved here from hubs.ts on 4 Oct 2026 so getRelatedPostIds can tell which
+ * cluster is a post's primary hub without importing hubs.ts (which imports this
+ * file). hubs.ts re-uses these exact values.
+ *
+ * When a post belongs to more than one hub cluster, this order decides its
+ * canonical parent: earlier wins. Platform clusters outrank cross-cutting
+ * concept clusters, because "the Shopify one" is how readers and search
+ * queries actually name those posts.
+ */
+export const HUB_PRIORITY: string[] = [
+    'wordpress', 'shopify', 'webflow', 'squarespace',
+    'custom', 'agency', 'migration', 'pricing',
+    'ecommerce-strategy', 'performance', 'seo-aeo',
+];
+
+/**
+ * Posts where the priority order picks the wrong parent, with the reason.
+ * Kept explicit rather than encoded as more priority rules, because three
+ * exceptions are easier to audit than a rule that produces them.
+ */
+export const PRIMARY_HUB_OVERRIDE: Record<string, string> = {
+    // A glossary of AI-search vocabulary that happens to include perf terms.
+    'aeo-web-performance-glossary': 'seo-aeo',
+    // An indexing problem, not a migration one. The site was never migrated.
+    'lovable-site-not-showing-on-google': 'seo-aeo',
+    // Ad tracking moved into ecommerce-strategy with the tracking-ads merge.
+    'meta-conversions-api-setup-cost': 'ecommerce-strategy',
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
 // TOPICAL BOUNDARY: defines the site's context vector (what's in/out of scope).
 // Used to keep content authoring inside the topical border and avoid dilution.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -462,27 +503,111 @@ export function getClustersForPost(postId: string): Cluster[] {
 }
 
 /**
+ * The six pages in title pilot 1 (docs/research/seo-skill-pack-audit-2026-10-04/
+ * TITLE_PILOT.md, set up 4 Oct 2026): three tests and their three controls. Their
+ * related-card inbound links must not move while the pilot runs, or a change in
+ * clicks could come from links rather than titles. Empty this set (or delete it
+ * and the check in getRelatedPostIds) once the 28-day read is recorded.
+ */
+const TITLE_PILOT_PAGES = new Set([
+  'agentic-browsing-pagespeed-score', 'how-to-achieve-100-pagespeed', 'squarespace-migration-cost',
+  'fix-meta-ad-tracking-2026', 'meta-conversions-api-setup-cost', 'wix-migration-cost',
+]);
+
+/**
+ * Posts first published while title pilot 1 runs (added 4 Oct 2026). Adding a
+ * post to a pilot page's cluster would otherwise move that pilot page's cards
+ * twice: the new post would take a card slot on the pilot page itself, and it
+ * would show the pilot page as one of its own cards, which is a new inbound
+ * link. So pilot pages never see these posts as candidates, and these posts
+ * never show a pilot page. Add any post published before the 28-day read here;
+ * remove this set with TITLE_PILOT_PAGES.
+ */
+const POSTS_ADDED_DURING_PILOT = new Set(['is-wix-bad-for-seo', 'gohighlevel-vs-wordpress', 'sanity-vs-wordpress', 'sanity-vs-supabase', 'product-catalog-website-without-cart', 'website-monthly-running-cost']);
+
+/** Cards RelatedPosts shows by default (its maxPosts). Used only by the pilot guard. */
+const RELATED_CARDS_SHOWN = 3;
+
+/**
+ * A post's primary hub cluster, resolved the same way as hubForPost in hubs.ts
+ * (override first, then HUB_PRIORITY), or undefined for service-owned posts.
+ */
+function primaryHubCluster(postId: string): Cluster | undefined {
+  const override = PRIMARY_HUB_OVERRIDE[postId];
+  if (override) return clusters.find((c) => c.id === override);
+  for (const id of HUB_PRIORITY) {
+    const cluster = clusters.find((c) => c.id === id);
+    if (cluster?.postIds.includes(postId)) return cluster;
+  }
+  return undefined;
+}
+
+/**
+ * FNV-1a, 32-bit. A stable, dependency-free hash used only to order ties in
+ * getRelatedPostIds. Same input, same output, on the server and in the browser.
+ */
+function stableHash(input: string): number {
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < input.length; i++) {
+    hash ^= input.charCodeAt(i);
+    hash = Math.imul(hash, 0x01000193);
+  }
+  return hash >>> 0;
+}
+
+/**
  * Relationship-ranked related posts. Scores every candidate by the number of
  * clusters it SHARES with the source post (true topical proximity), then breaks
- * ties by the caller-supplied recency order. Replaces category-flat + slice().
+ * ties with a stable hash of the source and candidate ids. Replaces
+ * category-flat + slice().
+ *
+ * WHY NOT RECENCY (changed 4 Oct 2026). Ties used to go to the newest post. In a
+ * big cluster every sibling ties on shared-cluster count, so the same few newest
+ * posts took the related-card slots on every page in that cluster: four posts
+ * got 16 card links each while 37 of 88 got none (SEO audit, F section 1.4, M2).
+ * The hash keeps relevance first and still gives each page a fixed, repeatable
+ * list, but the tie order differs from page to page, so the links spread across
+ * the cluster instead of piling onto its newest members. `orderedAllIds` is
+ * still the candidate list; only its order no longer decides ties.
  *
  * @param postId        the current post
- * @param orderedAllIds all post ids in recency order (caller passes blogPosts ids)
+ * @param orderedAllIds all post ids (caller passes blogPosts ids)
  * @param max           how many to return
  */
 export function getRelatedPostIds(postId: string, orderedAllIds: string[], max = 3): string[] {
   const sourceClusters = new Set(getClustersForPost(postId).map((c) => c.id));
 
-  const scored = orderedAllIds
+  // Pilot pages skip posts added during the pilot; see POSTS_ADDED_DURING_PILOT.
+  const candidateIds = TITLE_PILOT_PAGES.has(postId)
+    ? orderedAllIds.filter((id) => !POSTS_ADDED_DURING_PILOT.has(id))
+    : orderedAllIds;
+  const scored = candidateIds
     .filter((id) => id !== postId)
     .map((id, recencyIndex) => {
       const shared = getClustersForPost(id).filter((c) => sourceClusters.has(c.id)).length;
-      return { id, shared, recencyIndex };
+      return { id, shared, recencyIndex, tie: stableHash(`${postId}|${id}`) };
     });
 
-  scored.sort((a, b) => (b.shared - a.shared) || (a.recencyIndex - b.recencyIndex));
+  const byRecency = [...scored].sort((a, b) => (b.shared - a.shared) || (a.recencyIndex - b.recencyIndex));
+  const byHash = [...scored].sort((a, b) => (b.shared - a.shared) || (a.tie - b.tie) || a.id.localeCompare(b.id));
 
-  return scored.slice(0, max).map((s) => s.id);
+  // While the title pilot runs, pilot pages must keep exactly the related-card
+  // links they had, so the pilot measures the title change and not a change in
+  // internal links. Pilot pages are left out of the hash ordering, and a page
+  // that used to SHOW a pilot card keeps its old recency list. "Show" mirrors
+  // RelatedPosts: the top `max` re-sorted so primary-hub mates come first, then
+  // the first RELATED_CARDS_SHOWN. Remove with the pilot (TITLE_PILOT_PAGES).
+  const hubMates = new Set(primaryHubCluster(postId)?.postIds ?? []);
+  const shown = (ids: string[]) =>
+    ids.slice(0, max)
+      .sort((a, b) => Number(hubMates.has(b)) - Number(hubMates.has(a)))
+      .slice(0, RELATED_CARDS_SHOWN);
+  const oldIds = byRecency.map((s) => s.id);
+  if (POSTS_ADDED_DURING_PILOT.has(postId)) {
+    return byHash.map((s) => s.id).filter((id) => !TITLE_PILOT_PAGES.has(id)).slice(0, max);
+  }
+  if (shown(oldIds).some((id) => TITLE_PILOT_PAGES.has(id))) return oldIds.slice(0, max);
+  return byHash.map((s) => s.id).filter((id) => !TITLE_PILOT_PAGES.has(id)).slice(0, max);
 }
 
 /** All service pillar hrefs known to the map (deduped, in declaration order). */

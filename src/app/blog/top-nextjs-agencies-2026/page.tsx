@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-25",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/top-nextjs-agencies-2026")],
@@ -77,7 +77,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/top-nextjs-agencies-2026"),
             description,
             datePublished: "2026-05-25",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -120,7 +120,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-25",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -190,8 +190,8 @@ const agencies = [
     },
     {
         name: "PandaCodeGen",
-        publicEvidence: "SEO-safe platform migrations and custom Next.js delivery",
-        likelyFit: "Migrations and builds at published fixed prices from $1,500",
+        publicEvidence: "Business websites, online stores and custom Next.js delivery",
+        likelyFit: "New builds, redesigns and existing-site improvements from $1,500, quoted to scope",
         verify: "Signed scope, first-party references, acceptance terms and support",
         url: "https://www.pandacodegen.com/services",
     },
@@ -222,7 +222,7 @@ export default function TopNextjsAgenciesPage() {
                             better than the others. Our own figures are the exception, because we can stand behind them: PandaCodeGen starts at $1,500 at a fixed price, has no minimum project size, and hands over code you own.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Researched July 24, 2026. Confirm services, availability and commercial terms directly.
+                            Provider descriptions rechecked October 8, 2026. Confirm services, availability and commercial terms directly.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -230,7 +230,7 @@ export default function TopNextjsAgenciesPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 25, 2026" readTime="8 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="top-nextjs-agencies-2026" published="2026-05-25" readTime="8 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <InsightBox variant="warning" label="Commercial disclosure">
                         PandaCodeGen publishes this comparison, provides Next.js services, and is one of the eight
@@ -366,11 +366,12 @@ export default function TopNextjsAgenciesPage() {
 
                     <BlogHeader>Where PandaCodeGen may fit</BlogHeader>
                     <BlogText>
-                        PandaCodeGen focuses on SEO-safe migrations for revenue-generating{" "}
-                        <Link href="/services/wordpress-migration" className={sourceLinkClass}>WordPress</Link>,{" "}
-                        <Link href="/services/webflow" className={sourceLinkClass}>Webflow</Link> and{" "}
-                        <Link href="/services/gohighlevel" className={sourceLinkClass}>GoHighLevel</Link> sites, plus{" "}
-                        <Link href="/services/custom-engineering" className={sourceLinkClass}>scoped custom Next.js work</Link>.{" "}
+                        PandaCodeGen builds business websites and online stores, including custom builds and WordPress
+                        sites. We also improve and manage existing websites.{" "}
+                        <Link href="/services/wordpress-migration" className={sourceLinkClass}>Migrations</Link>,{" "}
+                        <Link href="/services/gohighlevel" className={sourceLinkClass}>CRM integrations</Link> and{" "}
+                        <Link href="/services/custom-engineering" className={sourceLinkClass}>custom application work</Link>{" "}
+                        are scoped around the business requirement.{" "}
                         <Link href="/pricing" className={sourceLinkClass}>Public starting tiers</Link> are $1,500 Starter,
                         $3,500 Growth and $5,000 Scale. Larger or unusually complex scope is discussed
                         separately. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed under the
@@ -442,18 +443,19 @@ export default function TopNextjsAgenciesPage() {
 
                     <BlogHeader>How the shortlist was assembled</BlogHeader>
                     <BlogText>
-                        The eight names were drawn from providers that appear repeatedly across publicly available 2026
-                        Next.js agency roundups, including those published by DesignRush, Clutch, GitNation, Design
-                        Revision, and by two of the agencies themselves. Appearing on several such lists indicates
-                        visibility, not verified quality. Several of those roundups are published by agencies that
-                        include themselves, exactly as this one does. Treat frequency of appearance as a reason to look,
-                        not as evidence of outcome.
+                        {/* 8 Oct 2026: the roundups this paragraph used to name (DesignRush, Clutch, GitNation,
+                            Design Revision) were never linked or dated, so the claim was removed rather than kept
+                            unsourced. */}
+                        The eight names are providers that publicly present Next.js work and that a buyer comparing
+                        agencies is likely to come across. Being on this list is a reason to look, not evidence of
+                        outcome, and this list is published by an agency that includes itself.
                     </BlogText>
                     <BlogText>
-                        Providers were excluded where their public positioning suggested a different category rather than
-                        a different quality level: enterprise staff augmentation, general software consultancies where
-                        Next.js is one stack among many, and design-led studios that deliver frontend work in several
-                        frameworks. Those firms may well be the better answer for the right project. They are simply not
+                        Providers were left out where their public positioning suggested a different category rather
+                        than a different quality level, such as enterprise staff augmentation or design-led studios that
+                        deliver frontend work in several frameworks. Two broader software consultancies, Netguru and
+                        Brainhub, are included and marked as broader than a Next.js specialist. Those other firms may
+                        well be the better answer for the right project. They are simply not
                         comparable with a fixed-price Next.js build covering the same work, which is what this page is for.
                     </BlogText>
                     <BlogText>
@@ -547,8 +549,8 @@ export default function TopNextjsAgenciesPage() {
 
                     <BlogHeader>Sources and update policy</BlogHeader>
                     <BlogText>
-                        Provider descriptions were checked against the official pages linked above on July 24, 2026,
-                        and every provider link on this page was reconfirmed as reachable on August 2, 2026. Those are
+                        Provider descriptions were checked against the official pages linked above on July 24, 2026 and
+                        rechecked on October 8, 2026, when every provider link on this page was also reachable. Those are
                         two different checks and it is worth keeping them apart: a working link is not evidence that
                         the description beneath it is still current. The descriptions are not independently audited.
                         Reconfirm the evidence during procurement, because team, services, pricing and availability can
@@ -559,7 +561,7 @@ export default function TopNextjsAgenciesPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader>Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

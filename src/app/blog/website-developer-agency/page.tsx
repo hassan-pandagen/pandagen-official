@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-12",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-developer-agency")],
@@ -71,7 +71,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/website-developer-agency"),
             description,
             datePublished: "2026-05-12",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -114,7 +114,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-12",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -154,7 +154,7 @@ export default function WebsiteDeveloperAgencyPage() {
                             what they will put in writing, not on the word &ldquo;agency&rdquo;.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 3, 2026 against current W3C, OWASP and U.S. Copyright Office guidance, all linked at the foot of this page.
+                            Reviewed October 8, 2026 against current W3C, OWASP and U.S. Copyright Office guidance, all linked at the foot of this page.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -162,7 +162,7 @@ export default function WebsiteDeveloperAgencyPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 12, 2026" readTime="9 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="website-developer-agency" published="2026-05-12" readTime="13 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -341,8 +341,8 @@ export default function WebsiteDeveloperAgencyPage() {
                     </BlogText>
 
                     <BlogText>
-                        If you are reading this from the other side of the table &mdash; an agency deciding whether to
-                        offer custom development rather than a business buying it &mdash;{" "}
+                        If you are reading this from the other side of the table, as an agency deciding whether to
+                        offer custom development rather than a business buying it,{" "}
                         <Link href="/blog/for-agencies-offer-custom-web-development" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">the partner-side version of this guide</Link>{" "}
                         covers the same ground from the delivery end.
                     </BlogText>
@@ -515,7 +515,7 @@ export default function WebsiteDeveloperAgencyPage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader>Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

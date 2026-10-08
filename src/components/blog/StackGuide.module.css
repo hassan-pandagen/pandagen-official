@@ -1,0 +1,24 @@
+.main { padding: 48px 24px 80px; background: #f7f5f0; color: #1c1917; }
+.article { max-width: 960px; margin: 0 auto; min-width: 0; }
+.header { padding: 36px 0; border-bottom: 1px solid #d6d0c6; }
+.eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: #93401c; }
+.header h1 { font-family: Georgia, serif; font-size: clamp(2.35rem, 5.2vw, 4.5rem); line-height: 1.08; letter-spacing: -.03em; max-width: 18ch; }
+.summary { font-size: 21px; line-height: 1.6; margin: 24px 0; }
+.body { font-size: 19px; line-height: 1.75; }
+.body h2, .faq h2 { font-family: Georgia, serif; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.2; margin: 48px 0 22px; }
+.body h3 { font-size: 23px; line-height: 1.35; margin: 30px 0 14px; }
+.body p { margin: 20px 0; }
+.article a { color: #93401c; text-decoration: underline; text-underline-offset: 4px; }
+.body ol, .body ul { padding-left: 25px; margin: 24px 0; }
+.body li { margin: 12px 0; }
+.body figure { margin: 32px 0; }
+.body img { width: 100%; height: auto; border: 1px solid #d6d0c6; }
+.body figcaption { color: #57534e; font-size: 15px; line-height: 1.6; margin-top: 12px; }
+.tableWrap { overflow-x: auto; margin: 32px 0; border: 1px solid #d6d0c6; }
+.tableWrap table { width: 100%; min-width: 580px; border-collapse: collapse; font-size: 16px; line-height: 1.6; }
+.tableWrap caption { text-align: left; padding: 16px; font-weight: 700; }
+.tableWrap th, .tableWrap td { text-align: left; vertical-align: top; padding: 16px; border-top: 1px solid #d6d0c6; }
+.tableWrap thead { background: #ece8e0; }
+.body pre { overflow-x: auto; padding: 20px; background: #1c1917; color: #faf8f3; font-size: 15px; line-height: 1.7; }
+.disclosure { border-top: 1px solid #d6d0c6; margin-top: 40px; padding-top: 24px; color: #57534e; font-size: 14px; line-height: 1.7; }
+@media (max-width: 600px) { .main { padding-inline: 20px; } .body { font-size: 17px; } .summary { font-size: 18px; } }

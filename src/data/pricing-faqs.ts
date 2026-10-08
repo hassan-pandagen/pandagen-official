@@ -37,7 +37,7 @@ export const pricingFaqs: PricingFaq[] = [
   },
   {
     q: "Do you have a minimum project size?",
-    a: "No. We start at $1,500 for a site of up to 7 pages, and a small project is quoted the same way as a large one. Most custom Next.js agencies will not start below $10,000, and several will not start below $50,000, so a small business is often turned away before it gets a price. You get a fixed price before we begin either way.",
+    a: "No. A small project is welcome. Custom website builds start at $1,500 for up to 7 pages. WordPress builds and focused improvements are quoted to their own scope. We agree the included work, price and running costs with you before starting.",
   },
   {
     q: "Which package should I start with?",

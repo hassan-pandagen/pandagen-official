@@ -43,38 +43,40 @@ export interface PartnerModel {
 export default function PartnerModels({
     models,
     footnote,
+    rowClassName = "",
 }: {
     models: PartnerModel[];
     footnote: string;
+    rowClassName?: string;
 }) {
     return (
         <div>
-            <div className="grid gap-px overflow-hidden rounded-3xl border border-stone-300 bg-stone-300 lg:grid-cols-3">
-                {models.map((m) => (
-                    <div key={m.name} className="flex flex-col bg-white p-8 md:p-9">
-                        <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-stone-500">
+            <div className="border-t border-stone-400">
+                {models.map((m, index) => (
+                    <div key={m.name} className={`grid gap-5 border-b border-stone-400 py-9 md:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] md:gap-12 md:py-12 ${rowClassName}`}>
+                      <div>
+                        <span className="font-mono text-xs text-cognac">0{index + 1}</span>
+                        <p className="mt-4 uppercase leading-none text-charcoal" style={{ fontFamily: "var(--display), Impact, sans-serif", fontSize: "clamp(1.65rem, 2.3vw, 2.25rem)" }}>
                             {m.name}
                         </p>
 
-                        <p className="mt-5 font-serif text-4xl italic leading-none text-cognac md:text-[2.75rem]">
+                        <p className="mt-4 uppercase leading-none" style={{ fontFamily: "var(--display), Impact, sans-serif", fontSize: "clamp(2.75rem, 4vw, 4rem)", color: "#7A2E0E" }}>
                             {m.rate}
                         </p>
-                        <p className="mt-3 text-sm font-semibold text-stone-600">{m.commitment}</p>
+                        <p className="mt-4 text-base font-semibold text-charcoal">{m.commitment}</p>
+                      </div>
 
-                        <div aria-hidden="true" className="my-7 h-px w-full bg-stone-200" />
+                      <div>
+                        <p className="text-lg font-medium leading-7 text-charcoal">{m.fit}</p>
 
-                        <p className="leading-7 text-stone-700">{m.fit}</p>
-
-                        <ul className="mt-6 space-y-3">
+                        <ul className="mt-6 divide-y divide-stone-300 border-t border-stone-300">
                             {m.includes.map((item) => (
-                                <li
-                                    key={item}
-                                    className="border-l-2 border-cognac/25 pl-4 text-sm leading-6 text-stone-700"
-                                >
+                                <li key={item} className="py-3 text-base leading-7 text-stone-700">
                                     {item}
                                 </li>
                             ))}
                         </ul>
+                      </div>
                     </div>
                 ))}
             </div>

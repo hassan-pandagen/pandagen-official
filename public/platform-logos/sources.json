@@ -1,0 +1,13 @@
+{
+  "sources": {
+    "wix.svg": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/wix.svg",
+    "squarespace.svg": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/squarespace.svg",
+    "webflow.svg": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/webflow.svg",
+    "shopify.svg": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/shopify.svg",
+    "woocommerce.svg": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/woocommerce.svg",
+    "wordpress.svg": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/wordpress.svg",
+    "highlevel.png": "https://assets.cdn.filesafe.space/zELBHkVp0JPbbLvKIlF5/media/690a5f4a57ea175183408da2.png"
+  },
+  "highlevel_brand_kit": "https://marketing.gohighlevel.com/brandkit",
+  "note": "Logos identify the platforms compared in the website portability guide. WordPress.com and WordPress.org share the WordPress mark."
+}

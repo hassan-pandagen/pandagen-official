@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-08",
-        modifiedTime: "2026-08-19T00:00:00-05:00",
+        modifiedTime: "2026-10-01T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/divi-theme-slow")],
@@ -68,7 +68,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/divi-theme-slow"),
             datePublished: "2026-04-08",
-            dateModified: "2026-08-19T00:00:00-05:00",
+            dateModified: "2026-10-01T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -139,7 +139,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath("/blog/divi-theme-slow") },
             datePublished: "2026-04-08",
-            dateModified: "2026-08-19T00:00:00-05:00",
+            dateModified: "2026-10-01T00:00:00-05:00",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -185,8 +185,8 @@ export default function DiviThemeSlowPage() {
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             A Divi page is usually slow for a reason you can name and locate: Divi generates styling for
-                            the modules and features a site uses and, with its Performance options left at their
-                            defaults, sends more of that to every page than the page needs; the server still assembles
+                            the modules and features a site uses and, if its Performance options have been switched
+                            off, sends more of that to every page than the page needs; the server still assembles
                             uncached pages per request; and media, fonts, plugins and third-party tags add to whichever
                             of those is already hurting. Elegant Themes ships a Performance tab specifically to control
                             the first of those. Find which layer is responsible on your site before buying another
@@ -204,7 +204,7 @@ export default function DiviThemeSlowPage() {
                     <BlogAuthor
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
-                        date="April 8, 2026"
+                        postId="divi-theme-slow" published="2026-04-08"
                         readTime="9 min read"
                         bio="Hassan works on measured WordPress migrations, performance diagnostics, and testable delivery criteria."
                     />
@@ -327,8 +327,8 @@ export default function DiviThemeSlowPage() {
                         broken.
                     </BlogText>
                     <BlogText>
-                        Elegant Themes officially ended the Divi 5 beta on February 26, 2026. As of this article&apos;s
-                        August 2 review, its official update log lists Divi 5.9.0 released July 9, 2026. Divi 5 uses a
+                        Elegant Themes officially ended the Divi 5 beta on February 26, 2026. As of October 8, 2026, its
+                        official update log lists Divi 5.14, released September 28, 2026. Divi 5 uses a
                         newer framework and has continued to receive features, improvements, and bug fixes. Elegant
                         Themes also stated at release that it would continue supporting Divi 4 for at least twelve
                         months, so an upgrade is something to schedule, not an emergency.

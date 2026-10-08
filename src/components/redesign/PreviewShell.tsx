@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Anton } from "next/font/google";
+
 import SiteNav from "@/components/layout/SiteNav";
 import SiteFooter from "@/components/redesign/SiteFooter";
 import { T } from "@/components/redesign/tokens";
@@ -10,28 +10,33 @@ import { T } from "@/components/redesign/tokens";
 // font/nav/footer setup -- duplicating it a second time was the signal to
 // share it, not before.
 // ─────────────────────────────────────────────────────────────────────────────
-// Zodiak, Indian Type Foundry, ITF Free Font License v2.0: loaded live from
-// Fontshare's CDN, NOT self-hosted, because this repo is public on GitHub and
-// the licence forbids serving the font files from a public repository. See
-// hero/page.tsx's original note (24 Sep) for the full licence reasoning.
-const ZODIAK_CSS = "https://api.fontshare.com/v2/css?f[]=zodiak@700&display=swap";
+// Zodiak, Indian Type Foundry, ITF Free Font License v2.0. Until 4 Oct 2026 it
+// loaded live from Fontshare's CDN, which sent every visitor's IP address to
+// Fontshare before any cookie choice, and no policy named Fontshare. It is now
+// served from our own domain: scripts/fetch-zodiak.mjs downloads the unmodified
+// woff2 at build time into public/fonts/zodiak/, which is gitignored. The file
+// is never committed because this repo is public and the licence forbids making
+// the font files available through a repository.
+const ZODIAK_WOFF2 = "/fonts/zodiak/zodiak-700.woff2";
+const ZODIAK_FACE = `@font-face{font-family:'Zodiak';src:url('${ZODIAK_WOFF2}') format('woff2');font-weight:700;font-style:normal;font-display:swap;}`;
 
-// Anton is OFL, so next/font self-hosts it with no licence issue. One weight;
+// Anton is OFL and bundled in public/fonts/site. One weight;
 // font-synthesis:none stops the browser faking a bold.
-const anton = Anton({ subsets: ["latin"], weight: "400", display: "swap", variable: "--font-anton" });
+const anton = { variable: "font-anton" };
 
-export default function PreviewShell({ condensed, children, contentTag = "main", showChrome = true }: { condensed: boolean; children: ReactNode; contentTag?: "main" | "div"; showChrome?: boolean }) {
+export default function PreviewShell({ condensed, children, contentTag = "main", showChrome = true, compactFooter = false, footerLinksOnly = false }: { condensed: boolean; children: ReactNode; contentTag?: "main" | "div"; showChrome?: boolean; compactFooter?: boolean; footerLinksOnly?: boolean }) {
   const fontVars = condensed
     ? { "--display": "var(--font-anton)", "--display-sm": "var(--font-sans)" }
     : { "--display": "Zodiak" };
   const Content = contentTag;
   return (
     <div className={anton.variable} data-font={condensed ? "anton" : "zodiak"} style={{ ...fontVars, fontSynthesis: "none" } as React.CSSProperties}>
-      <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="" />
-      <link rel="stylesheet" href={ZODIAK_CSS} precedence="default" />
+      <link rel="preload" href="/fonts/site/anton-9e9f04e3c37952ab-s.woff2" as="font" type="font/woff2" crossOrigin="" />
+      <link rel="preload" href={ZODIAK_WOFF2} as="font" type="font/woff2" crossOrigin="" />
+      <style>{ZODIAK_FACE}</style>
       {showChrome && <SiteNav />}
       <Content style={{ backgroundColor: T.paper }}>{children}</Content>
-      {showChrome && <SiteFooter />}
+      {showChrome && <SiteFooter compactTop={compactFooter} linksOnly={footerLinksOnly} />}
       {/* Condensed mode sets section and row headings in capitals, as grigoletti.ch does. */}
       <style>{`
         [data-font=anton] h1, [data-font=anton] h2, [data-font=anton] .work-name { text-transform: uppercase; }

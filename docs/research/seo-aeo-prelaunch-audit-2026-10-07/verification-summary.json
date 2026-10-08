@@ -1,0 +1,22 @@
+{
+  "auditDate": "2026-10-07",
+  "productCodeChangedByAudit": false,
+  "deployed": false,
+  "structuralSeo": { "origin": "http://localhost:3001", "sitemapUrls": 151, "failures": 0, "warnings": 0, "evidence": "structural-seo.log" },
+  "sourceTypecheck": { "exitCode": 0, "scope": "source-tsconfig.json", "evidence": "source-typecheck.log" },
+  "sourceLint": { "exitCode": 0, "command": "npx.cmd eslint src next.config.js", "evidence": "source-lint.log" },
+  "tests": { "passed": 72, "evidence": "tests.log" },
+  "claimsCheck": { "status": "passed", "evidence": "claims.log" },
+  "datesCheck": { "status": "passed_with_material_review_warnings", "posts": 88, "warnings": 40, "evidence": "dates.log" },
+  "standardTypecheck": { "status": "failed_on_generated_types", "evidence": "typecheck.log" },
+  "standardLint": { "status": "interrupted_after_scanning_downloaded_tmp_browser_files", "evidence": "lint.log" },
+  "guardAll": { "status": "stopped_at_metrics_guard_against_existing_build_output", "laterGuardsRan": false, "evidence": "guards.log" },
+  "releaseSmokeOnDev": { "failures": 1, "route": "/demo/featured-products", "expected": 404, "received": 200, "classification": "production_only_route_disable_requires_production_verification", "evidence": "release-smoke.log" },
+  "productionBuildRunByAudit": false,
+  "visualBrowserQa": "not_available_in_this_session",
+  "fieldCoreWebVitals": "not_measured",
+  "currentAiCitationBenchmark": "not_run",
+  "keywordCandidateCount": 56,
+  "competitorsCompared": 11,
+  "outreach": { "sentVerified": 1, "scheduledInOutbox": 2, "newLinksConfirmed": 0, "dailyTaskRegistered": true, "hostedZohoAccessVerified": false }
+}

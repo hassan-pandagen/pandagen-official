@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-12",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-much-does-a-website-cost")],
@@ -74,7 +74,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath(`/blog/${postId}`),
             datePublished: "2026-05-12",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -117,7 +117,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-12",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -153,8 +153,9 @@ export default function WebsiteCostGuide() {
                             How Much Does a Website Cost in 2026? <span className="italic text-cognac">Price the Scope, Not the Label</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Our own work starts at $1,500 for a small, clearly bounded site and starts at
-                            $5,000 once a store or real integrations are involved. Those are our published
+                            Our own work starts at $1,500 for a small, clearly bounded site, and a simple store with a
+                            few products starts there too. It starts at $5,000 once the work needs a large catalogue,
+                            custom commerce logic, more than one language or heavy integrations. Those are our published
                             numbers, not the market&apos;s. Nobody has the market&apos;s number, because a one-page
                             campaign, a 30-route migration, a store and an application with logins are four different
                             products that happen to share a word. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
@@ -175,7 +176,7 @@ export default function WebsiteCostGuide() {
                     <BlogAuthor
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
-                        date="May 12, 2026"
+                        postId="how-much-does-a-website-cost" published="2026-05-12"
                         readTime="11 min read"
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         bio="Hassan scopes the migrations and integrations, and writes acceptance terms you can actually measure."
@@ -230,7 +231,7 @@ export default function WebsiteCostGuide() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr><td className="p-4 font-semibold">Starter</td><td className="p-4">$1,500</td><td className="p-4">$450</td><td className="p-4">$1,050</td><td className="p-4">15 business days</td></tr>
                                 <tr><td className="p-4 font-semibold">Growth</td><td className="p-4">$3,500</td><td className="p-4">$1,050</td><td className="p-4">$2,450</td><td className="p-4">30 business days</td></tr>
-                                <tr><td className="p-4 font-semibold">Scale</td><td className="p-4">From $5,000</td><td className="p-4">$1,500 to $3,000</td><td className="p-4">$3,500 to $7,000</td><td className="p-4">30 business days</td></tr>
+                                <tr><td className="p-4 font-semibold">Scale</td><td className="p-4">From $5,000</td><td className="p-4">From $1,500</td><td className="p-4">From $3,500</td><td className="p-4">30 business days</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -267,7 +268,7 @@ export default function WebsiteCostGuide() {
                             Yes, and the free tiers are real rather than trials, but they are bounded in ways that
                             decide whether free is viable for you. Webflow&apos;s Starter plan, read from its pricing
                             page on August 5, 2026, costs nothing and gives you a <BlogHighlight>webflow.io
-                            subdomain, two static pages, 1 GB of bandwidth and 50 form submissions</BlogHighlight> —
+                            subdomain, two static pages, 1 GB of bandwidth and 50 form submissions</BlogHighlight>,
                             and that submission cap is a lifetime total, not a monthly one (re-verified 13 September
                             2026).
                             That is a genuine free website. It is also not a business website, because the limit that
@@ -459,12 +460,11 @@ export default function WebsiteCostGuide() {
                     />
                     <BlogText>
                         Save a dated vendor quote for the country, billing term, seats and expected usage. As one current
-                        example, Vercel&apos;s public pricing page on August 1, 2026 describes Hobby as free for personal
-                        projects and lists Pro at $20 per user per month, with $20 of included usage and pay-as-you-go
-                        charges above that. Read the words &ldquo;per user&rdquo; closely, because that is where most
-                        hosting estimates go wrong. Three people who need access is $60 a month before the site has
-                        served a single page. None of which makes commercial hosting universally free, or caps a
-                        production site at $20. We have written separately on{" "}
+                        example, <a href="https://vercel.com/docs/plans/pro-plan" className={sourceLinkClass}>Vercel&apos;s Pro documentation</a>,
+                        checked October 8, 2026, lists a $20 monthly platform fee including one deploying seat and $20
+                        in usage credit. Additional deploying seats cost $20 each; read-only viewers are free. Three
+                        deploying seats therefore cost $60 a month before extras. One deploying seat and two viewers
+                        cost $20 before extras. Usage and add-ons can increase either bill. We have written separately on{" "}
                         <Link href="/blog/nextjs-hosting-zero-cost" className={sourceLinkClass}>what Next.js hosting actually costs</Link>{" "}
                         and on how{" "}
                         <Link href="/blog/shopify-app-costs-real-monthly-bill" className={sourceLinkClass}>store app subscriptions stack up on a monthly bill</Link>.
@@ -512,6 +512,10 @@ export default function WebsiteCostGuide() {
                         <Link href="/blog/cheap-web-developer" className={sourceLinkClass}>how to hire a cheap web developer without getting burned</Link>{" "}
                         and the individual-versus-team trade in{" "}
                         <Link href="/blog/website-developer-agency" className={sourceLinkClass}>what a web development agency actually does</Link>.
+                        If you want named firms to compare, we keep a disclosed{" "}
+                        <Link href="/blog/top-custom-web-development-agencies-usa-2026" className={sourceLinkClass}>shortlist of US custom web development agencies</Link>{" "}
+                        and a separate{" "}
+                        <Link href="/blog/top-nextjs-agencies-2026" className={sourceLinkClass}>comparison of Next.js development agencies</Link>.
                     </BlogText>
 
                     <BlogHeader>Panda Patches: a first-party cost example</BlogHeader>

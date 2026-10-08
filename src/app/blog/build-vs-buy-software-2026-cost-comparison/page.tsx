@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         description: "A scenario-based build-versus-buy framework with no universal spend or payback threshold.",
         type: "article",
         publishedTime: "2026-05-31T00:00:00-05:00",
-        modifiedTime: "2026-08-01T00:00:00-05:00",
+        modifiedTime: "2026-10-08T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison",
         images: [ogImageForPath("/blog/build-vs-buy-software-2026-cost-comparison")],
@@ -59,7 +59,7 @@ const articleSchema = {
             "description": "A scenario-based build-versus-buy framework using current quotes, migration, maintenance, security, adoption, and operating risk.",
             "image": ogImageUrlForPath("/blog/build-vs-buy-software-2026-cost-comparison"),
             "datePublished": "2026-05-31T00:00:00-05:00",
-            "dateModified": "2026-08-01T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -111,7 +111,7 @@ const articleSchema = {
             "description": "A scenario-based framework with current quotes and no universal spend or payback threshold.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-31T00:00:00-05:00",
-            "dateModified": "2026-08-01T00:00:00-05:00",
+            "dateModified": "2026-10-08T00:00:00-05:00",
             "inLanguage": "en-US"
         },
     ]
@@ -140,8 +140,8 @@ export default function BuildVsBuySoftware2026Page() {
                             There is no monthly SaaS bill that automatically makes building your own software cheaper. The only way to know is to put a dated quote from your current vendor next to what a build would really cost: the work itself, moving your data, hosting, support, keeping it secure, and getting your team to use it. Then run those numbers again for a good year and a bad one.
                         </p>
                         <BlogAuthor
-                            date="Updated Aug 1, 2026"
-                            readTime="7 min read"
+                            postId="build-vs-buy-software-2026-cost-comparison" published="2026-05-31"
+                            readTime="8 min read"
                             bio="Hassan scopes custom CRMs, dashboards and operations tools only after writing down how you work today, what it costs you, what could go wrong, and who ends up owning it."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -234,9 +234,9 @@ export default function BuildVsBuySoftware2026Page() {
                     <div data-speakable="true">
                         <BlogText>
                             Run the comparison three times, not once, because a single number hides the risk that
-                            actually decides this. <strong>Conservative</strong> assumes the build lands on time and
-                            nothing needs rewriting. <strong>Base</strong> adds the maintenance and support you know
-                            you will need. <strong>Adverse</strong> assumes it takes half again as long, one integration
+                            actually decides this. <strong>Optimistic</strong> assumes the build lands on time and
+                            nothing needs rewriting. <strong>Base</strong> includes realistic contingency and review
+                            cycles. Every scenario includes maintenance and support. <strong>Adverse</strong> assumes it takes half again as long, one integration
                             has to be rebuilt, and the person who wrote it leaves. Break-even is where cumulative
                             build-plus-run cost meets cumulative license cost, so it is a month on a calendar rather
                             than a total. If the adverse case never crosses inside your planning horizon, the decision
@@ -246,22 +246,22 @@ export default function BuildVsBuySoftware2026Page() {
                     <BlogText>
                         One variable decides this more than any other, and it is the one published comparisons bury:
                         <strong> whether your license is priced per seat.</strong> A per-seat license grows with
-                        headcount while a build&apos;s cost does not, so the crossover is really a bet on how many
-                        people will be using it in three years. If your team is flat, buying usually stays cheaper
-                        indefinitely and the crossover never arrives. If you are hiring, model the seat count you
-                        expect rather than the one you have, because that is the number the whole comparison turns on.
+                        headcount; a custom system can also add provider-seat, usage and support costs as the team grows.
+                        Model expected users and workload for both paths over the same period. A flat team does not
+                        establish that buying stays cheaper indefinitely, and hiring does not establish that building
+                        will pay back.
                         Then fill the table with your own figures rather than anyone&apos;s published averages: your
                         license quote, your developer cost and your own tolerance for the adverse column.
                     </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[640px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
-                                <tr><th className="p-4">Input</th><th className="p-4">Conservative</th><th className="p-4">Base</th><th className="p-4">Adverse</th></tr>
+                                <tr><th className="p-4">Input</th><th className="p-4">Optimistic</th><th className="p-4">Base</th><th className="p-4">Adverse</th></tr>
                             </thead>
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr><td className="p-4 font-bold">Build cost</td><td className="p-4">Quoted</td><td className="p-4">Quoted plus contingency</td><td className="p-4">Quoted plus half again</td></tr>
                                 <tr><td className="p-4 font-bold">Time to usable</td><td className="p-4">As scheduled</td><td className="p-4">Schedule plus review cycles</td><td className="p-4">Schedule plus a rebuilt integration</td></tr>
-                                <tr><td className="p-4 font-bold">Annual run cost</td><td className="p-4">Hosting and services only</td><td className="p-4">Plus maintenance and support</td><td className="p-4">Plus rehiring and handover</td></tr>
+                                <tr><td className="p-4 font-bold">Annual run cost</td><td className="p-4">Hosting, services, maintenance and support</td><td className="p-4">Expected hosting, services, maintenance and support</td><td className="p-4">Base run costs plus rehiring and handover</td></tr>
                                 <tr><td className="p-4 font-bold">License avoided</td><td className="p-4">Current quote</td><td className="p-4">Current quote plus published increases</td><td className="p-4">Current quote, flat</td></tr>
                                 <tr><td className="p-4 font-bold">Break-even</td><td className="p-4">Month it crosses</td><td className="p-4">Month it crosses</td><td className="p-4">Month it crosses, or never</td></tr>
                             </tbody>
@@ -302,9 +302,11 @@ export default function BuildVsBuySoftware2026Page() {
 
                     <BlogText>
                         A worked example of the build side is on our{" "}
+                        {/* 8 Oct 2026: founder-affiliation label added. company-facts.ts records Enterprise Ops as built for our own use running the founder-owned Panda Patches business, and the evidence policy says founder-affiliated projects are labelled as such. */}
                         <Link href="/work/enterprise-ops" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Enterprise Operations record</Link>: a custom
                         operations platform with order tracking, role-based dashboards and reporting that replaced a
-                        spreadsheet process. It is the shape this decision takes when building wins, including the parts
+                        spreadsheet process. We built it for our own use, running the Panda Patches business a
+                        co-founder owns, so it is operating experience rather than independent client proof. It is the shape this decision takes when building wins, including the parts
                         that were harder than expected.
                     </BlogText>
 
@@ -327,7 +329,7 @@ export default function BuildVsBuySoftware2026Page() {
                         arithmetic. Defaulting is also a decision. It is just one nobody wrote down.
                     </BlogText>
                     <BlogText>
-                        Revisit the decision when renewal terms, usage, workflow fit, risk, or strategic importance changes. Run the worksheet with dated evidence and assign an owner to every assumption. Our related <Link href="/blog/how-to-cut-saas-bill-2026" className="text-cognac hover:underline font-medium">SaaS cost audit</Link> and <Link href="/blog/saas-price-increases-2026-tracker" className="text-cognac hover:underline font-medium">vendor price-change tracker</Link> provide additional inputs, but still require current primary verification.
+                        Revisit the decision when renewal terms, usage, workflow fit, risk, or strategic importance changes. Run the worksheet with dated evidence and assign an owner to every assumption. Our related <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">SaaS cost audit</Link> and <Link href="/blog/saas-price-increases-2026-tracker" className="text-cognac hover:underline font-medium">vendor price-change tracker</Link> provide additional inputs, but still require current primary verification.
                     </BlogText>
 
                     {/* Bottom CTA */}
@@ -341,7 +343,7 @@ export default function BuildVsBuySoftware2026Page() {
                     </div>
 
                     <section className="my-10 rounded-2xl border border-stone-200 bg-stone-50 p-6">
-                        <h2 className="text-xl font-bold text-charcoal mb-3">Mutable vendor references checked July 24, 2026</h2>
+                        <h2 className="text-xl font-bold text-charcoal mb-3">Mutable vendor references checked October 8, 2026</h2>
                         <p className="text-sm text-stone-600 mb-3">These pricing pages are starting evidence only. A signed quote and the account&apos;s actual configuration control the comparison.</p>
                         <ul className="space-y-2 text-sm">
                             <li><a className="text-cognac underline underline-offset-4" href="https://www.hubspot.com/pricing/marketing" target="_blank" rel="noreferrer">HubSpot pricing</a></li>
@@ -350,7 +352,7 @@ export default function BuildVsBuySoftware2026Page() {
                     </section>
 
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>
-                    <FAQAccordion faqs={postFAQs} />
+                    <FAQAccordion faqs={postFAQs} showHeading={false} />
 
                     <TopicUpLink postId="build-vs-buy-software-2026-cost-comparison" />
 

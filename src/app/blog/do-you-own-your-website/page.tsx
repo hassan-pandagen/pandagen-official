@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-03",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/do-you-own-your-website")],
@@ -65,7 +65,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/do-you-own-your-website"),
             datePublished: "2026-06-03",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -129,7 +129,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-03",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -174,7 +174,7 @@ export default function DoYouOwnYourWebsitePage() {
                             different rights and controls. Put each one in writing.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 1, 2026. General U.S.-first information, not legal advice. Ask qualified counsel to review your agreement and jurisdiction.
+                            Reviewed October 8, 2026. General U.S.-first information, not legal advice. Ask qualified counsel to review your agreement and jurisdiction.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -185,8 +185,8 @@ export default function DoYouOwnYourWebsitePage() {
                     <BlogAuthor
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
-                        date="June 3, 2026"
-                        readTime="9 min read"
+                        postId="do-you-own-your-website" published="2026-06-03"
+                        readTime="12 min read"
                         bio="Hassan leads PandaCodeGen's engineering handover, account-control, and migration planning work."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
@@ -198,7 +198,8 @@ export default function DoYouOwnYourWebsitePage() {
                                 "Do not assume payment alone transfers every copyright or grants every source-code right.",
                                 "Work-made-for-hire treatment is fact-specific and narrower for commissioned contractor work than many website articles suggest.",
                                 "A copyright transfer generally needs a signed writing in the United States.",
-                                "You control the domain, the hosting, the code, the CMS, analytics, email, the store, the CRM and every other account named in the project.",
+                                // 8 Oct 2026: this read "You control the domain, the hosting, the code...", a flat statement that every reader already controls every account. The rest of the page says the opposite: control has to be written down and tested. Restored as the checklist item it sits among.
+                                "Write down who controls the domain, the hosting, the code, the CMS, analytics, email, the store, the CRM and every other account named in the project.",
                                 "Separate custom deliverables from agency pre-existing tools and third-party components that retain their own licenses.",
                                 "Say when ownership transfers, normally on full payment, and what happens if you cancel: refunds, support, getting your data back, and help leaving.",
                             ]}
@@ -246,12 +247,13 @@ export default function DoYouOwnYourWebsitePage() {
                     <div data-speakable="true">
                         <BlogText>
                             Usually not on its own, and this is the most repeated wrong answer on the topic. Under
-                            17 U.S.C. &sect;101 a specially commissioned work only qualifies as a work made for hire
+                            17 U.S.C. &sect;101 a specially commissioned work qualifies as a work made for hire
                             only if the parties expressly agree in a written instrument signed by both of them that it is a work made for hire, <em>and</em> it falls into one of nine listed categories.
                             Commissioned website code generally does not sit in those categories, so a contract that
                             simply calls the work &ldquo;work made for hire&rdquo; can fail to move anything. What
-                            reliably transfers copyright is a written assignment signed by the author, which is what
-                            17 U.S.C. &sect;204(a) requires. If ownership matters to you, look for the word
+                            {/* 8 Oct 2026: "signed by the author" corrected. 17 U.S.C. 204(a) requires the writing to be signed by "the owner of the rights conveyed or such owner's duly authorized agent", who is not always the author. */}
+                            reliably transfers copyright is a written assignment signed by the owner of the rights,
+                            usually the author, which is what 17 U.S.C. &sect;204(a) requires. If ownership matters to you, look for the word
                             <em> assignment</em> in your agreement, not the phrase work made for hire.
                         </BlogText>
                     </div>
@@ -279,12 +281,20 @@ export default function DoYouOwnYourWebsitePage() {
                         </BlogText>
                     </div>
                     <BlogText>
-                        Check the specific limits before you commit, because they differ sharply. Our breakdowns of{" "}
+                        Check the specific limits before you commit, because they differ sharply. Our{" "}
+                        <Link href="/blog/website-portability" className={sourceLinkClass}>comparison of what eight platforms let you export</Link>{" "}
+                        puts them side by side, row by row, from each platform&apos;s own help pages. Our breakdowns of{" "}
                         <Link href="/blog/webflow-true-cost" className={sourceLinkClass}>what Webflow does and does not export</Link>,{" "}
                         <Link href="/blog/is-squarespace-bad-for-seo" className={sourceLinkClass}>Squarespace&apos;s structural limits</Link>{" "}
                         and{" "}
                         <Link href="/blog/wix-migration-cost" className={sourceLinkClass}>what a Wix export actually contains</Link>{" "}
-                        each set out the real boundary for that platform.
+                        each set out the real boundary for that platform. A platform can also retire a feature
+                        outright, as Webflow did with{" "}
+                        <Link href="/blog/webflow-user-accounts-sunset-date-2026" className={sourceLinkClass}>User Accounts in January 2026</Link>
+                        , and then there is nothing left to export. On GoHighLevel you can keep the CRM and still own
+                        the public site, which{" "}
+                        <Link href="/blog/gohighlevel-keep-crm-replace-website" className={sourceLinkClass}>our guide to a GoHighLevel hybrid build</Link>{" "}
+                        explains.
                     </BlogText>
 
                     <BlogHeader>Eight things to control or document</BlogHeader>

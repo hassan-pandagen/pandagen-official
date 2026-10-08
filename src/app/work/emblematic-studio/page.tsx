@@ -1,6 +1,6 @@
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import { EmblematicStudioCaseStudyPreview as RedesignEmblematicStudioCaseStudy } from "@/app/preview/work/emblematic-studio/Design";
+import { EmblematicStudioCaseStudyPreview as RedesignEmblematicStudioCaseStudy } from "@/components/pages/work/emblematic-studio/Design";
 
 const canonicalUrl = "https://www.pandacodegen.com/work/emblematic-studio";
 const title = "Emblematic Studio Case Study: One Catalogue, 22 Products, One Server Route";

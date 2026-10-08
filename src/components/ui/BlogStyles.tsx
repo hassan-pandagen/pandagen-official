@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import PostDateline from "@/components/blog/PostDateline";
 
 export function BlogHeader({ children, id }: { children: React.ReactNode; id?: string }) {
   return (
@@ -194,7 +195,12 @@ interface BlogAuthorProps {
   role?: string;
   bio?: string;
   linkedIn?: string;
+  /** Legacy hand-typed date. Blog posts pass postId + published instead. */
   date?: string;
+  /** blog.ts id. With `published`, the byline shows "Published X · Updated Y" from blog.ts lastModified. */
+  postId?: string;
+  /** The post's datePublished, YYYY-MM-DD. */
+  published?: string;
   readTime?: string;
 }
 
@@ -204,6 +210,8 @@ export function BlogAuthor({
   bio,
   linkedIn,
   date,
+  postId,
+  published,
   readTime,
 }: BlogAuthorProps) {
   // The byline name links to the author page, not to LinkedIn. A reader asking "who wrote
@@ -219,6 +227,7 @@ export function BlogAuthor({
   );
 
   const authorInitial = name.trim().charAt(0).toUpperCase() || "P";
+  const dateline = postId && published ? <PostDateline postId={postId} published={published} /> : date;
 
   return (
     <div className="mt-4">
@@ -228,9 +237,9 @@ export function BlogAuthor({
         </span>
         <p className="text-sm text-stone-600">
           {authorName}
-          {date && <><span className="mx-1.5 text-stone-300">·</span>{date}</>}
+          {dateline && <><span className="mx-1.5 text-stone-300">·</span>{dateline}</>}
           {readTime && <><span className="mx-1.5 text-stone-300">·</span>{readTime}</>}
-          {!date && !readTime && <><span className="mx-1.5 text-stone-300">·</span><span className="text-xs">{role}</span></>}
+          {!dateline && !readTime && <><span className="mx-1.5 text-stone-300">·</span><span className="text-xs">{role}</span></>}
         </p>
       </div>
       {bio && (

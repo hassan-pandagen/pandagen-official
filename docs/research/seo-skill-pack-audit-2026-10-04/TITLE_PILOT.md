@@ -188,3 +188,8 @@ Revert the title only, in all three places it was changed, and log the date here
 
 - 4 Oct 2026: titles changed in the working tree (page.tsx metadata of the three test pages).
   Not deployed. D is not yet set.
+- 8 Oct 2026, before D: accuracy fixes to /blog/agentic-browsing-pagespeed-score (Lighthouse 13.5.0
+  added a seventh Agentic Browsing audit; body, table, one FAQ and dates updated). Title and
+  description untouched. Made before the deploy, so it ships on D with everything else and the pair
+  stays usable. The blog fact-check (docs/research/blog-fact-check-2026-10-08/README.md) is checking
+  the other five pilot pages before the deploy for the same reason.

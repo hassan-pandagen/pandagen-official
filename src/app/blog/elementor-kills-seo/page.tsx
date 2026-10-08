@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-10",
-        modifiedTime: "2026-09-05",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/elementor-kills-seo")],
@@ -62,7 +62,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/elementor-kills-seo"),
             datePublished: "2026-03-10",
-            dateModified: "2026-09-05",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -150,7 +150,7 @@ export default function ElementorSeoPage() {
                             third parties also shape performance and search results.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Elementor and Google primary guidance.
+                            Reviewed October 8, 2026 against Elementor&apos;s help pages and Google&apos;s guidance.
                         </p>
                         <p className="mt-3 text-sm leading-relaxed text-stone-600">
                             Disclosure: PandaCodeGen sells migrations off WordPress and page-builder sites, so we have
@@ -167,8 +167,8 @@ export default function ElementorSeoPage() {
                     <BlogAuthor
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
-                        date="March 10, 2026"
-                        readTime="5 min read"
+                        postId="elementor-kills-seo" published="2026-03-10"
+                        readTime="10 min read"
                         bio="Hassan leads measured WordPress performance diagnostics and search-sensitive migrations."
                     />
 
@@ -270,11 +270,15 @@ export default function ElementorSeoPage() {
 
                     <BlogHeader id="elementor-agentic-browsing">What this costs you in the agent-readability check</BlogHeader>
                     <BlogText>
-                        Heading structure is no longer only an SEO question. PageSpeed Insights now reports an
-                        Agentic Browsing score, and one of its three checks reads the accessibility tree: heading
-                        order, landmark structure and whether interactive controls have names. The defect this
-                        article describes, headings chosen because they looked right rather than because they
-                        described the hierarchy, is exactly what that check fails on.
+                        {/* 8 Oct 2026: the agent-accessibility-tree audit's rule list has no heading-order or
+                            landmark rule (Lighthouse source, core/audits/agentic). The old text said it checked
+                            heading order and that this article's defect was exactly what it fails on. */}
+                        Building by eye has a second cost. Lighthouse has an experimental Agentic Browsing check,
+                        shown as a pass count such as 2 of 3, and one part of it reads the accessibility tree:
+                        whether buttons, links and form fields have names, and whether ARIA roles and relationships
+                        are valid. It doesn&apos;t check heading order, so a skipped heading level won&apos;t fail it.
+                        But the same habit of building by eye tends to leave unnamed icon buttons and unlabeled form
+                        fields, and those do fail it.
                     </BlogText>
                     <BlogText>
                         Worth being fair to Elementor here. Two Elementor sites we measured on 29 August 2026 scored
@@ -313,34 +317,39 @@ export default function ElementorSeoPage() {
                         Two reasons this belongs near the top of an Elementor audit rather than the bottom. It is{" "}
                         <strong>free to fix and does not require touching the builder&apos;s output or the theme</strong>,
                         unlike most of the weight problems below. And it is the part of the &quot;builders hurt
-                        SEO&quot; claim that is actually true — not because Elementor emits bad markup, but because a
+                        SEO&quot; claim that is actually true. It isn&apos;t because Elementor emits bad markup, but because a
                         visual canvas invites a structural decision to be made on visual grounds. That is a workflow
                         problem, and workflow problems survive a migration if nobody names them.
                     </BlogText>
 
                     <BlogHeader id="september-2026-security">A separate matter if you run Elementor Pro</BlogHeader>
                     <BlogText>
+                        {/* 8 Oct 2026: corrected against Wordfence's 2 Sep post and the CVE record. The CVE's
+                            assigner (Patchstack) scores it 9.0; 9.8 is Wordfence's score. Wordfence's count is
+                            "over 190,000" since disclosure, not "close to 190,000" in four days. */}
                         This is not an SEO finding and it does not belong in the argument above, but anyone auditing an
-                        Elementor site in September 2026 should clear it first. CVE-2026-32475 is an unauthenticated
-                        arbitrary file upload in Elementor Pro, scored CVSS 9.8, affecting versions up to and including
-                        4.2.1. Patchstack disclosed it and Elementor released 4.2.2 on 19 August 2026. If you are on
-                        4.2.2 or later you are patched and there is nothing here to do.
+                        Elementor Pro site should clear it first. CVE-2026-32475 is an unauthenticated arbitrary file
+                        upload in Elementor Pro, affecting versions up to and including 4.2.1. Patchstack, which issued
+                        the CVE, rates it 9.0 out of 10, and Wordfence rates it 9.8. It was found by researcher Tin Pham
+                        through Patchstack&apos;s bug bounty, published by Patchstack and Wordfence on 19 August 2026,
+                        and fixed in Elementor Pro 4.2.2 the same day. If you are on 4.2.2 or later you are patched and
+                        this specific vulnerability is addressed. If the site previously ran an affected version, investigate possible compromise too: updating does not remove existing backdoors, revoke stolen credentials or establish that the site was never exploited.
                     </BlogText>
                     <BlogText>
-                        A site is only reachable through this if it has a published Form widget carrying at least one
-                        File Upload field, which is one reason the route-level audit below asks you to include a form
-                        path among the templates you test. Exploitation began the same day the fix shipped and Wordfence
-                        blocked close to 190,000 attempts over the following four days. Elementor&apos;s response was
-                        immediate, so what decided the outcome for any given site was whether the update had been
-                        applied. If a site ran 4.2.1 or earlier after 19 August 2026, audit
+                        A site is only reachable through this if it has a published Form widget with at least one File
+                        Upload field that isn&apos;t set to required (the default), which is one reason the route-level audit below asks you to include a form
+                        path among the templates you test. Exploitation began the same day the fix shipped. By
+                        2 September 2026 Wordfence had blocked more than 190,000 attempts, with the heaviest traffic
+                        between 19 and 23 August. Elementor shipped the fix on the day the flaw was made public, so what
+                        decided the outcome for each site was whether the update had been applied. If a site ran 4.2.1 or earlier after 19 August 2026, audit
                         /wp-content/uploads/elementor/forms/ for PHP files and check for administrator accounts nobody
                         recognises.
                     </BlogText>
                     <BlogText>
-                        The full timeline, and the Super Forms campaign that ran on the same validation-bypass
-                        mechanism, are in our{" "}
+                        The full timeline, and the Super Forms campaign, a different bug of the same kind
+                        (unauthenticated file upload) exploited in the same weeks, are in our{" "}
                         <Link href="/blog/wordpress-plugin-security-2026" className={sourceLinkClass}>WordPress plugin security guide</Link>.
-                        Checked 5 September 2026.
+                        Checked 8 October 2026.
                     </BlogText>
 
                     <BlogHeader>Run a route-level Elementor audit</BlogHeader>

@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import PreviewShell from "@/components/redesign/PreviewShell";
+import styles from "@/components/redesign/PrinciplePages.module.css";
 import { ogImageForPath } from "@/lib/seo/og";
+import { PORTABILITY_GUIDE } from "@/data/platform-portability";
 
 export const metadata: Metadata = {
   title: "The PandaCodeGen Manifesto | Why We Build The Way We Build",
-  description: "The first principles behind PandaCodeGen. Why we refuse hourly billing, why we publish our prices, and why we tell clients when a rebuild is the wrong answer. Written by Hassan Jamal.",
+  description: "The principles behind PandaCodeGen: diagnose before rebuilding, agree a written scope, and make quality and handover checkable.",
   alternates: { canonical: "/manifesto" },
   openGraph: {
     title: "The PandaCodeGen Manifesto | Why We Build The Way We Build",
-    description: "Why we refuse hourly billing, why we publish our prices, and why we tell clients when a rebuild is the wrong answer.",
+    description: "Diagnose before rebuilding, agree a written scope, and make quality and handover checkable.",
     url: "https://www.pandacodegen.com/manifesto",
     type: "article",
     images: [ogImageForPath("/manifesto")],
@@ -19,44 +19,20 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "The PandaCodeGen Manifesto | Why We Build The Way We Build",
-    description: "Why we refuse hourly billing, why we publish our prices, and why we tell clients when a rebuild is the wrong answer.",
+    description: "Diagnose before rebuilding, agree a written scope, and make quality and handover checkable.",
     images: [ogImageForPath("/manifesto")],
   },
 };
 
 const principles = [
-  {
-    title: "Diagnose before recommending a rebuild",
-    body: "A migration is justified only when the business goal, current platform, operating cost, content, integrations, and measured constraints support it. Sometimes repair is the better answer.",
-  },
-  {
-    title: "Define the scope before the price",
-    body: "A proposal should list deliverables, exclusions, dependencies, client responsibilities, third-party costs, acceptance criteria, payment milestones, and change terms.",
-  },
-  {
-    title: "Treat URLs and content as business assets",
-    body: "Migration planning includes a URL inventory, redirect map, content model, metadata, analytics, forms, integrations, cutover sequence, monitoring, and rollback conditions.",
-  },
-  {
-    title: "Measure performance honestly",
-    body: "A performance target is meaningful only when it names the pages, device and network profile, tools, number of runs, measurement date, third-party state, exclusions, and remedy.",
-  },
-  {
-    title: "Put control and handover in writing",
-    body: "Repository, hosting, domains, credentials, data, pre-existing materials, open-source licenses, ownership-transfer timing, backups, and retention should not be implied.",
-  },
-  {
-    title: "Make changes explicit",
-    body: "When a request falls outside the accepted scope, the effect on cost, timeline, testing, and responsibility is documented and approved before the work changes.",
-  },
-  {
-    title: "Ship accessibility, privacy, and security work",
-    body: "Keyboard access, readable contrast, consent, data minimization, endpoint controls, dependency checks, monitoring, and rollback are release responsibilities, not decorative badges.",
-  },
-  {
-    title: "Do not promise systems we do not control",
-    body: "A technical implementation can reduce risk and improve foundations, but it cannot guarantee rankings, revenue, conversions, field performance, uptime, or AI citations.",
-  },
+  { title: "Diagnose before recommending a rebuild", body: "A migration is justified only when the business goal, current platform, operating cost, content, integrations, and measured constraints support it. Sometimes repair is the better answer." },
+  { title: "Define the scope before the price", body: "A proposal should list deliverables, exclusions, dependencies, client responsibilities, third-party costs, acceptance criteria, payment milestones, and change terms." },
+  { title: "Treat URLs and content as business assets", body: "Migration planning includes a URL inventory, redirect map, content model, metadata, analytics, forms, integrations, cutover sequence, monitoring, and rollback conditions." },
+  { title: "Measure performance honestly", body: "A performance target is meaningful only when it names the pages, device and network profile, tools, number of runs, measurement date, third-party state, exclusions, and remedy." },
+  { title: "Put control and handover in writing", body: "Repository, hosting, domains, credentials, data, pre-existing materials, open-source licenses, ownership-transfer timing, backups, and retention should not be implied." },
+  { title: "Make changes explicit", body: "When a request falls outside the accepted scope, the effect on cost, timeline, testing, and responsibility is documented and approved before the work changes." },
+  { title: "Ship accessibility, privacy, and security work", body: "Keyboard access, readable contrast, consent, data minimization, endpoint controls, dependency checks, monitoring, and rollback are release responsibilities, not decorative badges." },
+  { title: "Do not promise systems we do not control", body: "A technical implementation can reduce risk and improve foundations, but it cannot guarantee rankings, revenue, conversions, field performance, uptime, or AI citations." },
 ];
 
 const schema = {
@@ -70,71 +46,98 @@ const schema = {
   inLanguage: "en-US",
 };
 
+const proposalChecks = [
+  "What is included and excluded",
+  "Who supplies content and access",
+  "How acceptance is measured",
+  "What happens when scope changes",
+  "Who controls accounts and source",
+  "How launch and rollback are handled",
+];
+
 export default function ManifestoPage() {
   return (
-    <main className="min-h-screen bg-paper text-charcoal">
+    <PreviewShell condensed compactFooter>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <Header />
-
-      <section className="border-b border-stone-300 px-6 pb-16 pt-28 md:pb-24 md:pt-40">
-        <div className="mx-auto max-w-5xl border-l-2 border-cognac pl-5 md:pl-8">
-          <p className="text-sm font-bold uppercase tracking-widest text-cognac">The PandaCodeGen Manifesto</p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-7xl">
-            Make the <span className="font-serif font-normal italic text-cognac">risky parts explicit.</span>
-          </h1>
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
-            Why we refuse hourly billing. Why we publish our prices. Why we tell you when a rebuild is the wrong answer. A modern framework is not the offer by itself — the work is understanding the current system, deciding whether migration is justified at all, and agreeing up front how continuity, quality, control and acceptance will be proven.
-          </p>
-          <p className="mt-6 text-sm text-stone-500">
-            Written by Hassan Jamal, Co-founder and Lead Engineer, with co-founder Imran Raza Ladhani.
-          </p>
-        </div>
-      </section>
-
-      <section className="px-6 py-16 md:py-24" aria-labelledby="principles-heading">
-        <div className="mx-auto max-w-5xl">
-          <h2 id="principles-heading" className="sr-only">PandaCodeGen delivery principles</h2>
-          <ol className="grid gap-6 md:grid-cols-2">
-            {principles.map((principle, index) => (
-              <li key={principle.title} className="rounded-3xl border border-stone-300 bg-white p-7 md:p-8">
-                <div className="flex items-start gap-4">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-charcoal font-bold text-white">
-                    {index + 1}
-                  </span>
-                  <div>
-                    <h3 className="text-xl font-bold">{principle.title}</h3>
-                    <p className="mt-3 leading-7 text-stone-700">{principle.body}</p>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      <section className="bg-midnight px-6 py-16 text-white md:py-24">
-        <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold md:text-5xl">What a useful proposal should let you verify</h2>
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-            {["What is included and excluded", "Who supplies content and access", "How acceptance is measured", "What happens when scope changes", "Who controls accounts and source", "How launch and rollback are handled"].map((item) => (
-              <li key={item} className="flex gap-3 text-stone-200">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-orange-300" aria-hidden="true" />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Link href="/pricing" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-6 font-bold text-charcoal hover:bg-orange-100">
-              Review example scopes <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
-            <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-500 px-6 font-bold text-white hover:border-white">
-              Describe your migration
-            </Link>
+      <div className={styles.page}>
+        <header className={`${styles.hero} ${styles.heroDark}`}>
+          <div className={styles.wrap}>
+            <div className={styles.heroTop}>
+              <span className={styles.eyebrow}>PandaCodeGen / Delivery principles</span>
+              <span className={styles.meta}>01 / How we work</span>
+            </div>
+            <div className={styles.heroGrid}>
+              <h1>Make the risky parts <span className={styles.heroAccent}>explicit.</span></h1>
+              <div className={styles.heroAside}>
+                <p>We would rather tell you a repair is enough than sell you a rebuild you do not need. Scope, price, acceptance and handover belong in writing before work begins.</p>
+                <p className={styles.byline}>Written by Hassan Jamal, Co-founder and Lead Engineer, with co-founder Imran Raza Ladhani.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </header>
 
-      <Footer />
-    </main>
+        <nav className={styles.jumpNav} aria-label="On this page">
+          <div className={`${styles.wrap} ${styles.jumpNavInner}`}>
+            <a href="#decision">01 / The decision</a>
+            <a href="#principles">02 / Our principles</a>
+            <a href="#proposal">03 / The written proposal</a>
+          </div>
+        </nav>
+
+        <section id="decision" className={styles.splitSection} aria-labelledby="decision-title">
+          <div className={`${styles.wrap} ${styles.splitGrid}`}>
+            <div>
+              <span className={styles.sectionNumber}>01 / Before the build</span>
+              <h2 id="decision-title">A framework is not a strategy.</h2>
+            </div>
+            <div className={styles.splitCopy}>
+              <p>The starting point is the current system: what your customers need to do, what your team has to maintain, and what the evidence says is getting in the way.</p>
+              <p>Sometimes the right work is a focused repair. When a replacement is justified, we plan continuity, quality, control and acceptance before choosing the implementation.</p>
+              {/* 4 Oct 2026: the ownership principle, at the owner's request. The "we"
+                  half is COMMERCIAL "Ownership on handover" in company-facts.ts. */}
+              <p>You should own what you pay for. At handover you get the code and design files we made for you, the documentation, and control of the accounts the site runs on, and a care plan later doesn&apos;t change that. Website builders differ in how much of a site you can export, so before you choose one, check what its own help pages say you can take with you.</p>
+              <Link className={styles.textLink} href={PORTABILITY_GUIDE.href}>{PORTABILITY_GUIDE.label} <span aria-hidden="true">↗</span></Link>
+              <Link className={styles.textLink} href="/work">See the work and its context <span aria-hidden="true">↗</span></Link>
+            </div>
+          </div>
+        </section>
+
+        <section id="principles" className={styles.principlesSection} aria-labelledby="principles-heading">
+          <div className={styles.wrap}>
+            <div className={styles.sectionHead}>
+              <div><span className={styles.sectionNumber}>02 / What guides the work</span><h2 id="principles-heading">Eight principles.{" "}<br />One clear standard.</h2></div>
+              <p>These are the decisions and records we expect a client to be able to examine, from the first recommendation to handover.</p>
+            </div>
+            <ol className={styles.principleList}>
+              {principles.map((principle, index) => (
+                <li key={principle.title} className={styles.principleRow}>
+                  <span className={styles.rowNumber}>{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{principle.title}</h3>
+                  <p>{principle.body}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        <section id="proposal" className={`${styles.closing} ${styles.manifestoClosing}`} aria-labelledby="proposal-title">
+          <div className={`${styles.wrap} ${styles.closingGrid}`}>
+            <div><span className={styles.sectionNumber}>03 / A useful next step</span><h2 id="proposal-title">The proposal should make the work checkable.</h2></div>
+            <div>
+              <p className={styles.closingCopy}>Before you agree to a project, you should be able to find these answers in the written scope.</p>
+              <ul className={styles.checkList}>
+                {proposalChecks.map((item, index) => (
+                  <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><span>{item}</span></li>
+                ))}
+              </ul>
+              <div className={styles.closingLinks}>
+                <Link href="/pricing">Review example scopes ↗</Link>
+                <Link href="/contact#contact-quote-form">Tell us about your project ↗</Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </PreviewShell>
   );
 }

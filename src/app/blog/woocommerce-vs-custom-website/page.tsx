@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-20",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/woocommerce-vs-custom-website")],
@@ -74,7 +74,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/woocommerce-vs-custom-website"),
             datePublished: "2026-05-20",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -117,7 +117,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-20",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-08",
             inLanguage: "en-US",
         },
         {
@@ -156,7 +156,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                             not a universal winner.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed against current WooCommerce and Google documentation on July 31, 2026.
+                            Reviewed against current WooCommerce and Google documentation on October 8, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -164,7 +164,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 20, 2026" readTime="10 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="woocommerce-vs-custom-website" published="2026-05-20" readTime="14 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <div className="my-10">
                         <PlatformComparisonAnimation />
@@ -503,15 +503,16 @@ export default function WooCommerceVsCustomWebsitePage() {
                             the client can make decisions, so the honest version is a range with the drivers named.
                         </BlogText>
 
+                        {/* 8 Oct 2026: MyCustomPatches said "rankings stable within two weeks of launch"; the approved record (case-study-facts.json, rankings) is no ranking losses in the 30 days after launch. Enterprise Ops said "twenty-six Supabase Edge Functions" (the 15 Sep count; the owner's 30 Sep record is 36) and "ten months" (it started November 2025). */}
                         <BlogText>
                             Two of our own projects mark out that range, and both are published with their details so
                             you can check the claim rather than take it. <Link href="/work/mycustompatches" className="text-cognac hover:underline font-medium">MyCustomPatches</Link>{" "}
                             moved every page, product and blog post onto a custom Next.js build in <strong>about 22
-                            days</strong>, with a full crawl validation before DNS cutover and rankings stable within
-                            two weeks of launch. At the other end,{" "}
+                            days</strong>, with a full crawl validation before DNS cutover and no ranking losses recorded
+                            in the 30 days after launch. At the other end,{" "}
                             <Link href="/work/enterprise-ops" className="text-cognac hover:underline font-medium">an operations platform</Link>{" "}
-                            with twenty-six Supabase Edge Functions, live profit calculations and real user roles has been in{" "}
-                            <strong>continuous development for ten months</strong> and is still being added to. Same team, same stack, a very different elapsed time,
+                            with 36 Supabase Edge Functions (the count on 30 September 2026), live profit calculations and real user roles has been in{" "}
+                            <strong>continuous development since November 2025</strong> and is still being added to. Same team, same stack, a very different elapsed time,
                             driven entirely by what was being built.
                         </BlogText>
 
@@ -588,7 +589,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
-                            <FAQAccordion faqs={postFAQs} />
+                            <FAQAccordion faqs={postFAQs} showHeading={false} />
                         </>
                     )}
 

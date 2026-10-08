@@ -136,3 +136,7 @@ __pycache__/
 # .tmp/preview-audit). Ignored so it is never committed, and so Tailwind v4,
 # which skips gitignored paths, does not try to read its locked files.
 .tmp/
+
+# Zodiak is downloaded at build time (scripts/fetch-zodiak.mjs). Its licence
+# forbids publishing the font files in a repository, and this repo is public.
+public/fonts/zodiak/
