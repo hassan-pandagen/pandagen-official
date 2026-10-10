@@ -869,6 +869,72 @@
       "qualifier": "Baby and Child at the low end, Arts and Crafts at the high end. Same month, same platform, same definition, a 10.2x range",
       "verifiedAt": "2026-10-08",
       "source": "https://www.irpcommerce.com/en/gb/ecommercemarketdata.aspx"
+    },
+    "siteground-startup-intro": {
+      "vendor": "SiteGround",
+      "plan": "StartUp",
+      "label": "StartUp first-term price",
+      "value": "$2.99/mo",
+      "qualifier": "prepaid for 12 months",
+      "verifiedAt": "2026-10-11",
+      "reviewDays": 30,
+      "source": "https://www.siteground.com/web-hosting.htm",
+      "note": "US price shown on the vendor's own pricing page, read with a live fetch on 11 October 2026. Promotional prices change often."
+    },
+    "siteground-startup-renewal": {
+      "vendor": "SiteGround",
+      "plan": "StartUp",
+      "label": "StartUp renewal price",
+      "value": "$17.99/mo",
+      "qualifier": "the page says the plan renews at this rate",
+      "verifiedAt": "2026-10-11",
+      "reviewDays": 30,
+      "source": "https://www.siteground.com/web-hosting.htm",
+      "note": "US price shown on the vendor's own pricing page, read with a live fetch on 11 October 2026. Promotional prices change often."
+    },
+    "bluehost-starter-intro": {
+      "vendor": "Bluehost",
+      "plan": "Starter",
+      "label": "Starter first-term price",
+      "value": "$3.99/mo",
+      "qualifier": "on a 36-month term",
+      "verifiedAt": "2026-10-11",
+      "reviewDays": 30,
+      "source": "https://www.bluehost.com/web-hosting",
+      "note": "US price shown on the vendor's own pricing page, read with a live fetch on 11 October 2026. Promotional prices change often."
+    },
+    "bluehost-starter-renewal": {
+      "vendor": "Bluehost",
+      "plan": "Starter",
+      "label": "Starter renewal price",
+      "value": "$9.99/mo",
+      "qualifier": "the page says the plan renews at this rate",
+      "verifiedAt": "2026-10-11",
+      "reviewDays": 30,
+      "source": "https://www.bluehost.com/web-hosting",
+      "note": "US price shown on the vendor's own pricing page, read with a live fetch on 11 October 2026. Promotional prices change often."
+    },
+    "hostinger-premium-intro": {
+      "vendor": "Hostinger",
+      "plan": "Premium",
+      "label": "Premium first-term price",
+      "value": "$2.99/mo",
+      "qualifier": "on a 48-month term, $143.52 paid upfront",
+      "verifiedAt": "2026-10-11",
+      "reviewDays": 30,
+      "source": "https://www.hostinger.com/web-hosting",
+      "note": "US price shown on the vendor's own pricing page, read with a live fetch on 11 October 2026. Promotional prices change often."
+    },
+    "hostinger-premium-renewal": {
+      "vendor": "Hostinger",
+      "plan": "Premium",
+      "label": "Premium renewal price",
+      "value": "$10.99/mo",
+      "qualifier": "the page says the plan renews at this rate",
+      "verifiedAt": "2026-10-11",
+      "reviewDays": 30,
+      "source": "https://www.hostinger.com/web-hosting",
+      "note": "US price shown on the vendor's own pricing page, read with a live fetch on 11 October 2026. Promotional prices change often."
     }
   }
 }

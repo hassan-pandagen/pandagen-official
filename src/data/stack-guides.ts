@@ -21,6 +21,10 @@ const supabaseFree = spec("supabase-free-plan");
 const supabasePro = spec("supabase-pro-price");
 const vercelPro = spec("vercel-pro-price");
 const vercelHobby = spec("vercel-hobby-price");
+const sgIntro = spec("siteground-startup-intro");
+const sgRenewal = spec("siteground-startup-renewal");
+const bhIntro = spec("bluehost-starter-intro");
+const bhRenewal = spec("bluehost-starter-renewal");
 
 export const stackGuidePosts: StackGuidePost[] = [
   {
@@ -61,7 +65,7 @@ export const stackGuidePosts: StackGuidePost[] = [
   },
   {
     ...byline, id: "website-monthly-running-cost", title: "How Much Does a Website Cost per Month? Our Stack Runs Under $50",
-    date: "Oct 8", published: "2026-10-08", lastModified: "2026-10-08", eyebrow: "Pricing / Monthly running costs",
+    date: "Oct 8", published: "2026-10-08", lastModified: "2026-10-11", eyebrow: "Pricing / Monthly running costs",
     excerpt: `A custom website with a content editor costs about $20 a month to run on our usual stack. Add a database and sign-in and it's about $45. Every line of the bill with ${asOf("vercel-pro-price")} prices, and who owns which account.`,
     category: "Pricing", readTime: "6 min", illustrationType: "hosting", cardStat: "$45", cardStatLabel: "A month for hosting, editor, email and database",
     faqs: [
@@ -69,6 +73,7 @@ export const stackGuidePosts: StackGuidePost[] = [
       { question: "How much does it cost to run a website per month?", answer: `On our usual stack, about $20 a month for a custom website with a content editor: Vercel Pro hosting at ${vercelPro.value}, with Sanity and Resend on their free plans. Adding a Supabase database and sign-in, at ${supabasePro.value}, brings it to about $45. Prices as of ${asOf("vercel-pro-price")}. The domain is extra and paid yearly to your registrar.` },
       { question: "Can I host a business website on Vercel for free?", answer: `No. Vercel's Hobby plan is ${vercelHobby.value}, but only ${vercelHobby.qualifier}. A business website is commercial, so it needs the Pro plan at ${vercelPro.value}.` },
       { question: "Do I have to pay for Supabase during the build?", answer: `No. We build on Supabase's Free plan and move the project to Pro, ${supabasePro.value}, when it goes live. Free projects are paused after a week of inactivity and have no backups, so they aren't for a live app.` },
+      { question: "Why did my hosting bill go up after the first year?", answer: `Shared hosts advertise first-term prices and renew at a higher rate. As of ${asOf("siteground-startup-renewal")}, SiteGround StartUp is ${sgIntro.value} ${sgIntro.qualifier} and renews at ${sgRenewal.value}, and Bluehost Starter is ${bhIntro.value} ${bhIntro.qualifier} and renews at ${bhRenewal.value}. Compare hosts by their renewal price and the length of the commitment.` },
       { question: "Who owns the domain?", answer: "You do. You buy it in your own name from a registrar. We've never bought a domain for a client, and most of our clients already owned theirs." },
       { question: "What happens to the hosting if I stop working with you?", answer: "On a maintenance or SEO package, hosting on our Vercel account is included if you want it. If you stop working with us, we move the site to a Vercel account in your name. We've done this for a client whose contract ended." },
     ],

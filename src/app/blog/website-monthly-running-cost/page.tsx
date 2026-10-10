@@ -11,6 +11,15 @@ export const metadata = stackGuideMetadata(id);
 // contract ended; not named without the client's permission); Supabase starts on its Free
 // plan and moves to Pro at launch. The $20 and $45 totals are sums of the spec-facts
 // values used below: re-add them if a price changes.
+//
+// 11 Oct 2026: added the shared-hosting renewal section. Each price was read from the
+// host's own pricing page that day (spec-facts.json, 30-day review). A reader pointed us to
+// an affiliate dataset with the same SiteGround and Bluehost figures; we cite the hosts.
+const times = (intro: string, renewal: string) => {
+  const ratio = parseFloat(renewal.replace(/[^0-9.]/g, "")) / parseFloat(intro.replace(/[^0-9.]/g, ""));
+  return `${(Math.round(ratio * 10) / 10).toString()} times`;
+};
+
 export default function Page() {
   const vercelPro = spec("vercel-pro-price");
   const vercelHobby = spec("vercel-hobby-price");
@@ -22,6 +31,12 @@ export default function Page() {
   const supabaseFree = spec("supabase-free-plan");
   const supabasePro = spec("supabase-pro-price");
   const supabaseIpv4 = spec("supabase-ipv4-addon");
+  const sgIntro = spec("siteground-startup-intro");
+  const sgRenewal = spec("siteground-startup-renewal");
+  const bhIntro = spec("bluehost-starter-intro");
+  const bhRenewal = spec("bluehost-starter-renewal");
+  const hoIntro = spec("hostinger-premium-intro");
+  const hoRenewal = spec("hostinger-premium-renewal");
   return <StackGuide id={id}>
     <p><strong>A custom website with a content editor costs about $20 a month to run on our usual stack: Vercel Pro hosting at {vercelPro.value}, with Sanity&apos;s editor and Resend&apos;s email on their free plans. If the project also needs a database and sign-in, Supabase Pro adds {supabasePro.value}, for about $45 a month in total.</strong> Your domain is extra, paid yearly to whichever registrar you bought it from. Prices as of {asOf("vercel-pro-price")}.</p>
     <h2>The monthly bill, line by line</h2>
@@ -37,6 +52,14 @@ export default function Page() {
     <p>If your database connection needs a dedicated IPv4 address, Supabase&apos;s optional <a href={supabaseIpv4.source}>IPv4 add-on</a> adds {supabaseIpv4.value}, {supabaseIpv4.qualifier}. That makes the Pro plus IPv4 baseline about $29 per month, or about $49 including a separate Vercel Pro subscription. Larger compute, extra projects and usage can raise the bill. When hosting is included in your maintenance package, do not add a second standalone hosting charge.</p>
     <h2>Why not host on Vercel&apos;s free plan?</h2>
     <p>Vercel&apos;s Hobby plan is {vercelHobby.value}, but only {vercelHobby.qualifier}. A business website is commercial, so it goes on Pro. Our guide to <Link href="/blog/nextjs-hosting-zero-cost">hosting Next.js for free</Link> explains what the free plans allow and when you outgrow them.</p>
+    <h2>What do WordPress hosts charge after the first term?</h2>
+    <p>The low prices shared hosts advertise are first-term rates, and the renewal price is what you pay after that. As of {asOf("siteground-startup-renewal")}, SiteGround&apos;s StartUp plan is {sgIntro.value} {sgIntro.qualifier} and renews at {sgRenewal.value}, about {times(sgIntro.value, sgRenewal.value)} the first-term rate. Bluehost Starter is {bhIntro.value} {bhIntro.qualifier} and renews at {bhRenewal.value}. Hostinger Premium is {hoIntro.value} {hoIntro.qualifier}, and renews at {hoRenewal.value}.</p>
+    <GuideTable caption={`Shared hosting first-term and renewal prices, US, as of ${asOf("siteground-startup-renewal")}`} headers={["Host and plan", "First term", "Renews at", "Commitment for the first-term price"]} rows={[
+      ["SiteGround StartUp", sgIntro.value, sgRenewal.value, sgIntro.qualifier ?? ""],
+      ["Bluehost Starter", bhIntro.value, bhRenewal.value, bhIntro.qualifier ?? ""],
+      ["Hostinger Premium", hoIntro.value, hoRenewal.value, hoIntro.qualifier ?? ""],
+    ]} />
+    <p>To compare hosts fairly, put the renewal prices side by side and note how long you have to commit to get the first-term rate. These are the hosts&apos; own published prices, and promotions change often, so check <a href={sgIntro.source}>SiteGround</a>, <a href={bhIntro.source}>Bluehost</a> and <a href={hoIntro.source}>Hostinger</a> before you buy. On our maintenance or SEO package, hosting is included, so there is no separate hosting renewal to plan for.</p>
     <h2>Why we start on Supabase&apos;s free plan</h2>
     <p>We build on Supabase&apos;s Free plan and switch to Pro when the project goes live, so you don&apos;t pay for the database during the build. The Free plan is {supabaseFree.value}, with {supabaseFree.qualifier}. Those last two limits are why a live business app goes on Pro. Not every site needs Supabase at all: read <Link href="/blog/sanity-vs-supabase">Sanity vs Supabase</Link> to see whether yours does.</p>
     <h2>When does Sanity start costing money?</h2>
