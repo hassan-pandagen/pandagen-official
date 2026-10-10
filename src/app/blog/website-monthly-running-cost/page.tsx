@@ -14,7 +14,8 @@ export const metadata = stackGuideMetadata(id);
 //
 // 11 Oct 2026: added the shared-hosting renewal section. Each price was read from the
 // host's own pricing page that day (spec-facts.json, 30-day review). A reader pointed us to
-// an affiliate dataset with the same SiteGround and Bluehost figures; we cite the hosts.
+// an affiliate dataset with the same SiteGround and Bluehost figures; the prices cite the hosts,
+// and the closing paragraph credits him for the idea (owner, 11 Oct 2026).
 const times = (intro: string, renewal: string) => {
   const ratio = parseFloat(renewal.replace(/[^0-9.]/g, "")) / parseFloat(intro.replace(/[^0-9.]/g, ""));
   return `${(Math.round(ratio * 10) / 10).toString()} times`;
@@ -60,6 +61,7 @@ export default function Page() {
       ["Hostinger Premium", hoIntro.value, hoRenewal.value, hoIntro.qualifier ?? ""],
     ]} />
     <p>To compare hosts fairly, put the renewal prices side by side and note how long you have to commit to get the first-term rate. These are the hosts&apos; own published prices, and promotions change often, so check <a href={sgIntro.source}>SiteGround</a>, <a href={bhIntro.source}>Bluehost</a> and <a href={hoIntro.source}>Hostinger</a> before you buy. On our maintenance or SEO package, hosting is included, so there is no separate hosting renewal to plan for.</p>
+    <p>Thanks to Randy Hilliard, whose <a href="https://bestreviewguide.co/renewal-price-shock-index-2026/">Renewal Price Shock Index</a> on BestReviewGuide.co pointed us to this gap. His index tracks intro and renewal prices across 29 plans and says openly that the tools it covers are affiliate partners. We checked every price above on the hosts&apos; own pages.</p>
     <h2>Why we start on Supabase&apos;s free plan</h2>
     <p>We build on Supabase&apos;s Free plan and switch to Pro when the project goes live, so you don&apos;t pay for the database during the build. The Free plan is {supabaseFree.value}, with {supabaseFree.qualifier}. Those last two limits are why a live business app goes on Pro. Not every site needs Supabase at all: read <Link href="/blog/sanity-vs-supabase">Sanity vs Supabase</Link> to see whether yours does.</p>
     <h2>When does Sanity start costing money?</h2>
