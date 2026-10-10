@@ -7,6 +7,6 @@ The written notes stayed. An image link in one of those older notes will now sho
 Where they are:
 
 - The owner's machine: `C:\Projects\pandagen-cleanup-2026-10-10\docs\`, same folder layout. `MANIFEST.txt` in that folder lists every moved file.
-- Git history: each file is still in the commits before this change, so `git show <commit>:<path>` restores any one of them.
+- Git history: screenshots that were on GitHub before 10 October are still in the history there, so `git show <commit>:<path>` restores any one of them. The `research/website-redesign-audit-2026-10-03` screenshots, along with crawl dumps and replaced images added after the last push, were stripped from the unpushed commits before launch so they never reach GitHub. Those exist only in the local backup folder, and on the local branch `backup/pre-history-cleanup-2026-10-10`.
 
 The two screenshots in `research/copy-before-after-audit-2026-10-09/evidence/` were kept because the current audit links to them.
