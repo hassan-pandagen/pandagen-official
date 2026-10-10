@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ServiceSearchFoundations from "../ServiceSearchFoundations";
 import type { ReactNode } from "react";
 import FadeIn from "@/components/ui/FadeIn";
 import PreviewShell from "@/components/redesign/PreviewShell";
@@ -108,6 +109,8 @@ export function WordPressMigrationPreview() {
       <p className={v.decisionNote}>We can document migration controls and measure the new site. Rankings, traffic and recovery timing remain decisions for search engines.</p>
     </div></section>
 
+    <ServiceSearchFoundations slug="wordpress-migration" />
+
     <section id="owner-voices" className={`${s.section} ${v.voices}`}><div className={s.wrap}>
       <FadeIn className={s.sectionHead}><div><p className={s.eyebrow}>From owners on Reddit</p><h2 className={v.narrativeTitle}>Plugins, quotes and code.</h2></div><p>Three lines from one r/nextjs thread, where a WordPress owner asked how to move on. They are Reddit users, not our clients, quoted word for word as checked on 3 October 2026.</p></FadeIn>
       <div className={v.voiceGrid}>{ownerQuotes.map((quote) => <FadeIn key={quote.text}><figure className={v.voice}><blockquote>{quote.text}</blockquote><figcaption><span>{quote.who}</span><a href={THREAD} target="_blank" rel="noopener noreferrer">Read the thread ↗</a></figcaption></figure></FadeIn>)}</div>
@@ -134,7 +137,7 @@ export function WordPressMigrationPreview() {
     </div></section>
 
     {/* 4 Oct 2026: what moves off WordPress and what you keep from our build. */}
-    <OwnershipCompare platforms={SERVICE_PORTABILITY["wordpress-migration"]} number="06" alt={false} />
+    <OwnershipCompare platforms={SERVICE_PORTABILITY["wordpress-migration"]} serviceSlug="wordpress-migration" number="06" alt={false} />
 
     <section id="questions" className={`${s.section} ${s.sectionAlt}`}><div className={s.wrap}>
       <FadeIn className={s.sectionHead}><div><p className={s.eyebrow}>07 / Before you decide</p><h2 className={v.narrativeTitle}>Questions worth asking.</h2></div><p>We answer these against your real website and put the project-specific answers into the quote.</p></FadeIn>

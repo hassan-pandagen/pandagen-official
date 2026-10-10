@@ -28,6 +28,7 @@
 import "server-only";
 import { createHash } from "node:crypto";
 import { buildLlmsTxt } from "@/data/llms-txt";
+import { serviceOwnershipAnswers } from "@/data/service-ownership-answers";
 import { pricingFaqs } from "@/data/pricing-faqs";
 import { previewFaqs, previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 import { migrationFaqs } from "@/data/wordpress-migration-faqs";
@@ -102,12 +103,14 @@ function faqPassages(): Passage[] {
   );
   const currentServiceFaqs = {
     ...Object.fromEntries(Object.keys(previewFaqs).map(slug => [slug, previewServiceFaqs(slug)])),
-    "wordpress-migration": migrationFaqs(),
+    "wordpress-migration": [...migrationFaqs(), ...serviceOwnershipAnswers("wordpress-migration")],
   };
   for (const [service, faqs] of Object.entries(currentServiceFaqs)) {
-    faqs.forEach((f, i) =>
-      out.push({ id: `svc-${service}-${i}`, title: f.q, text: `${f.q}\n${f.a}`, url: `${BASE}/services/${service}` }),
-    );
+    faqs.forEach((f, i) => {
+      const answerIndex = serviceOwnershipAnswers(service).findIndex(answer => answer.q === f.q);
+      const anchor = answerIndex < 0 ? "" : `#ownership-${service}-${answerIndex + 1}`;
+      out.push({ id: `svc-${service}-${i}`, title: f.q, text: `${f.q}\n${f.a}`, url: `${BASE}/services/${service}${anchor}` });
+    });
   }
   for (const p of blogPosts) {
     const url = `${BASE}/blog/${p.id}`;
@@ -129,7 +132,7 @@ function projectPassages(): Passage[] {
     id: `work-${slug(p.name)}`,
     title: `Our work: ${p.name}`,
     text: `${p.name} (${p.relationship}). ${p.fact}`,
-    // A client without a /work page yet (NorthDeck Group) links to its own site.
+    // Portfolio answers link to the project record, with live-site links on that page.
     url: p.href.startsWith("http") ? p.href : `${BASE}${p.href}`,
   }));
   for (const s of allCaseStudySlugs()) {
@@ -393,6 +396,20 @@ const TOPICS: Topic[] = [
     ask: (q) => /\b(edit|editing|update|change|changes|cms|content editor|myself|without (a )?developer)\b/i.test(q),
     pin: (p) => p.id.startsWith("pricing-") && /^what can i change myself/i.test(p.title),
     probe: "Can I edit the site myself?",
+  },
+  // 10 Oct 2026, code review: this topic used to sit first and pin all eight CMS
+  // service passages for any question that said "cms" or "sanity". "Can I edit my
+  // Webflow CMS myself?" then got the CMS service and nothing about Webflow, and a
+  // question that also asked about timing or payment could lose those pins to the
+  // cap. Now it only applies when no platform is named (the platform's own service
+  // answers those), pins the one "which CMS" answer, and comes last so it never
+  // crowds out a more specific pin. Search still finds the other CMS answers.
+  {
+    name: "CMS development",
+    ask: (q) => /\b(cms|sanity|content editor|publishing workflow)\b/i.test(q) && platformsIn(q).length === 0,
+    expand: "CMS website development editor Sanity WordPress",
+    pin: (p) => p.id.startsWith("svc-cms-development-") && /^which cms should/i.test(p.title),
+    probe: "Can you build a CMS website my team can edit?",
   },
 ];
 

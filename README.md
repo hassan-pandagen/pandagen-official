@@ -84,11 +84,13 @@ Real-user performance should be evaluated with consented LCP, INP, and CLS distr
 
 The primary call to action is **Get your migration plan**. Published package starting points are:
 
-- Starter: **$1,500**, with 15 business days of included support.
-- Growth: **$3,500**, with 30 business days of included support.
-- Scale: **$5,000-$10,000**, with 30 business days of included support.
+- Starter: from **$1,500**, with 15 calendar days of free post-launch support.
+- Growth: from **$3,500**, with 30 calendar days of free post-launch support.
+- Scale: from **$5,000**, with 30 calendar days of free post-launch support.
 
-Pages, features, integrations, and other additions are discussed and documented in written project terms accepted by both parties. For a straightforward project, that record may be a concise quote or order summary explicitly accepted in email or chat; regulated or complex work may use a detailed signed proposal, SOW, or master agreement. The published package defaults are 30% at onboarding and 70% at the agreed delivery milestone, plus 15 business days of included support for Starter or 30 business days for Growth and Scale. A project may use different written terms.
+Support starts on the day the site goes live. The canonical wording is `POST_LAUNCH_SUPPORT` in `src/data/company-facts.ts`.
+
+Pages, features, integrations, and other additions are discussed and documented in written project terms accepted by both parties. For a straightforward project, that record may be a concise quote or order summary explicitly accepted in email or chat; regulated or complex work may use a detailed signed proposal, SOW, or master agreement. The published package defaults are 30% at onboarding and 70% at the agreed delivery milestone, plus 15 calendar days of free post-launch support for Starter or 30 calendar days for Growth and Scale, starting on launch day. A project may use different written terms.
 
 When the accepted project terms include 100% contracted-scope protection, PandaCodeGen refunds the fees paid under that scope if it fails to deliver the promised deliverables. The project terms define the trigger, verification, cure process, and work-product consequences; this is not a preference or change-of-mind guarantee. A refund that is due or approved is normally initiated within 2-3 business days, while bank or payment-provider settlement may take up to 10-12 business days. The published performance default is a 90+ Lighthouse target on both mobile and desktop for the agreed representative pages, with all three recorded pre-handover runs for each agreed page/profile passing. Only provisions expressly included in the accepted project terms apply to an engagement.
 

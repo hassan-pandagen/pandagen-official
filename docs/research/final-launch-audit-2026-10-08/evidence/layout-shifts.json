@@ -1,0 +1,453 @@
+[
+  {
+    "run": 1,
+    "maxSessionCLS": 0.006770188734087934,
+    "shifts": [
+      {
+        "at": 369.30000001192093,
+        "value": 0.0016382502320985827,
+        "sources": [
+          {
+            "tag": "DIV",
+            "class": "pointer-events-none absolute inset-x-0 bottom-0 h-40",
+            "text": "",
+            "prev": {
+              "x": 0,
+              "y": 659.46875,
+              "width": 1440,
+              "height": 160,
+              "top": 659.46875,
+              "right": 1440,
+              "bottom": 819.46875,
+              "left": 0
+            },
+            "next": {
+              "x": 0,
+              "y": 665.28125,
+              "width": 1440,
+              "height": 160,
+              "top": 665.28125,
+              "right": 1440,
+              "bottom": 825.28125,
+              "left": 0
+            }
+          },
+          {
+            "tag": "DIV",
+            "class": "lg:col-span-4 lg:col-start-5",
+            "text": "Panda Assistant\nYour AI guide to a better website\nWhat exactly do you do?\nWhat does a website cost?\nWill I lose my ranki",
+            "prev": {
+              "x": 453.65625,
+              "y": 363.703125,
+              "width": 486,
+              "height": 456.765625,
+              "top": 363.703125,
+              "right": 939.65625,
+              "bottom": 820.46875,
+              "left": 453.65625
+            },
+            "next": {
+              "x": 453.65625,
+              "y": 369.515625,
+              "width": 486,
+              "height": 455.765625,
+              "top": 369.515625,
+              "right": 939.65625,
+              "bottom": 825.28125,
+              "left": 453.65625
+            }
+          },
+          {
+            "tag": "A",
+            "class": "group relative block aspect-[1912/914] overflow-hidden rounded-[6px]",
+            "text": "",
+            "prev": {
+              "x": 922.328125,
+              "y": 492.125,
+              "width": 517.671875,
+              "height": 305.953125,
+              "top": 492.125,
+              "right": 1440,
+              "bottom": 798.078125,
+              "left": 922.328125
+            },
+            "next": {
+              "x": 922.328125,
+              "y": 497.9375,
+              "width": 517.671875,
+              "height": 305.953125,
+              "top": 497.9375,
+              "right": 1440,
+              "bottom": 803.890625,
+              "left": 922.328125
+            }
+          },
+          {
+            "tag": "DIV",
+            "class": "ticker relative overflow-hidden border-y py-4",
+            "text": "FOUNDER-BUILT\nSTAFFORD, TEXAS\nCODE YOU OWN\nCONTENT EDITOR INCLUDED\nSCOPE AND PRICE AGREED BEFORE WORK STARTS\nFROM $1,500",
+            "prev": {
+              "x": 0,
+              "y": 819.46875,
+              "width": 1440,
+              "height": 24.53125,
+              "top": 819.46875,
+              "right": 1440,
+              "bottom": 844,
+              "left": 0
+            },
+            "next": {
+              "x": 0,
+              "y": 825.28125,
+              "width": 1440,
+              "height": 18.71875,
+              "top": 825.28125,
+              "right": 1440,
+              "bottom": 844,
+              "left": 0
+            }
+          }
+        ]
+      },
+      {
+        "at": 450.5,
+        "value": 0.005131938501989351,
+        "sources": [
+          {
+            "tag": "BUTTON",
+            "class": "PandaAssistant-module___eqP2q__launcher",
+            "text": "Panda Assistant",
+            "prev": {
+              "x": 1190.015625,
+              "y": 733,
+              "width": 249.984375,
+              "height": 111,
+              "top": 733,
+              "right": 1440,
+              "bottom": 844,
+              "left": 1190.015625
+            },
+            "next": {
+              "x": 1190.015625,
+              "y": 591,
+              "width": 249.984375,
+              "height": 144,
+              "top": 591,
+              "right": 1440,
+              "bottom": 735,
+              "left": 1190.015625
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 2,
+    "maxSessionCLS": 0.20107524325211368,
+    "shifts": [
+      {
+        "at": 360,
+        "value": 0.19594330475012434,
+        "sources": [
+          {
+            "tag": "DIV",
+            "class": "grid items-end gap-12 lg:grid-cols-12 lg:gap-10",
+            "text": "Work directly with Hassan and Imran on a business website or online store your team can run. A simple WordPress site, a ",
+            "prev": {
+              "x": 39,
+              "y": 472.546875,
+              "width": 1361,
+              "height": 352.734375,
+              "top": 472.546875,
+              "right": 1400,
+              "bottom": 825.28125,
+              "left": 39
+            },
+            "next": {
+              "x": 40,
+              "y": 369.515625,
+              "width": 1360,
+              "height": 455.765625,
+              "top": 369.515625,
+              "right": 1400,
+              "bottom": 825.28125,
+              "left": 40
+            }
+          },
+          {
+            "prev": {
+              "x": 40,
+              "y": 292.6875,
+              "width": 1360,
+              "height": 182,
+              "top": 292.6875,
+              "right": 1400,
+              "bottom": 474.6875,
+              "left": 40
+            },
+            "next": {
+              "x": 40,
+              "y": 183.84375,
+              "width": 1360,
+              "height": 182,
+              "top": 183.84375,
+              "right": 1400,
+              "bottom": 365.84375,
+              "left": 40
+            }
+          },
+          {
+            "tag": "DIV",
+            "class": "pointer-events-none absolute inset-x-0 bottom-0 h-40",
+            "text": "",
+            "prev": {
+              "x": 0,
+              "y": 768.3125,
+              "width": 1440,
+              "height": 56.96875,
+              "top": 768.3125,
+              "right": 1440,
+              "bottom": 825.28125,
+              "left": 0
+            },
+            "next": {
+              "x": 0,
+              "y": 665.28125,
+              "width": 1440,
+              "height": 160,
+              "top": 665.28125,
+              "right": 1440,
+              "bottom": 825.28125,
+              "left": 0
+            }
+          },
+          {
+            "tag": "A",
+            "class": "group relative block aspect-[1912/914] overflow-hidden rounded-[6px]",
+            "text": "",
+            "prev": {
+              "x": 922.328125,
+              "y": 600.96875,
+              "width": 517.671875,
+              "height": 224.3125,
+              "top": 600.96875,
+              "right": 1440,
+              "bottom": 825.28125,
+              "left": 922.328125
+            },
+            "next": {
+              "x": 922.328125,
+              "y": 497.9375,
+              "width": 517.671875,
+              "height": 305.953125,
+              "top": 497.9375,
+              "right": 1440,
+              "bottom": 803.890625,
+              "left": 922.328125
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "class": "PandaAssistant-module___eqP2q__launcher",
+            "text": "Panda Assistant",
+            "prev": {
+              "x": 1193.015625,
+              "y": 733,
+              "width": 246.984375,
+              "height": 111,
+              "top": 733,
+              "right": 1440,
+              "bottom": 844,
+              "left": 1193.015625
+            },
+            "next": {
+              "x": 1190.015625,
+              "y": 733,
+              "width": 249.984375,
+              "height": 111,
+              "top": 733,
+              "right": 1440,
+              "bottom": 844,
+              "left": 1190.015625
+            }
+          }
+        ]
+      },
+      {
+        "at": 464.30000001192093,
+        "value": 0.005131938501989351,
+        "sources": [
+          {
+            "tag": "BUTTON",
+            "class": "PandaAssistant-module___eqP2q__launcher",
+            "text": "Panda Assistant",
+            "prev": {
+              "x": 1190.015625,
+              "y": 733,
+              "width": 249.984375,
+              "height": 111,
+              "top": 733,
+              "right": 1440,
+              "bottom": 844,
+              "left": 1190.015625
+            },
+            "next": {
+              "x": 1190.015625,
+              "y": 591,
+              "width": 249.984375,
+              "height": 144,
+              "top": 591,
+              "right": 1440,
+              "bottom": 735,
+              "left": 1190.015625
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run": 3,
+    "maxSessionCLS": 0.006770188734087934,
+    "shifts": [
+      {
+        "at": 378.19999998807907,
+        "value": 0.0016382502320985827,
+        "sources": [
+          {
+            "tag": "DIV",
+            "class": "pointer-events-none absolute inset-x-0 bottom-0 h-40",
+            "text": "",
+            "prev": {
+              "x": 0,
+              "y": 659.46875,
+              "width": 1440,
+              "height": 160,
+              "top": 659.46875,
+              "right": 1440,
+              "bottom": 819.46875,
+              "left": 0
+            },
+            "next": {
+              "x": 0,
+              "y": 665.28125,
+              "width": 1440,
+              "height": 160,
+              "top": 665.28125,
+              "right": 1440,
+              "bottom": 825.28125,
+              "left": 0
+            }
+          },
+          {
+            "tag": "DIV",
+            "class": "lg:col-span-4 lg:col-start-5",
+            "text": "Panda Assistant\nYour AI guide to a better website\nWhat exactly do you do?\nWhat does a website cost?\nWill I lose my ranki",
+            "prev": {
+              "x": 453.65625,
+              "y": 363.703125,
+              "width": 486,
+              "height": 456.765625,
+              "top": 363.703125,
+              "right": 939.65625,
+              "bottom": 820.46875,
+              "left": 453.65625
+            },
+            "next": {
+              "x": 453.65625,
+              "y": 369.515625,
+              "width": 486,
+              "height": 455.765625,
+              "top": 369.515625,
+              "right": 939.65625,
+              "bottom": 825.28125,
+              "left": 453.65625
+            }
+          },
+          {
+            "tag": "A",
+            "class": "group relative block aspect-[1912/914] overflow-hidden rounded-[6px]",
+            "text": "",
+            "prev": {
+              "x": 922.328125,
+              "y": 492.125,
+              "width": 517.671875,
+              "height": 305.953125,
+              "top": 492.125,
+              "right": 1440,
+              "bottom": 798.078125,
+              "left": 922.328125
+            },
+            "next": {
+              "x": 922.328125,
+              "y": 497.9375,
+              "width": 517.671875,
+              "height": 305.953125,
+              "top": 497.9375,
+              "right": 1440,
+              "bottom": 803.890625,
+              "left": 922.328125
+            }
+          },
+          {
+            "tag": "DIV",
+            "class": "ticker relative overflow-hidden border-y py-4",
+            "text": "FOUNDER-BUILT\nSTAFFORD, TEXAS\nCODE YOU OWN\nCONTENT EDITOR INCLUDED\nSCOPE AND PRICE AGREED BEFORE WORK STARTS\nFROM $1,500",
+            "prev": {
+              "x": 0,
+              "y": 819.46875,
+              "width": 1440,
+              "height": 24.53125,
+              "top": 819.46875,
+              "right": 1440,
+              "bottom": 844,
+              "left": 0
+            },
+            "next": {
+              "x": 0,
+              "y": 825.28125,
+              "width": 1440,
+              "height": 18.71875,
+              "top": 825.28125,
+              "right": 1440,
+              "bottom": 844,
+              "left": 0
+            }
+          }
+        ]
+      },
+      {
+        "at": 452.0999999642372,
+        "value": 0.005131938501989351,
+        "sources": [
+          {
+            "tag": "BUTTON",
+            "class": "PandaAssistant-module___eqP2q__launcher",
+            "text": "Panda Assistant",
+            "prev": {
+              "x": 1190.015625,
+              "y": 733,
+              "width": 249.984375,
+              "height": 111,
+              "top": 733,
+              "right": 1440,
+              "bottom": 844,
+              "left": 1190.015625
+            },
+            "next": {
+              "x": 1190.015625,
+              "y": 591,
+              "width": 249.984375,
+              "height": 144,
+              "top": 591,
+              "right": 1440,
+              "bottom": 735,
+              "left": 1190.015625
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

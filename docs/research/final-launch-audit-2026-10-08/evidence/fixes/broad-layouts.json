@@ -1,0 +1,5334 @@
+[
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 2,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14937,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services",
+    "status": 200,
+    "title": "Website Design, Redesign and Development Services | PandaCodeGen",
+    "h1": [
+      "Website design. Development, too."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2348,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/pricing",
+    "status": 200,
+    "title": "Website & Online Store Pricing | PandaCodeGen",
+    "h1": [
+      "A better site. A clear price."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8244,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/contact",
+    "status": 200,
+    "title": "Talk to the founders | PandaCodeGen",
+    "h1": [
+      "Talk directly to the founders."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 1518,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/free-audit",
+    "status": 200,
+    "title": "Free Website Audit: SEO, Speed & Expert Review | PandaCodeGen",
+    "h1": [
+      "Free website audit. Know what to fix next."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2436,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services/sanity-development",
+    "status": 200,
+    "title": "Sanity CMS & Next.js Website Development | PandaCodeGen",
+    "h1": [
+      "Sanity CMS websites. An editor for your team."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7159,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services/backend-development",
+    "status": 200,
+    "title": "Backend Development: Supabase, Postgres & APIs | PandaCodeGen",
+    "h1": [
+      "Backends. Built around your workflow."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7373,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services/wordpress",
+    "status": 200,
+    "title": "WordPress Website Design & Development | PandaCodeGen",
+    "h1": [
+      "A WordPress site. Made for your business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 13262,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services/wordpress-migration",
+    "status": 200,
+    "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "h1": [
+      "Move from WordPress to Next.js. Keep what works."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [
+      "You receive the project code and design files we create for you, plus documentation and control of the production accounts. If you then take a monthly support or care plan, that doesn't change: we keep sharing the code, documentation and accounts with you, so you always have your own copy. Third-party themes, plugins, services and assets remain under their own licence terms."
+    ],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 15492,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services/ecommerce",
+    "status": 200,
+    "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "h1": [
+      "Ecommerce stores. Built around the order."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14698,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services/ai-seo",
+    "status": 200,
+    "title": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "h1": [
+      "AI SEO. Answers people can find."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8619,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services/custom-engineering",
+    "status": 200,
+    "title": "Custom Web Development Agency | PandaCodeGen",
+    "h1": [
+      "Custom software. Built around the work."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8834,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12844,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services/wix",
+    "status": 200,
+    "title": "Wix Website Migration | PandaCodeGen",
+    "h1": [
+      "Wix websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12125,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services/squarespace",
+    "status": 200,
+    "title": "Squarespace Website Migration | PandaCodeGen",
+    "h1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11987,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services/webflow",
+    "status": 200,
+    "title": "Webflow Optimization & Migration Services | PandaCodeGen",
+    "h1": [
+      "Webflow websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12516,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services/gohighlevel",
+    "status": 200,
+    "title": "GoHighLevel Website Speed & Custom Builds | PandaCodeGen",
+    "h1": [
+      "GoHighLevel websites. Speed, builds and CRM."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12547,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/partners",
+    "status": 200,
+    "title": "Agency Partnership Pilot | PandaCodeGen",
+    "h1": [
+      "White-label web development.Your client. Your brand."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7499,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "BUTTON",
+        "text": "05 / Saforne\n↗\n: show Saforne",
+        "class": "WorkReel-module__toVHgq__frame "
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 2,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2254,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/work/mycustompatches",
+    "status": 200,
+    "title": "MyCustomPatches Case Study: Off WordPress in About 22 Days | PandaCodeGen",
+    "h1": [
+      "MyCustomPatches."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6454,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/work/panda-patches",
+    "status": 200,
+    "title": "Panda Patches: WordPress to Next.js Store Migration | PandaCodeGen",
+    "h1": [
+      "Panda Patches."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 9632,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/work/enterprise-ops",
+    "status": 200,
+    "title": "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen",
+    "h1": [
+      "Enterprise operations platform."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 5668,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/work/emblematic-studio",
+    "status": 200,
+    "title": "Emblematic Studio Case Study: One Catalogue, 22 Products, One Server Route | PandaCodeGen",
+    "h1": [
+      "Emblematic Studio."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 9495,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/work/ladies-4-jesus",
+    "status": 200,
+    "title": "Ladies 4 Jesus Case Study: A Moderated Community an Owner Runs Alone | PandaCodeGen",
+    "h1": [
+      "Ladies 4 Jesus."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7250,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/work/medical-template",
+    "status": 200,
+    "title": "Medical Template: a Practice Website Demo | PandaCodeGen",
+    "h1": [
+      "Medical Template."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2856,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/work/panda-publisher",
+    "status": 200,
+    "title": "Panda Publisher: an Author Services Concept | PandaCodeGen",
+    "h1": [
+      "Panda Publisher."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3471,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/work/sleek-jackets",
+    "status": 200,
+    "title": "Sleek Jackets: an Outerwear Store Concept | PandaCodeGen",
+    "h1": [
+      "Sleek Jackets."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2628,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/work/northdeck-group",
+    "status": 200,
+    "title": "NorthDeck Group: a Website for Security Systems and Back-Office Services | PandaCodeGen",
+    "h1": [
+      "NorthDeck Group."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6475,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/work/a-step-above-medical",
+    "status": 200,
+    "title": "A Step Above Medical: a Rebuild in Progress | PandaCodeGen",
+    "h1": [
+      "A Step Above Medical."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2162,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/about",
+    "status": 200,
+    "title": "About PandaCodeGen | How We Scope and Deliver",
+    "h1": [
+      "Know who you're building with."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "A",
+        "text": "03 / HOW WE WORK",
+        "class": ""
+      },
+      {
+        "tag": "A",
+        "text": "04 / START A PROJECT",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2296,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/about/hassan",
+    "status": 200,
+    "title": "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen",
+    "h1": [
+      "Hassan Jamal"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3499,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/about/imran",
+    "status": 200,
+    "title": "Imran Raza Ladhani | Co-founder and Head of Marketing at PandaCodeGen",
+    "h1": [
+      "Imran Raza Ladhani"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 1858,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/ai-info",
+    "status": 200,
+    "title": "PandaCodeGen Company Reference | People, Services & Projects",
+    "h1": [
+      "PandaCodeGen, in plain terms."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 10974,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/ai-info/pricing-and-guarantees",
+    "status": 200,
+    "title": "PandaCodeGen Pricing and Guarantees Reference",
+    "h1": [
+      "PandaCodeGen Pricing and Guarantees"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen commercial terms: starting prices, payment structure, refunds, performance acceptance a",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 5324,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/ai-info/migration-services",
+    "status": 200,
+    "title": "PandaCodeGen Migration Process Reference",
+    "h1": [
+      "PandaCodeGen Migration Services"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen services: primary offer, platforms migrated from, build stack and the definition of SEO",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2868,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/ai-info/case-studies",
+    "status": 200,
+    "title": "PandaCodeGen Project Evidence Reference",
+    "h1": [
+      "PandaCodeGen Project Evidence"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen evidence policy, regulated-data position, crawl policy and corrections handling.\nPress\t",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8413,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/ai-info/team-and-company",
+    "status": 200,
+    "title": "PandaCodeGen Team and Company Reference",
+    "h1": [
+      "PandaCodeGen Team and Company Facts"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen identity: name, founding, formation, address, founders, service area and contracting ba",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      },
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen evidence policy, regulated-data position, crawl policy and corrections handling.\nPress\t",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 4580,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/blog",
+    "status": 200,
+    "title": "Web Development, Ecommerce & SEO Guides | PandaCodeGen",
+    "h1": [
+      "Good questions. Worth a read."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 26494,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/manifesto",
+    "status": 200,
+    "title": "The PandaCodeGen Manifesto | Why We Build The Way We Build | PandaCodeGen",
+    "h1": [
+      "Make the risky parts explicit."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3534,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/privacy",
+    "status": 200,
+    "title": "Privacy Policy | PandaCodeGen",
+    "h1": [
+      "Privacy Policy"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 16017,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/terms",
+    "status": 200,
+    "title": "Website Terms | PandaCodeGen",
+    "h1": [
+      "Website Terms"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7373,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/cookies",
+    "status": 200,
+    "title": "Cookie Policy | PandaCodeGen",
+    "h1": [
+      "Cookie Policy"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "Current cookie and browser-storage technology inventory\nService\tCategory\tExamples\tDuration\tPurpose\nP",
+        "class": "w-full min-w-[760px] text-sm border border-stone-200 rounded-lg overflow-hidden"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6694,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/security",
+    "status": 200,
+    "title": "Security Reporting | PandaCodeGen",
+    "h1": [
+      "Report a security issue."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2135,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/editorial-policy",
+    "status": 200,
+    "title": "Editorial & Evidence Policy | PandaCodeGen",
+    "h1": [
+      "Editorial & evidence policy."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 4356,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/fr",
+    "status": 200,
+    "title": "Création de sites web et boutiques en ligne | PandaCodeGen",
+    "h1": [
+      "Des sites web conçus pour votre façon de travailler."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 16963,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/de",
+    "status": 200,
+    "title": "Webdesign und Onlineshop-Entwicklung | PandaCodeGen",
+    "h1": [
+      "Websites, die zu Ihrer Arbeitsweise passen."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 16007,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/fr/services",
+    "status": 200,
+    "title": "Création de sites WordPress, développement et migration | PandaCodeGen",
+    "h1": [
+      "Capacités et architecture."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 4117,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/de/services",
+    "status": 200,
+    "title": "WordPress-Websites, Webentwicklung und Migration | PandaCodeGen",
+    "h1": [
+      "Leistungen und Architektur."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3978,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/fr/pricing",
+    "status": 200,
+    "title": "Tarifs et périmètre de création de sites | PandaCodeGen",
+    "h1": [
+      "Un site adapté à votre activité. Un devis écrit, un prix clair."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11734,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/de/pricing",
+    "status": 200,
+    "title": "Preise und Leistungsumfang für Websites | PandaCodeGen",
+    "h1": [
+      "Eine Website für Ihr Unternehmen. Ein klarer Preis im schriftlichen Angebot."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11645,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/fr/contact",
+    "status": 200,
+    "title": "Parlez aux fondateurs | PandaCodeGen",
+    "h1": [
+      "Parlez directement aux fondateurs."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 4103,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/de/contact",
+    "status": 200,
+    "title": "Mit den Gründern sprechen | PandaCodeGen",
+    "h1": [
+      "Sprechen Sie direkt mit den Gründern."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3952,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/fr/about",
+    "status": 200,
+    "title": "À propos de PandaCodeGen | Comment nous cadrons et livrons",
+    "h1": [
+      "Décider quoi construire avant d'écrire du code de production."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3231,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/de/about",
+    "status": 200,
+    "title": "Über PandaCodeGen | Wie wir Projekte zuschneiden und liefern",
+    "h1": [
+      "Entscheiden, was gebaut wird, bevor Produktionscode entsteht."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3216,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/blog/website-portability",
+    "status": 200,
+    "title": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "h1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 46481,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14937,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services",
+    "status": 200,
+    "title": "Website Design, Redesign and Development Services | PandaCodeGen",
+    "h1": [
+      "Website design. Development, too."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2348,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/pricing",
+    "status": 200,
+    "title": "Website & Online Store Pricing | PandaCodeGen",
+    "h1": [
+      "A better site. A clear price."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8244,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/contact",
+    "status": 200,
+    "title": "Talk to the founders | PandaCodeGen",
+    "h1": [
+      "Talk directly to the founders."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 1499,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/free-audit",
+    "status": 200,
+    "title": "Free Website Audit: SEO, Speed & Expert Review | PandaCodeGen",
+    "h1": [
+      "Free website audit. Know what to fix next."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2436,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services/sanity-development",
+    "status": 200,
+    "title": "Sanity CMS & Next.js Website Development | PandaCodeGen",
+    "h1": [
+      "Sanity CMS websites. An editor for your team."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7159,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services/backend-development",
+    "status": 200,
+    "title": "Backend Development: Supabase, Postgres & APIs | PandaCodeGen",
+    "h1": [
+      "Backends. Built around your workflow."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7373,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services/wordpress",
+    "status": 200,
+    "title": "WordPress Website Design & Development | PandaCodeGen",
+    "h1": [
+      "A WordPress site. Made for your business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12939,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services/wordpress-migration",
+    "status": 200,
+    "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "h1": [
+      "Move from WordPress to Next.js. Keep what works."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [
+      "You receive the project code and design files we create for you, plus documentation and control of the production accounts. If you then take a monthly support or care plan, that doesn't change: we keep sharing the code, documentation and accounts with you, so you always have your own copy. Third-party themes, plugins, services and assets remain under their own licence terms."
+    ],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 15169,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services/ecommerce",
+    "status": 200,
+    "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "h1": [
+      "Ecommerce stores. Built around the order."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14356,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services/ai-seo",
+    "status": 200,
+    "title": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "h1": [
+      "AI SEO. Answers people can find."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8619,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services/custom-engineering",
+    "status": 200,
+    "title": "Custom Web Development Agency | PandaCodeGen",
+    "h1": [
+      "Custom software. Built around the work."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8834,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12595,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services/wix",
+    "status": 200,
+    "title": "Wix Website Migration | PandaCodeGen",
+    "h1": [
+      "Wix websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11917,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services/squarespace",
+    "status": 200,
+    "title": "Squarespace Website Migration | PandaCodeGen",
+    "h1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11738,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services/webflow",
+    "status": 200,
+    "title": "Webflow Optimization & Migration Services | PandaCodeGen",
+    "h1": [
+      "Webflow websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12326,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services/gohighlevel",
+    "status": 200,
+    "title": "GoHighLevel Website Speed & Custom Builds | PandaCodeGen",
+    "h1": [
+      "GoHighLevel websites. Speed, builds and CRM."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12298,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/partners",
+    "status": 200,
+    "title": "Agency Partnership Pilot | PandaCodeGen",
+    "h1": [
+      "White-label web development.Your client. Your brand."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7499,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2254,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/work/mycustompatches",
+    "status": 200,
+    "title": "MyCustomPatches Case Study: Off WordPress in About 22 Days | PandaCodeGen",
+    "h1": [
+      "MyCustomPatches."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6454,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/work/panda-patches",
+    "status": 200,
+    "title": "Panda Patches: WordPress to Next.js Store Migration | PandaCodeGen",
+    "h1": [
+      "Panda Patches."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 9632,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/work/enterprise-ops",
+    "status": 200,
+    "title": "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen",
+    "h1": [
+      "Enterprise operations platform."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 5668,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/work/emblematic-studio",
+    "status": 200,
+    "title": "Emblematic Studio Case Study: One Catalogue, 22 Products, One Server Route | PandaCodeGen",
+    "h1": [
+      "Emblematic Studio."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 9495,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/work/ladies-4-jesus",
+    "status": 200,
+    "title": "Ladies 4 Jesus Case Study: A Moderated Community an Owner Runs Alone | PandaCodeGen",
+    "h1": [
+      "Ladies 4 Jesus."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7250,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/work/medical-template",
+    "status": 200,
+    "title": "Medical Template: a Practice Website Demo | PandaCodeGen",
+    "h1": [
+      "Medical Template."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2856,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/work/panda-publisher",
+    "status": 200,
+    "title": "Panda Publisher: an Author Services Concept | PandaCodeGen",
+    "h1": [
+      "Panda Publisher."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 1,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3471,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/work/sleek-jackets",
+    "status": 200,
+    "title": "Sleek Jackets: an Outerwear Store Concept | PandaCodeGen",
+    "h1": [
+      "Sleek Jackets."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2628,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/work/northdeck-group",
+    "status": 200,
+    "title": "NorthDeck Group: a Website for Security Systems and Back-Office Services | PandaCodeGen",
+    "h1": [
+      "NorthDeck Group."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6475,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/work/a-step-above-medical",
+    "status": 200,
+    "title": "A Step Above Medical: a Rebuild in Progress | PandaCodeGen",
+    "h1": [
+      "A Step Above Medical."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2162,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/about",
+    "status": 200,
+    "title": "About PandaCodeGen | How We Scope and Deliver",
+    "h1": [
+      "Know who you're building with."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2333,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/about/hassan",
+    "status": 200,
+    "title": "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen",
+    "h1": [
+      "Hassan Jamal"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3499,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/about/imran",
+    "status": 200,
+    "title": "Imran Raza Ladhani | Co-founder and Head of Marketing at PandaCodeGen",
+    "h1": [
+      "Imran Raza Ladhani"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 1858,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/ai-info",
+    "status": 200,
+    "title": "PandaCodeGen Company Reference | People, Services & Projects",
+    "h1": [
+      "PandaCodeGen, in plain terms."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 10974,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/ai-info/pricing-and-guarantees",
+    "status": 200,
+    "title": "PandaCodeGen Pricing and Guarantees Reference",
+    "h1": [
+      "PandaCodeGen Pricing and Guarantees"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 5324,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/ai-info/migration-services",
+    "status": 200,
+    "title": "PandaCodeGen Migration Process Reference",
+    "h1": [
+      "PandaCodeGen Migration Services"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2868,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/ai-info/case-studies",
+    "status": 200,
+    "title": "PandaCodeGen Project Evidence Reference",
+    "h1": [
+      "PandaCodeGen Project Evidence"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8413,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/ai-info/team-and-company",
+    "status": 200,
+    "title": "PandaCodeGen Team and Company Reference",
+    "h1": [
+      "PandaCodeGen Team and Company Facts"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 4580,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/blog",
+    "status": 200,
+    "title": "Web Development, Ecommerce & SEO Guides | PandaCodeGen",
+    "h1": [
+      "Good questions. Worth a read."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 25,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 26494,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/manifesto",
+    "status": 200,
+    "title": "The PandaCodeGen Manifesto | Why We Build The Way We Build | PandaCodeGen",
+    "h1": [
+      "Make the risky parts explicit."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3534,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/privacy",
+    "status": 200,
+    "title": "Privacy Policy | PandaCodeGen",
+    "h1": [
+      "Privacy Policy"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 16017,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/terms",
+    "status": 200,
+    "title": "Website Terms | PandaCodeGen",
+    "h1": [
+      "Website Terms"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7373,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/cookies",
+    "status": 200,
+    "title": "Cookie Policy | PandaCodeGen",
+    "h1": [
+      "Cookie Policy"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6694,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/security",
+    "status": 200,
+    "title": "Security Reporting | PandaCodeGen",
+    "h1": [
+      "Report a security issue."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2135,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/editorial-policy",
+    "status": 200,
+    "title": "Editorial & Evidence Policy | PandaCodeGen",
+    "h1": [
+      "Editorial & evidence policy."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 4439,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/fr",
+    "status": 200,
+    "title": "Création de sites web et boutiques en ligne | PandaCodeGen",
+    "h1": [
+      "Des sites web conçus pour votre façon de travailler."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 17023,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/de",
+    "status": 200,
+    "title": "Webdesign und Onlineshop-Entwicklung | PandaCodeGen",
+    "h1": [
+      "Websites, die zu Ihrer Arbeitsweise passen."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 16063,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/fr/services",
+    "status": 200,
+    "title": "Création de sites WordPress, développement et migration | PandaCodeGen",
+    "h1": [
+      "Capacités et architecture."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 4117,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/de/services",
+    "status": 200,
+    "title": "WordPress-Websites, Webentwicklung und Migration | PandaCodeGen",
+    "h1": [
+      "Leistungen und Architektur."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3978,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/fr/pricing",
+    "status": 200,
+    "title": "Tarifs et périmètre de création de sites | PandaCodeGen",
+    "h1": [
+      "Un site adapté à votre activité. Un devis écrit, un prix clair."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11734,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/de/pricing",
+    "status": 200,
+    "title": "Preise und Leistungsumfang für Websites | PandaCodeGen",
+    "h1": [
+      "Eine Website für Ihr Unternehmen. Ein klarer Preis im schriftlichen Angebot."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11645,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/fr/contact",
+    "status": 200,
+    "title": "Parlez aux fondateurs | PandaCodeGen",
+    "h1": [
+      "Parlez directement aux fondateurs."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 4103,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/de/contact",
+    "status": 200,
+    "title": "Mit den Gründern sprechen | PandaCodeGen",
+    "h1": [
+      "Sprechen Sie direkt mit den Gründern."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3952,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/fr/about",
+    "status": 200,
+    "title": "À propos de PandaCodeGen | Comment nous cadrons et livrons",
+    "h1": [
+      "Décider quoi construire avant d'écrire du code de production."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3231,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/de/about",
+    "status": 200,
+    "title": "Über PandaCodeGen | Wie wir Projekte zuschneiden und liefern",
+    "h1": [
+      "Entscheiden, was gebaut wird, bevor Produktionscode entsteht."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3216,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/blog/website-portability",
+    "status": 200,
+    "title": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "h1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 45429,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "P",
+        "text": "Work directly with Hassan and Imran on a business website or online store your team can run. A simpl",
+        "class": "max-w-[30rem] text-[18px] leading-[1.55] md:text-[20px]"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Talk to the founders",
+        "class": "cta-solid inline-flex items-center justify-center gap-3 bg-[#1C1917] px-6 py-4 text-[16px] font-medium text-white"
+      },
+      {
+        "tag": "A",
+        "text": "See the work",
+        "class": "inline-flex items-center justify-center px-6 py-4 text-[16px] font-medium"
+      },
+      {
+        "tag": "P",
+        "text": "Custom builds from $1,500. WordPress quoted to scope. Price agreed before work starts.",
+        "class": "mt-5 text-[14px]"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "class": "flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white transition-opacity disabled:opacity-40"
+      },
+      {
+        "tag": "P",
+        "text": "AI assistant. Privacy",
+        "class": "mt-2 text-[12px]"
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "class": "group relative block aspect-[1912/914] overflow-hidden rounded-[6px]"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14937,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services",
+    "status": 200,
+    "title": "Website Design, Redesign and Development Services | PandaCodeGen",
+    "h1": [
+      "Website design. Development, too."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "P",
+        "text": "PANDACODEGEN / SERVICES",
+        "class": "CommercialPreview-module__A7DDva__eyebrow"
+      },
+      {
+        "tag": "H1",
+        "text": "WEBSITE DESIGN.\nDEVELOPMENT, TOO.",
+        "class": "ServicesPreview-module__62GvPW__hubTitle"
+      },
+      {
+        "tag": "P",
+        "text": "A first website, a store, a move from the platform you have outgrown or software for the work behind",
+        "class": "ServicesPreview-module__62GvPW__hubLead"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2348,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/pricing",
+    "status": 200,
+    "title": "Website & Online Store Pricing | PandaCodeGen",
+    "h1": [
+      "A better site. A clear price."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8244,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/contact",
+    "status": 200,
+    "title": "Talk to the founders | PandaCodeGen",
+    "h1": [
+      "Talk directly to the founders."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 1518,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services/sanity-development",
+    "status": 200,
+    "title": "Sanity CMS & Next.js Website Development | PandaCodeGen",
+    "h1": [
+      "Sanity CMS websites. An editor for your team."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7159,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services/backend-development",
+    "status": 200,
+    "title": "Backend Development: Supabase, Postgres & APIs | PandaCodeGen",
+    "h1": [
+      "Backends. Built around your workflow."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7373,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services/wordpress",
+    "status": 200,
+    "title": "WordPress Website Design & Development | PandaCodeGen",
+    "h1": [
+      "A WordPress site. Made for your business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 13262,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services/wordpress-migration",
+    "status": 200,
+    "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "h1": [
+      "Move from WordPress to Next.js. Keep what works."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [
+      "You receive the project code and design files we create for you, plus documentation and control of the production accounts. If you then take a monthly support or care plan, that doesn't change: we keep sharing the code, documentation and accounts with you, so you always have your own copy. Third-party themes, plugins, services and assets remain under their own licence terms."
+    ],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 15492,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services/ecommerce",
+    "status": 200,
+    "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "h1": [
+      "Ecommerce stores. Built around the order."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14698,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services/ai-seo",
+    "status": 200,
+    "title": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "h1": [
+      "AI SEO. Answers people can find."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8619,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services/custom-engineering",
+    "status": 200,
+    "title": "Custom Web Development Agency | PandaCodeGen",
+    "h1": [
+      "Custom software. Built around the work."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8834,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12844,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services/wix",
+    "status": 200,
+    "title": "Wix Website Migration | PandaCodeGen",
+    "h1": [
+      "Wix websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12125,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services/squarespace",
+    "status": 200,
+    "title": "Squarespace Website Migration | PandaCodeGen",
+    "h1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11987,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services/webflow",
+    "status": 200,
+    "title": "Webflow Optimization & Migration Services | PandaCodeGen",
+    "h1": [
+      "Webflow websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12516,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services/gohighlevel",
+    "status": 200,
+    "title": "GoHighLevel Website Speed & Custom Builds | PandaCodeGen",
+    "h1": [
+      "GoHighLevel websites. Speed, builds and CRM."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12547,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/partners",
+    "status": 200,
+    "title": "Agency Partnership Pilot | PandaCodeGen",
+    "h1": [
+      "White-label web development.Your client. Your brand."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7499,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "BUTTON",
+        "text": "05 / Saforne\n↗\n: show Saforne",
+        "class": "WorkReel-module__toVHgq__frame "
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 2,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2254,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/work/mycustompatches",
+    "status": 200,
+    "title": "MyCustomPatches Case Study: Off WordPress in About 22 Days | PandaCodeGen",
+    "h1": [
+      "MyCustomPatches."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6454,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/work/panda-patches",
+    "status": 200,
+    "title": "Panda Patches: WordPress to Next.js Store Migration | PandaCodeGen",
+    "h1": [
+      "Panda Patches."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 9632,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/work/enterprise-ops",
+    "status": 200,
+    "title": "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen",
+    "h1": [
+      "Enterprise operations platform."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 5668,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/work/emblematic-studio",
+    "status": 200,
+    "title": "Emblematic Studio Case Study: One Catalogue, 22 Products, One Server Route | PandaCodeGen",
+    "h1": [
+      "Emblematic Studio."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 9495,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/work/ladies-4-jesus",
+    "status": 200,
+    "title": "Ladies 4 Jesus Case Study: A Moderated Community an Owner Runs Alone | PandaCodeGen",
+    "h1": [
+      "Ladies 4 Jesus."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7250,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/work/medical-template",
+    "status": 200,
+    "title": "Medical Template: a Practice Website Demo | PandaCodeGen",
+    "h1": [
+      "Medical Template."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2856,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/work/panda-publisher",
+    "status": 200,
+    "title": "Panda Publisher: an Author Services Concept | PandaCodeGen",
+    "h1": [
+      "Panda Publisher."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3471,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/work/sleek-jackets",
+    "status": 200,
+    "title": "Sleek Jackets: an Outerwear Store Concept | PandaCodeGen",
+    "h1": [
+      "Sleek Jackets."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2628,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/work/northdeck-group",
+    "status": 200,
+    "title": "NorthDeck Group: a Website for Security Systems and Back-Office Services | PandaCodeGen",
+    "h1": [
+      "NorthDeck Group."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6475,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/work/a-step-above-medical",
+    "status": 200,
+    "title": "A Step Above Medical: a Rebuild in Progress | PandaCodeGen",
+    "h1": [
+      "A Step Above Medical."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2162,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/about",
+    "status": 200,
+    "title": "About PandaCodeGen | How We Scope and Deliver",
+    "h1": [
+      "Know who you're building with."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "A",
+        "text": "03 / HOW WE WORK",
+        "class": ""
+      },
+      {
+        "tag": "A",
+        "text": "04 / START A PROJECT",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2296,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/about/hassan",
+    "status": 200,
+    "title": "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen",
+    "h1": [
+      "Hassan Jamal"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3499,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/about/imran",
+    "status": 200,
+    "title": "Imran Raza Ladhani | Co-founder and Head of Marketing at PandaCodeGen",
+    "h1": [
+      "Imran Raza Ladhani"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 1858,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/ai-info",
+    "status": 200,
+    "title": "PandaCodeGen Company Reference | People, Services & Projects",
+    "h1": [
+      "PandaCodeGen, in plain terms."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 10974,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/ai-info/pricing-and-guarantees",
+    "status": 200,
+    "title": "PandaCodeGen Pricing and Guarantees Reference",
+    "h1": [
+      "PandaCodeGen Pricing and Guarantees"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen commercial terms: starting prices, payment structure, refunds, performance acceptance a",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 5324,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/ai-info/migration-services",
+    "status": 200,
+    "title": "PandaCodeGen Migration Process Reference",
+    "h1": [
+      "PandaCodeGen Migration Services"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen services: primary offer, platforms migrated from, build stack and the definition of SEO",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2868,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/ai-info/case-studies",
+    "status": 200,
+    "title": "PandaCodeGen Project Evidence Reference",
+    "h1": [
+      "PandaCodeGen Project Evidence"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen evidence policy, regulated-data position, crawl policy and corrections handling.\nPress\t",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8413,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/ai-info/team-and-company",
+    "status": 200,
+    "title": "PandaCodeGen Team and Company Reference",
+    "h1": [
+      "PandaCodeGen Team and Company Facts"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen identity: name, founding, formation, address, founders, service area and contracting ba",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      },
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen evidence policy, regulated-data position, crawl policy and corrections handling.\nPress\t",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 4580,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/blog",
+    "status": 200,
+    "title": "Web Development, Ecommerce & SEO Guides | PandaCodeGen",
+    "h1": [
+      "Good questions. Worth a read."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 5,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 26494,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/manifesto",
+    "status": 200,
+    "title": "The PandaCodeGen Manifesto | Why We Build The Way We Build | PandaCodeGen",
+    "h1": [
+      "Make the risky parts explicit."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3534,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/privacy",
+    "status": 200,
+    "title": "Privacy Policy | PandaCodeGen",
+    "h1": [
+      "Privacy Policy"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 16017,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/terms",
+    "status": 200,
+    "title": "Website Terms | PandaCodeGen",
+    "h1": [
+      "Website Terms"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7373,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/cookies",
+    "status": 200,
+    "title": "Cookie Policy | PandaCodeGen",
+    "h1": [
+      "Cookie Policy"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "Current cookie and browser-storage technology inventory\nService\tCategory\tExamples\tDuration\tPurpose\nP",
+        "class": "w-full min-w-[760px] text-sm border border-stone-200 rounded-lg overflow-hidden"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6694,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/security",
+    "status": 200,
+    "title": "Security Reporting | PandaCodeGen",
+    "h1": [
+      "Report a security issue."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2135,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/editorial-policy",
+    "status": 200,
+    "title": "Editorial & Evidence Policy | PandaCodeGen",
+    "h1": [
+      "Editorial & evidence policy."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 4356,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14924,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services",
+    "status": 200,
+    "title": "Website Design, Redesign and Development Services | PandaCodeGen",
+    "h1": [
+      "Website design. Development, too."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2348,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/pricing",
+    "status": 200,
+    "title": "Website & Online Store Pricing | PandaCodeGen",
+    "h1": [
+      "A better site. A clear price."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8243,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/contact",
+    "status": 200,
+    "title": "Talk to the founders | PandaCodeGen",
+    "h1": [
+      "Talk directly to the founders."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 1522,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services/sanity-development",
+    "status": 200,
+    "title": "Sanity CMS & Next.js Website Development | PandaCodeGen",
+    "h1": [
+      "Sanity CMS websites. An editor for your team."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7159,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services/backend-development",
+    "status": 200,
+    "title": "Backend Development: Supabase, Postgres & APIs | PandaCodeGen",
+    "h1": [
+      "Backends. Built around your workflow."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7373,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services/wordpress",
+    "status": 200,
+    "title": "WordPress Website Design & Development | PandaCodeGen",
+    "h1": [
+      "A WordPress site. Made for your business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 13244,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services/wordpress-migration",
+    "status": 200,
+    "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "h1": [
+      "Move from WordPress to Next.js. Keep what works."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [
+      "You receive the project code and design files we create for you, plus documentation and control of the production accounts. If you then take a monthly support or care plan, that doesn't change: we keep sharing the code, documentation and accounts with you, so you always have your own copy. Third-party themes, plugins, services and assets remain under their own licence terms."
+    ],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 15474,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services/ecommerce",
+    "status": 200,
+    "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "h1": [
+      "Ecommerce stores. Built around the order."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14672,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services/ai-seo",
+    "status": 200,
+    "title": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "h1": [
+      "AI SEO. Answers people can find."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8619,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services/custom-engineering",
+    "status": 200,
+    "title": "Custom Web Development Agency | PandaCodeGen",
+    "h1": [
+      "Custom software. Built around the work."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8834,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12829,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services/wix",
+    "status": 200,
+    "title": "Wix Website Migration | PandaCodeGen",
+    "h1": [
+      "Wix websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12110,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services/squarespace",
+    "status": 200,
+    "title": "Squarespace Website Migration | PandaCodeGen",
+    "h1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11973,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services/webflow",
+    "status": 200,
+    "title": "Webflow Optimization & Migration Services | PandaCodeGen",
+    "h1": [
+      "Webflow websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12503,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services/gohighlevel",
+    "status": 200,
+    "title": "GoHighLevel Website Speed & Custom Builds | PandaCodeGen",
+    "h1": [
+      "GoHighLevel websites. Speed, builds and CRM."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12532,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/partners",
+    "status": 200,
+    "title": "Agency Partnership Pilot | PandaCodeGen",
+    "h1": [
+      "White-label web development.Your client. Your brand."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7499,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": true,
+    "outside": [
+      {
+        "tag": "BUTTON",
+        "text": "03 / MyCustomPatches\n↗\n: show MyCustomPatches",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "04 / Ladies 4 Jesus\n↗\n: show Ladies 4 Jesus",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "05 / Saforne\n↗\n: show Saforne",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "03 / Sleek Jackets\n↗\n: show Sleek Jackets",
+        "class": "WorkReel-module__toVHgq__frame "
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2254,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/work/mycustompatches",
+    "status": 200,
+    "title": "MyCustomPatches Case Study: Off WordPress in About 22 Days | PandaCodeGen",
+    "h1": [
+      "MyCustomPatches."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6454,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/work/panda-patches",
+    "status": 200,
+    "title": "Panda Patches: WordPress to Next.js Store Migration | PandaCodeGen",
+    "h1": [
+      "Panda Patches."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 9632,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/work/enterprise-ops",
+    "status": 200,
+    "title": "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen",
+    "h1": [
+      "Enterprise operations platform."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 5668,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/work/emblematic-studio",
+    "status": 200,
+    "title": "Emblematic Studio Case Study: One Catalogue, 22 Products, One Server Route | PandaCodeGen",
+    "h1": [
+      "Emblematic Studio."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 9495,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/work/ladies-4-jesus",
+    "status": 200,
+    "title": "Ladies 4 Jesus Case Study: A Moderated Community an Owner Runs Alone | PandaCodeGen",
+    "h1": [
+      "Ladies 4 Jesus."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7250,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/work/medical-template",
+    "status": 200,
+    "title": "Medical Template: a Practice Website Demo | PandaCodeGen",
+    "h1": [
+      "Medical Template."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2856,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/work/panda-publisher",
+    "status": 200,
+    "title": "Panda Publisher: an Author Services Concept | PandaCodeGen",
+    "h1": [
+      "Panda Publisher."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3471,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/work/sleek-jackets",
+    "status": 200,
+    "title": "Sleek Jackets: an Outerwear Store Concept | PandaCodeGen",
+    "h1": [
+      "Sleek Jackets."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2628,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/work/northdeck-group",
+    "status": 200,
+    "title": "NorthDeck Group: a Website for Security Systems and Back-Office Services | PandaCodeGen",
+    "h1": [
+      "NorthDeck Group."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6475,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/work/a-step-above-medical",
+    "status": 200,
+    "title": "A Step Above Medical: a Rebuild in Progress | PandaCodeGen",
+    "h1": [
+      "A Step Above Medical."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2162,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/about",
+    "status": 200,
+    "title": "About PandaCodeGen | How We Scope and Deliver",
+    "h1": [
+      "Know who you're building with."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "A",
+        "text": "03 / HOW WE WORK",
+        "class": ""
+      },
+      {
+        "tag": "A",
+        "text": "04 / START A PROJECT",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2296,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/about/hassan",
+    "status": 200,
+    "title": "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen",
+    "h1": [
+      "Hassan Jamal"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3498,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/about/imran",
+    "status": 200,
+    "title": "Imran Raza Ladhani | Co-founder and Head of Marketing at PandaCodeGen",
+    "h1": [
+      "Imran Raza Ladhani"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 1858,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/ai-info",
+    "status": 200,
+    "title": "PandaCodeGen Company Reference | People, Services & Projects",
+    "h1": [
+      "PandaCodeGen, in plain terms."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 10974,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/ai-info/pricing-and-guarantees",
+    "status": 200,
+    "title": "PandaCodeGen Pricing and Guarantees Reference",
+    "h1": [
+      "PandaCodeGen Pricing and Guarantees"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen commercial terms: starting prices, payment structure, refunds, performance acceptance a",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 5324,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/ai-info/migration-services",
+    "status": 200,
+    "title": "PandaCodeGen Migration Process Reference",
+    "h1": [
+      "PandaCodeGen Migration Services"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen services: primary offer, platforms migrated from, build stack and the definition of SEO",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2868,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/ai-info/case-studies",
+    "status": 200,
+    "title": "PandaCodeGen Project Evidence Reference",
+    "h1": [
+      "PandaCodeGen Project Evidence"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen evidence policy, regulated-data position, crawl policy and corrections handling.\nPress\t",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8413,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/ai-info/team-and-company",
+    "status": 200,
+    "title": "PandaCodeGen Team and Company Reference",
+    "h1": [
+      "PandaCodeGen Team and Company Facts"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen identity: name, founding, formation, address, founders, service area and contracting ba",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      },
+      {
+        "tag": "TABLE",
+        "text": "PandaCodeGen evidence policy, regulated-data position, crawl policy and corrections handling.\nPress\t",
+        "class": "w-full min-w-[34rem] border-collapse text-sm"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 4580,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/blog",
+    "status": 200,
+    "title": "Web Development, Ecommerce & SEO Guides | PandaCodeGen",
+    "h1": [
+      "Good questions. Worth a read."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 26495,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/manifesto",
+    "status": 200,
+    "title": "The PandaCodeGen Manifesto | Why We Build The Way We Build | PandaCodeGen",
+    "h1": [
+      "Make the risky parts explicit."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3534,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/privacy",
+    "status": 200,
+    "title": "Privacy Policy | PandaCodeGen",
+    "h1": [
+      "Privacy Policy"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 16017,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/terms",
+    "status": 200,
+    "title": "Website Terms | PandaCodeGen",
+    "h1": [
+      "Website Terms"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7373,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/cookies",
+    "status": 200,
+    "title": "Cookie Policy | PandaCodeGen",
+    "h1": [
+      "Cookie Policy"
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "TABLE",
+        "text": "Current cookie and browser-storage technology inventory\nService\tCategory\tExamples\tDuration\tPurpose\nP",
+        "class": "w-full min-w-[760px] text-sm border border-stone-200 rounded-lg overflow-hidden"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6694,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/security",
+    "status": 200,
+    "title": "Security Reporting | PandaCodeGen",
+    "h1": [
+      "Report a security issue."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2135,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/editorial-policy",
+    "status": 200,
+    "title": "Editorial & Evidence Policy | PandaCodeGen",
+    "h1": [
+      "Editorial & evidence policy."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 4356,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14924,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services",
+    "status": 200,
+    "title": "Website Design, Redesign and Development Services | PandaCodeGen",
+    "h1": [
+      "Website design. Development, too."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2348,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/pricing",
+    "status": 200,
+    "title": "Website & Online Store Pricing | PandaCodeGen",
+    "h1": [
+      "A better site. A clear price."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8244,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/contact",
+    "status": 200,
+    "title": "Talk to the founders | PandaCodeGen",
+    "h1": [
+      "Talk directly to the founders."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 1503,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services/sanity-development",
+    "status": 200,
+    "title": "Sanity CMS & Next.js Website Development | PandaCodeGen",
+    "h1": [
+      "Sanity CMS websites. An editor for your team."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7159,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services/backend-development",
+    "status": 200,
+    "title": "Backend Development: Supabase, Postgres & APIs | PandaCodeGen",
+    "h1": [
+      "Backends. Built around your workflow."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7373,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services/wordpress",
+    "status": 200,
+    "title": "WordPress Website Design & Development | PandaCodeGen",
+    "h1": [
+      "A WordPress site. Made for your business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12909,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services/wordpress-migration",
+    "status": 200,
+    "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "h1": [
+      "Move from WordPress to Next.js. Keep what works."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [
+      "You receive the project code and design files we create for you, plus documentation and control of the production accounts. If you then take a monthly support or care plan, that doesn't change: we keep sharing the code, documentation and accounts with you, so you always have your own copy. Third-party themes, plugins, services and assets remain under their own licence terms."
+    ],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 15139,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services/ecommerce",
+    "status": 200,
+    "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "h1": [
+      "Ecommerce stores. Built around the order."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14312,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services/ai-seo",
+    "status": 200,
+    "title": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "h1": [
+      "AI SEO. Answers people can find."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8619,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services/custom-engineering",
+    "status": 200,
+    "title": "Custom Web Development Agency | PandaCodeGen",
+    "h1": [
+      "Custom software. Built around the work."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8834,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12573,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services/wix",
+    "status": 200,
+    "title": "Wix Website Migration | PandaCodeGen",
+    "h1": [
+      "Wix websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11894,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services/squarespace",
+    "status": 200,
+    "title": "Squarespace Website Migration | PandaCodeGen",
+    "h1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11717,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services/webflow",
+    "status": 200,
+    "title": "Webflow Optimization & Migration Services | PandaCodeGen",
+    "h1": [
+      "Webflow websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12307,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services/gohighlevel",
+    "status": 200,
+    "title": "GoHighLevel Website Speed & Custom Builds | PandaCodeGen",
+    "h1": [
+      "GoHighLevel websites. Speed, builds and CRM."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12276,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/partners",
+    "status": 200,
+    "title": "Agency Partnership Pilot | PandaCodeGen",
+    "h1": [
+      "White-label web development.Your client. Your brand."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7499,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2254,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/work/mycustompatches",
+    "status": 200,
+    "title": "MyCustomPatches Case Study: Off WordPress in About 22 Days | PandaCodeGen",
+    "h1": [
+      "MyCustomPatches."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6454,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/work/panda-patches",
+    "status": 200,
+    "title": "Panda Patches: WordPress to Next.js Store Migration | PandaCodeGen",
+    "h1": [
+      "Panda Patches."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 9632,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/work/enterprise-ops",
+    "status": 200,
+    "title": "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen",
+    "h1": [
+      "Enterprise operations platform."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 5668,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/work/emblematic-studio",
+    "status": 200,
+    "title": "Emblematic Studio Case Study: One Catalogue, 22 Products, One Server Route | PandaCodeGen",
+    "h1": [
+      "Emblematic Studio."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 9495,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/work/ladies-4-jesus",
+    "status": 200,
+    "title": "Ladies 4 Jesus Case Study: A Moderated Community an Owner Runs Alone | PandaCodeGen",
+    "h1": [
+      "Ladies 4 Jesus."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7250,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/work/medical-template",
+    "status": 200,
+    "title": "Medical Template: a Practice Website Demo | PandaCodeGen",
+    "h1": [
+      "Medical Template."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2856,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/work/panda-publisher",
+    "status": 200,
+    "title": "Panda Publisher: an Author Services Concept | PandaCodeGen",
+    "h1": [
+      "Panda Publisher."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3471,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/work/sleek-jackets",
+    "status": 200,
+    "title": "Sleek Jackets: an Outerwear Store Concept | PandaCodeGen",
+    "h1": [
+      "Sleek Jackets."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2628,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/work/northdeck-group",
+    "status": 200,
+    "title": "NorthDeck Group: a Website for Security Systems and Back-Office Services | PandaCodeGen",
+    "h1": [
+      "NorthDeck Group."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6475,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/work/a-step-above-medical",
+    "status": 200,
+    "title": "A Step Above Medical: a Rebuild in Progress | PandaCodeGen",
+    "h1": [
+      "A Step Above Medical."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2162,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/about",
+    "status": 200,
+    "title": "About PandaCodeGen | How We Scope and Deliver",
+    "h1": [
+      "Know who you're building with."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2333,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/about/hassan",
+    "status": 200,
+    "title": "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen",
+    "h1": [
+      "Hassan Jamal"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3498,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/about/imran",
+    "status": 200,
+    "title": "Imran Raza Ladhani | Co-founder and Head of Marketing at PandaCodeGen",
+    "h1": [
+      "Imran Raza Ladhani"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 1858,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/ai-info",
+    "status": 200,
+    "title": "PandaCodeGen Company Reference | People, Services & Projects",
+    "h1": [
+      "PandaCodeGen, in plain terms."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 10974,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/ai-info/pricing-and-guarantees",
+    "status": 200,
+    "title": "PandaCodeGen Pricing and Guarantees Reference",
+    "h1": [
+      "PandaCodeGen Pricing and Guarantees"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 5324,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/ai-info/migration-services",
+    "status": 200,
+    "title": "PandaCodeGen Migration Process Reference",
+    "h1": [
+      "PandaCodeGen Migration Services"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2868,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/ai-info/case-studies",
+    "status": 200,
+    "title": "PandaCodeGen Project Evidence Reference",
+    "h1": [
+      "PandaCodeGen Project Evidence"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8413,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/ai-info/team-and-company",
+    "status": 200,
+    "title": "PandaCodeGen Team and Company Reference",
+    "h1": [
+      "PandaCodeGen Team and Company Facts"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 4580,
+    "errors": [
+      "/localhost:3003/work/mycustompatches?_rsc=dRX75f7DPO4VHS7B due to access control checks."
+    ]
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/blog",
+    "status": 200,
+    "title": "Web Development, Ecommerce & SEO Guides | PandaCodeGen",
+    "h1": [
+      "Good questions. Worth a read."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 2,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 26495,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/manifesto",
+    "status": 200,
+    "title": "The PandaCodeGen Manifesto | Why We Build The Way We Build | PandaCodeGen",
+    "h1": [
+      "Make the risky parts explicit."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 3534,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/privacy",
+    "status": 200,
+    "title": "Privacy Policy | PandaCodeGen",
+    "h1": [
+      "Privacy Policy"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 16017,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/terms",
+    "status": 200,
+    "title": "Website Terms | PandaCodeGen",
+    "h1": [
+      "Website Terms"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7373,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/cookies",
+    "status": 200,
+    "title": "Cookie Policy | PandaCodeGen",
+    "h1": [
+      "Cookie Policy"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 6694,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/security",
+    "status": 200,
+    "title": "Security Reporting | PandaCodeGen",
+    "h1": [
+      "Report a security issue."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2135,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/editorial-policy",
+    "status": 200,
+    "title": "Editorial & Evidence Policy | PandaCodeGen",
+    "h1": [
+      "Editorial & evidence policy."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 4439,
+    "errors": []
+  }
+]

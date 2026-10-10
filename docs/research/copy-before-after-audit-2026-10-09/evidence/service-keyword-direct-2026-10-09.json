@@ -1,0 +1,123 @@
+{
+  "retrieved_at_utc": "2026-10-09T16:19:41.047497+00:00",
+  "country": "US",
+  "source": "Direct anonymous seodata.dev REST API",
+  "planned_keywords": [
+    "wix website design",
+    "wix website redesign",
+    "squarespace website design",
+    "squarespace website redesign",
+    "webflow development agency",
+    "webflow website redesign",
+    "ecommerce website development",
+    "shopify website development",
+    "custom software development services",
+    "customer portal development",
+    "backend development services",
+    "supabase development",
+    "sanity cms",
+    "wordpress speed optimization service",
+    "woocommerce speed optimization",
+    "gohighlevel developer",
+    "gohighlevel integration",
+    "headless cms agency",
+    "website redesign services"
+  ],
+  "results": [
+    {
+      "requested_keyword": "wix website design",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb5589f9bfe4b\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb5589f9bfe4b\",\"timestamp\":\"2026-10-09T16:19:41Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "wix website redesign",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb559398a8420\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb559398a8420\",\"timestamp\":\"2026-10-09T16:19:41Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "squarespace website design",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb559be6a7395\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb559be6a7395\",\"timestamp\":\"2026-10-09T16:19:41Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "squarespace website redesign",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb55a3b6d4e52\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb55a3b6d4e52\",\"timestamp\":\"2026-10-09T16:19:41Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "webflow development agency",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb55ac85fcf24\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb55ac85fcf24\",\"timestamp\":\"2026-10-09T16:19:41Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "webflow website redesign",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb55b4c69b672\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb55b4c69b672\",\"timestamp\":\"2026-10-09T16:19:41Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "ecommerce website development",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb55bce5e49c0\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb55bce5e49c0\",\"timestamp\":\"2026-10-09T16:19:42Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "shopify website development",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb55c3a1d995a\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb55c3a1d995a\",\"timestamp\":\"2026-10-09T16:19:42Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "custom software development services",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb55cba805220\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb55cba805220\",\"timestamp\":\"2026-10-09T16:19:42Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "customer portal development",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb55d3a69e481\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb55d3a69e481\",\"timestamp\":\"2026-10-09T16:19:42Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "backend development services",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb55dcd1c3839\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb55dcd1c3839\",\"timestamp\":\"2026-10-09T16:19:42Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "supabase development",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb55e3c48b672\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb55e3c48b672\",\"timestamp\":\"2026-10-09T16:19:42Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "sanity cms",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb55edfe63839\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb55edfe63839\",\"timestamp\":\"2026-10-09T16:19:42Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "wordpress speed optimization service",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb55f597a5220\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb55f597a5220\",\"timestamp\":\"2026-10-09T16:19:42Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "woocommerce speed optimization",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb55fdb66995a\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb55fdb66995a\",\"timestamp\":\"2026-10-09T16:19:42Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "gohighlevel developer",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb5606a6749c0\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb5606a6749c0\",\"timestamp\":\"2026-10-09T16:19:42Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "gohighlevel integration",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb560dbe54e52\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb560dbe54e52\",\"timestamp\":\"2026-10-09T16:19:42Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "headless cms agency",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb5616d16fe4b\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb5616d16fe4b\",\"timestamp\":\"2026-10-09T16:19:42Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    },
+    {
+      "requested_keyword": "website redesign services",
+      "http_status": 403,
+      "error_body": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/\",\"title\":\"Error 1010: Access denied\",\"status\":403,\"detail\":\"The site owner has blocked access based on your browser's signature.\",\"instance\":\"a47eb561de06e481\",\"error_code\":1010,\"error_name\":\"browser_signature_banned\",\"error_category\":\"access_denied\",\"ray_id\":\"a47eb561de06e481\",\"timestamp\":\"2026-10-09T16:19:43Z\",\"zone\":\"api.seodata.dev\",\"cloudflare_error\":true,\"retryable\":false"
+    }
+  ]
+}

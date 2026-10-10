@@ -42,7 +42,7 @@ export default function Page() {
     <h2>What a WordPress-to-Sanity move has to keep</h2>
     <p>A move has to keep your URLs, your content and images, and the jobs your plugins do, like forms, bookings or search. List every public URL first, and decide for each plugin whether its job moves to the new site or stops. Import a sample of pages and compare headings, images, meta descriptions and internal links before moving the rest. Where a URL has to change, redirect it to the matching new page. Our guide to <Link href="/blog/how-to-migrate-wordpress-to-nextjs">migrating WordPress to Next.js</Link> covers the steps.</p>
     <h2>When should you keep WordPress?</h2>
-    <p>Keep WordPress when a smaller fix solves the real problem: a slow theme, too many plugins, or an editor nobody was trained on. We work on both. Our <Link href="/services/wordpress">WordPress development</Link> service improves the site you have, and our <Link href="/services/sanity-development">Sanity website development</Link> service is for a rebuild.</p>
+    <p>Keep WordPress when a smaller fix solves the real problem: a slow theme, too many plugins, or an editor nobody was trained on. We work on both. Our <Link href="/services/wordpress">WordPress development</Link> service improves the site you have, and our <Link href="/services/cms-development">Sanity website development</Link> service is for a rebuild.</p>
     <p>If what&apos;s missing is customer logins or a private portal, that&apos;s a backend job, not a CMS one. Read <Link href="/blog/sanity-vs-supabase">Sanity vs Supabase</Link>.</p>
   </StackGuide>;
 }

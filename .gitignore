@@ -140,3 +140,13 @@ __pycache__/
 # Zodiak is downloaded at build time (scripts/fetch-zodiak.mjs). Its licence
 # forbids publishing the font files in a repository, and this repo is public.
 public/fonts/zodiak/
+
+# Cleaned 8 Oct 2026 before launch: local scratch that must not ship.
+/debug.log
+/qclass_report.tmp
+/*.png
+/*.jpeg
+/seoo-skill-pack*
+/graphify-out/
+/Usershassa*
+docs/research/seo-aeo-prelaunch-audit-2026-10-07/*-pages.json

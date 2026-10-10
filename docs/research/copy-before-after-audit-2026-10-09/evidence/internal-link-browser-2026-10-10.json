@@ -1,0 +1,423 @@
+{
+  "pass": true,
+  "cases": 52,
+  "apiIntercepted": true,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/services/woocommerce",
+      "name": "Ecommerce website development",
+      "target": "/services/ecommerce",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/services/wix",
+      "name": "CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/services/squarespace",
+      "name": "CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/services/webflow",
+      "name": "CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/services/custom-engineering",
+      "name": "Backend development for CRMs and portals",
+      "target": "/services/backend-development",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/services/gohighlevel",
+      "name": "Custom CRM development and workflow automation",
+      "target": "/services/custom-engineering",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/work/panda-publisher",
+      "name": "Explore CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/work/ladies-4-jesus",
+      "name": "Explore CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/work/enterprise-ops",
+      "name": "Backend development for team tools",
+      "target": "/services/backend-development",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/work/saforne",
+      "name": "Explore ecommerce website development",
+      "target": "/services/ecommerce",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/about",
+      "name": "Read our scope, acceptance and handover principles",
+      "target": "/manifesto",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/blog/what-is-headless-commerce",
+      "name": "which website builders support headless commerce",
+      "target": "/blog/which-website-builders-can-go-headless",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/",
+      "target": "/services/cms-development",
+      "via": "site menu",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/services/woocommerce",
+      "name": "Ecommerce website development",
+      "target": "/services/ecommerce",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/services/wix",
+      "name": "CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/services/squarespace",
+      "name": "CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/services/webflow",
+      "name": "CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/services/custom-engineering",
+      "name": "Backend development for CRMs and portals",
+      "target": "/services/backend-development",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/services/gohighlevel",
+      "name": "Custom CRM development and workflow automation",
+      "target": "/services/custom-engineering",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/work/panda-publisher",
+      "name": "Explore CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/work/ladies-4-jesus",
+      "name": "Explore CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/work/enterprise-ops",
+      "name": "Backend development for team tools",
+      "target": "/services/backend-development",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/work/saforne",
+      "name": "Explore ecommerce website development",
+      "target": "/services/ecommerce",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/about",
+      "name": "Read our scope, acceptance and handover principles",
+      "target": "/manifesto",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/blog/what-is-headless-commerce",
+      "name": "which website builders support headless commerce",
+      "target": "/blog/which-website-builders-can-go-headless",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/",
+      "target": "/services/cms-development",
+      "via": "site menu",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/services/woocommerce",
+      "name": "Ecommerce website development",
+      "target": "/services/ecommerce",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/services/wix",
+      "name": "CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/services/squarespace",
+      "name": "CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/services/webflow",
+      "name": "CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/services/custom-engineering",
+      "name": "Backend development for CRMs and portals",
+      "target": "/services/backend-development",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/services/gohighlevel",
+      "name": "Custom CRM development and workflow automation",
+      "target": "/services/custom-engineering",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/work/panda-publisher",
+      "name": "Explore CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/work/ladies-4-jesus",
+      "name": "Explore CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/work/enterprise-ops",
+      "name": "Backend development for team tools",
+      "target": "/services/backend-development",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/work/saforne",
+      "name": "Explore ecommerce website development",
+      "target": "/services/ecommerce",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/about",
+      "name": "Read our scope, acceptance and handover principles",
+      "target": "/manifesto",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/blog/what-is-headless-commerce",
+      "name": "which website builders support headless commerce",
+      "target": "/blog/which-website-builders-can-go-headless",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/",
+      "target": "/services/cms-development",
+      "via": "site menu",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/services/woocommerce",
+      "name": "Ecommerce website development",
+      "target": "/services/ecommerce",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/services/wix",
+      "name": "CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/services/squarespace",
+      "name": "CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/services/webflow",
+      "name": "CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/services/custom-engineering",
+      "name": "Backend development for CRMs and portals",
+      "target": "/services/backend-development",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/services/gohighlevel",
+      "name": "Custom CRM development and workflow automation",
+      "target": "/services/custom-engineering",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/work/panda-publisher",
+      "name": "Explore CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/work/ladies-4-jesus",
+      "name": "Explore CMS website development",
+      "target": "/services/cms-development",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/work/enterprise-ops",
+      "name": "Backend development for team tools",
+      "target": "/services/backend-development",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/work/saforne",
+      "name": "Explore ecommerce website development",
+      "target": "/services/ecommerce",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/about",
+      "name": "Read our scope, acceptance and handover principles",
+      "target": "/manifesto",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/blog/what-is-headless-commerce",
+      "name": "which website builders support headless commerce",
+      "target": "/blog/which-website-builders-can-go-headless",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/",
+      "target": "/services/cms-development",
+      "via": "site menu",
+      "pass": true
+    }
+  ]
+}

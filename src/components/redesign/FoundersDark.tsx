@@ -14,7 +14,7 @@ const founders = [
     last: "Jamal",
     title: "Co-founder & Lead Engineer",
     image: "/team/hassan.png",
-    bio: "Builds the architectures. Writes the code. 900+ GitHub contributions this year across live client projects. Every commit is visible. US contracts and support. Senior engineering with direct founder access.",
+    bio: "Leads architecture and development, using AI-assisted workflows alongside engineering judgement. His GitHub includes public projects; some client repositories stay private at the client's request. You work directly with him on the scope, build and handover.",
     tags: ["WordPress Migrations", "E-Commerce Builds", "Speed Optimization", "Custom Platforms"],
     about: "/about/hassan",
     linkedin: "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
@@ -46,7 +46,7 @@ export default function FoundersDark() {
             <span style={{ color: T.onDarkAccent }}>Founder-built,</span> not farmed out.
           </h2>
           <p className="max-w-[34rem] self-end text-[17px] leading-[1.6] lg:col-span-5 lg:col-start-8" style={{ color: T.onDarkQuiet }}>
-            When you book a call, Hassan answers. He writes every line of code. Imran leads marketing. Contracts
+            Hassan leads development. Imran leads marketing and the customer journey. You work directly with the founders. Contracts
             are US-based, with dedicated support: a founder replies, not a bot or an outsourced agent. No Manhattan
             office rent in your invoice, no account managers, no white-label outsourcing.
           </p>
@@ -110,7 +110,7 @@ export default function FoundersDark() {
           className="founder-link mt-10 inline-flex items-center gap-2 text-[15px]"
           style={{ color: T.onDarkQuiet }}
         >
-          900+ GitHub contributions in the last year. All public. All verifiable.
+          Explore Hassan’s public projects on GitHub.
           <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
           <span className="sr-only"> (opens in a new tab)</span>
         </a>

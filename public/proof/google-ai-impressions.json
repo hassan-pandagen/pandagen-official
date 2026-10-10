@@ -1,0 +1,381 @@
+{
+  "property": "pandacodegen.com",
+  "report": "Google Search Console Performance on Search Generative AI Features",
+  "metric": "Impressions",
+  "exportDate": "2026-09-13",
+  "periodStart": "2026-06-12",
+  "periodEnd": "2026-09-11",
+  "totalImpressions": 9843,
+  "sourceNote": "Recreated from our Search Console CSV export; not a Google interface screenshot. Full daily series; no smoothing or forecast.",
+  "definitionUrl": "https://support.google.com/webmasters/answer/16984139?hl=en",
+  "rows": [
+    {
+      "date": "2026-06-12",
+      "impressions": 22
+    },
+    {
+      "date": "2026-06-13",
+      "impressions": 13
+    },
+    {
+      "date": "2026-06-14",
+      "impressions": 13
+    },
+    {
+      "date": "2026-06-15",
+      "impressions": 17
+    },
+    {
+      "date": "2026-06-16",
+      "impressions": 18
+    },
+    {
+      "date": "2026-06-17",
+      "impressions": 13
+    },
+    {
+      "date": "2026-06-18",
+      "impressions": 15
+    },
+    {
+      "date": "2026-06-19",
+      "impressions": 13
+    },
+    {
+      "date": "2026-06-20",
+      "impressions": 6
+    },
+    {
+      "date": "2026-06-21",
+      "impressions": 17
+    },
+    {
+      "date": "2026-06-22",
+      "impressions": 14
+    },
+    {
+      "date": "2026-06-23",
+      "impressions": 27
+    },
+    {
+      "date": "2026-06-24",
+      "impressions": 15
+    },
+    {
+      "date": "2026-06-25",
+      "impressions": 19
+    },
+    {
+      "date": "2026-06-26",
+      "impressions": 30
+    },
+    {
+      "date": "2026-06-27",
+      "impressions": 16
+    },
+    {
+      "date": "2026-06-28",
+      "impressions": 8
+    },
+    {
+      "date": "2026-06-29",
+      "impressions": 28
+    },
+    {
+      "date": "2026-06-30",
+      "impressions": 31
+    },
+    {
+      "date": "2026-07-01",
+      "impressions": 26
+    },
+    {
+      "date": "2026-07-02",
+      "impressions": 50
+    },
+    {
+      "date": "2026-07-03",
+      "impressions": 47
+    },
+    {
+      "date": "2026-07-04",
+      "impressions": 45
+    },
+    {
+      "date": "2026-07-05",
+      "impressions": 40
+    },
+    {
+      "date": "2026-07-06",
+      "impressions": 86
+    },
+    {
+      "date": "2026-07-07",
+      "impressions": 93
+    },
+    {
+      "date": "2026-07-08",
+      "impressions": 70
+    },
+    {
+      "date": "2026-07-09",
+      "impressions": 73
+    },
+    {
+      "date": "2026-07-10",
+      "impressions": 61
+    },
+    {
+      "date": "2026-07-11",
+      "impressions": 57
+    },
+    {
+      "date": "2026-07-12",
+      "impressions": 89
+    },
+    {
+      "date": "2026-07-13",
+      "impressions": 89
+    },
+    {
+      "date": "2026-07-14",
+      "impressions": 92
+    },
+    {
+      "date": "2026-07-15",
+      "impressions": 79
+    },
+    {
+      "date": "2026-07-16",
+      "impressions": 72
+    },
+    {
+      "date": "2026-07-17",
+      "impressions": 79
+    },
+    {
+      "date": "2026-07-18",
+      "impressions": 61
+    },
+    {
+      "date": "2026-07-19",
+      "impressions": 61
+    },
+    {
+      "date": "2026-07-20",
+      "impressions": 91
+    },
+    {
+      "date": "2026-07-21",
+      "impressions": 123
+    },
+    {
+      "date": "2026-07-22",
+      "impressions": 151
+    },
+    {
+      "date": "2026-07-23",
+      "impressions": 108
+    },
+    {
+      "date": "2026-07-24",
+      "impressions": 95
+    },
+    {
+      "date": "2026-07-25",
+      "impressions": 56
+    },
+    {
+      "date": "2026-07-26",
+      "impressions": 68
+    },
+    {
+      "date": "2026-07-27",
+      "impressions": 80
+    },
+    {
+      "date": "2026-07-28",
+      "impressions": 86
+    },
+    {
+      "date": "2026-07-29",
+      "impressions": 103
+    },
+    {
+      "date": "2026-07-30",
+      "impressions": 92
+    },
+    {
+      "date": "2026-07-31",
+      "impressions": 95
+    },
+    {
+      "date": "2026-08-01",
+      "impressions": 89
+    },
+    {
+      "date": "2026-08-02",
+      "impressions": 145
+    },
+    {
+      "date": "2026-08-03",
+      "impressions": 273
+    },
+    {
+      "date": "2026-08-04",
+      "impressions": 330
+    },
+    {
+      "date": "2026-08-05",
+      "impressions": 329
+    },
+    {
+      "date": "2026-08-06",
+      "impressions": 283
+    },
+    {
+      "date": "2026-08-07",
+      "impressions": 159
+    },
+    {
+      "date": "2026-08-08",
+      "impressions": 163
+    },
+    {
+      "date": "2026-08-09",
+      "impressions": 161
+    },
+    {
+      "date": "2026-08-10",
+      "impressions": 212
+    },
+    {
+      "date": "2026-08-11",
+      "impressions": 237
+    },
+    {
+      "date": "2026-08-12",
+      "impressions": 228
+    },
+    {
+      "date": "2026-08-13",
+      "impressions": 256
+    },
+    {
+      "date": "2026-08-14",
+      "impressions": 257
+    },
+    {
+      "date": "2026-08-15",
+      "impressions": 212
+    },
+    {
+      "date": "2026-08-16",
+      "impressions": 293
+    },
+    {
+      "date": "2026-08-17",
+      "impressions": 336
+    },
+    {
+      "date": "2026-08-18",
+      "impressions": 294
+    },
+    {
+      "date": "2026-08-19",
+      "impressions": 244
+    },
+    {
+      "date": "2026-08-20",
+      "impressions": 195
+    },
+    {
+      "date": "2026-08-21",
+      "impressions": 175
+    },
+    {
+      "date": "2026-08-22",
+      "impressions": 104
+    },
+    {
+      "date": "2026-08-23",
+      "impressions": 111
+    },
+    {
+      "date": "2026-08-24",
+      "impressions": 152
+    },
+    {
+      "date": "2026-08-25",
+      "impressions": 159
+    },
+    {
+      "date": "2026-08-26",
+      "impressions": 118
+    },
+    {
+      "date": "2026-08-27",
+      "impressions": 105
+    },
+    {
+      "date": "2026-08-28",
+      "impressions": 80
+    },
+    {
+      "date": "2026-08-29",
+      "impressions": 57
+    },
+    {
+      "date": "2026-08-30",
+      "impressions": 66
+    },
+    {
+      "date": "2026-08-31",
+      "impressions": 128
+    },
+    {
+      "date": "2026-09-01",
+      "impressions": 126
+    },
+    {
+      "date": "2026-09-02",
+      "impressions": 138
+    },
+    {
+      "date": "2026-09-03",
+      "impressions": 110
+    },
+    {
+      "date": "2026-09-04",
+      "impressions": 98
+    },
+    {
+      "date": "2026-09-05",
+      "impressions": 72
+    },
+    {
+      "date": "2026-09-06",
+      "impressions": 74
+    },
+    {
+      "date": "2026-09-07",
+      "impressions": 101
+    },
+    {
+      "date": "2026-09-08",
+      "impressions": 121
+    },
+    {
+      "date": "2026-09-09",
+      "impressions": 111
+    },
+    {
+      "date": "2026-09-10",
+      "impressions": 99
+    },
+    {
+      "date": "2026-09-11",
+      "impressions": 89
+    }
+  ]
+}

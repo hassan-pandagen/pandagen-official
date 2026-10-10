@@ -154,14 +154,13 @@ export default function ProofSection() {
                     <Link
                       href={r.caseStudy!}
                       className="proof-face proof-face-back absolute inset-0 flex flex-col gap-4 p-4"
-                      aria-label={`Visit the ${SITE_BY_CASE[r.caseStudy!]} website`}
                       style={{ backgroundColor: T.paper, color: T.ink }}
                     >
                       <span className="relative block w-full shrink-0 overflow-hidden border border-[#1C1917]/15 bg-white aspect-video">
                         <Image src={siteImage} alt="" fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-contain" />
                       </span>
                       <span className="mt-auto block border-t border-[#1C1917]/20 pt-4">
-                        <span className="block text-[10px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.accentText }}>Completed client site</span>
+                        <span className="block text-[10px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.accentText }}>Client project</span>
                         <span className="mt-2 flex items-center justify-between gap-3 text-[17px] font-semibold">
                           {SITE_BY_CASE[r.caseStudy!]}
                           <ArrowUpRight className="h-5 w-5 shrink-0" aria-hidden="true" />

@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-09",
+  "scope": "404 and plain-English service ownership sections",
+  "services": 12,
+  "questions": 24,
+  "responsiveChecks": 78,
+  "responsiveFailures": 0,
+  "axeScans": 78,
+  "axeDetectedViolations": 0,
+  "assistantExactQuestionChecks": 24,
+  "assistantExactQuestionFailures": 0,
+  "unresolvedAssistantPins": [],
+  "structuralSeoUrls": 158,
+  "seoFailures": 0,
+  "seoWarnings": 0,
+  "unitTests": 80,
+  "build": "passed",
+  "typecheck": "passed",
+  "lint": "passed",
+  "sourceAndBuiltGuards": "passed",
+  "pagefindPages": 103,
+  "notChecked": [
+    "measured US keyword volumes or difficulty",
+    "future AI citations",
+    "fresh three-run Lighthouse acceptance",
+    "production HTTPS deployment",
+    "physical devices",
+    "real model response quality or enquiry/chat delivery"
+  ],
+  "deployed": false
+}

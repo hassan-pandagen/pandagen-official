@@ -8,6 +8,7 @@ This folder contains competitive analysis, product audits, keyword research, and
 
 | Audit | Date | Purpose | Files |
 |---|---|---|---|
+| [Final redesign launch audit](final-launch-audit-2026-10-08/README.md) | Oct 8 | Full audit plus implemented fixes, final UI/SEO/content checks and remaining mobile performance follow-up | Report and evidence |
 | [Audits 2026-09-19 (index)](AUDITS_2026-09-19.md) | Sep 19 | Three coordinated audits: ten-page intent, indexing verification, sitewide cannibalization | 3 |
 | [WordPress migration 2026-09-18](wordpress-migration-audit-2026-09-18/) | Sep 18 | `/services/wordpress-migration` audit: competitor comparison, proof strategy, implementation plan | 8 |
 | [Webflow indexing 2026-09-18](webflow-indexing-2026-09-18/) | Sep 18 | Webflow service page indexing baseline; explains prior failed crawls before rewrite | 4 |

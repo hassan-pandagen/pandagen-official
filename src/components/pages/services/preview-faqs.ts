@@ -1,10 +1,12 @@
+import { serviceBuyerQuestions } from "@/data/service-buyer-questions";
 import { stackServiceFaqs } from "./stack-services";
+import { serviceOwnershipAnswers } from "@/data/service-ownership-answers";
 import type { ServiceFaq } from "@/data/service-faqs";
 
 // Preview answers are written for the sections actually shown on these pages.
 // Several older live FAQs refer to absent tables or make unconditional migration
 // promises, so they should not be carried into the preview unchanged.
-export const previewFaqs: Record<string, [string, string][]> = {
+const basePreviewFaqs: Record<string, [string, string][]> = {
   ...stackServiceFaqs,
   wordpress: [
     ["Will you build on WordPress if that is what I want?", "Yes. We offer WordPress website design and development when it fits your pages, editing needs and budget. If a custom build would help, we explain why and compare the costs before you choose."],
@@ -72,7 +74,9 @@ export const previewFaqs: Record<string, [string, string][]> = {
     ["Which GoHighLevel account receives the enquiries?", "We identify the relevant location or sub-account, form and pipeline during discovery. Test submissions check mapped fields, consent, source details, duplicates, notifications and the automations named in your scope."],
   ],
   "ai-seo": [
-    ["What is the difference between AI SEO and answer engine optimisation?", "We use AI SEO and answer engine optimisation (AEO) for work that helps search and AI systems find and understand useful business information. That can include readable page content, descriptive headings, internal links, accurate structured data and source-supported answers. We agree the pages and questions first, then report observed visibility separately from visits, enquiries and sales."],
+    ["What is the difference between AI SEO, AEO and GEO services?", "AI SEO is our broader service for improving how a business website can be found and understood in AI search. Answer engine optimization (AEO) focuses on answering buyer questions clearly. Generative engine optimization (GEO) focuses on how the business and its pages are represented in generative search responses. The work overlaps: useful content, accessible pages, internal links and reliable evidence. Google treats optimization for its AI search features as part of SEO. We agree the pages and questions, then report visibility separately from visits, enquiries and sales."],
+    ["What do your generative engine optimization services include?", "Our GEO work reviews two agreed AI-search surfaces and up to five priority pages, identifies missing business facts or page-access problems, and implements one agreed improvement within the $500 monthly starting scope. The month also includes research, monitoring, a report and a review. Additional platforms, original articles, dashboards and larger changes need their own quote."],
+    ["Are AI SEO services just AI-written articles?", "No. Our offer is research and implementation to improve a website's information and access for AI search, with reporting on the agreed questions and pages. Automated article production is not the monthly offer. Original long-form content is scoped and priced separately."],
     ["Is AI SEO a monthly service?", "Yes. The focused monthly starting scope is $500 and includes agreed research, monitoring, one implemented improvement, a report and a review. A larger backlog or dashboard is quoted separately; the retainer is optional."],
     ["Can you guarantee citations or rankings?", "No. Search and AI systems choose their sources. We agree the work and checks, then report the changes and available measurements with their limits."],
     ["What evidence can you show?", "We can show first-party visibility reports and the order-source tracking used by Panda Patches. Impressions are not visits or sales, and Panda Patches shares an owner with PandaCodeGen, so it is not independent client proof."],
@@ -83,10 +87,22 @@ export const previewFaqs: Record<string, [string, string][]> = {
 };
 
 /**
- * A service page's visible FAQs in the shape ServicePageSchema expects. The
- * live /services pages build their FAQPage data from this, the same list the
- * redesign shows, so the structured data never describes a hidden answer.
+ * A service page's FAQs in the shape ServicePageSchema expects. The live
+ * /services pages build their FAQPage data from this, the same list the page
+ * renders, so every question in the structured data is on the page. Since
+ * 10 Oct 2026 the answers sit in a closed accordion: present in the HTML,
+ * shown when the reader opens the row.
  */
+export const previewFaqs: Record<string, [string, string][]> = Object.fromEntries(
+  Object.entries(basePreviewFaqs).map(([slug, faqs]) => [slug, [
+    ...serviceBuyerQuestions(slug).map(({ q, a }): [string, string] => [q, a]),
+    ...faqs,
+  ]]),
+);
+
 export function previewServiceFaqs(slug: string): ServiceFaq[] {
-  return (previewFaqs[slug] ?? []).map(([q, a]) => ({ q, a }));
+  return [
+    ...(previewFaqs[slug] ?? []).map(([q, a]) => ({ q, a })),
+    ...serviceOwnershipAnswers(slug).map(({ q, a }) => ({ q, a })),
+  ];
 }

@@ -11,34 +11,25 @@ const clientWork: ReelProject[] = [
   { name: "NorthDeck Group", label: "Security systems", relationship: "Independent client", href: "/work/northdeck-group", image: "/work/northdeck-group.png" },
   { name: caseStudy("emblematic-studio").name, label: "Product catalogue", relationship: caseStudy("emblematic-studio").relationship, href: "/work/emblematic-studio", image: "/work/emblematic-studio.png" },
   { name: caseStudy("mycustompatches").name, label: "WordPress migration", relationship: caseStudy("mycustompatches").relationship, href: "/work/mycustompatches", image: "/work/mycustompatches.png" },
-  { name: caseStudy("ladies-4-jesus").name, label: "Community and publishing", relationship: caseStudy("ladies-4-jesus").relationship, href: "/work/ladies-4-jesus", image: "/work/ladies-4-jesus.png" },
-  { name: "Saforne", label: "Leather goods store", relationship: "Independent client", status: "Preview build, not yet selling", href: "https://dtc-brand-alpha.vercel.app/", image: "/work/saforne.png", external: true },
+  { name: caseStudy("ladies-4-jesus").name, label: "Community and publishing", relationship: caseStudy("ladies-4-jesus").relationship, href: "/work/ladies-4-jesus", image: "/work/ladies-4-jesus-hero.png" },
+  { name: "Saforne", label: "Leather goods store", relationship: "Independent client", status: "Preview build, not yet selling", href: "/work/saforne", image: "/work/saforne.png" },
+  { name: "A Step Above Medical", label: "Medical website and training management system", relationship: "Independent client", status: MIGRATION_PROJECT_DETAILS.aStepAboveMedical.status, href: "/work/a-step-above-medical", image: "/work/a-step-above-medical-preview-homepage.png" },
 ];
-
-// The public site still serves the client's previous WordPress build. Keep this
-// project apart from finished screenshots until the replacement is launched.
-const inProgress = {
-  name: "A Step Above Medical",
-  label: "WordPress migration",
-  relationship: "Client project",
-  status: MIGRATION_PROJECT_DETAILS.aStepAboveMedical.status,
-  href: "/work/a-step-above-medical",
-};
 
 const founderAffiliated: ReelProject[] = [
   { name: caseStudy("panda-patches").name, label: "Custom commerce", relationship: caseStudy("panda-patches").relationship, href: "/work/panda-patches", image: "/work/panda-patches.png", thumbnailImage: "/work/panda-patches-calculator-configure.png", thumbnailLabel: "Panda Patches / configurator" },
-  { name: caseStudy("enterprise-ops").name, label: "Internal operations", relationship: caseStudy("enterprise-ops").relationship, href: "/work/enterprise-ops", image: "/work/enterprise-ops.png" },
+  { name: caseStudy("enterprise-ops").name, label: "Custom CRM & workflow automation", relationship: caseStudy("enterprise-ops").relationship, href: "/work/enterprise-ops", image: "/work/enterprise-ops.png" },
 ];
 
 const conceptBuilds: ReelProject[] = [
-  { name: caseStudy("medical-template").name, label: "Practice website", relationship: caseStudy("medical-template").relationship, href: "/work/medical-template", image: "/work/medical-template-hero.png" },
+  { name: caseStudy("medical-template").name, label: "Medical website design", relationship: caseStudy("medical-template").relationship, href: "/work/medical-template", image: "/work/medical-template-hero.png" },
   { name: caseStudy("panda-publisher").name, label: "Author services", relationship: caseStudy("panda-publisher").relationship, href: "/work/panda-publisher", image: "/work/panda-publisher-library.png" },
   { name: caseStudy("sleek-jackets").name, label: "Outerwear store", relationship: caseStudy("sleek-jackets").relationship, href: "/work/sleek-jackets", image: "/work/sleek-jackets-hero.png" },
 ];
 
 /** Display order also supplies the live page's structured project list. */
 export function workIndexItems(): { name: string; href: string }[] {
-  return [...clientWork, inProgress, ...founderAffiliated, ...conceptBuilds].map(({ name, href }) => ({ name, href }));
+  return [...clientWork, ...founderAffiliated, ...conceptBuilds].map(({ name, href }) => ({ name, href }));
 }
 
 export function WorkPreview() {
@@ -66,19 +57,6 @@ export function WorkPreview() {
         description="Sites and systems built for independent clients. Select a still to see the full project, then open its record for the details."
         projects={clientWork}
       />
-
-      <section className={styles.progressSection} aria-labelledby="work-in-progress">
-        <div className={styles.wrap}>
-          <div className={styles.progressBox}>
-            <p className={styles.progressLabel}>Also on the slate / In progress</p>
-            <div>
-              <h2 id="work-in-progress">{inProgress.name}</h2>
-              <p>{inProgress.label} · {inProgress.relationship} · {inProgress.status}. The replacement has not launched, so there is no finished-site screenshot yet.</p>
-            </div>
-            <Link href={inProgress.href}>Read the project status <ArrowUpRight size={18} aria-hidden="true" /></Link>
-          </div>
-        </div>
-      </section>
 
       <WorkReel
         id="founder-work"

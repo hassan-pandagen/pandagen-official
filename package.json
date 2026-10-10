@@ -18,7 +18,7 @@
     "test:forms": "node --test src/lib/forms/__tests__/*.test.mjs",
     "claims:check": "node scripts/check-public-claims.mjs",
     "dates:check": "python scripts/check_dates.py",
-    "guard:metrics": "python scripts/metrics_guard.py",
+    "guard:metrics": "python scripts/test_metrics_guard.py && python scripts/metrics_guard.py",
     "guard:links": "python scripts/link_guard.py",
     "guard:specs": "python scripts/spec_freshness.py",
     "guard:glossary": "python scripts/glossary_guard.py",
@@ -58,14 +58,14 @@
     "tailwind-merge": "^2.2.0"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "16.2.11",
+    "@next/bundle-analyzer": "16.3.8",
     "@tailwindcss/postcss": "^4.2.2",
     "@types/node": "^20.11.24",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "cross-env": "^10.1.0",
     "eslint": "latest",
-    "eslint-config-next": "16.2.11",
+    "eslint-config-next": "16.3.8",
     "pagefind": "^1.5.0",
     "postcss": "8.5.23",
     "tailwindcss": "^4.2.2",
@@ -75,6 +75,6 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "postcss": "8.5.23",
-    "sharp": "0.35.4"
+    "sharp": "0.35.5"
   }
 }

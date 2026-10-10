@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-06",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/for-agencies-offer-custom-web-development")],
@@ -60,7 +60,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/for-agencies-offer-custom-web-development"),
             description,
             datePublished: "2026-03-06",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -371,7 +371,7 @@ export default function WhiteLabelDevelopmentGuide() {
                             "A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed, subject to the signed contract.",
                             "Where the accepted project terms include it, a refund covers fees paid under that scope if the promised deliverables are not delivered, not merely because preferences change after work starts.",
                             "Refund timing is governed by the agreement. PandaCodeGen normally initiates an approved refund in 2 to 3 business days; the receiving bank or payment provider controls settlement after that, which can take up to 10 to 12 business days.",
-                            "Starter includes 15 business days of agreed support; Growth and Scale include 30 business days. Start date and coverage belong in the accepted terms.",
+                            "Starter includes 15 calendar days of agreed support; Growth and Scale include 30 calendar days. Start date and coverage belong in the accepted terms.",
                             "Minor agreed tweaks may be handled in support. New features and out-of-scope work use written change control and an agreed fixed, hourly, or other billing model.",
                         ]}
                     />

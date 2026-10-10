@@ -1,24 +1,33 @@
+import styles from "./FaqRows.module.css";
+
 export type FaqRow = { question: string; answer: string };
 
-/** Visible question and answer rows used across the site. */
+/**
+ * Native accordion; every answer is rendered in the initial HTML, so crawlers that read
+ * the page source (Googlebot, Bingbot, GPTBot, ClaudeBot, PerplexityBot) and the FAQPage
+ * data get the full text. Tools that read only rendered text see closed answers as empty.
+ * No shared `name`: it made opening one answer close an answer in another list on the
+ * same page (code review, 10 Oct 2026). Rows open independently.
+ */
 export default function FaqRows({ faqs, className = "" }: { faqs: FaqRow[]; className?: string }) {
   return (
-    <dl className={`border-t border-stone-300 ${className}`}>
+    <div className={`${styles.list} ${className}`} data-faq-list>
       {faqs.map((faq, index) => (
-        <div key={faq.question} className="grid gap-3 border-b border-stone-300 py-6 md:grid-cols-12 md:gap-8 md:py-8">
-          <dt className="md:col-span-5">
-            <span className="block font-mono text-xs tracking-[0.12em] text-cognac">
+        <details key={faq.question} className={styles.row}>
+          <summary className={styles.question}>
+            <span className={styles.number} aria-hidden="true">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <span className="mt-2 block text-xl font-bold leading-tight text-charcoal md:text-2xl">
+            <span className={styles.questionText}>
               {faq.question}
             </span>
-          </dt>
-          <dd className="max-w-2xl text-base leading-7 text-stone-700 md:col-span-6 md:col-start-7 md:text-[17px]">
+            <span className={styles.toggle} aria-hidden="true" />
+          </summary>
+          <div className={styles.answer}>
             {faq.answer}
-          </dd>
-        </div>
+          </div>
+        </details>
       ))}
-    </dl>
+    </div>
   );
 }

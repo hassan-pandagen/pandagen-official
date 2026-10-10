@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-25",
-        modifiedTime: "2026-10-04",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/woocommerce-too-slow")],
@@ -78,7 +78,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath(`/blog/${postId}`),
             datePublished: "2026-03-25",
-            dateModified: "2026-10-04",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -123,7 +123,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             datePublished: "2026-03-25",
-            dateModified: "2026-10-04",
+            dateModified: "2026-10-09",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -670,7 +670,7 @@ export default function WooCommerceTooSlowPage() {
                     <BlogText>
                         PandaCodeGen&apos;s published tiers start at $1,500, $3,500 and $5,000, with custom
                         scope where needed. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed.
-                        Package discussions may start with 15 business days of launch defect support on Starter and 30 on Growth and Scale; support applies only where the accepted project terms record it.
+                        Package discussions may start with 15 calendar days of launch defect support on Starter and 30 on Growth and Scale; support applies only where the accepted project terms record it.
                         A 90-plus score means the pages named in your quote, tested on phone and desktop, passing three
                         times each. That is a test-bench score. It is not
                         a ranking or conversion guarantee. The tiers and what each one includes are listed on the{" "}

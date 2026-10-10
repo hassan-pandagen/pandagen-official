@@ -85,10 +85,10 @@ export default function WorkReel({ id, number, title, description, projects, dar
               onClick={() => setActiveIndex(index)}
               className={`${styles.frame} ${index === activeIndex ? styles.active : ""}`}
               aria-pressed={index === activeIndex}
-              aria-label={`Show ${project.name}`}
             >
               <span className={styles.frameImage}><Image src={project.thumbnailImage ?? project.image} alt="" fill sizes={projects.length <= 2 ? "(min-width: 1000px) 50vw, (min-width: 700px) 45vw, 180px" : "(min-width: 1000px) 20vw, 180px"} /></span>
               <span className={styles.frameMeta}><span>{String(index + 1).padStart(2, "0")} / {project.thumbnailLabel ?? project.name}</span><span aria-hidden="true">↗</span></span>
+              <span className="sr-only">: show {project.name}</span>
             </button>
           ))}
         </div>

@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-12",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-much-does-a-website-cost")],
@@ -74,7 +74,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath(`/blog/${postId}`),
             datePublished: "2026-05-12",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -117,7 +117,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-12",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             inLanguage: "en-US",
         },
         {
@@ -229,9 +229,9 @@ export default function WebsiteCostGuide() {
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-stone-200 text-stone-700">
-                                <tr><td className="p-4 font-semibold">Starter</td><td className="p-4">$1,500</td><td className="p-4">$450</td><td className="p-4">$1,050</td><td className="p-4">15 business days</td></tr>
-                                <tr><td className="p-4 font-semibold">Growth</td><td className="p-4">$3,500</td><td className="p-4">$1,050</td><td className="p-4">$2,450</td><td className="p-4">30 business days</td></tr>
-                                <tr><td className="p-4 font-semibold">Scale</td><td className="p-4">From $5,000</td><td className="p-4">From $1,500</td><td className="p-4">From $3,500</td><td className="p-4">30 business days</td></tr>
+                                <tr><td className="p-4 font-semibold">Starter</td><td className="p-4">$1,500</td><td className="p-4">$450</td><td className="p-4">$1,050</td><td className="p-4">15 calendar days</td></tr>
+                                <tr><td className="p-4 font-semibold">Growth</td><td className="p-4">$3,500</td><td className="p-4">$1,050</td><td className="p-4">$2,450</td><td className="p-4">30 calendar days</td></tr>
+                                <tr><td className="p-4 font-semibold">Scale</td><td className="p-4">From $5,000</td><td className="p-4">From $1,500</td><td className="p-4">From $3,500</td><td className="p-4">30 calendar days</td></tr>
                             </tbody>
                         </table>
                     </div>

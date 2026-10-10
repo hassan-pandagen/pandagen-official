@@ -75,10 +75,19 @@ export default function PaperShader({ className }: { className?: string }) {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    // The CSS paper treatment preserves the hero on touch devices without
+    // compiling a decorative WebGL shader during mobile hydration.
+    if (!window.matchMedia("(min-width: 768px) and (pointer: fine)").matches) return;
     const canvas = ref.current;
     if (!canvas) return;
     const gl = canvas.getContext("webgl", { antialias: false, premultipliedAlpha: false, powerPreference: "low-power" });
     if (!gl) return;
+    // Software rendering makes this decorative shader compete with hydration
+    // and input handling. Keep the CSS treatment when acceleration is absent.
+    const rendererInfo = gl.getExtension("WEBGL_debug_renderer_info");
+    if (rendererInfo && /swiftshader|llvmpipe|software|microsoft basic render/i.test(
+      String(gl.getParameter(rendererInfo.UNMASKED_RENDERER_WEBGL)),
+    )) return;
 
     const compile = (type: number, src: string) => {
       const s = gl.createShader(type)!;

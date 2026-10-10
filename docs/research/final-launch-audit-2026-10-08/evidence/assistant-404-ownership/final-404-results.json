@@ -1,0 +1,350 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services/squarespace",
+    "status": 200,
+    "title": "Squarespace Website Migration | PandaCodeGen",
+    "h1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "mainCount": 1,
+    "nav": true,
+    "footer": true,
+    "robots": [
+      {
+        "name": "robots",
+        "content": "index, follow"
+      },
+      {
+        "name": "googlebot",
+        "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      }
+    ],
+    "outside": [],
+    "headingOverflow": [],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/audit-missing-page-2026-10-09",
+    "status": 404,
+    "title": "404: Page Not Found | PandaCodeGen",
+    "h1": [
+      "That pageisn't here."
+    ],
+    "mainCount": 1,
+    "nav": true,
+    "footer": true,
+    "robots": [
+      {
+        "name": "robots",
+        "content": "noindex"
+      },
+      {
+        "name": "robots",
+        "content": "noindex, follow"
+      },
+      {
+        "name": "googlebot",
+        "content": "noindex, follow"
+      }
+    ],
+    "outside": [],
+    "headingOverflow": [],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services/squarespace",
+    "status": 200,
+    "title": "Squarespace Website Migration | PandaCodeGen",
+    "h1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "mainCount": 1,
+    "nav": true,
+    "footer": true,
+    "robots": [
+      {
+        "name": "robots",
+        "content": "index, follow"
+      },
+      {
+        "name": "googlebot",
+        "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      }
+    ],
+    "outside": [],
+    "headingOverflow": [],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/audit-missing-page-2026-10-09",
+    "status": 404,
+    "title": "404: Page Not Found | PandaCodeGen",
+    "h1": [
+      "That pageisn't here."
+    ],
+    "mainCount": 1,
+    "nav": true,
+    "footer": true,
+    "robots": [
+      {
+        "name": "robots",
+        "content": "noindex"
+      },
+      {
+        "name": "robots",
+        "content": "noindex, follow"
+      },
+      {
+        "name": "googlebot",
+        "content": "noindex, follow"
+      }
+    ],
+    "outside": [],
+    "headingOverflow": [],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services/squarespace",
+    "status": 200,
+    "title": "Squarespace Website Migration | PandaCodeGen",
+    "h1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "mainCount": 1,
+    "nav": true,
+    "footer": true,
+    "robots": [
+      {
+        "name": "robots",
+        "content": "index, follow"
+      },
+      {
+        "name": "googlebot",
+        "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      }
+    ],
+    "outside": [],
+    "headingOverflow": [],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/audit-missing-page-2026-10-09",
+    "status": 404,
+    "title": "404: Page Not Found | PandaCodeGen",
+    "h1": [
+      "That pageisn't here."
+    ],
+    "mainCount": 1,
+    "nav": true,
+    "footer": true,
+    "robots": [
+      {
+        "name": "robots",
+        "content": "noindex"
+      },
+      {
+        "name": "robots",
+        "content": "noindex, follow"
+      },
+      {
+        "name": "googlebot",
+        "content": "noindex, follow"
+      }
+    ],
+    "outside": [],
+    "headingOverflow": [],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "route": "/services/squarespace",
+    "status": 200,
+    "title": "Squarespace Website Migration | PandaCodeGen",
+    "h1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "mainCount": 1,
+    "nav": true,
+    "footer": true,
+    "robots": [
+      {
+        "name": "robots",
+        "content": "index, follow"
+      },
+      {
+        "name": "googlebot",
+        "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      }
+    ],
+    "outside": [],
+    "headingOverflow": [],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "route": "/audit-missing-page-2026-10-09",
+    "status": 404,
+    "title": "404: Page Not Found | PandaCodeGen",
+    "h1": [
+      "That pageisn't here."
+    ],
+    "mainCount": 1,
+    "nav": true,
+    "footer": true,
+    "robots": [
+      {
+        "name": "robots",
+        "content": "noindex"
+      },
+      {
+        "name": "robots",
+        "content": "noindex, follow"
+      },
+      {
+        "name": "googlebot",
+        "content": "noindex, follow"
+      }
+    ],
+    "outside": [],
+    "headingOverflow": [],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services/squarespace",
+    "status": 200,
+    "title": "Squarespace Website Migration | PandaCodeGen",
+    "h1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "mainCount": 1,
+    "nav": true,
+    "footer": true,
+    "robots": [
+      {
+        "name": "robots",
+        "content": "index, follow"
+      },
+      {
+        "name": "googlebot",
+        "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      }
+    ],
+    "outside": [],
+    "headingOverflow": [],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/audit-missing-page-2026-10-09",
+    "status": 404,
+    "title": "404: Page Not Found | PandaCodeGen",
+    "h1": [
+      "That pageisn't here."
+    ],
+    "mainCount": 1,
+    "nav": true,
+    "footer": true,
+    "robots": [
+      {
+        "name": "robots",
+        "content": "noindex"
+      },
+      {
+        "name": "robots",
+        "content": "noindex, follow"
+      },
+      {
+        "name": "googlebot",
+        "content": "noindex, follow"
+      }
+    ],
+    "outside": [],
+    "headingOverflow": [],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services/squarespace",
+    "status": 200,
+    "title": "Squarespace Website Migration | PandaCodeGen",
+    "h1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "mainCount": 1,
+    "nav": true,
+    "footer": true,
+    "robots": [
+      {
+        "name": "robots",
+        "content": "index, follow"
+      },
+      {
+        "name": "googlebot",
+        "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      }
+    ],
+    "outside": [],
+    "headingOverflow": [],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/audit-missing-page-2026-10-09",
+    "status": 404,
+    "title": "404: Page Not Found | PandaCodeGen",
+    "h1": [
+      "That pageisn't here."
+    ],
+    "mainCount": 1,
+    "nav": true,
+    "footer": true,
+    "robots": [
+      {
+        "name": "robots",
+        "content": "noindex"
+      },
+      {
+        "name": "robots",
+        "content": "noindex, follow"
+      },
+      {
+        "name": "googlebot",
+        "content": "noindex, follow"
+      }
+    ],
+    "outside": [],
+    "headingOverflow": [],
+    "errors": [],
+    "violations": []
+  }
+]

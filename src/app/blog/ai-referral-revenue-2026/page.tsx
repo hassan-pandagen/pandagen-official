@@ -28,7 +28,7 @@ const canonicalUrl = "https://www.pandacodegen.com/blog/ai-referral-revenue-2026
 const title = `ChatGPT Out-Earned Our Google Ads by ${chatgptVsGoogleAds}x: Six Months of AI Referral Revenue`;
 const description =
     `First-party data from a founder-affiliated store. ${totalOrders} orders, ${usd(totalRevenue)}, ` +
-    `and what ChatGPT, Claude, Perplexity, Gemini and Google AI Overview each actually produced.`;
+    `with recorded revenue attributed to ChatGPT, Claude, Perplexity, Gemini and Google AI Overview.`;
 
 export const dynamic = "force-static";
 
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title, description, type: "article",
-        publishedTime: "2026-08-18", modifiedTime: "2026-10-08",
+        publishedTime: "2026-08-18", modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"], url: canonicalUrl,
         images: [ogImageForPath("/blog/ai-referral-revenue-2026")],
     },
@@ -64,7 +64,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/ai-referral-revenue-2026"),
             datePublished: "2026-08-18T00:00:00-05:00",
-            dateModified: "2026-10-08T00:00:00-05:00",
+            dateModified: "2026-10-09T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -161,7 +161,7 @@ export default function AiReferralRevenuePage() {
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="ai-referral-revenue-2026" published="2026-08-18" readTime="11 min" />
 
-                    <BlogHeader>Why almost nobody else can publish this</BlogHeader>
+                    <BlogHeader>How we recorded AI discovery</BlogHeader>
                     <BlogText>
                         <BlogHighlight>Referrer-only attribution can miss AI-assisted discovery.</BlogHighlight>{" "}
                         Referrers and campaign parameters vary by link and client. A later direct visit or brand search
@@ -169,20 +169,20 @@ export default function AiReferralRevenuePage() {
                         elsewhere, so missing attribution alone does not prove a large hidden AI audience.
                     </BlogText>
                     <BlogText>
-                        So a business measuring referrer alone sees a rounding error and concludes AI sends no
-                        customers. {provenance.business} captures the referrer where it survives and asks the customer
-                        where it does not. Both answers feed one source field. That is the only reason these numbers
-                        are not zero, and it is the single most transferable thing in this article.
+                        {provenance.business} records surviving referrer signals and customers&apos; answers to
+                        &ldquo;How did you find us?&rdquo; in its quote and CRM workflow. Those inputs feed the
+                        recorded source value used for these orders. A customer-declared discovery source is useful
+                        evidence, but it is not the same as a captured referral click.
                     </BlogText>
-                    <InsightBox label="The uncomfortable implication">
-                        If your analytics says AI sends you nothing, that is a claim about your instrument. Before
-                        concluding AI is not worth attention, add one question to your enquiry form asking how the
-                        customer heard about you, and wait ninety days. It costs nothing and it is the only way to see
-                        traffic that arrives without a referrer.
+                    <InsightBox label="A practical tracking step">
+                        Add a discovery question to your enquiry form and keep the answer alongside any captured
+                        referrer or campaign signal. Review the records over a stated period. Missing referral data
+                        alone does not show whether a customer first encountered the business in an AI answer.
                     </InsightBox>
 
                     <BlogQuote>
-                        Most businesses are not seeing less AI traffic than we are. They are measuring it worse.
+                        These figures describe recorded discovery sources for one store, not how much AI traffic
+                        other businesses receive.
                     </BlogQuote>
 
                     <BlogHeader>Revenue by source, {window_.label}</BlogHeader>
@@ -279,19 +279,19 @@ export default function AiReferralRevenuePage() {
                         short-form video category over six months.
                     </BlogText>
 
-                    <BlogHeader>Google&apos;s own instrument agrees</BlogHeader>
+                    <BlogHeader>Separate Google AI visibility evidence</BlogHeader>
                     <BlogText>
-                        <BlogHighlight>A second, unrelated measurement points the same way.</BlogHighlight>{" "}
+                        <BlogHighlight>Google reports visibility, not the source of these orders.</BlogHighlight>{" "}
                         {corroboration.instrument} for the same property recorded{" "}
                         {Number(corroboration.totalImpressions).toLocaleString("en-US")} impressions over{" "}
                         {corroboration.window}, rising from roughly {corroboration.dailyLow} a day in mid-May to{" "}
                         {corroboration.dailyHigh} on {corroboration.dailyHighDate}.
                     </BlogText>
                     <BlogText>
-                        That matters more than either number alone. The store&apos;s own attribution could be flattering
-                        itself, and Google&apos;s report knows nothing about the store&apos;s orders. Two instruments
-                        with no connection to each other showing the same direction is the difference between a claim
-                        and evidence. {corroboration.limitation}
+                        The store&apos;s referrer and customer-declared records describe attributed orders and revenue.
+                        Google&apos;s report describes appearances in its own AI search features. These are separate
+                        measurements: the impressions do not verify ChatGPT order attribution, the revenue ratio or
+                        the effect of any particular website change. {corroboration.limitation}
                     </BlogText>
 
                     <BlogHeader>What a customer actually typed</BlogHeader>
@@ -329,11 +329,11 @@ export default function AiReferralRevenuePage() {
                         than either finding alone, and it is the reason the AOV column is on this page at all.
                     </BlogText>
                     <BlogText>
-                        <BlogHighlight>What is not in that study, or any other we could find, is revenue by individual assistant.</BlogHighlight>{" "}
-                        Published work reports ChatGPT against organic search. It does not separate Claude from
-                        Perplexity from Google AI Overview, because almost nobody can. That separation is the part of
-                        this dataset with no equivalent elsewhere, and it is only possible because the source question
-                        is asked at the point of enquiry rather than inferred from a referrer header.
+                        <BlogHighlight>This dataset records revenue by individual assistant.</BlogHighlight>{" "}
+                        The cited study compares ChatGPT with organic search. Our store&apos;s records also separate
+                        Claude, Perplexity and Google AI Overview where a referral signal or customer-declared
+                        discovery identifies them. That provides detail for this business; the classification depends
+                        on the information recorded, and it does not establish that equivalent datasets exist nowhere else.
                     </BlogText>
 
                     <BlogHeader>What this does not establish</BlogHeader>

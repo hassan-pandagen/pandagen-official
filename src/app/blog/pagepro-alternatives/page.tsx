@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-02",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/pagepro-alternatives")],
@@ -70,7 +70,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-02",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -114,7 +114,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-02",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
@@ -385,7 +385,7 @@ export default function PageproAlternativesPage() {
                     <BlogList
                         items={[
                             "30% onboarding payment and 70% at delivery under the accepted agreement.",
-                            "15 business days of support for Starter and 30 for Growth or Scale, with scope defined in the terms.",
+                            "15 calendar days of support for Starter and 30 for Growth or Scale, with scope defined in the terms.",
                             <>{"A 90-plus "}<Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link>{" target only when representative pages, mobile and desktop profiles, three passing runs and remedy are written into the accepted terms."}</>,
                             "The client controls its domain, hosting, repository and business accounts under the agreed account model.",
                             "Project deliverables, pre-existing tools and third-party licenses follow the signed ownership and licensing terms.",

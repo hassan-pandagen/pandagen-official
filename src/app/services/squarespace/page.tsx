@@ -10,8 +10,8 @@ import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 
 const path = "/services/squarespace";
-const name = "Squarespace Website Migration";
-const description = "Improve your Squarespace site or migrate to a custom site with a Sanity editor your team can use. Plan content, commerce, scheduling and redirects.";
+const name = "Squarespace Website Design, Redesign & Migration";
+const description = "Build or redesign your Squarespace website, or move to a custom site with a Sanity editor. Scope content, mobile layouts, forms, scheduling and redirects.";
 
 export const metadata: Metadata = {
   title: name,

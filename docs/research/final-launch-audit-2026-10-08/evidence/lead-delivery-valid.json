@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-08T16:55:51.673Z",
+  "status": 200,
+  "body": {
+    "success": true,
+    "message": "Quote request sent successfully"
+  },
+  "scope": "One labelled real enquiry to the configured agency recipient; API acceptance does not prove mailbox delivery."
+}

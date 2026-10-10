@@ -1,3 +1,4 @@
+import { serviceBuyerQuestions } from "@/data/service-buyer-questions";
 import { COMMERCIAL } from "@/data/company-facts";
 
 function startingPrice(label: string) {
@@ -11,6 +12,7 @@ function startingPrice(label: string) {
  */
 export function migrationFaqs(): { q: string; a: string }[] {
   return [
+    ...serviceBuyerQuestions("wordpress-migration"),
     { q: "Will every old address keep working?", a: "The inventory identifies addresses in scope. We preserve them where possible and map changed addresses to relevant destinations. Redirects reduce avoidable loss; search engines still control indexing and rankings." },
     { q: "Should we repair WordPress or migrate?", a: "We review what is making the current site hard to run. If a focused fix meets your needs, we can scope that work. If publishing, checkout or connected tools need a different structure, we plan a migration. You see the recommendation and cost before deciding." },
     { q: "What if I just need a simple WordPress site?", a: "That may be the right fit. Tell us which pages and editing tools you need. We can discuss a straightforward WordPress setup and scope it if it meets your needs. We explain the cost and tradeoffs of another build only when it is relevant." },

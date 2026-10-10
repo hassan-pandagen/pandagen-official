@@ -8,6 +8,7 @@
  * 27 Sep 2026: testing start date added for A Step Above Medical.
  * 4 Oct 2026: Hassan confirmed the scope has grown to a website plus a CRM, both about
  * 80% complete. The 1 Oct testing date is replaced by that progress note.
+ * 10 Oct 2026: Hassan confirmed the build is complete and in testing.
  */
 export const MIGRATION_PROJECT_DETAILS = {
   pandaPatches: {
@@ -23,10 +24,11 @@ export const MIGRATION_PROJECT_DETAILS = {
   },
   aStepAboveMedical: {
     name: "A Step Above Medical",
-    status: "In progress",
-    summary: "A WordPress website being rebuilt with Next.js and Sanity, together with a CRM for the practice. The scope has grown since the project began; launch is pending.",
-    progress: "Website and CRM about 80% complete",
-    confirmedOn: "2026-10-04",
+    status: "In testing",
+    summary: "A complete medical training management system: a public course website, a content editor and a separate team portal for classes, students, payments and certificates. The website was rebuilt from WordPress with Next.js and Sanity; the portal uses Supabase. The build is complete and undergoing pre-launch testing.",
+    progress: "Website and operations portal built; pre-launch testing underway",
+    disclosure: "Independent client project. The build is complete and in pre-launch testing. Screenshots show the new website and portal before launch; no live-site performance or business results are claimed.",
+    confirmedOn: "2026-10-10",
   },
 } as const;
 

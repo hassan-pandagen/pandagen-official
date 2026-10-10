@@ -1,0 +1,103 @@
+{
+  "pass": true,
+  "cases": 12,
+  "apiIntercepted": true,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/blog/divi-theme-slow",
+      "name": "WordPress website development and repairs",
+      "target": "/services/wordpress",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/blog/elementor-kills-seo",
+      "name": "WordPress website development and repairs",
+      "target": "/services/wordpress",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "source": "/blog/how-to-fix-slow-wordpress",
+      "name": "WordPress website development and repairs",
+      "target": "/services/wordpress",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/blog/divi-theme-slow",
+      "name": "WordPress website development and repairs",
+      "target": "/services/wordpress",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/blog/elementor-kills-seo",
+      "name": "WordPress website development and repairs",
+      "target": "/services/wordpress",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "source": "/blog/how-to-fix-slow-wordpress",
+      "name": "WordPress website development and repairs",
+      "target": "/services/wordpress",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/blog/divi-theme-slow",
+      "name": "WordPress website development and repairs",
+      "target": "/services/wordpress",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/blog/elementor-kills-seo",
+      "name": "WordPress website development and repairs",
+      "target": "/services/wordpress",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "source": "/blog/how-to-fix-slow-wordpress",
+      "name": "WordPress website development and repairs",
+      "target": "/services/wordpress",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/blog/divi-theme-slow",
+      "name": "WordPress website development and repairs",
+      "target": "/services/wordpress",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/blog/elementor-kills-seo",
+      "name": "WordPress website development and repairs",
+      "target": "/services/wordpress",
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "source": "/blog/how-to-fix-slow-wordpress",
+      "name": "WordPress website development and repairs",
+      "target": "/services/wordpress",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-09",
+  "currentCorePages": 25,
+  "currentServicePages": 12,
+  "currentArticleOpeningsScanned": 92,
+  "historicalArticleRoutes": 88,
+  "matchedArticleRoutes": 85,
+  "currentRoutesAbsentFromBaseline": 7,
+  "historicalRoutesAbsentFromCurrentArticleInventory": 3,
+  "staticallyResolvedMatchedTitles": 77,
+  "changedResolvedTitles": 6,
+  "consequentialClaimGroups": 12,
+  "assessableClaimGroups": 10,
+  "unverifiedClaimGroups": [
+    "current contribution total",
+    "universal line-by-line authorship"
+  ],
+  "mustResolve": [
+    "withdrawn MyCustomPatches count on homepage",
+    "hosting and account wording",
+    "monthly AI SEO build-specific handover terms",
+    "exclusive security headline"
+  ],
+  "websiteCopyChanged": false,
+  "committed": false,
+  "pushed": false,
+  "deployed": false
+}

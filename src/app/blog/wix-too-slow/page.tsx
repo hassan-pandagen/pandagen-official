@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-10",
-        modifiedTime: "2026-10-08T00:00:00-05:00",
+        modifiedTime: "2026-10-09T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wix-too-slow")],
@@ -66,7 +66,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wix-too-slow"),
             description,
             datePublished: "2026-04-10",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -414,7 +414,7 @@ export default function WixTooSlowPage() {
                         We start with a <Link href="/free-audit" className="text-cognac hover:underline">free fit audit</Link> (share your website URL and email) and recommend repair before migration when repair satisfies the
                         requirements. PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and Scale
                         from $5,000. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund
-                        is tied to failure to deliver the signed scope. Where the accepted terms include it, Starter carries 15 business days of launch defect support and Growth and Scale carry 30. The full terms sit on our{" "}
+                        is tied to failure to deliver the signed scope. Where the accepted terms include it, Starter carries 15 calendar days of launch defect support and Growth and Scale carry 30. The full terms sit on our{" "}
                         <Link href="/pricing" className={inlineLinkClass}>pricing page</Link>, and{" "}
                         <Link href="/work" className={inlineLinkClass}>our project work</Link>{" "}
                         shows what those tiers produce.

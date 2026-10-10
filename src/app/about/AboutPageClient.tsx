@@ -1,6 +1,6 @@
 "use client";
 
-import { FOUNDING_DATE } from "@/data/company-facts";
+import { FOUNDING_DATE, POST_LAUNCH_SUPPORT } from "@/data/company-facts";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
@@ -293,9 +293,7 @@ export default function AboutPageClient() {
             <article className="rounded-3xl border border-stone-300 bg-white p-7">
               <h3 className="text-xl font-bold">Support after launch</h3>
               <p className="mt-3 leading-7 text-stone-700">
-                Discussions typically start at 15 business days for Starter and 30 for Growth and Scale. What it covers,
-                when it starts, and what counts as a defect versus a new request are written down, so nobody argues about
-                it later.
+                {POST_LAUNCH_SUPPORT}
               </p>
             </article>
             <article className="rounded-3xl border border-stone-300 bg-white p-7">

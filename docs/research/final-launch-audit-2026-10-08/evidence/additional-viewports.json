@@ -1,0 +1,1355 @@
+[
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14958,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/services",
+    "status": 200,
+    "title": "Website Design, Redesign and Development Services | PandaCodeGen",
+    "h1": [
+      "Website design. Development, too."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2348,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/pricing",
+    "status": 200,
+    "title": "Website & Online Store Pricing | PandaCodeGen",
+    "h1": [
+      "A better site. A clear price."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8244,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/contact",
+    "status": 200,
+    "title": "Talk to the founders | PandaCodeGen",
+    "h1": [
+      "Talk directly to the founders."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 1518,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/free-audit",
+    "status": 200,
+    "title": "Free Website Audit: SEO, Speed & Expert Review | PandaCodeGen",
+    "h1": [
+      "Free website audit. Know what to fix next."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2436,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/services/sanity-development",
+    "status": 200,
+    "title": "Sanity CMS & Next.js Website Development | PandaCodeGen",
+    "h1": [
+      "Sanity CMS websites. An editor for your team."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7159,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/services/backend-development",
+    "status": 200,
+    "title": "Backend Development: Supabase, Postgres & APIs | PandaCodeGen",
+    "h1": [
+      "Backends. Built around your workflow."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7373,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/services/wordpress",
+    "status": 200,
+    "title": "WordPress Website Design & Development | PandaCodeGen",
+    "h1": [
+      "A WordPress site. Made for your business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12939,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/services/wordpress-migration",
+    "status": 200,
+    "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "h1": [
+      "Move from WordPress to Next.js. Keep what works."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [
+      "You receive the project code and design files we create for you, plus documentation and control of the production accounts. If you then take a monthly support or care plan, that doesn't change: we keep sharing the code, documentation and accounts with you, so you always have your own copy. Third-party themes, plugins, services and assets remain under their own licence terms."
+    ],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 15169,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/services/ecommerce",
+    "status": 200,
+    "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "h1": [
+      "Ecommerce stores. Built around the order."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14356,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/services/ai-seo",
+    "status": 200,
+    "title": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "h1": [
+      "AI SEO. Answers people can find."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8619,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/services/custom-engineering",
+    "status": 200,
+    "title": "Custom Web Development Agency | PandaCodeGen",
+    "h1": [
+      "Custom software. Built around the work."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8834,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12595,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/services/wix",
+    "status": 200,
+    "title": "Wix Website Migration | PandaCodeGen",
+    "h1": [
+      "Wix websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11917,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/services/squarespace",
+    "status": 200,
+    "title": "Squarespace Website Migration | PandaCodeGen",
+    "h1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11738,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/services/webflow",
+    "status": 200,
+    "title": "Webflow Optimization & Migration Services | PandaCodeGen",
+    "h1": [
+      "Webflow websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12326,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/services/gohighlevel",
+    "status": 200,
+    "title": "GoHighLevel Website Speed & Custom Builds | PandaCodeGen",
+    "h1": [
+      "GoHighLevel websites. Speed, builds and CRM."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12298,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "BUTTON",
+        "text": "05 / Saforne\n↗",
+        "class": "WorkReel-module__toVHgq__frame "
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2019,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/ai-info",
+    "status": 200,
+    "title": "PandaCodeGen Company Reference | People, Services & Projects",
+    "h1": [
+      "PandaCodeGen, in plain terms."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 10974,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/blog",
+    "status": 200,
+    "title": "Web Development, Ecommerce & SEO Guides | PandaCodeGen",
+    "h1": [
+      "Good questions. Worth a read."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 26494,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/blog/website-portability",
+    "status": 200,
+    "title": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "h1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 45429,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14958,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/services",
+    "status": 200,
+    "title": "Website Design, Redesign and Development Services | PandaCodeGen",
+    "h1": [
+      "Website design. Development, too."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2348,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/pricing",
+    "status": 200,
+    "title": "Website & Online Store Pricing | PandaCodeGen",
+    "h1": [
+      "A better site. A clear price."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8244,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/contact",
+    "status": 200,
+    "title": "Talk to the founders | PandaCodeGen",
+    "h1": [
+      "Talk directly to the founders."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 1499,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/free-audit",
+    "status": 200,
+    "title": "Free Website Audit: SEO, Speed & Expert Review | PandaCodeGen",
+    "h1": [
+      "Free website audit. Know what to fix next."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2436,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/services/sanity-development",
+    "status": 200,
+    "title": "Sanity CMS & Next.js Website Development | PandaCodeGen",
+    "h1": [
+      "Sanity CMS websites. An editor for your team."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7159,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/services/backend-development",
+    "status": 200,
+    "title": "Backend Development: Supabase, Postgres & APIs | PandaCodeGen",
+    "h1": [
+      "Backends. Built around your workflow."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7373,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/services/wordpress",
+    "status": 200,
+    "title": "WordPress Website Design & Development | PandaCodeGen",
+    "h1": [
+      "A WordPress site. Made for your business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12939,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/services/wordpress-migration",
+    "status": 200,
+    "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "h1": [
+      "Move from WordPress to Next.js. Keep what works."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [
+      "You receive the project code and design files we create for you, plus documentation and control of the production accounts. If you then take a monthly support or care plan, that doesn't change: we keep sharing the code, documentation and accounts with you, so you always have your own copy. Third-party themes, plugins, services and assets remain under their own licence terms."
+    ],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 15169,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/services/ecommerce",
+    "status": 200,
+    "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "h1": [
+      "Ecommerce stores. Built around the order."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14356,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/services/ai-seo",
+    "status": 200,
+    "title": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "h1": [
+      "AI SEO. Answers people can find."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8619,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/services/custom-engineering",
+    "status": 200,
+    "title": "Custom Web Development Agency | PandaCodeGen",
+    "h1": [
+      "Custom software. Built around the work."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8834,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12595,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/services/wix",
+    "status": 200,
+    "title": "Wix Website Migration | PandaCodeGen",
+    "h1": [
+      "Wix websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11917,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/services/squarespace",
+    "status": 200,
+    "title": "Squarespace Website Migration | PandaCodeGen",
+    "h1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11738,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/services/webflow",
+    "status": 200,
+    "title": "Webflow Optimization & Migration Services | PandaCodeGen",
+    "h1": [
+      "Webflow websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12326,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/services/gohighlevel",
+    "status": 200,
+    "title": "GoHighLevel Website Speed & Custom Builds | PandaCodeGen",
+    "h1": [
+      "GoHighLevel websites. Speed, builds and CRM."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12298,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2019,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/ai-info",
+    "status": 200,
+    "title": "PandaCodeGen Company Reference | People, Services & Projects",
+    "h1": [
+      "PandaCodeGen, in plain terms."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 10974,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/blog",
+    "status": 200,
+    "title": "Web Development, Ecommerce & SEO Guides | PandaCodeGen",
+    "h1": [
+      "Good questions. Worth a read."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 26494,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/blog/website-portability",
+    "status": 200,
+    "title": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "h1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 45429,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14958,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/services",
+    "status": 200,
+    "title": "Website Design, Redesign and Development Services | PandaCodeGen",
+    "h1": [
+      "Website design. Development, too."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2348,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/pricing",
+    "status": 200,
+    "title": "Website & Online Store Pricing | PandaCodeGen",
+    "h1": [
+      "A better site. A clear price."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8244,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/contact",
+    "status": 200,
+    "title": "Talk to the founders | PandaCodeGen",
+    "h1": [
+      "Talk directly to the founders."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "class": ""
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 1499,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/free-audit",
+    "status": 200,
+    "title": "Free Website Audit: SEO, Speed & Expert Review | PandaCodeGen",
+    "h1": [
+      "Free website audit. Know what to fix next."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2436,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/services/sanity-development",
+    "status": 200,
+    "title": "Sanity CMS & Next.js Website Development | PandaCodeGen",
+    "h1": [
+      "Sanity CMS websites. An editor for your team."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7159,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/services/backend-development",
+    "status": 200,
+    "title": "Backend Development: Supabase, Postgres & APIs | PandaCodeGen",
+    "h1": [
+      "Backends. Built around your workflow."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 7373,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/services/wordpress",
+    "status": 200,
+    "title": "WordPress Website Design & Development | PandaCodeGen",
+    "h1": [
+      "A WordPress site. Made for your business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12939,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/services/wordpress-migration",
+    "status": 200,
+    "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "h1": [
+      "Move from WordPress to Next.js. Keep what works."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [
+      "You receive the project code and design files we create for you, plus documentation and control of the production accounts. If you then take a monthly support or care plan, that doesn't change: we keep sharing the code, documentation and accounts with you, so you always have your own copy. Third-party themes, plugins, services and assets remain under their own licence terms."
+    ],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 15169,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/services/ecommerce",
+    "status": 200,
+    "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "h1": [
+      "Ecommerce stores. Built around the order."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14356,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/services/ai-seo",
+    "status": 200,
+    "title": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "h1": [
+      "AI SEO. Answers people can find."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8619,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/services/custom-engineering",
+    "status": 200,
+    "title": "Custom Web Development Agency | PandaCodeGen",
+    "h1": [
+      "Custom software. Built around the work."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 8834,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12595,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/services/wix",
+    "status": 200,
+    "title": "Wix Website Migration | PandaCodeGen",
+    "h1": [
+      "Wix websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11917,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/services/squarespace",
+    "status": 200,
+    "title": "Squarespace Website Migration | PandaCodeGen",
+    "h1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 11738,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/services/webflow",
+    "status": 200,
+    "title": "Webflow Optimization & Migration Services | PandaCodeGen",
+    "h1": [
+      "Webflow websites. Improve or migrate."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12326,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/services/gohighlevel",
+    "status": 200,
+    "title": "GoHighLevel Website Speed & Custom Builds | PandaCodeGen",
+    "h1": [
+      "GoHighLevel websites. Speed, builds and CRM."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12298,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2019,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/ai-info",
+    "status": 200,
+    "title": "PandaCodeGen Company Reference | People, Services & Projects",
+    "h1": [
+      "PandaCodeGen, in plain terms."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 10974,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/blog",
+    "status": 200,
+    "title": "Web Development, Ecommerce & SEO Guides | PandaCodeGen",
+    "h1": [
+      "Good questions. Worth a read."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 26494,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/blog/website-portability",
+    "status": 200,
+    "title": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "h1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 45429,
+    "errors": []
+  }
+]

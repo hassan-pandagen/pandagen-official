@@ -1,5 +1,6 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
+import { serviceOwnershipAnswers } from "@/data/service-ownership-answers";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
 import { WordPressMigrationPreview, migrationFaqs } from "@/components/pages/services/wordpress-migration/MigrationDesign";
 // 30 Sep 2026: renders the redesign (built under /preview/services). Metadata
@@ -18,5 +19,5 @@ export const metadata: Metadata = {
 };
 
 export default function MigrationPage() {
-  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="WordPress migration" faqs={migrationFaqs()} /><WordPressMigrationPreview /></>;
+  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="WordPress migration" faqs={[...migrationFaqs(), ...serviceOwnershipAnswers("wordpress-migration")]} /><WordPressMigrationPreview /></>;
 }

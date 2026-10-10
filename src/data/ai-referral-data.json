@@ -3,7 +3,7 @@
     "business": "Panda Patches",
     "relationship": "Founder-affiliated. Owned and operated by a PandaCodeGen co-founder.",
     "system": "Custom operations platform built on Next.js, Sanity, Supabase and Square",
-    "method": "Referrer captured where it survives; self-reported source collected at quote request where it does not. Both fields feed one source value.",
+    "method": "Referrer captured where it survives; customer-declared discovery collected through the How did you find us question in the quote and CRM workflow. Both inputs feed the recorded source value. Customer-declared discovery is distinct from a captured referral click.",
     "limitation": "One business, one vertical (custom embroidered and printed patches), one window. These are not industry benchmarks and no claim is made that they generalise."
   },
   "orderWindow": {
@@ -189,8 +189,8 @@
     "dailyHighDate": "2026-08-12",
     "topPageImpressions": 7613,
     "verifiedAt": "2026-08-18",
-    "note": "Independent of the platform's own attribution. Two unrelated instruments pointing the same way is the reason this is offered as evidence rather than as a claim.",
-    "limitation": "Impressions in Google's generative surfaces, not clicks and not revenue. It corroborates direction, not the dollar figures."
+    "note": "A separate record of visibility in Google AI search features. It is not independent validation of the store's order-source attribution or revenue comparison.",
+    "limitation": "Impressions in Google's generative surfaces, not clicks, orders or revenue. They do not verify which assistant a customer used or the revenue attributed to it."
   },
   "outlierDisclosure": {
     "source": "Other",

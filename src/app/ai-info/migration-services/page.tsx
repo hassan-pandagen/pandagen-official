@@ -32,7 +32,7 @@ const schema = {
       description,
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       about: { "@id": "https://www.pandacodegen.com/#organization" },
-      dateModified: "2026-10-02",
+      dateModified: "2026-10-10",
       inLanguage: "en-US",
       breadcrumb: { "@id": canonicalUrl + "#breadcrumb" },
     },
@@ -68,7 +68,7 @@ export default function Page() {
             verified={FACTS_VERIFIED}
           />
           <OfferLine />
-          <FactTable facts={SERVICES} caption="PandaCodeGen services: primary offer, platforms migrated from, build stack and the definition of SEO-safe." />
+          <FactTable facts={SERVICES} caption="PandaCodeGen services, website search foundations, optional AI SEO/AEO/GEO scope, platforms and migration controls." />
 
           <h2 className="mt-10 mb-3 text-2xl font-bold text-charcoal">The three control groups in every migration</h2>
           <div className="my-6 grid gap-4 md:grid-cols-3">

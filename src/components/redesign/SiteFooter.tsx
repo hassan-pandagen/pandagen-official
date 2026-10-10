@@ -20,9 +20,9 @@ const services = [
   { href: "/services/wordpress", text: "WordPress Websites" },
   { href: "/services/wordpress-migration", text: "WordPress Migration" },
   { href: "/services/custom-engineering", text: "Custom software" },
-  { href: "/services/sanity-development", text: "Sanity CMS Development" },
+  { href: "/services/cms-development", text: "CMS Development" },
   { href: "/services/backend-development", text: "Backend Development" },
-  { href: "/services/ai-seo", text: "AI SEO" },
+  { href: "/services/ai-seo", text: "AI SEO & GEO" },
   { href: "/services/ecommerce", text: "E-Commerce" },
   { href: "/services/wix", text: "Wix Migration" },
   { href: "/services/squarespace", text: "Squarespace Migration" },
@@ -89,8 +89,8 @@ export default function SiteFooter({ compactTop = false, linksOnly = false }: { 
               className="cta-solid inline-flex items-center gap-3 bg-[#EBE9E4] px-7 py-4 text-[17px] font-medium text-[#1C1917]"
             >
               <span className="flex -space-x-2" aria-hidden="true">
-                <Image src="/team/hassan.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-[#1C1917]" />
-                <Image src="/team/imran-editorial.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-[#1C1917]" />
+                <Image src="/team/hassan.png" alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-full object-cover ring-2 ring-[#1C1917]" />
+                <Image src="/team/imran-editorial.png" alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-full object-cover ring-2 ring-[#1C1917]" />
               </span>
               Talk to the founders
             </QuoteModalButton>

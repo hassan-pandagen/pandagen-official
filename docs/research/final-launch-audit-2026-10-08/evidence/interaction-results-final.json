@@ -1,0 +1,1388 @@
+[
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "fresh consent and compact controls",
+    "passed": true,
+    "data": {
+      "before": [],
+      "compact": {
+        "x": 16,
+        "y": 784,
+        "width": 44,
+        "height": 44
+      }
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "site menu navigation and escape",
+    "passed": true,
+    "data": [
+      {
+        "width": 390,
+        "height": 844,
+        "left": 0,
+        "top": 0,
+        "overflow": false,
+        "font": null
+      }
+    ]
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "quote invalid, failure, success, reopen",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 366,
+          "height": 776.46875,
+          "left": 12,
+          "top": 33.75,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "attributionInPayload": true,
+      "websiteInPayload": true
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "contact form invalid and successful submit",
+    "passed": true,
+    "data": {
+      "reset": true
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "assistant panel, conversation persistence, escape and focus",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 374,
+          "height": 828,
+          "left": 8,
+          "top": 8,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "focusAfterClose": {
+        "tag": "BODY",
+        "label": null
+      },
+      "persisted": true
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "blog search and empty results",
+    "passed": true,
+    "data": {
+      "cards": 3
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "audit scan failure and fallback",
+    "passed": true,
+    "data": {
+      "fallback": "/contact#contact-quote-form"
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "fresh consent and compact controls",
+    "passed": true,
+    "data": {
+      "before": [],
+      "compact": {
+        "x": 16,
+        "y": 784,
+        "width": 44,
+        "height": 44
+      }
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "site menu navigation and escape",
+    "passed": true,
+    "data": [
+      {
+        "width": 1440,
+        "height": 844,
+        "left": 0,
+        "top": 0,
+        "overflow": false,
+        "font": null
+      }
+    ]
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "quote invalid, failure, success, reopen",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 576,
+          "height": 776.46875,
+          "left": 432,
+          "top": 33.765625,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "attributionInPayload": true,
+      "websiteInPayload": true
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "contact form invalid and successful submit",
+    "passed": true,
+    "data": {
+      "reset": true
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "assistant panel, conversation persistence, escape and focus",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 460,
+          "height": 680,
+          "left": 960,
+          "top": 144,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "focusAfterClose": {
+        "tag": "BODY",
+        "label": null
+      },
+      "persisted": true
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "blog search and empty results",
+    "passed": true,
+    "data": {
+      "cards": 3
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "audit scan failure and fallback",
+    "passed": true,
+    "data": {
+      "fallback": "/contact#contact-quote-form"
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "name": "fresh consent and compact controls",
+    "passed": true,
+    "data": {
+      "before": [],
+      "compact": {
+        "x": 16,
+        "y": 784,
+        "width": 44,
+        "height": 44
+      }
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "name": "site menu navigation and escape",
+    "passed": true,
+    "data": [
+      {
+        "width": 390,
+        "height": 844,
+        "left": 0,
+        "top": 0,
+        "overflow": false,
+        "font": null
+      }
+    ]
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "name": "quote invalid, failure, success, reopen",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 358,
+          "height": 776.46875,
+          "left": 12,
+          "top": 33.75,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "attributionInPayload": true,
+      "websiteInPayload": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "name": "contact form invalid and successful submit",
+    "passed": true,
+    "data": {
+      "reset": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "name": "assistant panel, conversation persistence, escape and focus",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 374,
+          "height": 828,
+          "left": 8,
+          "top": 8,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "focusAfterClose": {
+        "tag": "BODY",
+        "label": null
+      },
+      "persisted": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "name": "blog search and empty results",
+    "passed": true,
+    "data": {
+      "cards": 3
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "name": "audit scan failure and fallback",
+    "passed": true,
+    "data": {
+      "fallback": "/contact#contact-quote-form"
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "name": "fresh consent and compact controls",
+    "passed": true,
+    "data": {
+      "before": [],
+      "compact": {
+        "x": 16,
+        "y": 784,
+        "width": 44,
+        "height": 44
+      }
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "name": "site menu navigation and escape",
+    "passed": true,
+    "data": [
+      {
+        "width": 1440,
+        "height": 844,
+        "left": 0,
+        "top": 0,
+        "overflow": false,
+        "font": null
+      }
+    ]
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "name": "quote invalid, failure, success, reopen",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 576,
+          "height": 776.46875,
+          "left": 428,
+          "top": 33.765625,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "attributionInPayload": true,
+      "websiteInPayload": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "name": "contact form invalid and successful submit",
+    "passed": true,
+    "data": {
+      "reset": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "name": "assistant panel, conversation persistence, escape and focus",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 460,
+          "height": 680,
+          "left": 960,
+          "top": 144,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "focusAfterClose": {
+        "tag": "BODY",
+        "label": null
+      },
+      "persisted": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "name": "blog search and empty results",
+    "passed": true,
+    "data": {
+      "cards": 3
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "name": "audit scan failure and fallback",
+    "passed": true,
+    "data": {
+      "fallback": "/contact#contact-quote-form"
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /",
+    "passed": true,
+    "data": {
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".proof-face-back.proof-face[href$=\"emblematic-studio\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<a class=\"proof-face proof-face-back absolute inset-0 flex flex-col gap-4 p-4\" aria-label=\"Visit the Emblematic Studio website\" style=\"background-color:#EBE9E4;color:#1C1917\" href=\"/work/emblematic-studio\">"
+            },
+            {
+              "target": [
+                ".proof-face-back.proof-face[href$=\"mycustompatches\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<a class=\"proof-face proof-face-back absolute inset-0 flex flex-col gap-4 p-4\" aria-label=\"Visit the MyCustomPatches website\" style=\"background-color:#EBE9E4;color:#1C1917\" href=\"/work/mycustompatches\">"
+            },
+            {
+              "target": [
+                ".proof-face-back.proof-face[href$=\"ladies-4-jesus\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<a class=\"proof-face proof-face-back absolute inset-0 flex flex-col gap-4 p-4\" aria-label=\"Visit the Ladies 4 Jesus website\" style=\"background-color:#EBE9E4;color:#1C1917\" href=\"/work/ladies-4-jesus\">"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 23
+        }
+      ],
+      "passes": 32
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /services",
+    "passed": true,
+    "data": {
+      "violations": [
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                "figcaption > a[href$=\"emblematic-studio\"]"
+              ],
+              "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.39:1 with the surrounding text. (Minimum contrast is 3:1, link text: #7a2e0e, surrounding text: #5e5b55)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+              "html": "<a href=\"/work/emblematic-studio\">See the project ↗</a>"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 27
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /pricing",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /contact",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 32
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /free-audit",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 31
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /blog",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 30
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /blog/website-portability",
+    "passed": true,
+    "data": {
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                "tr:nth-child(3) > .portability-module__6dJlsq__none > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">Webflow</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(4) > .portability-module__6dJlsq__none:nth-child(3) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">Squarespace</span>"
+            },
+            {
+              "target": [
+                ".portability-module__6dJlsq__none:nth-child(5) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">Shopify</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(4) > .portability-module__6dJlsq__none:nth-child(6) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">WooCommerce</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(4) > .portability-module__6dJlsq__none:nth-child(7) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">GoHighLevel</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(4) > .portability-module__6dJlsq__none:nth-child(8) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">WordPress.com</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(5) > .portability-module__6dJlsq__none:nth-child(8) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">WordPress.com</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(5) > .portability-module__6dJlsq__none:nth-child(9) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">Self-hosted WordPress</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(6) > .portability-module__6dJlsq__none:nth-child(4) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">Webflow</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(6) > .portability-module__6dJlsq__none:nth-child(8) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">WordPress.com</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(6) > .portability-module__6dJlsq__none:nth-child(9) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">Self-hosted WordPress</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(7) > .portability-module__6dJlsq__none:nth-child(8) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">WordPress.com</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(7) > .portability-module__6dJlsq__none:nth-child(9) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">Self-hosted WordPress</span>"
+            },
+            {
+              "target": [
+                ".portability-module__6dJlsq__none:nth-child(2) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">Wix</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(9) > .portability-module__6dJlsq__none:nth-child(3) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">Squarespace</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(9) > .portability-module__6dJlsq__none:nth-child(4) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">Webflow</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(9) > .portability-module__6dJlsq__none:nth-child(7) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">GoHighLevel</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(9) > .portability-module__6dJlsq__none:nth-child(8) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">WordPress.com</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(9) > .portability-module__6dJlsq__none:nth-child(9) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">Self-hosted WordPress</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(10) > .portability-module__6dJlsq__none:nth-child(6) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">WooCommerce</span>"
+            },
+            {
+              "target": [
+                "tr:nth-child(10) > .portability-module__6dJlsq__none:nth-child(9) > .portability-module__6dJlsq__mobileLabel[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #807b76, background color: #f5f4f0, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span class=\"portability-module__6dJlsq__mobileLabel\" aria-hidden=\"true\">Self-hosted WordPress</span>"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 34
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /services/gohighlevel",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 33
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /services/squarespace",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 33
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /services/woocommerce",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 33
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /services/sanity-development",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /services/backend-development",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /ai-info",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /work",
+    "passed": true,
+    "data": {
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                "button[aria-label=\"Show NorthDeck Group\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame WorkReel-module__toVHgq__active\" aria-pressed=\"true\" aria-label=\"Show NorthDeck Group\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show Emblematic Studio\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame \" aria-pressed=\"false\" aria-label=\"Show Emblematic Studio\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show MyCustomPatches\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame \" aria-pressed=\"false\" aria-label=\"Show MyCustomPatches\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show Ladies 4 Jesus\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame \" aria-pressed=\"false\" aria-label=\"Show Ladies 4 Jesus\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show Saforne\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame \" aria-pressed=\"false\" aria-label=\"Show Saforne\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show Panda Patches\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame WorkReel-module__toVHgq__active\" aria-pressed=\"true\" aria-label=\"Show Panda Patches\">"
+            },
+            {
+              "target": [
+                "#founder-work > .WorkReel-module__toVHgq__wrap > .WorkReel-module__toVHgq__filmstrip[role=\"group\"] > .WorkReel-module__toVHgq__frame:nth-child(2)"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame \" aria-pressed=\"false\" aria-label=\"Show Enterprise operations platform\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show Medical Template\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame WorkReel-module__toVHgq__active\" aria-pressed=\"true\" aria-label=\"Show Medical Template\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show Panda Publisher\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame \" aria-pressed=\"false\" aria-label=\"Show Panda Publisher\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show Sleek Jackets\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame \" aria-pressed=\"false\" aria-label=\"Show Sleek Jackets\">"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 3
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 8
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /",
+    "passed": true,
+    "data": {
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                ".proof-face-back.proof-face[href$=\"emblematic-studio\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<a class=\"proof-face proof-face-back absolute inset-0 flex flex-col gap-4 p-4\" aria-label=\"Visit the Emblematic Studio website\" style=\"background-color:#EBE9E4;color:#1C1917\" href=\"/work/emblematic-studio\">"
+            },
+            {
+              "target": [
+                ".proof-face-back.proof-face[href$=\"mycustompatches\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<a class=\"proof-face proof-face-back absolute inset-0 flex flex-col gap-4 p-4\" aria-label=\"Visit the MyCustomPatches website\" style=\"background-color:#EBE9E4;color:#1C1917\" href=\"/work/mycustompatches\">"
+            },
+            {
+              "target": [
+                ".proof-face-back.proof-face[href$=\"ladies-4-jesus\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<a class=\"proof-face proof-face-back absolute inset-0 flex flex-col gap-4 p-4\" aria-label=\"Visit the Ladies 4 Jesus website\" style=\"background-color:#EBE9E4;color:#1C1917\" href=\"/work/ladies-4-jesus\">"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 28
+        }
+      ],
+      "passes": 32
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /services",
+    "passed": true,
+    "data": {
+      "violations": [
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                "figcaption > a[href$=\"emblematic-studio\"]"
+              ],
+              "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.39:1 with the surrounding text. (Minimum contrast is 3:1, link text: #7a2e0e, surrounding text: #5e5b55)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+              "html": "<a href=\"/work/emblematic-studio\">See the project ↗</a>"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 27
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /pricing",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /contact",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 32
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /free-audit",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 31
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /blog",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 30
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /blog/website-portability",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 16
+        }
+      ],
+      "passes": 34
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /services/gohighlevel",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 13
+        }
+      ],
+      "passes": 33
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /services/squarespace",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 13
+        }
+      ],
+      "passes": 33
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /services/woocommerce",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 13
+        }
+      ],
+      "passes": 33
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /services/sanity-development",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 13
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /services/backend-development",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 13
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /ai-info",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /work",
+    "passed": true,
+    "data": {
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axeAPI",
+          "nodes": [
+            {
+              "target": [
+                "button[aria-label=\"Show NorthDeck Group\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame WorkReel-module__toVHgq__active\" aria-pressed=\"true\" aria-label=\"Show NorthDeck Group\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show Emblematic Studio\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame \" aria-pressed=\"false\" aria-label=\"Show Emblematic Studio\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show MyCustomPatches\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame \" aria-pressed=\"false\" aria-label=\"Show MyCustomPatches\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show Ladies 4 Jesus\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame \" aria-pressed=\"false\" aria-label=\"Show Ladies 4 Jesus\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show Saforne\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame \" aria-pressed=\"false\" aria-label=\"Show Saforne\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show Panda Patches\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame WorkReel-module__toVHgq__active\" aria-pressed=\"true\" aria-label=\"Show Panda Patches\">"
+            },
+            {
+              "target": [
+                "#founder-work > .WorkReel-module__toVHgq__wrap > .WorkReel-module__toVHgq__filmstrip[role=\"group\"] > .WorkReel-module__toVHgq__frame:nth-child(2)"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame \" aria-pressed=\"false\" aria-label=\"Show Enterprise operations platform\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show Medical Template\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame WorkReel-module__toVHgq__active\" aria-pressed=\"true\" aria-label=\"Show Medical Template\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show Panda Publisher\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame \" aria-pressed=\"false\" aria-label=\"Show Panda Publisher\">"
+            },
+            {
+              "target": [
+                "button[aria-label=\"Show Sleek Jackets\"]"
+              ],
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "html": "<button type=\"button\" class=\"WorkReel-module__toVHgq__frame \" aria-pressed=\"false\" aria-label=\"Show Sleek Jackets\">"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 3
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 7
+        }
+      ],
+      "passes": 28
+    }
+  }
+]

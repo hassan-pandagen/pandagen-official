@@ -62,7 +62,7 @@ const services: Service[] = [
       label: "Priced on its own",
       text: "Apps and internal tools are quoted after one short call, not sold as a website package. We work out what it does, what data it holds and what it costs to run before anyone talks price.",
     },
-    link: { label: "View Architecture", href: "/services/custom-engineering" },
+    link: { label: "Explore custom software", href: "/services/custom-engineering" },
   },
   {
     title: "Search & AI Foundations",

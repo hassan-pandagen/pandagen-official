@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-06",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-migration-cost-2026")],
@@ -73,7 +73,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-06",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -118,7 +118,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-06",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -536,7 +536,7 @@ export default function WebsiteMigrationCostPage() {
                     <BlogText>
                         A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. A refund is tied to
                         failure to deliver the signed scope, not a change of preference after work starts. Starter
-                        includes 15 business days of launch defect support; Growth and Scale include 30. Ownership,
+                        includes 15 calendar days of launch defect support; Growth and Scale include 30. Ownership,
                         licenses and accounts follow the accepted project terms.
                     </BlogText>
 

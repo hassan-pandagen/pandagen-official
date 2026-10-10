@@ -8,17 +8,16 @@ import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import { caseStudy, requiredMetric } from "@/data/case-study-facts";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-study/CaseStudyFaqs";
+import PandaPatchesCrmWalkthrough from "@/components/redesign/case-study/PandaPatchesCrmWalkthrough";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Enterprise operations platform, redesign preview, 30 Sep 2026. Our own
 // internal CRM for Panda Patches, founder-affiliated (disclosure from
 // case-study-facts.json).
 //
-// One screenshot only, the existing /work/enterprise-ops.png, whose customer
-// names, order values and revenue are already blurred. This is live business
-// data: never use an unredacted capture, and nothing from the CRM repository's
-// exports, invoices or spreadsheets. More redacted screens can become a
-// CaseStudyWalkthrough like the other studies once they are supplied.
+// The overview has customer and revenue details blurred. The owner supplied
+// five further public screenshots on 10 Oct 2026; the permissions screen uses
+// the supplied redacted version. Its original remains outside public/.
 //
 // Every figure below comes through requiredMetric(), so it reads the dated,
 // verified record in case-study-facts.json, and the build fails if any of them
@@ -100,45 +99,41 @@ export function EnterpriseOpsCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyF
       <section className="px-6 pb-16 pt-8 md:pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
         <div className="mx-auto max-w-[1100px]">
           <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-            <Link href="/work" style={{ color: T.quiet }}>Work</Link> / Enterprise operations / Founder-affiliated
+            <Link href="/work" style={{ color: T.quiet }}>Work</Link> / Panda Patches CRM / Founder-affiliated
           </p>
 
-            <WorkCaseTitle>Enterprise operations platform</WorkCaseTitle>
+            <WorkCaseTitle>Custom CRM development for Panda Patches</WorkCaseTitle>
           <p className="mt-3 max-w-[38rem]" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
-            The system Panda Patches runs on.
+            One place for our team to manage the working day.
           </p>
 
           <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
-            The staff-facing CRM behind Panda Patches: orders, production, payments, attendance and reports in one
-            place. It&apos;s our own system, built for a business owned by co-founder Imran Raza Ladhani, not work
-            delivered to an outside client.
+            We built a custom CRM for the Panda Patches team to manage customers, orders, production,
+            payments, attendance and reports in one place. Workflow automation handles steps such as
+            wholesale pricing, invoices and delivery follow-up. It&apos;s our own system, built for the
+            business owned by co-founder Imran Raza Ladhani.
           </p>
+          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-[15px] font-medium" style={{ color: T.accentText }}>
+            <a href="#panda-patches-crm-walkthrough" className="underline underline-offset-4">Explore the CRM screens ↓</a>
+            <Link href="/services/custom-engineering" className="underline underline-offset-4">Custom CRM development services →</Link>
+          </div>
 
+          <figure className="mt-10 border" style={{ borderColor: T.rule, backgroundColor: T.paperHi }}>
+            <Image src="/work/enterprise-ops.png" alt="The Panda Patches custom CRM dashboard for orders, production and payments; customer and revenue figures are blurred" width={1711} height={919} sizes="(min-width: 1100px) 1100px, 100vw" priority />
+            <figcaption className="px-4 py-3 text-[12px] uppercase tracking-[0.08em]" style={{ fontFamily: MONO, color: T.quiet }}>The operations dashboard, customer and revenue figures blurred / Founder-affiliated</figcaption>
+          </figure>
           <RelationshipDisclosure slug="enterprise-ops" variant="editorial" />
         </div>
       </section>
+
+      <PandaPatchesCrmWalkthrough />
 
       <section className="px-6 py-16 md:px-10 md:py-24" style={{ backgroundColor: T.paperHi }}>
         <div className="mx-auto max-w-[1100px]">
           <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>02</span>
           <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
-            Inside the <span style={{ color: T.accentText }}>operations</span> platform.
+            What the CRM <span style={{ color: T.accentText }}>handles.</span>
           </h2>
-
-          <figure className="mt-8">
-            <Image
-              src="/work/enterprise-ops.png"
-              alt="The operations dashboard: a sidebar of modules (orders, reports, clock in/out, inbox, quotes, payment forms, customers, user management), revenue and order totals, the production pipeline and a table of recent orders by status. Customer names, amounts and revenue are blurred."
-              width={1711}
-              height={919}
-              sizes="(min-width: 1100px) 1050px, 100vw"
-              className="w-full border"
-              style={{ borderColor: T.rule }}
-            />
-            <figcaption className="mt-3 text-[13px]" style={{ fontFamily: MONO, color: T.quiet }}>
-              The dashboard. Customer names, order values and revenue are blurred: this is the live business.
-            </figcaption>
-          </figure>
 
           <dl className="mt-10 border-t" style={{ borderColor: T.rule }}>
             {built.map((b) => (
@@ -187,7 +182,10 @@ export function EnterpriseOpsCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyF
               Discuss your project <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </QuoteModalButton>
             <Link href="/services/custom-engineering" className="text-[14px] font-medium underline underline-offset-4" style={{ color: T.onDarkQuiet }}>
-              Explore custom engineering
+              Explore custom CRM development and workflow automation
+            </Link>
+            <Link href="/services/backend-development" className="text-[14px] font-medium underline underline-offset-4" style={{ color: T.onDarkQuiet }}>
+              Backend development for team tools
             </Link>
           </div>
         </div>

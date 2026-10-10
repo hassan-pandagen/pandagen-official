@@ -1,0 +1,46 @@
+{
+  "checkedOn": "2026-10-09",
+  "buildPassed": true,
+  "changedFileLintPassed": true,
+  "publicClaimsPassed": true,
+  "structuralSeo": {
+    "urls": 158,
+    "failures": 0,
+    "warnings": 0
+  },
+  "comparisonAndAssistantRunner": {
+    "cases": 104,
+    "exitCode": 0,
+    "engines": {
+      "chromium": [
+        320,
+        390,
+        768,
+        1024,
+        1440
+      ],
+      "webkit": [
+        320,
+        390,
+        1440
+      ]
+    },
+    "comparisonRoutes": 10,
+    "source": "comparison-and-assistant-checks.log"
+  },
+  "final404Cases": {
+    "cases": 12,
+    "exitCode": 0,
+    "actualHttp404": true,
+    "noindex": true
+  },
+  "regression": {
+    "workflows": 28,
+    "axePages": 28,
+    "failures": 0,
+    "delivery": "mocked"
+  },
+  "research": "https://learn.microsoft.com/en-us/azure/bot-service/bot-service-design-first-interaction?view=azure-bot-service-4.0",
+  "performanceRemeasured": false,
+  "deployed": false
+}

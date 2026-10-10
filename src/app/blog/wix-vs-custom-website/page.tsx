@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-12",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wix-vs-custom-website")],
@@ -69,7 +69,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wix-vs-custom-website"),
             description,
             datePublished: "2026-04-12",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -438,7 +438,7 @@ export default function WixVsCustomWebsitePage() {
                     <BlogText>
                         PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale.
                         A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to
-                        failure to deliver the signed scope. Starter includes 15 business days of launch defect support and Growth and Scale carry 30, where the accepted terms include it. Ownership and performance acceptance follow the signed
+                        failure to deliver the signed scope. Starter includes 15 calendar days of launch defect support and Growth and Scale carry 30, where the accepted terms include it. Ownership and performance acceptance follow the signed
                         terms, not the framework name.
                     </BlogText>
 

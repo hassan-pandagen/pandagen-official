@@ -1,16 +1,8 @@
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 import FaqRows from "@/components/ui/FaqRows";
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Case-study FAQ in the redesign's style, 30 Sep 2026, added when the /work
-// pages switched to the new designs. Each live case study already carries an
-// FAQ and FAQPage structured data; the new designs had no FAQ, and structured
-// data describing questions a reader cannot see is the one thing the switch
-// must not ship. Answers are always visible, never collapsed: see FaqOpen.tsx
-// for the dated history of collapsed answers scoring zero on an extraction
-// sweep. The live page passes the same array it uses for its JSON-LD, so the
-// visible questions and the structured data cannot drift apart.
-// ─────────────────────────────────────────────────────────────────────────────
+// Case-study FAQs share their source with FAQ structured data.
+// Native accordion answers remain in the initial HTML.
 
 export type CaseStudyFaq = { question: string; answer: string };
 

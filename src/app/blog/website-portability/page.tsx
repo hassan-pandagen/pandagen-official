@@ -55,7 +55,7 @@ const title = "Can You Export Your Website? What 8 Platforms Let You Take";
 const description =
     "We read the export docs of Wix, Squarespace, Webflow, Shopify, WooCommerce, GoHighLevel and WordPress. What leaves each one, what stays, and what to save first.";
 const published = "2026-10-04";
-const modified = "2026-10-08";
+const modified = "2026-10-09";
 
 /** The order platforms appear in, everywhere on this page. */
 const ORDER: PlatformId[] = ["wix", "squarespace", "webflow", "shopify", "woocommerce", "gohighlevel", "wordpress-com", "wordpress"];

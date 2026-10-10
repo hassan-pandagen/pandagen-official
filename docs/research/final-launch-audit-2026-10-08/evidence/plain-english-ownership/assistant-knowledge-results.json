@@ -1,0 +1,224 @@
+{
+  "count": 24,
+  "pass": true,
+  "unresolvedPins": [],
+  "passages": 877,
+  "results": [
+    {
+      "slug": "wordpress",
+      "q": "Can I move my WordPress website to another host?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/wordpress#ownership-wordpress-1",
+      "expected": "https://www.pandacodegen.com/services/wordpress#ownership-wordpress-1",
+      "pass": true
+    },
+    {
+      "slug": "wordpress",
+      "q": "What do I receive when my WordPress website is finished?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/wordpress#ownership-wordpress-2",
+      "expected": "https://www.pandacodegen.com/services/wordpress#ownership-wordpress-2",
+      "pass": true
+    },
+    {
+      "slug": "wordpress-migration",
+      "q": "Can I keep my pages and blog posts when I leave WordPress?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/wordpress-migration#ownership-wordpress-migration-1",
+      "expected": "https://www.pandacodegen.com/services/wordpress-migration#ownership-wordpress-migration-1",
+      "pass": true
+    },
+    {
+      "slug": "wordpress-migration",
+      "q": "Will I lose my Google rankings if I move my website?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/wordpress-migration#ownership-wordpress-migration-2",
+      "expected": "https://www.pandacodegen.com/services/wordpress-migration#ownership-wordpress-migration-2",
+      "pass": true
+    },
+    {
+      "slug": "ecommerce",
+      "q": "Can I keep Shopify or WooCommerce and change my website?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/ecommerce#ownership-ecommerce-1",
+      "expected": "https://www.pandacodegen.com/services/ecommerce#ownership-ecommerce-1",
+      "pass": true
+    },
+    {
+      "slug": "ecommerce",
+      "q": "Can I move my customers and past orders to a new store?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/ecommerce#ownership-ecommerce-2",
+      "expected": "https://www.pandacodegen.com/services/ecommerce#ownership-ecommerce-2",
+      "pass": true
+    },
+    {
+      "slug": "woocommerce",
+      "q": "Can I move my WooCommerce store to another hosting company?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/woocommerce#ownership-woocommerce-1",
+      "expected": "https://www.pandacodegen.com/services/woocommerce#ownership-woocommerce-1",
+      "pass": true
+    },
+    {
+      "slug": "woocommerce",
+      "q": "Can I take my products, customers and orders out of WooCommerce?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/woocommerce#ownership-woocommerce-2",
+      "expected": "https://www.pandacodegen.com/services/woocommerce#ownership-woocommerce-2",
+      "pass": true
+    },
+    {
+      "slug": "wix",
+      "q": "Can I move my Wix website to another platform?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/wix#ownership-wix-1",
+      "expected": "https://www.pandacodegen.com/services/wix#ownership-wix-1",
+      "pass": true
+    },
+    {
+      "slug": "wix",
+      "q": "Can I keep my website address if I leave Wix?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/wix#ownership-wix-2",
+      "expected": "https://www.pandacodegen.com/services/wix#ownership-wix-2",
+      "pass": true
+    },
+    {
+      "slug": "squarespace",
+      "q": "Can I move my Squarespace website to another platform?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/squarespace#ownership-squarespace-1",
+      "expected": "https://www.pandacodegen.com/services/squarespace#ownership-squarespace-1",
+      "pass": true
+    },
+    {
+      "slug": "squarespace",
+      "q": "Can I keep my blog posts and pictures when I leave Squarespace?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/squarespace#ownership-squarespace-2",
+      "expected": "https://www.pandacodegen.com/services/squarespace#ownership-squarespace-2",
+      "pass": true
+    },
+    {
+      "slug": "webflow",
+      "q": "Can I host my Webflow website somewhere else?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/webflow#ownership-webflow-1",
+      "expected": "https://www.pandacodegen.com/services/webflow#ownership-webflow-1",
+      "pass": true
+    },
+    {
+      "slug": "webflow",
+      "q": "Will my Webflow blog, forms and store still work after a code export?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/webflow#ownership-webflow-2",
+      "expected": "https://www.pandacodegen.com/services/webflow#ownership-webflow-2",
+      "pass": true
+    },
+    {
+      "slug": "gohighlevel",
+      "q": "Can I keep GoHighLevel as my CRM and rebuild my website?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/gohighlevel#ownership-gohighlevel-1",
+      "expected": "https://www.pandacodegen.com/services/gohighlevel#ownership-gohighlevel-1",
+      "pass": true
+    },
+    {
+      "slug": "gohighlevel",
+      "q": "Can I export my GoHighLevel website and edit it elsewhere?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/gohighlevel#ownership-gohighlevel-2",
+      "expected": "https://www.pandacodegen.com/services/gohighlevel#ownership-gohighlevel-2",
+      "pass": true
+    },
+    {
+      "slug": "cms-development",
+      "q": "Can I update my website without calling a developer?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/cms-development#ownership-cms-development-1",
+      "expected": "https://www.pandacodegen.com/services/cms-development#ownership-cms-development-1",
+      "pass": true
+    },
+    {
+      "slug": "cms-development",
+      "q": "Can I take my content with me if I change website editors?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/cms-development#ownership-cms-development-2",
+      "expected": "https://www.pandacodegen.com/services/cms-development#ownership-cms-development-2",
+      "pass": true
+    },
+    {
+      "slug": "backend-development",
+      "q": "Can I take my business data with me if I change providers?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/backend-development#ownership-backend-development-1",
+      "expected": "https://www.pandacodegen.com/services/backend-development#ownership-backend-development-1",
+      "pass": true
+    },
+    {
+      "slug": "backend-development",
+      "q": "Can another developer manage the backend after you build it?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/backend-development#ownership-backend-development-2",
+      "expected": "https://www.pandacodegen.com/services/backend-development#ownership-backend-development-2",
+      "pass": true
+    },
+    {
+      "slug": "custom-engineering",
+      "q": "Do I get the source code for my custom software?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/custom-engineering#ownership-custom-engineering-1",
+      "expected": "https://www.pandacodegen.com/services/custom-engineering#ownership-custom-engineering-1",
+      "pass": true
+    },
+    {
+      "slug": "custom-engineering",
+      "q": "Will my application stop working if I end your support plan?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/custom-engineering#ownership-custom-engineering-2",
+      "expected": "https://www.pandacodegen.com/services/custom-engineering#ownership-custom-engineering-2",
+      "pass": true
+    },
+    {
+      "slug": "ai-seo",
+      "q": "Do I keep the website changes if I stop monthly SEO work?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/ai-seo#ownership-ai-seo-1",
+      "expected": "https://www.pandacodegen.com/services/ai-seo#ownership-ai-seo-1",
+      "pass": true
+    },
+    {
+      "slug": "ai-seo",
+      "q": "Does adding FAQs or AI markup guarantee that AI will cite my website?",
+      "found": true,
+      "textMatches": true,
+      "url": "https://www.pandacodegen.com/services/ai-seo#ownership-ai-seo-2",
+      "expected": "https://www.pandacodegen.com/services/ai-seo#ownership-ai-seo-2",
+      "pass": true
+    }
+  ]
+}

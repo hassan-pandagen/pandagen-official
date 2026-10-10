@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-08",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/top-custom-web-development-agencies-usa-2026")],
@@ -73,7 +73,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/top-custom-web-development-agencies-usa-2026"),
             description,
             datePublished: "2026-04-08",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -336,9 +336,13 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                                 {companies.map((company) => (
                                     <tr key={company.name}>
                                         <td className="p-4 align-top font-bold text-charcoal">
-                                            <a href={company.url} target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>
-                                                {company.name}
-                                            </a>
+                                            {company.url === "https://www.pandacodegen.com/services" ? (
+                                                <Link href="/services" className={sourceLinkClass}>{company.name}</Link>
+                                            ) : (
+                                                <a href={company.url} target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>
+                                                    {company.name}
+                                                </a>
+                                            )}
                                         </td>
                                         <td className="p-4 align-top">{company.type}</td>
                                         <td className="p-4 align-top">{company.publicFocus}</td>
@@ -414,7 +418,7 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                     <BlogList
                         items={[
                             "A refund is tied to failure to deliver the signed scope, not a change of preference after work begins.",
-                            "Package discussions may start with 15 business days of launch defect support on Starter and 30 on Growth and Scale, and support applies only where the accepted project terms record it.",
+                            "Package discussions may start with 15 calendar days of launch defect support on Starter and 30 on Growth and Scale, and support applies only where the accepted project terms record it.",
                             "Custom deliverables transfer after full payment under the contract; client content remains the client's.",
                             "PandaCodeGen retains reusable tools and pre-existing code; third-party components keep their licenses.",
                             "A 90+ performance target requires agreed representative pages, mobile and desktop profiles, three consecutive tests and a written remedy.",

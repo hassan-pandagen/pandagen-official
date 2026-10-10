@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-30",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-redesign-cost")],
@@ -67,7 +67,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-04-30",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -111,7 +111,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-04-30",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             inLanguage: "en-US",
         },
         {
@@ -518,7 +518,7 @@ export default function WebsiteRedesignCostPage() {
                         prepare a migration or redesign plan. Recent{" "}
                         <Link href="/work" className="text-cognac hover:underline">project pages</Link> show the scope behind each build. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to failure to
                         deliver the signed scope, not a preference change after work starts. Starter includes 15
-                        business days of launch defect support and Growth and Scale carry 30, where the accepted terms include it. Minor tweaks may be
+                        calendar days of launch defect support and Growth and Scale carry 30, where the accepted terms include it. Minor tweaks may be
                         included when agreed, while larger changes require an approved scope change.
                     </BlogText>
                     <InsightBox variant="info" label="Performance acceptance">

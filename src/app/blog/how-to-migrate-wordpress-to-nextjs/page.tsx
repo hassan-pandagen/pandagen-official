@@ -23,7 +23,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: { absolute: "WordPress to Next.js Migration Without Losing SEO (2026)" },
+    title: { absolute: "WordPress to Next.js Migration: Protecting SEO (2026)" },
     description: "Step-by-step WordPress to Next.js migration: content export, 301 redirect mapping, SEO preservation, staged QA, controlled cutover, rollback, and monitoring.",
     alternates: {
         canonical: '/blog/how-to-migrate-wordpress-to-nextjs',
@@ -31,18 +31,18 @@ export const metadata: Metadata = {
     keywords: ["how to migrate wordpress to next.js", "wordpress to nextjs migration", "migrate wordpress nextjs seo", "wordpress nextjs migration guide", "wordpress to nextjs without losing seo", "wordpress migration checklist"],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
+        title: "WordPress to Next.js Migration: Protecting SEO (2026)",
         description: "Step-by-step WordPress to Next.js migration: content export, 301 redirect mapping, SEO preservation, staged QA, controlled cutover, rollback, and monitoring.",
         type: "article",
         publishedTime: "2026-03-11",
-        modifiedTime: "2026-10-08T00:00:00-05:00",
+        modifiedTime: "2026-10-09T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs",
         images: [ogImageForPath("/blog/how-to-migrate-wordpress-to-nextjs")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
+        title: "WordPress to Next.js Migration: Protecting SEO (2026)",
         description: "Step-by-step WordPress to Next.js migration: content export, 301 redirect mapping, SEO preservation, staged QA, controlled cutover, rollback, and monitoring.",
     },
 };
@@ -53,11 +53,11 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#article",
-            "headline": "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
+            "headline": "WordPress to Next.js Migration: Protecting SEO (2026)",
             "description": "Step-by-step WordPress to Next.js migration: content export, 301 redirect mapping, SEO preservation, staged QA, controlled cutover, rollback, and monitoring.",
             "image": ogImageUrlForPath("/blog/how-to-migrate-wordpress-to-nextjs"),
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-10-08T00:00:00-05:00",
+            "dateModified": "2026-10-09T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -110,7 +110,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/how-to-migrate-wordpress-to-nextjs") },
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-10-08T00:00:00-05:00",
+            "dateModified": "2026-10-09T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -161,14 +161,15 @@ export default function MigrateWordPressToNextJSPage() {
                           <div data-article-hero-copy>
                         <span className="inline-block bg-stone-100 text-stone-600 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4">WordPress</span>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            How to Migrate WordPress to <span className="font-serif italic text-cognac">Next.js</span> Without Losing SEO
+                            How to Migrate WordPress to <span className="font-serif italic text-cognac">Next.js</span> with an SEO Plan
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed" data-speakable="true">
-                            To move a WordPress site to Next.js without losing search traffic, list every URL you have,
-                            decide whether WordPress stays on as a headless backend, export the content, rebuild the
-                            pages, give every changed address a 301 redirect, carry over titles, descriptions and
-                            canonicals, then crawl the staged site before you switch DNS. This guide is for doing it
-                            yourself, and the eight steps below are the ones we run on client migrations.
+                            To reduce avoidable SEO loss when moving WordPress to Next.js, inventory your URLs,
+                            plan the content and editing setup, map changed addresses to relevant destinations,
+                            preserve important metadata and test the staged site before switching over. Monitor
+                            crawling and traffic after launch. Rankings can fluctuate while Google reprocesses the
+                            site; these checks do not guarantee a fixed traffic loss or recovery time. This guide
+                            explains the eight steps we use to plan and test client migrations.
                         </p>
                         <BlogAuthor
                             postId="how-to-migrate-wordpress-to-nextjs" published="2026-03-11"

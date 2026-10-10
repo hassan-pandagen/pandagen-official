@@ -1,0 +1,238 @@
+[
+  {
+    "url": "https://www.wix.com/about/terms-of-use",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://www.squarespace.com/terms-of-service",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://webflow.com/legal/terms",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://www.shopify.com/legal/terms",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://wordpress.com/support/com-vs-org/",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://wordpress.org/about/license/",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://plugins.svn.wordpress.org/woocommerce/trunk/readme.txt",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.gohighlevel.com/support/solutions/articles/155000004281-what-happen-s-to-your-data-when-you-cancel-your-highlevel-subscription-",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://woocommerce.com/document/woocommerce-analytics/",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.wix.com/en/article/exporting-or-embedding-your-wix-site-elsewhere",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.wix.com/en/article/wix-multilingual-exporting-and-importing-site-content-for-manual-translation",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.wix.com/en/article/exporting-your-content-from-a-collection",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.wix.com/en/article/wix-blog-request-exporting-blog-posts-to-other-platforms",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.wix.com/en/article/wix-stores-exporting-your-product-list",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.wix.com/en/article/exporting-your-contacts",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.wix.com/en/article/exporting-orders-3126323",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.wix.com/en/article/wix-media-downloading-files-from-the-media-manager",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.wix.com/en/article/transferring-your-wix-domain-away-from-wix-2477749",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.squarespace.com/hc/en-us/articles/360000694948-Export-products-to-a-csv",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.squarespace.com/hc/en-us/articles/360046485652-The-Contacts-panel",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.squarespace.com/hc/en-us/articles/206540677-Export-Commerce-orders",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.squarespace.com/hc/en-us/articles/205814028-Import-to-and-export-from-your-site",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.squarespace.com/hc/en-us/articles/205812338-Transferring-a-domain-away-from-Squarespace",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://support.squarespace.com/hc/en-us/articles/360034059332-Domain-locks",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.webflow.com/hc/en-us/articles/33961290794771-How-do-I-import-content-into-the-Webflow-CMS",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.webflow.com/hc/en-us/articles/33961377975059-Orders-tab",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.webflow.com/hc/en-us/articles/33961361857811-Import-export-Ecommerce-products-and-variants",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.webflow.com/hc/en-us/articles/33961367813139-Buy-a-custom-domain-through-Webflow",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.shopify.com/en/manual/online-store/themes/managing-themes/downloading-themes",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.shopify.com/en/manual/shopify-admin/duplicate-store",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.shopify.com/en/manual/products/import-export/export-products",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.shopify.com/en/manual/customers/import-export-customers",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.shopify.com/en/manual/fulfillment/managing-orders/exporting-orders",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.shopify.com/en/manual/shopify-admin/productivity-tools/file-uploads",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.shopify.com/en/manual/domains/managing-domain-ownership/transferring-shopify-domains",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://wordpress.org/documentation/article/tools-export-screen/",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://woocommerce.com/document/product-csv-importer-exporter/",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://woocommerce.com/document/ordercustomer-csv-export/",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://developer.wordpress.org/advanced-administration/security/backup/files/",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.gohighlevel.com/support/solutions/articles/155000007342-can-highlevel-websites-be-exported-",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.gohighlevel.com/support/solutions/articles/155000006179-whitelabel-funnel-sharing-step-by-step-guide",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://marketplace.gohighlevel.com/docs/2021-07-28/ghl/blogs/get-blog-post/",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://marketplace.gohighlevel.com/docs/2021-04-15/ghl/products/list-invoices/",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.gohighlevel.com/support/solutions/articles/48001238482-contacts-export-as-csv-upgrade",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.gohighlevel.com/support/solutions/articles/155000007158-export-or-download-orders-as-csv",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.gohighlevel.com/support/solutions/articles/155000002707-complete-guide-to-media-storage",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://shopify.dev/docs/api/liquid",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://developer.wordpress.org/advanced-administration/upgrade/migrating/",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://help.gohighlevel.com/support/solutions/articles/155000008384-transfer-a-domain-out-of-highlevel",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://wordpress.com/support/export/",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://wordpress.com/support/restore/download-backup/",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://wordpress.com/support/export-your-media-library/",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://wordpress.com/support/domains/transfer-domain-registration/",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://www.gohighlevel.com/terms-of-service",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://github.com/vercel/next.js/blob/canary/license.md",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://www.sanity.io/docs/content-lake/exporting-data",
+    "error": "fetch failed"
+  },
+  {
+    "url": "https://www.sanity.io/legal/tos",
+    "error": "fetch failed"
+  }
+]

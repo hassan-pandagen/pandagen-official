@@ -9,6 +9,9 @@
 import type { Dictionary } from "./types";
 import { reviewQuote } from "@/data/reviews";
 
+// Owner-confirmed hosting terms, 8 October 2026; shared by every German surface.
+const HOSTING_POLICY = "Bei einem Wartungs- oder SEO-Paket ist das Hosting auf unserem Vercel-Konto enthalten, wenn Sie es wünschen. Ohne Paket werden das Hosting-Konto und mögliche Gebühren pro Kunde vereinbart und im Angebot festgehalten. Auf Wunsch oder zum Ende der Zusammenarbeit wird das Hosting auf ein Konto in Ihrem Namen übertragen.";
+
 const de: Dictionary = {
   nav: {
     home: "Startseite",
@@ -166,7 +169,7 @@ const de: Dictionary = {
         {
           title: "Hochperformanter Handel",
           body:
-            "Standard-Shopify-Themes sind langsam. Wir bauen vollständig individuelle Storefronts, während Ihr bestehendes Backend Produkte, Bestellungen und Zahlungen weiterführt.",
+            "Wir erstellen oder verbessern Ihren Shopify- oder WooCommerce-Shop. Wenn die Anforderungen es rechtfertigen, entwickeln wir eine individuelle Storefront mit dem passenden bestehenden Backend.",
           bullets: [
             "Schluss mit monatlichen Gebühren für überflüssige Apps",
             "Anbindung an den Shopify- oder WooCommerce-Bestand",
@@ -341,7 +344,7 @@ const de: Dictionary = {
         {
           title: "Das geistige Eigentum liegt bei Ihnen",
           body:
-            "Wir übergeben den vollständigen Quellcode. Das Hosting wird pro Kunde vereinbart und im Angebot festgehalten: manche Kunden werden auf ihrem eigenen Konto deployt, andere hosten bei uns, mit oder ohne Gebühr, je nach Vereinbarung. Das Hosting kann auf Wunsch auf Ihr Konto übertragen werden. Ein monatliches Paket ist nicht vorgeschrieben.",
+            `Wir übergeben den vollständigen Quellcode. ${HOSTING_POLICY} Ein monatliches Paket ist nicht vorgeschrieben.`,
         },
       ],
       ctaTitle: "Bereit, mit Ingenieuren statt mit Kundenbetreuung zu arbeiten?",
@@ -445,7 +448,7 @@ const de: Dictionary = {
       {
         title: "03 · Hochperformante Shops",
         body:
-          "Standard-Shopify-Themes sind langsam. Wir bauen vollständig individuelle Storefronts, die sofort laden, während Ihr bestehendes Backend Produkte, Bestellungen und Zahlungen weiterführt.",
+          "Wir prüfen Katalog, Checkout und Bestellabläufe und vergleichen gezielte Verbesserungen mit einer individuellen Storefront. Ihr Shopify- oder WooCommerce-Backend kann erhalten bleiben, wenn es zum Projekt passt.",
         bullets: [
           "Schluss mit monatlichen Gebühren für überflüssige Apps",
           "Individuelle Upsell-Logik",
@@ -482,19 +485,19 @@ const de: Dictionary = {
 
   pricing: {
     meta: {
-      title: "Preise und Leistungsumfang der Website-Migration | PandaCodeGen",
+      title: "Preise und Leistungsumfang für Websites | PandaCodeGen",
       description:
-        "Migrationspakete beginnen bei 1.500 $, 3.500 $ und 5.000 $; Seiten und Funktionen werden in einem schriftlichen Angebot angepasst.",
+        "Individuelle Websites ab 1.500 $. WordPress und Verbesserungen nach Umfang. Preis und Leistungen werden vor Arbeitsbeginn schriftlich vereinbart.",
     },
     hero: {
       eyebrow: "Vertragliche Klarheit",
-      title: "Beispielhafte Migrationsumfänge.",
-      titleAccent: "Ein schriftliches Angebot für Ihr tatsächliches Risiko.",
+      title: "Eine Website für Ihr Unternehmen.",
+      titleAccent: "Ein klarer Preis im schriftlichen Angebot.",
       lead:
         "Wählen Sie das nächstgelegene Startpaket und ergänzen oder streichen Sie Seiten und Funktionen in einem schriftlichen Angebot. Eine übliche Zahlungsstruktur sind 30 % zum Projektstart und 70 % zum Liefermeilenstein, der in den angenommenen Projektbedingungen definiert ist; für ein bestimmtes Projekt kann ein anderer schriftlicher Zahlungsplan vereinbart werden.",
     },
     summary:
-      "Die Preise von PandaCodeGen beginnen bei 1.500 $ (Starter), 3.500 $ (Growth) und ab 5.000 $ (Scale), für Websites wie für Onlineshops. Alles Größere wird nach einem Gespräch kalkuliert. Der Preis steht fest, bevor die Arbeit beginnt: keine Mindestprojektgröße, keine Abrechnung nach Stunden, 30 % zum Start und 70 % bei Lieferung. Code, Designdateien und Konten gehören am Ende Ihnen. Monatliche Leistungen wie KI-SEO oder laufender Support sind optional und werden separat kalkuliert. Der Preis hängt von der Menge an Inhalten, den Integrationen und dem ab, was ohne Bruch übernommen werden muss, nicht von der Seitenzahl allein. Ihr schriftliches Angebot nennt den genauen Betrag.",
+      "Individuelle Websites und Onlineshops von PandaCodeGen beginnen bei 1.500 $ (Starter), 3.500 $ (Growth) und ab 5.000 $ (Scale). WordPress-Websites und gezielte Verbesserungen werden nach ihrem jeweiligen Umfang angeboten. Alles Größere wird nach einem Gespräch kalkuliert. Der Preis steht fest, sobald der schriftliche Umfang vereinbart ist. Änderungen des Umfangs und Preises benötigen vorab Ihre schriftliche Freigabe. Es gibt keine Mindestprojektgröße. Eine übliche Zahlungsstruktur ist 30 % zum Start und 70 % beim Liefermeilenstein; die angenommenen Bedingungen legen den Zahlungsplan fest. Code, Designdateien und Konten gehören am Ende Ihnen. Monatliche Leistungen wie KI-SEO oder laufender Support sind optional und werden separat kalkuliert. Der Preis hängt von der Menge an Inhalten, den Integrationen und dem ab, was ohne Bruch übernommen werden muss, nicht von der Seitenzahl allein. Ihr schriftliches Angebot nennt den genauen Betrag.",
     tiersHeading: "Beispielhafte Startpakete",
     currencyNote:
       "Alle Beträge in US-Dollar (USD). Währung, Steuern und Fälligkeiten werden in den angenommenen Projektbedingungen festgehalten.",
@@ -550,7 +553,7 @@ const de: Dictionary = {
         number: "01",
         title: "Umfang und Ergänzungen",
         body:
-          "Das Startpaket wird an die freigegebenen Seiten und Funktionen angepasst. Leistungen, Integrationen, Inhaltsverantwortlichkeiten, Ausschlüsse und separat bepreiste Ergänzungen werden ausdrücklich aufgeführt.",
+          "Der Preis steht fest, sobald der schriftliche Umfang vereinbart ist. Zusätzliche Arbeiten werden separat angeboten und beginnen erst nach Ihrer schriftlichen Freigabe des geänderten Umfangs und Preises. Leistungen, Integrationen, Inhaltsverantwortlichkeiten und Ausschlüsse werden ausdrücklich aufgeführt.",
       },
       {
         number: "02",
@@ -592,7 +595,7 @@ const de: Dictionary = {
         number: "08",
         title: "Wenn wir die Website weiter betreuen sollen",
         body:
-          "Kein monatliches Paket ist verpflichtend, und die Website gehört in beiden Fällen Ihnen. Die optionale monatliche Betreuung umfasst Wartung, kleinere Änderungen, Fehlerbehebungen sowie die vereinbarte SEO- und Content-Arbeit. Hosting ist darin nicht automatisch enthalten: es wird gesondert vereinbart und in Ihrem Angebot ausgewiesen.",
+          `Kein monatliches Paket ist verpflichtend, und die Website gehört in beiden Fällen Ihnen. Die optionale monatliche Betreuung umfasst Wartung, kleinere Änderungen, Fehlerbehebungen sowie die vereinbarte SEO- und Content-Arbeit. ${HOSTING_POLICY}`,
       },
     ],
     sections: [

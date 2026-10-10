@@ -20,9 +20,9 @@ const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButto
 const postId = "wordpress-plugin-security-2026";
 const postFAQs = blogPosts.find((p) => p.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "WordPress Plugin Security in 2026: Speed Is the Only Real Defence";
+const title = "WordPress Plugin Security in 2026: Checks, Patching & Recovery";
 const description =
-    "Within ten days in August 2026, attacks on a critical authentication bypass in a WordPress SSO plugin were reported and a critical remote code execution was patched in Next.js. What a site owner controls is not whether a vulnerability appears, but how fast the fix lands.";
+    "Compare WordPress plugin and Next.js security incidents: affected-version checks, timely updates, account protection and recovery planning for website owners.";
 
 export const dynamic = "force-static";
 
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-27",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath(`/blog/${postId}`)],
@@ -66,7 +66,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath(`/blog/${postId}`),
             datePublished: "2026-08-27T00:00:00-05:00",
-            dateModified: "2026-10-08T00:00:00-05:00",
+            dateModified: "2026-10-09T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -155,7 +155,7 @@ export default function WordPressPluginSecurity2026Page() {
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">WordPress</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             WordPress plugin security:{" "}
-                            <span className="italic text-cognac">nothing is secure, only fast</span>
+                            <span className="italic text-cognac">checks, patching and recovery</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             In the second half of August 2026, attempts to exploit a critical authentication bypass in a

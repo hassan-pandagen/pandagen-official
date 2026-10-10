@@ -1,0 +1,585 @@
+{
+  "pass": true,
+  "guideLinks": 57,
+  "proofLinks": 17,
+  "services": 12,
+  "archivePosts": 92,
+  "portfolioProjects": 11,
+  "parentLinks": 92,
+  "fixes": [
+    [
+      "/work/saforne",
+      "/services/ecommerce"
+    ],
+    [
+      "/work/panda-publisher",
+      "/services/cms-development"
+    ],
+    [
+      "/work/ladies-4-jesus",
+      "/services/cms-development"
+    ],
+    [
+      "/work/enterprise-ops",
+      "/services/backend-development"
+    ],
+    [
+      "/about",
+      "/manifesto"
+    ],
+    [
+      "/blog/what-is-headless-commerce",
+      "/blog/which-website-builders-can-go-headless"
+    ],
+    [
+      "/blog/divi-theme-slow",
+      "/services/wordpress"
+    ],
+    [
+      "/blog/elementor-kills-seo",
+      "/services/wordpress"
+    ],
+    [
+      "/blog/how-to-fix-slow-wordpress",
+      "/services/wordpress"
+    ]
+  ],
+  "llmsLinks": [
+    {
+      "url": "https://www.pandacodegen.com/blog/how-to-speed-up-your-website",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/website-portability",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/services/ecommerce",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/services/cms-development",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/services/backend-development",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/website-monthly-running-cost",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/free-audit",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/work/mycustompatches",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/work/emblematic-studio",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/work/northdeck-group",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/work/ladies-4-jesus",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/work/panda-patches",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/work/medical-template",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/work/panda-publisher",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/work/sleek-jackets",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/work/enterprise-ops",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/work/saforne",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/work/a-step-above-medical",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/services",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/pricing",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/work",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/about",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/ai-info",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/partners",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/contact",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/services/wordpress",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/services/wordpress-migration",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/services/woocommerce",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/services/webflow",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/services/wix",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/services/squarespace",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/services/gohighlevel",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/services/ai-seo",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/services/custom-engineering",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/topic/wordpress",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/wordpress-april-2026-evidence",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/divi-theme-slow",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/wordpress-migration-cost",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/nextjs-sanity-stack",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/wordpress-plugin-security-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/elementor-kills-seo",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/cms-market-share-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/topic/shopify",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/shopify-store-speed-optimization",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/shopify-stocky-sunset-date-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/shopify-vs-custom-website",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/shopify-app-costs-real-monthly-bill",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/shopify-headless",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/shopify-plus-still-slow",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/topic/webflow",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/webflow-user-accounts-sunset-date-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/leaving-webflow-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/webflow-vs-custom-website",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/webflow-migration-cost",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/webflow-true-cost",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/topic/squarespace",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/is-squarespace-bad-for-seo",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/squarespace-vs-custom-website",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/squarespace-migration-cost",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/squarespace-too-slow",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/topic/custom-development",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/sanity-vs-wordpress",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/sanity-vs-supabase",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/product-catalog-website-without-cart",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/woocommerce-vs-custom-website",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/custom-website-5000-whats-included",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/how-long-does-a-custom-website-take",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/do-you-own-your-website",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/ai-built-website-checklist",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/meta-conversions-api-setup-cost",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/topic/agencies",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/top-nextjs-agencies-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/website-developer-agency",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/top-custom-web-development-agencies-usa-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/pagepro-alternatives",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/cheap-web-developer",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/topic/website-migration",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/website-migration-cost-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/woocommerce-migration-cost",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/lovable-site-not-showing-on-google",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/topic/website-cost",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/saas-price-increases-2026-tracker",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/saas-software-pricing-audit-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/how-much-does-a-website-cost",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/website-redesign-cost",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/website-rebuild-cost-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/topic/ecommerce",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/what-is-headless-commerce",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/which-website-builders-can-go-headless",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/woocommerce-low-conversion-rate",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/spending-more-on-ads-fewer-orders-tracking",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/topic/website-speed",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/core-web-vitals-explained",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/aeo-web-performance-glossary",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/web-accessibility-statistics-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/web-accessibility-glossary",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/topic/seo-and-ai-search",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/ai-referral-revenue-2026",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/ai-search-visibility-tracking",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/google-algorithm-updates",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/why-competitor-outranks-you",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/what-is-llms-txt",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/about/hassan",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/about/imran",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/terms",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/privacy",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/cookies",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/security",
+      "status": 200
+    },
+    {
+      "url": "https://www.pandacodegen.com/editorial-policy",
+      "status": 200
+    }
+  ]
+}

@@ -10,8 +10,8 @@ import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 
 const path = "/services/woocommerce";
-const name = "WooCommerce Development, Speed & Migration";
-const description = "Build or improve a WooCommerce storefront, or plan a migration. Compare the options for checkout, products, orders and launch before committing to a scope.";
+const name = "WooCommerce Development Services & Migration";
+const description = "Build or improve a WooCommerce store. Review slow pages, checkout and extensions, or plan a custom storefront with products, orders and payments in scope.";
 
 export const metadata: Metadata = {
   title: name,

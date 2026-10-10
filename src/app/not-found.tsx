@@ -1,65 +1,54 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import PreviewShell from "@/components/redesign/PreviewShell";
+import SiteNav from "@/components/layout/SiteNav";
+import AskAssistantButton from "@/components/assistant/AskAssistantButton";
+import { COMPANY } from "@/data/company-facts";
+import styles from "./not-found.module.css";
 
 export const metadata: Metadata = {
-    title: "404: Page Not Found",
-    description: "The page you are looking for does not exist. Return home or choose one of the useful links on this page.",
-    robots: { index: false, follow: true },
-    openGraph: { images: [] },
-    twitter: { images: [] },
+  title: "404: Page Not Found",
+  description: "This page isn't on our website. Explore our services, work and pricing, or return home.",
+  // null clears the layout's index/follow tags. Next.js adds its own <meta name="robots" content="noindex">
+  // to every 404 response, so a second tag here only duplicated it (owner, 10 Oct 2026).
+  robots: null,
+  openGraph: { images: [] },
+  twitter: { images: [] },
 };
-
+const destinations = [
+  { href: "/services", label: "Find help with your website", description: "New builds, improvements and moving platforms." },
+  { href: "/work", label: "Explore the websites we've built", description: "See the work and the story behind each project." },
+  { href: "/pricing", label: "See prices and what's included", description: "Build costs, agreed scope and ongoing care." },
+  { href: "/contact", label: "Talk through your idea", description: "Speak directly with the founders." },
+];
 export default function NotFound() {
-    return (
-        <main className="min-h-screen bg-paper flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
-            {/* Noise texture */}
-            <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none" />
-
-            {/* Huge serif background number */}
-            <h1 className="text-[10rem] md:text-[20rem] font-serif italic leading-none text-stone-200 select-none pointer-events-none">
-                404
-            </h1>
-
-            <div className="relative -mt-12 md:-mt-28 z-10 max-w-2xl">
-                <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">This Page Doesn&apos;t Exist</p>
-
-                <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-4 tracking-tight leading-tight">
-                    Let&apos;s get you <span className="font-serif italic text-cognac">back on track.</span>
-                </h2>
-
-                <p className="text-stone-600 max-w-lg mx-auto mb-10 text-base md:text-lg leading-relaxed">
-                    The address may have changed, or the page may no longer exist. Return home or choose a destination below.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                    <Link
-                        href="/"
-                        className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac hover:scale-105 transition-all"
-                    >
-                        Return Home <ArrowRight className="w-4 h-4" />
-                    </Link>
-                    <Link
-                        href="/free-audit"
-                        className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:border-cognac/30 hover:shadow-card transition-all"
-                    >
-                        Run Free Audit on Your Site
-                    </Link>
-                </div>
-
-                {/* Common destinations */}
-                <div className="pt-8 border-t border-stone-200">
-                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-stone-500 mb-4">Or maybe you were looking for</p>
-                    <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
-                        <Link href="/services/ecommerce" className="text-stone-600 hover:text-cognac transition-colors">Shopify Migration</Link>
-                        <Link href="/services/wordpress-migration" className="text-stone-600 hover:text-cognac transition-colors">WordPress Migration</Link>
-                        <Link href="/pricing" className="text-stone-600 hover:text-cognac transition-colors">Pricing</Link>
-                        <Link href="/work" className="text-stone-600 hover:text-cognac transition-colors">Project Evidence</Link>
-                        <Link href="/blog" className="text-stone-600 hover:text-cognac transition-colors">Blog</Link>
-                        <Link href="/manifesto" className="text-stone-600 hover:text-cognac transition-colors">Manifesto</Link>
-                    </div>
-                </div>
-            </div>
-        </main>
-    );
+  const legalName = COMPANY.find(fact => fact.label === "Legal name")!.value;
+  return <PreviewShell condensed showChrome={false} contentTag="div"><div className={styles.shell}>
+    <SiteNav />
+    <main className={styles.page}>
+      <div className={styles.wrap}><section className={styles.layout} aria-labelledby="not-found-title">
+        <div className={styles.copy}>
+          <p className={styles.code} aria-label="Error 404">404<span>Page not found</span></p>
+          <h1 id="not-found-title" className={styles.title}>This page isn&apos;t<br />on our website.</h1>
+          <p className={styles.description}>The link may have changed, or the page may have moved. Explore these pages to find what you need.</p>
+          <div className={styles.actions}><Link href="/" className={styles.home}>Return home <ArrowRight size={17} aria-hidden="true" /></Link><AskAssistantButton className={styles.assistant} /></div>
+        </div>
+        <nav aria-label="Useful destinations" className={styles.destinations}>
+          <h2>Let&apos;s find your next step.</h2>
+          <div className={styles.rows}>{destinations.map(({ href, label, description }, index) => <Link key={href} href={href} className={styles.destination}>
+            <span className={styles.index} aria-hidden="true">0{index + 1}</span>
+            <span><strong>{label}</strong><span className={styles.linkDescription}>{description}</span></span>
+            <ArrowUpRight className={styles.arrow} size={23} aria-hidden="true" />
+          </Link>)}</div>
+          <div className={styles.more}><Link href="/blog">Read the guides <ArrowUpRight size={14} aria-hidden="true" /></Link><Link href="/free-audit">Get a free website audit <ArrowUpRight size={14} aria-hidden="true" /></Link></div>
+        </nav>
+      </section></div>
+    </main>
+    <footer className={styles.footer}><div className={styles.footerInner}>
+      <Link href="/" className={styles.brand}>PandaCodeGen.</Link>
+      <p className={styles.legal}>© {new Date().getFullYear()} {legalName}</p>
+      <div className={styles.footerLinks}><Link href="/contact">Contact</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></div>
+    </div></footer>
+  </div></PreviewShell>;
 }

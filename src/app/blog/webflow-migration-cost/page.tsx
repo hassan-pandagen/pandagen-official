@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-25",
-        modifiedTime: "2026-09-18",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/webflow-migration-cost")],
@@ -70,7 +70,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-25",
-            dateModified: "2026-09-18",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -116,7 +116,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             datePublished: "2026-03-25",
-            dateModified: "2026-09-18",
+            dateModified: "2026-10-09",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -644,7 +644,7 @@ export default function WebflowMigrationCostPage() {
                     <BlogText>
                         A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. A refund is tied to
                         failure to deliver the signed scope, not a change of preference after work begins. Starter
-                        includes 15 business days of launch defect support; Growth and Scale include 30 business days.
+                        includes 15 calendar days of launch defect support; Growth and Scale include 30 calendar days.
                         Custom deliverables transfer after full payment under the contract. PandaCodeGen retains
                         reusable tools and pre-existing code, and third-party components keep their licenses.
                     </BlogText>

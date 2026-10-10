@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-14",
-        modifiedTime: "2026-10-03",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/what-is-headless-commerce")],
@@ -75,7 +75,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-14",
-            dateModified: "2026-10-03",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -121,7 +121,7 @@ const articleSchema = {
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             datePublished: "2026-03-14",
-            dateModified: "2026-10-03",
+            dateModified: "2026-10-09",
             inLanguage: "en-US",
         },
         {
@@ -206,6 +206,14 @@ export default function WhatIsHeadlessCommercePage() {
                             ]}
                         />
                     </section>
+
+                    <BlogText>
+                        Before you choose a platform, check{" "}
+                        <Link href="/blog/which-website-builders-can-go-headless" className="font-semibold text-cognac underline underline-offset-4">
+                            which website builders support headless commerce
+                        </Link>{" "}
+                        and what you would need to keep, connect or rebuild.
+                    </BlogText>
 
                     <div className="my-8 grid gap-4 sm:grid-cols-4">
                         {[
@@ -528,7 +536,7 @@ export default function WhatIsHeadlessCommercePage() {
                     </BlogText>
                     <BlogText>
                         A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to
-                        failure to deliver the signed scope. Where the accepted project terms record it, Starter includes 15 business days of launch defect support; Growth and Scale include 30. Performance acceptance applies only to the named pages,
+                        failure to deliver the signed scope. Where the accepted project terms record it, Starter includes 15 calendar days of launch defect support; Growth and Scale include 30. Performance acceptance applies only to the named pages,
                         profiles, environment, repeated runs, exclusions and remedy in the contract.
                     </BlogText>
 

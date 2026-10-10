@@ -1,0 +1,77 @@
+{
+  "checkedOn": "2026-10-09",
+  "build": "Next.js 16.3.8 production build passed; isolated .next-audit; Pagefind 103 blog and hub pages",
+  "unitTestsPassed": 80,
+  "requiredCheckPassed": true,
+  "structuralSeo": {
+    "urls": 158,
+    "failures": 0,
+    "warnings": 0
+  },
+  "interactiveWorkflows": {
+    "cases": 28,
+    "failures": 0,
+    "delivery": "mocked"
+  },
+  "accessibility": {
+    "workflowPages": 28,
+    "changedTemplateCases": 45,
+    "correctedHomepageCases": 10,
+    "detectedViolations": 0,
+    "certification": false
+  },
+  "layout": {
+    "initialChangedTemplateCases": 45,
+    "found": "320px homepage grid clipped its children even though document overflow was hidden",
+    "fixed": "Explicit grid-cols-1 plus min-w-0 children",
+    "correctedHomepageCases": 10,
+    "correctedSizes": {
+      "chromium": [
+        320,
+        360,
+        390,
+        768,
+        1024,
+        1440,
+        1920
+      ],
+      "webkit": [
+        320,
+        390,
+        1440
+      ]
+    }
+  },
+  "portfolio": {
+    "projects": 11,
+    "intervalMs": 2400,
+    "primaryLinks": "internal project records",
+    "placeholder": "A Step Above Medical / in progress"
+  },
+  "cmsRedirect": {
+    "source": "/services/sanity-development",
+    "destination": "/services/cms-development",
+    "status": 308
+  },
+  "googleAiProof": {
+    "passed": true,
+    "rows": 92,
+    "period": [
+      "2026-06-12",
+      "2026-09-11"
+    ],
+    "total": 9843,
+    "originalZipSHA256": "9cc7fcedd5ec12497aef8c2b164d3996f4cf98e7994c2659306813802d808519",
+    "publicJsonSHA256": "ea6312687e0f5c651b6d6a3d2487fd784bfb72ae8106e8f820ca7c874413ef6a"
+  },
+  "performance": {
+    "mobile": 75,
+    "desktop": 93,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "seo": 100,
+    "method": "One local Lighthouse observation per profile; not field data or an acceptance median",
+    "mobile90TargetMet": false
+  },
+  "deployed": false
+}

@@ -1,3 +1,4 @@
+import { POST_LAUNCH_SUPPORT } from "@/data/company-facts";
 // Centralized blog data - Add new posts here and they'll automatically appear in sitemap
 //
 // SERVER-ONLY: This module ships ~50KB of FAQ content per post when bundled to client.
@@ -272,7 +273,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "migration",
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "How much does it cost to migrate off Wix?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with complex work scoped separately. Final price depends on templates, content, CMS data, commerce, apps, integrations, redesign, SEO, accessibility, QA, cutover and support." },
       { question: "Can I export my Wix site and import it somewhere else?", answer: "Do not treat Wix as one universal full-site export. Wix currently documents separate export or transfer paths for CMS collections, contacts, physical products, orders and site ownership. Design, layout, app behavior, digital products and target compatibility need item-by-item discovery and may require rebuilding." },
@@ -297,7 +298,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "cost",
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "How much does it cost to migrate off WooCommerce to a custom site?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with commerce, subscriptions, regulated data and complex integrations potentially requiring custom scope. Final price follows the signed inventory and acceptance criteria." },
       { question: "Will I lose my SEO rankings during the migration?", answer: "Product and category URLs carry the revenue, so map those first and in full, including variations, out-of-stock items and paginated archives. Keep the product structured data matching what is visible on the page. Search engines control indexing and recovery timing, so the measurable goal is that nothing 404s and nothing loses its structured data, not a promised ranking." },
@@ -369,13 +370,13 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "cost",
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "How much does a custom website cost with PandaCodeGen in 2026?", answer: "PandaCodeGen's planning tiers begin at $1,500 for Starter and $3,500 for Growth, while Scale starts at $5,000. The accepted proposal or SOW sets the final price after the page, template, content, integration, data, migration, security, compliance, and acceptance scope is known." },
       { question: "What is included in a custom website starting at $5,000?", answer: "Scale can include a custom Next.js frontend, content editing, URL and metadata migration, redirects, integrations, responsive implementation, security and accessibility work, performance acceptance tests, staged launch, documentation, and support. Only the items in the accepted SOW are included; the tier itself is not a universal feature bundle." },
       { question: "Why is $5,000 a starting price instead of one fixed price?", answer: "Page count alone does not describe the work. Templates, content states, commerce, accounts, forms, data, CRM, tracking, consent, localization, search, third parties, migration history, and acceptance risk can change the scope. PandaCodeGen documents a fixed project quote or another agreed structure after discovery." },
       { question: "How do payment and refunds work?", answer: "A common payment structure is 30% at onboarding and 70% at the delivery milestone defined in the accepted terms, although another schedule can be agreed. Refund triggers, amount, cure process, cancellation, and work-in-progress treatment are contract-specific. The intended up-to-100% remedy applies when PandaCodeGen fails to deliver the signed scope under the agreement, not as an unconditional change-of-mind promise." },
-      { question: "What support is included?", answer: "Package discussions start with 15 business days for Starter and 30 business days for Growth and Scale. The accepted terms define the start event and coverage, normally defects in signed deliverables and stated minor adjustments. New features, extra pages, client changes, and third-party changes are separately scoped unless the agreement says otherwise." },
+      { question: "What support is included?", answer: `${POST_LAUNCH_SUPPORT} The accepted terms define coverage, normally defects in signed deliverables and stated minor adjustments. New features, extra pages, client changes, and third-party changes are separately scoped unless the agreement says otherwise.` },
       { question: "Do I own the code, and can I change providers?", answer: "The client keeps its content, data, brand assets, and client-controlled accounts. Rights in paid custom deliverables and repository transfer follow the accepted terms, normally after full payment. PandaCodeGen retains reusable internal tools, templates, methods, and pre-existing code; third-party components retain their original licenses." },
     ]
   },
@@ -497,7 +498,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "performance",
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       {
         question: "How long does it take to build a custom website in 2026?",
@@ -655,7 +656,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "code",
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "Who are the top Next.js development agencies in 2026?", answer: "This disclosed shortlist includes Bejamas, Blazity, Brainhub, FocusReactive, Naturaily, Netguru, Pagepro and PandaCodeGen. It is not an objective ranking. Compare each provider's current first-party evidence, assigned team, relevant references, scope, acceptance, ownership, support and current quote." },
       { question: "Which Next.js agency has the lowest published minimum project size?", answer: "PandaCodeGen publishes starting tiers of $1,500 Starter, $3,500 Growth and $5,000 Scale. The article does not claim that other providers' changing minimums or quotes are lower or higher. Obtain current like-for-like proposals before comparing price." },
@@ -754,7 +755,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "cost",
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "Can I build a website for free?", answer: "Some vendors offer no-cost or trial plans, but eligibility, branding, domains, features, usage and commercial terms differ. Infrastructure, domain, email, apps, payment, content, maintenance and internal time can still cost money. Check the current official plan and do not assume a personal free tier fits commercial use." },
       { question: "How much does a one-page website cost?", answer: "Price the actual copy, design states, form or payment flow, analytics, consent, accessibility, responsive behavior, integrations, QA, launch and support. PandaCodeGen's Starter planning anchor begins at $1,500, but the accepted scope determines whether a one-page project fits." },
@@ -853,7 +854,7 @@ export const blogPosts: BlogPost[] = [
       role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-      lastModified: "2026-10-08",
+      lastModified: "2026-10-09",
       faqs: [
         { question: "Is Pagepro a fit for a small business?", answer: "Ask Pagepro for a current written proposal for the exact scope. Company size alone does not establish fit. Compare engagement model, team, relevant evidence, price, timeline, acceptance, support, ownership, licensing and total operating cost." },
         { question: "How much does Pagepro charge?", answer: "This page does not repeat a third-party profile rate as a current Pagepro price. Request a dated written proposal and confirm whether it covers discovery, a fixed deliverable, time and materials, a retainer or dedicated capacity. Compare it only with equivalent scope." },
@@ -877,7 +878,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "How long does a website redesign take from start to launch?", answer: "A redesign is usually faster than a migration because the platform, the data and most of the URLs stay put. What sets the schedule is the number of distinct templates and the number of people who have to approve them. Two approvers and four templates is a different project from six approvers and fourteen templates, at the same page count." },
       { question: "How often should a business redesign its website?", answer: "There is no universal redesign cycle. Act when evidence shows the experience, accessibility, content system or brand no longer meets current requirements and a redesign is the smallest sufficient intervention. Site age alone is not a business case." },
@@ -901,7 +902,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "Is hiring a cheap web developer safe for my business website?", answer: "It can be, and the price is not what tells you. What tells you is whether you can point at a deliverable when each payment falls due, whether the contract says who owns the code and the accounts, and whether the developer can show you finished work rather than a capability list. Cheap and careful exist together; cheap and undefined do not." },
             {
@@ -958,7 +959,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'migration',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "How much does a website migration cost in 2026?", answer: "It depends on the job. Moving the same site to a new host is often free or a small fixed fee from the new host. Moving to a different platform is a rebuild, priced on the pages, templates, data and integrations that have to move and on whether your URLs must survive. PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale. These are PandaCodeGen planning anchors, not market averages." },
       { question: "Why can two migration quotes differ so much?", answer: "The quotes may cover different inventories, design changes, content work, integrations, accessibility, SEO safeguards, testing, governance, ownership or support. Normalize the statements of work before attributing the difference to markup or quality." },
@@ -1010,7 +1011,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'webflow',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-09",
     cardStat: "Jan 29",
     cardStatLabel: "Webflow User Accounts sunset",
     faqs: [
@@ -1037,7 +1038,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "How much does a website rebuild cost in 2026?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale. A rebuild can require custom scope when strategy, content, applications, data, compliance or governance expands. Final price belongs to a signed statement of work." },
       { question: "What's the difference between a website rebuild, a redesign, and a migration?", answer: "A redesign changes the experience while retaining the current platform. A migration changes the platform while preserving much of the approved structure and experience. A rebuild changes the platform and materially reworks the structure, experience or content system." },
@@ -1122,7 +1123,7 @@ export const blogPosts: BlogPost[] = [
     cardStat: "6.7x",
     cardStatLabel: "ChatGPT revenue vs Google Ads, same six months",
     title: "ChatGPT Out-Earned Our Google Ads by 6.7x: Six Months of AI Referral Revenue",
-    excerpt: "First-party data from a founder-affiliated store. 760 orders, $271,620.61, and a per-assistant breakdown of what ChatGPT, Claude, Perplexity, Gemini and Google AI Overview actually produced.",
+    excerpt: "First-party data from a founder-affiliated store. 760 orders, $271,620.61, and recorded revenue attributed to ChatGPT, Claude, Perplexity, Gemini and Google AI Overview.",
     category: "Research",
     readTime: "11 min",
     date: "Aug 18",
@@ -1130,9 +1131,9 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'aicommerce',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
-      { question: "Do AI assistants like ChatGPT actually generate sales?", answer: "Yes, measurably. Across 1 March to 18 August 2026, a store we operate recorded 63 orders worth $16,783.76 attributed to AI assistants, out of 760 orders and $271,620.61 total. That is 6.2% of all revenue, or 9.2% of acquisition revenue once repeat orders are excluded. ChatGPT alone produced $11,614.78. This is one business in one vertical, so it is evidence that it happens, not a benchmark for your business." },
+      { question: "Do AI assistants like ChatGPT actually generate sales?", answer: "This store recorded sales attributed to AI discovery using captured referrers and customer-declared sources. Across 1 March to 18 August 2026, a store we operate recorded 63 orders worth $16,783.76 attributed to AI assistants, out of 760 orders and $271,620.61 total. That is 6.2% of all revenue, or 9.2% of acquisition revenue once repeat orders are excluded. Recorded revenue attributed to ChatGPT was $11,614.78. This is one business in one vertical, so it is evidence that it happens, not a benchmark for your business." },
       { question: "Why do most businesses report almost no AI traffic?", answer: "Referrer-only tracking can miss AI-assisted discovery. Links and clients can carry referrers or campaign parameters, while later direct visits and brand searches may lose that context. This does not establish the size of an unmeasured audience. A business measuring referrer alone will see close to zero and conclude AI sends no traffic. We capture referrer where it survives and ask the customer where it does not, which is the only reason these numbers are not zero." },
       { question: "How much revenue did ChatGPT generate compared to Google Ads?", answer: "ChatGPT produced $11,614.78 from 51 orders. Google Ads produced $1,733.35 from 5 orders. That is 6.7 times more revenue from ChatGPT, from a channel with no ad spend attached to it, over the same six-month window in the same store." },
       { question: "Which AI assistant sends the most valuable customers?", answer: "By volume, ChatGPT, with 51 of the 63 AI-attributed orders. By order value, Claude, at an average order value of $630.00 against a site average of $357.40. That Claude figure rests on four orders, which is far too small a sample to rely on, and it is reported here with the sample size attached rather than as a finding." },
@@ -1268,7 +1269,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'webflow',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "Can I export my Wix website to another platform?", answer: "Wix documents separate export or transfer paths for some assets, including CMS collections, contacts, physical products, orders and site ownership. There is no single universal export that reproduces every page, design and app behavior on another platform. Inventory each content and data type before estimating migration." },
       { question: "How much does it cost to migrate from Wix to a custom website?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with custom scope where needed. Final price depends on pages, templates, CMS data, commerce, apps, design, integrations, SEO, accessibility, QA, launch and support." },
@@ -1317,7 +1318,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'ranking',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "Who is the best custom web development agency in the USA for 2026?", answer: "There is no objective best agency for every project. Match the provider to the platform, migration, commerce, brand, editorial or product problem, then verify the assigned team, comparable work, references, scope, acceptance, ownership, support and current terms." },
       { question: "How much does a custom web development agency in the USA charge?", answer: "Price depends on pages, content, design, data, integrations, accessibility, SEO, security, QA, launch and support. PandaCodeGen publishes $1,500 Starter, $3,500 Growth and $5,000 Scale starting tiers. Other providers must be compared through current like-for-like proposals, not an undated market average." },
@@ -1367,7 +1368,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "Why is my Wix website slow?", answer: "Possible causes include heavy pages, media, fonts, animation, apps, custom code, third parties, redirects, consent state and platform-controlled work. Segment Wix field data where available and reproduce the affected route with controlled lab tests before assigning a cause." },
       { question: "What PageSpeed score does a Wix site get?", answer: "There is no defensible universal Wix score. Lighthouse results vary by URL, content, device, network, test version and run. Use field Core Web Vitals for real-user experience where data exists and repeat lab tests under recorded conditions for diagnosis." },
@@ -1466,7 +1467,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'webflow',
-    lastModified: "2026-09-18",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "How do I decide between Webflow and a custom website?", answer: "Compare the actual editing workflow, required features, ownership and portability, and complete lifecycle responsibility. Choose Webflow when its managed visual system fits; optimize it when the platform fits but implementation does not; choose custom when verified requirements justify added engineering ownership." },
       { question: "Is Webflow good enough for a small business, or do I need custom code?", answer: "Webflow can be a strong fit when visual production, its CMS and supported features meet the requirements and the current cost is acceptable. Business size or traffic alone does not decide. Custom becomes relevant when specific data, experience, integration, portability or release needs justify it." },
@@ -1532,7 +1533,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-10-04",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "Why is my WooCommerce store slow?", answer: "The cause may be hosting, caching, extensions, theme code, media, database work, third parties or background operations. Use real-user field data, controlled lab tests, server traces and transaction checks to isolate the affected layer before changing architecture." },
       { question: "What PageSpeed score should WooCommerce aim for?", answer: "There's no universal platform score. A Lighthouse score of 90 or above is the tool's good-score band, not a Google ranking threshold. Contractual targets should name representative pages, profiles, environment and repeated runs while field Core Web Vitals track real-user experience." },
@@ -1559,7 +1560,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'migration',
-    lastModified: "2026-09-18",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "How much does Webflow migration cost in 2026?", answer: "PandaCodeGen's planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with custom work scoped separately. Final price depends on templates, CMS, export gaps, content, integrations, SEO, accessibility, QA, cutover and support." },
       { question: "What factors increase the cost of a Webflow migration project?", answer: "Unique templates, CMS relationships, localization, interactions, ecommerce, membership, forms, search, integrations, content cleanup, redesign, accessibility, security, SEO, compressed schedules and additional reviewers can all expand scope. Quantify them from the live inventory." },
@@ -1584,7 +1585,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'migration',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "How much does a WordPress to Next.js migration cost in 2026?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with complex commerce and application work scoped separately. Final price follows the accepted URL, template, content, plugin, data, integration, quality, cutover and support scope." },
       { question: "How long does a WordPress to Next.js migration take?", answer: "A host transfer can be same-day. A platform rebuild is weeks, and MyCustomPatches, an owner-confirmed PandaCodeGen delivery example, completed in about 22 days. That is one project, not a standard, and the variable is template count and content readiness rather than page count. The existing site stays live until cutover." },
@@ -1729,7 +1730,7 @@ export const blogPosts: BlogPost[] = [
     id: "how-to-migrate-wordpress-to-nextjs",
     cardStat: "22 days",
     cardStatLabel: "Owner-confirmed MyCustomPatches delivery example",
-    title: "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
+    title: "WordPress to Next.js Migration: Protecting SEO (2026)",
     excerpt: "A WordPress to Next.js migration guide covering content export, URL inventory, 301 redirect mapping, SEO preservation, staged QA, Google Search Console monitoring, and a controlled cutover.",
     category: "WordPress",
     readTime: "17 min",
@@ -1738,7 +1739,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'performance',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "How long does it take to migrate WordPress to Next.js?", answer: "Weeks, and the schedule is set by how many distinct templates your theme actually renders rather than by post count. Content moves in bulk through the REST API or an export; templates are rebuilt one at a time. Plugin-provided functionality is the wildcard, because each one has to be replaced or deliberately dropped." },
       { question: "Will I lose my Google rankings when migrating from WordPress to Next.js?", answer: "WordPress permalinks can usually be reproduced exactly in Next.js, so this migration can be near-neutral on addresses if you decide to keep them. Most losses come from the rendering change instead: check that every template ships its content in the initial HTML rather than assembling it client-side, and compare a representative page's rendered output on both sides." },
@@ -1760,7 +1761,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'performance',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "Is WordPress or Next.js better for SEO?", answer: "Neither framework guarantees better SEO. Both can produce crawlable, indexable, fast pages or serious technical defects. Compare content workflow, rendered output, URL control, canonicals, structured data, internal links, performance, security, maintenance, and team capability for the actual requirements." },
       { question: "How much faster is Next.js than WordPress?", answer: "There is no universal difference. Compare representative routes with the same content, features and third parties using field data where available and repeated lab tests under recorded conditions. WordPress and Next.js performance both depend on implementation, infrastructure and operations." },
@@ -1826,7 +1827,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'saas',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "What is white-label web development?", answer: "It is a delivery arrangement in which an agency leads the client relationship while another team performs defined development work. Branding, disclosure, access, confidentiality, ownership and support must be written into the partner and client terms." },
       { question: "What margin can an agency make?", answer: "There is no promised margin. Use the partner's project-specific quote, then price your sales, strategy, creative, management, revisions, risk, tax, payment fees and support. The agency controls its retail price and remains responsible for its own economics." },
@@ -1849,7 +1850,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'code',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "Why does PandaCodeGen choose Next.js for some migrations?", answer: "It can provide deliberate rendering, routing, data and deployment control when those capabilities match the brief. The decision follows measurable requirements and operating ownership. It is not based on a claim that every Next.js site is fast or every WordPress site is slow." },
       { question: "When is WordPress the better choice?", answer: "WordPress can be the better fit when its editing workflow, ecosystem and maintained extensions serve the required capabilities and the team can operate updates, security and performance. Repairing a suitable implementation may be lower risk than migrating." },
@@ -1939,8 +1940,8 @@ export const blogPosts: BlogPost[] = [
     id: "wordpress-plugin-security-2026",
     cardStat: "7",
     cardStatLabel: "plugin editions under one slug, six patched with no advisory",
-    title: "WordPress Plugin Security in 2026: Speed Is the Only Real Defence",
-    excerpt: "Within ten days in August 2026, attacks on a critical authentication bypass in a WordPress SSO plugin were reported and a critical remote code execution was patched in Next.js. Nothing on the internet is secure. What a site owner controls is how fast a fix lands, and this is what that difference actually looked like.",
+    title: "WordPress Plugin Security in 2026: Checks, Patching & Recovery",
+    excerpt: "Compare WordPress plugin and Next.js security incidents: affected-version checks, timely updates, account protection and recovery planning for website owners.",
     category: "WordPress",
     readTime: "11 min",
     date: "Aug 27",
@@ -1948,7 +1949,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'security',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "What is CVE-2026-32475 in Elementor Pro?", answer: "An unauthenticated arbitrary file upload in Elementor Pro, scored 9.0 on its CVE record and 9.8 by Wordfence, affecting versions up to and including 4.2.1 and fixed in 4.2.2. A site is reachable only if it has a published Form widget with at least one File Upload field not marked as required, which is the default. The submission is sent as an array where the first element is empty and the second carries a PHP payload, which bypasses validation; the file lands in /wp-content/uploads/elementor/forms/ under a random name with the attacker-supplied .php extension and can then be requested directly. Patchstack and Wordfence published it on 19 August 2026, the day Elementor released 4.2.2, and exploitation began the same day. By 2 September Wordfence had blocked more than 190,000 attempts, most of them between 19 and 23 August. Wordfence puts Elementor Pro at more than six million installations. Checked 8 October 2026." },
       { question: "What is CVE-2026-14894 in Super Forms?", answer: "An unauthenticated arbitrary file upload in the Super Forms drag and drop form builder, scored CVSS 9.8, affecting versions up to and including 6.3.313 and fixed in 6.3.314. A public AJAX endpoint performed neither file-type validation nor a capability check, so an unauthenticated attacker could write an executable PHP file and reach remote code execution. Super Forms 6.3.314 shipped on 8 July 2026 and Wordfence published the advisory on 9 July. Attacks began on 14 July and were heaviest between 18 and 25 August, peaking above 40,000 requests in a single day, with more than 250,000 attempts blocked. Checked 8 October 2026." },
@@ -2312,7 +2313,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'sales',
-    lastModified: "2026-10-03",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "Is headless commerce worth it?", answer: "For most stores, no. Headless buys you control of the storefront and costs you the theme editor and an ongoing engineering commitment. It is worth it when you can name a requirement the theme demonstrably cannot meet after you have actually tried, when somebody will own the storefront application after launch, and when the people who run campaigns can still change a page without filing a ticket. Two out of three is not enough, and the third is where these projects quietly fail. The same budget spent on the existing theme, its images, its app load and its data layer usually moves the numbers further and adds nothing to maintenance." },
       {
@@ -2366,7 +2367,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "migration",
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-09",
     faqs: [
       { question: "Can I export my Wix website?", answer: `Not as a working site. ${portable('wix', 'design')} What does export, according to Wix's help center as read on ${PORTABILITY_CHECKED_LABEL}: CMS collections, physical products, contacts and orders. ${portable('wix', 'posts')}` },
       { question: "Can I move my website from Squarespace to another platform?", answer: `Partly. ${portable('squarespace', 'design')} ${portable('squarespace', 'pages')} ${portable('squarespace', 'posts')} Products, contacts and orders export to CSV separately.` },

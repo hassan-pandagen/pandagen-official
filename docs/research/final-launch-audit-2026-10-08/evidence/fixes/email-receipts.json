@@ -1,0 +1,18 @@
+{
+  "status": 200,
+  "matchingTests": [
+    {
+      "id": "01a11c71-5638-7381-9298-a819462b14f4",
+      "created_at": "2026-10-08 16:55:52.274000+00",
+      "subject": "New website request from FINAL LAUNCH QA - ignore this test",
+      "last_event": "delivered"
+    },
+    {
+      "id": "01a11c6c-60b5-7d67-959f-da99a3da4e04",
+      "created_at": "2026-10-08 16:50:27.284000+00",
+      "subject": "New website request from FINAL LAUNCH QA - ignore this test",
+      "last_event": "delivered"
+    }
+  ],
+  "note": "Filtered provider receipt data only; no other emails retained."
+}

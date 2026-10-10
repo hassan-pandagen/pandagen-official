@@ -1,0 +1,3504 @@
+[
+  {
+    "route": "/blog/aeo-playbook-built-into-every-website",
+    "historicalRoute": true,
+    "beforeTitle": "[dynamic]",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "AEO Playbook: Build Eligibility for AI Search and Citations",
+        "line": 175
+      }
+    ],
+    "currentTitle": "AEO Playbook: How to Get Your Site Quoted by AI Search",
+    "currentH1": [
+      "AEO Playbook: Build Eligibility for AI Search and Citations"
+    ],
+    "currentOpening": [
+      "Eleven controls you can apply: make sure crawlers can reach your pages, write content that answers something, mark it up so machines can read it, and measure what happens. Together they make you eligible to be picked, and let you see what is going on. Nothing you build can guarantee you get included, ranked, sent traffic, or quoted. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.",
+      "Hassan is PandaCodeGen's Co-founder and Lead Engineer. He works on making sure search engines and AI assistants can actually read a site, and that what they read is backed by evidence. Any AI referral described here is a dated first-party observation, not a citation guarantee."
+    ],
+    "currentSectionHeadings": [
+      "Where to Start if You Are Behind on Both",
+      "What AEO Actually Means, and What It Does Not",
+      "What Counts as Evidence",
+      "What a Citable Passage Actually Looks Like",
+      "The Controls We Build In, and When Each One Applies",
+      "Can you pay ChatGPT to recommend your business?",
+      "Do AI crawlers run JavaScript?",
+      "How to Read Search Console Evidence",
+      "What This Means If You Are Building a New Website",
+      "What We Now Bake Into Every Build",
+      "PandaCodeGen AEO Implementation Service",
+      "Frequently Asked Questions About AEO",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/aeo-web-performance-glossary",
+    "historicalRoute": true,
+    "beforeTitle": "AEO & Web Performance Glossary: [dynamic] Terms Defined (2026)",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "The AEO &amp; Web Performance Glossary",
+        "line": 274
+      }
+    ],
+    "currentTitle": "AEO & Web Performance Glossary: 26 Terms Defined (2026)",
+    "currentH1": [
+      "The AEO & Web Performance Glossary"
+    ],
+    "currentOpening": [
+      "Search, AI answers, page speed and whether a bot can read your site all get talked about as if one trick fixes them all. It does not. This source-linked glossary explains 26 terms, how they connect, and where the evidence stops.",
+      "Start with three questions. Can the crawlers that matter actually fetch your important content? Does the page answer a real question, with something to back it up? And do your real-user numbers and your lab numbers both say the experience is decent? Getting those right makes you eligible. It does not guarantee you a ranking or a citation. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code."
+    ],
+    "currentSectionHeadings": [
+      "AI Search & Answer Engines",
+      "Rendering & Crawlability",
+      "Structured Data & Entities",
+      "Web Performance",
+      "Primary references checked October 8, 2026",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/agentic-browsing-pagespeed-score",
+    "historicalRoute": true,
+    "beforeTitle": "Lighthouse Agentic Browsing Checks Explained (2026)",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Lighthouse Agentic Browsing Checks: What They Actually Prove",
+        "line": 150
+      }
+    ],
+    "currentTitle": "Lighthouse Agentic Browsing Score: The 3 Checks and Fixes",
+    "currentH1": [
+      "Lighthouse Agentic Browsing Checks: What They Actually Prove"
+    ],
+    "currentOpening": [
+      "In May 2026 the Chrome team documented an experimental Lighthouse category called Agentic Browsing. It does not give you a 0-to-100 score. It tells you how many checks passed out of how many, and what each one found. This guide covers what those checks actually measure, and what they cannot tell you: whether you will rank, whether an AI will recommend you, whether people will complete a purchase, or whether you will sell more.",
+      "Hassan builds and migrates Next.js sites, and writes down how rendering, accessibility, layout stability and performance get signed off."
+    ],
+    "currentSectionHeadings": [
+      "What Is Agentic Browsing?",
+      "What Google Actually Scores Today",
+      "Does Being AI-Readable Actually Lead to Sales?",
+      "What Is WebMCP, and Why Is It “Not Applicable”?",
+      "The Honest Truth About llms.txt",
+      "How do you check your own score, and your competitor's?",
+      "Why fix this one before the performance score?",
+      "Which three checks make up the score?",
+      "What does “well-formed” actually mean?",
+      "What the standard says, as opposed to the audit",
+      "Who reads the tree, besides screen readers?",
+      "How do you fix each of the three?",
+      "How to Test and Resolve the Current Checks",
+      "What to Do Now",
+      "The Bottom Line",
+      "Primary references checked July 31, 2026",
+      "Frequently Asked Questions",
+      "Related Reading",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/ai-built-website-checklist",
+    "historicalRoute": true,
+    "beforeTitle": "AI-Built Website Checklist: 8 Practical Checks",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "AI-Built Website Checklist: 8 Checks Before Launch and After Changes",
+        "line": 147
+      }
+    ],
+    "currentTitle": "AI-Built Website Checklist: 8 Practical Checks",
+    "currentH1": [
+      "AI-Built Website Checklist: 8 Checks Before Launch and After Changes"
+    ],
+    "currentOpening": [
+      "An AI website builder can get your small business online, connect services and help you test the result. Some now monitor published sites and alert you to problems. The useful question is what those checks cover on your site, and whether the enquiry, booking or purchase your customer started actually completed.",
+      "Hassan builds websites, online stores and custom software at PandaCodeGen. We sell development services; this guide includes the checks you can complete yourself without hiring anyone."
+    ],
+    "currentSectionHeadings": [
+      "Choose the checks that apply to your site",
+      "1. Check the offer and the next action",
+      "2. Follow an enquiry through to the person answering it",
+      "3. Test payments and refunds in the provider's test environment",
+      "4. Check account access with test users",
+      "5. Complete the main task on mobile and with a keyboard",
+      "6. Check the pages you want search engines to find",
+      "7. Reconcile measurement with business records",
+      "8. Confirm who notices a failure and how you recover",
+      "What current AI builders already check",
+      "Why we check beyond the success screen",
+      "When to repeat the checks",
+      "Frequently Asked Questions",
+      "Not sure whether your site passes?",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/ai-referral-revenue-2026",
+    "historicalRoute": true,
+    "beforeTitle": "ChatGPT Out-Earned Our Google Ads by [dynamic]x: Six Months of AI Referral Revenue",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "ChatGPT out-earned our Google Ads by [dynamic]x",
+        "line": 139
+      }
+    ],
+    "currentTitle": "ChatGPT Out-Earned Our Google Ads by 6.7x: Six Months of AI Referral Revenue",
+    "currentH1": [
+      "ChatGPT out-earned our Google Ads by 6.7x"
+    ],
+    "currentOpening": [
+      "Over 1 March to 18 August 2026, a store we operate took 760 orders worth $271,620.61. ChatGPT accounted for $11,614.78 of it and Google Ads for $1,733.35. AI assistants together produced 63 orders and $16,783.76, which is 6.2% of all revenue.",
+      "Panda Patches is founder-affiliated. Owned and operated by a PandaCodeGen co-founder. We publish the relationship because it changes how you should read the numbers. Figures read on 2026-08-18."
+    ],
+    "currentSectionHeadings": [
+      "Why almost nobody else can publish this",
+      "Revenue by source, 1 March to 18 August 2026",
+      "What each AI assistant produced",
+      "The channels that produced nothing",
+      "Google's own instrument agrees",
+      "What a customer actually typed",
+      "How this compares to the one large study that exists",
+      "What this does not establish",
+      "What we would do with this if it were your business",
+      "Can your site tell you this?",
+      "Frequently asked questions",
+      "Method",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/ai-search-visibility-tracking",
+    "historicalRoute": true,
+    "beforeTitle": "AI Visibility Tracking: What 77 Pages and 6,700 AI Impressions Showed",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "AI visibility tracking: what 77 pages and 6,700 AI impressions showed",
+        "line": 126
+      }
+    ],
+    "currentTitle": "AI Visibility Tracking: What 77 Pages and 6,700 AI Impressions Showed",
+    "currentH1": [
+      "AI visibility tracking: what 77 pages and 6,700 AI impressions showed"
+    ],
+    "currentOpening": [
+      "Seventy-seven pages, 6,700 AI impressions over 88 days, and AI impressions were concentrated on a few pages. Across matching URLs, AI impressions and ordinary search clicks were positively correlated; this is not a comparison of ranking positions. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.",
+      "This guide is one of 11 in SEO and AI Search Guides. That page collects the whole topic in one place, in reading order."
+    ],
+    "currentSectionHeadings": [
+      "Method and source data",
+      "How do you track AI visibility without buying a tool?",
+      "What does the Generative AI report actually show?",
+      "How concentrated is AI visibility, really?",
+      "Does AI visibility follow ordinary search performance?",
+      "Is an AI impression the same as being mentioned?",
+      "Why does the query report show fewer clicks than the pages report?",
+      "Can you see the machine's own queries in Search Console?",
+      "How should you read your own numbers?",
+      "What this measurement cannot tell you",
+      "What we do with this",
+      "Want this read on your own property?",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/best-website-builder-for-gohighlevel-agencies",
+    "historicalRoute": true,
+    "beforeTitle": "[dynamic]",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Best Website Builder for GoHighLevel Agencies in 2026",
+        "line": 167
+      }
+    ],
+    "currentTitle": "Best Website Builder for GoHighLevel Agencies in 2026",
+    "currentH1": [
+      "Best Website Builder for GoHighLevel Agencies in 2026"
+    ],
+    "currentOpening": [
+      "This guide compares GHL Native, Simvoly, SiteSwan, Duda, Webflow, and custom Next.js without assigning invented platform-wide speed scores. HighLevel's own pricing page and the other vendor pages were all rechecked on October 8, 2026. Performance and cost still require a representative site, recorded test profile, current quote, and defined ownership requirements.",
+      "A GoHighLevel agency may use GHL as its CRM and automation layer while choosing a separate public-site frontend. Compare six things: editor workflow, integration path, rendering and performance under the real workload, white-label controls, total operating cost, and what can be transferred when the relationship ends."
+    ],
+    "currentSectionHeadings": [
+      "What GoHighLevel Agencies Need from a Website Builder",
+      "When to Compare GHL Native with a Separate Frontend",
+      "Best Website Builders for GoHighLevel Agencies Compared",
+      "GoHighLevel Native Builder for Lead-Gen and Automation Agencies",
+      "Simvoly for White-Label SaaS-Mode GHL Agencies",
+      "SiteSwan for Local Web Design GHL Resellers",
+      "Duda for Managed Service GHL Agencies",
+      "Webflow for Design-Forward GHL Agencies",
+      "Custom-Coded Next.js for Premium GHL Agencies",
+      "Website Builder Pricing for a Single GHL Client Site (3 Years)",
+      "How to Choose the Right Website Builder for Your GHL Agency",
+      "Before you decide, three adjacent questions",
+      "The Verdict on the Best Website Builder for GoHighLevel Agencies",
+      "Primary vendor references, rechecked October 8, 2026",
+      "Frequently Asked Questions About Website Builders for GoHighLevel Agencies",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/build-vs-buy-software-2026-cost-comparison",
+    "historicalRoute": true,
+    "beforeTitle": "Build vs Buy Software 2026: A Cost Framework",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Should You Build or Buy Software in 2026? Use the Full-Cost Test",
+        "line": 136
+      }
+    ],
+    "currentTitle": "Build vs Buy Software 2026: A Cost Framework",
+    "currentH1": [
+      "Should You Build or Buy Software in 2026? Use the Full-Cost Test"
+    ],
+    "currentOpening": [
+      "There is no monthly SaaS bill that automatically makes building your own software cheaper. The only way to know is to put a dated quote from your current vendor next to what a build would really cost: the work itself, moving your data, hosting, support, keeping it secure, and getting your team to use it. Then run those numbers again for a good year and a bad one.",
+      "Hassan scopes custom CRMs, dashboards and operations tools only after writing down how you work today, what it costs you, what could go wrong, and who ends up owning it."
+    ],
+    "currentSectionHeadings": [
+      "The Scenario Test That Replaces a Spend Threshold",
+      "The three scenarios, and where they cross",
+      "How to price a CRM decision: what to collect before you compare",
+      "The AI Caveat: Why Cheap-to-Build Is Not the Same as Build-It-Yourself",
+      "When Buying Still Wins (Be Honest About This)",
+      "Mutable vendor references checked October 8, 2026",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/cheap-web-developer",
+    "historicalRoute": true,
+    "beforeTitle": "[dynamic]",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Cheap Web Developer: How to Hire Without Getting Burned",
+        "line": 140
+      }
+    ],
+    "currentTitle": "Cheap Web Developer: How to Hire Without Getting Burned (2026)",
+    "currentH1": [
+      "Cheap Web Developer: How to Hire Without Getting Burned"
+    ],
+    "currentOpening": [
+      "Price on its own tells you nothing about quality. The better question is whether two quotes even cover the same work: the same pages, the same features, the same care over migration, the same security and accessibility checks, the same way of measuring performance, the same ownership at the end, the same support, and the same third-party costs. This guide gives you the questions to ask and the evidence to request before you pay a deposit. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.",
+      "Hassan scopes WordPress, Webflow and GoHighLevel migrations with your search traffic in mind, and writes down the acceptance conditions before anyone starts building."
+    ],
+    "currentSectionHeadings": [
+      "What Does “Cheap Web Developer” Mean in 2026?",
+      "Where Affordable Website Developers Advertise",
+      "Which Kind of Developer the Job Needs",
+      "Developer, Website Builder, or an AI Site Generator?",
+      "Can ChatGPT build me a website?",
+      "How to Verify a Cheap Web Developer’s Portfolio",
+      "How we label our own project evidence",
+      "What Must Be in the Scope of Work?",
+      "Performance, SEO, Accessibility, and Security Checks",
+      "Ownership, Refunds, and Support",
+      "Fixed Price vs Hourly Billing",
+      "Payments, Milestones and the Final Handover",
+      "The Costs That Arrive After the Invoice",
+      "Red Flags When Hiring an Affordable Developer",
+      "How PandaCodeGen’s Starting Tiers Work",
+      "Primary references checked October 8, 2026",
+      "Related reading",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/cloudflare-emdash-wordpress-replacement",
+    "historicalRoute": true,
+    "beforeTitle": "Cloudflare EmDash vs WordPress in 2026: Readiness Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Is Cloudflare EmDash a WordPress Replacement?",
+        "line": 213
+      }
+    ],
+    "currentTitle": "Cloudflare EmDash vs WordPress in 2026: Readiness Guide",
+    "currentH1": [
+      "Is Cloudflare EmDash a WordPress Replacement?"
+    ],
+    "currentOpening": [
+      "Cloudflare calls EmDash the spiritual successor to WordPress. When we first wrote this guide in April it was a beta preview. It isn't anymore: EmDash 1.0 shipped on 28 September 2026, and Cloudflare says it is \"ready to power a production website\". Version 1.1 followed on 1 October and version 1.2.0 on 6 October. Stable software and a mature ecosystem are different things, though. The new plugin registry listed 38 entries on 4 October, and EmDash runs only inside Astro, so it is not an option for a Next.js site. Here is how to compare EmDash, WordPress and a custom rebuild on the evidence. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.",
+      "Updated October 8, 2026 for EmDash 1.2. Release figures were read from npm that day; repository and registry figures from GitHub's public API and the EmDash plugin registry on October 4. Anyone can repeat the check."
+    ],
+    "currentSectionHeadings": [
+      "What Cloudflare actually launched",
+      "Is EmDash an April Fools joke?",
+      "What the plugin-security claim means",
+      "The EmDash plugin registry",
+      "EmDash vs WordPress is a requirements comparison",
+      "Is EmDash production ready in 2026?",
+      "Who runs EmDash today",
+      "Does EmDash work with Next.js?",
+      "Is EmDash locked to Cloudflare?",
+      "Google updates do not turn this into an emergency migration",
+      "When keeping WordPress may be the right decision",
+      "When to pilot EmDash or consider a custom rebuild",
+      "A migration plan that protects search visibility",
+      "What Cloudflare EmDash means for WordPress in 2026",
+      "Cloudflare EmDash vs WordPress in one minute",
+      "Get a migration plan before choosing the platform",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/cms-market-share-2026",
+    "historicalRoute": true,
+    "beforeTitle": "CMS Market Share 2015 to 2026: WordPress Peaked in [dynamic]",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "CMS market share, 2015 to 2026: WordPress peaked in [dynamic]",
+        "line": 159
+      }
+    ],
+    "currentTitle": "CMS Market Share 2015 to 2026: WordPress Peaked in 2022",
+    "currentH1": [
+      "CMS market share, 2015 to 2026: WordPress peaked in 2022"
+    ],
+    "currentOpening": [
+      "WordPress reached 65.2% of measured sites in 2022 and sits at 58.6% in the October 2026 reading, 6.6 points below its own high. The share it lost did not go where most people assume, and the platform most often described as the future has not moved in three readings. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.",
+      "Figures read from the source table on 2026-10-08. Method and limits are stated in full at the end, because a market-share number without them is decoration."
+    ],
+    "currentSectionHeadings": [
+      "The numbers",
+      "What actually moved",
+      "WordPress did not lose to the builders. Joomla and Drupal did",
+      "Webflow has not moved in three readings",
+      "Shopify is the outlier",
+      "One year in this series behaves oddly, and we are not going to hide it",
+      "How to actually use a market-share number",
+      "The question this data does not answer",
+      "What this cannot tell you",
+      "Method and source",
+      "Deciding whether to move off one of these?",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/core-web-vitals-explained",
+    "historicalRoute": true,
+    "beforeTitle": "Core Web Vitals Explained: A 2026 Business Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Core Web Vitals Explained: A 2026 Business Guide",
+        "line": 159
+      }
+    ],
+    "currentTitle": "Core Web Vitals Explained: A 2026 Business Guide",
+    "currentH1": [
+      "Core Web Vitals Explained: A 2026 Business Guide"
+    ],
+    "currentOpening": [
+      "LCP, INP, and CLS measure real user experience. They do not provide a universal revenue calculator, a guaranteed ranking change, or a platform score ceiling. This guide separates what the metrics prove from what your own data still has to establish.",
+      "Two people on Reddit in 2026, in their own words: a site owner whose clicks stalled at the bottom of page one, and an SEO asking whether chasing Core Web Vitals is worth it for a small site. Each quote links to the original thread so you can read the full discussion."
+    ],
+    "currentSectionHeadings": [
+      "The answer in one minute",
+      "What the three Core Web Vitals measure",
+      "Field data and lab data answer different questions",
+      "Are Core Web Vitals still relevant in 2026?",
+      "What Core Web Vitals mean for SEO",
+      "What Core Web Vitals mean for revenue",
+      "Why a site can fail after an optimization",
+      "Does the website platform set a fixed ceiling?",
+      "A defensible performance acceptance test",
+      "Primary sources used for this guide",
+      "Book a call with the founders",
+      "Related reading",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/custom-website-5000-whats-included",
+    "historicalRoute": true,
+    "beforeTitle": "Custom Website Starting at $5,000: Scope Guide (2026)",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "What a Custom Website Starting at $5,000 Includes",
+        "line": 152
+      }
+    ],
+    "currentTitle": "Custom Website Starting at $5,000: Scope Guide (2026)",
+    "currentH1": [
+      "What a Custom Website Starting at $5,000 Includes"
+    ],
+    "currentOpening": [
+      "An agency that bills by the hour can only sell you the hours a budget buys. PandaCodeGen quotes the site: a custom Next.js site of up to 7 pages for a small business starts at $1,500, an 8 to 20 page site with a CMS and every old link forwarded starts at $3,500, and the Scale tier this guide covers starts at $5,000, for more than 20 pages, a large catalogue, subscriptions or custom commerce logic, or more than one language. Every tier is fixed for the written scope and you own the code at handover. Your signed statement of work decides the pages, features, migration controls, tests, support, exclusions, and remedy. There is no minimum project size, and the code, design files and accounts are yours at the end.",
+      "Offer terms reviewed October 8, 2026. A signed proposal or SOW controls if it differs from this guide."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "Why $5,000 is a starting price, not a promise",
+      "How many pages does $5,000 get you?",
+      "What a Scale build normally contains",
+      "The part that is easy to miss when comparing quotes",
+      "What the price does not automatically include",
+      "How the 90+ performance target works",
+      "Payment, refund, and change control",
+      "Support after launch",
+      "Who owns the finished work",
+      "How to compare this quote with another provider",
+      "Which tier should you start with?",
+      "Book a call with the founders",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/divi-theme-slow",
+    "historicalRoute": true,
+    "beforeTitle": "Divi Theme Slow? A 2026 Diagnostic and Fix Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Divi Theme Slow? A 2026 Diagnostic and Fix Guide",
+        "line": 181
+      }
+    ],
+    "currentTitle": "Divi Theme Slow? A 2026 Diagnostic and Fix Guide",
+    "currentH1": [
+      "Divi Theme Slow? A 2026 Diagnostic and Fix Guide"
+    ],
+    "currentOpening": [
+      "A Divi page is usually slow for a reason you can name and locate: Divi generates styling for the modules and features a site uses and, if its Performance options have been switched off, sends more of that to every page than the page needs; the server still assembles uncached pages per request; and media, fonts, plugins and third-party tags add to whichever of those is already hurting. Elegant Themes ships a Performance tab specifically to control the first of those. Find which layer is responsible on your site before buying another plugin or committing to a rebuild. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.",
+      "A Divi page is the result of a complete WordPress system, not the theme alone. The visitor may receive HTML generated by PHP and database queries, Divi assets, child-theme code, plugin code, media, fonts, analytics, consent controls, chat, advertising tags, embeds, and cache behavior. Any combination can affect loading, responsiveness, and visual stability. Our WordPress plugin audit guide explains how to trace that work to a named component."
+    ],
+    "currentSectionHeadings": [
+      "The answer in one minute",
+      "Why a Divi site can be slow",
+      "How many websites use Divi?",
+      "What changed with Divi 5",
+      "How to measure the problem correctly",
+      "A Divi optimization order that produces evidence",
+      "Divi and the new agent-readability check",
+      "What each common fix addresses",
+      "Should you keep Divi, rebuild in WordPress, or migrate?",
+      "How to estimate the business cost",
+      "SEO controls for a Divi migration",
+      "Related reading",
+      "Primary sources used for this guide",
+      "Get your Divi migration plan",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/do-you-own-your-website",
+    "historicalRoute": true,
+    "beforeTitle": "Do You Own Your Website? A Contract and Control Checklist",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Do You Own Your Website? Check the Contract and the Controls",
+        "line": 166
+      }
+    ],
+    "currentTitle": "Do You Own Your Website? A Contract and Control Checklist",
+    "currentH1": [
+      "Do You Own Your Website? Check the Contract and the Controls"
+    ],
+    "currentOpening": [
+      "Paying for a website does not answer every ownership question. Copyright, licenses, source access, domain registration, hosting, SaaS accounts, data, and credentials are different rights and controls. Put each one in writing.",
+      "Reviewed October 8, 2026. General U.S.-first information, not legal advice. Ask qualified counsel to review your agreement and jurisdiction."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "The legal default is more nuanced than “the developer owns it”",
+      "Does a “work made for hire” clause mean you own the website?",
+      "Do website builders own your website?",
+      "Eight things to control or document",
+      "Source code access is not the same as unlimited ownership",
+      "Account control needs an operating plan",
+      "Five ways lock-in actually happens",
+      "What PandaCodeGen intends to put in the project terms",
+      "Refunds and incomplete work need separate language",
+      "One question to ask before you sign",
+      "Questions to put in the SOW before onboarding",
+      "Primary legal references",
+      "Book a call with the founders",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/elementor-kills-seo",
+    "historicalRoute": true,
+    "beforeTitle": "Does Elementor Hurt SEO? A 2026 Evidence Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Does Elementor Hurt SEO? Test the Site, Not the Label",
+        "line": 141
+      }
+    ],
+    "currentTitle": "Does Elementor Hurt SEO? A 2026 Evidence Guide",
+    "currentH1": [
+      "Does Elementor Hurt SEO? Test the Site, Not the Label"
+    ],
+    "currentOpening": [
+      "Elementor does not carry one Google penalty, PageSpeed score, or traffic loss. It can contribute work to the page, while the theme, plugins, hosting, media, content, links, and third parties also shape performance and search results.",
+      "Disclosure: PandaCodeGen sells migrations off WordPress and page-builder sites, so we have a commercial interest in the migrate side of this question. That is why the sections below put optimizing in place ahead of rebuilding, and publish no score, penalty or traffic figure for Elementor."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "Why “Elementor kills SEO” is the wrong diagnosis",
+      "What Elementor itself says about performance",
+      "How a builder adds work to a page",
+      "What this costs you in the agent-readability check",
+      "The one SEO defect that has nothing to do with speed",
+      "A separate matter if you run Elementor Pro",
+      "Run a route-level Elementor audit",
+      "Optimize in place before assuming a migration",
+      "When a rebuild or migration becomes reasonable",
+      "SEO controls if you leave Elementor",
+      "Related reading",
+      "Primary sources",
+      "Get your Elementor migration plan",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/fix-meta-ad-tracking-2026",
+    "historicalRoute": true,
+    "beforeTitle": "Meta Ad Tracking Not Working? A 2026 Diagnostic Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Meta Ad Tracking Not Working? Diagnose the Data Path",
+        "line": 178
+      }
+    ],
+    "currentTitle": "Meta Ad Tracking Not Working? A 2026 Diagnostic Guide",
+    "currentH1": [
+      "Meta Ad Tracking Not Working? Diagnose the Data Path"
+    ],
+    "currentOpening": [
+      "If Meta reports fewer sales than your shop admin, the campaign is often fine and the data path is leaking. The leaks come in two kinds, and the difference decides what you are allowed to do about them. Some events are missing because the customer declined tracking, and no tool should recover those. Others are missing for ordinary technical reasons, an ad blocker, an expired browser cookie, a checkout page that stopped running your script, and those you can legitimately fix. Sort your losses into those two piles first. Everything else in this guide follows from which pile you are in.",
+      "The pixel is a piece of JavaScript running inside someone else's browser, and browsers have spent several years taking away the things it relied on. It still loads, so a quick check looks fine, while a growing share of real customers never reach Meta."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "Why the browser pixel loses events in the first place",
+      "Sort your losses into two piles",
+      "Make sure you are comparing like with like",
+      "A browser and server diagnostic sequence",
+      "How browser and server event deduplication works",
+      "Event Match Quality is a diagnostic, not a guarantee",
+      "Conversions API does not remove privacy duties",
+      "Shopify and other managed integrations",
+      "What to demand when someone hands this over",
+      "Primary sources",
+      "Get your measurement integration plan",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/for-agencies-offer-custom-web-development",
+    "historicalRoute": true,
+    "beforeTitle": "How to Structure a White-Label Web Development Partnership (2026)",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "How to Structure a White-Label Web Development Partnership",
+        "line": 128
+      }
+    ],
+    "currentTitle": "How to Structure a White-Label Web Development Partnership (2026)",
+    "currentH1": [
+      "How to Structure a White-Label Web Development Partnership"
+    ],
+    "currentOpening": [
+      "Bringing in an outside development partner can widen what your agency sells. None of it is automatic though, not the margin, not the delivery time, not the capacity, not who ends up owning the code, and not the result the client gets. Write down how the commercial side and the delivery side will work before anyone sells the project.",
+      "A client asks for a custom site and the agency has no development team. There are four honest answers, and each carries a different cost, risk and level of control."
+    ],
+    "currentSectionHeadings": [
+      "The workable model",
+      "Four ways to answer a custom-build request",
+      "What you can actually offer once you have a delivery partner",
+      "White-label, co-delivery, and referral are different",
+      "Run a fit check before the agency quotes",
+      "How a white-label engagement runs, step by step",
+      "Put this responsibility matrix in writing",
+      "What to check in a delivery partner",
+      "Ownership and account control",
+      "Commercial terms for a PandaCodeGen project",
+      "The part most partnerships get wrong: what happens after launch",
+      "Quality acceptance without universal guarantees",
+      "What the agency can say about the finished build",
+      "How to start without overselling",
+      "Scope a real partner opportunity",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/gohighlevel-keep-crm-replace-website",
+    "historicalRoute": true,
+    "beforeTitle": "Keep GoHighLevel CRM, Replace the Website: 2026 Architecture",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Keep Your GoHighLevel CRM. Replace Just the Website.",
+        "line": 146
+      }
+    ],
+    "currentTitle": "Keep GoHighLevel CRM, Replace the Website: 2026 Architecture",
+    "currentH1": [
+      "Keep Your GoHighLevel CRM. Replace Just the Website."
+    ],
+    "currentOpening": [
+      "Yes, you can keep GoHighLevel as your CRM and replace only the website it builds. Keep HighLevel doing the thing it is genuinely good at, and put a faster public website in front of it. The contacts, workflows, calendars and pipeline stay exactly where they are. Only the pages your customers and search engines actually see move. Whether that trade is worth making comes down to what you have measured on the current site, and to who will own the integration once it exists, because that part does not end at launch.",
+      "Agency owners and developers have been describing the same website-builder problem on the HighLevel Ideas board and r/gohighlevel since 2024. These are their words, shortened where marked, with a link to each original post."
+    ],
+    "currentSectionHeadings": [
+      "The architecture in one minute",
+      "What stays in GoHighLevel and what moves to a custom site",
+      "When is a GoHighLevel hybrid build worth it?",
+      "Should you keep GoHighLevel or replace it entirely?",
+      "What GoHighLevel officially supports for external sites",
+      "How do you send forms into GoHighLevel from a custom site?",
+      "What actually happens when someone fills in the form",
+      "Can you use GoHighLevel calendars on your own site?",
+      "How do GoHighLevel webhooks fail, and what catches it?",
+      "Who owns privacy and security in a GoHighLevel hybrid?",
+      "Will replacing your GoHighLevel site hurt SEO?",
+      "What speed should a GoHighLevel replacement hit?",
+      "How to cut over from a GoHighLevel site safely",
+      "Primary sources",
+      "Get your HighLevel migration plan",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/gohighlevel-vs-wordpress",
+    "historicalRoute": false,
+    "beforeTitle": null,
+    "beforeH1": [],
+    "currentTitle": "GoHighLevel vs WordPress for Your Website (2026)",
+    "currentH1": [
+      "GoHighLevel vs WordPress: Which Should Run Your Website?"
+    ],
+    "currentOpening": [
+      "Build in HighLevel's own builder if your site is mostly funnels and landing pages for paid traffic. It's included in every HighLevel plan, and its forms, calendars and attribution work with no connector in between. Choose WordPress connected to HighLevel if the site has to win search traffic with a blog and lots of service or location pages, and you have someone to own hosting and updates. In both cases HighLevel stays your CRM.",
+      "PandaCodeGen builds both. We make WordPress websites quoted to scope, and we build front ends that send leads into HighLevel from $1,500. We earn from either answer, so this page sticks to what HighLevel and WordPress publish about themselves, and links each source at the bottom."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "GoHighLevel vs WordPress, side by side",
+      "How do forms, calendars and chat get from WordPress into HighLevel?",
+      "Which one tracks leads and ad clicks more reliably?",
+      "Is GoHighLevel or WordPress faster?",
+      "Which gives you more SEO control?",
+      "What does each option cost per month?",
+      "Who keeps the site running?",
+      "Choose HighLevel's builder when, choose WordPress when",
+      "Is there an option between the two?",
+      "How do you move from one to the other without losing traffic?",
+      "Primary sources",
+      "Not sure which one fits your HighLevel account?",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/gohighlevel-website-speed",
+    "historicalRoute": true,
+    "beforeTitle": "GoHighLevel Site Slow? Diagnose and Fix It in 2026",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "GoHighLevel Site Slow? Diagnose Before You Rebuild",
+        "line": 157
+      }
+    ],
+    "currentTitle": "GoHighLevel Site Slow? Diagnose and Fix It in 2026",
+    "currentH1": [
+      "GoHighLevel Site Slow? Diagnose Before You Rebuild"
+    ],
+    "currentOpening": [
+      "Three things decide how fast a GoHighLevel page loads, and you can check all three on your own page in about five minutes: how much of the content arrives as HTML before any JavaScript runs, how much script loads whatever the page contains, and whether the response is cached at the edge. Your images, fonts and third-party scripts count too, and you can fix those inside HighLevel. The first three are in the platform's hands, not yours. GoHighLevel sites don't share one PageSpeed score, so measure your own route instead of trusting a quoted range.",
+      "Reviewed August 3, 2026 against current Google, Chrome and HighLevel primary guidance. HighLevel's speed guidance rechecked October 4, 2026."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "The diagnostic order",
+      "Two different things get called “HighLevel is slow”",
+      "What PageSpeed Insights does and doesn't tell you",
+      "Record a defensible test profile",
+      "What you control on a HighLevel page, and what you don't",
+      "Common causes to inspect on a HighLevel page",
+      "In-platform fixes to try first",
+      "Does speed affect GoHighLevel SEO or ads?",
+      "Are GoHighLevel websites good for SEO?",
+      "When to keep HighLevel and replace the frontend",
+      "Migration and acceptance controls",
+      "Primary sources",
+      "Get your GoHighLevel migration plan",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/google-algorithm-updates",
+    "historicalRoute": true,
+    "beforeTitle": "Google Algorithm Updates: Every Confirmed Update Since 2021",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Google Algorithm Updates: Every Confirmed Update Since 2021",
+        "line": 196
+      }
+    ],
+    "currentTitle": "Google Algorithm Updates: Every Confirmed Update Since 2021",
+    "currentH1": [
+      "Google Algorithm Updates: Every Confirmed Update Since 2021"
+    ],
+    "currentOpening": [
+      "Google has confirmed 40 ranking updates since November 2021, 16 of them core updates. The most recent is the September 2026 spam update, which started Sep 24, 2026 and is still rolling out. The last one to finish was the August 2026 spam update, which started Aug 18, 2026 and took 2 days, 16 hours to roll out. Below is the full dated register, taken from Google's own dashboard, and the method for working out whether any of it touched your site. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.",
+      "Hassan is PandaCodeGen's co-founder and Lead Engineer. He does the speed testing and the technical SEO, and runs migrations with the before-and-after numbers written down."
+    ],
+    "currentSectionHeadings": [
+      "Executive Summary",
+      "Every Google Algorithm Update Google Has Confirmed",
+      "What the Rollout Data Actually Shows",
+      "What Google Confirms, and What It Leaves Unsaid",
+      "Do Google's Updates Set a Speed Threshold?",
+      "Why Slow Sites May Still Lose Visibility",
+      "How to Separate an Algorithm Update From a Problem You Caused",
+      "How to Track Google Updates Without Chasing Rumours",
+      "Do Not Blame WordPress, Shopify, or Another Platform Without Testing",
+      "What to Change After a Confirmed Traffic Drop",
+      "A 30-Day Monitoring Plan, Counted From Your Own Release",
+      "Build a Search Monitoring Plan Before the Next Update",
+      "Key Takeaways",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/google-universal-commerce-protocol-what-it-means-for-your-store",
+    "historicalRoute": true,
+    "beforeTitle": "Google Universal Commerce Protocol: Store Readiness in 2026",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Google Universal Commerce Protocol: What Is Live, Limited, and Next",
+        "line": 145
+      }
+    ],
+    "currentTitle": "Google Universal Commerce Protocol: Store Readiness in 2026",
+    "currentH1": [
+      "Google Universal Commerce Protocol: What Is Live, Limited, and Next"
+    ],
+    "currentOpening": [
+      "UCP is a real open commerce standard, and Google has documented a path toward buying directly inside AI Mode and Gemini. That is not the same as it being available to you. Access today still depends on your platform, your country, your payment provider, what you sell, and whether Google has approved you.",
+      "Availability reviewed July 24, 2026 against Google's current merchant guide, FAQ, Merchant API updates, and the open UCP repository, and re-checked on October 8, 2026. Two things had moved and neither changes the answer above: Google announced Universal Cart in May 2026, with cross-retailer support rolling out on Search and the Gemini app in the US first and YouTube and Gmail to follow, and UCP-powered checkout now covers the US, Canada and Australia but is still limited to select merchants through an early access programme, with the UK described as coming later."
+    ],
+    "currentSectionHeadings": [
+      "Status as of October 8, 2026",
+      "The three phases UCP defines",
+      "What UCP is",
+      "UCP, MCP, A2A and AP2 are four different things",
+      "What Google documents, as read on October 8, 2026",
+      "Can someone buy without visiting the merchant website?",
+      "Platform readiness cannot be reduced to a ranking",
+      "A merchant readiness audit",
+      "Where to start",
+      "Discovery and request verification",
+      "Measure business impact without inventing it",
+      "Do you need to rebuild the website for UCP?",
+      "Primary sources",
+      "Get your commerce readiness plan",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/how-long-does-a-custom-website-take",
+    "historicalRoute": true,
+    "beforeTitle": "How Long Does a Custom Website Take? A 2026 Schedule Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "How Long Does a Custom Website Take? Build the Schedule From Scope",
+        "line": 137
+      }
+    ],
+    "currentTitle": "How Long Does a Custom Website Take? A 2026 Schedule Guide",
+    "currentH1": [
+      "How Long Does a Custom Website Take? Build the Schedule From Scope"
+    ],
+    "currentOpening": [
+      "A content-ready brochure, an SEO-sensitive migration, a commerce rebuild and a custom application do not share one honest duration. The reliable answer is a dependency-based schedule attached to the signed scope.",
+      "It helps to understand what a long quote is actually made of. A twelve-week project is rarely twelve weeks of building. It can be a smaller amount of building spread across a calendar, and the gaps are where the time goes: a queue in front of you, a review that takes four days to come back, an export nobody has requested from the old platform yet, a decision waiting on somebody who is in meetings all week. The design and the code are not usually what make a project slow. Waiting is."
+    ],
+    "currentSectionHeadings": [
+      "The useful short answer",
+      "Why the quoted number is usually bigger than the work",
+      "The schedule formula",
+      "Typical timelines by project size",
+      "Scope signals that change the clock",
+      "A phase-based estimate is safer than one headline number",
+      "What the MyCustomPatches example does and does not show",
+      "Client delays are not the only source of delay",
+      "An example of a project that is slow for good reasons",
+      "What “content ready” means",
+      "You do not need a finished design to start",
+      "Can a site launch in one week?",
+      "Quality gates that should not be removed to save time",
+      "What PandaCodeGen puts into the schedule",
+      "Get your migration schedule",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/how-much-does-a-website-cost",
+    "historicalRoute": true,
+    "beforeTitle": "How Much Does a Website Cost in 2026? A Scope-First Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "How Much Does a Website Cost in 2026? Price the Scope, Not the Label",
+        "line": 150
+      }
+    ],
+    "currentTitle": "How Much Does a Website Cost in 2026? A Scope-First Guide",
+    "currentH1": [
+      "How Much Does a Website Cost in 2026? Price the Scope, Not the Label"
+    ],
+    "currentOpening": [
+      "Our own work starts at $1,500 for a small, clearly bounded site, and a simple store with a few products starts there too. It starts at $5,000 once the work needs a large catalogue, custom commerce logic, more than one language or heavy integrations. Those are our published numbers, not the market's. Nobody has the market's number, because a one-page campaign, a 30-route migration, a store and an application with logins are four different products that happen to share a word. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.",
+      "What you can price is a scope, and then check whether the quote beside it covers the same work. That is the difference between two numbers you can compare and two numbers you cannot."
+    ],
+    "currentSectionHeadings": [
+      "PandaCodeGen's published starting points",
+      "Current PandaCodeGen pricing and payment split",
+      "Is $1,500 a good price for a website?",
+      "Can you run a website for free?",
+      "What belongs in a comparable website quote",
+      "What moves the price up or down",
+      "What a cheap quote usually leaves out",
+      "Recurring cost is more than hosting",
+      "DIY, managed platform and custom code",
+      "Who builds it changes the price, and the bill afterwards",
+      "Panda Patches: a first-party cost example",
+      "How to calculate three-year total cost",
+      "How to spend less without shrinking the outcome",
+      "Refund, ownership and performance terms affect value",
+      "Current vendor pricing sources",
+      "Get a price for your actual scope",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/how-to-achieve-100-pagespeed",
+    "historicalRoute": true,
+    "beforeTitle": "How to Reach 90+ PageSpeed: A Repeatable 2026 Process",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "How to Reach 90+ PageSpeed Without Chasing a Screenshot",
+        "line": 146
+      }
+    ],
+    "currentTitle": "PageSpeed Analysis: What Your Score Means and 8 Steps to 90+",
+    "currentH1": [
+      "How to Reach 90+ PageSpeed Without Chasing a Screenshot"
+    ],
+    "currentOpening": [
+      "A Lighthouse score is one lab test on one day, not a permanent property of your site. Fix the actual page, write down the conditions you tested under, run it more than once, and check what real visitors experience. Do not promise that every page will always show 100, because nobody can hold that.",
+      "Every threshold and metric definition here was re-checked against Chrome's primary Lighthouse documentation on October 8, 2026. Where a claim can be verified in your own browser, this page tells you how to verify it rather than asking you to take a citation on trust."
+    ],
+    "currentSectionHeadings": [
+      "First understand the number",
+      "Run the test before you read the rest",
+      "Step 1: define representative pages and journeys",
+      "Step 2: record field and lab baselines",
+      "Step 3: reduce document and server delay",
+      "Step 4: make the LCP resource discoverable and efficient",
+      "Step 5: reduce long tasks and interaction delay",
+      "Step 6: stabilize layout",
+      "Step 7: govern third parties and consent",
+      "Step 8: repeat, regress and release",
+      "Is 70 good enough? And is the tool even reliable?",
+      "Why 100 is not the right universal promise",
+      "PandaCodeGen's 90+ acceptance method",
+      "Get your performance migration plan",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/how-to-fix-slow-wordpress",
+    "historicalRoute": true,
+    "beforeTitle": "How to Fix a Slow WordPress Site: 8 Evidence-Led Methods",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "How to Fix a Slow WordPress Site Without Guessing",
+        "line": 139
+      }
+    ],
+    "currentTitle": "How to Fix a Slow WordPress Site: 8 Evidence-Led Methods",
+    "currentH1": [
+      "How to Fix a Slow WordPress Site Without Guessing"
+    ],
+    "currentOpening": [
+      "Profile the affected route, fix the measured layer, then retest under the same conditions. WordPress does not have a single speed ceiling. Your hosting, how it is configured, the versions you run, caching, the theme, plugins, queries, media, fonts and third parties can all contribute. That order matters: fixing an unmeasured layer is how an afternoon disappears.",
+      "A measurement you cannot repeat is not a baseline, and a homepage result cannot speak for a cart or an archive. Four rules make the numbers comparable across the whole job. The last one saves the most time later: record the WordPress, PHP, database, theme and plugin versions beside the run, so a future comparison has something to compare against."
+    ],
+    "currentSectionHeadings": [
+      "The eight-method ladder",
+      "1. Measure the right pages under repeatable conditions",
+      "2. Profile the server instead of buying a host blindly",
+      "3. Verify cache layers",
+      "4. Update and tune on staging",
+      "5. Isolate theme and plugin work",
+      "Tools that make the WordPress layer measurable",
+      "6. Optimize media, fonts and render path",
+      "7. Govern scripts and third parties",
+      "8. Decide when optimization is no longer the best investment",
+      "SEO and business impact",
+      "Primary sources",
+      "Get your WordPress migration plan",
+      "Related reading",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/how-to-migrate-wordpress-to-nextjs",
+    "historicalRoute": true,
+    "beforeTitle": "[dynamic]",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "How to Migrate WordPress to Next.js Without Losing SEO",
+        "line": 165
+      }
+    ],
+    "currentTitle": "WordPress to Next.js Migration Without Losing SEO (2026)",
+    "currentH1": [
+      "How to Migrate WordPress to Next.js Without Losing SEO"
+    ],
+    "currentOpening": [
+      "To move a WordPress site to Next.js without losing search traffic, list every URL you have, decide whether WordPress stays on as a headless backend, export the content, rebuild the pages, give every changed address a 301 redirect, carry over titles, descriptions and canonicals, then crawl the staged site before you switch DNS. This guide is for doing it yourself, and the eight steps below are the ones we run on client migrations.",
+      "Hassan plans WordPress to Next.js migrations around four things: performance you can measure, URLs that keep working, crawling the staged site before anyone sees it, and a handover that does not surprise you."
+    ],
+    "currentSectionHeadings": [
+      "Three Reasons People Leave WordPress. Only One Is About Speed.",
+      "First Decide Whether WordPress Stays: Headless or Full Migration",
+      "The Pre-Migration Audit That Protects High-Value URLs",
+      "The 8 Steps We Run Every Time",
+      "What to Expect After the Migration: The Real Timeline",
+      "DIY Migration vs Professional Migration: The Honest Comparison",
+      "Key Takeaways",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/how-to-speed-up-your-website",
+    "historicalRoute": true,
+    "beforeTitle": "How to Speed Up Your Website in 2026: 12 Diagnostics",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "How to Speed Up Your Website With 12 Route-Level Diagnostics",
+        "line": 148
+      }
+    ],
+    "currentTitle": "How to Speed Up Your Website in 2026: 12 Checks",
+    "currentH1": [
+      "How to Speed Up Your Website. Find the slow part first."
+    ],
+    "currentOpening": [
+      "Pick one page that feels slow. Find out where the wait happens, make one useful change, then test that same page again. This guide shows you how to do it without guessing from a platform name or one score.",
+      "Last reviewed October 8, 2026, including the Core Web Vitals thresholds on web.dev. Sources and testing notes are linked throughout."
+    ],
+    "currentSectionHeadings": [
+      "Start with the page that feels slow",
+      "A worked example, measured on this page",
+      "1. Confirm the route and template",
+      "2. Separate field and lab data",
+      "Why it seems fast to you and slow to everyone else",
+      "Which tool answers which question",
+      "3. Trace DNS, redirects and connection setup",
+      "4. Profile document and origin time",
+      "5. Identify the real LCP element",
+      "6. Right-size images and video",
+      "7. Audit CSS and fonts",
+      "8. Reduce JavaScript and long tasks",
+      "9. Stabilize layout",
+      "10. Govern third parties and consent",
+      "11. Verify cache and CDN behavior",
+      "12. Add release and regression controls",
+      "When to optimize and when to rebuild",
+      "Bring us the route that feels slow",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/how-website-speed-affects-seo",
+    "historicalRoute": true,
+    "beforeTitle": "How Website Speed Affects SEO: Evidence and Limits in 2026",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "How Website Speed Affects SEO Without a Fake Formula",
+        "line": 134
+      }
+    ],
+    "currentTitle": "How Website Speed Affects SEO: Evidence and Limits in 2026",
+    "currentH1": [
+      "How Website Speed Affects SEO Without a Fake Formula"
+    ],
+    "currentOpening": [
+      "Google uses Core Web Vitals in its broader ranking systems and recommends good page experience. It also says good scores do not guarantee top rankings and relevance remains fundamental. There is no universal “100 milliseconds equals one percent” rule.",
+      "Yes, site speed affects SEO, and it does so through one narrow channel: Core Web Vitals feed Google's ranking systems as one input among many. What it does not do is set a score you have to clear. There is no Lighthouse number that guarantees a position or triggers a penalty, and a fast page that answers the query badly still loses to a slower page that answers it well. Five propositions hold up; everything else you will read on this topic is inference from them. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end."
+    ],
+    "currentSectionHeadings": [
+      "The defensible answer",
+      "Three evidence streams, and why you need all three",
+      "What Google confirms about Core Web Vitals",
+      "PageSpeed score is not a ranking cutoff",
+      "Mobile-first indexing does not mean “mobile score decides rank”",
+      "Why speed and search results can move together",
+      "Four things you will be told, graded",
+      "How to measure a search effect",
+      "How to measure business impact",
+      "How to read performance case studies",
+      "Our own rebuild, and what it does not prove",
+      "Framework and platform choice",
+      "Migration protects controls, not outcomes",
+      "Get your SEO-safe performance plan",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/is-it-cheaper-to-build-your-own-website",
+    "historicalRoute": true,
+    "beforeTitle": "Is It Cheaper to Build Your Own Website? DIY vs Hiring",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Is It Cheaper to Build Your Own Website? DIY vs Hiring",
+        "line": 104
+      }
+    ],
+    "currentTitle": "Is It Cheaper to Build Your Own Website? DIY vs Hiring",
+    "currentH1": [
+      "Is It Cheaper to Build Your Own Website? DIY vs Hiring"
+    ],
+    "currentOpening": [
+      "Yes, building it yourself usually costs less in upfront cash. It can also be the right choice for a real business. The decision changes with the features you need, the time you can give it, and who will look after it once it is live.",
+      "Hassan builds websites, online stores and custom software at PandaCodeGen. We sell development services; this comparison includes situations where DIY is the better fit."
+    ],
+    "currentSectionHeadings": [
+      "DIY website builder vs hiring a developer: what are you buying?",
+      "How much does it cost to build a website yourself?",
+      "A one-year and three-year website cost comparison",
+      "What does a website cost to run after launch?",
+      "When building your own website makes sense",
+      "When is it worth paying someone to build your website?",
+      "Do AI website builders change the cost?",
+      "What should a website quote include?",
+      "Frequently Asked Questions",
+      "Deciding whether to DIY or get help?",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/is-squarespace-bad-for-seo",
+    "historicalRoute": true,
+    "beforeTitle": "Is Squarespace Bad for SEO? A 2026 Diagnostic",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Is Squarespace Bad for SEO? Run This Diagnostic",
+        "line": 163
+      }
+    ],
+    "currentTitle": "Is Squarespace Bad for SEO? A 2026 Diagnostic",
+    "currentH1": [
+      "Is Squarespace Bad for SEO? Run This Diagnostic"
+    ],
+    "currentOpening": [
+      "Squarespace is not bad for SEO, and the platform handles the fundamentals properly. What it has is a ceiling, and whether that ceiling matters depends entirely on who you are competing against. Most sites that underperform have not reached it. They have pages where the controls Squarespace already gives them were never filled in. Check that first, then judge the platform on what is left. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.",
+      "Squarespace's current SEO checklist covers site and page SEO descriptions, page-title formats, readable slugs, SSL, a custom 404 page, heading structure, image alt text, Google Search Console and Bing Webmaster Tools. Squarespace also documents a set of things it does without being asked: it creates and updates the sitemap, serves pages at static URLs, redirects all connected domains to the primary domain, ships free SSL on connected domains, formats markup so search engines can read and index it, and makes every site mobile-optimized by default. These features do not guarantee discovery or ranking, but they contradict the claim that Squarespace lacks basic SEO controls."
+    ],
+    "currentSectionHeadings": [
+      "The defensible answer",
+      "What Squarespace currently supports",
+      "The on-page checklist, page by page",
+      "The four limits that are actually structural",
+      "Squarespace or Wix: which gives you more SEO control?",
+      "Why you will not find a Squarespace speed score here",
+      "A route-level Squarespace SEO audit",
+      "Image and page-weight guidance needs context",
+      "Structured data and AI visibility",
+      "Where Squarespace measurably beats WordPress",
+      "When Squarespace is genuinely good enough",
+      "Optimize, stay or migrate",
+      "How to investigate a traffic plateau",
+      "Primary sources",
+      "Book a call with the founders",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/is-wix-bad-for-seo",
+    "historicalRoute": false,
+    "beforeTitle": null,
+    "beforeH1": [],
+    "currentTitle": "Is Wix Bad for SEO? What Wix Controls in 2026",
+    "currentH1": [
+      "Is Wix Bad for SEO? What Wix Controls in 2026"
+    ],
+    "currentOpening": [
+      "No. Wix serves its pages as server-rendered HTML, and it lets you edit titles, meta descriptions, slugs, canonical tags, robots.txt, 301 redirects and JSON-LD structured data. Its real SEO limits are narrower than its reputation: a blog prefix you can rename but not remove, caps on redirects and structured data, and a heavy JavaScript payload you can't change. If one of those blocks something your business needs, that's a reason to move. If not, look at your content, links and settings first.",
+      "Almost everything a small business site needs. Wix lets you set titles and meta descriptions per page or by page type, edit slugs, override canonical tags, edit robots.txt, manage 301 redirects in bulk and add your own JSON-LD. The table lists each control with the limit Wix's own Help Center documents for it, read on October 4, 2026."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "What can you control for SEO on Wix?",
+      "Can Google read a Wix site?",
+      "Where do Wix's URL rules limit you?",
+      "Is Wix too slow to rank?",
+      "Does Google treat Wix sites differently?",
+      "Is Wix better than Squarespace for SEO?",
+      "How to check your own Wix site's SEO",
+      "When is leaving Wix worth it for SEO?",
+      "Primary sources",
+      "Want a second opinion on your Wix site?",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/leaving-webflow-2026",
+    "historicalRoute": true,
+    "beforeTitle": "Leaving Webflow in 2026: Stay, Optimize, or Migrate?",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Leaving Webflow in 2026: stay, optimize, or migrate?",
+        "line": 243
+      }
+    ],
+    "currentTitle": "Leaving Webflow in 2026: Stay, Optimize, or Migrate?",
+    "currentH1": [
+      "Leaving Webflow in 2026: stay, optimize, or migrate?"
+    ],
+    "currentOpening": [
+      "Webflow changed its plan structure in 2026, while many teams are also reviewing bandwidth, CMS scale, product logic, and ownership. None of those facts automatically means you should leave. This guide shows how to make the decision with current vendor terms, measured constraints, and a controlled migration plan.",
+      "Hassan is PandaCodeGen's co-founder and Lead Engineer. He scopes platform migrations around content, integrations, performance, redirects, testing, launch, and handover."
+    ],
+    "currentSectionHeadings": [
+      "Do not migrate from one frustration.",
+      "What Actually Changed in Webflow Pricing and Limits",
+      "Feature Deprecations Are a Planning Signal, Not a Panic Button",
+      "Treat Ecommerce and Membership as Separate Architecture Decisions",
+      "How to Decide Whether Webflow Is Too Expensive",
+      "What Webflow Code Export Does and Does Not Give You",
+      "Do Not Diagnose a Platform From One PageSpeed Score",
+      "Run an Evidence Sprint Before Approving a Rebuild",
+      "Use Outage History as an Operational Input",
+      "A Stay, Optimize, or Leave Webflow Framework",
+      "Choose the Destination From Exit Criteria, Not Fashion",
+      "How to Migrate From Webflow Without Treating SEO as a Guarantee",
+      "Timeline and Migration Cost Depend on the Inventory",
+      "What Ownership Means After a Custom Rebuild",
+      "The Practical Conclusion for Leaving Webflow in 2026",
+      "Key Takeaways",
+      "Get Your Webflow Migration Plan",
+      "Frequently Asked Questions",
+      "Related Reading",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/lovable-site-not-showing-on-google",
+    "historicalRoute": true,
+    "beforeTitle": "Lovable Site Not Showing on Google? A 2026 Diagnostic",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Lovable Site Not Showing on Google? Diagnose It First",
+        "line": 160
+      }
+    ],
+    "currentTitle": "Lovable Site Not Showing on Google? A 2026 Diagnostic",
+    "currentH1": [
+      "Lovable Site Not Showing on Google? Diagnose It First"
+    ],
+    "currentOpening": [
+      "On current Lovable, an empty page for crawlers is usually not your problem. Apps created from May 13, 2026 use TanStack Start and return server-rendered HTML, and older React and Vite projects are pre-rendered on request for verified search and AI crawlers. That leaves the duller explanations, which are also the fixable ones: the project was never publicly published, the URL you are checking is not the one that can be indexed, or the page is indexed and simply is not ranking. Work through them in that order before anyone quotes you for a rebuild. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.",
+      "Watch which bots arrive, what they fetch, and which referrals follow. All three are in your own server logs and analytics."
+    ],
+    "currentSectionHeadings": [
+      "The current rendering model",
+      "The 60-second output test",
+      "Step 1: confirm the project is eligible to be indexed",
+      "Step 2: use Lovable's current review",
+      "Step 3: inspect what Google fetched",
+      "Step 4: validate page-level signals",
+      "Step 5: separate indexing from ranking",
+      "When a migration is actually justified",
+      "Do ChatGPT and Claude crawlers run JavaScript?",
+      "Do AI discovery files guarantee citations?",
+      "Primary sources",
+      "Book a call with the founders",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/meta-conversions-api-setup-cost",
+    "historicalRoute": true,
+    "beforeTitle": "Meta Conversions API Setup Cost: A Scope-Based Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Meta Conversions API Cost Starts With Scope",
+        "line": 155
+      }
+    ],
+    "currentTitle": "Meta Conversions API Setup Cost: A Scope-Based Guide",
+    "currentH1": [
+      "Meta Conversions API Cost Starts With Scope"
+    ],
+    "currentOpening": [
+      "Nobody can quote Conversions API honestly without knowing your setup. What it costs depends on how many events you send, which systems they come from, how you handle consent, what customer details you are allowed to include, how you stop the same event counting twice, and how much testing it takes before you trust the numbers. Doing it well can get more of your events through to Meta. It does not guarantee more accurate attribution, cheaper campaigns, or extra sales.",
+      "Conversions API sends supported marketing data from a server, website platform, app, CRM or other business system to Meta. It can complement browser events. Browser delivery can be affected by loading, connectivity, browser controls and implementation failures, but the size of any missing-event gap must be measured against the business's own accepted system of record."
+    ],
+    "currentSectionHeadings": [
+      "What a responsible estimate covers",
+      "What Meta Conversions API does",
+      "Is the Conversions API free, and what are you actually paying for?",
+      "Why cost ranges without scope are misleading",
+      "A practical discovery worksheet",
+      "Deduplication must be tested, not promised",
+      "How the integration is actually put together",
+      "Match keys are what move Event Match Quality",
+      "What the Panda Patches screenshot shows",
+      "Diagnose before you buy",
+      "Direct, partner and gateway approaches",
+      "Which of the four paths is actually enough for you",
+      "What actually moves the price",
+      "Who needs this, and who does not",
+      "How PandaCodeGen scopes the work",
+      "Questions to put to any vendor",
+      "What to check before signing off the work",
+      "Primary sources",
+      "Scope your tracking setup",
+      "Frequently asked questions",
+      "Related reading",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/nextjs-hosting-zero-cost",
+    "historicalRoute": true,
+    "beforeTitle": "Is Vercel Free? 2026 Pricing & the 100GB Cap",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Is Vercel Free? The 2026 Cost of Next.js Hosting",
+        "line": 160
+      }
+    ],
+    "currentTitle": "Is Vercel Free? 2026 Pricing & the 100GB Cap",
+    "currentH1": [
+      "Is Vercel Free? The 2026 Cost of Next.js Hosting"
+    ],
+    "currentOpening": [
+      "Short answer: as of October 2026, Vercel's Hobby plan costs $0 for eligible personal, non-commercial projects and includes the first 100 GB a month of Fast Data Transfer. A production business website should use Vercel Pro, which as of October 2026 starts at $20 a month, including one deploying seat, with metered usage on top. Here is the practical Vercel Hobby vs Pro comparison, including limits and commercial Next.js hosting costs.",
+      "Hassan is PandaCodeGen's co-founder and lead engineer. He plans Next.js migrations around four things: speed you can measure, search traffic that survives the move, code someone else can maintain, and infrastructure the client owns."
+    ],
+    "currentSectionHeadings": [
+      "Executive Summary",
+      "Understand What Your Hosting Bill Covers",
+      "How Managed Next.js Hosting Changes the Cost Model",
+      "What a WordPress invoice bundles that a Vercel invoice doesn't",
+      "The Vercel Free Tier: What You Get",
+      "What happens when you hit 100 GB",
+      "How much storage does Vercel give you for free?",
+      "How to see your own usage before you hit a cap",
+      "Can You Use the Vercel Free Plan for a Business Site?",
+      "How to Estimate Vercel Pro Pricing for a Business Website",
+      "Vercel Hobby vs Pro: A Launch Checklist",
+      "Five Vercel Hosting Decisions to Recheck in 2026",
+      "Cloudflare Workers and Netlify: When to Consider Alternatives",
+      "Why is Vercel controversial?",
+      "How We Set Up Vercel Hosting on a Client Build",
+      "Vercel Hobby vs Pro: Choose the Right Plan",
+      "Key Takeaways",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/nextjs-sanity-stack",
+    "historicalRoute": true,
+    "beforeTitle": "Next.js and Sanity in 2026: Fit, Cost and Tradeoffs",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Next.js and Sanity: Fit, Cost and Tradeoffs",
+        "line": 145
+      }
+    ],
+    "currentTitle": "Next.js and Sanity in 2026: Fit, Cost and Tradeoffs",
+    "currentH1": [
+      "Next.js and Sanity: Fit, Cost and Tradeoffs"
+    ],
+    "currentOpening": [
+      "Choosing a service? See Sanity CMS development and the real client editor. For the decision first, compare Sanity vs WordPress or Sanity vs Supabase.",
+      "Next.js builds the website your visitors see. Sanity is where your team writes and stores the content. The two work well together for custom, content-heavy sites, but this is not the right setup for every business. Pick it because your requirements call for it, not because it is popular. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own."
+    ],
+    "currentSectionHeadings": [
+      "The decision in one minute",
+      "What the integration currently provides",
+      "Rendering does not inherit a performance score",
+      "Why do people say they are moving away from Next.js?",
+      "A build you can open and check",
+      "Content modeling and editorial fit",
+      "Localization is a model, not a checkbox",
+      "Current Sanity pricing needs careful reading",
+      "Security and governance boundaries",
+      "How widely used is this stack, actually",
+      "Compare alternatives on equivalent requirements",
+      "Two production sites we have shipped on this stack",
+      "Ladies 4 Jesus, an independent client",
+      "Panda Patches, founder-affiliated and labelled as such",
+      "When a simpler stack is better",
+      "Acceptance and handover",
+      "Primary sources",
+      "Book a call with the founders",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/pagepro-alternatives",
+    "historicalRoute": true,
+    "beforeTitle": "Pagepro Alternatives in 2026: Compare Scope and Fit",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Pagepro Alternatives: Compare the Actual Scope",
+        "line": 150
+      }
+    ],
+    "currentTitle": "Pagepro Alternatives in 2026: Compare Scope and Fit",
+    "currentH1": [
+      "Pagepro Alternatives: Compare the Actual Scope"
+    ],
+    "currentOpening": [
+      "Pagepro, Naturaily, Blazity and PandaCodeGen all say they build Next.js sites, and on paper the lists of services look similar. They take on different kinds of work. You cannot tell what any of them will charge, how good the work is, what support you get, or what the contract says from a category label. Ask all of them to quote the same requirements in writing, with a date on it, and compare those. This page is about Pagepro the Next.js, Sanity and Expo development agency at pagepro.co, not the separate landing-page software product also sold under the PagePro name.",
+      "Reviewed October 8, 2026. Disclosure: PandaCodeGen wrote this page and is one of the providers discussed, so our commercial interest is explicit."
+    ],
+    "currentSectionHeadings": [
+      "A defensible shortlist",
+      "Why buyers look for an alternative at all",
+      "What the official sites currently say",
+      "Start with the engagement you actually need",
+      "Use one request for proposal",
+      "How to evaluate evidence",
+      "PandaCodeGen pricing and terms",
+      "Questions to ask every finalist",
+      "Primary sources",
+      "Book a call with the founders",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/product-catalog-website-without-cart",
+    "historicalRoute": false,
+    "beforeTitle": null,
+    "beforeH1": [],
+    "currentTitle": "Product Catalog Website Without a Cart: Take Quote Requests",
+    "currentH1": [
+      "Product Catalog Website Without a Cart: Take Quote Requests"
+    ],
+    "currentOpening": [
+      "If you sell custom or made-to-order products, your website needs a catalog and a quote form, not a shopping cart. How we build one from a single product list, with a free example you can download.",
+      "If your prices depend on size, quantity or artwork, you don't need a shopping cart. You need a product catalog that ends in a quote form, so each enquiry arrives with the product already filled in. That's how we built Emblematic Studio, a catalog of 22 custom product types where visitors ask for a quote instead of checking out."
+    ],
+    "currentSectionHeadings": [
+      "Why a quote form suits custom products better than a cart",
+      "One product list for the whole site",
+      "Download a free example",
+      "What one product record looks like",
+      "Try breaking it",
+      "When should products move into an editor?",
+      "Common questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/saas-price-increases-2026-tracker",
+    "historicalRoute": true,
+    "beforeTitle": "SaaS Price Changes in 2026: A Verified Watchlist",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "SaaS Price Changes in 2026: Verified Watchlist",
+        "line": 157
+      }
+    ],
+    "currentTitle": "SaaS Price Changes in 2026: A Verified Watchlist",
+    "currentH1": [
+      "SaaS Price Changes in 2026: Verified Watchlist"
+    ],
+    "currentOpening": [
+      "A pricing tracker is only useful when every row has a primary source, effective date, renewal rule, region and billed unit. This watchlist carries three changes that meet that standard, and says plainly what each one does and does not tell you about your own invoice.",
+      "Every vendor claim below carries its own read date at the claim. All three rows were rechecked against the vendors' own pages on October 8, 2026. A tracker is only as current as its most recent check, so open the linked vendor page before acting on any figure here. Vendor dashboards, contracts and invoices remain the source of truth for a specific account."
+    ],
+    "currentSectionHeadings": [
+      "The verified watchlist",
+      "What has already taken effect, and what is still ahead",
+      "Why there is no industry-wide percentage on this page",
+      "Microsoft 365: the July 1, 2026 change",
+      "Webflow: phased plan restructuring",
+      "Klaviyo: a 2025 billing-unit change still relevant in 2026",
+      "How to maintain a defensible internal tracker",
+      "Match the response to the type of change",
+      "Respond with usage evidence, not a migration reflex",
+      "Primary sources",
+      "Book a call with the founders",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/saas-software-pricing-audit-2026",
+    "historicalRoute": true,
+    "beforeTitle": "2026 SaaS Pricing Audit: An Evidence-First Method",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "2026 SaaS Pricing Audit: Evidence Before Savings",
+        "line": 162
+      }
+    ],
+    "currentTitle": "2026 SaaS Pricing Audit: An Evidence-First Method",
+    "currentH1": [
+      "2026 SaaS Pricing Audit: Evidence Before Savings"
+    ],
+    "currentOpening": [
+      "A real software audit starts with paid invoices, accepted contracts and observed usage. Public prices are context, not your total. The output should show what to retain, right-size, consolidate, replace or investigate without promising a universal savings rate.",
+      "The shape of the problem is familiar enough to describe without a statistic. You sign up at a modest monthly price. You do not add users, you do not change how you work, and the product does not noticeably improve. Two years later the same line item is several times larger. Nothing dramatic happened. A tier boundary moved, a definition of the billed unit changed, an introductory discount lapsed, a plan was restructured and you were migrated onto the nearest equivalent, and each of those arrived on a different date in a different email."
+    ],
+    "currentSectionHeadings": [
+      "The audit deliverables",
+      "The pattern this audit exists to catch",
+      "What actually changed in 2026",
+      "1. Reconcile finance, identity and vendor records",
+      "2. Normalize the commercial model",
+      "3. Measure use without inventing a dormant-user benchmark",
+      "4. Check what relies on each tool before cancelling it",
+      "5. Avoid cancellation mistakes",
+      "6. Decide line by line",
+      "7. Compare buy, switch and build on total cost",
+      "8. Assign someone to check that each change works",
+      "Primary sources",
+      "Book a call with the founders",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/sanity-vs-supabase",
+    "historicalRoute": false,
+    "beforeTitle": null,
+    "beforeH1": [],
+    "currentTitle": "Sanity vs Supabase: CMS, Backend or Both?",
+    "currentH1": [
+      "Sanity vs Supabase: CMS, Backend or Both?"
+    ],
+    "currentOpening": [
+      "Sanity is a content editor for your website. Supabase is a backend: a Postgres database with sign-in, file storage and server functions. They don't compete, and many projects use both. Which one your project needs, with current prices.",
+      "Sanity and Supabase aren't competitors. Sanity is a content management system (CMS): your team uses it to edit the words and images on your website. Supabase is a backend: a Postgres database with sign-in (Auth), file storage and server functions (Edge Functions) for an app, portal or CRM. A marketing website usually needs only Sanity. A customer portal or internal tool needs a backend like Supabase. Many projects use both, Sanity for the public website and Supabase for the private side."
+    ],
+    "currentSectionHeadings": [
+      "Which one does your project need?",
+      "A project that uses both: A Step Above Medical",
+      "What do Sanity and Supabase cost?",
+      "Signing in isn't the same as permission",
+      "Where do Vercel and GitHub fit?",
+      "What to ask for in a proposal",
+      "Common questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/sanity-vs-wordpress",
+    "historicalRoute": false,
+    "beforeTitle": null,
+    "beforeH1": [],
+    "currentTitle": "Sanity vs WordPress: Which Editor Fits Your Website?",
+    "currentH1": [
+      "Sanity vs WordPress: Which Editor Fits Your Website?"
+    ],
+    "currentOpening": [
+      "WordPress is free software you host and keep updated, and your theme and plugins decide what its editor looks like. Sanity is a hosted editor set up around your content, paired with a custom website. How to choose, with a real client editor and five tasks to test.",
+      "Keep WordPress if your current editor already does what your team needs and the site mainly needs fixing. Choose Sanity if you're rebuilding anyway and want an editor with exactly the fields your content uses. WordPress is free, open-source software that you host and keep updated, and your theme and plugins decide what its editor looks like. Sanity is a hosted editor, Sanity Studio, that a developer sets up around your content and connects to a custom website, usually built with Next.js."
+    ],
+    "currentSectionHeadings": [
+      "What changes for the person editing the site?",
+      "What does Sanity cost compared with WordPress?",
+      "Two real Sanity editors: Panda Patches and Ladies 4 Jesus",
+      "Five tasks to try before you choose",
+      "What a WordPress-to-Sanity move has to keep",
+      "When should you keep WordPress?",
+      "Common questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/shopify-app-costs-real-monthly-bill",
+    "historicalRoute": true,
+    "beforeTitle": "Shopify App Costs 2026: Published Prices, Checked Aug 2",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Shopify App Costs in 2026: Audit the Real Bill",
+        "line": 166
+      }
+    ],
+    "currentTitle": "Shopify App Costs 2026: Published Prices, Checked Oct 4",
+    "currentH1": [
+      "Shopify App Costs in 2026: Audit the Real Bill"
+    ],
+    "currentOpening": [
+      "Published entry prices for the apps Shopify stores most often run go from $0 to about $100 a month each: Gorgias Starter $10, Judge.me Awesome $15, Smile Essential $15, PageFly Builder $24, Vitals All-in-One $29.99, Loox Convert $49.99, and Recharge Starter $99 plus 1.49% and 19¢ per transaction. Every figure comes from the vendor's own Shopify App Store listing or pricing page, checked August 2, 2026 and again on October 4, 2026, and each is linked in the table below. Your actual bill isn't the sum of those numbers. It's Shopify-billed subscriptions, usage charges, externally billed services and the operational dependencies each app creates.",
+      "Reviewed August 2, 2026 against current Shopify documentation. App prices and Shopify's billing pages rechecked October 4, 2026."
+    ],
+    "currentSectionHeadings": [
+      "How to work out your real monthly app bill",
+      "Three questions to ask of every app on the list",
+      "1. Build the invoice register",
+      "2. Know which of the four charge types you're looking at",
+      "3. Find charges outside Shopify",
+      "What the common apps publish, checked August 2 and October 4, 2026",
+      "How much does Shopify take from a $100 sale?",
+      "4. Measure value before comparing prices",
+      "5. Test performance as a change, not a slogan",
+      "6. Remove an app safely",
+      "7. Decide whether custom code belongs in the comparison",
+      "8. Produce an auditable decision",
+      "Tell us what you have",
+      "Primary sources",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/shopify-conversion-rate-speed-fix",
+    "historicalRoute": true,
+    "beforeTitle": "Low Shopify Conversion Rate? Measure Speed in the Funnel",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Low Shopify Conversion Rate? Measure Speed in the Funnel",
+        "line": 165
+      }
+    ],
+    "currentTitle": "Low Shopify Conversion Rate? Measure Speed in the Funnel",
+    "currentH1": [
+      "Low Shopify Conversion Rate? Measure Speed in the Funnel"
+    ],
+    "currentOpening": [
+      "A slow experience can obstruct shopping, but a conversion rate does not reveal its cause. Segment performance and funnel behavior together, control other changes and test a defined intervention before assigning revenue to speed. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.",
+      "The quotes below are Shopify merchants describing what moved, or wrecked, their conversion rate, in their own words. The link after each one goes to the original post."
+    ],
+    "currentSectionHeadings": [
+      "Do not diagnose from one average",
+      "Does site speed actually affect Shopify conversion rate?",
+      "1. Lock the metric definitions",
+      "2. Find the funnel stage that changed",
+      "3. Segment before attributing",
+      "4. Use field and lab performance for different jobs",
+      "5. Know what actually loads on a Shopify storefront",
+      "6. Separate the cart page from Shopify's checkout",
+      "7. Understand what your CRO tooling cannot see",
+      "8. Form a falsifiable hypothesis",
+      "9. Choose the least disruptive intervention",
+      "10. Fix funnel friction that has nothing to do with speed",
+      "11. Validate the release",
+      "12. Calculate business impact as a scenario",
+      "13. Repair or rebuild",
+      "14. What a headless Shopify build actually changes",
+      "15. What to check before you accept a Shopify speed quote",
+      "16. What our engagements cost",
+      "Tell us what you have",
+      "Related reading",
+      "Primary sources",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/shopify-dawn-theme-slow",
+    "historicalRoute": true,
+    "beforeTitle": "Shopify Dawn Theme Slow? Diagnose the Store, Not the Name",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Shopify Dawn Theme Slow? Diagnose the Store",
+        "line": 161
+      }
+    ],
+    "currentTitle": "Shopify Dawn Theme Slow? Diagnose the Store, Not the Name",
+    "currentH1": [
+      "Shopify Dawn Theme Slow? Diagnose the Store"
+    ],
+    "currentOpening": [
+      "Dawn is Shopify's source-available reference theme and was built with performance in mind. A slow Dawn store needs route-level diagnosis. The theme name alone does not identify the cause, impose a Lighthouse ceiling or prove that headless is required.",
+      "Dawn is slow on a specific store for one of four reasons, and all four are things you added rather than things the theme shipped with: oversized images and video, too many sections on a template, the apps and third-party code you installed, and custom code someone put in the theme. Shopify's theme performance best practices cover the same ground under images, Liquid, JavaScript and apps, and CSS and fonts. They separately list what the platform already handles for you, including a Cloudflare-backed CDN, Brotli and gzip compression, HTTP/3 and Early Hints. Read October 8, 2026. None of those is the thing you are about to fix."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "Start with four evidence layers",
+      "What Dawn is in 2026",
+      "What is actually in the page, and who owns it",
+      "Audit the app layer by name",
+      "What Shopify loads regardless of your theme",
+      "1. Read the field report first",
+      "2. Create controlled comparisons",
+      "3. Inspect JavaScript and third parties",
+      "4. Fix media and loading priority",
+      "5. Review Liquid, sections and custom code",
+      "6. Validate the fix",
+      "What moves the number, and what only feels like it does",
+      "When to keep Dawn, change theme or go headless",
+      "Is a rebuild right for your store?",
+      "What to check before you accept a Shopify speed quote",
+      "What our engagements cost",
+      "Key takeaways",
+      "Tell us what you have",
+      "Primary sources",
+      "Related reading",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/shopify-headless",
+    "historicalRoute": true,
+    "beforeTitle": "Headless Shopify in 2026: Architecture and Migration Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Headless Shopify in 2026: Architecture Before Hype",
+        "line": 156
+      }
+    ],
+    "currentTitle": "Headless Shopify Cost in 2026: Plans, Hosting and Build",
+    "currentH1": [
+      "Headless Shopify cost in 2026: every line on the bill"
+    ],
+    "currentOpening": [
+      "Headless Shopify costs your Shopify plan, the storefront build and someone to run it. The headless parts cost nothing extra: Hydrogen is MIT, open source, Oxygen hosting comes at no extra charge on every paid plan from Starter to Plus, and the Headless channel that issues your Storefront API keys is free. You don't need Shopify Plus. The money goes on the build, on replacing storefront apps, and on upkeep, because Shopify releases a new version every three months, each stable version supported for at least 12 months.",
+      "Prices and plan rules read from Shopify's own pages in October 2026, as shown to a US visitor. Shopify sets plan prices by country."
+    ],
+    "currentSectionHeadings": [
+      "Headless Shopify cost, line by line",
+      "Do you need Shopify Plus to go headless?",
+      "Hydrogen on Oxygen or Next.js on Vercel: the running cost",
+      "The 2026 decision in one view",
+      "Four parts of your business to check before replacing the storefront",
+      "Is headless Shopify worth it?",
+      "What going headless on Shopify changes",
+      "What can a Shopify theme not do?",
+      "Hydrogen, Next.js or a Shopify theme: which path?",
+      "Which Shopify apps break when you go headless?",
+      "How does headless Shopify change analytics and consent?",
+      "Will headless Shopify hurt your SEO?",
+      "What speed should a headless Shopify store hit?",
+      "What keeps costing after launch?",
+      "The migration sequence, in order",
+      "Can you roll back a headless Shopify launch?",
+      "Related reading",
+      "Tell us what you have",
+      "Primary sources",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/shopify-plus-still-slow",
+    "historicalRoute": true,
+    "beforeTitle": "Shopify Plus Speed Problems: An Enterprise Diagnostic",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Shopify Plus Speed Problems: An Enterprise Diagnostic",
+        "line": 157
+      }
+    ],
+    "currentTitle": "Shopify Plus Speed Problems: An Enterprise Diagnostic",
+    "currentH1": [
+      "Shopify Plus Speed Problems: An Enterprise Diagnostic"
+    ],
+    "currentOpening": [
+      "Shopify Plus gives you more enterprise commerce features. It does not tell you why your storefront is slow, and paying for it does not fix that. Measure the store your customers actually load, find what is really costing you the time, then pick the smallest change that meets the requirements you have agreed. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.",
+      "Shopify currently positions Plus around features such as B2B, headless commerce, POS Pro, checkout customization, Functions and international commerce. Current prices and transaction terms vary by region, term and business structure, so use the official localized page and the signed contract for commercial decisions. For the platform-versus-custom decision itself, see Shopify compared with a custom storefront."
+    ],
+    "currentSectionHeadings": [
+      "The correct starting point",
+      "What Plus does and does not establish",
+      "What is actually different about a Plus store",
+      "1. Define the incident or objective",
+      "2. Use the Shopify field view",
+      "3. Trace the production page",
+      "4. Separate storefront and checkout evidence",
+      "5. Optimize with enterprise controls",
+      "6. Decide whether headless is justified",
+      "7. Agree what done actually looks like",
+      "8. Model value without inventing lost revenue",
+      "Tell us what you have",
+      "Primary sources",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/shopify-slow-losing-sales",
+    "historicalRoute": true,
+    "beforeTitle": "Slow Shopify Store Losing Sales? Build an Evidence Model",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Slow Shopify Store Losing Sales? Build an Evidence Model",
+        "line": 154
+      }
+    ],
+    "currentTitle": "Slow Shopify Store Losing Sales? Build an Evidence Model",
+    "currentH1": [
+      "Slow Shopify Store Losing Sales? Build an Evidence Model"
+    ],
+    "currentOpening": [
+      "Performance can obstruct a purchase, but no public “per second” formula can calculate your store's exact loss. Join real-user performance with the affected funnel, test a defined change and separate observed results from planning scenarios.",
+      "Probably yes, and nobody can tell you how much from a statistic. A slow store can obstruct purchases at several points, and that is worth fixing. But the figure you have almost certainly been quoted while researching this, that around half of mobile visitors abandon a site loading longer than three seconds, was measured on somebody else's traffic, in a different year, for different products, at a different price point, with different buying intent. It cannot tell you what your store is losing. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end."
+    ],
+    "currentSectionHeadings": [
+      "The short answer, and the number we will not give you",
+      "Four different numbers",
+      "How a slow page loses a sale",
+      "1. Confirm that a meaningful performance problem exists",
+      "2. Locate the affected funnel stage",
+      "3. Rule out competing explanations",
+      "4. Build a transparent scenario",
+      "5. Use ranges and sensitivity",
+      "6. Test a defined intervention",
+      "7. Choose the least disruptive remedy",
+      "8. Define commercial acceptance",
+      "What a headless Shopify storefront actually is",
+      "Common Shopify speed mistakes that do not need a rebuild",
+      "Signals a rebuild is worth pricing",
+      "When not to rebuild",
+      "Tell us what you have",
+      "Primary sources",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/shopify-stocky-sunset-date-2026",
+    "historicalRoute": true,
+    "beforeTitle": "Shopify Stocky Sunset: August 31, 2026 Migration Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Shopify Stocky Sunset: August 31, 2026",
+        "line": 148
+      }
+    ],
+    "currentTitle": "Shopify Stocky Sunset: August 31, 2026 Migration Guide",
+    "currentH1": [
+      "Shopify Stocky Sunset: August 31, 2026"
+    ],
+    "currentOpening": [
+      "Stocky stopped working for inventory management on August 31, 2026, according to Shopify's transition documentation, rechecked October 8, 2026. You keep read-only access to export your data for at least 90 days after that date. Use it now: export the history you are required to keep, write down what each of your workflows did, test whatever you are moving to, fix anything that talked to Stocky, and show your team how the new thing works.",
+      "The deadline in the title was 31 August 2026, which is now behind us, so read the rest of this page as a record of what was required rather than a plan you still have time to run. If you migrated, nothing here changes. If you did not, the position on 8 October 2026 is this: Stocky no longer manages inventory and its APIs stopped on the same date, so anything that called them is already failing. Shopify says you keep read-only access to export your data for at least 90 days after August 31, so until at least November 29, 2026, and it hasn't said when that access ends. That makes exporting purchase orders, stock counts and supplier records the only item on this page that is still urgent. Do that first, then work through the rest in order."
+    ],
+    "currentSectionHeadings": [
+      "Confirmed timeline and impact",
+      "If you are reading this close to the date",
+      "What to do first, and what can wait",
+      "Why you should not uninstall Shopify Stocky yet",
+      "What Stocky data can you export before it shuts down?",
+      "What actually stops working",
+      "What changes when you replace Shopify Stocky?",
+      "Which Stocky replacement fits your workflow?",
+      "How to test a Stocky replacement before cutover",
+      "How to leave Stocky without losing stock data",
+      "How long will Shopify keep Stocky read-only?",
+      "Get your Stocky migration plan",
+      "Primary sources",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/shopify-store-speed-optimization",
+    "historicalRoute": true,
+    "beforeTitle": "Shopify Store Speed Optimization (2026 Guide)",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Shopify Store Speed Optimization: What Actually Works",
+        "line": 161
+      }
+    ],
+    "currentTitle": "Shopify Store Speed Optimization (2026 Guide)",
+    "currentH1": [
+      "Shopify Store Speed Optimization: What Actually Works"
+    ],
+    "currentOpening": [
+      "Speeding up a Shopify store starts with measuring it, not with installing a booster app and not with someone promising you a perfect score. Your homepage, a collection page, a product page, the cart and a blog post will all score differently, because each one loads a different set of theme sections, images, app scripts, analytics and things customers can click. You'll find the real bottleneck, improve the current theme where that's sensible, and decide whether a theme refresh or headless storefront is justified by business requirements. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.",
+      "Performance affects how quickly shoppers can see a product, choose a variant, open a cart, and complete a task. Shopify says that themes, installed apps, and manually added third-party code are the major controllable factors in online store performance. Its guidance also connects a better customer experience with discoverability and conversion, while avoiding a universal promise about how much either metric will change. Read Shopify's current online store performance guidance before acting on generic scanner advice."
+    ],
+    "currentSectionHeadings": [
+      "What Speed Changes on a Shopify Store",
+      "Shopify Speed Score, Core Web Vitals, and PageSpeed Are Different",
+      "How to Test Shopify Store Speed Without Fooling Yourself",
+      "What Slows Down a Shopify Store",
+      "How to Read PageSpeed Opportunities on Shopify",
+      "A Shopify Theme Performance Code Review",
+      "Seven High-Impact Shopify Speed Optimization Steps",
+      "Diagnosing Shopify Core Web Vitals",
+      "Shopify App Speed: Measure Value and Cost Together",
+      "Shopify Image and Font Optimization",
+      "Content-Heavy Shopify Pages Need Their Own Budget",
+      "Shopify Speed Optimization Mistakes to Avoid",
+      "Did Google Introduce a New Shopify Speed Threshold?",
+      "Theme Optimization, Theme Refresh, or Headless Shopify?",
+      "A Controlled Shopify Optimization and Migration Plan",
+      "Does Shopify speed work pay for itself?",
+      "When to Hire a Shopify Performance Specialist",
+      "Your Shopify Speed Optimization Action Plan",
+      "Frequently Asked Questions",
+      "Related Articles",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/shopify-vs-custom-website",
+    "historicalRoute": true,
+    "beforeTitle": "Shopify vs Custom Website in 2026: A Decision Framework",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Shopify vs Custom Website: A 2026 Decision Framework",
+        "line": 153
+      }
+    ],
+    "currentTitle": "Shopify vs Custom Website in 2026: A Decision Framework",
+    "currentH1": [
+      "Shopify vs Custom Website: A 2026 Decision Framework"
+    ],
+    "currentOpening": [
+      "Shopify, a headless Shopify storefront and a separate custom commerce stack each solve a different problem. Compare them against what your business actually needs and how you intend to run it, not against invented revenue thresholds, app-spend figures or PageSpeed targets.",
+      "These are merchants on r/shopify explaining, in their own words, why they started looking at leaving the platform. Every quote links to the original post."
+    ],
+    "currentSectionHeadings": [
+      "First: which “custom website” do you mean?",
+      "The four real options",
+      "1. Compare commerce requirements first",
+      "2. Use current commercial terms",
+      "3. Build a comparable total-cost model",
+      "Accessibility is measurable too, and Shopify scores badly",
+      "4. Measure performance instead of assigning platform scores",
+      "5. Compare ownership precisely",
+      "6. Know when Shopify remains the right choice",
+      "7. Know when headless deserves evaluation",
+      "8. Know when a separate custom commerce stack is justified",
+      "9. Make migration SEO-safe",
+      "10. Use project-specific commercial terms",
+      "Related reading",
+      "Tell us what you have",
+      "Primary sources",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/spending-more-on-ads-fewer-orders-tracking",
+    "historicalRoute": true,
+    "beforeTitle": "Spending More on Ads but Getting Fewer Orders? Audit Tracking",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Spending More on Ads but Getting Fewer Orders? Audit Tracking",
+        "line": 173
+      }
+    ],
+    "currentTitle": "Spending More on Ads but Getting Fewer Orders? Audit Tracking",
+    "currentH1": [
+      "Spending More on Ads but Getting Fewer Orders? Audit Tracking"
+    ],
+    "currentOpening": [
+      "Tracking can be incomplete, duplicated or misattributed, but it is not the automatic cause of higher acquisition cost. Reconcile business outcomes with event delivery, consent and platform reporting before changing campaigns or promising that server events will fix them.",
+      "A lower platform-reported conversion count can reflect fewer orders, a measurement gap, an attribution change, or more than one at once. Do not treat the ad dashboard as the system of record for fulfilled commerce. Two things in particular are worth ruling out before anyone quotes you for tracking work: the auction moved, and the creative fatigued. Either can raise your cost per order while your account, your site and your measurement all sit unchanged."
+    ],
+    "currentSectionHeadings": [
+      "Separate four questions",
+      "1. Diagnose the business result before the tracking stack",
+      "2. Define the event contract",
+      "3. Reconcile coverage instead of assuming a fixed loss rate",
+      "4. Use Meta Pixel and Conversions API deliberately",
+      "Is Meta's free Conversions API enough on its own?",
+      "5. Treat Event Match Quality as a diagnostic",
+      "6. Implement Google enhanced conversions under current rules",
+      "7. Make consent behavior testable",
+      "8. Keep AI discovery outside the ad-tracking claim",
+      "9. Compare implementation paths on total operation",
+      "Why bolt-on tracking keeps breaking",
+      "10. Require acceptance evidence",
+      "Tell us what you have",
+      "Primary sources",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/squarespace-migration-cost",
+    "historicalRoute": true,
+    "beforeTitle": "Squarespace Migration Cost 2026: What Leaving Costs",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Squarespace Migration Cost in 2026: Scope Before Price",
+        "line": 152
+      }
+    ],
+    "currentTitle": "Squarespace Migration Cost in 2026: Our Prices, From $1,500",
+    "currentH1": [
+      "Squarespace Migration Cost in 2026: Scope Before Price"
+    ],
+    "currentOpening": [
+      "How many pages you have is only the first thing that matters. The cost depends on how many kinds of content there are, how much of the design has to be rebuilt, whether you sell or take bookings, whether you have members, what your forms do, what has to keep talking to what, how much work protecting your search traffic takes, how much data has to move, how you sign it off, and how you intend to run the site afterwards. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.",
+      "Squarespace exports certain content to a WordPress-format XML file, not a complete portable copy of the site. Its current guidance lists layout pages, one blog and selected blocks as exportable while excluding store pages, portfolio and other page types, product and video blocks, drafts, style settings and custom CSS."
+    ],
+    "currentSectionHeadings": [
+      "PandaCodeGen planning tiers",
+      "1. Inventory what Squarespace will not export",
+      "2. Price page systems, not raw page count",
+      "3. Know what pushes a Squarespace move to the top of its range",
+      "4. Decide honestly whether to stay",
+      "5. Preserve search signals without promising rankings",
+      "6. Include launch risk and continuity",
+      "7. Include current and future vendor cost",
+      "8. Define PandaCodeGen commercial terms correctly",
+      "9. Define performance acceptance",
+      "10. Compare ownership and handoff",
+      "11. Build a TCO scenario, not a payback promise",
+      "12. Ask these before you sign anything",
+      "Tell us what you have",
+      "Primary sources",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/squarespace-too-slow",
+    "historicalRoute": true,
+    "beforeTitle": "Squarespace Too Slow in 2026? Diagnose Before Migrating",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Squarespace Too Slow in 2026? Diagnose Before Migrating",
+        "line": 155
+      }
+    ],
+    "currentTitle": "Squarespace Too Slow in 2026? Diagnose Before Migrating",
+    "currentH1": [
+      "Squarespace Too Slow in 2026? Diagnose Before Migrating"
+    ],
+    "currentOpening": [
+      "Squarespace speed varies page by page, and with your content, fonts, custom code, third-party scripts, the device and network. Use field and lab evidence to find the constraint before treating the platform name as the cause or migration as the only fix.",
+      "A Squarespace site is usually slow because of what was put on the page rather than because of Squarespace: oversized images, several font families, animations, and third-party blocks that open connections to hosts you do not control. All four are yours to fix in the editor. Work through them in the order below, measuring the same route before and after each change, and only treat the platform as the constraint once the controllable causes are gone. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end."
+    ],
+    "currentSectionHeadings": [
+      "The diagnostic sequence",
+      "The four things that decide a Squarespace page's speed",
+      "Is Squarespace actually slow, or is it your site?",
+      "What Squarespace controls, and what you control",
+      "How much does Squarespace page weight cost you?",
+      "Do custom fonts slow a Squarespace site down?",
+      "Which third-party scripts hurt Squarespace most?",
+      "Do Squarespace redirects add measurable delay?",
+      "Which Squarespace pages should you actually test?",
+      "Should you fix Squarespace or leave it?",
+      "What can you actually export out of Squarespace?",
+      "What speed target should a Squarespace rebuild hit?",
+      "Tell us what you have",
+      "Primary sources",
+      "The check that has nothing to do with load time",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/squarespace-vs-custom-website",
+    "historicalRoute": true,
+    "beforeTitle": "Squarespace vs Custom Website in 2026: How to Choose",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Squarespace vs Custom Website: How to Choose in 2026",
+        "line": 156
+      }
+    ],
+    "currentTitle": "Squarespace vs Custom Website in 2026: How to Choose",
+    "currentH1": [
+      "Squarespace vs Custom Website: How to Choose in 2026"
+    ],
+    "currentOpening": [
+      "Squarespace offers a managed visual platform. A custom website offers implementation control and additional responsibility. Choose from required workflows, editing, data, performance, ownership and total cost, not a fixed PageSpeed or payback claim.",
+      "Squarespace users wrote the following themselves, on r/squarespace, about the editor, mobile layouts and an outage. Each quote links to the post it came from."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "1. Compare the actual editing workflow",
+      "2. Compare features and boundaries",
+      "Can you make a completely custom website on Squarespace?",
+      "3. Compare performance by implementation",
+      "4. Compare current cost from invoices",
+      "5. Price custom ownership honestly",
+      "6. Understand export and exit",
+      "7. Compare SEO controls",
+      "8. Choose Squarespace when",
+      "9. Evaluate custom when",
+      "10. Use contract-specific migration terms",
+      "Tell us what you have",
+      "Primary sources",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/top-custom-web-development-agencies-usa-2026",
+    "historicalRoute": true,
+    "beforeTitle": "Top Custom Web Development Agencies USA (2026): A Disclosed Shortlist",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Custom Web Development Partners: A Disclosed 2026 Shortlist",
+        "line": 218
+      }
+    ],
+    "currentTitle": "Top Custom Web Development Agencies USA (2026): A Disclosed Shortlist",
+    "currentH1": [
+      "Custom Web Development Partners: A Disclosed 2026 Shortlist"
+    ],
+    "currentOpening": [
+      "This is a shortlist to help you buy, not a league table. It keeps ten options worth considering, marks agencies and talent marketplaces with a Model column because they are not the same thing, and describes each company using only what that company currently says about itself.",
+      "Researched July 24, 2026 and rechecked October 8, 2026. Service pages change, so confirm scope and terms directly."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "How this shortlist was built",
+      "How to read a directory ranking, including the ones you were just shown",
+      "The ten options compared without a hidden ranking",
+      "Enterprise and specialist agency fits",
+      "Agency versus marketplace is a material difference",
+      "Where PandaCodeGen may fit",
+      "What the quote does not cover",
+      "Red flags in a discovery call",
+      "Use one request for proposal across every provider",
+      "Questions that expose material proposal gaps",
+      "Sources and limitations",
+      "Related reading",
+      "Frequently asked questions",
+      "Primary sources",
+      "Get a migration plan before choosing a vendor",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/top-nextjs-agencies-2026",
+    "historicalRoute": true,
+    "beforeTitle": "Next.js Development Agencies in 2026: A Disclosed Shortlist",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Next.js Development Agencies: A Disclosed 2026 Shortlist",
+        "line": 213
+      }
+    ],
+    "currentTitle": "Next.js Development Agencies in 2026: A Disclosed Shortlist",
+    "currentH1": [
+      "Next.js Development Agencies: A Disclosed 2026 Shortlist"
+    ],
+    "currentOpening": [
+      "Eight firms worth looking at, described from what each one currently says on its own service pages. PandaCodeGen compiled this shortlist, and it is not an independent ranking. We are not treating anyone's Clutch score, minimum project size or hourly rate as a fixed fact, and we are not claiming any of them is better than the others. Our own figures are the exception, because we can stand behind them: PandaCodeGen starts at $1,500 at a fixed price, has no minimum project size, and hands over code you own.",
+      "PandaCodeGen publishes this comparison, provides Next.js services, and is one of the eight options. The table is alphabetical and non-ranked. No company paid for inclusion."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "Method and limits",
+      "The eight providers compared",
+      "Content and CMS migration specialists",
+      "Platform, performance and product engineering",
+      "Where PandaCodeGen may fit",
+      "Do not hire a framework label",
+      "Migration and SEO acceptance",
+      "Performance acceptance",
+      "How the shortlist was assembled",
+      "The difference that actually shows up in procurement",
+      "If the quotes are coming back too big for the project",
+      "Three questions that separate a Next.js build from a Next.js label",
+      "One comparison sheet for every proposal",
+      "Sources and update policy",
+      "Frequently asked questions",
+      "Primary sources",
+      "Get a migration plan you can compare",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/web-accessibility-glossary",
+    "historicalRoute": true,
+    "beforeTitle": "Web Accessibility Glossary: [dynamic] Terms Defined (2026)",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "The Web Accessibility Glossary",
+        "line": 360
+      }
+    ],
+    "currentTitle": "Web Accessibility Glossary: 29 Terms Defined (2026)",
+    "currentH1": [
+      "The Web Accessibility Glossary"
+    ],
+    "currentOpening": [
+      "Accessibility gets sold with acronyms. WCAG, AA, VPAT, ARIA, axe, overlay. This defines 29 of them in plain English, says what each one does and does not prove, and gives you the question to ask the person putting it in a quote.",
+      "Three things are worth knowing before any of the definitions. WCAG is a technical standard, not a law, and level AA is what nearly every law actually points at. Automated testing detects a subset of failures, so a clean scan is not conformance. And the failures that dominate real sites are not exotic: contrast, alternative text and form labels account for most of what any tool will find on yours."
+    ],
+    "currentSectionHeadings": [
+      "Standards and conformance",
+      "How people actually use the web",
+      "The failures that dominate the data",
+      "Markup, testing and evidence",
+      "Where does your own site sit?",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/web-accessibility-statistics-2026",
+    "historicalRoute": true,
+    "beforeTitle": "Web Accessibility Statistics 2026: What the Data Actually Shows",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Web accessibility statistics 2026: what the data actually shows",
+        "line": 157
+      }
+    ],
+    "currentTitle": "Web Accessibility Statistics 2026: What the Data Actually Shows",
+    "currentH1": [
+      "Web accessibility statistics 2026: what the data actually shows"
+    ],
+    "currentOpening": [
+      "The web got measurably less accessible in 2026, ending six consecutive years of small improvements. This is what the measured data says about how sites fail, whether the platform matters, and where the legal exposure sits, along with the parts the data cannot settle. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.",
+      "Figures verified against their sources on 8 October 2026. Each one is stated with the method behind it, because an accessibility percentage without a method is not a measurement."
+    ],
+    "currentSectionHeadings": [
+      "The headline number, and the part that matters more",
+      "What actually fails, and why that is good news",
+      "Does the platform matter?",
+      "The legal picture, stated carefully",
+      "What to do with this, in order",
+      "What this data cannot tell you",
+      "So we measured our own site",
+      "Sources",
+      "Find out where your own site stands",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/webflow-migration-cost",
+    "historicalRoute": true,
+    "beforeTitle": "Webflow Migration Cost 2026: What Leaving Webflow Costs",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Webflow Migration Cost: Scope, Tiers and Evidence",
+        "line": 151
+      }
+    ],
+    "currentTitle": "Webflow Migration Cost 2026: What Leaving Webflow Costs",
+    "currentH1": [
+      "Webflow Migration Cost: Scope, Tiers and Evidence"
+    ],
+    "currentOpening": [
+      "Moving a site off Webflow onto a custom build starts at $1,500 with PandaCodeGen, $3,500 for a larger marketing site, and $5,000 where templates, CMS or integrations multiply. Those are our prices, not a market average. What decides which one you land in is rarely page count. It is how many distinct templates hide behind those pages, how your CMS collections reference each other, which features Webflow will not export at all, which systems have to keep talking to each other afterwards, how the URLs get mapped so the search traffic survives, and what you have to see before you sign it off. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.",
+      "Every Webflow figure on this page was re-checked against Webflow's own pricing page and help centre on August 2, 2026."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "Which move are you actually making?",
+      "The four planning tiers for a Webflow migration",
+      "Why published Webflow migration ranges span more than 10x",
+      "Webflow migration cost for a 50 to 100 page website",
+      "Enterprise Webflow migration pricing",
+      "What factors increase the cost of a Webflow migration project?",
+      "What Webflow actually exports",
+      "What does it actually cost to move the content?",
+      "What a professional migration should include",
+      "What may not be included in a standard quote",
+      "How to compare migration quotes without calling one padded",
+      "Who should you hire?",
+      "How much does it cost to host a Webflow site?",
+      "Measure performance separately from rankings",
+      "Treat availability as a requirement, not an outage anecdote",
+      "When does a Webflow migration pay for itself?",
+      "How to get an accurate quote",
+      "PandaCodeGen commercial terms",
+      "Frequently asked questions",
+      "Primary sources",
+      "Get your Webflow migration plan",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/webflow-true-cost",
+    "historicalRoute": true,
+    "beforeTitle": "Webflow Pricing 2026: Monthly Costs and an Annual Budget",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "How much does Webflow cost in 2026?",
+        "line": 149
+      }
+    ],
+    "currentTitle": "Webflow Pricing 2026: Monthly Costs and an Annual Budget",
+    "currentH1": [
+      "How much does Webflow cost in 2026?"
+    ],
+    "currentOpening": [
+      "For a custom-domain website, Basic starts at $15 a month billed yearly; Premium with a CMS starts at $25 a month billed yearly. Your full budget also depends on the people editing it, enabled extras and the work needed to keep it useful.",
+      "Updated September 25, 2026. USD before tax. Annual-billing rates are monthly equivalents paid on a yearly cycle; existing accounts may have different renewal terms."
+    ],
+    "currentSectionHeadings": [
+      "Webflow monthly and yearly pricing",
+      "Do you need both a Site plan and a paid Workspace?",
+      "Why is your Webflow price increasing, or different from this table?",
+      "A Webflow annual budget you can reproduce",
+      "Which extra Webflow costs should you check?",
+      "Is Webflow worth it, or should you reduce the bill?",
+      "Webflow cost questions",
+      "Sources and method",
+      "Talk through your Webflow costs with a founder",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/webflow-user-accounts-sunset-date-2026",
+    "historicalRoute": true,
+    "beforeTitle": "Webflow User Accounts Sunset Date: January 29, 2026 (Confirmed)",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Webflow User Accounts Sunset: Recovery After January 29, 2026",
+        "line": 146
+      }
+    ],
+    "currentTitle": "Webflow User Accounts Sunset Date: January 29, 2026 (Confirmed)",
+    "currentH1": [
+      "Webflow User Accounts Sunset: Recovery After January 29, 2026"
+    ],
+    "currentOpening": [
+      "Webflow User Accounts is gone. Webflow was specific about what that means: you lost access to your account data, account pages turned into static pages, anything you had behind a members-only gate became public, nobody can log in any more, and Stripe subscriptions that qualified kept running. Start by working out what you actually had, not by picking a replacement.",
+      "Reviewed August 3, 2026 against Webflow's current help center, feature sunsets page and product updates. The January 29, 2026 date has not changed."
+    ],
+    "currentSectionHeadings": [
+      "Verified status",
+      "What happened on January 29, 2026",
+      "What was affected on unmigrated sites",
+      "The three failure modes, in practice",
+      "Check subscription and customer harm separately",
+      "Replacement option one: a Webflow ecosystem provider",
+      "Replacement option two: another managed identity system",
+      "Replacement option three: custom application code",
+      "Is a managed replacement a fix or a deferral?",
+      "Build a like-for-like requirement matrix",
+      "What happened to the pages themselves, and how to redirect them",
+      "Recovery playbook for an affected site",
+      "How much does replacement cost?",
+      "PandaCodeGen terms that must be written into the project",
+      "The broader lesson",
+      "Frequently asked questions",
+      "Primary sources",
+      "Get a recovery and migration plan",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/webflow-vs-custom-website",
+    "historicalRoute": true,
+    "beforeTitle": "Webflow vs Custom Website in 2026: A Four-Factor Decision",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Webflow vs Custom Website: A Four-Factor Decision",
+        "line": 139
+      }
+    ],
+    "currentTitle": "Webflow vs Custom Website in 2026: A Four-Factor Decision",
+    "currentH1": [
+      "Webflow vs Custom Website: A Four-Factor Decision"
+    ],
+    "currentOpening": [
+      "Webflow combines visual design, CMS and managed hosting. Custom code gives an organization more implementation control and more operating responsibility. Choose from the actual editing, feature, ownership and lifecycle requirements, not a platform score.",
+      "Four factors decide this, and none of them is speed or design quality. Editing asks who ships a page change. Requirements ask whether the platform can express what you need. Control asks who holds the code and the accounts. Lifecycle asks who can afford to run it. Answer all four before you compare anything else."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "Four things that decide Webflow or custom",
+      "Who can edit a Webflow site versus a custom one?",
+      "What can Webflow not integrate with?",
+      "Do you own your Webflow site, and can you export it?",
+      "What does Webflow cost over three years?",
+      "What a custom build gives you that Webflow cannot",
+      "Is Webflow slower than a custom site?",
+      "Which businesses should stay on Webflow?",
+      "When Webflow is still the right choice",
+      "If you leave Webflow, what happens next?",
+      "PandaCodeGen commercial and acceptance terms",
+      "Webflow or custom: the decision that actually matters",
+      "Frequently asked questions",
+      "Primary sources",
+      "Where Webflow does well: agent readability",
+      "Get a Webflow fit and migration plan",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/website-developer-agency",
+    "historicalRoute": true,
+    "beforeTitle": "Website Developer Agency: Services, Costs and Selection in 2026",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Website Developer Agency: What to Buy and Verify",
+        "line": 145
+      }
+    ],
+    "currentTitle": "Website Developer Agency: Services, Costs and Selection in 2026",
+    "currentH1": [
+      "Website Developer Agency: What to Buy and Verify"
+    ],
+    "currentOpening": [
+      "An agency's job is to turn what your business needs into a website you can actually run, with someone clearly on the hook for the design, the code, the content, the testing, the launch and the support afterwards. Judge them on who they are putting on your project and what they will put in writing, not on the word “agency”.",
+      "Reviewed October 8, 2026 against current W3C, OWASP and U.S. Copyright Office guidance, all linked at the foot of this page."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "What a full-service website developer agency does",
+      "The engagements you are actually buying",
+      "Core services and their acceptance evidence",
+      "How much does a website developer agency cost in 2026?",
+      "Platforms a modern agency may support",
+      "A four-stage delivery process",
+      "Four contract lines the standard checklist always misses",
+      "Performance terms to put in writing",
+      "In-house developer vs agency vs freelancer",
+      "How to choose the right agency",
+      "How to verify what an agency tells you",
+      "Seven questions before signing",
+      "Founder-led, senior-led and outsourced teams",
+      "Ownership and licensing",
+      "Related reading",
+      "Frequently asked questions",
+      "Primary sources",
+      "Get a migration plan and comparable scope",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/website-migration-cost-2026",
+    "historicalRoute": true,
+    "beforeTitle": "Website Migration Cost in 2026: Seven-Platform Scope Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Website Migration Cost: Seven-Platform Scope Guide",
+        "line": 150
+      }
+    ],
+    "currentTitle": "Website Migration Cost in 2026: Seven-Platform Scope Guide",
+    "currentH1": [
+      "Website Migration Cost: Seven-Platform Scope Guide"
+    ],
+    "currentOpening": [
+      "What a migration costs comes down to what you already have and what it has to do once it lands. The platform you are leaving changes how hard the export is, but the price is set by how many pages and templates there are, what data has to move, what it has to connect to, and how much testing the launch needs. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.",
+      "Reviewed August 2, 2026 against current platform and Google documentation; export links re-checked August 1, 2026. Quote sourcing and pricing claims re-audited September 12, 2026. Platform sections condensed and starting tiers re-checked against our published terms October 4, 2026."
+    ],
+    "currentSectionHeadings": [
+      "The short answer: what a website migration costs",
+      "The seven-platform migration matrix",
+      "Are you changing hosts, or changing platforms?",
+      "What drives website migration cost on every platform",
+      "Go straight to your platform",
+      "How long does a website migration take?",
+      "What is inside a migration price?",
+      "Migration cost by platform",
+      "Is a migration worth it? How to build the business case",
+      "Costs that must be visible in the proposal",
+      "How to budget the migration",
+      "PandaCodeGen terms",
+      "Frequently asked questions",
+      "Primary sources",
+      "Get a platform-specific migration plan",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/website-monthly-running-cost",
+    "historicalRoute": false,
+    "beforeTitle": null,
+    "beforeH1": [],
+    "currentTitle": "How Much Does a Website Cost per Month? Our Stack Runs Under $50",
+    "currentH1": [
+      "How Much Does a Website Cost per Month? Our Stack Runs Under $50"
+    ],
+    "currentOpening": [
+      "A custom website with a content editor costs about $20 a month to run on our usual stack. Add a database and sign-in and it's about $45. Every line of the bill with October 2026 prices, and who owns which account.",
+      "A custom website with a content editor costs about $20 a month to run on our usual stack: Vercel Pro hosting at $20 a month, with Sanity's editor and Resend's email on their free plans. If the project also needs a database and sign-in, Supabase Pro adds from $25 a month, for about $45 a month in total. Your domain is extra, paid yearly to whichever registrar you bought it from. Prices as of October 2026."
+    ],
+    "currentSectionHeadings": [
+      "The monthly bill, line by line",
+      "Why not host on Vercel's free plan?",
+      "Why we start on Supabase's free plan",
+      "When does Sanity start costing money?",
+      "Who owns each account?",
+      "Separate the build, ongoing services and advertising budget",
+      "What isn't in the monthly bill",
+      "Common questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/website-portability",
+    "historicalRoute": false,
+    "beforeTitle": null,
+    "beforeH1": [],
+    "currentTitle": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "currentH1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "currentOpening": [
+      "Your data usually can leave. The working website usually can't. We read the help pages of 8 platforms on 8 October 2026, and only WooCommerce and self-hosted WordPress let the whole site, design and code included, move to a host you choose.",
+      "Hassan leads PandaCodeGen's migration work off WordPress, Webflow and GoHighLevel. Every one of those moves starts with the exports in this post."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "How we checked each platform",
+      "Website export comparison: all 8 platforms",
+      "Who owns the content, and who owns the template",
+      "Wix: your records export, the site stays on Wix",
+      "Squarespace: a partial export of pages and one blog",
+      "Webflow: code export on Workspace plans, without the CMS wiring",
+      "Shopify: store data exports cleanly, pages and posts don't",
+      "WooCommerce: the store moves with your WordPress site",
+      "GoHighLevel: contacts and orders export, the website doesn't",
+      "WordPress.com: content exports in the standard WordPress format",
+      "Self-hosted WordPress: the whole site moves",
+      "Before you leave any platform: five things to save",
+      "What to ask any agency or builder before you sign",
+      "What a PandaCodeGen handover includes",
+      "Planning to leave a platform?",
+      "Sources",
+      "Questions about taking your website with you",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/website-rebuild-cost-2026",
+    "historicalRoute": true,
+    "beforeTitle": "Website Rebuild Cost in 2026: Scope, Tiers and Decision Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Website Rebuild Cost: Scope, Tiers and Decisions",
+        "line": 136
+      }
+    ],
+    "currentTitle": "Website Rebuild Cost in 2026: Scope, Tiers and Decision Guide",
+    "currentH1": [
+      "Website Rebuild Cost: Scope, Tiers and Decisions"
+    ],
+    "currentOpening": [
+      "A rebuild changes the platform and materially reworks the site's structure, experience or content system. Price it as a coordinated strategy, design, engineering and migration project, not as a universal market band.",
+      "The table below describes PandaCodeGen's own planning tiers and nothing else. We do not publish a market-wide rebuild range, because any single band has to average brochure sites, commerce platforms, regulated journeys and multi-market systems together. Price your own rebuild by writing the scope first, then asking two or three providers to quote that same scope."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "How much does a website rebuild cost in 2026?",
+      "When the rebuild question becomes urgent",
+      "Rebuild vs redesign vs migration",
+      "Seven line items that drive rebuild cost",
+      "Freelancer vs boutique studio vs agency vs enterprise firm",
+      "Why another rebuild quote may be higher than ours",
+      "What it costs to leave WordPress, Webflow, Squarespace, Wix or Shopify",
+      "Proposal red flags without accusing a quote of padding",
+      "Will I lose SEO when I rebuild?",
+      "How do you calculate rebuild ROI?",
+      "How long does a website rebuild take?",
+      "Hidden costs to make explicit",
+      "When a rebuild does not make sense",
+      "PandaCodeGen terms",
+      "Frequently asked questions",
+      "Primary sources",
+      "Get a rebuild decision and migration plan",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/website-redesign-cost",
+    "historicalRoute": true,
+    "beforeTitle": "Website Redesign Cost in 2026: Scope, Tiers and Buyer Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Website Redesign Cost: Scope Before Price",
+        "line": 142
+      }
+    ],
+    "currentTitle": "Website Redesign Cost in 2026: Scope, Tiers and Buyer Guide",
+    "currentH1": [
+      "Website Redesign Cost: Scope Before Price"
+    ],
+    "currentOpening": [
+      "A redesign changes the experience on the current platform. Price the actual templates, design system, content work, implementation, validation and rollout rather than a broad market average.",
+      "We quote redesigns from $1,500 for a bounded template set, $3,500 once a reusable design system is part of the work, and $5,000 where content volume, integrations or a staged rollout are involved. Those are PandaCodeGen's own planning tiers rather than a market survey, and what moves a project between them is scope rather than page count."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "How much does a website redesign cost?",
+      "What does it cost to update an existing website instead?",
+      "How often should a website be redesigned?",
+      "The four variables to price first",
+      "Small-business and mid-market scope",
+      "A/B testing and staged rollout",
+      "Redesign vs rebuild vs migration",
+      "Hidden costs to put in the proposal",
+      "What should the design system include?",
+      "Fixed price vs hourly work",
+      "Agency, freelancer or in-house team?",
+      "How to evaluate the cost of no redesign",
+      "How to justify the budget internally",
+      "How to reduce redesign cost safely",
+      "Questions to ask before signing",
+      "PandaCodeGen offer and terms",
+      "Frequently asked questions",
+      "Primary sources",
+      "Get the right project type and scope",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/what-is-headless-commerce",
+    "historicalRoute": true,
+    "beforeTitle": "What Is Headless Commerce? A 2026 Store Owner Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "What Is Headless Commerce? A Store Owner Guide",
+        "line": 154
+      }
+    ],
+    "currentTitle": "What Is Headless Commerce? A 2026 Store Owner Guide",
+    "currentH1": [
+      "What Is Headless Commerce? A Store Owner Guide"
+    ],
+    "currentOpening": [
+      "Headless commerce means you build the shop your customers see, and let one or more separate services handle the commerce behind it. That flexibility solves real problems when you need a particular experience or need to connect to other systems. It also leaves you with another application to secure, test and keep running.",
+      "Disclosure: PandaCodeGen builds headless storefronts, so we have a commercial interest in one side of this question. That is why this page publishes no speed uplift, no conversion figure and no market cost band, and why it puts the case for staying on a theme first."
+    ],
+    "currentSectionHeadings": [
+      "Headless commerce in plain English",
+      "Traditional vs headless commerce",
+      "When headless commerce can be justified",
+      "Is headless commerce faster?",
+      "Examples of headless commerce patterns",
+      "Shopify headless: Hydrogen or your own stack",
+      "Medusa as a commerce backend",
+      "Where a headless CMS fits",
+      "Design freedom, omnichannel and faster updates: what each one actually costs",
+      "Pros and cons",
+      "SEO and product discovery",
+      "What headless costs on a platform you already pay for",
+      "What you give up when you go headless",
+      "What we charge for this work",
+      "Is headless commerce worth it?",
+      "A headless decision checklist",
+      "PandaCodeGen's approach",
+      "Frequently asked questions",
+      "Primary sources",
+      "Find out whether headless is justified",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/what-is-llms-txt",
+    "historicalRoute": true,
+    "beforeTitle": "What Is llms.txt? Real Example + Who Reads It (2026)",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "What Is llms.txt? Here Is Ours, and Who Actually Reads It",
+        "line": 151
+      }
+    ],
+    "currentTitle": "What Is llms.txt? Real Example + Who Reads It (2026)",
+    "currentH1": [
+      "What Is llms.txt? Here Is Ours, and Who Actually Reads It"
+    ],
+    "currentOpening": [
+      "Every guide about llms.txt shows you a made-up example for a fake company. Here is a different idea: we will show you our real one. It is live at pandacodegen.com/llms.txt right now. This page explains what the file is, what it honestly does and does not do in 2026, and how to write yours in about twenty minutes.",
+      "Hassan builds and migrates Next.js sites, and writes down what actually moves machine readability rather than what sounds like it should."
+    ],
+    "currentSectionHeadings": [
+      "What is llms.txt, exactly?",
+      "llms.txt vs robots.txt vs sitemap.xml",
+      "Who actually reads llms.txt in 2026?",
+      "Our real llms.txt, section by section",
+      "How to write yours in 20 minutes",
+      "Does llms.txt help SEO?",
+      "How to check if AI actually reads yours",
+      "How we ship it",
+      "Frequently asked questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/which-website-builders-can-go-headless",
+    "historicalRoute": true,
+    "beforeTitle": "Which Website Builders Can Actually Go Headless in 2026",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Which website builders can actually go headless",
+        "line": 203
+      }
+    ],
+    "currentTitle": "Which Website Builders Can Actually Go Headless in 2026",
+    "currentH1": [
+      "Which website builders can actually go headless"
+    ],
+    "currentOpening": [
+      "Three of the six can: Shopify, WooCommerce and Wix. Webflow cannot in the usual sense and has deliberately built the reverse. Squarespace cannot at all, and does not use the word once in its developer documentation. GoHighLevel documents blog-post APIs; validate the fields and account access needed for your frontend. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.",
+      "Every claim here was read off the vendor's own API documentation in October 2026, not from its marketing pages. Sources and check dates are listed against each platform."
+    ],
+    "currentSectionHeadings": [
+      "What has to be true before a platform counts as headless",
+      "Shopify: yes, and it carries the content as well as the shop",
+      "WooCommerce: yes, but it takes two different APIs",
+      "Wix: yes, and it is free to start",
+      "Webflow: no, and it is deliberately running in the opposite direction",
+      "Squarespace: no",
+      "GoHighLevel: documented blog and business APIs",
+      "The six platforms side by side",
+      "What we have actually shipped on these",
+      "What this comparison does not establish",
+      "How to use this if you are choosing now",
+      "Not sure whether headless is the right call?",
+      "Frequently asked questions",
+      "Primary sources",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/why-competitor-outranks-you",
+    "historicalRoute": true,
+    "beforeTitle": "Why Does My Competitor Outrank Me? An Evidence-Led SEO Gap Analysis",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Why Does My Competitor Outrank Me? Find the Actual Gap",
+        "line": 139
+      }
+    ],
+    "currentTitle": "Why Does My Competitor Outrank Me? An Evidence-Led SEO Gap Analysis",
+    "currentH1": [
+      "Why Does My Competitor Outrank Me? Find the Actual Gap"
+    ],
+    "currentOpening": [
+      "A competitor outranks you because of a gap in one of seven comparable areas: query intent, content depth, crawl and indexing health, links, page experience, entity signals, or something that changed outside your site. Ranking below someone tells you that a difference exists; it does not tell you which of the seven it is. Hold everything steady and change one thing at a time: the same search, the same place, the same device, the same day, the same kind of result. Then make the smallest fix your evidence actually supports. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.",
+      "Record what you actually saw before you theorize about why. The query, the locale, the device, the date and the result type, then your own Search Console and analytics data, then the indexing and manual-action checks. Label every competitor visibility, link or traffic number as an estimate, because nobody outside their analytics can see the real figure."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "Start with evidence, not a platform verdict",
+      "Seven evidence groups to compare",
+      "Links: compare page-level evidence, not a vendor score",
+      "Does framework choice create an automatic Google advantage?",
+      "What changes for AEO, GEO and AI search?",
+      "A practical competitor-gap workflow",
+      "How to prioritize the work",
+      "PandaCodeGen's AI SEO and implementation offer",
+      "Frequently asked questions",
+      "Primary sources",
+      "Find the gap before changing platforms",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/why-we-chose-nextjs-over-wordpress-2026",
+    "historicalRoute": true,
+    "beforeTitle": "Why We Choose Next.js for Some WordPress Migrations in 2026",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Why We Choose Next.js for Some WordPress Migrations",
+        "line": 140
+      }
+    ],
+    "currentTitle": "Why We Choose Next.js for Some WordPress Migrations in 2026",
+    "currentH1": [
+      "Why We Choose Next.js for Some WordPress Migrations"
+    ],
+    "currentOpening": [
+      "PandaCodeGen builds Next.js websites and migrates existing sites onto them. We choose Next.js when a client needs a deliberately engineered presentation layer and can own its operating model. We do not treat WordPress as automatically slow, insecure or wrong.",
+      "We moved for engineering control over how pages are rendered and delivered, not because WordPress is bad at what it does. That distinction matters, because the second framing would make this a recommendation and the first makes it a fit decision. Four things followed from it, and each one cost us something in exchange. A build here starts at $1,500 at a fixed price, has no minimum project size, and the code is yours at the end."
+    ],
+    "currentSectionHeadings": [
+      "The honest reason",
+      "What changed our platform decision",
+      "Speed depends on the build, not the platform name",
+      "Hosting and lifecycle cost",
+      "Plugins, packages and security",
+      "Will editors miss WordPress?",
+      "Ownership is a contract question",
+      "What we can say about MyCustomPatches",
+      "When WordPress is still the right choice",
+      "When we consider Next.js",
+      "What happens to SEO during migration?",
+      "Our migration process",
+      "PandaCodeGen offer and terms",
+      "Frequently asked questions",
+      "Primary sources",
+      "Decide from your requirements, not platform slogans",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/will-migrating-hurt-my-seo",
+    "historicalRoute": true,
+    "beforeTitle": "Will Migrating My Website Hurt My SEO? (2026)",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Will Migrating My Website Hurt My SEO? The honest answer, not the sales pitch.",
+        "line": 156
+      }
+    ],
+    "currentTitle": "Will Migrating My Website Hurt My SEO? (2026)",
+    "currentH1": [
+      "Will Migrating My Website Hurt My SEO? The honest answer, not the sales pitch."
+    ],
+    "currentOpening": [
+      "A migration can genuinely cost you search traffic if URLs, the content that renders, metadata, canonicals, internal links or crawl rules change in the wrong way. Running it carefully removes the avoidable technical risk. It cannot guarantee your rankings, your traffic, that pages get indexed, or a date by which anything recovers. Here is the process, and the evidence you should insist on.",
+      "Hassan plans SEO-conscious migrations using URL inventories, page-level redirect maps, rendered-output checks, and post-launch monitoring. Search outcomes remain controlled by search engines."
+    ],
+    "currentSectionHeadings": [
+      "URL changes and redirects",
+      "The Four Silent Killers Beyond Redirects",
+      "The Honest Recovery Timeline",
+      "The risk is not the same on every platform",
+      "The other half of the decision",
+      "Performance is one migration acceptance area",
+      "How we reduce avoidable search risk",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/wix-migration-cost",
+    "historicalRoute": true,
+    "beforeTitle": "Wix Migration Cost 2026: What Leaving Wix Costs",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Wix Migration Cost: Scope the Real Move",
+        "line": 150
+      }
+    ],
+    "currentTitle": "Wix Migration Cost 2026: What Leaving Wix Costs",
+    "currentH1": [
+      "Wix Migration Cost: Scope the Real Move"
+    ],
+    "currentOpening": [
+      "A Wix migration is a rebuild rather than a transfer, and that one fact sets the price. Wix lets you export your data, but not the site itself, so the design, the page layouts and the page-level SEO settings are recreated by hand on the other side. PandaCodeGen's tiers start at $1,500, with Scale from $5,000 and larger work quoted after a scoping call. Page count on its own is a poor predictor of where you land. What actually moves the number is how many unique templates, data domains, apps and workflows have to come with you. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.",
+      "Our planning tiers are $1,500 Starter, $3,500 Growth and $5,000 Scale, and those are our own anchors rather than Wix migration market averages. There is no page-count formula behind them. Five pages with booking, payments, automations and member data can require more migration work than many static pages, so price unique templates, states, data and workflows alongside page count."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "How much does a Wix migration cost?",
+      "The four ways people actually do this, cheapest first",
+      "What can you export from Wix?",
+      "The migration scope checklist",
+      "What actually moves the number",
+      "Why quotes vary by more than ten times",
+      "How do you reduce Wix migration SEO risk?",
+      "Does moving from Wix guarantee a faster site?",
+      "What ownership changes?",
+      "What happens to the domain, email and DNS?",
+      "How long does a Wix migration take?",
+      "How to compare Wix migration quotes",
+      "Commonly missed line items",
+      "PandaCodeGen terms",
+      "Frequently asked questions",
+      "Primary sources",
+      "Get a Wix migration inventory and plan",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/wix-too-slow",
+    "historicalRoute": true,
+    "beforeTitle": "Why Is My Wix Site So Slow? A 2026 Measurement and Fix Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Why Is My Wix Site So Slow? Measure Before Migrating",
+        "line": 139
+      }
+    ],
+    "currentTitle": "Why Is My Wix Site So Slow? A 2026 Measurement and Fix Guide",
+    "currentH1": [
+      "Why Is My Wix Site So Slow? Measure Before Migrating"
+    ],
+    "currentOpening": [
+      "Wix speed varies page by page. It depends on your content, who is visiting, which apps you run, what scripts load and how the page is designed. Use the property's real-user and lab evidence to identify the slow layer before paying for a fix.",
+      "These are different problems with different fixes, and most advice on this question blends them. Editor lag affects you. Site slowness affects your visitors. A laggy Wix Editor or Wix Studio while you are building changes nothing about what a customer experiences, because visitors never load the editor. They load the published site."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "First: is the site slow, or is the editor slow?",
+      "How do you know whether the Wix site is slow?",
+      "What should you measure?",
+      "Eight common Wix performance contributors",
+      "The app pattern worth checking first",
+      "What can you fix inside Wix?",
+      "Does a slow Wix site lose rankings?",
+      "How do you measure revenue or lead impact?",
+      "What if the slow work is platform-controlled?",
+      "When should you consider migration?",
+      "When should you stay on Wix?",
+      "What does a controlled Wix migration include?",
+      "PandaCodeGen offer and terms",
+      "Frequently asked questions",
+      "Primary sources",
+      "Find the slow layer before choosing the fix",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/wix-vs-custom-website",
+    "historicalRoute": true,
+    "beforeTitle": "Wix vs Custom Website in 2026: A Requirements-Led Comparison",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Wix vs Custom Website: Choose From Requirements",
+        "line": 142
+      }
+    ],
+    "currentTitle": "Wix vs Custom Website in 2026: A Requirements-Led Comparison",
+    "currentH1": [
+      "Wix vs Custom Website: Choose From Requirements"
+    ],
+    "currentOpening": [
+      "Wix gives you the editor, the hosting and a set of business tools in one place. A custom site hands you control over how it looks, how it behaves and what it connects to, and hands you the engineering work that comes with that. Neither one is always faster, always cheaper, always safer, or always better for search. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.",
+      "Three Wix users on r/WIX in 2026, in their own words: one who paid for a rebuild and still gave up, one whose plan price more than doubled, and one who says Wix pays for itself. Each quote links to the original post."
+    ],
+    "currentSectionHeadings": [
+      "The decision in one minute",
+      "Wix vs custom website comparison",
+      "Editing and publishing",
+      "Business capabilities and Velo",
+      "Performance",
+      "SEO",
+      "Export, portability and ownership",
+      "Security and maintenance",
+      "Three-year cost without invented totals",
+      "How long each one takes to launch",
+      "Scale",
+      "When Wix is enough",
+      "When custom deserves a serious look",
+      "If you leave Wix",
+      "PandaCodeGen terms",
+      "Frequently asked questions",
+      "Primary sources",
+      "Compare Wix and custom on the same requirements",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/woocommerce-low-conversion-rate",
+    "historicalRoute": true,
+    "beforeTitle": "WooCommerce Low Conversion Rate: Diagnose It Before You Blame Speed",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "WooCommerce low conversion rate: diagnose it before you blame speed",
+        "line": 148
+      }
+    ],
+    "currentTitle": "WooCommerce Low Conversion Rate: Diagnose It Before You Blame Speed",
+    "currentH1": [
+      "WooCommerce low conversion rate: diagnose it before you blame speed"
+    ],
+    "currentOpening": [
+      "Most stores decide the cause before they measure it, and speed is the usual suspect because it is the easiest thing to have an opinion about. This is the order we work in instead: define the metric, find the stage that actually changed, then separate the problems WooCommerce creates from the ones every store has. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.",
+      "Published benchmarks below have different samples and definitions. They are context, not a target or a revenue forecast for your store. Use your own funnel, catalogue and margin to diagnose the gap."
+    ],
+    "currentSectionHeadings": [
+      "What actually causes a low WooCommerce conversion rate?",
+      "Why does WooCommerce not give you a conversion rate?",
+      "What is a good WooCommerce conversion rate?",
+      "Which funnel stage did your WooCommerce conversion rate drop at?",
+      "Why does a sitewide conversion rate hide the cause?",
+      "Can a traffic change lower conversion on its own?",
+      "Could the offer be holding sales back?",
+      "What does wc-cart-fragments.js do to your add-to-cart?",
+      "Do WooCommerce variable products convert worse than simple ones?",
+      "What runs on your WooCommerce checkout while customers wait?",
+      "Is guest checkout switched off in your WooCommerce settings?",
+      "Why does shipping cost shown late lose the order?",
+      "Does a slow wp-admin affect your conversion rate?",
+      "How much can site speed actually explain?",
+      "How do you write a testable conversion hypothesis?",
+      "What is a conversion fix actually worth?",
+      "Should you repair the WooCommerce store or rebuild it?",
+      "What should you ask before accepting a conversion quote?",
+      "Want the diagnosis before the quote?",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/woocommerce-migration-cost",
+    "historicalRoute": true,
+    "beforeTitle": "WooCommerce Migration Cost 2026: What Leaving Costs",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "WooCommerce Migration Cost: Price the Store, Not the Pages",
+        "line": 148
+      }
+    ],
+    "currentTitle": "WooCommerce Migration Cost 2026: What Leaving Costs",
+    "currentH1": [
+      "WooCommerce Migration Cost: Price the Store, Not the Pages"
+    ],
+    "currentOpening": [
+      "Moving a store is not just moving a website. Your products, customers, past orders, payments and extensions all have to line up afterwards, and the shop has to keep trading while it happens. That is what sets the price, far more than how many pages you have.",
+      "If you only need the products, customers and orders to arrive somewhere else, do not pay agency prices for it. Moving to Shopify or BigCommerce, that is a self-service job: Shopify publishes a free Store Migration app for product and customer data, and paid services like Cart2Cart and LitExtension exist specifically to run catalog and order transfers for a fee that is usually a small fraction of any build quote. If a vendor is charging you four figures purely to move the data, ask which of those they are using."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "Do you need your data moved, or your store rebuilt?",
+      "PandaCodeGen migration tiers",
+      "The WooCommerce migration complexity matrix",
+      "What is cheap to move and what is expensive",
+      "What WooCommerce exports actually cover",
+      "Why HPOS matters during discovery",
+      "Payments and subscriptions",
+      "Customer data and privacy",
+      "SEO and URL continuity",
+      "How to migrate a live store",
+      "Ownership and accounts",
+      "Is the migration worth it?",
+      "What a fair quote contains, and what to question",
+      "Payment, refund, support and performance",
+      "Frequently asked questions",
+      "Primary sources",
+      "Get a store-data inventory before a price",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/woocommerce-too-slow",
+    "historicalRoute": true,
+    "beforeTitle": "WooCommerce Too Slow? A 2026 Diagnosis and Fix Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "WooCommerce Too Slow? Diagnose Before You Rebuild",
+        "line": 152
+      }
+    ],
+    "currentTitle": "WooCommerce Too Slow? A 2026 Diagnosis and Fix Guide",
+    "currentH1": [
+      "WooCommerce Too Slow? Diagnose Before You Rebuild"
+    ],
+    "currentOpening": [
+      "WooCommerce is usually slow for a reason you can name and locate: every uncached page is assembled per request by PHP and the database, WooCommerce loads cart-refreshing JavaScript on every page that shows the mini-cart, which many themes put in the header of every page, and cart, checkout and account pages can't be full-page cached because they hold customer state. Extensions, media and hosting then add to whichever of those is already hurting. Find which layer is responsible on your store before buying another plugin or committing to a new architecture.",
+      "Reviewed against current Google and WooCommerce documentation on August 2, 2026. The add to cart and checkout sections were rechecked against WooCommerce's docs and source code on October 4, 2026."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "Four kinds of evidence, and what each one settles",
+      "Does WooCommerce have a typical PageSpeed score?",
+      "Build a useful baseline",
+      "Eight common causes of a slow WooCommerce store",
+      "How to speed up WooCommerce: a measured fix ladder",
+      "Two mechanisms to understand before you buy a plugin",
+      "Why cart, checkout and account need different caching rules",
+      "Why is WooCommerce add to cart slow?",
+      "Why is WooCommerce checkout slow?",
+      "Why is the WooCommerce backend (wp-admin) slow?",
+      "What HPOS can and can't prove",
+      "Performance and security maintenance overlap",
+      "Measure business effect without invented revenue math",
+      "Repair, headless WooCommerce or replace?",
+      "Signals that point each way",
+      "When headless is the wrong answer",
+      "Agentic commerce and protocol claims",
+      "What to ask a WooCommerce performance provider",
+      "PandaCodeGen terms and performance acceptance",
+      "Frequently asked questions",
+      "Primary sources",
+      "Get evidence before choosing the fix",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/woocommerce-vs-custom-website",
+    "historicalRoute": true,
+    "beforeTitle": "WooCommerce vs Custom Website in 2026: A Requirements Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "WooCommerce vs Custom Website: Choose by Requirements",
+        "line": 148
+      }
+    ],
+    "currentTitle": "WooCommerce vs Custom Website in 2026: A Requirements Guide",
+    "currentH1": [
+      "WooCommerce vs Custom Website: Choose by Requirements"
+    ],
+    "currentOpening": [
+      "WooCommerce, a separated WooCommerce storefront and a custom commerce platform solve different operating problems. The right choice follows capabilities, risk and ownership, not a universal winner.",
+      "Before comparing architectures in the abstract, score your own store against four things. These are rules of thumb rather than thresholds anyone can prove, but in our experience they predict the answer better than any feature comparison does."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "Four questions that decide this",
+      "First define what custom means",
+      "Requirements-led comparison",
+      "Capabilities and extension fit",
+      "Content and merchandising workflow",
+      "Performance is implementation-specific",
+      "Security and dependency responsibility",
+      "SEO and discoverability",
+      "Data model and portability",
+      "High-Performance Order Storage",
+      "Compare total operating cost, not a headline build price",
+      "When WooCommerce is likely the better fit",
+      "When headless WooCommerce may fit",
+      "When a custom commerce platform may fit",
+      "Migration and cutover controls",
+      "How long does a custom build actually take?",
+      "A practical decision sequence",
+      "So which should you choose?",
+      "PandaCodeGen scope and ownership",
+      "Frequently asked questions",
+      "Primary sources",
+      "Choose the smallest architecture that meets the brief",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/wordpress-ai-security-risk-2026",
+    "historicalRoute": true,
+    "beforeTitle": "WordPress AI Plugin Security in 2026: AI Engine Advisory Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "WordPress AI Plugin Security: Read the Advisory Precisely",
+        "line": 162
+      }
+    ],
+    "currentTitle": "WordPress AI Plugin Security in 2026: AI Engine Advisory Guide",
+    "currentH1": [
+      "WordPress AI Plugin Security: Read the Advisory Precisely"
+    ],
+    "currentOpening": [
+      "AI and MCP features can hand out powerful control over your site. How much risk you are carrying depends on which version you have installed, which of those features you actually turned on, who can log in and what they are allowed to do, and whether anyone has been caught using the hole.",
+      "Disclosure: PandaCodeGen sells migrations off WordPress, so we have a commercial interest in how you read this page. Weigh it accordingly, and weigh this too: a custom stack does not remove the problem, it relocates it into your dependencies, your packages and your build pipeline. Anyone telling you a rebuilt site cannot be compromised is selling something. Both models need someone who owns patching."
+    ],
+    "currentSectionHeadings": [
+      "What site owners should do",
+      "What AI and MCP change in WordPress",
+      "What the dated AI Engine advisories actually say",
+      "Why the old 100,000-sites headline was misleading",
+      "CVE-2025-11749 response",
+      "CVE-2026-8719 response",
+      "How to check version and configuration",
+      "Treat agent permissions as privileged access",
+      "Protect tokens and provider keys",
+      "AI does not remove ordinary API security work",
+      "Content, privacy and model providers",
+      "Logging and detection",
+      "If you suspect exploitation",
+      "Does this mean WordPress is unsafe?",
+      "When migration belongs in the discussion",
+      "WordPress AI security review checklist",
+      "Frequently asked questions",
+      "Primary sources",
+      "Need the architecture reviewed before a migration?",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/wordpress-april-2026-evidence",
+    "historicalRoute": true,
+    "beforeTitle": "WordPress in April 2026: Three Security and Product Records",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "WordPress in April 2026: Three Records, Carefully Read",
+        "line": 165
+      }
+    ],
+    "currentTitle": "WordPress in April 2026: Three Security and Product Records",
+    "currentH1": [
+      "WordPress in April 2026: Three Records, Carefully Read"
+    ],
+    "currentOpening": [
+      "Two supply-chain incidents and one WooCommerce feedback thread are useful operating evidence. They do not prove that every WordPress site is compromised or should migrate. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.",
+      "Patchstack's two analyses, Nextend's advisory and the WordPress release record rechecked October 8, 2026. The Reddit thread was last checked July 24, 2026."
+    ],
+    "currentSectionHeadings": [
+      "What the record shows",
+      "Record one: Smart Slider 3 Pro",
+      "What a Smart Slider owner should verify",
+      "Record two: EssentialPlugin",
+      "What the two incidents establish",
+      "“I already updated the plugin” is not the same as “I am clean”",
+      "Record three: WooCommerce public feedback",
+      "Questions the WooCommerce thread suggests",
+      "Post-April release context",
+      "How to use this evidence in a platform decision",
+      "When staying on WordPress is reasonable",
+      "When migration deserves discovery",
+      "A quarterly evidence review",
+      "Frequently asked questions",
+      "Primary sources",
+      "Turn the incident headlines into a site-specific plan",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/wordpress-migration-cost",
+    "historicalRoute": true,
+    "beforeTitle": "WordPress to Next.js Migration Cost in 2026: Scope and Tiers",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "WordPress to Next.js Migration Cost: Scope Before Price",
+        "line": 147
+      }
+    ],
+    "currentTitle": "WordPress to Next.js Migration Cost in 2026: Scope and Tiers",
+    "currentH1": [
+      "WordPress to Next.js Migration Cost: Scope Before Price"
+    ],
+    "currentOpening": [
+      "Rebuilding a WordPress site as a custom Next.js build starts at $1,500 with PandaCodeGen, $3,500 for a broader marketing site, and $5,000 where templates, data or integrations multiply. Those are our prices, not a market average. Before you use any of them: if you only want the same WordPress site on a different host, that is a different job and it is usually free. Kinsta publishes “unlimited free WordPress migrations from all hosts”, and SiteGround publishes a free Migrator plugin that moves multiple WordPress sites from any host, and sells a manual transfer handled by its support team. Do not pay platform-migration prices for a host change.",
+      "A WordPress rebuild with us starts at $1,500 for a small bounded site, $3,500 for a broader marketing site, and $5,000 where templates, data or integrations multiply. Treat those as entry points for planning, not as quotes: the signed statement of work sets the final price, the deliverables, the acceptance criteria and the remedy, and it overrides anything on this page. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end."
+    ],
+    "currentSectionHeadings": [
+      "PandaCodeGen planning tiers",
+      "Which tier your migration lands in",
+      "Are you changing hosts, or changing platforms?",
+      "The DIY plugin route, and the four things that break it",
+      "Price the templates, not the page count",
+      "The migration inventory",
+      "What a cheap quote usually leaves out",
+      "What WordPress export covers",
+      "Price plugin capability, not plugin count",
+      "Content editing after WordPress",
+      "SEO migration scope",
+      "Performance scope and the 90-plus target",
+      "Accessibility and functional acceptance",
+      "Security and account ownership",
+      "How long a WordPress migration takes",
+      "When you should stay on WordPress",
+      "Cutover and rollback",
+      "Ownership and licensing",
+      "Payment, refund and support",
+      "How to compare migration quotes",
+      "Is migration financially worth it?",
+      "Frequently asked questions",
+      "Primary sources",
+      "Get an inventory before a fixed price",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/wordpress-plugin-security-2026",
+    "historicalRoute": true,
+    "beforeTitle": "WordPress Plugin Security in 2026: Speed Is the Only Real Defence",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "WordPress plugin security: nothing is secure, only fast",
+        "line": 151
+      }
+    ],
+    "currentTitle": "WordPress Plugin Security in 2026: Speed Is the Only Real Defence",
+    "currentH1": [
+      "WordPress plugin security: nothing is secure, only fast"
+    ],
+    "currentOpening": [
+      "In the second half of August 2026, attempts to exploit a critical authentication bypass in a WordPress single sign-on plugin were reported, and a critical remote code execution was disclosed and patched in Next.js. Both landed within ten days of each other. We patched the second one on our own site, which is why this is not an article about how custom code is safe.",
+      "The SSO and Next.js figures were read at their primary records on 26 August 2026, the Super Forms and Elementor Pro figures on 5 September, and all of them rechecked on 8 October 2026. Every source is linked. Where two sources disagree, both are given."
+    ],
+    "currentSectionHeadings": [
+      "Is WordPress less secure than a custom-coded site?",
+      "What happened in the WordPress SSO plugin?",
+      "How does a signature check return an error and still pass?",
+      "Why did scanners report vulnerable sites as safe?",
+      "How long was a working exploit public before anyone noticed?",
+      "What did the vendor's changelog actually say?",
+      "We patched a critical remote code execution the same week",
+      "What actually differs, in four measurable things",
+      "The summer attacks invert this, and that case is worse",
+      "What should you do if you run this plugin?",
+      "What to ask a provider about their patch process",
+      "So is a custom build safer?",
+      "Not sure what your site is running?",
+      "Frequently Asked Questions",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/wordpress-plugins-destroy-speed",
+    "historicalRoute": true,
+    "beforeTitle": "Do WordPress Plugins Slow Your Site? A 2026 Audit Guide",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "Do WordPress Plugins Slow Your Site? Measure the Work",
+        "line": 137
+      }
+    ],
+    "currentTitle": "Do WordPress Plugins Slow Your Site? A 2026 Audit Guide",
+    "currentH1": [
+      "Do WordPress Plugins Slow Your Site? Measure the Work"
+    ],
+    "currentOpening": [
+      "A plugin count is not a performance score. Find which component adds requests, JavaScript, queries, remote calls, background jobs or cache bypasses on the affected journey.",
+      "Two WordPress developers put the database problem more bluntly than we would, in a thread from April 2026. Their words are unchanged and each one links to the original comment."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "Why plugin count misleads",
+      "Build a plugin inventory",
+      "Create a reproducible baseline",
+      "Frontend impact",
+      "Patterns worth checking first",
+      "Server and database impact",
+      "Background and operational impact",
+      "How to isolate a plugin safely",
+      "A keep, replace or remove scorecard",
+      "The plugin performance fix hierarchy",
+      "Why consolidation often beats deleting one at a time",
+      "Can a caching plugin fix plugin performance?",
+      "When removing a plugin is justified",
+      "When a custom replacement is justified",
+      "When migration enters the decision",
+      "Estimate business effect from first-party evidence",
+      "Plugin audit handoff",
+      "Related reading",
+      "Frequently asked questions",
+      "Primary sources",
+      "Audit the work, not the count",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/wordpress-traffic-drop-speed",
+    "historicalRoute": true,
+    "beforeTitle": "WordPress Traffic Drop in 2026: Speed, SEO, Tracking or Demand?",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "WordPress Traffic Drop: Find the Cause Before the Fix",
+        "line": 133
+      }
+    ],
+    "currentTitle": "WordPress Traffic Drop in 2026: Speed, SEO, Tracking or Demand?",
+    "currentH1": [
+      "WordPress Traffic Drop: Find the Cause Before the Fix"
+    ],
+    "currentOpening": [
+      "Speed is one possible cause of a traffic drop, and it is rarely the first one to check. Traffic falls for a lot of reasons. Your analytics broke. Google stopped crawling or indexing pages. Something shipped and changed the site. Fewer people are searching for it. A competitor got better. The content was thin. Google changed its ranking. Or the page is unpleasant to use. Work the list in order and let the evidence name the cause.",
+      "This guide gives no fixed share of traffic lost to a given delay, and it does not treat speed as the cause of a ranking change. Clicks move when demand shifts, when a competitor improves, when content changes, when indexing changes, and when you ship changes to content, measurement and page experience at the same time, so a percentage taken from another site cannot explain what happened on yours. Nothing here presents free hosting, AI citations or a traffic recovery as an automatic result of moving off WordPress either. Work the evidence in order and let it name the cause."
+    ],
+    "currentSectionHeadings": [
+      "First response",
+      "Define the drop precisely",
+      "Path one: measurement changed",
+      "Path two: a technical or release problem",
+      "Path three: demand or seasonality changed",
+      "Path four: search systems, content or competition changed",
+      "Where speed and Core Web Vitals fit",
+      "A Search Console investigation sequence",
+      "How to read common patterns",
+      "Do not invent a recovery window",
+      "Match the action to the cause",
+      "Will migrating from WordPress recover traffic?",
+      "AI citations and search features",
+      "Investigation handoff",
+      "Related reading",
+      "Frequently asked questions",
+      "Diagnose the decline before proposing migration",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/wordpress-vs-custom-code-real-cost-3-years",
+    "historicalRoute": true,
+    "beforeTitle": "WordPress vs Custom Code: A 3-Year Cost Model for 2026",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "WordPress vs Custom Code: Model Both Honestly",
+        "line": 138
+      }
+    ],
+    "currentTitle": "WordPress vs Custom Code: A 3-Year Cost Model for 2026",
+    "currentH1": [
+      "WordPress vs Custom Code: Model Both Honestly"
+    ],
+    "currentOpening": [
+      "There is no single three-year total for either option, because the answer is built from your invoices, your internal hours and the service level you actually need. WordPress can cost less, more, or about the same as custom code depending on those inputs. What this page gives you instead is the arithmetic: the same capabilities, demand and labor on both sides, with every term visible so the result can be checked rather than taken on trust.",
+      "Before the model, here are two practitioners describing their experience of WordPress. Their opinions are context, not measured cost inputs."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "Define both options",
+      "Freeze a shared capability baseline",
+      "The three-year model",
+      "Use visible formulas",
+      "WordPress inputs",
+      "Collect the recurring invoices first",
+      "Custom-code inputs",
+      "Internal labor belongs in both columns",
+      "A worked three-year model, with the numbers filled in",
+      "Security and incident scenarios",
+      "Performance and business effect",
+      "Payback and break-even",
+      "Run low, expected and high scenarios",
+      "Find the decision-sensitive inputs",
+      "Non-financial decision criteria",
+      "Price three options, not two",
+      "When WordPress may win",
+      "When custom may win",
+      "PandaCodeGen as one quote input",
+      "Frequently asked questions",
+      "Primary sources",
+      "Compare both options from the same brief",
+      "Related Articles"
+    ]
+  },
+  {
+    "route": "/blog/wordpress-vs-nextjs",
+    "historicalRoute": true,
+    "beforeTitle": "WordPress vs Next.js in 2026: Requirements, Cost and Migration",
+    "beforeH1": [
+      {
+        "tag": "h1",
+        "text": "WordPress vs Next.js: Choose the Operating Model",
+        "line": 145
+      }
+    ],
+    "currentTitle": "WordPress vs Next.js in 2026: Requirements, Cost and Migration",
+    "currentH1": [
+      "WordPress vs Next.js: Choose the Operating Model"
+    ],
+    "currentOpening": [
+      "Choose WordPress when its publishing workflow fits and your team can operate the stack; choose Next.js when application-level rendering, data or interface control justifies assembling and maintaining a custom one. The decision is about operating capability, not about which platform is better. WordPress is an integrated publishing platform. Next.js is an application framework that must be paired with content, hosting and services, so compare finished builds rather than the two names.",
+      "Two developers describe their experience of WordPress below. Their attributed opinions give context; they are not comparative security measurements."
+    ],
+    "currentSectionHeadings": [
+      "The short answer",
+      "They are different product categories",
+      "Is WordPress outdated in 2026?",
+      "Why do people move away from WordPress?",
+      "Architecture comparison",
+      "Editing and content operations",
+      "Performance comparison",
+      "What Next.js rendering control can offer",
+      "What WordPress optimization can offer",
+      "Accessibility comparison",
+      "SEO comparison",
+      "Security comparison",
+      "Can buying a plugin put existing websites at risk?",
+      "How does fixing a security issue compare?",
+      "Plugin ecosystem versus assembled services",
+      "Three-year cost comparison",
+      "Ownership and portability",
+      "Team and operating capability",
+      "Choose WordPress when",
+      "Choose Next.js when",
+      "Consider headless WordPress when",
+      "WordPress to Next.js migration controls",
+      "What the MyCustomPatches migration shows",
+      "PandaCodeGen terms",
+      "Related reading",
+      "Frequently asked questions",
+      "Primary sources",
+      "Compare a complete WordPress and Next.js stack",
+      "Related Articles"
+    ]
+  }
+]

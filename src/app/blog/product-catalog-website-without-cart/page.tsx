@@ -34,6 +34,6 @@ export default function Page() {
     <p>The flag can&apos;t hide a page that&apos;s already live by itself. Your website has to apply the same rule when it serves pages, and a retired product should redirect to a similar one or return a &quot;gone&quot; page. Leaving a page out of the sitemap doesn&apos;t remove it from Google either.</p>
     <h2>When should products move into an editor?</h2>
     <p>A product list in code works when a developer adds products a few times a year. If your staff change products every week, put the list in an editor like Sanity so they can do it themselves, and keep the same rule: one list, and every part of the site reads from it. If you need stock levels, online payment or shipping rates, you need a store. Our <Link href="/services/ecommerce">ecommerce development</Link> service covers that.</p>
-    <p>For a catalog site with a quote form, start with <Link href="/services/custom-engineering">custom website development</Link>. If your staff will edit the products, see our <Link href="/services/sanity-development">Sanity CMS service</Link>.</p>
+    <p>For a catalog site with a quote form, start with <Link href="/services/custom-engineering">custom website development</Link>. If your staff will edit the products, see our <Link href="/services/cms-development">Sanity CMS service</Link>.</p>
   </StackGuide>;
 }

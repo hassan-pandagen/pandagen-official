@@ -42,7 +42,7 @@
   .matrix tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4px; padding: 16px 0; }
   .matrix tbody th { grid-column: 1 / -1; padding: 0 0 6px; font-size: 15px; }
   .matrix td { padding: 7px 9px; border: 0 !important; }
-  .mobileLabel { display: block; font-size: 11px; font-weight: 500; font-style: normal; letter-spacing: 0.02em; opacity: 0.85; margin-bottom: 2px; }
+  .mobileLabel { display: block; font-size: 11px; font-weight: 500; font-style: normal; letter-spacing: 0.02em; margin-bottom: 2px; }
   .itemCol { width: auto; }
 }
 

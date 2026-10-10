@@ -1,0 +1,26 @@
+{
+  "checked": "2026-10-10",
+  "country": "US",
+  "records": [
+    {
+      "query": "custom crm development",
+      "url": "https://api.seodata.dev/v1/keyword?q=custom%20crm%20development&country=us",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "query": "crm development services",
+      "url": "https://api.seodata.dev/v1/keyword?q=crm%20development%20services&country=us",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "query": "workflow automation services",
+      "url": "https://api.seodata.dev/v1/keyword?q=workflow%20automation%20services&country=us",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "query": "personal crm",
+      "url": "https://api.seodata.dev/v1/keyword?q=personal%20crm&country=us",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

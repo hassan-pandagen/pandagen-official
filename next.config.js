@@ -48,6 +48,8 @@ const nextConfig = {
   // 8. Catch malformed URLs (e.g. pandacodegen.com/$ from broken external links)
   async redirects() {
     return [
+      // CMS service rename: preserve existing links with a permanent redirect.
+      { source: '/services/sanity-development', destination: '/services/cms-development', permanent: true },
       // 8 Oct 2026: the Supabase service page became /services/backend-development before
       // launch; this keeps any early link working.
       { source: '/services/supabase-development', destination: '/services/backend-development', permanent: true },

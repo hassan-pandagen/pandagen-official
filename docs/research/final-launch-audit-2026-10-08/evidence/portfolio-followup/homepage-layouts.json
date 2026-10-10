@@ -1,0 +1,402 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "passed": true,
+    "geometry": {
+      "inner": 320,
+      "client": 320,
+      "slides": [
+        {
+          "left": 24,
+          "right": 296,
+          "width": 272
+        },
+        {
+          "left": 24,
+          "right": 296,
+          "width": 272
+        },
+        {
+          "left": 24,
+          "right": 296,
+          "width": 272
+        }
+      ]
+    },
+    "slides": [
+      "/work/northdeck-group",
+      "/work/emblematic-studio",
+      "/work/mycustompatches",
+      "/work/ladies-4-jesus",
+      "/work/saforne",
+      "/work/a-step-above-medical",
+      "/work/panda-patches",
+      "/work/enterprise-ops",
+      "/work/medical-template",
+      "/work/panda-publisher",
+      "/work/sleek-jackets"
+    ],
+    "axeViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 360,
+    "passed": true,
+    "geometry": {
+      "inner": 360,
+      "client": 360,
+      "slides": [
+        {
+          "left": 24,
+          "right": 336,
+          "width": 312
+        },
+        {
+          "left": 24,
+          "right": 336,
+          "width": 312
+        },
+        {
+          "left": 24,
+          "right": 336,
+          "width": 312
+        }
+      ]
+    },
+    "slides": [
+      "/work/northdeck-group",
+      "/work/emblematic-studio",
+      "/work/mycustompatches",
+      "/work/ladies-4-jesus",
+      "/work/saforne",
+      "/work/a-step-above-medical",
+      "/work/panda-patches",
+      "/work/enterprise-ops",
+      "/work/medical-template",
+      "/work/panda-publisher",
+      "/work/sleek-jackets"
+    ],
+    "axeViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "passed": true,
+    "geometry": {
+      "inner": 390,
+      "client": 390,
+      "slides": [
+        {
+          "left": 24,
+          "right": 366,
+          "width": 342
+        },
+        {
+          "left": 24,
+          "right": 366,
+          "width": 342
+        },
+        {
+          "left": 24,
+          "right": 366,
+          "width": 342
+        }
+      ]
+    },
+    "slides": [
+      "/work/northdeck-group",
+      "/work/emblematic-studio",
+      "/work/mycustompatches",
+      "/work/ladies-4-jesus",
+      "/work/saforne",
+      "/work/a-step-above-medical",
+      "/work/panda-patches",
+      "/work/enterprise-ops",
+      "/work/medical-template",
+      "/work/panda-publisher",
+      "/work/sleek-jackets"
+    ],
+    "axeViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "passed": true,
+    "geometry": {
+      "inner": 768,
+      "client": 768,
+      "slides": [
+        {
+          "left": 40,
+          "right": 728,
+          "width": 688
+        },
+        {
+          "left": 40,
+          "right": 728,
+          "width": 688
+        },
+        {
+          "left": 40,
+          "right": 728,
+          "width": 688
+        }
+      ]
+    },
+    "slides": [
+      "/work/northdeck-group",
+      "/work/emblematic-studio",
+      "/work/mycustompatches",
+      "/work/ladies-4-jesus",
+      "/work/saforne",
+      "/work/a-step-above-medical",
+      "/work/panda-patches",
+      "/work/enterprise-ops",
+      "/work/medical-template",
+      "/work/panda-publisher",
+      "/work/sleek-jackets"
+    ],
+    "axeViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "passed": true,
+    "geometry": {
+      "inner": 1024,
+      "client": 1024,
+      "slides": [
+        {
+          "left": 40,
+          "right": 328,
+          "width": 288
+        },
+        {
+          "left": 368,
+          "right": 656,
+          "width": 288
+        },
+        {
+          "left": 696,
+          "right": 984,
+          "width": 288
+        }
+      ]
+    },
+    "slides": [
+      "/work/northdeck-group",
+      "/work/emblematic-studio",
+      "/work/mycustompatches",
+      "/work/ladies-4-jesus",
+      "/work/saforne",
+      "/work/a-step-above-medical",
+      "/work/panda-patches",
+      "/work/enterprise-ops",
+      "/work/medical-template",
+      "/work/panda-publisher",
+      "/work/sleek-jackets"
+    ],
+    "axeViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "passed": true,
+    "geometry": {
+      "inner": 1440,
+      "client": 1440,
+      "slides": [
+        {
+          "left": 40,
+          "right": 466.65625,
+          "width": 426.65625
+        },
+        {
+          "left": 506.65625,
+          "right": 933.328125,
+          "width": 426.671875
+        },
+        {
+          "left": 973.328125,
+          "right": 1399.984375,
+          "width": 426.65625
+        }
+      ]
+    },
+    "slides": [
+      "/work/northdeck-group",
+      "/work/emblematic-studio",
+      "/work/mycustompatches",
+      "/work/ladies-4-jesus",
+      "/work/saforne",
+      "/work/a-step-above-medical",
+      "/work/panda-patches",
+      "/work/enterprise-ops",
+      "/work/medical-template",
+      "/work/panda-publisher",
+      "/work/sleek-jackets"
+    ],
+    "axeViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "passed": true,
+    "geometry": {
+      "inner": 1920,
+      "client": 1920,
+      "slides": [
+        {
+          "left": 200,
+          "right": 680,
+          "width": 480
+        },
+        {
+          "left": 720,
+          "right": 1200,
+          "width": 480
+        },
+        {
+          "left": 1240,
+          "right": 1720,
+          "width": 480
+        }
+      ]
+    },
+    "slides": [
+      "/work/northdeck-group",
+      "/work/emblematic-studio",
+      "/work/mycustompatches",
+      "/work/ladies-4-jesus",
+      "/work/saforne",
+      "/work/a-step-above-medical",
+      "/work/panda-patches",
+      "/work/enterprise-ops",
+      "/work/medical-template",
+      "/work/panda-publisher",
+      "/work/sleek-jackets"
+    ],
+    "axeViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "passed": true,
+    "geometry": {
+      "inner": 320,
+      "client": 320,
+      "slides": [
+        {
+          "left": 24,
+          "right": 296,
+          "width": 272
+        },
+        {
+          "left": 24,
+          "right": 296,
+          "width": 272
+        },
+        {
+          "left": 24,
+          "right": 296,
+          "width": 272
+        }
+      ]
+    },
+    "slides": [
+      "/work/northdeck-group",
+      "/work/emblematic-studio",
+      "/work/mycustompatches",
+      "/work/ladies-4-jesus",
+      "/work/saforne",
+      "/work/a-step-above-medical",
+      "/work/panda-patches",
+      "/work/enterprise-ops",
+      "/work/medical-template",
+      "/work/panda-publisher",
+      "/work/sleek-jackets"
+    ],
+    "axeViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "passed": true,
+    "geometry": {
+      "inner": 390,
+      "client": 390,
+      "slides": [
+        {
+          "left": 24,
+          "right": 366,
+          "width": 342
+        },
+        {
+          "left": 24,
+          "right": 366,
+          "width": 342
+        },
+        {
+          "left": 24,
+          "right": 366,
+          "width": 342
+        }
+      ]
+    },
+    "slides": [
+      "/work/northdeck-group",
+      "/work/emblematic-studio",
+      "/work/mycustompatches",
+      "/work/ladies-4-jesus",
+      "/work/saforne",
+      "/work/a-step-above-medical",
+      "/work/panda-patches",
+      "/work/enterprise-ops",
+      "/work/medical-template",
+      "/work/panda-publisher",
+      "/work/sleek-jackets"
+    ],
+    "axeViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "passed": true,
+    "geometry": {
+      "inner": 1440,
+      "client": 1432,
+      "slides": [
+        {
+          "left": 40,
+          "right": 464,
+          "width": 424
+        },
+        {
+          "left": 504,
+          "right": 928,
+          "width": 424
+        },
+        {
+          "left": 968,
+          "right": 1392,
+          "width": 424
+        }
+      ]
+    },
+    "slides": [
+      "/work/northdeck-group",
+      "/work/emblematic-studio",
+      "/work/mycustompatches",
+      "/work/ladies-4-jesus",
+      "/work/saforne",
+      "/work/a-step-above-medical",
+      "/work/panda-patches",
+      "/work/enterprise-ops",
+      "/work/medical-template",
+      "/work/panda-publisher",
+      "/work/sleek-jackets"
+    ],
+    "axeViolations": 0
+  }
+]

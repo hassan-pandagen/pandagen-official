@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import WorkCaseTitle from "@/components/redesign/case-study/WorkCaseTitle";
@@ -48,6 +49,10 @@ export function PandaPublisherCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudy
             </a>
           </div>
 
+          <figure className="mt-10 border" style={{ borderColor: T.rule, backgroundColor: T.paperHi }}>
+            <Image src="/work/panda-publisher.png" alt="The Panda Publisher demo homepage, a library of book covers for author services" width={1912} height={914} sizes="(min-width: 1100px) 1100px, 100vw" priority />
+            <figcaption className="px-4 py-3 text-[12px] uppercase tracking-[0.08em]" style={{ fontFamily: MONO, color: T.quiet }}>The demo homepage / Concept build</figcaption>
+          </figure>
           <RelationshipDisclosure slug="panda-publisher" variant="editorial" />
         </div>
       </section>
@@ -73,8 +78,8 @@ export function PandaPublisherCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudy
             >
               Discuss your project <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </QuoteModalButton>
-            <Link href="/services" className="text-[14px] font-medium underline underline-offset-4" style={{ color: T.onDarkQuiet }}>
-              Explore our services
+            <Link href="/services/cms-development" className="text-[14px] font-medium underline underline-offset-4" style={{ color: T.onDarkQuiet }}>
+              Explore CMS website development
             </Link>
           </div>
         </div>

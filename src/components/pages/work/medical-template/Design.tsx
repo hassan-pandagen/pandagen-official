@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import WorkCaseTitle from "@/components/redesign/case-study/WorkCaseTitle";
@@ -17,7 +18,15 @@ import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-stu
 // checked against the demo's code, so it is left out rather than repeated.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export function MedicalTemplateCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
+// These answers also supply the live page's FAQ structured data.
+export const medicalTemplateFaqs: CaseStudyFaq[] = [
+  { question: "What does this medical practice website design demonstrate?", answer: "The demo shows a consultation-focused homepage, treatment navigation, care steps and procedure information for a fictional surgical practice. It is a portfolio concept, with invented names, credentials, reviews, locations and prices. It demonstrates the design and page structure rather than results for a real clinic." },
+  { question: "Can you redesign an existing medical website?", answer: "Yes. We review the current website, the information visitors need and what your team wants to improve. The scope can cover design, mobile layouts, content editing and agreed booking or enquiry connections. Useful existing URLs are retained where practical, and changed addresses need a redirect plan." },
+  { question: "Can our team update a healthcare website themselves?", answer: "We can include a content editor for the pages and fields agreed in your proposal, with training and written instructions. Staff can then update that content themselves. New layouts, features or integrations are scoped separately. Our A Step Above Medical project shows an actual course and location editor alongside its training management system." },
+  { question: "What is included in medical website development?", answer: "The written scope identifies the pages, mobile layouts, content editing, enquiry or booking workflow and connections your website needs. A custom staff portal or management system is a separate part of the scope. We agree the build price, running costs, testing and handover before work starts." },
+];
+
+export function MedicalTemplateCaseStudyPreview({ faqs = medicalTemplateFaqs }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed footerLinksOnly>
       <section className="px-6 pb-16 pt-8 md:pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
@@ -26,15 +35,15 @@ export function MedicalTemplateCaseStudyPreview({ faqs = [] }: { faqs?: CaseStud
             <Link href="/work" style={{ color: T.quiet }}>Work</Link> / Medical Template / Concept build
           </p>
 
-            <WorkCaseTitle>Medical Template</WorkCaseTitle>
+          <WorkCaseTitle>Medical website design</WorkCaseTitle>
           <p className="mt-3 max-w-[38rem]" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
-            A practice website, shown with fictional content.
+            A medical practice website design, shown as a demo.
           </p>
 
           <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
-            We designed and built a fictional surgical practice to show what a booking-focused clinic website can
-            look like. Every name, credential, review, location and price on it is invented, and the site says so
-            on every screen.
+            A website design for a fictional surgical practice: clear treatment information, care steps and a
+            route to booking a consultation. We built this concept to show how those pages work together.
+            Every name, credential, review, location and price is invented, and the demo says so on every screen.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-4">
@@ -50,18 +59,33 @@ export function MedicalTemplateCaseStudyPreview({ faqs = [] }: { faqs?: CaseStud
             </a>
           </div>
 
+          <figure className="mt-10 border" style={{ borderColor: T.rule, backgroundColor: T.paperHi }}>
+            <Image src="/work/medical-template-hero.png" alt="The Medical Template demo homepage, a fictional surgical practice with a booking button" width={1600} height={900} sizes="(min-width: 1100px) 1100px, 100vw" priority />
+            <figcaption className="px-4 py-3 text-[12px] uppercase tracking-[0.08em]" style={{ fontFamily: MONO, color: T.quiet }}>The demo homepage / Concept build, fictional content</figcaption>
+          </figure>
           <RelationshipDisclosure slug="medical-template" variant="editorial" />
         </div>
       </section>
 
       <MedicalTemplateWalkthrough />
 
+      <section className="px-6 py-12 md:px-10" style={{ backgroundColor: T.paperHi }}>
+        <div className="mx-auto max-w-[1100px] border-t pt-8" style={{ borderColor: T.rule }}>
+          <h2 className="text-[22px] font-semibold" style={{ color: T.ink }}>Need a website and a system for your team?</h2>
+          <p className="mt-4 max-w-[48rem] text-[16px] leading-[1.65]" style={{ color: T.body }}>
+            For a real client build, explore <Link href="/work/a-step-above-medical" className="underline underline-offset-4" style={{ color: T.accentText }}>A Step Above Medical</Link>.
+            Its medical training management system combines a course website, content editor and team portal
+            for classes, students, payments and certificates. The build is complete and in pre-launch testing.
+          </p>
+        </div>
+      </section>
+
       <CaseStudyFaqs faqs={faqs} />
 
       <section className="px-6 py-20 md:px-10" style={{ backgroundColor: T.dark, color: T.onDark }}>
         <div className="mx-auto max-w-[1100px]">
           <h2 style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2rem, 3.6vw, 2.8rem)", lineHeight: 1.05 }}>
-            Running a practice or clinic?
+            Medical website development for your practice.
           </h2>
           <p className="mt-4 max-w-[34rem] text-[16px] leading-[1.6]" style={{ color: T.onDarkQuiet }}>
             Tell us what patients need to find before they book, and we&apos;ll work out what your site should
@@ -75,8 +99,8 @@ export function MedicalTemplateCaseStudyPreview({ faqs = [] }: { faqs?: CaseStud
             >
               Discuss your project <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </QuoteModalButton>
-            <Link href="/services" className="text-[14px] font-medium underline underline-offset-4" style={{ color: T.onDarkQuiet }}>
-              Explore our services
+            <Link href="/services/cms-development" className="text-[14px] font-medium underline underline-offset-4" style={{ color: T.onDarkQuiet }}>
+              Websites your team can update
             </Link>
           </div>
         </div>

@@ -1,0 +1,1952 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "slug": "wordpress",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WordPress Website Design & Development Services | PandaCodeGen",
+    "description": "WordPress design, development and redesign for small businesses. Improve existing pages or build a new site, with a written quote and editing walkthrough.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my WordPress website to another host?",
+      "What do I receive when my WordPress website is finished?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "slug": "wordpress-migration",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "description": "Move a WordPress site to Next.js with a written plan for content, URLs, redirects and forms. Review it with Hassan, then get an editing demo and documentation.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep my pages and blog posts when I leave WordPress?",
+      "Will I lose my Google rankings if I move my website?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "slug": "ecommerce",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "description": "Build or improve a Shopify or WooCommerce store. Plan products, checkout and orders together, with a custom storefront where the requirements justify it.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep Shopify or WooCommerce and change my website?",
+      "Can I move my customers and past orders to a new store?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "slug": "woocommerce",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WooCommerce Development Services & Migration | PandaCodeGen",
+    "description": "Build or improve a WooCommerce store. Review slow pages, checkout and extensions, or plan a custom storefront with products, orders and payments in scope.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my WooCommerce store to another hosting company?",
+      "Can I take my products, customers and orders out of WooCommerce?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "slug": "wix",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Wix Website Design, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign a Wix website, improve mobile pages and forms, or plan a custom site with a Sanity editor. Agree content, integrations and redirects first.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my Wix website to another platform?",
+      "Can I keep my website address if I leave Wix?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "slug": "squarespace",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Squarespace Website Design, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign your Squarespace website, or move to a custom site with a Sanity editor. Scope content, mobile layouts, forms, scheduling and redirects.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my Squarespace website to another platform?",
+      "Can I keep my blog posts and pictures when I leave Squarespace?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "slug": "webflow",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Webflow Development, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign a Webflow website. Improve CMS editing, mobile layouts and forms, or plan a custom site with content, integrations and redirects in scope.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I host my Webflow website somewhere else?",
+      "Will my Webflow blog, forms and store still work after a code export?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "slug": "gohighlevel",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "GoHighLevel Websites & CRM Integration Services | PandaCodeGen",
+    "description": "Fix slow GHL pages or review missing enquiries. Improve your site, or connect a custom website to GoHighLevel forms, calendars and pipelines.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep GoHighLevel as my CRM and rebuild my website?",
+      "Can I export my GoHighLevel website and edit it elsewhere?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "slug": "custom-engineering",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Custom Software Development & Customer Portals | PandaCodeGen",
+    "description": "Custom software, customer portals and staff dashboards. Replace repeated spreadsheet work with scoped screens, permissions, integrations and a clear handover.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Do I get the source code for my custom software?",
+      "Will my application stop working if I end your support plan?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "slug": "ai-seo",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "description": "AI SEO and answer engine optimization. Search foundations come with every build; ongoing research and agreed improvements start at $500 a month.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Do I keep the website changes if I stop monthly SEO work?",
+      "Does adding FAQs or AI markup guarantee that AI will cite my website?",
+      "Your monthly deliverables"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "slug": "cms-development",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "CMS Website Development & Integration | PandaCodeGen",
+    "description": "CMS website development with an editor your team can use. Build with Sanity and Next.js, improve WordPress, or plan a content migration with the founders.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I update my website without calling a developer?",
+      "Can I take my content with me if I change website editors?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "slug": "backend-development",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Backend Development Services: Supabase & APIs | PandaCodeGen",
+    "description": "Backend development for logins, private files and business records. Scope Supabase or your existing database, access rules, APIs and admin screens.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I take my business data with me if I change providers?",
+      "Can another developer manage the backend after you build it?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "slug": "404",
+    "status": 404,
+    "robots": "noindex; noindex, follow",
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": [],
+    "numberSize": "128px",
+    "boxCount": 6
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "slug": "wordpress",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WordPress Website Design & Development Services | PandaCodeGen",
+    "description": "WordPress design, development and redesign for small businesses. Improve existing pages or build a new site, with a written quote and editing walkthrough.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my WordPress website to another host?",
+      "What do I receive when my WordPress website is finished?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "slug": "wordpress-migration",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "description": "Move a WordPress site to Next.js with a written plan for content, URLs, redirects and forms. Review it with Hassan, then get an editing demo and documentation.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep my pages and blog posts when I leave WordPress?",
+      "Will I lose my Google rankings if I move my website?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "slug": "ecommerce",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "description": "Build or improve a Shopify or WooCommerce store. Plan products, checkout and orders together, with a custom storefront where the requirements justify it.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep Shopify or WooCommerce and change my website?",
+      "Can I move my customers and past orders to a new store?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "slug": "woocommerce",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WooCommerce Development Services & Migration | PandaCodeGen",
+    "description": "Build or improve a WooCommerce store. Review slow pages, checkout and extensions, or plan a custom storefront with products, orders and payments in scope.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my WooCommerce store to another hosting company?",
+      "Can I take my products, customers and orders out of WooCommerce?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "slug": "wix",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Wix Website Design, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign a Wix website, improve mobile pages and forms, or plan a custom site with a Sanity editor. Agree content, integrations and redirects first.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my Wix website to another platform?",
+      "Can I keep my website address if I leave Wix?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "slug": "squarespace",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Squarespace Website Design, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign your Squarespace website, or move to a custom site with a Sanity editor. Scope content, mobile layouts, forms, scheduling and redirects.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my Squarespace website to another platform?",
+      "Can I keep my blog posts and pictures when I leave Squarespace?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "slug": "webflow",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Webflow Development, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign a Webflow website. Improve CMS editing, mobile layouts and forms, or plan a custom site with content, integrations and redirects in scope.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I host my Webflow website somewhere else?",
+      "Will my Webflow blog, forms and store still work after a code export?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "slug": "gohighlevel",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "GoHighLevel Websites & CRM Integration Services | PandaCodeGen",
+    "description": "Fix slow GHL pages or review missing enquiries. Improve your site, or connect a custom website to GoHighLevel forms, calendars and pipelines.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep GoHighLevel as my CRM and rebuild my website?",
+      "Can I export my GoHighLevel website and edit it elsewhere?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "slug": "custom-engineering",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Custom Software Development & Customer Portals | PandaCodeGen",
+    "description": "Custom software, customer portals and staff dashboards. Replace repeated spreadsheet work with scoped screens, permissions, integrations and a clear handover.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Do I get the source code for my custom software?",
+      "Will my application stop working if I end your support plan?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "slug": "ai-seo",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "description": "AI SEO and answer engine optimization. Search foundations come with every build; ongoing research and agreed improvements start at $500 a month.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Do I keep the website changes if I stop monthly SEO work?",
+      "Does adding FAQs or AI markup guarantee that AI will cite my website?",
+      "Your monthly deliverables"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "slug": "cms-development",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "CMS Website Development & Integration | PandaCodeGen",
+    "description": "CMS website development with an editor your team can use. Build with Sanity and Next.js, improve WordPress, or plan a content migration with the founders.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I update my website without calling a developer?",
+      "Can I take my content with me if I change website editors?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "slug": "backend-development",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Backend Development Services: Supabase & APIs | PandaCodeGen",
+    "description": "Backend development for logins, private files and business records. Scope Supabase or your existing database, access rules, APIs and admin screens.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I take my business data with me if I change providers?",
+      "Can another developer manage the backend after you build it?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "slug": "404",
+    "status": 404,
+    "robots": "noindex; noindex, follow",
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": [],
+    "numberSize": "128px",
+    "boxCount": 6
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "slug": "wordpress",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WordPress Website Design & Development Services | PandaCodeGen",
+    "description": "WordPress design, development and redesign for small businesses. Improve existing pages or build a new site, with a written quote and editing walkthrough.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my WordPress website to another host?",
+      "What do I receive when my WordPress website is finished?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "slug": "wordpress-migration",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "description": "Move a WordPress site to Next.js with a written plan for content, URLs, redirects and forms. Review it with Hassan, then get an editing demo and documentation.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep my pages and blog posts when I leave WordPress?",
+      "Will I lose my Google rankings if I move my website?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "slug": "ecommerce",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "description": "Build or improve a Shopify or WooCommerce store. Plan products, checkout and orders together, with a custom storefront where the requirements justify it.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep Shopify or WooCommerce and change my website?",
+      "Can I move my customers and past orders to a new store?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "slug": "woocommerce",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WooCommerce Development Services & Migration | PandaCodeGen",
+    "description": "Build or improve a WooCommerce store. Review slow pages, checkout and extensions, or plan a custom storefront with products, orders and payments in scope.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my WooCommerce store to another hosting company?",
+      "Can I take my products, customers and orders out of WooCommerce?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "slug": "wix",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Wix Website Design, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign a Wix website, improve mobile pages and forms, or plan a custom site with a Sanity editor. Agree content, integrations and redirects first.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my Wix website to another platform?",
+      "Can I keep my website address if I leave Wix?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "slug": "squarespace",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Squarespace Website Design, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign your Squarespace website, or move to a custom site with a Sanity editor. Scope content, mobile layouts, forms, scheduling and redirects.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my Squarespace website to another platform?",
+      "Can I keep my blog posts and pictures when I leave Squarespace?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "slug": "webflow",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Webflow Development, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign a Webflow website. Improve CMS editing, mobile layouts and forms, or plan a custom site with content, integrations and redirects in scope.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I host my Webflow website somewhere else?",
+      "Will my Webflow blog, forms and store still work after a code export?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "slug": "gohighlevel",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "GoHighLevel Websites & CRM Integration Services | PandaCodeGen",
+    "description": "Fix slow GHL pages or review missing enquiries. Improve your site, or connect a custom website to GoHighLevel forms, calendars and pipelines.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep GoHighLevel as my CRM and rebuild my website?",
+      "Can I export my GoHighLevel website and edit it elsewhere?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "slug": "custom-engineering",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Custom Software Development & Customer Portals | PandaCodeGen",
+    "description": "Custom software, customer portals and staff dashboards. Replace repeated spreadsheet work with scoped screens, permissions, integrations and a clear handover.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Do I get the source code for my custom software?",
+      "Will my application stop working if I end your support plan?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "slug": "ai-seo",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "description": "AI SEO and answer engine optimization. Search foundations come with every build; ongoing research and agreed improvements start at $500 a month.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Do I keep the website changes if I stop monthly SEO work?",
+      "Does adding FAQs or AI markup guarantee that AI will cite my website?",
+      "Your monthly deliverables"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "slug": "cms-development",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "CMS Website Development & Integration | PandaCodeGen",
+    "description": "CMS website development with an editor your team can use. Build with Sanity and Next.js, improve WordPress, or plan a content migration with the founders.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I update my website without calling a developer?",
+      "Can I take my content with me if I change website editors?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "slug": "backend-development",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Backend Development Services: Supabase & APIs | PandaCodeGen",
+    "description": "Backend development for logins, private files and business records. Scope Supabase or your existing database, access rules, APIs and admin screens.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I take my business data with me if I change providers?",
+      "Can another developer manage the backend after you build it?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "slug": "404",
+    "status": 404,
+    "robots": "noindex; noindex, follow",
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": [],
+    "numberSize": "128px",
+    "boxCount": 6
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "slug": "wordpress",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WordPress Website Design & Development Services | PandaCodeGen",
+    "description": "WordPress design, development and redesign for small businesses. Improve existing pages or build a new site, with a written quote and editing walkthrough.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my WordPress website to another host?",
+      "What do I receive when my WordPress website is finished?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "slug": "wordpress-migration",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "description": "Move a WordPress site to Next.js with a written plan for content, URLs, redirects and forms. Review it with Hassan, then get an editing demo and documentation.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep my pages and blog posts when I leave WordPress?",
+      "Will I lose my Google rankings if I move my website?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "slug": "ecommerce",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "description": "Build or improve a Shopify or WooCommerce store. Plan products, checkout and orders together, with a custom storefront where the requirements justify it.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep Shopify or WooCommerce and change my website?",
+      "Can I move my customers and past orders to a new store?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "slug": "woocommerce",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WooCommerce Development Services & Migration | PandaCodeGen",
+    "description": "Build or improve a WooCommerce store. Review slow pages, checkout and extensions, or plan a custom storefront with products, orders and payments in scope.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my WooCommerce store to another hosting company?",
+      "Can I take my products, customers and orders out of WooCommerce?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "slug": "wix",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Wix Website Design, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign a Wix website, improve mobile pages and forms, or plan a custom site with a Sanity editor. Agree content, integrations and redirects first.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my Wix website to another platform?",
+      "Can I keep my website address if I leave Wix?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "slug": "squarespace",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Squarespace Website Design, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign your Squarespace website, or move to a custom site with a Sanity editor. Scope content, mobile layouts, forms, scheduling and redirects.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my Squarespace website to another platform?",
+      "Can I keep my blog posts and pictures when I leave Squarespace?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "slug": "webflow",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Webflow Development, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign a Webflow website. Improve CMS editing, mobile layouts and forms, or plan a custom site with content, integrations and redirects in scope.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I host my Webflow website somewhere else?",
+      "Will my Webflow blog, forms and store still work after a code export?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "slug": "gohighlevel",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "GoHighLevel Websites & CRM Integration Services | PandaCodeGen",
+    "description": "Fix slow GHL pages or review missing enquiries. Improve your site, or connect a custom website to GoHighLevel forms, calendars and pipelines.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep GoHighLevel as my CRM and rebuild my website?",
+      "Can I export my GoHighLevel website and edit it elsewhere?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "slug": "custom-engineering",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Custom Software Development & Customer Portals | PandaCodeGen",
+    "description": "Custom software, customer portals and staff dashboards. Replace repeated spreadsheet work with scoped screens, permissions, integrations and a clear handover.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Do I get the source code for my custom software?",
+      "Will my application stop working if I end your support plan?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "slug": "ai-seo",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "description": "AI SEO and answer engine optimization. Search foundations come with every build; ongoing research and agreed improvements start at $500 a month.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Do I keep the website changes if I stop monthly SEO work?",
+      "Does adding FAQs or AI markup guarantee that AI will cite my website?",
+      "Your monthly deliverables"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "slug": "cms-development",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "CMS Website Development & Integration | PandaCodeGen",
+    "description": "CMS website development with an editor your team can use. Build with Sanity and Next.js, improve WordPress, or plan a content migration with the founders.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I update my website without calling a developer?",
+      "Can I take my content with me if I change website editors?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "slug": "backend-development",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Backend Development Services: Supabase & APIs | PandaCodeGen",
+    "description": "Backend development for logins, private files and business records. Scope Supabase or your existing database, access rules, APIs and admin screens.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I take my business data with me if I change providers?",
+      "Can another developer manage the backend after you build it?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "slug": "404",
+    "status": 404,
+    "robots": "noindex; noindex, follow",
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": [],
+    "numberSize": "201.6px",
+    "boxCount": 6
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "slug": "wordpress",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WordPress Website Design & Development Services | PandaCodeGen",
+    "description": "WordPress design, development and redesign for small businesses. Improve existing pages or build a new site, with a written quote and editing walkthrough.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my WordPress website to another host?",
+      "What do I receive when my WordPress website is finished?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "slug": "wordpress-migration",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "description": "Move a WordPress site to Next.js with a written plan for content, URLs, redirects and forms. Review it with Hassan, then get an editing demo and documentation.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep my pages and blog posts when I leave WordPress?",
+      "Will I lose my Google rankings if I move my website?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "slug": "ecommerce",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "description": "Build or improve a Shopify or WooCommerce store. Plan products, checkout and orders together, with a custom storefront where the requirements justify it.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep Shopify or WooCommerce and change my website?",
+      "Can I move my customers and past orders to a new store?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "slug": "woocommerce",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WooCommerce Development Services & Migration | PandaCodeGen",
+    "description": "Build or improve a WooCommerce store. Review slow pages, checkout and extensions, or plan a custom storefront with products, orders and payments in scope.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my WooCommerce store to another hosting company?",
+      "Can I take my products, customers and orders out of WooCommerce?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "slug": "wix",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Wix Website Design, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign a Wix website, improve mobile pages and forms, or plan a custom site with a Sanity editor. Agree content, integrations and redirects first.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my Wix website to another platform?",
+      "Can I keep my website address if I leave Wix?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "slug": "squarespace",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Squarespace Website Design, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign your Squarespace website, or move to a custom site with a Sanity editor. Scope content, mobile layouts, forms, scheduling and redirects.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my Squarespace website to another platform?",
+      "Can I keep my blog posts and pictures when I leave Squarespace?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "slug": "webflow",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Webflow Development, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign a Webflow website. Improve CMS editing, mobile layouts and forms, or plan a custom site with content, integrations and redirects in scope.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I host my Webflow website somewhere else?",
+      "Will my Webflow blog, forms and store still work after a code export?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "slug": "gohighlevel",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "GoHighLevel Websites & CRM Integration Services | PandaCodeGen",
+    "description": "Fix slow GHL pages or review missing enquiries. Improve your site, or connect a custom website to GoHighLevel forms, calendars and pipelines.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep GoHighLevel as my CRM and rebuild my website?",
+      "Can I export my GoHighLevel website and edit it elsewhere?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "slug": "custom-engineering",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Custom Software Development & Customer Portals | PandaCodeGen",
+    "description": "Custom software, customer portals and staff dashboards. Replace repeated spreadsheet work with scoped screens, permissions, integrations and a clear handover.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Do I get the source code for my custom software?",
+      "Will my application stop working if I end your support plan?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "slug": "ai-seo",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "description": "AI SEO and answer engine optimization. Search foundations come with every build; ongoing research and agreed improvements start at $500 a month.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Do I keep the website changes if I stop monthly SEO work?",
+      "Does adding FAQs or AI markup guarantee that AI will cite my website?",
+      "Your monthly deliverables"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "slug": "cms-development",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "CMS Website Development & Integration | PandaCodeGen",
+    "description": "CMS website development with an editor your team can use. Build with Sanity and Next.js, improve WordPress, or plan a content migration with the founders.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I update my website without calling a developer?",
+      "Can I take my content with me if I change website editors?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "slug": "backend-development",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Backend Development Services: Supabase & APIs | PandaCodeGen",
+    "description": "Backend development for logins, private files and business records. Scope Supabase or your existing database, access rules, APIs and admin screens.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I take my business data with me if I change providers?",
+      "Can another developer manage the backend after you build it?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "slug": "404",
+    "status": 404,
+    "robots": "noindex; noindex, follow",
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": [],
+    "numberSize": "128px",
+    "boxCount": 6
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "slug": "wordpress",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WordPress Website Design & Development Services | PandaCodeGen",
+    "description": "WordPress design, development and redesign for small businesses. Improve existing pages or build a new site, with a written quote and editing walkthrough.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my WordPress website to another host?",
+      "What do I receive when my WordPress website is finished?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "slug": "wordpress-migration",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "description": "Move a WordPress site to Next.js with a written plan for content, URLs, redirects and forms. Review it with Hassan, then get an editing demo and documentation.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep my pages and blog posts when I leave WordPress?",
+      "Will I lose my Google rankings if I move my website?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "slug": "ecommerce",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "description": "Build or improve a Shopify or WooCommerce store. Plan products, checkout and orders together, with a custom storefront where the requirements justify it.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep Shopify or WooCommerce and change my website?",
+      "Can I move my customers and past orders to a new store?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "slug": "woocommerce",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "WooCommerce Development Services & Migration | PandaCodeGen",
+    "description": "Build or improve a WooCommerce store. Review slow pages, checkout and extensions, or plan a custom storefront with products, orders and payments in scope.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my WooCommerce store to another hosting company?",
+      "Can I take my products, customers and orders out of WooCommerce?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "slug": "wix",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Wix Website Design, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign a Wix website, improve mobile pages and forms, or plan a custom site with a Sanity editor. Agree content, integrations and redirects first.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my Wix website to another platform?",
+      "Can I keep my website address if I leave Wix?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "slug": "squarespace",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Squarespace Website Design, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign your Squarespace website, or move to a custom site with a Sanity editor. Scope content, mobile layouts, forms, scheduling and redirects.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I move my Squarespace website to another platform?",
+      "Can I keep my blog posts and pictures when I leave Squarespace?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "slug": "webflow",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Webflow Development, Redesign & Migration | PandaCodeGen",
+    "description": "Build or redesign a Webflow website. Improve CMS editing, mobile layouts and forms, or plan a custom site with content, integrations and redirects in scope.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I host my Webflow website somewhere else?",
+      "Will my Webflow blog, forms and store still work after a code export?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "slug": "gohighlevel",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "GoHighLevel Websites & CRM Integration Services | PandaCodeGen",
+    "description": "Fix slow GHL pages or review missing enquiries. Improve your site, or connect a custom website to GoHighLevel forms, calendars and pipelines.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I keep GoHighLevel as my CRM and rebuild my website?",
+      "Can I export my GoHighLevel website and edit it elsewhere?",
+      "Website assets",
+      "Also included at handover"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "slug": "custom-engineering",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Custom Software Development & Customer Portals | PandaCodeGen",
+    "description": "Custom software, customer portals and staff dashboards. Replace repeated spreadsheet work with scoped screens, permissions, integrations and a clear handover.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Do I get the source code for my custom software?",
+      "Will my application stop working if I end your support plan?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "slug": "ai-seo",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "description": "AI SEO and answer engine optimization. Search foundations come with every build; ongoing research and agreed improvements start at $500 a month.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Do I keep the website changes if I stop monthly SEO work?",
+      "Does adding FAQs or AI markup guarantee that AI will cite my website?",
+      "Your monthly deliverables"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "slug": "cms-development",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "CMS Website Development & Integration | PandaCodeGen",
+    "description": "CMS website development with an editor your team can use. Build with Sanity and Next.js, improve WordPress, or plan a content migration with the founders.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I update my website without calling a developer?",
+      "Can I take my content with me if I change website editors?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "slug": "backend-development",
+    "status": 200,
+    "answers": 2,
+    "schemaMatches": true,
+    "allFaqsVisible": true,
+    "title": "Backend Development Services: Supabase & APIs | PandaCodeGen",
+    "description": "Backend development for logins, private files and business records. Scope Supabase or your existing database, access rules, APIs and admin screens.",
+    "sourceLinks": true,
+    "assetHeading": [
+      "Can I take my business data with me if I change providers?",
+      "Can another developer manage the backend after you build it?",
+      "Your project assets"
+    ],
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "slug": "404",
+    "status": 404,
+    "robots": "noindex; noindex, follow",
+    "geometry": {
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "outside": [],
+      "clipped": []
+    },
+    "violations": [],
+    "numberSize": "201.600006px",
+    "boxCount": 6
+  }
+]

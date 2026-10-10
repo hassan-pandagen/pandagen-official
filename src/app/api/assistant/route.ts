@@ -1,10 +1,7 @@
 import { AsyncLocalStorage } from "node:async_hooks";
-import { createHash } from "node:crypto";
-import { unstable_cache } from "next/cache";
 import { after } from "next/server";
-import { asksAboutCost, knowledgeVersion, retrieve, type Passage } from "@/lib/assistant/knowledge";
+import { asksAboutCost, retrieve, type Passage } from "@/lib/assistant/knowledge";
 import { logQuestion, pageFrom } from "@/lib/assistant/log";
-import { assistantSuggestions } from "@/lib/assistant/presets";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // POST /api/assistant: the website assistant.
@@ -32,9 +29,9 @@ import { assistantSuggestions } from "@/lib/assistant/presets";
 //     A second request now starts if the first has not answered in 4 s, and
 //     whichever answers first is used (a "hedged" request). At about ten
 //     visitors a day the extra calls cost nothing that matters.
-//   - Only the fixed suggestion questions are cached for a week, keyed on the
-//     question and on a hash of the knowledge and these rules. Custom visitor
-//     questions are never placed in this shared cache.
+//   - (Removed 10 Oct 2026) The fixed suggestion questions used to be cached
+//     for a week. The chat card no longer offers preset questions, so the
+//     cache and its version hash went with them.
 //   - Every number in an answer must appear in the passages the model was
 //     given. If one does not, the answer is replaced with an offer of a call,
 //     because a wrong price or date is worse than no answer.
@@ -95,8 +92,8 @@ const modelOverride = new AsyncLocalStorage<string[]>();
 const GATEWAY_URL = "https://ai-gateway.vercel.sh/v1/chat/completions";
 
 // On Vercel each function call carries a fresh OIDC token in the
-// x-vercel-oidc-token header; POST() stores the latest one here because the
-// cached answer path below cannot see the request. The token belongs to the
+// x-vercel-oidc-token header; POST() stores the latest one here so the model
+// call can use it without the request being passed down. The token belongs to the
 // project, not to a visitor, so any recent one is valid for every request.
 // Locally, `vercel env pull` writes VERCEL_OIDC_TOKEN (valid 12 hours). An
 // AI_GATEWAY_API_KEY, if set, takes precedence.
@@ -114,7 +111,6 @@ const MAX_TURNS = 8;
 const MAX_CHARS = 600;
 // From this question on, the answer offers a call with Hassan.
 const CALL_FROM_TURN = 2;
-const CACHE_SECONDS = 7 * 24 * 60 * 60;
 
 type Turn = { role: "user" | "assistant"; content: string };
 
@@ -227,11 +223,6 @@ function systemPrompt(context: Passage[], userTurns: number, lang: Language, cos
   const contextText = context.map((p) => `[${p.id}] ${p.title}\n${p.text}`).join("\n\n");
   return `${RULES}\n${languageRule(lang)}${prices}\n${close}\n\n${OUTPUT}\n\nCONTEXT\n\n${contextText}`;
 }
-
-const RULES_VERSION = createHash("sha256")
-  .update([RULES, ...[ENGLISH, ...LANGUAGES].map((l) => languageRule(l)), NO_PRICES, CLOSE_EARLY, CLOSE_CALL, CLOSE_OFFERED, OUTPUT].join("\n"))
-  .digest("hex")
-  .slice(0, 12);
 
 // ── Rate limiting (best effort, per instance) ──────────────────────────────
 
@@ -508,21 +499,6 @@ async function answerTurns(turns: Turn[]): Promise<Answer> {
   };
 }
 
-// First questions only: a follow-up depends on the conversation before it.
-// The cache key is the normalised question plus the knowledge and rules
-// versions, so a deploy that changes either never serves an old answer.
-const cachedFirstAnswer = unstable_cache(
-  async (question: string, _version: string) => answerTurns([{ role: "user", content: question }]),
-  ["assistant-first-answer"],
-  { revalidate: CACHE_SECONDS, tags: ["assistant"] },
-);
-
-function normalise(question: string): string {
-  return question.toLowerCase().replace(/\s+/g, " ").replace(/[\s?!.]+$/, "").trim();
-}
-
-const presetQuestions = new Set(assistantSuggestions.map(normalise));
-
 // ── Handler ────────────────────────────────────────────────────────────────
 
 const DEV = process.env.NODE_ENV !== "production";
@@ -564,13 +540,10 @@ export async function POST(request: Request) {
     page: pageFrom(request.headers.get("referer")),
   };
   try {
-    const skipCache = DEV && request.headers.get("x-assistant-nocache") === "1";
     const result =
-      turns.length === 1 && presetQuestions.has(normalise(last.content)) && !skipCache
-        ? await cachedFirstAnswer(normalise(last.content), `${knowledgeVersion()}-${RULES_VERSION}`)
-        : DEV && request.headers.get("x-assistant-models")
-          ? await modelOverride.run(request.headers.get("x-assistant-models")!.split(",").map((m) => m.trim()).filter(Boolean), () => answerTurns(turns))
-          : await answerTurns(turns);
+      DEV && request.headers.get("x-assistant-models")
+        ? await modelOverride.run(request.headers.get("x-assistant-models")!.split(",").map((m) => m.trim()).filter(Boolean), () => answerTurns(turns))
+        : await answerTurns(turns);
     const { debug, ...reply } = result;
     const cached = debug.at < started;
     after(() =>

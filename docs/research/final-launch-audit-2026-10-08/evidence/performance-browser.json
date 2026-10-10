@@ -1,0 +1,65 @@
+{
+  "scope": "Local production homepage, cold contexts, before consent; mobile 150ms/1.6Mbps/4xCPU, desktop unthrottled. Lab observations, not Lighthouse or field CWV. CLS simple observation sum, not field session-window aggregation.",
+  "results": [
+    {
+      "mobile": true,
+      "run": 1,
+      "lcp": 1288,
+      "cls": 0.023102105661459676,
+      "ttfb": 13.899999976158142,
+      "dcl": 2427.600000023842,
+      "resources": 55,
+      "transferredBytes": 622321
+    },
+    {
+      "mobile": true,
+      "run": 2,
+      "lcp": 1432,
+      "cls": 0.023102105661459676,
+      "ttfb": 8.399999976158142,
+      "dcl": 2361.2999999523163,
+      "resources": 55,
+      "transferredBytes": 622320
+    },
+    {
+      "mobile": true,
+      "run": 3,
+      "lcp": 1220,
+      "cls": 0.02488922686441835,
+      "ttfb": 8.100000023841858,
+      "dcl": 2398,
+      "resources": 55,
+      "transferredBytes": 622321
+    },
+    {
+      "mobile": false,
+      "run": 1,
+      "lcp": 312,
+      "cls": 0.20107524325211368,
+      "ttfb": 7.699999988079071,
+      "dcl": 212.69999998807907,
+      "resources": 107,
+      "transferredBytes": 1038067
+    },
+    {
+      "mobile": false,
+      "run": 2,
+      "lcp": 300,
+      "cls": 0.20107524325211368,
+      "ttfb": 10.699999988079071,
+      "dcl": 242.30000001192093,
+      "resources": 107,
+      "transferredBytes": 1038068
+    },
+    {
+      "mobile": false,
+      "run": 3,
+      "lcp": 356,
+      "cls": 0.006770188734087934,
+      "ttfb": 8.799999952316284,
+      "dcl": 196.70000004768372,
+      "resources": 107,
+      "transferredBytes": 1038068
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-08",
+  "verdict": "Nine confirmed findings corrected; mobile performance target and deployed HTTPS/device sign-off remain",
+  "candidate": {
+    "next": "16.3.8",
+    "sitemapPages": 157,
+    "blogPosts": 92,
+    "topicHubs": 11,
+    "generatedPages": 169
+  },
+  "initialAudit": "INITIAL-AUDIT.md",
+  "initialSummary": "initial-summary.json",
+  "confirmedFindingsFixed": 9,
+  "checks": {
+    "sourceCheckExitCode": 0,
+    "testsPassed": 80,
+    "buildExitCode": 0,
+    "finalTargetedLintExitCode": 0,
+    "seo": {
+      "sitemapUrls": 157,
+      "failures": 0,
+      "warnings": 0
+    },
+    "smokeExitCode": 0,
+    "renderedPosts": 92,
+    "hubs": 11,
+    "metrics": 42,
+    "pagefindIndexedPages": 103,
+    "workflowChecks": 28,
+    "workflowFailures": 0,
+    "axeScans": 28,
+    "detectedAxeViolations": 0,
+    "templateGeometryChecks": 144,
+    "templateGeometryFailures": 0,
+    "lastChangeGeometryChecks": 36,
+    "lastChangeGeometryFailures": 0
+  },
+  "performance": {
+    "mobile": {
+      "score": 76,
+      "fcpSeconds": 1.4,
+      "lcpSeconds": 4.3,
+      "tbtMs": 380,
+      "cls": 0
+    },
+    "desktop": {
+      "score": 93,
+      "fcpSeconds": 0.4,
+      "lcpSeconds": 1,
+      "tbtMs": 180,
+      "cls": 0.005
+    },
+    "method": "Single local production Lighthouse observations; not acceptance medians or field data",
+    "mobileTargetMet": false
+  },
+  "dependencies": {
+    "productionKnownAdvisories": 0,
+    "allPackageEntries": 5,
+    "remainingUnderlyingAdvisories": 1,
+    "remainingScope": "Development-only ESLint braces dependency chain; no published patch"
+  },
+  "emailTests": {
+    "delivered": 2,
+    "source": "Resend provider events",
+    "inboxPlacementManuallyChecked": false
+  },
+  "sourceEdits": true,
+  "committed": false,
+  "pushed": false,
+  "deployed": false,
+  "existingStagedCleanup": "preserved"
+}

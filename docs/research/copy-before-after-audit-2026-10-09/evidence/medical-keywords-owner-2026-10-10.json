@@ -1,0 +1,222 @@
+{
+  "recorded": "2026-10-10",
+  "source": "Owner-pasted seodata.dev keyword pages; provider states Google Ads API data",
+  "independently_refetched": false,
+  "country": "US",
+  "batches": [
+    {
+      "keyword": "medical website design",
+      "volume": 1300,
+      "cpc_usd": 34.97,
+      "advertiser_competition": 0.09,
+      "provider_updated": "2026-06-18",
+      "related": [
+        {
+          "keyword": "website design for medical",
+          "volume": 1300,
+          "cpc_usd": 32.95,
+          "serp_overlap": "12/20"
+        },
+        {
+          "keyword": "medical web design",
+          "volume": 1300,
+          "cpc_usd": 32.95,
+          "serp_overlap": "10/20"
+        },
+        {
+          "keyword": "health care website design",
+          "volume": 720,
+          "cpc_usd": 31.61,
+          "serp_overlap": "11/20"
+        },
+        {
+          "keyword": "web design for healthcare",
+          "volume": 720,
+          "cpc_usd": 55.21,
+          "serp_overlap": "11/20"
+        },
+        {
+          "keyword": "healthcare website design",
+          "volume": 720,
+          "cpc_usd": 55.21,
+          "serp_overlap": "10/20"
+        },
+        {
+          "keyword": "website design healthcare",
+          "volume": 720,
+          "cpc_usd": 31.61,
+          "serp_overlap": "10/20"
+        },
+        {
+          "keyword": "medical clinic website design",
+          "volume": 110,
+          "cpc_usd": 0,
+          "serp_overlap": "12/20"
+        },
+        {
+          "keyword": "medical clinic web design",
+          "volume": 110,
+          "cpc_usd": 0,
+          "serp_overlap": "11/20"
+        },
+        {
+          "keyword": "clinical web design",
+          "volume": 40,
+          "cpc_usd": 0,
+          "serp_overlap": "11/20"
+        },
+        {
+          "keyword": "clinical website design",
+          "volume": 40,
+          "cpc_usd": 0,
+          "serp_overlap": "11/20"
+        }
+      ]
+    },
+    {
+      "keyword": "healthcare website development",
+      "volume": 110,
+      "cpc_usd": 40.77,
+      "advertiser_competition": 0.1,
+      "provider_updated": "2026-10-10",
+      "related": [
+        {
+          "keyword": "web design for healthcare",
+          "volume": 720,
+          "cpc_usd": 55.21,
+          "serp_overlap": "7/20"
+        },
+        {
+          "keyword": "medical website development",
+          "volume": 320,
+          "cpc_usd": 37.55,
+          "serp_overlap": "12/20"
+        },
+        {
+          "keyword": "medical web development",
+          "volume": 320,
+          "cpc_usd": 37.55,
+          "serp_overlap": "8/20"
+        },
+        {
+          "keyword": "healthcare web development",
+          "volume": 320,
+          "cpc_usd": 19.6,
+          "serp_overlap": "7/20"
+        },
+        {
+          "keyword": "web development for healthcare",
+          "volume": 320,
+          "cpc_usd": 19.6,
+          "serp_overlap": "7/20"
+        },
+        {
+          "keyword": "health care web development",
+          "volume": 110,
+          "cpc_usd": 40.77,
+          "serp_overlap": "12/20"
+        },
+        {
+          "keyword": "web development healthcare",
+          "volume": 110,
+          "cpc_usd": 25.51,
+          "serp_overlap": "12/20"
+        },
+        {
+          "keyword": "healthcare web designers",
+          "volume": 110,
+          "cpc_usd": 151.43,
+          "serp_overlap": "8/20"
+        },
+        {
+          "keyword": "medical website design and development",
+          "volume": 90,
+          "cpc_usd": 0,
+          "serp_overlap": "10/20"
+        },
+        {
+          "keyword": "healthcare website developers",
+          "volume": 90,
+          "cpc_usd": 0,
+          "serp_overlap": "7/20"
+        }
+      ]
+    },
+    {
+      "keyword": "medical practice website design",
+      "volume": 140,
+      "cpc_usd": 41,
+      "advertiser_competition": 0.3,
+      "provider_updated": "2026-10-10",
+      "related": [
+        {
+          "keyword": "web design for medical",
+          "volume": 590,
+          "cpc_usd": 39.61,
+          "serp_overlap": "12/20"
+        },
+        {
+          "keyword": "medical web page design",
+          "volume": 590,
+          "cpc_usd": 44.44,
+          "serp_overlap": "11/20"
+        },
+        {
+          "keyword": "design medical website",
+          "volume": 590,
+          "cpc_usd": 44.44,
+          "serp_overlap": "10/20"
+        },
+        {
+          "keyword": "medical site design",
+          "volume": 590,
+          "cpc_usd": 39.61,
+          "serp_overlap": "10/20"
+        },
+        {
+          "keyword": "medical web designs",
+          "volume": 590,
+          "cpc_usd": 44.44,
+          "serp_overlap": "10/20"
+        },
+        {
+          "keyword": "web design medical",
+          "volume": 590,
+          "cpc_usd": 39.61,
+          "serp_overlap": "10/20"
+        },
+        {
+          "keyword": "website design medical",
+          "volume": 590,
+          "cpc_usd": 39.61,
+          "serp_overlap": "10/20"
+        },
+        {
+          "keyword": "web design for doctors",
+          "volume": 260,
+          "cpc_usd": 54.47,
+          "serp_overlap": "12/20"
+        },
+        {
+          "keyword": "website design for medical doctors",
+          "volume": 260,
+          "cpc_usd": 61.63,
+          "serp_overlap": "11/20"
+        },
+        {
+          "keyword": "web design for medical practices",
+          "volume": 140,
+          "cpc_usd": 39.75,
+          "serp_overlap": "14/20"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Seed update dates apply to seeds; related suggestions have no separate dates in the pasted output.",
+    "June medical website design estimate is older than the two October seed readings.",
+    "Do not sum close variants or treat overlapping groups as unique searches.",
+    "Advertiser competition is not organic ranking difficulty; zero CPC does not establish no commercial intent.",
+    "These are Google-search estimates, not AI search or prompt volumes."
+  ]
+}

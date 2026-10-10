@@ -1,3 +1,9 @@
+import { COMMERCIAL } from "@/data/company-facts";
+import { requiredMetric } from "@/data/case-study-facts";
+
+const hosting = COMMERCIAL.find((fact) => fact.label === "Hosting")?.value;
+if (!hosting) throw new Error("Homepage FAQ requires the canonical hosting policy.");
+
 /**
  * Homepage FAQs. Moved out of src/app/page.tsx on 24 Sep 2026, unchanged, so
  * the live homepage (which renders them and emits the FAQPage JSON-LD) and the
@@ -34,7 +40,7 @@ export const homeFaqs = [
   },
   {
     q: "Do I need your monthly plan to keep a custom feature working?",
-    a: "No. There is no compulsory retainer, and nothing we build stops working if you never take one. The feature lives in code you own, on accounts in your name. What a feature does still need is the services underneath it: a form needs email delivery, an editable feature needs your content system, and anything taking payments needs a payment provider. Those are billed by those providers, on plans your quote names before you commit, and they carry on whether we are involved or not. Optional monthly support covers maintenance, small changes and the search and content work you choose, and it is quoted against your actual site rather than sold as a fixed tier. Hosting can be part of that arrangement on terms agreed with you, rather than being included automatically."
+    a: `No. There is no compulsory PandaCodeGen retainer. You receive the project files we create, written instructions and control of the production accounts. Your feature still needs the services it uses, such as email delivery, the content editor or a payment provider. Your quote names those services, their costs and who manages the accounts. Ending our optional support does not disable the feature, but hosting and other provider services still need to be maintained. ${hosting}`,
   },
   {
     q: "Do you have a minimum project size?",
@@ -58,7 +64,7 @@ export const homeFaqs = [
   },
   {
     q: "Will I lose SEO rankings when migrating from WordPress?",
-    a: "Nobody controls Google, so anyone promising your rankings is guessing. What we do is forward every single old web address to its new page, carry across your titles, descriptions and blog content, and watch Google Search Console before and after launch. Your old site stays live until the new one is confirmed working, and if anything is wrong we switch back. On the MyCustomPatches move, confirmed by the owner: 200-plus pages in 22 days, no downtime, and no rankings lost in the 30 days after launch. Speed and hosting figures for that project are withdrawn while we recheck the original test records.",
+    a: `Nobody can guarantee Google rankings. We inventory important page addresses, map changes and test redirects, content and metadata before launch. Google can still reprocess the site and rankings may fluctuate. The owner-approved MyCustomPatches record reports a delivery time of ${requiredMetric("mycustompatches", "delivery-days")}, ${requiredMetric("mycustompatches", "templates")} rebuilt templates and ${requiredMetric("mycustompatches", "downtime")} recorded downtime. Ranking losses in its monitoring window: ${requiredMetric("mycustompatches", "rankings")}. That window is not a guarantee for another project. Your written scope sets the migration checks and fallback plan.`,
   },
   {
     q: "Why not just use a faster WordPress host or a caching plugin?",

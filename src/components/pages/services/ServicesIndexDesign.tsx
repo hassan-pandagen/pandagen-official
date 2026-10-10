@@ -10,33 +10,35 @@ import v from "./ServicesPreview.module.css";
 
 
 const wordpress = {
-  name: "WordPress websites & migration",
+  name: "WordPress to Next.js migration",
   slug: "wordpress-migration",
-  lead: "Build or improve a WordPress site, or move it with a tested content and URL plan.",
+  lead: "Move from WordPress to a custom Next.js site with content, editing, URLs and integrations scoped before launch.",
 };
 
 const summaries: Record<string, string> = {
-  "sanity-development": "Custom websites with a Sanity editor, content migration and a practical handover.",
+  "cms-development": "CMS websites, WordPress improvements, Sanity editors, content migration and a practical handover.",
   "backend-development": "Databases, sign-in and admin screens for your business, usually on Supabase, scoped with access and recovery checks.",
-  wordpress: "A WordPress website you can update, with a written quote and a live editing walkthrough.",
-  "custom-engineering": "Software and internal tools shaped around your actual workflow.",
-  ecommerce: "New stores and custom storefronts, from product discovery to order handoff.",
-  woocommerce: "Investigate checkout and extensions, then repair or rebuild with a plan.",
-  wix: "Build, improve or move a Wix website around the editing and integrations you need.",
-  squarespace: "Build, improve or move a Squarespace website with its content and connections mapped.",
-  webflow: "Build or improve a Webflow site, or plan a move beyond its CMS and frontend limits.",
-  gohighlevel: "Keep the CRM functions you need while improving the public site.",
-  "ai-seo": "Research buyer questions, ship improvements and report what the evidence shows.",
+  wordpress: "WordPress design, development, redesign and host-to-host moves, scoped with a written quote.",
+  "custom-engineering": "Custom CRM development, workflow automation, customer portals and staff dashboards.",
+  ecommerce: "Ecommerce website development, Shopify/WooCommerce redesign and custom storefronts.",
+  woocommerce: "WooCommerce development, slow-checkout investigation and store improvements, or a scoped migration.",
+  wix: "Wix website design and redesign, mobile-layout improvements and migration when it fits.",
+  squarespace: "Squarespace website design and redesign, with content, forms and scheduling in scope.",
+  webflow: "Webflow development and redesign, CMS editing improvements, forms and platform moves.",
+  gohighlevel: "GoHighLevel website design, slow-page repairs and connections to forms, bookings and pipelines.",
+  "ai-seo": "AI SEO, AEO and GEO: buyer-question research, one agreed improvement and a monthly report.",
 };
 
 export default function ServicesPreviewIndex() {
   const review = CLIENT_REVIEWS.find(item => item.id === "emblematic-studio");
   if (!review) throw new Error("Missing Emblematic Studio review");
-  const all = [wordpress, ...servicePreviews.filter(item => item.slug !== "wordpress")];
+  const wordpressBuild = servicePreviews.find(item => item.slug === "wordpress");
+  if (!wordpressBuild) throw new Error("Missing WordPress website service");
+  const all = [wordpressBuild, wordpress, ...servicePreviews.filter(item => item.slug !== "wordpress")];
   return <PreviewShell condensed><div className={s.page}>
     {/* 8 Oct 2026, owner: the headline on two lines like /pricing, copy on the left and
         real client work on the right, instead of a four-line headline and no image. */}
-    <header className={v.hubHero}><div className={`${s.wrap} ${v.hubHeroGrid}`}><div><p className={s.eyebrow} style={{ color: "#E8763A" }}>PandaCodeGen / Services</p><h1 className={v.hubTitle}>Website design.{" "}<br /><span>Development, too.</span></h1><p className={v.hubLead}>A first website, a store, a move from the platform you have outgrown or software for the work behind it. Start with what your team needs to do; we will scope the right build.</p><div className={s.heroActions}><a href="#choose" className={s.buttonLight}>Explore the services ↓</a><QuoteModalButton cta="services_preview_hero" location="services" className={s.buttonLight}>Talk to the founders ↗</QuoteModalButton></div></div><figure className={`${v.heroVisual} ${v.hubVisual}`}><div className={v.imageBar}><span className={v.dots} aria-hidden="true"><i/><i/><i/></span><span>From the work archive</span></div><Image src="/work/emblematic-studio-home.png" alt="Emblematic Studio homepage, a custom brand and product site" width={1440} height={900} sizes="(min-width: 1051px) 46vw, 100vw" priority /><figcaption>Independent client / Emblematic Studio. <Link href="/work/emblematic-studio">See the project ↗</Link></figcaption></figure></div></header>
+    <header className={v.hubHero}><div className={`${s.wrap} ${v.hubHeroGrid}`}><div><p className={s.eyebrow} style={{ color: "#E8763A" }}>PandaCodeGen / Services</p><h1 className={v.hubTitle}>Website design.{" "}<br /><span>Development, too.</span></h1><p className={v.hubLead}>Website design and development for small businesses, custom sites and online stores. Build a new website, redesign what you have, fix a specific problem or plan a platform move. We agree the work and price before starting.</p><div className={s.heroActions}><a href="#choose" className={s.buttonLight}>Explore the services ↓</a><QuoteModalButton cta="services_preview_hero" location="services" className={s.buttonLight}>Talk to the founders ↗</QuoteModalButton></div></div><figure className={`${v.heroVisual} ${v.hubVisual}`}><div className={v.imageBar}><span className={v.dots} aria-hidden="true"><i/><i/><i/></span><span>From the work archive</span></div><Image src="/work/emblematic-studio-home.png" alt="Emblematic Studio homepage, a custom brand and product site" width={1440} height={900} sizes="(min-width: 1051px) 46vw, 100vw" priority /><figcaption>Independent client / Emblematic Studio. <Link href="/work/emblematic-studio">See the project ↗</Link></figcaption></figure></div></header>
 
     <section id="choose" className={s.section}><div className={s.wrap}>
       <FadeIn className={s.sectionHead}><div><p className={s.eyebrow}>01 / Find your route</p><h2 className={v.storyTitle}>What do you need to build or improve?</h2></div><p>A simple WordPress site is welcome here. So is a store, a custom build or an existing site that needs attention. Talk directly with the founders, compare the options and get the scope and cost before work starts.</p></FadeIn>

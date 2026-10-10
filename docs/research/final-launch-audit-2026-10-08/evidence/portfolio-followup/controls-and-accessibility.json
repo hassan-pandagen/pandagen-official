@@ -1,0 +1,982 @@
+[
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "fresh consent and compact controls",
+    "passed": true,
+    "data": {
+      "before": [],
+      "compact": {
+        "x": 16,
+        "y": 784,
+        "width": 44,
+        "height": 44
+      }
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "site menu navigation and escape",
+    "passed": true,
+    "data": [
+      {
+        "width": 390,
+        "height": 844,
+        "left": 0,
+        "top": 0,
+        "overflow": false,
+        "font": null
+      }
+    ]
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "quote invalid, failure, success, reopen",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 366,
+          "height": 776.46875,
+          "left": 12,
+          "top": 33.75,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "attributionInPayload": true,
+      "websiteInPayload": true
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "contact form invalid and successful submit",
+    "passed": true,
+    "data": {
+      "reset": true
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "assistant panel, conversation persistence, escape and focus",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 374,
+          "height": 828,
+          "left": 8,
+          "top": 8,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "focusAfterClose": {
+        "tag": "BUTTON",
+        "label": "Open Panda Assistant, our AI assistant"
+      },
+      "persisted": true
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "blog search and empty results",
+    "passed": true,
+    "data": {
+      "cards": 3
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "audit scan failure and fallback",
+    "passed": true,
+    "data": {
+      "fallback": "/contact#contact-quote-form"
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "fresh consent and compact controls",
+    "passed": true,
+    "data": {
+      "before": [],
+      "compact": {
+        "x": 16,
+        "y": 784,
+        "width": 44,
+        "height": 44
+      }
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "site menu navigation and escape",
+    "passed": true,
+    "data": [
+      {
+        "width": 1440,
+        "height": 844,
+        "left": 0,
+        "top": 0,
+        "overflow": false,
+        "font": null
+      }
+    ]
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "quote invalid, failure, success, reopen",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 576,
+          "height": 776.46875,
+          "left": 432,
+          "top": 33.765625,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "attributionInPayload": true,
+      "websiteInPayload": true
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "contact form invalid and successful submit",
+    "passed": true,
+    "data": {
+      "reset": true
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "assistant panel, conversation persistence, escape and focus",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 460,
+          "height": 700,
+          "left": 960,
+          "top": 124,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "focusAfterClose": {
+        "tag": "BUTTON",
+        "label": "Open Panda Assistant, our AI assistant"
+      },
+      "persisted": true
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "blog search and empty results",
+    "passed": true,
+    "data": {
+      "cards": 3
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "audit scan failure and fallback",
+    "passed": true,
+    "data": {
+      "fallback": "/contact#contact-quote-form"
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "name": "fresh consent and compact controls",
+    "passed": true,
+    "data": {
+      "before": [],
+      "compact": {
+        "x": 16,
+        "y": 784,
+        "width": 44,
+        "height": 44
+      }
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "name": "site menu navigation and escape",
+    "passed": true,
+    "data": [
+      {
+        "width": 390,
+        "height": 844,
+        "left": 0,
+        "top": 0,
+        "overflow": false,
+        "font": null
+      }
+    ]
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "name": "quote invalid, failure, success, reopen",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 358,
+          "height": 776.46875,
+          "left": 12,
+          "top": 33.75,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "attributionInPayload": true,
+      "websiteInPayload": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "name": "contact form invalid and successful submit",
+    "passed": true,
+    "data": {
+      "reset": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "name": "assistant panel, conversation persistence, escape and focus",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 374,
+          "height": 828,
+          "left": 8,
+          "top": 8,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "focusAfterClose": {
+        "tag": "BUTTON",
+        "label": "Open Panda Assistant, our AI assistant"
+      },
+      "persisted": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "name": "blog search and empty results",
+    "passed": true,
+    "data": {
+      "cards": 3
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "name": "audit scan failure and fallback",
+    "passed": true,
+    "data": {
+      "fallback": "/contact#contact-quote-form"
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "name": "fresh consent and compact controls",
+    "passed": true,
+    "data": {
+      "before": [],
+      "compact": {
+        "x": 16,
+        "y": 784,
+        "width": 44,
+        "height": 44
+      }
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "name": "site menu navigation and escape",
+    "passed": true,
+    "data": [
+      {
+        "width": 1440,
+        "height": 844,
+        "left": 0,
+        "top": 0,
+        "overflow": false,
+        "font": null
+      }
+    ]
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "name": "quote invalid, failure, success, reopen",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 576,
+          "height": 776.46875,
+          "left": 428,
+          "top": 33.765625,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "attributionInPayload": true,
+      "websiteInPayload": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "name": "contact form invalid and successful submit",
+    "passed": true,
+    "data": {
+      "reset": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "name": "assistant panel, conversation persistence, escape and focus",
+    "passed": true,
+    "data": {
+      "boxes": [
+        {
+          "width": 460,
+          "height": 700,
+          "left": 960,
+          "top": 124,
+          "overflow": false,
+          "font": "16px"
+        }
+      ],
+      "focusAfterClose": {
+        "tag": "BUTTON",
+        "label": "Open Panda Assistant, our AI assistant"
+      },
+      "persisted": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "name": "blog search and empty results",
+    "passed": true,
+    "data": {
+      "cards": 3
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "name": "audit scan failure and fallback",
+    "passed": true,
+    "data": {
+      "fallback": "/contact#contact-quote-form"
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 23
+        }
+      ],
+      "passes": 32
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /services",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 28
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /pricing",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /contact",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 32
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /free-audit",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 31
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /blog",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 30
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /blog/website-portability",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 34
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /services/gohighlevel",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 33
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /services/squarespace",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 33
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /services/woocommerce",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 33
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /services/cms-development",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /services/backend-development",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /ai-info",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "name": "axe /work",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 3
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 8
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 28
+        }
+      ],
+      "passes": 32
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /services",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 28
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /pricing",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /contact",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 32
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /free-audit",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 31
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /blog",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 30
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /blog/website-portability",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 16
+        }
+      ],
+      "passes": 34
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /services/gohighlevel",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 13
+        }
+      ],
+      "passes": 33
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /services/squarespace",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 13
+        }
+      ],
+      "passes": 33
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /services/woocommerce",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 13
+        }
+      ],
+      "passes": 33
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /services/cms-development",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 13
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /services/backend-development",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 13
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /ai-info",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 29
+    }
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "name": "axe /work",
+    "passed": true,
+    "data": {
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 3
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 7
+        }
+      ],
+      "passes": 28
+    }
+  }
+]

@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-22",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/webflow-user-accounts-sunset-date-2026")],
@@ -68,7 +68,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-04-22",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -111,7 +111,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             datePublished: "2026-04-22",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-09",
             breadcrumb: { "@id": "https://www.pandacodegen.com/blog/webflow-user-accounts-sunset-date-2026#breadcrumb" },
             inLanguage: "en-US",
         },
@@ -468,7 +468,7 @@ export default function WebflowUserAccountsSunsetPage() {
                         items={[
                             "30 percent at onboarding and 70 percent on delivery under the signed agreement.",
                             "Refund for failure to deliver the signed scope, not a post-start change of preference.",
-                            "15 business days of launch defect support on Starter and 30 on Growth or Scale.",
+                            "15 calendar days of launch defect support on Starter and 30 on Growth or Scale.",
                             "Custom-deliverable transfer after full payment; client content remains the client's.",
                             "Reusable PandaCodeGen tools and pre-existing code remain PandaCodeGen property; third-party licenses apply.",
                         ]}

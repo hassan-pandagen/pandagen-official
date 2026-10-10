@@ -1,0 +1,20 @@
+spec_freshness: 97 third-party specs and 11 research findings, as of 2026-10-09
+  tiers (warn/fail): 2 research at 90/180d, 9 research at 180/360d, 16 spec at 30/60d, 28 spec at 60/120d, 49 spec at 90/180d, 4 spec at 365/730d
+  OK - every fact is inside its review window (next to warn: vercel-hobby-price, in 25d)
+  NOTE 13 spec entries are not referenced by any file under src/, so they protect nothing a reader sees: vercel-hobby-deployments, googlebot-crawl-size-limit, statista-global-conversion-q2-2026, google-faq-rich-result-retired, google-goto-redirect-confirmed, lovable-project-monitoring, replit-uptime-monitoring, replit-post-publish-seo-rating, bolt-stripe-testing, v0-browser-testing-and-logs, wix-automation-run-logs, framer-form-webhook-retries, webflow-recurring-aeo-agents
+glossary_guard: 2 pages carry a DefinedTermSet
+  OK - every declared term has a card, a description and a jump-nav entry
+retired_claims: clean. 6 retired claims guarded across 379 files.
+OK    modified dates agree across all sources in 88 posts
+OK    every byline that reads its dates from blog.ts matches its datePublished
+
+WARN  5 posts have page.tsx commits dated after their lastModified (warning only).
+      4 template sweeps touching more than 40 posts are not counted.
+      Many of these are CTA, link, price-wording or quote corrections. Move the date only if
+      a commit changed facts, figures, sections, FAQs or meaningful wording, in all four places.
+
+  ai-built-website-checklist: lastModified 2026-09-17; 1 later; newest 2026-09-19 84d4d68b docs: consolidate and archive research audits
+  webflow-migration-cost: lastModified 2026-09-18; 2 later; newest 2026-10-04 5e631ec3 content: make every Reddit quote match what Reddit shows
+  webflow-true-cost: lastModified 2026-09-25; 1 later; newest 2026-09-26 ce4db7e5 content: Webflow service page refresh, re-verified pricing, two new FA
+  webflow-user-accounts-sunset-date-2026: lastModified 2026-08-19; 1 later; newest 2026-09-09 48c7f874 fix: remove the retired $5,000 to $10,000 ceiling from 37 files, inclu
+  what-is-headless-commerce: lastModified 2026-10-03; 1 later; newest 2026-10-04 5e631ec3 content: make every Reddit quote match what Reddit shows

@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-19",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-rebuild-cost-2026")],
@@ -65,7 +65,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/website-rebuild-cost-2026"),
             description,
             datePublished: "2026-04-19",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -305,7 +305,7 @@ export default function WebsiteRebuildCostPage() {
                             description: 8 to 20 custom pages, Sanity CMS so the team edits content without touching
                             code, blog migration with every URL listed and a redirect map, a 90+ Lighthouse target on
                             mobile and desktop evidenced by three passing runs per agreed page, third-party costs listed
-                            before approval, and 30 business days of support. <strong>Our $1,500 Starter is not that
+                            before approval, and 30 calendar days of support. <strong>Our $1,500 Starter is not that
                             job</strong>. It is up to 7 pages, and comparing it to a 20-page agency rebuild
                             is the same scope error this page warns about everywhere else.
                         </BlogText>
@@ -461,7 +461,7 @@ export default function WebsiteRebuildCostPage() {
                     <BlogText>
                         A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to
                         failure to deliver the signed scope, not a change of preference after starting. Starter includes
-                        15 business days of launch defect support and Growth and Scale carry 30, where the accepted terms include it. Ownership, licenses,
+                        15 calendar days of launch defect support and Growth and Scale carry 30, where the accepted terms include it. Ownership, licenses,
                         accounts, acceptance and remedies follow the signed project terms. Work that falls outside the
                         standard tiers is scoped through our{" "}
                         <Link href="/services/custom-engineering" className={linkClass}>custom engineering service</Link>.

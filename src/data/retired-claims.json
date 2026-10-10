@@ -100,6 +100,16 @@
       "historicalOk": true,
       "source": "src/data/company-facts.ts (pricing facts: Starter, Growth, Scale)",
       "correctedOn": "2026-10-04"
+    },
+    {
+      "id": "support-business-days",
+      "vendor": "PandaCodeGen (own support terms)",
+      "retiredAssertion": "Included post-launch support is 15 business days for Starter and 30 business days for Growth and Scale.",
+      "whatChanged": "Owner-confirmed 9 Oct 2026: support is counted in calendar days (15 for Starter, 30 for Growth, Scale and upgraded projects) and starts on the day the site goes live. The canon is POST_LAUNCH_SUPPORT in src/data/company-facts.ts. Registered 10 Oct 2026 after an independent review found the old business-day wording still on two tier cards in /blog/cheap-web-developer. The pattern only fires on 15 or 30 business days tied to support, so reply times (one business day) and refund settlement (10 to 12 business days) stay allowed.",
+      "pattern": "\\b(?:15|30|fifteen|thirty)[\\s-]+business[\\s-]+days?\\b[^.]{0,80}\\bsupport|\\bsupport\\b[^.]{0,80}\\b(?:15|30|fifteen|thirty)[\\s-]+business[\\s-]+days?\\b",
+      "historicalOk": false,
+      "source": "src/data/company-facts.ts (POST_LAUNCH_SUPPORT)",
+      "correctedOn": "2026-10-10"
     }
   ]
 }

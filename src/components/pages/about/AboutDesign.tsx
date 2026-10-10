@@ -43,7 +43,7 @@ export default function AboutPreview() {
     </div></section>
 
     <section id="how-we-work" className={styles.processSection} aria-labelledby="process-title"><div className={`${styles.wrap} ${styles.processGrid}`}>
-      <div className={styles.processIntro}><p className={styles.kicker}>03 / How we work</p><h2 id="process-title">No mystery between the first call and <em>handover.</em></h2><p>Open each step to see what is decided and checked along the way.</p></div>
+      <div className={styles.processIntro}><p className={styles.kicker}>03 / How we work</p><h2 id="process-title">No mystery between the first call and <em>handover.</em></h2><p>Open each step to see what is decided and checked along the way.</p><Link href="/manifesto" className={styles.inlineLink}>Read our scope, acceptance and handover principles</Link></div>
       <div className={styles.accordion}>{steps.map((step, index) => <details key={step.title} className={styles.step} open={index === 0}><summary><span className={styles.stepNumber}>0{index + 1}</span><span>{step.title}</span><span className={styles.plus} aria-hidden="true">+</span></summary><p>{step.body}</p></details>)}</div>
     </div></section>
 

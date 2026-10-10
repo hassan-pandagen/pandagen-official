@@ -25,11 +25,9 @@ import { T } from "@/components/redesign/tokens";
 // /preview/hero draft beside the old homepage, and moved here on 8 Oct 2026 when
 // the /preview routes were removed.
 //
-// Kept from the live hero on purpose: the H1 words, the subhead and the price
-// line are positioning decisions dated 9-15 Sep (see Hero.tsx). Only the
-// presentation changes: one editorial serif at display size instead of Inter
-// with an italic accent word, no pill label, no grid texture, no hero form.
-// The form's removal is the open question for the owner, not a settled change.
+// The H1 words and separate custom-build/WordPress price line are preserved.
+// The owner approved the shorter explanation below on 10 October 2026. The
+// opening pairs founder/work actions with the inline assistant.
 
 
 const INK = T.ink;
@@ -39,10 +37,9 @@ const ACCENT = T.accentText; // text links: 7.78:1 on paper
 
 
 
-// Fine grain, drawn once as an SVG and tiled. Cheaper than a noise PNG and
-// sharp at any pixel density.
-const grain =
-  "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")";
+// Fine grain, baked from the original SVG by scripts/generate-hero-grain.mjs.
+// Tiling the image avoids SVG turbulence calculations during mobile paint.
+const grain = 'url("/textures/hero-grain.webp")';
 
 export default async function HeroPreview({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
   const condensed = (await searchParams).font !== "zodiak";
@@ -53,7 +50,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
     <PreviewShell condensed={condensed}>
       <div className="relative overflow-hidden" style={heroVars as React.CSSProperties}>
         {/* Paper and light: a warm wash from the top left, a soft fold of shadow
-            across the right, and grain over both. No image request. */}
+            across the right, and grain over both. */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -90,26 +87,26 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
               Words unchanged from the live hero (positioning decision, 15 Sep). */}
           <h1
             className="hero-h1"
-            style={{ fontFamily: "var(--display), Georgia, serif", fontWeight: 700, color: INK, fontSize: "var(--hero-size)", lineHeight: "var(--hero-lh)", letterSpacing: "var(--hero-ls)" }}
+            style={{ fontFamily: "var(--display), Georgia, serif", fontWeight: condensed ? 400 : 700, color: INK, fontSize: "var(--hero-size)", lineHeight: "var(--hero-lh)", letterSpacing: "var(--hero-ls)" }}
           >
             Websites built for the way you do <span style={{ color: T.accent }}>business.</span>
           </h1>
 
-          <div className="grid items-end gap-12 lg:grid-cols-12 lg:gap-10">
-            <div className="lg:col-span-4">
-              <p className="max-w-[30rem] text-[18px] leading-[1.55] md:text-[20px]" style={{ color: BODY }}>
-                Work directly with Hassan and Imran on a business website or online store your team can run.
-                A simple WordPress site, a custom build or a move from your current platform: we help you choose,
-                agree the price, and show you how to edit it with a live demo and written instructions.
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(250px,.72fr)_minmax(0,1.2fr)] lg:gap-6 xl:gap-8">
+            <div className="min-w-0">
+              <p className="max-w-[34rem] text-[18px] leading-[1.55] md:text-[20px]" style={{ color: BODY }}>
+                Work with Hassan and Imran on a business website or online store your team can edit.
+                We can build on WordPress, create a custom site or improve what you already have.
+                You get an agreed price, written instructions and a live editing walkthrough.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <QuoteModalButton
                   cta="preview_hero_talk"
                   className="cta-solid inline-flex items-center justify-center gap-3 bg-[#1C1917] px-6 py-4 text-[16px] font-medium text-white"
                 >
                   <span className="flex -space-x-2" aria-hidden="true">
-                    <Image src="/team/hassan.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-white/40" />
-                    <Image src="/team/imran-editorial.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-white/40" />
+                    <Image src="/team/hassan.png" alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-full object-cover ring-2 ring-white/40" />
+                    <Image src="/team/imran-editorial.png" alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-full object-cover ring-2 ring-white/40" />
                   </span>
                   Talk to the founders
                 </QuoteModalButton>
@@ -126,11 +123,11 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
               </p>
             </div>
 
-            <div className="lg:col-span-4 lg:col-start-5">
+            <div className="min-w-0">
               <AssistantPrompt />
             </div>
 
-            <div className="lg:col-span-4 lg:col-start-9">
+            <div className="min-w-0">
               <WorkCard />
             </div>
           </div>

@@ -1,0 +1,13 @@
+OK    modified dates agree across all sources in 88 posts
+OK    every byline that reads its dates from blog.ts matches its datePublished
+
+WARN  5 posts have page.tsx commits dated after their lastModified (warning only).
+      4 template sweeps touching more than 40 posts are not counted.
+      Many of these are CTA, link, price-wording or quote corrections. Move the date only if
+      a commit changed facts, figures, sections, FAQs or meaningful wording, in all four places.
+
+  ai-built-website-checklist: lastModified 2026-09-17; 1 later; newest 2026-09-19 84d4d68b docs: consolidate and archive research audits
+  webflow-migration-cost: lastModified 2026-09-18; 2 later; newest 2026-10-04 5e631ec3 content: make every Reddit quote match what Reddit shows
+  webflow-true-cost: lastModified 2026-09-25; 1 later; newest 2026-09-26 ce4db7e5 content: Webflow service page refresh, re-verified pricing, two new FA
+  webflow-user-accounts-sunset-date-2026: lastModified 2026-08-19; 1 later; newest 2026-09-09 48c7f874 fix: remove the retired $5,000 to $10,000 ceiling from 37 files, inclu
+  what-is-headless-commerce: lastModified 2026-10-03; 1 later; newest 2026-10-04 5e631ec3 content: make every Reddit quote match what Reddit shows

@@ -1,0 +1,197 @@
+▲ Next.js 16.3.8 (Turbopack)
+- Environments: .env.local
+✓ Running next.config.js took 33ms
+- Experiments (use with caution):
+  ✓ inlineCss
+  · optimizePackageImports
+  · staticGenerationMaxConcurrency: 4
+
+⚠ The Edge Runtime is deprecated. You can use the "nodejs" runtime instead. Learn more: https://nextjs.org/docs/messages/edge-runtime-deprecated
+  Creating an optimized production build ...
+✓ Compiled successfully in 8.4s
+  Running TypeScript ...
+  Finished TypeScript in 18.9s ...
+  Collecting page data using 11 workers ...
+⚠ Using edge runtime on a page currently disables static generation for that page
+  Generating static pages using 11 workers (0/170) ...
+  Generating static pages using 11 workers (42/170) 
+  Generating static pages using 11 workers (84/170) 
+  Generating static pages using 11 workers (127/170) 
+✓ Generating static pages using 11 workers (170/170) in 5.2s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /.well-known/traffic-advice
+├ ○ /about
+├ ○ /about/hassan
+├ ○ /about/imran
+├ ○ /ai-info
+├ ○ /ai-info/case-studies
+├ ○ /ai-info/migration-services
+├ ○ /ai-info/pricing-and-guarantees
+├ ○ /ai-info/team-and-company
+├ ƒ /api/assistant
+├ ƒ /api/audit/analyze
+├ ƒ /api/audit/submit-lead
+├ ƒ /api/live-chat
+├ ƒ /api/submit-quote
+├ ƒ /blog
+├ ○ /blog/aeo-playbook-built-into-every-website
+├ ○ /blog/aeo-web-performance-glossary
+├ ○ /blog/agentic-browsing-pagespeed-score
+├ ○ /blog/ai-built-website-checklist
+├ ○ /blog/ai-referral-revenue-2026
+├ ○ /blog/ai-search-visibility-tracking
+├ ○ /blog/best-website-builder-for-gohighlevel-agencies
+├ ○ /blog/build-vs-buy-software-2026-cost-comparison
+├ ○ /blog/cheap-web-developer
+├ ○ /blog/cloudflare-emdash-wordpress-replacement
+├ ○ /blog/cms-market-share-2026
+├ ○ /blog/core-web-vitals-explained
+├ ○ /blog/custom-website-5000-whats-included
+├ ○ /blog/divi-theme-slow
+├ ○ /blog/do-you-own-your-website
+├ ○ /blog/elementor-kills-seo
+├ ○ /blog/fix-meta-ad-tracking-2026
+├ ○ /blog/for-agencies-offer-custom-web-development
+├ ○ /blog/gohighlevel-keep-crm-replace-website
+├ ○ /blog/gohighlevel-vs-wordpress
+├ ○ /blog/gohighlevel-website-speed
+├ ○ /blog/google-algorithm-updates
+├ ○ /blog/google-universal-commerce-protocol-what-it-means-for-your-store
+├ ○ /blog/how-long-does-a-custom-website-take
+├ ○ /blog/how-much-does-a-website-cost
+├ ○ /blog/how-to-achieve-100-pagespeed
+├ ○ /blog/how-to-fix-slow-wordpress
+├ ○ /blog/how-to-migrate-wordpress-to-nextjs
+├ ○ /blog/how-to-speed-up-your-website
+├ ○ /blog/how-website-speed-affects-seo
+├ ○ /blog/is-it-cheaper-to-build-your-own-website
+├ ○ /blog/is-squarespace-bad-for-seo
+├ ○ /blog/is-wix-bad-for-seo
+├ ○ /blog/leaving-webflow-2026
+├ ○ /blog/lovable-site-not-showing-on-google
+├ ○ /blog/meta-conversions-api-setup-cost
+├ ○ /blog/nextjs-hosting-zero-cost
+├ ○ /blog/nextjs-sanity-stack
+├ ○ /blog/pagepro-alternatives
+├ ○ /blog/product-catalog-website-without-cart
+├ ○ /blog/saas-price-increases-2026-tracker
+├ ○ /blog/saas-software-pricing-audit-2026
+├ ○ /blog/sanity-vs-supabase
+├ ○ /blog/sanity-vs-wordpress
+├ ○ /blog/shopify-app-costs-real-monthly-bill
+├ ○ /blog/shopify-conversion-rate-speed-fix
+├ ○ /blog/shopify-dawn-theme-slow
+├ ○ /blog/shopify-headless
+├ ○ /blog/shopify-plus-still-slow
+├ ○ /blog/shopify-slow-losing-sales
+├ ○ /blog/shopify-stocky-sunset-date-2026
+├ ○ /blog/shopify-store-speed-optimization
+├ ○ /blog/shopify-vs-custom-website
+├ ○ /blog/spending-more-on-ads-fewer-orders-tracking
+├ ○ /blog/squarespace-migration-cost
+├ ○ /blog/squarespace-too-slow
+├ ○ /blog/squarespace-vs-custom-website
+├ ○ /blog/top-custom-web-development-agencies-usa-2026
+├ ○ /blog/top-nextjs-agencies-2026
+├   /blog/topic/[topic]
+│ ├ ● /blog/topic/wordpress
+│ ├ ● /blog/topic/shopify
+│ ├ ● /blog/topic/webflow
+│ └ ● [+8 more paths]
+├ ○ /blog/web-accessibility-glossary
+├ ○ /blog/web-accessibility-statistics-2026
+├ ○ /blog/webflow-migration-cost
+├ ○ /blog/webflow-true-cost
+├ ○ /blog/webflow-user-accounts-sunset-date-2026
+├ ○ /blog/webflow-vs-custom-website
+├ ○ /blog/website-developer-agency
+├ ○ /blog/website-migration-cost-2026
+├ ○ /blog/website-monthly-running-cost
+├ ○ /blog/website-portability
+├ ○ /blog/website-rebuild-cost-2026
+├ ○ /blog/website-redesign-cost
+├ ○ /blog/what-is-headless-commerce
+├ ƒ /blog/what-is-headless-commerce/opengraph-image
+├ ○ /blog/what-is-llms-txt
+├ ○ /blog/which-website-builders-can-go-headless
+├ ○ /blog/why-competitor-outranks-you
+├ ○ /blog/why-we-chose-nextjs-over-wordpress-2026
+├ ○ /blog/will-migrating-hurt-my-seo
+├ ○ /blog/wix-migration-cost
+├ ○ /blog/wix-too-slow
+├ ○ /blog/wix-vs-custom-website
+├ ○ /blog/woocommerce-low-conversion-rate
+├ ○ /blog/woocommerce-migration-cost
+├ ○ /blog/woocommerce-too-slow
+├ ○ /blog/woocommerce-vs-custom-website
+├ ○ /blog/wordpress-ai-security-risk-2026
+├ ○ /blog/wordpress-april-2026-evidence
+├ ○ /blog/wordpress-migration-cost
+├ ○ /blog/wordpress-plugin-security-2026
+├ ○ /blog/wordpress-plugins-destroy-speed
+├ ○ /blog/wordpress-traffic-drop-speed
+├ ○ /blog/wordpress-vs-custom-code-real-cost-3-years
+├ ○ /blog/wordpress-vs-nextjs
+├ ○ /contact
+├ ○ /cookies
+├ ○ /de
+├ ○ /de/about
+├ ○ /de/contact
+├ ○ /de/pricing
+├ ○ /de/services
+├ ○ /demo/featured-products
+├ ○ /editorial-policy
+├ ○ /fr
+├ ○ /fr/about
+├ ○ /fr/contact
+├ ○ /fr/pricing
+├ ○ /fr/services
+├ ○ /free-audit
+├ ○ /llms.txt
+├ ○ /manifesto
+├ ƒ /og
+├ ƒ /opengraph-image
+├ ○ /partners
+├ ○ /pricing
+├ ○ /privacy
+├ ○ /robots.txt
+├ ○ /security
+├ ○ /services
+├ ○ /services/ai-seo
+├ ○ /services/backend-development
+├ ○ /services/cms-development
+├ ○ /services/custom-engineering
+├ ○ /services/ecommerce
+├ ○ /services/gohighlevel
+├ ○ /services/squarespace
+├ ○ /services/webflow
+├ ○ /services/wix
+├ ○ /services/woocommerce
+├ ○ /services/wordpress
+├ ○ /services/wordpress-migration
+├ ○ /sitemap.xml
+├ ○ /terms
+├ ○ /work
+├ ○ /work/a-step-above-medical
+├ ○ /work/emblematic-studio
+├ ○ /work/enterprise-ops
+├ ○ /work/ladies-4-jesus
+├ ○ /work/medical-template
+├ ○ /work/mycustompatches
+├ ○ /work/northdeck-group
+├ ○ /work/panda-patches
+├ ○ /work/panda-publisher
+├ ○ /work/saforne
+└ ○ /work/sleek-jackets
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

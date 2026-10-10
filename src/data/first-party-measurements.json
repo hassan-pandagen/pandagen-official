@@ -109,7 +109,9 @@
       "affiliated": true,
       "affiliationNote": "Both are our own properties.",
       "verifiedAt": "2026-09-04",
-      "source": "PageSpeed Insights API, run 4 September 2026"
+      "source": "PageSpeed Insights API, run 4 September 2026",
+      "recheckedAt": "2026-10-09",
+      "recheck": "Same result on 9 October 2026 (PageSpeed Insights API v5, mobile, Lighthouse 13.5.0): both sites 3 of 3 Agentic Browsing and SEO 100; pandapatches.com has Chrome UX Report data and pandacodegen.com does not. llms.txt now carries this date; the articles that quote 4 September still describe that earlier check."
     },
     "constraint-not-category-2026": {
       "headline": "Two customers, two constraints",

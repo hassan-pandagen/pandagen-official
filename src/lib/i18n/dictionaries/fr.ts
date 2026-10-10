@@ -9,6 +9,9 @@
 import type { Dictionary } from "./types";
 import { reviewQuote } from "@/data/reviews";
 
+// Owner-confirmed hosting terms, 8 October 2026; shared by every French surface.
+const HOSTING_POLICY = "Avec une formule de maintenance ou de référencement, l'hébergement sur notre compte Vercel est inclus si vous le souhaitez. En dehors d'une formule, le compte d'hébergement et les éventuels frais sont convenus pour chaque client et inscrits dans le devis. L'hébergement est transféré sur un compte à votre nom sur demande ou à la fin de la collaboration.";
+
 const fr: Dictionary = {
   nav: {
     home: "Accueil",
@@ -166,7 +169,7 @@ const fr: Dictionary = {
         {
           title: "Commerce haute performance",
           body:
-            "Les thèmes Shopify standards sont lents. Nous construisons des vitrines entièrement sur mesure tout en conservant votre back-office existant pour les produits, les commandes et les paiements.",
+            "Nous créons ou améliorons votre boutique Shopify ou WooCommerce. Si le projet le justifie, nous construisons une vitrine sur mesure avec le back-office adapté à votre activité.",
           bullets: [
             "Fin des frais mensuels d'applications superflues",
             "Connexion à l'inventaire Shopify ou WooCommerce",
@@ -341,7 +344,7 @@ const fr: Dictionary = {
         {
           title: "La propriété intellectuelle vous revient",
           body:
-            "Nous remettons le code source complet. L'hébergement est convenu au cas par cas et écrit dans le devis : certains clients sont déployés sur leur propre compte, d'autres sont hébergés chez nous, avec ou sans frais selon ce qui est convenu. L'hébergement peut être transféré sur votre compte sur simple demande. Aucune formule mensuelle n'est imposée.",
+            `Nous remettons le code source complet. ${HOSTING_POLICY} Aucune formule mensuelle n'est imposée.`,
         },
       ],
       ctaTitle: "Prêt à travailler avec des ingénieurs plutôt qu'avec des chargés de compte ?",
@@ -445,7 +448,7 @@ const fr: Dictionary = {
       {
         title: "03 · Boutiques haute performance",
         body:
-          "Les thèmes Shopify standards sont lents. Nous construisons des vitrines entièrement sur mesure qui se chargent immédiatement, tout en conservant votre back-office existant pour les produits, les commandes et les paiements.",
+          "Nous examinons votre catalogue, le paiement et le traitement des commandes avant de choisir entre des améliorations ciblées et une vitrine sur mesure. Votre back-office Shopify ou WooCommerce peut être conservé si cela convient au projet.",
         bullets: [
           "Fin des frais mensuels d'applications superflues",
           "Logique de vente additionnelle sur mesure",
@@ -482,19 +485,19 @@ const fr: Dictionary = {
 
   pricing: {
     meta: {
-      title: "Tarifs et périmètre de migration web | PandaCodeGen",
+      title: "Tarifs et périmètre de création de sites | PandaCodeGen",
       description:
-        "Les forfaits de migration démarrent à 1 500 $, 3 500 $ et 5 000 $, les pages et fonctionnalités étant ajustées dans un devis écrit.",
+        "Sites sur mesure dès 1 500 $. Sites WordPress et améliorations chiffrés selon le périmètre. Prix et prestations convenus par écrit avant les travaux.",
     },
     hero: {
       eyebrow: "Clarté contractuelle",
-      title: "Des exemples de périmètre de migration.",
-      titleAccent: "Un devis écrit pour votre risque réel.",
+      title: "Un site adapté à votre activité.",
+      titleAccent: "Un devis écrit, un prix clair.",
       lead:
         "Choisissez le forfait de départ le plus proche, puis ajoutez ou retirez des pages et des fonctionnalités dans un devis écrit. Une structure de paiement courante est 30 % au démarrage et 70 % au jalon de livraison défini dans les conditions de projet acceptées ; un autre échéancier écrit peut être convenu pour un projet particulier.",
     },
     summary:
-      "Les tarifs PandaCodeGen démarrent à 1 500 $ (Starter), 3 500 $ (Growth) et à partir de 5 000 $ (Scale), pour des sites web comme pour des boutiques en ligne. Tout projet plus important est chiffré après un appel. Le prix est fixé avant le début des travaux : aucune taille de projet minimale, aucune facturation à l'heure, 30 % au démarrage et 70 % à la livraison. Le code, les fichiers de design et les comptes vous appartiennent à la fin. Les prestations mensuelles, comme le référencement IA ou le support continu, sont facultatives et chiffrées séparément. Le prix évolue avec le volume de contenu, les intégrations et ce qui doit être repris sans casser, et non avec le seul nombre de pages. Votre devis écrit indique le montant exact.",
+      "Les créations sur mesure de PandaCodeGen démarrent à 1 500 $ (Starter), 3 500 $ (Growth) et à partir de 5 000 $ (Scale), pour des sites web comme pour des boutiques en ligne. Les sites WordPress et les améliorations ciblées font l'objet d'un devis adapté à leur périmètre. Tout projet plus important est chiffré après un appel. Le prix est fixé une fois le périmètre écrit accepté. Toute modification du périmètre et du prix nécessite votre accord écrit préalable. Il n'y a pas de taille de projet minimale. Une structure de paiement courante est 30 % au démarrage et 70 % au jalon de livraison ; les conditions acceptées fixent l'échéancier de votre projet. Le code, les fichiers de design et les comptes vous appartiennent à la fin. Les prestations mensuelles, comme le référencement IA ou le support continu, sont facultatives et chiffrées séparément. Le prix évolue avec le volume de contenu, les intégrations et ce qui doit être repris sans casser, et non avec le seul nombre de pages. Votre devis écrit indique le montant exact.",
     tiersHeading: "Exemples de forfaits de départ",
     currencyNote:
       "Montants indiqués en dollars américains (USD). La devise, les taxes et les échéances figurent dans les conditions de projet acceptées.",
@@ -550,7 +553,7 @@ const fr: Dictionary = {
         number: "01",
         title: "Périmètre et ajouts",
         body:
-          "Le forfait de départ est ajusté aux pages et fonctionnalités approuvées. Livrables, intégrations, responsabilités de contenu, exclusions et ajouts facturés séparément sont listés explicitement.",
+          "Le prix est fixe une fois le périmètre écrit accepté. Les travaux supplémentaires sont chiffrés séparément et ne commencent qu'après votre accord écrit sur le nouveau périmètre et son prix. Livrables, intégrations, responsabilités de contenu et exclusions sont listés explicitement.",
       },
       {
         number: "02",
@@ -592,7 +595,7 @@ const fr: Dictionary = {
         number: "08",
         title: "Si vous voulez que nous continuions à nous en occuper",
         body:
-          "Aucune formule mensuelle n'est obligatoire, et le site vous appartient dans les deux cas. Le suivi mensuel optionnel couvre la maintenance, les petites modifications, les correctifs, ainsi que le travail de référencement et de contenu convenu. L'hébergement n'y est pas automatiquement inclus : il est convenu séparément et indiqué dans votre devis.",
+          `Aucune formule mensuelle n'est obligatoire, et le site vous appartient dans les deux cas. Le suivi mensuel optionnel couvre la maintenance, les petites modifications, les correctifs, ainsi que le travail de référencement et de contenu convenu. ${HOSTING_POLICY}`,
       },
     ],
     sections: [

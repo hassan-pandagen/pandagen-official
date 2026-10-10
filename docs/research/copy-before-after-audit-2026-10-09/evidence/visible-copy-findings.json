@@ -1,0 +1,8 @@
+{
+  "withdrawnCountVisible": true,
+  "oldHostingVisible": true,
+  "allPublicVisible": true,
+  "allCodeVisible": true,
+  "wordpressDestination": "/services/wordpress-migration",
+  "aiSeoBuildTrainingVisible": true
+}

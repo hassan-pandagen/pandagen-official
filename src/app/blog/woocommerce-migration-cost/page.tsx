@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-08",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/woocommerce-migration-cost")],
@@ -74,7 +74,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/woocommerce-migration-cost"),
             datePublished: "2026-05-08",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -117,7 +117,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-08",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             inLanguage: "en-US",
         },
         {
@@ -469,7 +469,7 @@ export default function WooCommerceMigrationCostPage() {
                     <BlogText>
                         A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to
                         failure to deliver the signed scope, not a preference change after starting. Starter includes 15
-                        business days of launch defect support; Growth and Scale include 30. A 90-plus <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> target
+                        calendar days of launch defect support; Growth and Scale include 30. A 90-plus <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> target
                         applies only when the contract names representative pages, profiles, environment, three passing
                         runs per page and profile, exclusions and remedy. For the inputs behind a build or transition
                         figure, see{" "}

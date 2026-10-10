@@ -1,0 +1,497 @@
+[
+  {
+    "route": "/",
+    "beforeRef": "ae4342b112c04a3c0ff59c0ed42956c63e5c42fe",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [
+      {
+        "text": "Websites built for the way you do business.",
+        "line": 88
+      }
+    ],
+    "beforeTitle": "Custom Website Design & Development | PandaCodeGen",
+    "currentH1": [
+      "Websites built for the way you do business."
+    ],
+    "currentTitle": "Custom Website Design & Development | PandaCodeGen",
+    "currentDescription": "Work directly with the founders on WordPress sites, custom websites, stores and migrations. Custom builds from $1,500. Code you own, price agreed upfront.",
+    "currentOpening": [
+      "Work directly with Hassan and Imran on a business website or online store your team can run. A simple WordPress site, a custom build or a move from your current platform: we help you choose, agree the price, and show you how to edit it with a live demo and written instructions.",
+      "Custom builds from $1,500. WordPress quoted to scope. Price agreed before work starts."
+    ]
+  },
+  {
+    "route": "/services",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [
+      {
+        "text": "Website design, redesign and development.",
+        "line": 39
+      }
+    ],
+    "beforeTitle": "Website Design, Redesign and Development Services",
+    "currentH1": [
+      "Website design. Development, too."
+    ],
+    "currentTitle": "Website Design, Redesign and Development Services | PandaCodeGen",
+    "currentDescription": "Websites, stores, Sanity editors and custom software. Work with the founders on design, development and migration, with scope and price agreed.",
+    "currentOpening": [
+      "A first website, a store, a move from the platform you have outgrown or software for the work behind it. Start with what your team needs to do; we will scope the right build.",
+      "A simple WordPress site is welcome here. So is a store, a custom build or an existing site that needs attention. Talk directly with the founders, compare the options and get the scope and cost before work starts."
+    ]
+  },
+  {
+    "route": "/services/wordpress",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": true,
+    "beforeRedirect": "/services/wordpress-migration",
+    "beforeH1": [],
+    "beforeTitle": null,
+    "currentH1": [
+      "A WordPress site. Made for your business."
+    ],
+    "currentTitle": "WordPress Website Design & Development | PandaCodeGen",
+    "currentDescription": "WordPress websites for small businesses, with a written quote, content editing, documentation and a live walkthrough. Work directly with Hassan and Imran.",
+    "currentOpening": [
+      "Need a straightforward business website, a blog or a refresh of what you have? We design and build on WordPress when it fits. Work directly with Hassan and Imran, agree the pages and price, and learn how to update the site yourself.",
+      "Panda Patches and Ladies 4 Jesus both started on WordPress. These projects show our migration work; your proposal establishes whether to stay on WordPress or move to a custom build."
+    ]
+  },
+  {
+    "route": "/services/wordpress-migration",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [
+      {
+        "text": "Your WordPress site got slower every year you kept it. Here is what that actually costs, and when a rebuild is worth it.",
+        "line": 37
+      }
+    ],
+    "beforeTitle": "WordPress Website Migration",
+    "currentH1": [
+      "Move from WordPress to Next.js. Keep what works."
+    ],
+    "currentTitle": "WordPress to Next.js Migration Services | PandaCodeGen",
+    "currentDescription": "Move a WordPress site to Next.js with a written plan for content, URLs, redirects and forms. Review it with Hassan, then get an editing demo and documentation.",
+    "currentOpening": [
+      "Thinking of moving your WordPress site to Next.js? Tell Hassan what the site needs to do. We'll explain what can move as it is, what needs rebuilding, and how your team will edit it after launch. Only need a WordPress site built or fixed? See WordPress websites.",
+      "A WordPress community site rebuilt for owner-managed publishing and moderated submissions. See the case study ↗"
+    ]
+  },
+  {
+    "route": "/services/ecommerce",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [
+      {
+        "text": "Online stores that stay fast as the catalogue grows. Built new, or rebuilt from the theme you have.",
+        "line": 32
+      }
+    ],
+    "beforeTitle": "Shopify & WooCommerce Storefront Engineering",
+    "currentH1": [
+      "Ecommerce stores. Built around the order."
+    ],
+    "currentTitle": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+    "currentDescription": "Build or improve a Shopify or WooCommerce store. Plan products, checkout and orders together, with a custom storefront where the requirements justify it.",
+    "currentOpening": [
+      "Start a store or improve one you already run. Product discovery, checkout and the work after purchase should form one clear journey.",
+      "MyCustomPatches is an independent client project. Its documented migration and client review are available to inspect."
+    ]
+  },
+  {
+    "route": "/services/woocommerce",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [
+      {
+        "text": "Your WooCommerce checkout is the slowest page you own. Here is why, and what actually fixes it.",
+        "line": 46
+      }
+    ],
+    "beforeTitle": "WooCommerce Storefront Migration",
+    "currentH1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "currentTitle": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "currentDescription": "Build or improve a WooCommerce storefront, or plan a migration. Compare the options for checkout, products, orders and launch before committing to a scope.",
+    "currentOpening": [
+      "Starting a store, improving one, or considering a different storefront? We review products, checkout and the work after each order, then help you choose what to keep and what to change.",
+      "This client moved from WordPress and WooCommerce to a custom build. The case record distinguishes verified delivery facts from outcomes still under review."
+    ]
+  },
+  {
+    "route": "/services/wix",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [
+      {
+        "text": "The change you need on your Wix site is one Wix will not let you make. Start with a measured migration assessment.",
+        "line": 42
+      }
+    ],
+    "beforeTitle": "Wix Website Migration",
+    "currentH1": [
+      "Wix websites. Improve or migrate."
+    ],
+    "currentTitle": "Wix Website Migration | PandaCodeGen",
+    "currentDescription": "Improve your Wix site or move to a custom website with a Sanity editor your team can use. Plan content, forms, integrations and URL redirects.",
+    "currentOpening": [
+      "Build or improve your Wix website, or migrate to a custom site with a Sanity editor your team can use. We review content, forms, integrations and redirects before recommending a move.",
+      "This is relevant content and workflow work. We have not presented it as a Wix migration."
+    ]
+  },
+  {
+    "route": "/services/squarespace",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [
+      {
+        "text": "The change you need on your Squarespace site is one the platform decides. Start with a measured migration assessment.",
+        "line": 42
+      }
+    ],
+    "beforeTitle": "Squarespace Website Migration",
+    "currentH1": [
+      "Your Squarespace site. Built for more."
+    ],
+    "currentTitle": "Squarespace Website Migration | PandaCodeGen",
+    "currentDescription": "Improve your Squarespace site or migrate to a custom site with a Sanity editor your team can use. Plan content, commerce, scheduling and redirects.",
+    "currentOpening": [
+      "Build or improve your Squarespace website, or move to a custom site with a Sanity editor. We map content, commerce, scheduling and redirects, then compare the build and running costs.",
+      "Emblematic Studio shows our custom design and implementation work. Its review belongs to this project."
+    ]
+  },
+  {
+    "route": "/services/webflow",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [
+      {
+        "text": "Webflow optimization and migration services.",
+        "line": 33
+      }
+    ],
+    "beforeTitle": "Webflow Optimization & Migration Services",
+    "currentH1": [
+      "Webflow websites. Improve or migrate."
+    ],
+    "currentTitle": "Webflow Optimization & Migration Services | PandaCodeGen",
+    "currentDescription": "Improve a Webflow website or plan a new build. Review pages, CMS, forms and integrations, then compare focused improvements with a scoped Next.js build.",
+    "currentOpening": [
+      "Planning a website, refining a live Webflow site, or considering a move? We look at pages, publishing and connected tools, then compare improvements with a new build where useful.",
+      "These projects show how we build editors and connected systems; they did not begin on Webflow."
+    ]
+  },
+  {
+    "route": "/services/gohighlevel",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [
+      {
+        "text": "Your GoHighLevel site is slow, and the CRM is why you cannot just leave. Start with a look at your site, your speed, and what it connects to.",
+        "line": 41
+      }
+    ],
+    "beforeTitle": "GoHighLevel Website & CRM Integration",
+    "currentH1": [
+      "GoHighLevel websites. Speed, builds and CRM."
+    ],
+    "currentTitle": "GoHighLevel Website Speed & Custom Builds | PandaCodeGen",
+    "currentDescription": "GHL site slow or outgrown the builder? Improve your pages, or keep GoHighLevel CRM and connect a custom site to forms, calendars and pipelines.",
+    "currentOpening": [
+      "Is your GoHighLevel site slow, or have you outgrown the builder? We review the cause, then scope improvements or a custom site that keeps your CRM, forms, calendars and pipelines connected.",
+      "Northdeck Group shows the kind of tailored public site we build. We do not present it as a GoHighLevel migration."
+    ]
+  },
+  {
+    "route": "/services/custom-engineering",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [
+      {
+        "text": "The tool your business needs does not exist, so you are running it on spreadsheets.",
+        "line": 43
+      }
+    ],
+    "beforeTitle": "Custom Web Development Agency",
+    "currentH1": [
+      "Custom software. Built around the work."
+    ],
+    "currentTitle": "Custom Web Development Agency | PandaCodeGen",
+    "currentDescription": "Custom web development for portals, dashboards and internal tools. Work with the founders on data, integrations, permissions and handover.",
+    "currentOpening": [
+      "A dashboard, portal or internal tool should fit the people using it. We map the job first, then build the smallest useful system with a clear handover.",
+      "This is an example of product and operations engineering, with its business relationship stated plainly."
+    ]
+  },
+  {
+    "route": "/services/ai-seo",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [
+      {
+        "text": "AI SEO services with practical improvements every month.",
+        "line": 95
+      }
+    ],
+    "beforeTitle": "AI SEO Services and Answer Engine Optimisation",
+    "currentH1": [
+      "AI SEO. Answers people can find."
+    ],
+    "currentTitle": "AI SEO Services & Answer Engine Optimization | PandaCodeGen",
+    "currentDescription": "AI SEO and answer engine optimization. Search foundations come with every build; ongoing research and agreed improvements start at $500 a month.",
+    "currentOpening": [
+      "We research what buyers ask, improve the pages that answer them and check what search and AI systems can access. Monthly work starts at $500.",
+      "Google Search Console recorded 9,843 Generative AI impressions for pandacodegen.com from June 12 to September 11, 2026. The chart shows every daily reading, including the declines."
+    ]
+  },
+  {
+    "route": "/services/cms-development",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": false,
+    "beforeRedirect": null,
+    "beforeH1": [],
+    "beforeTitle": null,
+    "currentH1": [
+      "CMS website development. An editor for your team."
+    ],
+    "currentTitle": "CMS Website Development & Integration | PandaCodeGen",
+    "currentDescription": "CMS website development with an editor your team can use. Build with Sanity and Next.js, improve WordPress, or plan a content migration with the founders.",
+    "currentOpening": [
+      "Give your team a website they can edit. We can improve a WordPress site or build a custom Next.js website with a Sanity editor. We scope the pages, content model, publishing workflow and handover together, including a content and URL plan if you are moving platforms.",
+      "Ladies 4 Jesus moved from WordPress to a custom website with Sanity Studio. The public pages and the owner's editing workflow were part of the same project."
+    ]
+  },
+  {
+    "route": "/services/backend-development",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": false,
+    "beforeRedirect": null,
+    "beforeH1": [],
+    "beforeTitle": null,
+    "currentH1": [
+      "Backends. Built around your workflow."
+    ],
+    "currentTitle": "Backend Development: Supabase, Postgres & APIs | PandaCodeGen",
+    "currentDescription": "Databases, sign-in, file storage and admin screens for your business. Usually built on Supabase (Postgres), or around the database or API you already have.",
+    "currentOpening": [
+      "Your app needs a database, sign-in, file storage and the rules behind the screens. We usually build on Supabase, because it's quick to set up and the data is yours: it's Postgres underneath. We often build a custom CRM on top, so your team runs the business from its own admin screens. If the project needs a different database or an API you already have, we build around that instead.",
+      "Our Panda Patches operations case explains how the application connects staff tasks, records and permissions. It provides concrete implementation evidence for this service."
+    ]
+  },
+  {
+    "route": "/pricing",
+    "beforeRef": "ae4342b112c04a3c0ff59c0ed42956c63e5c42fe",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [
+      {
+        "text": "Example project scopes. A written quote for what you actually need.",
+        "line": 59
+      }
+    ],
+    "beforeTitle": "[dynamic]",
+    "currentH1": [
+      "A better site. A clear price."
+    ],
+    "currentTitle": "Website & Online Store Pricing | PandaCodeGen",
+    "currentDescription": "Custom website and online store builds have published starting prices from $1,500. WordPress websites are quoted to scope. Final work and price are agreed in writing.",
+    "currentOpening": [
+      "Custom website builds start at $1,500. WordPress builds are quoted to their own scope. We agree the pages, features, handover checks and final price in writing before work begins.",
+      "Published starting price for a focused custom website. Your quote sets the final amount."
+    ]
+  },
+  {
+    "route": "/about",
+    "beforeRef": "ae4342b112c04a3c0ff59c0ed42956c63e5c42fe",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [
+      {
+        "text": "Decide what to build before writing production code.",
+        "line": 154
+      }
+    ],
+    "beforeTitle": "[dynamic]",
+    "currentH1": [
+      "Know who you're building with."
+    ],
+    "currentTitle": "About PandaCodeGen | How We Scope and Deliver",
+    "currentDescription": "Meet PandaCodeGen's co-founders. We scope business websites, online stores, redesigns and migrations with clear acceptance criteria and a written handover.",
+    "currentOpening": [
+      "You speak with the founders who scope the project and stay involved as it is built. Your business problem stays connected to the people making the decisions.",
+      "We build business websites, online stores and the systems behind them. The starting point is what your team and customers need to do."
+    ]
+  },
+  {
+    "route": "/contact",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [],
+    "beforeTitle": "Talk to the founders",
+    "currentH1": [
+      "Talk directly to the founders."
+    ],
+    "currentTitle": "Talk to the founders | PandaCodeGen",
+    "currentDescription": "Ask Hassan or Imran about a new website, online store, redesign, migration, custom software or AI SEO. A founder replies directly by email.",
+    "currentOpening": [
+      "A new website, a better online store, or something that isn't working? Tell us what you have in mind. You'll hear from Hassan or Imran.",
+      "A question is enough to start. Only your name and email are required."
+    ]
+  },
+  {
+    "route": "/work",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [],
+    "beforeTitle": "Website, Ecommerce & Software Projects",
+    "currentH1": [
+      "Websites, stores and software."
+    ],
+    "currentTitle": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "currentDescription": "Explore PandaCodeGen websites, online stores, migrations and operations software. See finished projects, what we built, the relationship and the evidence limits.",
+    "currentOpening": [
+      "Browse independent client work, founder-owned systems and portfolio concepts. Each project record explains what we built and the evidence behind it.",
+      "Sites and systems built for independent clients. Select a still to see the full project, then open its record for the details."
+    ]
+  },
+  {
+    "route": "/ai-info",
+    "beforeRef": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+    "beforeExists": true,
+    "beforeRedirect": null,
+    "beforeH1": [
+      {
+        "text": "PandaCodeGen facts, process, and commercial starting points.",
+        "line": 182
+      }
+    ],
+    "beforeTitle": "[dynamic]",
+    "currentH1": [
+      "PandaCodeGen, in plain terms."
+    ],
+    "currentTitle": "PandaCodeGen Company Reference | People, Services & Projects",
+    "currentDescription": "Who PandaCodeGen serves, what the founders build, when WordPress or a custom site may fit, and links to prices, people and documented projects.",
+    "currentOpening": [
+      "PandaCodeGen designs and develops WordPress websites, custom business websites, online stores and software. The founders work directly with clients on new builds, improvements, migrations and integrations. Optional monthly AI SEO and ongoing support are scoped separately.",
+      "Bring us the website or store you need, even if you have not chosen a platform. We will talk through the options, agree the work in writing, and show your team how to edit the finished site."
+    ]
+  },
+  {
+    "route": "/about/hassan",
+    "beforeRef": null,
+    "beforeExists": false,
+    "beforeRedirect": null,
+    "beforeH1": [],
+    "beforeTitle": null,
+    "currentH1": [
+      "Hassan Jamal"
+    ],
+    "currentTitle": "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen",
+    "currentDescription": "Meet Hassan Jamal, PandaCodeGen co-founder and Lead Engineer for custom website and store builds, Next.js implementation, performance, migrations, and technical delivery.",
+    "currentOpening": [
+      "Tell Hassan the website or store you have in mind. You speak with the founders directly, and you do not need to know how to code. Hassan works out the build with you, shows you a working version, and explains how to use and edit it before handover.",
+      "Woman’s World (opens in a new tab) quoted Hassan Jamal, co-founder and lead engineer at PandaCodeGen, on how remote AI-training work operates."
+    ]
+  },
+  {
+    "route": "/about/imran",
+    "beforeRef": null,
+    "beforeExists": false,
+    "beforeRedirect": null,
+    "beforeH1": [],
+    "beforeTitle": null,
+    "currentH1": [
+      "Imran Raza Ladhani"
+    ],
+    "currentTitle": "Imran Raza Ladhani | Co-founder and Head of Marketing at PandaCodeGen",
+    "currentDescription": "Meet Imran Raza Ladhani, PandaCodeGen co-founder and Head of Marketing. He focuses on positioning, the customer journey, and how the agency explains and presents its work.",
+    "currentOpening": [
+      "Imran brings marketing experience across different fields to PandaCodeGen. He leads how we position the offer, explain real project work, and shape the customer journey from a first question to a useful conversation.",
+      "Define who a website needs to reach, what those visitors need to understand, and which claims the business can support with real evidence."
+    ]
+  },
+  {
+    "route": "/ai-info/team-and-company",
+    "beforeRef": null,
+    "beforeExists": false,
+    "beforeRedirect": null,
+    "beforeH1": [],
+    "beforeTitle": null,
+    "currentH1": [
+      "PandaCodeGen Team and Company Facts"
+    ],
+    "currentTitle": "PandaCodeGen Team and Company Reference",
+    "currentDescription": "PandaCodeGen formation, founders, mailing address, service area, contracting basis and governance policies.",
+    "currentOpening": [
+      "Formation, founders, address, service area, contracting basis and governance for anyone checking who is behind PandaCodeGen.",
+      "Original evidence review: 10 September 2026. Service and pricing details may be updated separately; the accepted written agreement sets the terms of a project."
+    ]
+  },
+  {
+    "route": "/ai-info/pricing-and-guarantees",
+    "beforeRef": null,
+    "beforeExists": false,
+    "beforeRedirect": null,
+    "beforeH1": [],
+    "beforeTitle": null,
+    "currentH1": [
+      "PandaCodeGen Pricing and Guarantees"
+    ],
+    "currentTitle": "PandaCodeGen Pricing and Guarantees Reference",
+    "currentDescription": "PandaCodeGen published starting prices, payment structure, refund terms, performance acceptance target and handover ownership.",
+    "currentOpening": [
+      "Published custom-build starting prices, individually scoped WordPress work, payment structure, refund terms, the performance acceptance target and handover. Starting prices are not quotes.",
+      "Original evidence review: 8 October 2026. Service and pricing details may be updated separately; the accepted written agreement sets the terms of a project."
+    ]
+  },
+  {
+    "route": "/ai-info/case-studies",
+    "beforeRef": null,
+    "beforeExists": false,
+    "beforeRedirect": null,
+    "beforeH1": [],
+    "beforeTitle": null,
+    "currentH1": [
+      "PandaCodeGen Project Evidence"
+    ],
+    "currentTitle": "PandaCodeGen Project Evidence Reference",
+    "currentDescription": "PandaCodeGen published projects with relationship disclosure, what each demonstrates, and the limits stated on each.",
+    "currentOpening": [
+      "Every published project, its relationship to PandaCodeGen, and what is and is not claimed about each. Founder-owned properties are labelled as such and are not presented as independent client proof.",
+      "Original evidence review: 10 September 2026. Service and pricing details may be updated separately; the accepted written agreement sets the terms of a project."
+    ]
+  },
+  {
+    "route": "/ai-info/migration-services",
+    "beforeRef": null,
+    "beforeExists": false,
+    "beforeRedirect": null,
+    "beforeH1": [],
+    "beforeTitle": null,
+    "currentH1": [
+      "PandaCodeGen Migration Services"
+    ],
+    "currentTitle": "PandaCodeGen Migration Process Reference",
+    "currentDescription": "What PandaCodeGen migrates, the build stack, the definition of SEO-safe as a process, and the migration control groups.",
+    "currentOpening": [
+      "What PandaCodeGen migrates, what stack it builds on, what SEO-safe means as a process, and the three control groups every migration runs through.",
+      "Original evidence review: 10 September 2026. Service and pricing details may be updated separately; the accepted written agreement sets the terms of a project."
+    ]
+  }
+]

@@ -1,3 +1,4 @@
+import { POST_LAUNCH_SUPPORT } from "@/data/company-facts";
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -91,7 +92,7 @@ const sections = [
           <li>When the accepted project terms include the 100% contracted-scope protection, PandaCodeGen refunds the project fees paid under that scope if it fails to deliver the promised deliverables. The trigger, verification, and any cure process are stated before work begins. This is not a change-of-mind or subjective-preference refund.</li>
           <li>When a refund is due or approved, PandaCodeGen normally aims to initiate it within 2-3 business days. The receiving bank or payment provider controls settlement timing, which may take up to 10-12 business days.</li>
           <li>Cancellation and any refund outside an express scope-failure protection follow the accepted project terms and the work completed at that point. PandaCodeGen may approve a goodwill exception in writing, but an exception does not create a general entitlement for other projects.</li>
-          <li>Package discussions may start with 15 business days of support for Starter and 30 business days for Growth and Scale. Support applies only when recorded in the accepted project terms, which state the start milestone, covered defects or minor adjustments, response expectations, exclusions, and any bespoke arrangement.</li>
+          <li>{POST_LAUNCH_SUPPORT} The accepted project terms also record response expectations, exclusions, and any bespoke arrangement.</li>
           <li>A project may include a Lighthouse handover target of 90 or higher on mobile and desktop. When included, the accepted project terms identify the representative pages, profiles, conditions, and number of recorded pre-handover runs that must meet the target.</li>
           <li>The Lighthouse target is a controlled lab acceptance condition, not a guarantee of field Core Web Vitals, rankings, traffic, revenue, AI citations, or unchanged results after client or third-party changes.</li>
           <li>After a full refund, the client retains its own content, data, brand assets, and client-owned accounts. The client receives no right to use unpaid or refunded custom code or other PandaCodeGen work product. Successful-project ownership and transfer timing remain governed by the accepted project terms.</li>

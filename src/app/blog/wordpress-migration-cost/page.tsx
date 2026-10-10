@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-22",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-migration-cost")],
@@ -67,7 +67,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-22",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -112,7 +112,7 @@ const articleSchema = {
             description,
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             datePublished: "2026-03-22",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -557,7 +557,7 @@ export default function WordPressMigrationCostPage() {
                         defines any project-specific exception and work disposition. When a refund is due, PandaCodeGen
                         aims to initiate it within 2 to 3 business days; the receiving bank or payment provider controls
                         settlement, which can take up to 10 to 12 business days. Package discussions may start with 15
-                        business days of launch defect support on Starter and 30 on Growth and Scale, and support
+                        calendar days of launch defect support on Starter and 30 on Growth and Scale, and support
                         applies only when the accepted project terms record it.
                     </BlogText>
 

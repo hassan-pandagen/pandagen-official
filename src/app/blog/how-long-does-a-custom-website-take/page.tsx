@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-03",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-long-does-a-custom-website-take")],
@@ -64,7 +64,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/how-long-does-a-custom-website-take"),
             description,
             datePublished: "2026-06-03",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -106,7 +106,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-03",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             inLanguage: "en-US",
         },
         {
@@ -434,7 +434,7 @@ export default function WebsiteTimelineGuide() {
                         onboarding and 70 percent on delivery, subject to the accepted contract.
                     </BlogText>
                     <BlogText>
-                        Starter support is 15 business days and Growth or Scale support is 30 business days under the
+                        Starter support is 15 calendar days and Growth or Scale support is 30 calendar days under the
                         agreed coverage and start date. Support does not silently add new features or third-party
                         changes to the original schedule. Our{" "}
                         <Link href="/services/custom-engineering" className="text-cognac hover:underline font-medium">custom engineering service</Link>{" "}

@@ -6,8 +6,8 @@ import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 import { ogImageForPath } from "@/lib/seo/og";
 
 const path = "/services/wordpress";
-const name = "WordPress Website Design & Development";
-const description = "WordPress websites for small businesses, with a written quote, content editing, documentation and a live walkthrough. Work directly with Hassan and Imran.";
+const name = "WordPress Website Design & Development Services";
+const description = "WordPress design, development and redesign for small businesses. Improve existing pages or build a new site, with a written quote and editing walkthrough.";
 
 export const metadata: Metadata = {
   title: name,

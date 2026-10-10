@@ -6,7 +6,7 @@ import { alternatesFor } from "@/lib/i18n/config";
 
 export const metadata: Metadata = {
     title: { absolute: "About PandaCodeGen | How We Scope and Deliver" },
-    description: "Meet PandaCodeGen's co-founders and review how the company, trading since February 2026, scopes new website builds, redesigns and migrations, with acceptance criteria, cutover risk and handover agreed in writing.",
+    description: "Meet PandaCodeGen's co-founders. We scope business websites, online stores, redesigns and migrations with clear acceptance criteria and a written handover.",
     alternates: alternatesFor("about", "en"),
     openGraph: {
         title: "About PandaCodeGen | How We Scope and Deliver",

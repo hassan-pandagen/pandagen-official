@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-27",
-        modifiedTime: "2026-09-18",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/webflow-vs-custom-website")],
@@ -69,7 +69,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/webflow-vs-custom-website"),
             description,
             datePublished: "2026-03-27",
-            dateModified: "2026-09-18",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -460,7 +460,7 @@ export default function WebflowVsCustomWebsitePage() {
 
                     <BlogHeader>PandaCodeGen commercial and acceptance terms</BlogHeader>
                     <BlogText>
-                        Planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Starter includes 15 business
+                        Planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Starter includes 15 calendar
                         days of launch defect support; Growth and Scale include 30. A 90-plus performance target must
                         name representative pages, mobile and desktop profiles, three consecutive tests and a written
                         remedy in the accepted project terms. The tiers and what sits inside each one are set out on

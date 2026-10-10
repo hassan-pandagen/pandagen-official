@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "wordpress",
+    "question": "Can you move my WordPress website to another hosting provider?",
+    "pass": true
+  },
+  {
+    "slug": "wordpress",
+    "question": "Can you fix a slow WordPress website without rebuilding it?",
+    "pass": true
+  },
+  {
+    "slug": "wordpress-migration",
+    "question": "Is moving WordPress to Next.js the same as changing hosts?",
+    "pass": true
+  },
+  {
+    "slug": "ecommerce",
+    "question": "Can you improve an online store that is difficult to buy from?",
+    "pass": true
+  },
+  {
+    "slug": "woocommerce",
+    "question": "Can you fix a slow WooCommerce checkout without replacing the store?",
+    "pass": true
+  },
+  {
+    "slug": "wix",
+    "question": "Can you redesign my Wix website without moving platforms?",
+    "pass": true
+  },
+  {
+    "slug": "squarespace",
+    "question": "Can you redesign my Squarespace website without starting over?",
+    "pass": true
+  },
+  {
+    "slug": "webflow",
+    "question": "Can you improve a Webflow site our team struggles to update?",
+    "pass": true
+  },
+  {
+    "slug": "gohighlevel",
+    "question": "Can you fix a slow GoHighLevel website and keep the CRM?",
+    "pass": true
+  },
+  {
+    "slug": "cms-development",
+    "question": "Can you improve a website that is difficult to update?",
+    "pass": true
+  },
+  {
+    "slug": "backend-development",
+    "question": "Can you add customer logins and private file uploads to our website?",
+    "pass": true
+  },
+  {
+    "slug": "custom-engineering",
+    "question": "Can you replace spreadsheets with a customer portal or staff dashboard?",
+    "pass": true
+  },
+  {
+    "slug": "ai-seo",
+    "question": "Can you help if my business is missing from ChatGPT or Google AI answers?",
+    "pass": true
+  },
+  {
+    "slug": "ai-seo",
+    "question": "What are AEO and GEO services?",
+    "pass": true
+  }
+]

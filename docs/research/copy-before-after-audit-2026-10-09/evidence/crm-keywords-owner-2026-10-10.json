@@ -1,0 +1,83 @@
+{
+  "recorded": "2026-10-10",
+  "source": "Owner-pasted seodata.dev keyword page",
+  "independently_refetched": false,
+  "country": "US",
+  "seed": {
+    "keyword": "custom crm",
+    "volume": 1600,
+    "cpc_usd": 52.14,
+    "advertiser_competition": 0.11,
+    "provider_updated": "2026-09-19"
+  },
+  "related": [
+    {
+      "keyword": "custom crm system",
+      "volume": 1900,
+      "cpc_usd": 80.95,
+      "serp_overlap": "11/20"
+    },
+    {
+      "keyword": "crm custom",
+      "volume": 880,
+      "cpc_usd": 49.8,
+      "serp_overlap": "11/20"
+    },
+    {
+      "keyword": "custom crm software",
+      "volume": 590,
+      "cpc_usd": 36.39,
+      "serp_overlap": "16/20"
+    },
+    {
+      "keyword": "customize crm software",
+      "volume": 590,
+      "cpc_usd": 36.39,
+      "serp_overlap": "11/20"
+    },
+    {
+      "keyword": "crm custom software",
+      "volume": 590,
+      "cpc_usd": 123.39,
+      "serp_overlap": "10/20"
+    },
+    {
+      "keyword": "customized crm solutions",
+      "volume": 390,
+      "cpc_usd": 0,
+      "serp_overlap": "11/20"
+    },
+    {
+      "keyword": "custom crm solutions",
+      "volume": 320,
+      "cpc_usd": 23.77,
+      "serp_overlap": "11/20"
+    },
+    {
+      "keyword": "custom crm software development",
+      "volume": 320,
+      "cpc_usd": 23.44,
+      "serp_overlap": "10/20"
+    },
+    {
+      "keyword": "crm customisation",
+      "volume": 70,
+      "cpc_usd": 0,
+      "serp_overlap": "10/20"
+    },
+    {
+      "keyword": "crm software customization capabilities",
+      "volume": 40,
+      "cpc_usd": 0,
+      "serp_overlap": "10/20"
+    }
+  ],
+  "limits": [
+    "Historical month range and close-variant grouping not supplied.",
+    "Related-keyword update dates not individually supplied.",
+    "Do not sum variants as unique demand.",
+    "Competition measures advertisers, not organic difficulty.",
+    "No AI prompt volume, traffic forecast or ranking promise.",
+    "Provider sourcing is asserted in the pasted page, not independently traced to an upstream Google Ads response."
+  ]
+}

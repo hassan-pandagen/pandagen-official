@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     description: "Compare low-cost web proposals by evidence, scope, security, accessibility, SEO controls, ownership, support, and total cost.",
     type: "article",
     publishedTime: "2026-04-30T00:00:00-05:00",
-    modifiedTime: "2026-10-08T00:00:00-05:00",
+    modifiedTime: "2026-10-09T00:00:00-05:00",
     authors: ["Hassan Jamal"],
     url: "https://www.pandacodegen.com/blog/cheap-web-developer",
     images: [ogImageForPath("/blog/cheap-web-developer")],
@@ -61,7 +61,7 @@ const articleSchema = {
       description: "A due-diligence guide for comparing affordable web-development proposals without assuming price determines quality.",
       image: ogImageUrlForPath("/blog/cheap-web-developer"),
       datePublished: "2026-04-30T00:00:00-05:00",
-      dateModified: "2026-10-08T00:00:00-05:00",
+      dateModified: "2026-10-09T00:00:00-05:00",
       author: {
         "@type": "Person",
         "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -108,7 +108,7 @@ const articleSchema = {
       description: "A due-diligence guide for comparing affordable web-development proposals without assuming price determines quality.",
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       datePublished: "2026-04-30T00:00:00-05:00",
-      dateModified: "2026-10-08T00:00:00-05:00",
+      dateModified: "2026-10-09T00:00:00-05:00",
       breadcrumb: { "@id": "https://www.pandacodegen.com/blog/cheap-web-developer#breadcrumb" },
       inLanguage: "en-US",
     },
@@ -389,7 +389,7 @@ export default function CheapWebDeveloperPage() {
             PandaCodeGen&apos;s public refund position is tied to the signed contract: if the contracted scope is not delivered, the applicable remedy can include a 100 percent refund as defined in those accepted terms. It is not a preference or change-of-mind guarantee. Client content remains the client&apos;s; undelivered code and PandaCodeGen&apos;s reusable intellectual property do not automatically transfer after a refund.
           </BlogText>
           <BlogText>
-            Starter projects can include 15 business days of support and Growth or Scale projects 30 business days, beginning at production launch when written that way in the accepted terms. Support covers defects and agreed minor tweaks in signed deliverables, not new features or third-party changes. Out-of-scope work is quoted under the change process the parties accept.
+            Starter builds include 15 calendar days of free post-launch support, and Growth, Scale and other upgraded projects include 30 calendar days. Support starts on the day the site goes live. During it, we fix issues in the work we delivered and help you use it. Any bug or glitch in the work we delivered, or anything missing from the agreed scope, is fixed at no charge even after that period. New pages, features, integrations and larger changes are scoped and priced before work starts.
           </BlogText>
 
           <BlogHeader>Fixed Price vs Hourly Billing</BlogHeader>
@@ -467,9 +467,9 @@ export default function CheapWebDeveloperPage() {
             <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline">three-year platform running costs</Link>.
           </BlogText>
           <div className="grid md:grid-cols-3 gap-4 my-8">
-            <div className="rounded-xl border border-stone-200 p-5"><p className="font-bold text-charcoal">$1,500 Starter</p><p className="text-sm text-stone-600 mt-2">Small scoped site or migration anchor. Final pages, features, tests, and 15-business-day support boundary follow the accepted terms.</p></div>
-            <div className="rounded-xl border border-stone-200 p-5"><p className="font-bold text-charcoal">$3,500 Growth</p><p className="text-sm text-stone-600 mt-2">Larger content and CMS anchor. Final migration inventory, integrations, tests, and 30-business-day support boundary follow the accepted terms.</p></div>
-            <div className="rounded-xl border border-stone-200 p-5"><p className="font-bold text-charcoal">$5,000</p><p className="text-sm text-stone-600 mt-2">Scale, commerce, portal, or custom-feature anchor. Architecture, vendors, security, data, and operations are scope-dependent.</p></div>
+            <div className="rounded-xl border border-stone-200 p-5"><p className="font-bold text-charcoal">$1,500 Starter</p><p className="text-sm text-stone-600 mt-2">Small scoped site or migration anchor. Final pages, features and tests follow the accepted terms. Includes 15 calendar days of free post-launch support, starting the day the site goes live.</p></div>
+            <div className="rounded-xl border border-stone-200 p-5"><p className="font-bold text-charcoal">$3,500 Growth</p><p className="text-sm text-stone-600 mt-2">Larger content and CMS anchor. Final migration inventory, integrations and tests follow the accepted terms. Includes 30 calendar days of free post-launch support, starting the day the site goes live.</p></div>
+            <div className="rounded-xl border border-stone-200 p-5"><p className="font-bold text-charcoal">$5,000</p><p className="text-sm text-stone-600 mt-2">Scale, commerce, portal, or custom-feature anchor. Architecture, vendors, security, data, and operations are scope-dependent. Includes 30 calendar days of free post-launch support, starting the day the site goes live.</p></div>
           </div>
 
           <div className="my-10 p-8 bg-charcoal text-white rounded-2xl text-center">

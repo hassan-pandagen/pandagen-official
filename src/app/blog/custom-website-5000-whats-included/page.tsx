@@ -1,3 +1,4 @@
+import { POST_LAUNCH_SUPPORT } from "@/data/company-facts";
 import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, ClipboardCheck, Package } from "lucide-react";
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
         description: pageDescription,
         type: "article",
         publishedTime: "2026-06-14",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/custom-website-5000-whats-included")],
@@ -69,7 +70,7 @@ const articleSchema = {
             description: pageDescription,
             image: ogImageUrlForPath("/blog/custom-website-5000-whats-included"),
             datePublished: "2026-06-14",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -111,7 +112,7 @@ const articleSchema = {
             description: pageDescription,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-14",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             inLanguage: "en-US",
         },
         {
@@ -382,9 +383,7 @@ export default function CustomWebsite5000Page() {
 
                     <BlogHeader>Support after launch</BlogHeader>
                     <BlogText>
-                        Package discussions start with 15 business days of included support for Starter and 30
-                        business days for Growth and Scale. The accepted terms define the start event, usually the
-                        production launch or another named handoff event, and the exact coverage.
+                        {POST_LAUNCH_SUPPORT}
                     </BlogText>
                     <BlogText>
                         Included support should cover defects in signed deliverables and the minor agreed adjustments

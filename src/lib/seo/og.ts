@@ -17,8 +17,13 @@ export type OgContent = {
 type StaticOgContent = Omit<OgContent, "path" | "version">;
 
 const staticPages: Record<string, StaticOgContent> = {
+  "/services/ai-seo": {
+    title: "AI SEO & GEO Services",
+    label: "Answer Engine & Generative Engine Optimization",
+    description: "AI SEO, AEO and GEO services from $500/month: buyer research, agreed page improvements and AI search visibility reporting.",
+  },
   "/services/backend-development": { title: "Backend Development: Supabase, Postgres & APIs", label: "Website and application development", description: "Databases, sign-in, file storage and admin screens for your business. Usually built on Supabase, or around the database you already have." },
-  "/services/sanity-development": { title: "Sanity CMS & Next.js Website Development", label: "Website and application development", description: "Custom websites with a Sanity editor your team can use. Scope content models, migration, preview, publishing and an editing walkthrough with the founders." },
+  "/services/cms-development": { title: "CMS Website Development & Integration", label: "Website and application development", description: "CMS website development with an editor your team can use. Build with Sanity and Next.js, improve WordPress, or plan a content migration with the founders." },
   "/services/wordpress": {
     title: "WordPress Website Design & Development",
     label: "WordPress Websites",
@@ -150,9 +155,19 @@ const staticPages: Record<string, StaticOgContent> = {
     description: "Website migrations, custom storefronts and the software behind them. Explore our projects and case studies.",
   },
   "/work/enterprise-ops": {
-    title: "Enterprise Operations Platform",
-    label: "Selected Work",
-    description: "An operations-platform implementation reference covering workflow, architecture, access, reporting, and handover.",
+    title: "Custom CRM Development",
+    label: "Panda Patches CRM / Founder-Affiliated",
+    description: "Our team's custom CRM for customers, orders, production, payments and reports, with workflow automation and role-based access.",
+  },
+  "/work/a-step-above-medical": {
+    title: "Medical Website & Training Management System",
+    label: "A Step Above Medical / In Testing",
+    description: "A course website, content editor and team portal for classes, students, payments and certificates. Built and in pre-launch testing.",
+  },
+  "/work/medical-template": {
+    title: "Medical Website Design: Practice Demo",
+    label: "Medical Template / Portfolio Concept",
+    description: "A fictional medical practice website with treatment pages, care steps and a consultation journey. Explore the design and development demo.",
   },
   "/work/mycustompatches": {
     title: "MyCustomPatches Migration",

@@ -37,7 +37,7 @@ export const stackGuidePosts: StackGuidePost[] = [
   },
   {
     ...byline, id: "sanity-vs-supabase", title: "Sanity vs Supabase: CMS, Backend or Both?",
-    date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-08", eyebrow: "Architecture / Sanity vs Supabase",
+    date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-10", eyebrow: "Architecture / Sanity vs Supabase",
     excerpt: "Sanity is a content editor for your website. Supabase is a backend: a Postgres database with sign-in, file storage and server functions. They don't compete, and many projects use both. Which one your project needs, with current prices.",
     category: "Architecture", readTime: "7 min", illustrationType: "saas", cardStat: "2 jobs", cardStatLabel: "Editing the website and running the business data",
     faqs: [

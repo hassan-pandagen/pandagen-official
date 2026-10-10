@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import WorkCaseTitle from "@/components/redesign/case-study/WorkCaseTitle";
@@ -67,6 +68,10 @@ export function Ladies4JesusCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
             </a>
           </div>
 
+          <figure className="mt-10 border" style={{ borderColor: T.rule, backgroundColor: T.paperHi }}>
+            <Image src="/work/ladies-4-jesus-hero.png" alt="Ladies 4 Jesus homepage, with stories, devotionals and community navigation" width={1912} height={914} sizes="(min-width: 1100px) 1100px, 100vw" priority />
+            <figcaption className="px-4 py-3 text-[12px] uppercase tracking-[0.08em]" style={{ fontFamily: MONO, color: T.quiet }}>The public homepage / Independent client</figcaption>
+          </figure>
           <RelationshipDisclosure slug="ladies-4-jesus" variant="editorial" />
         </div>
       </section>
@@ -117,6 +122,9 @@ export function Ladies4JesusCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
             </QuoteModalButton>
             <Link href="/services/wordpress-migration" className="text-[14px] font-medium underline underline-offset-4" style={{ color: T.onDarkQuiet }}>
               Explore WordPress migration services
+            </Link>
+            <Link href="/services/cms-development" className="text-[14px] font-medium underline underline-offset-4" style={{ color: T.onDarkQuiet }}>
+              Explore CMS website development
             </Link>
           </div>
         </div>

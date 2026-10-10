@@ -1,0 +1,14 @@
+Structural SEO release check
+Crawl origin: http://localhost:3003
+Sitemap: http://localhost:3003/sitemap.xml
+Public origin: https://www.pandacodegen.com
+Checked sitemap URLs: 157
+
+Failures (0)
+  None
+
+Warnings (0)
+  None
+
+Scope: server HTML only; no JavaScript execution, external-link crawling, ranking/content-quality claims, schema eligibility, field performance, or proof that lastmod values came from CMS/git history.
+Lastmod checks validate only syntax, calendar validity, and future-date plausibility.

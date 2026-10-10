@@ -1,8 +1,6 @@
-"use client";
-
 import { businessFeatureCopy, businessFeatures } from "@/data/business-features";
 import Link from "next/link";
-import { motion, MotionConfig } from "framer-motion";
+import type { CSSProperties } from "react";
 import { ArrowRight } from "lucide-react";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 
@@ -53,14 +51,10 @@ export default function FeaturesTrio() {
           </p>
         </div>
 
-        <MotionConfig reducedMotion="user">
         <ol className="feature-grid mt-16 grid border-t md:mt-24 md:grid-cols-2 lg:grid-cols-4" style={{ borderColor: T.rule }}>
           {businessFeatures.map((f, i) => (
-            <motion.li
+            <li
               key={f.title}
-              initial="rest"
-              whileHover="hover"
-              whileFocus="hover"
               className="feature-col relative flex flex-col border-b border-l pb-10 pt-8 md:px-7 md:first:border-l-0 lg:pb-12 lg:pt-10"
               style={{ borderColor: T.rule }}
             >
@@ -70,23 +64,22 @@ export default function FeaturesTrio() {
                 </span>
                 <div className="flex flex-wrap justify-end gap-1.5 pt-1" aria-hidden="true">
                   {fitTags(f.fit).map((tag, ti) => (
-                    <motion.span
+                    <span
                       key={tag}
-                      variants={{ rest: { opacity: 0, y: 10, scale: 0.85 }, hover: { opacity: 1, y: 0, scale: 1 } }}
-                      transition={{ type: "spring", stiffness: 320, damping: 20, delay: ti * 0.07 }}
                       style={{
-                        rotate: CHIP_ROTATE[ti % CHIP_ROTATE.length],
+                        "--chip-rotation": `${CHIP_ROTATE[ti % CHIP_ROTATE.length]}deg`,
+                        "--chip-delay": `${ti * 0.07}s`,
                         fontFamily: MONO,
                         fontSize: "10.5px",
                         color: T.ink,
                         backgroundColor: T.paper,
                         border: `1px solid ${T.rule}`,
                         boxShadow: "0 4px 10px -4px rgba(28,25,23,0.25)",
-                      }}
-                      className="rounded-full px-2.5 py-1 whitespace-nowrap"
+                      } as CSSProperties}
+                      className="feature-tag rounded-full px-2.5 py-1 whitespace-nowrap"
                     >
                       {tag}
-                    </motion.span>
+                    </span>
                   ))}
                 </div>
               </div>
@@ -105,10 +98,9 @@ export default function FeaturesTrio() {
                 </span>{" "}
                 {f.edits}
               </p>
-            </motion.li>
+            </li>
           ))}
         </ol>
-        </MotionConfig>
 
         <div className="mt-12 grid gap-8 border-t pt-8 md:grid-cols-12" style={{ borderColor: T.rule }}>
           <p className="max-w-[46rem] text-[16px] leading-[1.7] md:col-span-8" style={{ color: T.body }}>
@@ -130,6 +122,9 @@ export default function FeaturesTrio() {
       </div>
 
       <style>{`
+        /* Decorative chips use CSS so the page needs no animation runtime. */
+        .feature-tag { opacity: 0; transform: translateY(10px) scale(.85) rotate(var(--chip-rotation)); transition: opacity .25s ease var(--chip-delay), transform .4s cubic-bezier(.34,1.56,.64,1) var(--chip-delay); }
+        .feature-col:hover .feature-tag, .feature-col:focus-within .feature-tag { opacity: 1; transform: translateY(0) scale(1) rotate(var(--chip-rotation)); }
         .feature-col { transition: background-color .3s ease, box-shadow .3s ease, transform .3s ease; }
         .feature-col:hover, .feature-col:focus-within {
           background-color: #fff;
@@ -140,7 +135,7 @@ export default function FeaturesTrio() {
         .feature-col:hover .feature-num, .feature-col:focus-within .feature-num { color: ${T.ink}; }
         .cta-solid { transition: background-color .3s ease, color .3s ease; }
         .cta-solid:hover, .cta-solid:focus-visible { background-color: ${T.accent} !important; color: #FFFFFF !important; }
-        @media (prefers-reduced-motion: reduce) { .feature-col, .feature-num, .cta-solid { transition: none; } .feature-col:hover, .feature-col:focus-within { transform: none; } }
+        @media (prefers-reduced-motion: reduce) { .feature-tag, .feature-col, .feature-num, .cta-solid { transition: none; } .feature-col:hover, .feature-col:focus-within { transform: none; } }
       `}</style>
     </section>
   );

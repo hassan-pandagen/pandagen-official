@@ -10,8 +10,8 @@ import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 
 const path = "/services/webflow";
-const name = "Webflow Optimization & Migration Services";
-const description = "Improve a Webflow website or plan a new build. Review pages, CMS, forms and integrations, then compare focused improvements with a scoped Next.js build.";
+const name = "Webflow Development, Redesign & Migration";
+const description = "Build or redesign a Webflow website. Improve CMS editing, mobile layouts and forms, or plan a custom site with content, integrations and redirects in scope.";
 
 export const metadata: Metadata = {
   title: name,

@@ -10,9 +10,9 @@ import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 
 const path = "/services/ai-seo";
-const name = "AI SEO Services & Answer Engine Optimization";
+const name = "AI SEO & GEO Services";
 const description =
-  "AI SEO and answer engine optimization. Search foundations come with every build; ongoing research and agreed improvements start at $500 a month.";
+  "AI SEO, AEO and generative engine optimization (GEO) services. From $500/month for buyer research, page improvements and AI search visibility reporting.";
 
 export const metadata: Metadata = {
   title: name,
@@ -23,7 +23,10 @@ export const metadata: Metadata = {
     "ai seo services",
     "ai seo agency",
     "answer engine optimization",
+    "answer engine optimization services",
     "aeo services",
+    "generative engine optimization services",
+    "geo services",
     "ai search optimization",
     "chatgpt seo",
   ],
@@ -32,5 +35,5 @@ export const metadata: Metadata = {
 };
 
 export default function AiSeoServicePage() {
-  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="AI SEO" faqs={previewServiceFaqs("ai-seo")} /><ServiceDetailPreview service={servicePreview("ai-seo")} /></>;
+  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="AI SEO & GEO" faqs={previewServiceFaqs("ai-seo")} /><ServiceDetailPreview service={servicePreview("ai-seo")} /></>;
 }

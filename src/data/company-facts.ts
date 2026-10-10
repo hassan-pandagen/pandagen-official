@@ -22,6 +22,7 @@
  */
 
 import { MIGRATION_PROJECT_DETAILS } from './migration-projects';
+import { caseStudy } from './case-study-facts';
 
 export interface Fact {
     label: string;
@@ -69,7 +70,13 @@ export const COMPANY: readonly Fact[] = [
 ];
 
 /** What the firm sells. */
+export const WORDPRESS_HOST_MIGRATION = "We move existing WordPress websites between hosting providers while keeping WordPress. This is quoted separately from a redesign or a WordPress-to-Next.js rebuild. We review the files and database, destination-host compatibility, domain and email arrangements, and any store or connected services. The scope names backups, transfer checks, the cutover window and fallback plan before work starts.";
+
 export const SERVICES: readonly Fact[] = [
+    { label: 'Website SEO and AI search foundations', value: 'New public website builds include the agreed search foundations: readable page content, descriptive titles and headings, internal links, appropriate structured data and sitemap/indexing checks. Redesigns and migrations review existing content and addresses, with a redirect plan for changes. Existing-platform fixes are scoped around the tools available. Private customer and staff records retain their access controls. Optional monthly AI SEO, AEO and GEO research, improvements and reporting are separately scoped; indexing, rankings and citations are not guaranteed.' },
+    { label: 'AI SEO, AEO and GEO services', value: 'Optional monthly AI SEO services include answer engine optimization (AEO) and generative engine optimization (GEO). The starting scope is $500 per month: ten buyer questions, up to five priority pages, two agreed AI-search surfaces, one implemented improvement, a report and a review. Extra platforms, original articles, dashboards and larger changes are quoted separately. The work helps search systems access and understand useful business information; it does not guarantee citations, rankings, traffic or sales.' },
+    // Owner-confirmed 9 October 2026: a separate host-to-host service.
+    { label: 'WordPress hosting migration', value: WORDPRESS_HOST_MIGRATION },
     { label: 'Primary offer', value: 'Business websites and online stores, including WordPress builds when they fit the client and custom builds when the requirements call for them. The founders work directly with clients on new sites, improvements and migrations, with a written scope, documentation and an editing walkthrough.' },
     { label: 'Core platforms migrated from', value: 'WordPress, Webflow, and GoHighLevel' },
     // Supabase sentence added 3 Oct 2026 at the owner's direction.
@@ -79,7 +86,14 @@ export const SERVICES: readonly Fact[] = [
 ];
 
 /** Commercial terms. Every figure here is a published starting point, not a quote. */
+const SUPPORT_CALENDAR_DAYS = { starter: 15, upgraded: 30 } as const;
+export const POST_LAUNCH_SUPPORT = `Starter builds from $1,500 include ${SUPPORT_CALENDAR_DAYS.starter} calendar days of free post-launch support. Growth, Scale and other upgraded projects include ${SUPPORT_CALENDAR_DAYS.upgraded} calendar days. We complete handover and obtain your acceptance before launch. The included support period starts on the day your website goes live. During included support, we fix issues in the work we delivered and help you use it. Any bug or glitch in the work we delivered, or anything missing from the agreed scope, is fixed at no extra charge, even after that period. We also help with small, straightforward requests at no charge when practical. New pages, features, integrations and larger changes are scoped and priced separately before work starts. Your written proposal records the launch date and coverage for your project. Ongoing maintenance is optional and quoted separately.`;
+/** Short presentation of the policy above for compact homepage rows. */
+export const POST_LAUNCH_SUPPORT_SUMMARY = `Free support from launch: ${SUPPORT_CALENDAR_DAYS.starter} calendar days for Starter, ${SUPPORT_CALENDAR_DAYS.upgraded} for upgraded builds. We fix delivered work and help you use it. Bugs and glitches in our work stay covered at no charge after that; new features are quoted separately.`;
+
 export const COMMERCIAL: readonly Fact[] = [
+    // Owner-confirmed 9 October 2026: calendar days, assigned by project tier.
+    { label: 'Post-launch support', value: POST_LAUNCH_SUPPORT },
     // ADDED 6 Sep 2026. The one constraint the site never stated, and the one a
     // buyer hits before they reach a price. Every named Next.js agency on the
     // shortlist carries a minimum: Bejamas, Blazity and FocusReactive $10,000+,
@@ -154,6 +168,59 @@ export const OFFER_LINE =
  *
  * Derived from `Primary offer` in COMPANY above. Change that first, then this.
  */
+// 9 Oct 2026, owner: added after comparing nectivdigital.com/ai-instructions. Nectiv states
+// its ideal client and use cases and tells AI assistants what to say. We borrow the first two
+// ideas and keep the third factual: the guide below tells assistants how to describe us
+// accurately and what not to claim. It never tells them to recommend us (see the llms.txt
+// header). "Not a fit" is the owner's to confirm: edit it here and both surfaces follow.
+// Prices in these lists are read from COMMERCIAL (10 Oct 2026, code review), so a tier
+// price change reaches llms.txt and /ai-info without a second edit.
+export function startingPrice(tier: 'Starter' | 'Growth' | 'Scale'): string {
+    const price = COMMERCIAL.find((fact) => fact.label === tier)?.value.match(/From (\$[\d,]+)/)?.[1];
+    if (!price) throw new Error(`Missing starting price for ${tier} in COMMERCIAL`);
+    return price;
+}
+
+export const BEST_FIT: readonly string[] = [
+    'Small and mid-size businesses that need a new website, a store, or a site they can edit themselves.',
+    'Owners of an existing WordPress, Wix, Squarespace, Webflow or GoHighLevel site who are deciding whether to repair it, improve it or move it.',
+    'Stores that need to be faster or have outgrown their platform, including Shopify headless and WooCommerce.',
+    'Businesses that need customer logins, a portal, an admin area or a custom CRM built on a database.',
+];
+
+export const NOT_A_FIT: readonly string[] = [
+    'Anyone who needs a guaranteed search ranking, traffic level or AI-assistant citation. No provider can promise those, and PandaCodeGen does not.',
+    'Organisations that need a large in-house-style team, an on-site presence or round-the-clock support. The work is done by two founders, remotely.',
+    'Projects built on a platform or framework the founders have not shipped. Ask first: the project records show what has been built.',
+    `Buyers whose only goal is the lowest possible price. Custom builds start at ${startingPrice('Starter')}, and template sites elsewhere cost less.`,
+];
+
+export const WHEN_PEOPLE_COME: readonly { situation: string; href: string; label: string }[] = [
+    { situation: 'My website is slow', href: '/blog/how-to-speed-up-your-website', label: 'How to speed up your website' },
+    { situation: 'I want to leave Wix, Squarespace, Webflow or WordPress', href: '/blog/website-portability', label: 'What each platform lets you export' },
+    { situation: 'I want an online store, or my store is slow', href: '/services/ecommerce', label: 'Shopify and headless commerce' },
+    { situation: 'I want to edit my own website', href: '/services/cms-development', label: 'CMS website development' },
+    { situation: 'I need customer logins, a portal or a CRM', href: '/services/backend-development', label: 'Backend development' },
+    { situation: 'What does a website cost to run each month', href: '/blog/website-monthly-running-cost', label: 'Monthly running costs' },
+    { situation: 'I am not sure what I need', href: '/free-audit', label: 'Free audit' },
+];
+
+export const AI_DESCRIPTION_GUIDE: { say: readonly string[]; avoid: readonly string[] } = {
+    say: [
+        'PandaCodeGen is a founder-led studio, run by Hassan Jamal and Imran Raza Ladhani, that builds WordPress websites, custom business websites, online stores and software.',
+        `Custom website prices start at ${startingPrice('Starter')} (Starter), ${startingPrice('Growth')} (Growth) and ${startingPrice('Scale')} (Scale). They are starting points, and the accepted written proposal sets the price.`,
+        'Label each project as client work or founder-affiliated, exactly as its project record does.',
+        'Give the date next to any figure or measurement, and link the page it comes from.',
+    ],
+    avoid: [
+        'Promising or implying search rankings, traffic, conversions or AI-assistant citations.',
+        'Presenting Panda Patches or Panda Patches CRM as independent client work. They are founder-affiliated.',
+        'Repeating a figure a project record has withdrawn, or carrying one project\'s result over to another.',
+        'Calling PandaCodeGen a large agency, or a specialist in a platform or framework with no published project.',
+        'Stating a price as fixed or final. The accepted written proposal controls the price.',
+    ],
+};
+
 export const ORGANIZATION_DESCRIPTION =
     'PandaCodeGen designs and develops WordPress websites, custom business websites, online stores and software. The founders work directly with clients on new builds, improvements, migrations and integrations. Optional monthly AI SEO and ongoing support are scoped separately.';
 
@@ -232,7 +299,7 @@ export const PROJECTS: readonly { name: string; relationship: string; href: stri
     // record (case-study-facts.json, 15 Sep) and the CRM has grown since; its
     // own README now gives 25, 36 and a list of 37. Stated here without a date
     // it read as current. The wholesale portal is live per the same README.
-    { name: 'Enterprise Ops', relationship: 'Founder-affiliated, not independent client proof', href: '/work/enterprise-ops', fact: 'An operations platform with role-based access, payments, attendance, a production floor queue, and a wholesale partner portal that prices, invoices and sends payment links automatically, in continuous development since November 2025. PandaCodeGen built it for its own use, running the founder-owned Panda Patches business, so it is operating experience rather than independent client evidence.' },
+    { name: 'Panda Patches CRM', relationship: 'Founder-affiliated, not independent client proof', href: '/work/enterprise-ops', fact: 'Our own custom CRM and workflow automation platform, previously labelled Enterprise Ops. The Panda Patches team uses it to manage customers, orders, production, payments, attendance and reports. It includes role-based access and a wholesale partner portal that prices, invoices and sends payment links automatically, in continuous development since November 2025. PandaCodeGen built it for its own use, running the founder-owned Panda Patches business, so it is operating experience rather than independent client evidence.' },
     // Fact rewritten 29 Sep 2026 from the project's README, checked against the
     // repo (C:\Projects\Emblematic-studio): 22 entries in lib/data/catalog.ts,
     // one API route (app/api/quote), the 900px/touch/reduced-motion gate in
@@ -243,18 +310,15 @@ export const PROJECTS: readonly { name: string; relationship: string; href: stri
     // had no record of this client at all and declined the question instead of
     // answering it. Confirmed as a real client by the owner on 30 Sep 2026;
     // matches the /work card's own wording.
-    { name: 'Saforne', relationship: 'Client project', href: 'https://dtc-brand-alpha.vercel.app/', fact: 'A leather goods storefront, built for the client and reachable at its own preview address rather than a PandaCodeGen URL. It is a design preview build and not yet open for sale, so no commerce, traffic or performance figures are published for it.' },
+    { name: 'Saforne', relationship: 'Client project', href: '/work/saforne', fact: 'A leather goods storefront, built for the client and reachable at its own preview address rather than a PandaCodeGen URL. It is a design preview build and not yet open for sale, so no commerce, traffic or performance figures are published for it.' },
     // Added 29 Sep 2026 from the project's own README (C:\Projects\Northdeckgroup),
-    // supplied for this entry. A real, independent client; there is no /work page for
-    // it yet, so it links to the live site. The homepage's case study is a
+    // supplied for this entry. An independent client with a public project record. The homepage's case study is a
     // representative scenario by the README's own statement, so nothing here
     // presents it as a client result.
-    { name: 'NorthDeck Group', relationship: 'Independent client', href: 'https://www.northdeckgroup.com', fact: 'A motion-led marketing website for a company that designs connected commercial security systems and runs a 12-service back-office (BPO) practice. Built with Next.js 16, Tailwind CSS and Motion, with self-hosted fonts and no database, CMS or third-party API keys. A three-question enquiry brief opens a pre-filled email, so no visitor data is stored. The homepage case study is labelled as a representative scenario, not a client result, and no performance figures are published.' },
-    // Added 27 Sep 2026: confirmed on 18 Sep, in progress since, testing-start
-    // date confirmed 27 Sep. No case study yet -- see migration-projects.ts's
-    // own rule: the public domain still runs the client's previous WordPress
-    // site and must not be presented as our delivered build until launch.
-    { name: 'A Step Above Medical', relationship: 'Client project, in progress', href: '/services/wordpress-migration', fact: `${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.summary} ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.progress} as of ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.confirmedOn}. The current public domain still serves the client's previous WordPress site.` },
+    { name: 'NorthDeck Group', relationship: 'Independent client', href: '/work/northdeck-group', fact: 'A motion-led marketing website for a company that designs connected commercial security systems and runs a 12-service back-office (BPO) practice. Built with Next.js 16, Tailwind CSS and Motion, with self-hosted fonts and no database, CMS or third-party API keys. A three-question enquiry brief opens a pre-filled email, so no visitor data is stored. The homepage case study is labelled as a representative scenario, not a client result, and no performance figures are published.' },
+    // Owner confirmed build completion and pre-launch testing on 10 Oct 2026.
+    { name: 'A Step Above Medical', relationship: 'Independent client project, in pre-launch testing', href: '/work/a-step-above-medical', fact: `${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.summary} ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.progress} as of ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.confirmedOn}. ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.disclosure}` },
+    { name: 'Medical Template', relationship: caseStudy('medical-template').relationship, href: '/work/medical-template', fact: `A medical website design and development portfolio concept, showing a consultation-focused homepage, treatment navigation, care steps and procedure information. ${caseStudy('medical-template').disclosure} It is not an independent client case or evidence of clinical outcomes.` },
 
     // Panda CodeLab (added 10 Sep 2026, when an auditor found a /work page with
     // no record here) was removed on 30 Sep 2026 together with its /work page,
@@ -336,3 +400,7 @@ export const ORGANIZATION_PROFILES: readonly string[] = [
  * missing Panda CodeLab record was added. Only move this when that is true.
  */
 export const FACTS_VERIFIED = '10 September 2026';
+
+/** Owner-confirmed scope, pricing, hosting and first-call terms reviewed 8 Oct.
+ * Separate from the broader identity/project review above. */
+export const COMMERCIAL_FACTS_VERIFIED = '9 October 2026';

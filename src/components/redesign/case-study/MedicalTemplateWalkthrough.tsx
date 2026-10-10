@@ -72,9 +72,9 @@ export default function MedicalTemplateWalkthrough() {
     <CaseStudyWalkthrough
       slug="medical-template"
       projectName="Medical Template"
-      eyebrow="A practice website, shown with fictional content."
-      heading={<>What a clinic site{" "}<br /><em>could look like.</em></>}
-      lead={<>The <strong>homepage</strong> a patient lands on, and the <strong>procedure pages</strong> behind it.</>}
+      eyebrow="Medical practice website design / Portfolio concept"
+      heading={<>Healthcare website design.<br /><em>A clear way through.</em></>}
+      lead={<>See how the <strong>homepage</strong> introduces a fictional practice, helps visitors find treatments and leads into the <strong>procedure pages</strong>.</>}
       navAriaLabel="Explore the Medical Template build"
       chapters={chapters}
       handoff="A real practice would replace every name, credential and price with reviewed, verified information."

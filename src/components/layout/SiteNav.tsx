@@ -50,9 +50,9 @@ const buying = [
   { name: "WordPress websites & migration", href: "/services/wordpress-migration" },
   { name: "Online stores", href: "/services/ecommerce" },
   { name: "Custom software", href: "/services/custom-engineering" },
-  { name: "Sanity CMS & websites", href: "/services/sanity-development" },
+  { name: "CMS development", href: "/services/cms-development" },
   { name: "Backend development", href: "/services/backend-development" },
-  { name: "AI SEO", href: "/services/ai-seo" },
+  { name: "AI SEO & GEO", href: "/services/ai-seo" },
 ];
 
 const platformOptions = [
@@ -101,6 +101,11 @@ const dropdowns: Record<string, { name: string; href: string; note?: string }[]>
 
 export default function SiteNav() {
   const [open, setOpen] = useState(false);
+  // 10 Oct 2026: the menu's links are always in the server HTML so crawlers can follow
+  // them (the closed panel is visibility:hidden, so it stays out of the tab order and
+  // the accessibility tree). Only the screenshot column waits for the first open, so a
+  // closed menu never downloads those images.
+  const [menuMounted, setMenuMounted] = useState(false);
   const [quoteOpen, setQuoteOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -210,6 +215,7 @@ export default function SiteNav() {
   const openMenu = (button: HTMLButtonElement) => {
     buttonRef.current = button;
     setActiveDropdown(null);
+    setMenuMounted(true);
     setOpen(true);
   };
   const showDropdown = (name: string, button: HTMLButtonElement) => {
@@ -222,7 +228,7 @@ export default function SiteNav() {
       {/* ── Floating bar ─────────────────────────────────────────────────── */}
       <header onMouseLeave={() => setActiveDropdown(null)} onKeyDown={(event) => { if (event.key === "Escape" && activeDropdown) setActiveDropdown(null); }} className={`sticky top-0 z-[60] flex min-h-[88px] items-center transition-colors duration-500 ${scrolled ? "border-b border-transparent bg-transparent" : "border-b border-[#1C1917]/15 bg-[#EBE9E4]"}`}>
         <div className={`mx-auto flex w-[calc(100%-16px)] items-center justify-between border px-2 transition-[max-width,min-height,padding,box-shadow,background-color,border-color] duration-500 ease-[cubic-bezier(.22,1,.36,1)] motion-reduce:transition-none min-[380px]:w-[calc(100%-32px)] min-[380px]:px-4 md:px-6 xl:justify-start ${scrolled ? "min-h-[64px] max-w-[560px] gap-2 border-[#1C1917]/15 shadow-[0_14px_40px_-18px_rgba(28,25,23,.5)]" : "min-h-[86px] max-w-[1440px] gap-2 border-transparent sm:gap-6"}`} style={{ backgroundColor: scrolled ? "#EBE9E4" : "transparent" }}>
-          <Link href="/" className={`shrink-0 text-[16px] tracking-[-0.01em] transition-[font-size] duration-500 min-[380px]:text-[18px] sm:text-[21px] ${scrolled ? "sm:text-[19px]" : ""}`} style={{ color: INK, fontFamily: "Zodiak, Georgia, serif", fontWeight: 700 }}>PandaCodeGen<span style={{ color: ACCENT }}>.</span></Link>
+          <Link prefetch={false} href="/" className={`shrink-0 text-[16px] tracking-[-0.01em] transition-[font-size] duration-500 min-[380px]:text-[18px] sm:text-[21px] ${scrolled ? "sm:text-[19px]" : ""}`} style={{ color: INK, fontFamily: "Zodiak, Georgia, serif", fontWeight: 700 }}>PandaCodeGen<span style={{ color: ACCENT }}>.</span></Link>
           <nav ref={topNavRef} aria-label="Primary navigation" inert={scrolled} className={`hidden min-w-0 items-center gap-1 whitespace-nowrap transition-[max-width,opacity,transform] duration-500 motion-reduce:transition-none xl:ml-[clamp(35px,4vw,85px)] xl:flex ${scrolled ? "pointer-events-none max-w-0 scale-90 overflow-hidden opacity-0" : "max-w-[720px] scale-100 opacity-100"}`}>
             {primary.map((link) => dropdowns[link.name] ? (
               <button key={link.href} type="button" aria-expanded={activeDropdown === link.name} aria-controls="nav-dropdown" onMouseEnter={(event) => showDropdown(link.name, event.currentTarget)} onClick={(event) => showDropdown(link.name, event.currentTarget)} className={`flex items-center gap-1 px-3 py-3 text-[14px] font-semibold transition-colors hover:text-[#AD3D0B] focus-visible:text-[#AD3D0B] ${pathname.startsWith(link.href) ? "text-[#AD3D0B]" : "text-[#1C1917]"}`}>
@@ -263,7 +269,7 @@ export default function SiteNav() {
       >
         <div className="mx-auto grid w-full max-w-[1280px] gap-8 border border-[#1C1917] bg-[#EBE9E4] px-5 pb-7 pt-5 shadow-[0_26px_80px_rgba(0,0,0,.25)] transition-transform duration-300 motion-reduce:transition-none sm:px-8 lg:grid-cols-12 lg:gap-7" style={{ transform: open ? "scale(1)" : "scale(.97)" }}>
           <div className="flex items-center justify-between border-b border-[#1C1917]/25 pb-4 lg:col-span-12">
-            <Link href="/" onClick={() => close(false)} className="text-[19px]" style={{ color: INK, fontFamily: "Zodiak, Georgia, serif", fontWeight: 700 }}>
+            <Link prefetch={false} href="/" onClick={() => close(false)} className="text-[19px]" style={{ color: INK, fontFamily: "Zodiak, Georgia, serif", fontWeight: 700 }}>
               PandaCodeGen<span style={{ color: ACCENT }}>.</span>
             </Link>
             <button
@@ -292,6 +298,7 @@ export default function SiteNav() {
                 >
                   <Link
                     href={l.href}
+                    prefetch={open ? null : false}
                     onClick={() => close(false)}
                     aria-current={pathname === l.href ? "page" : undefined}
                     className="inline-block text-[44px] leading-[1.08] tracking-[-0.02em] no-underline transition-colors hover:text-[#AD3D0B] md:text-[64px]"
@@ -316,10 +323,10 @@ export default function SiteNav() {
 
           {/* Everything else, grouped the way a buyer thinks about it. */}
           <div className="grid gap-x-10 gap-y-12 text-[17px] sm:grid-cols-2 lg:col-span-5 lg:content-start lg:pt-4">
-            <MenuGroup title="Selected work" links={dropdowns.Work} onPick={() => close(false)} />
-            <MenuGroup title="What you are buying" links={buying} onPick={() => close(false)} />
-            <MenuGroup title="Platform options" links={platformOptions} onPick={() => close(false)} />
-            <MenuGroup title="The company" links={company} onPick={() => close(false)} />
+            <MenuGroup active={open} title="Selected work" links={dropdowns.Work} onPick={() => close(false)} />
+            <MenuGroup active={open} title="What you are buying" links={buying} onPick={() => close(false)} />
+            <MenuGroup active={open} title="Platform options" links={platformOptions} onPick={() => close(false)} />
+            <MenuGroup active={open} title="The company" links={company} onPick={() => close(false)} />
             <div>
               <p className={GROUP_HEADING} style={{ color: HEADING }}>
                 Talk to us
@@ -343,12 +350,13 @@ export default function SiteNav() {
           </div>
 
           {/* Real finished work, fanned. */}
-          <div className="relative hidden lg:col-span-3 lg:block">
+          {menuMounted && <div className="relative hidden lg:col-span-3 lg:block">
             <div className="sticky top-24">
               {shots.map((s, i) => (
                 <Link
                   key={s.src}
                   href={s.href}
+                  prefetch={open ? null : false}
                   onClick={() => close(false)}
                   className="group relative mb-6 block overflow-hidden transition-[opacity,transform] duration-700"
                   style={{
@@ -375,7 +383,7 @@ export default function SiteNav() {
                 </Link>
               ))}
             </div>
-          </div>
+          </div>}
 
         </div>
       </div>
@@ -390,11 +398,15 @@ export default function SiteNav() {
   );
 }
 
+// Hidden fixed-position menus can still intersect the viewport. Only warm their
+// routes after opening; the links themselves are always in the HTML for crawlers.
 function MenuGroup({
+  active,
   title,
   links,
   onPick,
 }: {
+  active: boolean;
   title: string;
   links: { name: string; href: string; note?: string }[];
   onPick: () => void;
@@ -407,7 +419,7 @@ function MenuGroup({
       <ul className="space-y-2">
         {links.map((l) => (
           <li key={l.href + l.name}>
-            <Link href={l.href} onClick={onPick} style={{ color: INK }} className="hover:text-[#AD3D0B]">
+            <Link prefetch={active ? null : false} href={l.href} onClick={onPick} style={{ color: INK }} className="hover:text-[#AD3D0B]">
               {l.name}{l.note && <span className="block text-[11px]" style={{ color: QUIET }}>{l.note}</span>}
             </Link>
           </li>

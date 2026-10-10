@@ -11,8 +11,8 @@ const path = "/services/backend-development";
 // services" (320 a month) and "backend development company" (210) do (Google Ads data via
 // seodata.dev, read 8 Oct 2026). Naming one vendor also told buyers with another database
 // that we were not for them. Supabase stays the usual choice, named in the title and body.
-const name = "Backend Development: Supabase, Postgres & APIs";
-const description = "Databases, sign-in, file storage and admin screens for your business. Usually built on Supabase (Postgres), or around the database or API you already have.";
+const name = "Backend Development Services: Supabase & APIs";
+const description = "Backend development for logins, private files and business records. Scope Supabase or your existing database, access rules, APIs and admin screens.";
 
 export const metadata: Metadata = {
   title: name,

@@ -48,7 +48,7 @@ export default function GuidesList() {
       <style>{`
         .guide-row { transition: background-color .35s ease, padding .35s ease; }
         .guide-row:hover, .guide-row:focus-visible { background-color: ${T.dark}; padding-left: 20px; padding-right: 20px; }
-        .guide-row:hover .guide-title, .guide-row:focus-visible .guide-title, .guide-row:hover .guide-arrow { color: ${T.onDark} !important; }
+        .guide-row:hover .guide-title, .guide-row:focus-visible .guide-title, .guide-row:hover .guide-arrow, .guide-row:focus-visible .guide-arrow { color: ${T.onDarkAccent} !important; }
         .guide-row:hover .guide-ex, .guide-row:focus-visible .guide-ex, .guide-row:hover .guide-meta { color: ${T.onDarkQuiet} !important; }
         @media (prefers-reduced-motion: reduce) { .guide-row { transition: none; } }
       `}</style>

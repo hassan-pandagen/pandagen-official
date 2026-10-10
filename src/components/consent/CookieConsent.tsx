@@ -175,7 +175,7 @@ export default function CookieConsent() {
                     the banner against the hero button before shipping. */}
                 <h2 className="font-bold text-charcoal">Your privacy choices</h2>
                 <p className="mt-1 text-sm leading-6 text-stone-600">
-                  Optional analytics, advertising, chat and scheduling stay off until you allow them.{" "}
+                  Optional analytics, advertising and scheduling stay off until you allow them.{" "}
                   <button
                     type="button"
                     onClick={() => openPreferences()}

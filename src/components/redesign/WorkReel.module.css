@@ -31,7 +31,7 @@
 .controls button{display:grid;place-items:center;width:42px;height:42px;border:1px solid #716157;color:#ebe9e4;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
 .controls button:hover,.controls button:focus-visible{background:#ad3d0b;border-color:#e8763a;transform:translateY(-2px)}
 .filmstrip{display:flex;gap:12px;overflow-x:auto;padding:22px 2px 18px;scrollbar-color:#ad3d0b transparent}
-.frame{flex:1 0 170px;min-width:0;text-align:left;color:inherit;background:transparent;border:1px solid rgba(28,25,23,.24);cursor:pointer;padding:8px;transition:background .22s,border-color .22s,box-shadow .22s,transform .22s}
+.frame{position:relative;flex:1 0 170px;min-width:0;text-align:left;color:inherit;background:transparent;border:1px solid rgba(28,25,23,.24);cursor:pointer;padding:8px;transition:background .22s,border-color .22s,box-shadow .22s,transform .22s}
 .dark .frame{border-color:rgba(235,233,228,.26)}
 .frame:hover,.frame:focus-visible,.frame.active{background:#fff;border-color:#ad3d0b;box-shadow:inset 0 3px #ad3d0b,0 10px 20px rgba(28,25,23,.12);color:#1c1917;transform:translateY(-3px)}
 .frameImage{position:relative;display:block;aspect-ratio:1.85;overflow:hidden;background:#d8d3ca}

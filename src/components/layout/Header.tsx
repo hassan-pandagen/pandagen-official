@@ -52,7 +52,7 @@ const services = [
   { name: "Websites", href: "/services" },
   { name: "Online stores", href: "/services/ecommerce" },
   { name: "Custom software", href: "/services/custom-engineering" },
-  { name: "AI SEO", href: "/services/ai-seo" },
+  { name: "AI SEO & GEO", href: "/services/ai-seo" },
   // Platform-specific options.
   { name: "WordPress: build or move", href: "/services/wordpress-migration" },
   { name: "WooCommerce stores", href: "/services/woocommerce" },

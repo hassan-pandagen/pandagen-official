@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import WorkCaseTitle from "@/components/redesign/case-study/WorkCaseTitle";
@@ -48,6 +49,10 @@ export function SleekJacketsCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
             </a>
           </div>
 
+          <figure className="mt-10 border" style={{ borderColor: T.rule, backgroundColor: T.paperHi }}>
+            <Image src="/work/sleek-jackets-hero.png" alt="The Sleek Jackets demo storefront homepage, showing an outerwear selection" width={1600} height={900} sizes="(min-width: 1100px) 1100px, 100vw" priority />
+            <figcaption className="px-4 py-3 text-[12px] uppercase tracking-[0.08em]" style={{ fontFamily: MONO, color: T.quiet }}>The demo storefront / Demo, not client work</figcaption>
+          </figure>
           <RelationshipDisclosure slug="sleek-jackets" variant="editorial" />
         </div>
       </section>

@@ -11,7 +11,7 @@
 // The six title-pilot pages (docs/research/seo-skill-pack-audit-2026-10-04/TITLE_PILOT.md)
 // get no new links here until the pilot reads, so they are left out on purpose.
 export const serviceGuides: Record<string, { title: string; href: string }[]> = {
-  "sanity-development": [
+  "cms-development": [
     { title: "Sanity or WordPress: test the editing tasks", href: "/blog/sanity-vs-wordpress" },
     { title: "Next.js and Sanity: fit, cost and tradeoffs", href: "/blog/nextjs-sanity-stack" },
     { title: "Sanity vs Supabase: CMS, backend or both?", href: "/blog/sanity-vs-supabase" },

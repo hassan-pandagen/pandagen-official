@@ -1,0 +1,29 @@
+{
+  "capture_date":"2026-10-09",
+  "source":"Owner-pasted seodata.dev keyword-page results, second batch",
+  "country":"US",
+  "independently_refetched":false,
+  "keywords":[
+    {"keyword":"wordpress migration services","volume":170,"cpc_usd":24.98,"advertiser_competition":0.08,"provider_updated":"2026-10-09"},
+    {"keyword":"gohighlevel website design","volume":null,"status":"no_data"},
+    {"keyword":"sanity developer","volume":null,"status":"no_data"},
+    {"keyword":"headless cms development","volume":70,"cpc_usd":0,"advertiser_competition":0.09,"provider_updated":"2026-05-22"},
+    {"keyword":"aeo agency","volume":260,"cpc_usd":26.62,"advertiser_competition":0.42,"provider_updated":"2026-07-19"},
+    {"keyword":"generative engine optimization services","volume":170,"cpc_usd":29.67,"advertiser_competition":0.36,"provider_updated":"2026-08-26"}
+  ],
+  "selected_related_keywords":[
+    {"keyword":"website migration services","volume":1000,"cpc_usd":36.58,"provider_overlap":"3/20","parent":"wordpress migration services"},
+    {"keyword":"wordpress migration service","volume":140,"cpc_usd":89.52,"provider_overlap":"13/20","parent":"wordpress migration services"},
+    {"keyword":"headless cms","volume":4400,"cpc_usd":25.24,"provider_overlap":"14/20","parent":"headless cms development"},
+    {"keyword":"what is headless cms","volume":1300,"cpc_usd":11.5,"provider_overlap":"12/20","parent":"headless cms development"},
+    {"keyword":"aeo services","volume":70,"cpc_usd":11.53,"provider_overlap":"8/20","parent":"aeo agency"},
+    {"keyword":"generative engine optimization","volume":2400,"cpc_usd":13.76,"provider_overlap":"10/20","parent":"generative engine optimization services"}
+  ],
+  "notes":[
+    "No-data responses are null, not zero estimates.",
+    "Advertiser competition is not organic difficulty.",
+    "Update dates are provider labels, not a disclosed historical month range.",
+    "Related-query volumes and both batches are not summed as independent demand.",
+    "Google keyword estimates are not AI-product prompt totals."
+  ]
+}

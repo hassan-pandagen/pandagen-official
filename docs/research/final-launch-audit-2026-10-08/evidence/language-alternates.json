@@ -1,0 +1,317 @@
+[
+  {
+    "path": "/",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com"
+      }
+    ]
+  },
+  {
+    "path": "/fr",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com"
+      }
+    ]
+  },
+  {
+    "path": "/de",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com"
+      }
+    ]
+  },
+  {
+    "path": "/services",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com/services"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr/services"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de/services"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com/services"
+      }
+    ]
+  },
+  {
+    "path": "/fr/services",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com/services"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr/services"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de/services"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com/services"
+      }
+    ]
+  },
+  {
+    "path": "/de/services",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com/services"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr/services"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de/services"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com/services"
+      }
+    ]
+  },
+  {
+    "path": "/pricing",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com/pricing"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr/pricing"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de/pricing"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com/pricing"
+      }
+    ]
+  },
+  {
+    "path": "/fr/pricing",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com/pricing"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr/pricing"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de/pricing"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com/pricing"
+      }
+    ]
+  },
+  {
+    "path": "/de/pricing",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com/pricing"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr/pricing"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de/pricing"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com/pricing"
+      }
+    ]
+  },
+  {
+    "path": "/contact",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com/contact"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr/contact"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de/contact"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com/contact"
+      }
+    ]
+  },
+  {
+    "path": "/fr/contact",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com/contact"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr/contact"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de/contact"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com/contact"
+      }
+    ]
+  },
+  {
+    "path": "/de/contact",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com/contact"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr/contact"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de/contact"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com/contact"
+      }
+    ]
+  },
+  {
+    "path": "/about",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com/about"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr/about"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de/about"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com/about"
+      }
+    ]
+  },
+  {
+    "path": "/fr/about",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com/about"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr/about"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de/about"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com/about"
+      }
+    ]
+  },
+  {
+    "path": "/de/about",
+    "alternates": [
+      {
+        "lang": "en",
+        "href": "https://www.pandacodegen.com/about"
+      },
+      {
+        "lang": "fr",
+        "href": "https://www.pandacodegen.com/fr/about"
+      },
+      {
+        "lang": "de",
+        "href": "https://www.pandacodegen.com/de/about"
+      },
+      {
+        "lang": "x-default",
+        "href": "https://www.pandacodegen.com/about"
+      }
+    ]
+  }
+]

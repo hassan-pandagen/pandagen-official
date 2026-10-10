@@ -137,7 +137,7 @@ export default function NextjsSanityStackPage() {
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
                 <article className="mx-auto max-w-4xl px-5 sm:px-8">
                     <Breadcrumb items={postCrumbs(postId, "Next.js and Sanity")} />
-                    <p className="mt-6 text-base leading-relaxed">Choosing a service? See <Link href="/services/sanity-development" className="underline">Sanity CMS development</Link> and the real client editor. For the decision first, compare <Link href="/blog/sanity-vs-wordpress" className="underline">Sanity vs WordPress</Link> or <Link href="/blog/sanity-vs-supabase" className="underline">Sanity vs Supabase</Link>.</p>
+                    <p className="mt-6 text-base leading-relaxed">Choosing a service? See <Link href="/services/cms-development" className="underline">Sanity CMS development</Link> and the real client editor. For the decision first, compare <Link href="/blog/sanity-vs-wordpress" className="underline">Sanity vs WordPress</Link> or <Link href="/blog/sanity-vs-supabase" className="underline">Sanity vs Supabase</Link>.</p>
                     <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>

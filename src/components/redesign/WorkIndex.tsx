@@ -3,100 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Work, as an index of rows. Redesign pass, 26 Sep 2026 (second pass -- see
-// the 24 Sep note in git history for the first).
-// ─────────────────────────────────────────────────────────────────────────────
-// Each row: a small mono label, the project name large, an arrow. On hover (or
-// keyboard focus) the row turns dark and a screenshot slides in beside the
-// name. Pure CSS: no animation library, nothing loaded on interaction, because
-// the images are already in the page at thumbnail size.
-//
-// The label carries the relationship, because the site's evidence rules require
-// it wherever a project is shown: "Client" only where company-facts.ts records
-// a client, "Founder-affiliated" everywhere else. No launch years are shown:
-// none are recorded, and this list does not invent them.
-//
-// The editor's hover clips (1280x720 MP4 loops, public/work/) will replace the
-// screenshot in .work-thumb when they arrive; that needs a small client
-// component to start and stop playback on hover. Not built yet.
-//
-// 26-27 Sep: two fixes from a design review, plus one revision.
-// 1. The thumbnail was `hidden md:block` and hover-only, so touch devices
-//    (any phone, any touch laptop) never showed a single project image in
-//    this section. First fix (26 Sep): made the first row's thumbnail always
-//    visible. Reverted the next day, owner's call: one row looking different
-//    from the rest read as a bug ("why is this one stuck?"), not a
-//    deliberate accessibility fix, and consistency won over it. Final fix
-//    (27 Sep): removed `hidden md:block` from every row (the thumbnail now
-//    exists in layout at every width, starting at width:0/opacity:0) and
-//    added `:active` alongside `:hover`/`:focus-visible` in the reveal CSS
-//    below. `:hover` alone doesn't reliably fire on tap, but `:active` does,
-//    across browsers, with no JS -- so a press-and-hold now reveals the same
-//    thumbnail on a touchscreen that a mouse hover does, uniformly on every
-//    row, with nothing singled out.
-// 2. "Concept builds" (Medical Template, Panda Publisher, Sleek Jackets) is
-//    dropped from the homepage -- real client work only. Checked first: the
-//    live /work page reads a different data source (case-study-facts.ts) and
-//    does not carry these three today, so this is not "already covered
-//    elsewhere" -- it's a real gap to fill when /work gets its own redesign
-//    pass. The `rows` array below still defines them; only the render is
-//    trimmed, so nothing here needs rebuilding when that pass happens.
-// ─────────────────────────────────────────────────────────────────────────────
-
-type Row = {
-  name: string;
-  label: string;
-  relationship: "Client" | "Founder-affiliated" | "Demo";
-  href: string;
-  /** Omitted for work that is not live: no screenshot of a site we did not build. */
-  image?: string;
-  status?: "In progress" | "Preview";
-  external?: boolean;
-};
-
-// Lineup chosen by the owner, 24 Sep 2026. Independent clients first, then
-// founder-affiliated work. Relationships from PROJECTS in company-facts.ts.
-//
-// A Step Above Medical: "In progress" per migration-projects.ts (confirmed
-// 18 Sep). Its domain still serves the client's OLD WordPress site, and that
-// file says it "must not be presented as our delivered build", so the row has
-// no screenshot and does not link to the domain. It links to the migration
-// page, which describes the project with its status. This also keeps the
-// section's sentence true: every screenshot here is a live site we built.
-//
-// Saforne: an independent client, confirmed by the owners on 4 Oct 2026 (talks
-// about a possible acquisition are under way; if that happens, relabel it
-// founder-affiliated everywhere). On 24 Sep saforne.com did
-// not respond and the build at dtc-brand-alpha.vercel.app reads "Design preview
-// / not yet for sale", so it is labelled Preview and links to that build.
-//
-// Medical template: our own practice template. The site's title and banner say
-// "Fictional portfolio demo ... not a medical provider", so it is labelled
-// Demo, never Client. Screenshot taken 24 Sep: public/work/medical-template.png.
-//
-// Panda Publisher: a concept per the owner (24 Sep); its own page also says its
-// cover gallery is "not client work". Sleek Jackets: undecided between our own
-// brand and a client-run store (owner, 24 Sep), so it is a Demo until that is
-// settled. Relabel it the day it is; do not guess ahead of it.
-//
-// Enterprise Ops was left out of this list by the owner and remains on /work
-// with its founder-affiliated label. Panda CodeLab was removed from the site
-// on 30 Sep 2026.
-const rows: Row[] = [
-  { name: "NorthDeck Group", label: "Security systems", relationship: "Client", href: "https://northdeckgroup.com/", image: "/work/northdeck-group.png", external: true },
-  { name: "Emblematic Studio", label: "Product catalogue", relationship: "Client", href: "/work/emblematic-studio", image: "/work/emblematic-studio.png" },
-  { name: "MyCustomPatches", label: "WordPress migration", relationship: "Client", href: "/work/mycustompatches", image: "/work/mycustompatches.png" },
-  { name: "Ladies 4 Jesus", label: "Community & publishing", relationship: "Client", href: "/work/ladies-4-jesus", image: "/work/ladies-4-jesus.png" },
-  { name: "Saforne", label: "Luxury leather DTC", relationship: "Client", status: "Preview", href: "https://dtc-brand-alpha.vercel.app/", image: "/work/saforne.png", external: true },
-  { name: "A Step Above Medical", label: "WordPress rebuild", relationship: "Client", status: "In progress", href: "/services/wordpress-migration" },
-  { name: "Panda Patches", label: "Custom commerce", relationship: "Founder-affiliated", href: "/work/panda-patches", image: "/work/panda-patches.png" },
-  { name: "Medical Template", label: "Practice website", relationship: "Demo", href: "https://pandacodegen-medical-template.vercel.app/", image: "/work/medical-template.png", external: true },
-  { name: "Panda Publisher", label: "Author services", relationship: "Demo", href: "https://pandapublisher-eight.vercel.app/", image: "/work/panda-publisher.png", external: true },
-  { name: "Sleek Jackets", label: "Outerwear store", relationship: "Demo", href: "https://sleek-jackets.vercel.app/", image: "/work/sleek-jackets.png", external: true },
-];
-
-const clientWork = rows.filter((r) => r.relationship !== "Demo");
+import { portfolioProjects, type PortfolioProject } from "@/data/portfolio";
 
 export default function WorkIndex() {
   return (
@@ -111,13 +18,13 @@ export default function WorkIndex() {
             Look at the work before you read about it.
           </h2>
           <p className="max-w-[34rem] self-end text-[17px] leading-[1.6] lg:col-span-5" style={{ color: T.body }}>
-            Open any project below and check it yourself. Preview builds and in-progress work are labelled as such.
+            Open any project below and check it yourself. Client projects, founder-affiliated work, previews and concepts are labelled.
             Where a project has measured figures they are on its record, and where it does not, we say nothing about
             speed or traffic rather than estimate.
           </p>
         </div>
 
-        <RowList list={clientWork} showRelationship className="mt-16 md:mt-24" />
+        <RowList list={portfolioProjects} showRelationship className="mt-16 md:mt-24" />
       </div>
 
       {/* Hover, focus and active states live here so the rows stay server-
@@ -136,6 +43,11 @@ export default function WorkIndex() {
         .work-row:hover .work-arrow, .work-row:focus-visible .work-arrow, .work-row:active .work-arrow { color: ${T.onDark} !important; }
         .work-row:hover .work-thumb, .work-row:focus-visible .work-thumb, .work-row:active .work-thumb { width: 200px; opacity: 1; }
         .work-row:focus-visible { box-shadow: 0 0 0 3px ${T.accent}; }
+        @media (max-width: 767px) {
+          .work-row .work-thumb { width: 76px; opacity: 1; }
+          .work-row:hover .work-thumb, .work-row:focus-visible .work-thumb, .work-row:active .work-thumb { width: 76px; }
+          .work-row:hover, .work-row:focus-visible, .work-row:active { padding-left: 8px; padding-right: 8px; }
+        }
         @media (prefers-reduced-motion: reduce) {
           .work-row, .work-row * { transition: none !important; }
         }
@@ -144,14 +56,13 @@ export default function WorkIndex() {
   );
 }
 
-function RowList({ list, showRelationship, className = "" }: { list: Row[]; showRelationship: boolean; className?: string }) {
+function RowList({ list, showRelationship, className = "" }: { list: PortfolioProject[]; showRelationship: boolean; className?: string }) {
   return (
     <ul className={`work-index border-t ${className}`} style={{ borderColor: T.rule }}>
       {list.map((r) => (
         <li key={r.name} className="border-b" style={{ borderColor: T.rule }}>
           <Link
             href={r.href}
-            {...(r.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             className="work-row group grid grid-cols-[1fr_auto] items-center gap-x-6 gap-y-1 rounded-[6px] px-0 py-5 no-underline outline-none md:grid-cols-12 md:py-6"
             style={{ textDecoration: "none" }}
           >
@@ -164,7 +75,7 @@ function RowList({ list, showRelationship, className = "" }: { list: Row[]; show
               {r.status ? ` · ${r.status}` : ""}
             </span>
 
-            <span className="col-span-1 flex items-center gap-5 md:col-span-7">
+            <span className="col-span-1 flex min-w-0 items-center gap-5 md:col-span-7">
               <span
                 className="work-thumb relative block h-20 shrink-0 overflow-hidden rounded-[4px] md:h-[112px]"
                 aria-hidden="true"
@@ -181,7 +92,7 @@ function RowList({ list, showRelationship, className = "" }: { list: Row[]; show
                 )}
               </span>
               <span
-                className="work-name md:whitespace-nowrap"
+                className="work-name min-w-0 [overflow-wrap:anywhere] md:whitespace-nowrap"
                 style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(1.9rem, 3.6vw, 3.4rem)", lineHeight: 1, letterSpacing: "-0.02em" }}
               >
                 {r.name}
@@ -190,7 +101,6 @@ function RowList({ list, showRelationship, className = "" }: { list: Row[]; show
 
             <span className="work-arrow col-span-1 flex justify-end" style={{ color: T.ink }}>
               <ArrowUpRight className="h-6 w-6" aria-hidden="true" />
-              {r.external && <span className="sr-only"> (opens in a new tab)</span>}
             </span>
           </Link>
         </li>

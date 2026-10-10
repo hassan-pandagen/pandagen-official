@@ -7,6 +7,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PartnerModels from "@/components/partners/PartnerModels";
 import FaqRows from "@/components/ui/FaqRows";
+import { POST_LAUNCH_SUPPORT } from "@/data/company-facts";
+import { partnerFaqs } from "@/data/partner-faqs";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import hover from "./PartnersHover.module.css";
@@ -40,41 +42,6 @@ const processSteps = [
     title: "You Invoice. You Keep the Margin.",
     desc: "You invoice the client at your rate. You pay us our fixed scope. You keep the spread. No revenue share surprises. No hidden fees.",
     duration: "Day 21",
-  },
-];
-
-const partnerFaqs = [
-  {
-    q: "Do you sign NDAs before we share client details?",
-    a: "Yes. Mutual NDA signed before you send us a single client detail. We have a standard template ready (takes 5 minutes to sign). Your client relationship stays yours, end to end. We communicate only with you.",
-  },
-  {
-    q: "Will our clients know PandaCodeGen is building the site?",
-    a: "No. We stay completely invisible. Your GitHub, your Vercel deployment, your custom domain, your brand emails if you want them routed that way. Your client sees YOUR agency as the builder.",
-  },
-  {
-    q: "What if the client wants to meet the developer?",
-    a: "Your call. You can loop us in as a \"senior engineering partner\" on the call (no branding mentioned), or keep us fully invisible. Most partners keep us invisible. Some introduce us as their \"dev team lead.\" We follow your lead.",
-  },
-  {
-    q: "How does the white-label handoff actually work?",
-    a: "We push the code to YOUR GitHub repo, deploy to YOUR Vercel account, use YOUR brand colors in any internal docs, and hand over complete source code + documentation. You own everything from day one. If you ever stop working with us, the site keeps running untouched.",
-  },
-  {
-    q: "What's the minimum commitment?",
-    a: "Referral Partner: zero commitment. Send a lead, get commission, done. White-Label Partner: one paid pilot project to start, no minimums after that. Ongoing volume is whatever suits your pipeline; nothing is committed unless the partner agreement says so.",
-  },
-  {
-    q: "How fast can you start on a project?",
-    a: "Usually within about a week of brief approval, subject to current capacity. Rush timelines can sometimes be arranged. Build duration depends on scope; the committed dates for your project are the ones written into the accepted terms, not a published average.",
-  },
-  {
-    q: "What happens if my client asks for changes after launch?",
-    a: "Scope changes under the original brief: included free. New feature requests: priced per your agency's rate, we quote you our internal cost, you keep the margin. Most partners price maintenance retainers at 3-5x our internal rate.",
-  },
-  {
-    q: "What technologies do you build with?",
-    a: "Next.js, React, TypeScript, Tailwind CSS, Sanity CMS, Supabase or Postgres, Stripe, and Vercel. Builds carry a 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs before handover. No WordPress, no Webflow, no page builders. Pure custom code.",
   },
 ];
 
@@ -258,7 +225,7 @@ export default function PartnersContent() {
             ],
           },
         ]}
-        footnote="Every partnership includes a mutual NDA, full source-code handoff, and your agency's brand on the delivery. Post-launch support is 15 to 30 days depending on the client's tier. These are the terms we open with, not a quote: scope, price, timing, tests, ownership and remedies are set in the accepted written project terms for each project."
+        footnote={`Every partnership includes a mutual NDA, full source-code handoff, and your agency's brand on the delivery. ${POST_LAUNCH_SUPPORT} Scope, price, timing, tests, ownership and remedies are set in the accepted written project terms for each project.`}
       />
         </div>
       </section>
@@ -268,7 +235,7 @@ export default function PartnersContent() {
           <h2 id="partner-editor" className="text-3xl font-bold text-charcoal md:text-5xl">White-label websites with a Sanity editor</h2>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">The pilot can cover a custom website, Sanity content models, agreed preview and publishing behavior, and an editor walkthrough under your agency's brand. Send representative content and the tasks your client needs to perform; the quote names the templates, migration, training and account handover.</p>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-stone-700">Customer accounts, private portals and custom backend workflows receive a separate scope. We agree who owns the Sanity project, repository and hosting accounts, and who handles support after your client accepts the work.</p>
-          <div className="mt-6 flex flex-wrap gap-6"><Link className="font-semibold text-cognac underline underline-offset-4" href="/services/sanity-development">See the Sanity service and real editor</Link><Link className="font-semibold text-cognac underline underline-offset-4" href="/services/backend-development">Scope a backend or portal</Link></div>
+          <div className="mt-6 flex flex-wrap gap-6"><Link className="font-semibold text-cognac underline underline-offset-4" href="/services/cms-development">See the Sanity service and real editor</Link><Link className="font-semibold text-cognac underline underline-offset-4" href="/services/backend-development">Scope a backend or portal</Link></div>
         </div>
       </section>
 

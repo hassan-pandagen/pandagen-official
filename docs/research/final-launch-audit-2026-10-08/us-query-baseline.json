@@ -1,0 +1,360 @@
+{
+  "period": "2026-09-08 through 2026-10-05",
+  "country": "usa",
+  "rowCount": 619,
+  "services": [
+    {
+      "keys": [
+        "https://www.pandacodegen.com/services/custom-engineering",
+        "pandacodegen"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/services/ecommerce",
+        "book-store-storefront.vercel.app"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 58
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/services/ecommerce",
+        "saforne"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/services/wordpress-migration",
+        "wordpress to next.js migration agency"
+      ],
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 29.272727272727273
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/services/wordpress-migration",
+        "wordpress to next.js migration services"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 15
+    }
+  ],
+  "top": [
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/what-is-headless-commerce",
+        "headless commerce"
+      ],
+      "clicks": 0,
+      "impressions": 232,
+      "ctr": 0,
+      "position": 24.344827586206897
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/website-migration-cost-2026",
+        "website migration cost"
+      ],
+      "clicks": 0,
+      "impressions": 100,
+      "ctr": 0,
+      "position": 10.18
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/what-is-headless-commerce",
+        "what is headless commerce"
+      ],
+      "clicks": 0,
+      "impressions": 67,
+      "ctr": 0,
+      "position": 22.940298507462686
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/website-migration-cost-2026",
+        "what is the cost of website migration"
+      ],
+      "clicks": 0,
+      "impressions": 49,
+      "ctr": 0,
+      "position": 10.408163265306122
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/shopify-store-speed-optimization",
+        "shopify speed score"
+      ],
+      "clicks": 0,
+      "impressions": 48,
+      "ctr": 0,
+      "position": 31.1875
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/website-migration-cost-2026",
+        "website migration costs"
+      ],
+      "clicks": 0,
+      "impressions": 44,
+      "ctr": 0,
+      "position": 9.181818181818182
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/elementor-kills-seo",
+        "elementor and seo"
+      ],
+      "clicks": 0,
+      "impressions": 39,
+      "ctr": 0,
+      "position": 27.564102564102566
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
+        "vercel free tier bandwidth 100gb 2026"
+      ],
+      "clicks": 0,
+      "impressions": 32,
+      "ctr": 0,
+      "position": 10.3125
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/ai-info/competitor-comparison",
+        "bejamas vs pagepro — for next.js projects in united states"
+      ],
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 7.066666666666666
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/what-is-headless-commerce",
+        "headless commerce definition"
+      ],
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 17.185185185185187
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/website-migration-cost-2026",
+        "webflow migration cost 2026"
+      ],
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 20.791666666666668
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/website-migration-cost-2026",
+        "how long does it take to migrate a website in 2026?"
+      ],
+      "clicks": 0,
+      "impressions": 23,
+      "ctr": 0,
+      "position": 9.347826086956522
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
+        "pagespeed score"
+      ],
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 4.863636363636363
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
+        "vercel pricing"
+      ],
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 35.40909090909091
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/what-is-headless-commerce",
+        "headless commerce meaning"
+      ],
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 24.136363636363637
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/shopify-store-speed-optimization",
+        "shopify store speed optimization"
+      ],
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 33.523809523809526
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/",
+        "pandacodegen"
+      ],
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/squarespace-too-slow",
+        "why is squarespace so slow"
+      ],
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 10.45
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/what-is-headless-commerce",
+        "headless commerce development"
+      ],
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 31.25
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/leaving-webflow-2026",
+        "webflow migration cost 2026"
+      ],
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 13.210526315789474
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/about/hassan",
+        "hassan jamal"
+      ],
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/elementor-kills-seo",
+        "elementor wordpress seo"
+      ],
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 29.944444444444443
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/why-competitor-outranks-you",
+        "outrank your competitors easily"
+      ],
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 44.888888888888886
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/wix-too-slow",
+        "why is wix so slow"
+      ],
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 13.222222222222221
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
+        "analyze page speed"
+      ],
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 12.529411764705882
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
+        "vercel free tier bandwidth 100gb 2026 pricing"
+      ],
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 10.647058823529411
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/divi-theme-slow",
+        "divi cdn integration"
+      ],
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 9.0625
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/gohighlevel-website-speed",
+        "highlevel speed optimization software"
+      ],
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/gohighlevel-website-speed",
+        "speed up highlevel website"
+      ],
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "keys": [
+        "https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed",
+        "page speed analysis"
+      ],
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 8.3125
+    }
+  ],
+  "note": "Query rows are incomplete/anonymized; do not infer total US traffic or AI referrals from these rows."
+}

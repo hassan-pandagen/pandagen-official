@@ -1,0 +1,88 @@
+[
+  {
+    "name": "pricing",
+    "question": "How much does a custom website cost, and is the price fixed after scope is agreed?",
+    "status": 200,
+    "answer": "PandaCodeGen's custom website planning tiers start at $1,500 for Starter (up to 7 pages), $3,500 for Growth (8 to 20 pages), and $5,000 for Scale (more than 20 pages or complex needs like large catalogues). Yes, the accepted written proposal sets the fixed price after scope is agreed, and you aren't billed beyond it unless you agree to a change in writing first.",
+    "sources": [
+      {
+        "title": "Commercial terms",
+        "url": "/pricing"
+      },
+      {
+        "title": "Custom Website Starting at $5,000: Scope Guide (2026)",
+        "url": "/blog/custom-website-5000-whats-included"
+      }
+    ],
+    "handoff": false,
+    "ms": 4892
+  },
+  {
+    "name": "hosting",
+    "question": "Is hosting included if I take a maintenance or SEO package?",
+    "status": 200,
+    "answer": "Yes, if you take a maintenance or SEO package, hosting on our Vercel account is included if you want it.",
+    "sources": [
+      {
+        "title": "Commercial terms",
+        "url": "/pricing"
+      },
+      {
+        "title": "How Much Does a Website Cost per Month? Our Stack Runs Under $50",
+        "url": "/blog/website-monthly-running-cost"
+      }
+    ],
+    "handoff": false,
+    "ms": 2759
+  },
+  {
+    "name": "call",
+    "question": "How long is the first call, and is a founder review free?",
+    "status": 200,
+    "answer": "The first call with a founder is a free 15-minute meeting with no commitment. The free founder review of up to three public pages, with up to three prioritized recommendations by email within 24 hours, is also free, just share your website URL and email.",
+    "sources": [
+      {
+        "title": "Commercial terms",
+        "url": "/pricing"
+      }
+    ],
+    "handoff": false,
+    "ms": 3032
+  },
+  {
+    "name": "guarantees",
+    "question": "Can you guarantee number one Google rankings or AI citations?",
+    "status": 200,
+    "answer": "No, we can't guarantee number one Google rankings or AI citations. Search and AI systems choose their own sources, and while we work to make your content crawlable and useful, no technique guarantees inclusion, ranking, recommendation, or citation.",
+    "sources": [
+      {
+        "title": "Can you guarantee citations or rankings?",
+        "url": "/services/ai-seo"
+      },
+      {
+        "title": "AEO Playbook: Improve Eligibility for AI Search Citations",
+        "url": "/blog/aeo-playbook-built-into-every-website"
+      },
+      {
+        "title": "Spending More on Ads but Getting Fewer Orders? Audit Tracking",
+        "url": "/blog/spending-more-on-ads-fewer-orders-tracking"
+      }
+    ],
+    "handoff": false,
+    "ms": 2976
+  },
+  {
+    "name": "stack",
+    "question": "Do I need both Sanity and Supabase for a small editable business website?",
+    "status": 200,
+    "answer": "No, you usually don't need Supabase for a small editable business website with pages, articles and a contact form. Sanity is a CMS for editing content, while Supabase is a backend for logins, bookings, orders or payments. What kind of features does your site need?",
+    "sources": [
+      {
+        "title": "Sanity vs Supabase: CMS, Backend or Both?",
+        "url": "/blog/sanity-vs-supabase"
+      }
+    ],
+    "handoff": false,
+    "ms": 1377
+  }
+]

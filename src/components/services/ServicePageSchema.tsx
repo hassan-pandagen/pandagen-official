@@ -1,5 +1,5 @@
 import type { ServiceFaq } from "@/data/service-faqs";
-import { OUR_HANDOVER, OWNERSHIP_ON_HANDOVER, SERVICE_PORTABILITY } from "@/data/platform-portability";
+import { serviceOutputs, OWNERSHIP_ON_HANDOVER, SERVICE_PORTABILITY } from "@/data/platform-portability";
 
 type ServicePageSchemaProps = {
   path: string;
@@ -41,7 +41,7 @@ export default function ServicePageSchema({ path, name, description, breadcrumb,
             url: canonical,
             provider: { "@id": "https://www.pandacodegen.com/#organization" },
             description: showsHandover ? `${description} ${OWNERSHIP_ON_HANDOVER}` : description,
-            ...(showsHandover ? { serviceOutput: OUR_HANDOVER.map((item) => ({ "@type": "Thing", name: item.label, description: item.detail })) } : {}),
+            ...(showsHandover ? { serviceOutput: serviceOutputs(path.split("/").pop() ?? "").map((item) => ({ "@type": "Thing", name: item.label, description: item.detail })) } : {}),
       },
       {
         "@type": "BreadcrumbList",

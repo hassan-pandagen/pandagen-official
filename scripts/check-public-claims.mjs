@@ -4,6 +4,8 @@ import path from "node:path";
 const roots = [
   path.resolve("src/app/blog"),
   path.resolve("src/data/blog.ts"),
+  path.resolve("src/lib/i18n/dictionaries/fr.ts"),
+  path.resolve("src/lib/i18n/dictionaries/de.ts"),
 ];
 
 async function collect(target) {
@@ -19,6 +21,15 @@ async function collect(target) {
 }
 
 const blocked = [
+  // 8 Oct 2026: translated copy must not reinstate claims retired from English.
+  {
+    id: "localized-universal-storefront-speed",
+    pattern: /thèmes Shopify standards sont lents|Standard-Shopify-Themes sind langsam|vitrines[^.\n]{0,100}se chargent immédiatement|Storefronts[^.\n]{0,100}sofort laden/i,
+  },
+  {
+    id: "localized-outdated-package-hosting",
+    pattern: /hébergement n['’]y est pas automatiquement inclus|Hosting ist darin nicht automatisch enthalten/i,
+  },
   {
     id: "ranking-retention-percentage",
     pattern: /(?:95\s*(?:to|–|-)\s*100|90\s*(?:to|–|-)\s*99)\s*%[^.\n]{0,90}(?:rank|traffic|authority)|(?:rank|traffic|authority)[^.\n]{0,90}(?:95\s*(?:to|–|-)\s*100|90\s*(?:to|–|-)\s*99)\s*%/i,

@@ -1,0 +1,147 @@
+✔ unpublished products are absent from every generated public output (4.4017ms)
+✔ publication flags apply to related links as well as the navigation (0.6458ms)
+✔ duplicate routes fail before generating a sitemap (0.665ms)
+✔ broken relationships fail explicitly (0.3553ms)
+✔ slugs cannot create paths outside the product route (0.6182ms)
+✔ origin cannot silently discard a base path or carry credentials (0.6423ms)
+✔ input records are not mutated and an empty catalog is valid (0.3314ms)
+✔ names stay data; HTML rendering is the consumer responsibility (0.2833ms)
+(node:36712) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Projects/pandagen-official/src/lib/audit/analyticsSummary.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Projects\pandagen-official\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ audit analytics uses coarse score bands and an allowlisted platform (2.0643ms)
+(node:46596) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Projects/pandagen-official/src/lib/audit/auditLeadRequest.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Projects\pandagen-official\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ accepts a bounded same-origin JSON submission (189.716ms)
+✔ rejects cross-origin submissions (1.9336ms)
+✔ rejects a streamed JSON body over the byte limit (78.1539ms)
+(node:24264) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Projects/pandagen-official/src/lib/audit/auditLeadToken.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Projects\pandagen-official\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Rate limiting is running in-memory: no Redis REST backend is configured. Limits apply per warm instance and are not shared across the deployment. Set AUDIT_RATE_LIMIT_REDIS_REST_URL and _TOKEN (or the KV_/UPSTASH_ equivalents) for durable limits.
+AUDIT_RATE_LIMIT_SECRET is not configured; using an ephemeral per-process secret. Rate-limit buckets will not be shared across instances or survive a restart. Set a value of 32+ characters for durable, cross-instance limiting.
+✔ opaque lead tokens recover only the server-issued audit result once (5.8235ms)
+✔ tampered and unknown lead tokens are rejected (0.8899ms)
+✔ expired tokens are rejected and consumed (0.6896ms)
+✔ a claimed token can be restored after a delivery failure (0.9882ms)
+✔ production token issuance degrades to in-memory when Redis is absent (0.8572ms)
+✔ production token issuance still fails closed when Redis exists but the hashing secret is absent (1168.5826ms)
+✔ Redis-backed tokens use atomic consume semantics (15.9243ms)
+✔ report and review tokens are independent one-time actions for the same scan (1.153ms)
+(node:20596) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Projects/pandagen-official/src/lib/audit/auditRateLimit.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Projects\pandagen-official\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Rate limiting is running in-memory: no Redis REST backend is configured. Limits apply per warm instance and are not shared across the deployment. Set AUDIT_RATE_LIMIT_REDIS_REST_URL and _TOKEN (or the KV_/UPSTASH_ equivalents) for durable limits.
+AUDIT_RATE_LIMIT_SECRET is not configured; using an ephemeral per-process secret. Rate-limit buckets will not be shared across instances or survive a restart. Set a value of 32+ characters for durable, cross-instance limiting.
+Rate limiting is running in-memory: no Redis REST backend is configured. Limits apply per warm instance and are not shared across the deployment. Set AUDIT_RATE_LIMIT_REDIS_REST_URL and _TOKEN (or the KV_/UPSTASH_ equivalents) for durable limits.
+✔ production degrades to the in-memory limiter instead of refusing to serve (58.6543ms)
+✔ production accepts an explicit in-memory limiter (0.683ms)
+✔ lead limits hash client identifiers and enforce client and global budgets (82.2802ms)
+✔ production trusts only the Vercel-managed forwarding header on Vercel (0.9412ms)
+✔ quote limits stay available in production and enforce the development client budget (1.2825ms)
+✔ quote idempotency claims suppress duplicates without storing raw identifiers (1.2658ms)
+✔ experimental AI artifacts and named crawler rules do not change the score (5.2051ms)
+✔ crawlability, content, and evidence controls can earn the full score (0.9548ms)
+✔ a wildcard crawl block or noindex caps the foundations score (0.6266ms)
+(node:46884) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Projects/pandagen-official/src/lib/audit/leadDetails.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Projects\pandagen-official\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Audit lead delivery error: We could not record your request. Please try again.
+Audit lead delivery error: Your request was recorded, but the confirmation could not be sent. Please retry.
+✔ Resend records report lead before delivering complete report; no live mail (28.0486ms)
+✔ owner delivery failure does not acknowledge a review or email the customer (1.417ms)
+✔ confirmation failure restores session and retries use stable payload and keys (1.8943ms)
+✔ review token cannot be repurposed as report token (0.9227ms)
+✔ accepted founder request carries its promised due date to both parties (2.5435ms)
+(node:26180) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Projects/pandagen-official/src/lib/audit/leadDetails.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Projects\pandagen-official\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ report request does not require a sales enquiry (3.2869ms)
+✔ review requires a useful concern and bounds additional page input (1.1556ms)
+✔ 24 hour promise includes weekends and is stable for delivery retries (1.1721ms)
+(node:25824) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Projects/pandagen-official/src/lib/audit/pagespeed.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Projects\pandagen-official\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ returns First Contentful Paint without mislabelling it as load time (94.8412ms)
+(node:36956) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Projects/pandagen-official/src/lib/audit/publicFetch.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Projects\pandagen-official\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ accepts ordinary public IPv4 and IPv6 addresses (8.6153ms)
+✔ blocks private, loopback, link-local, documentation, and mapped addresses (0.6753ms)
+✔ rejects credentials, non-web schemes, local names, and non-web ports (2.531ms)
+✔ normalizes a public URL and removes fragments (0.3214ms)
+✔ rejects a private literal before attempting a network request (0.4725ms)
+✔ this Node runtime asks a custom lookup for the array form (2.1683ms)
+✔ the pinned lookup answers { all: true } with an array of address records (22.2526ms)
+✔ the pinned lookup still answers the scalar form when { all } is not requested (3.9245ms)
+✔ the pinned lookup ignores the hostname it is asked about (13.7642ms)
+(node:30756) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Projects/pandagen-official/src/lib/forms/quoteRequest.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Projects\pandagen-official\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ parses a bounded multipart quote and keeps phone and timing optional (84.3412ms)
+✔ rejects cross-origin quote submissions (1.8249ms)
+✔ rejects multipart bodies over the streamed byte limit (1.1285ms)
+✔ rejects unexpected services, duplicate scalars, and oversized text (0.6175ms)
+✔ rejects files and invalid qualifier values (0.9384ms)
+✔ accepts timing as non-authoritative telemetry but rejects malformed timing (0.4854ms)
+(node:32228) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Projects/pandagen-official/src/lib/audit/requestMetadata.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Projects\pandagen-official\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ decodes valid Vercel city metadata (1.5ms)
+✔ falls back safely for missing or malformed Vercel city metadata (0.2822ms)
+✔ returns approximate location without retaining a forwarding IP (57.215ms)
+(node:29944) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Projects/pandagen-official/src/lib/forms/quoteRequest.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Projects\pandagen-official\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ a French submission is marked French (97.2049ms)
+✔ a German submission is marked German (4.9307ms)
+✔ an English submission carries no subject prefix (0.4701ms)
+✔ a submission with no locale at all still works, and reads as English (0.3644ms)
+✔ THE REGRESSION: a French form that sends no service field is still French (0.3004ms)
+✔ the old (FR) service suffix still works for any surface still posting it (2.4067ms)
+✔ an explicit locale wins over a disagreeing service suffix (0.3204ms)
+✔ an unknown locale is rejected rather than quietly ignored (0.6525ms)
+✔ a locale is not a place to smuggle a long string (0.3824ms)
+(node:4788) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Projects/pandagen-official/src/lib/forms/quoteRequest.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Projects\pandagen-official\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ rejects a submission posted instantly (1.3443ms)
+✔ rejects a submission a hair under the floor (0.2723ms)
+✔ allows a submission exactly at the floor (2.2881ms)
+✔ allows an unhurried human (10.2198ms)
+✔ allows a form with no stamp at all (0.2995ms)
+✔ allows a stamp from the future rather than treating skew as fraud (0.6581ms)
+✔ allows a stale tab left open for a day (0.2439ms)
+(node:17820) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Projects/pandagen-official/src/lib/forms/quoteRequest.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Projects\pandagen-official\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ a bare domain becomes https (1.898ms)
+✔ a www host becomes https, which is the case that was failing (1.7504ms)
+✔ an existing https scheme is left alone (0.5707ms)
+✔ an existing http scheme is left alone rather than upgraded (0.1734ms)
+✔ surrounding whitespace from a paste is trimmed (0.1863ms)
+✔ empty stays empty, because the field is optional (0.1835ms)
+✔ a non-http scheme is passed through unchanged for validation to reject (0.1608ms)
+✔ a path-only string still gets a scheme and fails validation on the host (0.1757ms)
+ℹ tests 80
+ℹ suites 0
+ℹ pass 80
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1678.5738

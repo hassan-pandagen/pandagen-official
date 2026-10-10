@@ -48,6 +48,6 @@ export default function Page() {
     <p>The build price is fixed once the written scope is agreed. Additional features are priced separately and only proceed after written approval. Maintenance and advertising management have their own agreed scope and fee. The advertising budget pays for ad placements and is separate from the management fee. Provider subscriptions and usage charges should also be listed separately, with hosting identified as included when it is part of the package.</p>
     <h2>What isn&apos;t in the monthly bill</h2>
     <p>These are the vendor bills only. Building the site is a separate, one-time cost, covered in <Link href="/blog/how-much-does-a-website-cost">how much a website costs</Link>, and maintenance, SEO and new features are priced separately again. Paid tools you add later, such as a booking system, have their own plans.</p>
-    <p>Planning a site on this stack? See our <Link href="/services/sanity-development">Sanity website development</Link> service, or our <Link href="/services/backend-development">backend development</Link> service for a database and custom CRM.</p>
+    <p>Planning a site on this stack? See our <Link href="/services/cms-development">Sanity website development</Link> service, or our <Link href="/services/backend-development">backend development</Link> service for a database and custom CRM.</p>
   </StackGuide>;
 }

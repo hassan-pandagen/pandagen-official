@@ -10,10 +10,8 @@ import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 
 const path = "/services/custom-engineering";
-const name = "Custom Web Development Agency";
-// Retain the custom web development target while describing the work now visible
-// on the page. Attribution requires its own agreed implementation and scope.
-const description = "Custom web development for portals, dashboards and internal tools. Work with the founders on data, integrations, permissions and handover.";
+const name = "Custom Software & CRM Development";
+const description = "Custom CRM development, workflow automation and customer portals. Build around your team's work, with scoped screens, permissions, integrations and handover.";
 
 export const metadata: Metadata = {
   title: name,

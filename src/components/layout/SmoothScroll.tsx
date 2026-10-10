@@ -1,6 +1,5 @@
 "use client";
 
-import { MotionConfig } from "framer-motion";
 import Lenis from "lenis";
 import { useEffect } from "react";
 
@@ -82,7 +81,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     };
   }, []);
 
-  // This adds no DOM wrapper and makes every Framer Motion consumer respect the
-  // operating-system motion preference, including dialogs and audit states.
-  return <MotionConfig reducedMotion="user">{children}</MotionConfig>;
+  // Dialogs and audit controls read reduced motion locally. Keep the global
+  // shell free of an animation runtime; native scrolling needs no provider.
+  return <>{children}</>;
 }

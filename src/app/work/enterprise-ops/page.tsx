@@ -9,29 +9,39 @@ import { EnterpriseOpsCaseStudyPreview as RedesignEnterpriseOpsCaseStudy } from 
 // a "3 roles" line contradicted the page's own 7. The figure tiles below
 // already read the registry; the prose now reads it too.
 const EDGE_FUNCTIONS = requiredMetric("enterprise-ops", "edge-functions");
+const PAGE_TITLE = "Custom CRM Development: Panda Patches Case Study";
+const PAGE_DESCRIPTION = "A custom CRM built for our Panda Patches team to manage customers, orders, production, payments and reports, with workflow automation and role-based access.";
 
 export const metadata: Metadata = {
-    title: { absolute: "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen" },
-    description: "How we replaced a spreadsheet estate, WhatsApp chains and several SaaS tools with a single custom ops platform. Real-time order pipeline across 17 statuses, role-based access for 7 roles, automated attendance, profit tracking, and 12 reporting modules.",
+    title: { absolute: `${PAGE_TITLE} | PandaCodeGen` },
+    description: PAGE_DESCRIPTION,
     openGraph: {
-        title: "Enterprise Operations Platform Case Study, Custom Business Dashboard",
-        description: `Real-time order pipeline. Role-based access for 7 roles. Automated attendance (PKT timezone). ${EDGE_FUNCTIONS} Edge Functions. Full case study.`,
+        title: PAGE_TITLE,
+        description: PAGE_DESCRIPTION,
         type: "article",
         url: "https://www.pandacodegen.com/work/enterprise-ops",
         images: [ogImageForPath("/work/enterprise-ops")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Enterprise Operations Platform Case Study, Custom Business Dashboard",
-        description: `Real-time order pipeline. Role-based access for 7 roles. Automated attendance (PKT timezone). ${EDGE_FUNCTIONS} Edge Functions. Full case study.`,
+        title: PAGE_TITLE,
+        description: PAGE_DESCRIPTION,
     },
     alternates: { canonical: "/work/enterprise-ops" },
 };
 
 const pageFaqs: { question: string; answer: string }[] = [
     {
-        question: "What is a custom business operations platform?",
-        answer: "A custom business operations platform is a single web application that replaces multiple disconnected SaaS tools, like CRMs, spreadsheets, attendance trackers, and reporting tools. This is PandaCodeGen's own custom ops platform for the Panda Patches business: we replaced multiple separate tools with one Supabase-backed platform featuring real-time order tracking, 12 financial reporting modules, RBAC, Square payments with a PDF invoice emailed once an order is paid in full, server-side Meta CAPI ad tracking, employee attendance, and automated profit calculations.",
+        question: "What can a custom CRM help our team manage?",
+        answer: "A custom CRM brings customer records and the team's agreed workflows into one application. We built the Panda Patches CRM for our own business to manage customers, quotes, orders, production, payments, attendance and reports. The build includes workflow automation for wholesale pricing, invoicing and delivery follow-up. A CRM for another business would be scoped around that team's work and access needs.",
+    },
+    {
+        question: "Can you build a CRM around our existing workflow?",
+        answer: "Yes. We first map how an enquiry becomes a quote, an order and a completed job, including who can see or change each record. We then agree a first release, integrations, data import and acceptance checks in the written proposal. This case study shows our own working system; it is not a fixed package of features every client must buy.",
+    },
+    {
+        question: "Should we build a custom CRM or customise the one we already use?",
+        answer: "Start with what your current CRM already does well. A focused integration or automation may solve the problem without replacing it. A custom build is worth considering when essential workflows or permissions do not fit the existing system. We compare the work involved, data migration, running costs and ongoing support before recommending a scope.",
     },
     {
         question: "How much does it cost to replace Google Sheets with a custom business dashboard?",
@@ -42,7 +52,7 @@ const pageFaqs: { question: string; answer: string }[] = [
         answer: "RBAC means each user only sees the data their role requires. In this platform: ADMIN sees full financials and all agents; SALES sees their own pipeline only; PRODUCTION sees pending orders with no financial data. We enforce this at two layers, application logic AND Supabase Row-Level Security policies at the database level, so even direct API access is blocked.",
     },
     {
-        question: "How long did it take to build the Enterprise Operations platform?",
+        question: "How long did it take to build the Panda Patches CRM?",
         answer: "The full platform, a Supabase schema with Row-Level Security, a 17-status order pipeline, 12 reporting modules, RBAC with RLS policies, payments via Square, attendance with PKT timezone, automated profit calculations, and " + EDGE_FUNCTIONS + " Supabase Edge Functions, has been in continuous development since November 2025 and is still being added to. A code review was commissioned by us in 2026, but its scores are withdrawn from this site: the review document, its rubric and the reviewer could not be located during a source audit on 15 September 2026.",
     },
     {
@@ -57,11 +67,11 @@ const caseStudySchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/work/enterprise-ops#article",
-            "headline": "Enterprise Operations Platform: From Spreadsheets to Real-Time Business Intelligence",
-            "description": "How we replaced a spreadsheet estate, WhatsApp updates and several separate SaaS tools with a single full-stack business intelligence platform. Real-time order tracking, RBAC, automated attendance, and profit analytics.",
+            "headline": PAGE_TITLE,
+            "description": PAGE_DESCRIPTION,
             "image": ogImageUrlForPath("/work/enterprise-ops"),
             "datePublished": "2026-03-04T00:00:00Z",
-            "dateModified": "2026-09-30T00:00:00Z",
+            "dateModified": "2026-10-10T00:00:00Z",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -79,7 +89,8 @@ const caseStudySchema = {
             },
             "keywords": [
                 "custom business dashboard",
-                "ops platform case study",
+                "custom CRM development",
+                "CRM workflow automation",
                 "supabase crm",
                 "role-based access control",
                 "real-time order tracking",
@@ -93,7 +104,7 @@ const caseStudySchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/work/enterprise-ops#webpage",
             "url": "https://www.pandacodegen.com/work/enterprise-ops",
-            "name": "Enterprise Operations Platform Case Study | PandaCodeGen",
+            "name": `${PAGE_TITLE} | PandaCodeGen`,
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "inLanguage": "en-US"
         },
@@ -102,7 +113,7 @@ const caseStudySchema = {
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://www.pandacodegen.com/work" },
-                { "@type": "ListItem", "position": 3, "name": "Enterprise Operations", "item": "https://www.pandacodegen.com/work/enterprise-ops" }
+                { "@type": "ListItem", "position": 3, "name": "Panda Patches CRM", "item": "https://www.pandacodegen.com/work/enterprise-ops" }
             ]
         },
         {

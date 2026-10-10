@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import AssistantIcon from "./AssistantIcon";
+import { assistantWelcome } from "@/lib/assistant/presets";
 import ui from "./PandaAssistant.module.css";
 import { ArrowUp, ArrowUpRight, X } from "lucide-react";
 import { setQuotePrefill } from "@/lib/quotePrefill";
@@ -177,6 +178,7 @@ export default function AskAssistant() {
   const panelInputRef = useRef<HTMLTextAreaElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const returnFocus = useRef<HTMLElement | null>(null);
+  const launcherRef = useRef<HTMLButtonElement>(null);
   const [leadOpen, setLeadOpen] = useState(false);
   const [leadState, setLeadState] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [leadError, setLeadError] = useState("");
@@ -311,7 +313,15 @@ export default function AskAssistant() {
 
   const close = useCallback(() => {
     setOpen(false);
-    returnFocus.current?.focus({ preventScroll: true });
+    // Restore focus after the launcher is visible and the modal scroll lock is removed.
+    requestAnimationFrame(() => {
+      const target = returnFocus.current;
+      if (target?.isConnected && target !== document.body && target !== document.documentElement && !panelRef.current?.contains(target)) {
+        target.focus({ preventScroll: true });
+      } else {
+        launcherRef.current?.focus({ preventScroll: true });
+      }
+    });
   }, []);
 
   useEffect(() => {
@@ -378,7 +388,10 @@ export default function AskAssistant() {
   async function ask(text: string) {
     const q = text.trim();
     if (!q || loading) return;
-    returnFocus.current = document.activeElement as HTMLElement;
+    // Sending from inside the panel must not replace the original opener with its composer.
+    if (!panelRef.current?.contains(document.activeElement)) {
+      returnFocus.current = document.activeElement as HTMLElement;
+    }
     const next: Message[] = [...messages, { role: "user", content: q }];
     setMessages(next);
     setOpen(true);
@@ -688,12 +701,14 @@ export default function AskAssistant() {
     <>
       {/* ── Inline prompt ─────────────────────────────────────────────── */}
       <button
+        ref={launcherRef}
         type="button"
         aria-label={unread ? "Hassan replied. Open Panda Assistant" : "Open Panda Assistant, our AI assistant"}
         aria-haspopup="dialog"
         aria-expanded={open}
-        onClick={() => {
-          returnFocus.current = document.activeElement as HTMLElement;
+        onClick={(event) => {
+          // Safari does not focus buttons on a pointer click; use the actual opener.
+          returnFocus.current = event.currentTarget;
           setOpen(true);
         }}
         className={ui.launcher}
@@ -716,17 +731,17 @@ export default function AskAssistant() {
             aria-labelledby="assistant-title"
             id="panda-assistant-panel"
             tabIndex={-1}
-            className={ui.panel}
+            className={`${ui.panel} ${messages.length === 0 && !live ? ui.panelWelcome : ""}`}
           >
             <div className={ui.header}>
               <div className={ui.identity}>
                 <AssistantIcon />
                 <div>
-                <h2 id="assistant-title" className="text-[22px]" style={{ color: INK }}>
+                <h2 id="assistant-title" style={{ color: INK }}>
                   {live ? "Chat with Hassan" : "Panda Assistant"}
                 </h2>
-                <p className="text-[14px]" style={{ color: QUIET }}>
-                  {live ? "Hassan Jamal, lead engineer" : "AI guide · PandaCodeGen"}
+                <p style={{ color: QUIET }}>
+                  {live ? "Hassan Jamal, lead engineer" : "AI assistant · PandaCodeGen"}
                 </p>
                 </div>
               </div>
@@ -756,11 +771,9 @@ export default function AskAssistant() {
                 <>
                   <div className={ui.welcome}>
 
-                    <h3>How can we help?</h3>
-                    <p>Ask about our services, pricing or your next website. Get an answer from our published guides, or connect with the founders.</p>
-                    <div className={ui.suggestions} aria-label="Suggested questions">
-                      {["What could you build for my business?", "What does a website cost?", "Can I keep my CRM and change my website?"].map(question => <button key={question} type="button" onClick={() => send(question)}>{question}<ArrowUpRight size={16} aria-hidden="true" /></button>)}
-                    </div>
+                    <h3>{assistantWelcome.heading} <span>{assistantWelcome.accent}</span></h3>
+                    <p>{assistantWelcome.body}</p>
+                    {!hassanOnline && <Link href="/contact" onClick={close} className={ui.founderLink}>Prefer a person? Talk to the founders <ArrowUpRight size={15} aria-hidden="true" /></Link>}
                   </div>
                   {hassanOnline && (
                     <div className="flex flex-wrap items-center gap-3">
@@ -966,18 +979,18 @@ export default function AskAssistant() {
                       send(panelInput);
                     }
                   }}
-                  placeholder={live ? "Message Hassan" : "Ask about your project…"}
+                  placeholder={live ? "Message Hassan" : messages.length === 0 ? "I have a website in mind…" : "Ask about your project…"}
                   className="min-h-[48px] flex-1 resize-none bg-transparent px-2 py-2 text-[16px] outline-none placeholder:text-[#5E5B55]"
                   style={{ color: INK }}
                 />
                 <button
                   type="submit"
-                  aria-label="Send"
+                  aria-label={messages.length === 0 && !live ? "Send question" : "Send"}
                   disabled={!panelInput.trim() || loading}
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white transition-opacity disabled:opacity-40"
+                  className={ui.panelSend}
                   style={{ backgroundColor: INK }}
                 >
-                  <ArrowUp className="h-5 w-5" aria-hidden="true" />
+                  {messages.length === 0 && !live ? <>Send question <ArrowUpRight size={16} aria-hidden="true" /></> : <ArrowUp className="h-5 w-5" aria-hidden="true" />}
                 </button>
               </div>
               {live && liveError && (

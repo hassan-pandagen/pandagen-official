@@ -109,5 +109,8 @@
 @media(min-width:1051px){.heroGrid{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,4vw,72px);align-items:center}.heroTitle{font-size:clamp(2.8rem,4.1vw,5rem);margin:18px 0 26px}}
 /* 8 Oct 2026, owner: /services hero as two columns, the headline on two lines like /pricing,
    and a client screenshot on the right. Phones keep the stacked layout. */
-.hubVisual{box-shadow:18px 18px 0 rgba(235,233,228,.14);color:#1c1917}.hubVisual figcaption a{color:#7a2e0e;text-underline-offset:3px}.hubLead{margin-top:28px}
+.hubVisual{box-shadow:18px 18px 0 rgba(235,233,228,.14);color:#1c1917}.hubVisual figcaption a{color:#7a2e0e;text-decoration:underline;text-underline-offset:3px}.hubLead{margin-top:28px}
 @media(min-width:1051px){.hubHero{padding:84px 0 92px}.hubHeroGrid{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,4vw,72px);align-items:center}.hubTitle{font-size:clamp(2.8rem,4.2vw,5.4rem);white-space:nowrap}}
+
+/* Keep long platform names inside the hero at 320px and under browser zoom. */
+@media(max-width:360px){.heroTitle{font-size:clamp(2.8rem,15vw,3.6rem)}}

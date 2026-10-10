@@ -1,0 +1,18 @@
+
+GUARD metrics_guard
+metrics_guard: 42 metrics (24 verified, 18 withdrawn) against 161 pages
+  OK - every metric matches its declared state
+
+GUARD link_guard
+link_guard: 11 hubs, 92 posts
+  OK - every post links its hub, its money page, and 2-4 siblings
+
+GUARD unicode_guard
+unicode_guard: 160 built pages
+  10 occurrences on 6 pages (0 invisible)
+      4  /contact
+      2  /work/mycustompatches
+      1  /blog/squarespace-vs-custom-website
+      1  /services/ai-seo
+      1  /work/emblematic-studio
+      1  /work/panda-patches

@@ -572,11 +572,16 @@ export default function DiviThemeSlowPage() {
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
-                        <h2 className="mb-3 font-serif text-3xl">Get your Divi migration plan</h2>
+                        <h2 className="mb-3 font-serif text-3xl">Need help with your Divi website?</h2>
                         <p className="mb-6 leading-relaxed text-stone-300">
                             We&apos;ll test representative routes, inventory modules and integrations, preserve
                             search-sensitive URLs, and compare in-place optimization with a lighter rebuild. You get
                             the evidence and the scope before you choose a platform.
+                        </p>
+                        <p className="mb-6 leading-relaxed text-stone-300">
+                            If you want to keep WordPress, explore our{" "}
+                            <Link href="/services/wordpress" className="font-semibold text-orange-300 underline underline-offset-4">WordPress website development and repairs</Link>{" "}
+                            for a focused fix or redesign.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-semibold text-white transition-colors hover:bg-cognac/90">
                             Book a 15-min call <ArrowRight className="h-4 w-4" />

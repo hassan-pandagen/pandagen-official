@@ -1,0 +1,12 @@
+[
+  {
+    "width": 390,
+    "distinctServiceLinks": 12,
+    "status": "passed"
+  },
+  {
+    "width": 1440,
+    "distinctServiceLinks": 12,
+    "status": "passed"
+  }
+]

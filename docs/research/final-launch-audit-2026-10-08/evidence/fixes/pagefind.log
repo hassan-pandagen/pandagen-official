@@ -1,0 +1,25 @@
+
+Running Pagefind v1.5.0 (Extended)
+Running from: "C:\\Projects\\pandagen-official"
+Source:       ".next-audit/server/app"
+Output:       "public/_pagefind"
+
+[Walking source directory]
+Found 103 files matching blog/**/*.html
+
+[Parsing files]
+Did not find a data-pagefind-body element on the site.
+↳ Indexing all <body> elements on the site.
+
+[Reading languages]
+Discovered 1 language: en
+
+[Building search indexes]
+Total: 
+  Indexed 1 language
+  Indexed 103 pages
+  Indexed 8203 words
+  Indexed 0 filters
+  Indexed 0 sorts
+
+Finished in 0.671 seconds

@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-25",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/top-nextjs-agencies-2026")],
@@ -77,7 +77,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/top-nextjs-agencies-2026"),
             description,
             datePublished: "2026-05-25",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -120,7 +120,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-25",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             inLanguage: "en-US",
         },
         {
@@ -312,9 +312,13 @@ export default function TopNextjsAgenciesPage() {
                                 {agencies.map((agency) => (
                                     <tr key={agency.name}>
                                         <td className="p-4 align-top font-bold text-charcoal">
-                                            <a href={agency.url} target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>
-                                                {agency.name}
-                                            </a>
+                                            {agency.url === "https://www.pandacodegen.com/services" ? (
+                                                <Link href="/services" className={sourceLinkClass}>{agency.name}</Link>
+                                            ) : (
+                                                <a href={agency.url} target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>
+                                                    {agency.name}
+                                                </a>
+                                            )}
                                         </td>
                                         <td className="p-4 align-top">{agency.publicEvidence}</td>
                                         <td className="p-4 align-top">{agency.likelyFit}</td>
@@ -379,7 +383,7 @@ export default function TopNextjsAgenciesPage() {
                     </BlogText>
                     <BlogList
                         items={[
-                            "15 business days of launch defect support on Starter; 30 business days on Growth and Scale.",
+                            "15 calendar days of launch defect support on Starter; 30 calendar days on Growth and Scale.",
                             "Client content remains the client's, while custom-deliverable transfer follows full payment and the contract.",
                             "PandaCodeGen retains reusable tools and pre-existing code; third-party licenses continue to apply.",
                             "The client can control domain, repository, hosting and business accounts when that operating model is agreed.",

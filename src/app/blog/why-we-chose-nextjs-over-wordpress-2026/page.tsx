@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-04",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/why-we-chose-nextjs-over-wordpress-2026")],
@@ -70,7 +70,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/why-we-chose-nextjs-over-wordpress-2026"),
             description,
             datePublished: "2026-03-04",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -380,7 +380,7 @@ export default function WhyWeChooseNextJsPage() {
                         We start with a <Link href="/free-audit" className="text-cognac hover:underline">free fit audit</Link> (share your website URL and email) and prepare an SEO-safe migration plan when migration is
                         justified. PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and Scale
                         from $5,000. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund
-                        is tied to failure to deliver the signed scope. Starter includes 15 business days of launch
+                        is tied to failure to deliver the signed scope. Starter includes 15 calendar days of launch
                         defect support; Growth and Scale include 30. The inputs behind a migration figure are broken
                         down in{" "}
                         <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost</Link>.

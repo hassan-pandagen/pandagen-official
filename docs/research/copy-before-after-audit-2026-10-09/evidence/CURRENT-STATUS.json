@@ -1,0 +1,38 @@
+{
+  "as_of": "2026-10-09",
+  "historical_summary_file": "summary.json",
+  "launch_copy_findings": "resolved; see dated main-audit follow-ups",
+  "service_intent_copy": "applied",
+  "business_policy_questions": "resolved",
+  "keyword_seed_queries": 21,
+  "numeric_seed_estimates": 13,
+  "no_data_seed_results": 8,
+  "service_responsive_cases": 78,
+  "service_destinations": 12,
+  "assistant_buyer_questions": 14,
+  "article_layout_cases": 4,
+  "numeric_ai_referral_dataset": "unchanged by wording correction; equality checked against pre-edit backup",
+  "whole_launch_cleared": false,
+  "performance": {
+    "latest_recorded_mobile": 75,
+    "latest_recorded_desktop": 93,
+    "new_three_run_acceptance_completed": false,
+    "production_https_verified_for_final_candidate": false
+  },
+  "remaining_release_checks": [
+    "Final production HTTPS performance measurements and acceptance",
+    "Physical iPhone/Android behavior"
+  ],
+  "optional_content_followups": [
+    "CMS-choice guide",
+    "Cost/timeline opening polish",
+    "Additional keyword and organic-competition research"
+  ],
+  "deployed_by_this_work": false,
+  "limits": [
+    "Checks belong to their recorded phase, not every later commit.",
+    "No organic-ranking or conversion uplift was measured.",
+    "No AI-product prompt volume was measured.",
+    "Do not substitute historical finding flags for current source verification."
+  ]
+}

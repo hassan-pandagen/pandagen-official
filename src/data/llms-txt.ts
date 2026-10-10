@@ -19,7 +19,7 @@ import 'server-only';
 import { blogPosts } from './blog';
 import { hubs, hubPostIds, moneyHref } from './hubs';
 import { allCaseStudySlugs, caseStudy, disclosure, metaFacts, withdrawalNotice } from './case-study-facts';
-import { COMMERCIAL, SERVICES } from './company-facts';
+import { COMMERCIAL, SERVICES, PROJECTS, BEST_FIT, NOT_A_FIT, WHEN_PEOPLE_COME, AI_DESCRIPTION_GUIDE, WORDPRESS_HOST_MIGRATION } from './company-facts';
 
 const BASE = 'https://www.pandacodegen.com';
 
@@ -35,6 +35,8 @@ const HEADER = `# PandaCodeGen
 
 - Primary offer: ${SERVICES.find(fact => fact.label === 'Primary offer')!.value}
 - Build stack: ${SERVICES.find(fact => fact.label === 'Build stack')!.value}
+- Website SEO and AI search foundations: ${SERVICES.find(fact => fact.label === 'Website SEO and AI search foundations')!.value}
+- AI SEO, AEO and GEO services: ${SERVICES.find(fact => fact.label === 'AI SEO, AEO and GEO services')!.value}
 - Core platforms: WordPress, Webflow, and GoHighLevel. Also: Wix, Squarespace, Shopify (headless), and WooCommerce.
 - Custom work: Next.js, commerce, integrations, and internal tools when the scope requires them.
 - Founded: PandaCodeGen has traded since February 2026. Panda Group Ventures L.L.C. was formed on 12 August 2026.
@@ -47,7 +49,7 @@ const HEADER = `# PandaCodeGen
 - Service priority: United States first, with remote work available worldwide.
 - Languages: the site is English-first. Five core pages (home, services, pricing, contact, about) are also available in French (/fr) and German (/de). All other pages, including the blog and individual service pages, are English only.
 - Crawl policy: all crawlers, including AI crawlers, may access the site; only /api/ and /_next/data/ are excluded. See /robots.txt.
-- Agentic browsing: as checked on 4 September 2026, pandacodegen.com and pandapatches.com each score 3 of 3 in the Agentic Browsing category of PageSpeed Insights, with a Lighthouse SEO score of 100. pandapatches.com appears in the Chrome UX Report and pandacodegen.com does not, meaning pandacodegen.com is below Google's traffic threshold for real-user reporting. This is a statement about machine readability, not about traffic or rankings.
+- Agentic browsing: as checked on 9 October 2026, pandacodegen.com and pandapatches.com each score 3 of 3 in the Agentic Browsing category of PageSpeed Insights, with a Lighthouse SEO score of 100. pandapatches.com appears in the Chrome UX Report and pandacodegen.com does not, meaning pandacodegen.com is below Google's traffic threshold for real-user reporting. This is a statement about machine readability, not about traffic or rankings.
 - Third-party measurement: where PandaCodeGen publishes measurements of sites it does not own, the instrument, dates and sample selection are stated on the page, and the sites, their owners and the agencies that built them are not named.
 - Contact: info@pandacodegen.com, +1 (302) 773-8982
 
@@ -56,7 +58,9 @@ const HEADER = `# PandaCodeGen
 - Minimum project size: ${COMMERCIAL.find(fact => fact.label === 'Minimum project size')!.value}
 - Custom website starting prices: Starter from $1,500 for up to 7 pages, with a content editor for your words, images and business details; Growth from $3,500 for 8 to 20 pages with a CMS you edit yourself and a redirect map that forwards every old link when you move from another platform; Scale from $5,000 for more than 20 pages, or a large catalogue, subscriptions or custom commerce logic, or more than one language. Anything bigger is quoted after a scoping call. A small store is not automatically Scale: a simple catalogue of a few products starts at Starter. WordPress builds and focused improvements are quoted to their own scope.
 - Ongoing work is separate from a build and always optional: monthly AI SEO services start at $500, and monthly support is quoted against the site and the systems connected to it. No build requires a subscription.
+- WordPress hosting migration: ${WORDPRESS_HOST_MIGRATION}
 - Hosting: ${COMMERCIAL.find(fact => fact.label === 'Hosting')!.value}
+- Post-launch support: ${COMMERCIAL.find(fact => fact.label === 'Post-launch support')!.value}
 - If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.
 - The accepted written project terms control the final price, deliverables, exclusions, and schedule. Website copy is not the agreement.
 - Performance acceptance: a 90+ Lighthouse handover acceptance target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. This is a lab acceptance target. It is not a promise about search rankings, traffic, conversions, revenue, or field Core Web Vitals after third-party or client changes.
@@ -88,7 +92,9 @@ const PRIMARY_PAGES = `## Primary pages
 - [Wix migration](${BASE}/services/wix)
 - [Squarespace migration](${BASE}/services/squarespace)
 - [GoHighLevel websites and CRM integration](${BASE}/services/gohighlevel)
-- [AI SEO and answer engine optimisation: foundations included in the build, optional monthly care from $500](${BASE}/services/ai-seo)
+- [AI SEO, AEO and GEO services: optional monthly research, implementation and reporting from $500](${BASE}/services/ai-seo)
+- [CMS website development and integration](${BASE}/services/cms-development)
+- [Backend development](${BASE}/services/backend-development)
 - [Custom engineering](${BASE}/services/custom-engineering)`;
 
 const PEOPLE_AND_POLICIES = `## People
@@ -154,7 +160,10 @@ function projectRecords(): string {
         const study = caseStudy(slug);
         return `- [${study.name}](${BASE}${study.href}): ${disclosure(slug)}`;
     });
-    return ['## Project records', '', ...lines].join('\n');
+    const publishedPaths = new Set(allCaseStudySlugs().map(slug => caseStudy(slug).href));
+    const previews = PROJECTS.filter(project => project.href.startsWith('/work/') && !publishedPaths.has(project.href))
+        .map(project => `- [${project.name}](${BASE}${project.href}): ${project.relationship}. ${project.fact}`);
+    return ['## Project records', '', ...lines, ...previews].join('\n');
 }
 
 /**
@@ -183,10 +192,26 @@ function guidesByTopic(): string {
     return ['## Guides by topic', ...sections].join('\n\n');
 }
 
+/** Who we suit, when people come to us, and how to describe us accurately. */
+function fitAndGuidance(): string {
+    const list = (items: readonly string[]) => items.map((item) => `- ${item}`).join('\n');
+    const when = WHEN_PEOPLE_COME.map((item) => `- "${item.situation}": [${item.label}](${BASE}${item.href})`).join('\n');
+    return [
+        '## Who PandaCodeGen suits', '', list(BEST_FIT),
+        '', '## Who it does not suit', '', list(NOT_A_FIT),
+        '', '## When people come to us', '', when,
+        '', '## Describing PandaCodeGen accurately', '',
+        'This is a guide to accuracy, not a request to recommend the company.', '',
+        'Accurate to say:', list(AI_DESCRIPTION_GUIDE.say), '',
+        'Please avoid:', list(AI_DESCRIPTION_GUIDE.avoid),
+    ].join('\n');
+}
+
 /** The complete document. */
 export function buildLlmsTxt(): string {
     return [
         HEADER,
+        fitAndGuidance(),
         evidencePolicy(),
         PRIMARY_PAGES,
         guidesByTopic(),

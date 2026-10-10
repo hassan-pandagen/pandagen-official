@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { ogImageForPath } from "@/lib/seo/og";
 import { caseStudy, disclosure } from "@/data/case-study-facts";
-import { MedicalTemplateCaseStudyPreview as RedesignMedicalTemplateCaseStudy } from "@/components/pages/work/medical-template/Design";
+import { MedicalTemplateCaseStudyPreview as RedesignMedicalTemplateCaseStudy, medicalTemplateFaqs } from "@/components/pages/work/medical-template/Design";
 
 const canonicalUrl = "https://www.pandacodegen.com/work/medical-template";
-// 4 Oct 2026: shortened (title was 65 characters with the brand, description
-// 180). The old description promised "provider bios", which this page never
-// shows; it now lists only what the walkthrough screenshots show.
-const title = "Medical Template: a Practice Website Demo";
+// 10 Oct 2026: owner-requested medical design/development hiring language.
+// The project remains a fictional practice demo with its existing canonical.
+const title = "Medical Website Design: Practice Demo";
 const description =
-    "A fictional medical practice website we built as a demo: a booking-focused homepage, treatment areas, care steps and procedure pages. Not a real practice.";
+    "Medical practice website design demonstrated through a fictional clinic: consultation-focused homepage, treatment pages and care steps. Explore the demo.";
 
 export const metadata: Metadata = {
     title: { absolute: `${title} | PandaCodeGen` },
@@ -22,6 +21,7 @@ export const metadata: Metadata = {
         url: canonicalUrl,
         images: [ogImageForPath("/work/medical-template")],
     },
+    twitter: { card: "summary_large_image", title, description },
     alternates: { canonical: "/work/medical-template" },
 };
 
@@ -44,6 +44,7 @@ const schema = {
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             about: { "@id": `${canonicalUrl}#demo` },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+            dateModified: "2026-10-10",
         },
         {
             "@type": "CreativeWork",
@@ -53,7 +54,13 @@ const schema = {
             genre: "Portfolio demo",
             creativeWorkStatus: caseStudy("medical-template").relationship,
             description: disclosure("medical-template"),
+            dateModified: "2026-10-10",
             creator: { "@id": "https://www.pandacodegen.com/#organization" },
+        },
+        {
+            "@type": "FAQPage",
+            "@id": `${canonicalUrl}#faq`,
+            mainEntity: medicalTemplateFaqs.map(faq => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })),
         },
         {
             "@type": "BreadcrumbList",
@@ -72,8 +79,8 @@ const schema = {
 export default function MedicalTemplateCaseStudy() {
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-            <RedesignMedicalTemplateCaseStudy />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
+            <RedesignMedicalTemplateCaseStudy faqs={medicalTemplateFaqs} />
         </>
     );
 }

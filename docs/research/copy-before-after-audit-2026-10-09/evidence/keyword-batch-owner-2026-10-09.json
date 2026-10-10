@@ -1,0 +1,42 @@
+{
+  "capture_date": "2026-10-09",
+  "source": "Owner-pasted seodata.dev keyword-page results",
+  "country": "US",
+  "independently_refetched": false,
+  "notes": [
+    "Volume is a provider-reported monthly estimate, not expected site traffic.",
+    "Competition is advertiser competition, not organic difficulty.",
+    "Updated dates do not identify the underlying historical month range.",
+    "No data is stored as null, never converted to zero.",
+    "The repeated speed-up-GoHighLevel result is deduplicated.",
+    "Related-query figures are not summed into independent demand."
+  ],
+  "keywords": [
+    {"keyword":"cms website development","volume":390,"cpc_usd":38.23,"advertiser_competition":0.22,"provider_updated":"2026-10-08"},
+    {"keyword":"cms development services","volume":210,"cpc_usd":0,"advertiser_competition":0.01,"provider_updated":"2026-10-08"},
+    {"keyword":"sanity cms agency","volume":null,"status":"no_data"},
+    {"keyword":"custom website development","volume":1000,"cpc_usd":46.02,"advertiser_competition":0.09,"provider_updated":"2026-06-17"},
+    {"keyword":"small business website design","volume":3600,"cpc_usd":32.57,"advertiser_competition":0.13,"provider_updated":"2026-08-09"},
+    {"keyword":"custom website cost","volume":90,"cpc_usd":20.3,"advertiser_competition":0.64,"provider_updated":"2026-10-09"},
+    {"keyword":"wordpress development services","volume":880,"cpc_usd":30.07,"advertiser_competition":0.11,"provider_updated":"2026-09-16"},
+    {"keyword":"wordpress to nextjs migration","volume":null,"status":"no_data"},
+    {"keyword":"woocommerce development services","volume":390,"cpc_usd":33.78,"advertiser_competition":0.08,"provider_updated":"2026-09-16"},
+    {"keyword":"wix migration services","volume":null,"status":"no_data"},
+    {"keyword":"squarespace migration services","volume":null,"status":"no_data"},
+    {"keyword":"gohighlevel website development","volume":null,"status":"no_data"},
+    {"keyword":"speed up gohighlevel website","volume":null,"status":"no_data"},
+    {"keyword":"answer engine optimization services","volume":50,"cpc_usd":14.15,"advertiser_competition":0.13,"provider_updated":"2026-06-08"},
+    {"keyword":"ai seo services","volume":590,"cpc_usd":26.8,"advertiser_competition":0.25,"provider_updated":"2026-05-12"}
+  ],
+  "selected_related_keywords": [
+    {"keyword":"web design services for small business","volume":4400,"cpc_usd":17.71,"provider_overlap":"16/20","parent":"small business website design"},
+    {"keyword":"website creation cost","volume":4400,"cpc_usd":12.01,"provider_overlap":"20/20","parent":"custom website cost"},
+    {"keyword":"how much does a website cost","volume":2400,"cpc_usd":11.62,"provider_overlap":"20/20","parent":"custom website cost"},
+    {"keyword":"wordpress website design services","volume":1300,"cpc_usd":32.18,"provider_overlap":"9/20","parent":"wordpress development services"},
+    {"keyword":"cms for website","volume":5400,"cpc_usd":13.56,"provider_overlap":"11/20","parent":"cms website development"},
+    {"keyword":"cms development company","volume":210,"cpc_usd":42.26,"provider_overlap":"8/20","parent":"cms development services"},
+    {"keyword":"custom cms development services","volume":110,"cpc_usd":25.9,"provider_overlap":"12/20","parent":"cms development services"},
+    {"keyword":"aeo agency","volume":260,"cpc_usd":26.62,"provider_overlap":"7/20","parent":"answer engine optimization services"},
+    {"keyword":"ai seo agency","volume":480,"cpc_usd":18.54,"provider_overlap":"7/20","parent":"ai seo services"}
+  ]
+}

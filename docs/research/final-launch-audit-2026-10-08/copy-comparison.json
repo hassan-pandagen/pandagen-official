@@ -1,0 +1,104 @@
+[
+  {
+    "path": "/",
+    "live": {
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "description": "Custom business websites and online stores, with content your team can edit and code you own. Work directly with the founders, scope and price agreed upfront. Fixed pricing from $1,500.",
+      "h1": [
+        "Websites built for the way you do business."
+      ]
+    },
+    "candidate": {
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "description": "Work directly with the founders on WordPress sites, custom websites, stores and migrations. Custom builds from $1,500. Code you own, price agreed upfront.",
+      "h1": [
+        "Websites built for the way you do business."
+      ]
+    }
+  },
+  {
+    "path": "/services",
+    "live": {
+      "title": "Website Design, Redesign and Development Services | PandaCodeGen",
+      "description": "Website, online store and software development, redesigns and migrations. Website builds from $1,500, and you own the code. Scope and dates agreed before work starts.",
+      "h1": [
+        "Website design, redesign and development."
+      ]
+    },
+    "candidate": {
+      "title": "Website Design, Redesign and Development Services | PandaCodeGen",
+      "description": "Websites, stores, Sanity editors and custom software. Work with the founders on design, development and migration, with scope and price agreed.",
+      "h1": [
+        "Website design. Development, too."
+      ]
+    }
+  },
+  {
+    "path": "/services/gohighlevel",
+    "live": {
+      "title": "GoHighLevel Website & CRM Integration | PandaCodeGen",
+      "description": "Evaluate and scope a custom website or frontend that connects to GoHighLevel CRM, forms, calendars, and automations without making unsupported speed or ranking promises.",
+      "h1": [
+        "Your GoHighLevel site is slow, and the CRM is why you cannot just leave. Start with a look at your site, your speed, and what it connects to."
+      ]
+    },
+    "candidate": {
+      "title": "GoHighLevel Website Speed & Custom Builds | PandaCodeGen",
+      "description": "GHL site slow or outgrown the builder? Improve your pages, or keep GoHighLevel CRM and connect a custom site to forms, calendars and pipelines.",
+      "h1": [
+        "GoHighLevel websites. Speed, builds and CRM."
+      ]
+    }
+  },
+  {
+    "path": "/services/squarespace",
+    "live": {
+      "title": "Squarespace Website Migration | PandaCodeGen",
+      "description": "Plan a Squarespace migration around content, URLs, metadata, forms, integrations, accessibility, analytics, launch validation, rollback, and ownership.",
+      "h1": [
+        "The change you need on your Squarespace site is one the platform decides. Start with a measured migration assessment."
+      ]
+    },
+    "candidate": {
+      "title": "Squarespace Website Migration | PandaCodeGen",
+      "description": "Improve your Squarespace site or migrate to a custom site with a Sanity editor your team can use. Plan content, commerce, scheduling and redirects.",
+      "h1": [
+        "Your Squarespace site. Built for more."
+      ]
+    }
+  },
+  {
+    "path": "/services/woocommerce",
+    "live": {
+      "title": "WooCommerce Storefront Migration | PandaCodeGen",
+      "description": "Evaluate and scope WooCommerce theme repair, a headless storefront, or replatforming around customer journeys, data, integrations, performance, operations, and launch risk.",
+      "h1": [
+        "Your WooCommerce checkout is the slowest page you own. Here is why, and what actually fixes it."
+      ]
+    },
+    "candidate": {
+      "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+      "description": "Build or improve a WooCommerce storefront, or plan a migration. Compare the options for checkout, products, orders and launch before committing to a scope.",
+      "h1": [
+        "Your WooCommerce store. Built for buyers."
+      ]
+    }
+  },
+  {
+    "path": "/ai-info",
+    "live": {
+      "title": "PandaCodeGen Company Reference | Services, Process, Pricing",
+      "description": "A factual reference for PandaCodeGen: websites, online stores and software, delivery process, pricing starting points, founders, evidence policy, and contact details.",
+      "h1": [
+        "PandaCodeGen facts, process, and commercial starting points."
+      ]
+    },
+    "candidate": {
+      "title": "PandaCodeGen Company Reference | People, Services & Projects",
+      "description": "Who PandaCodeGen serves, what the founders build, when WordPress or a custom site may fit, and links to prices, people and documented projects.",
+      "h1": [
+        "PandaCodeGen, in plain terms."
+      ]
+    }
+  }
+]

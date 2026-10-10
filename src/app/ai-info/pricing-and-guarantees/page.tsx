@@ -4,7 +4,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FactTable, ReferenceIntro } from "@/components/ai-info/ReferenceSection";
 import { ogImageForPath } from "@/lib/seo/og";
-import { COMMERCIAL, FACTS_VERIFIED } from "@/data/company-facts";
+import { COMMERCIAL, COMMERCIAL_FACTS_VERIFIED } from "@/data/company-facts";
 
 export const dynamic = "force-static";
 
@@ -32,7 +32,7 @@ const schema = {
       description,
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       about: { "@id": "https://www.pandacodegen.com/#organization" },
-      dateModified: "2026-10-02",
+      dateModified: "2026-10-08",
       inLanguage: "en-US",
       breadcrumb: { "@id": canonicalUrl + "#breadcrumb" },
     },
@@ -65,7 +65,7 @@ export default function Page() {
           <ReferenceIntro
             title="PandaCodeGen Pricing and Guarantees"
             purpose="Published custom-build starting prices, individually scoped WordPress work, payment structure, refund terms, the performance acceptance target and handover. Starting prices are not quotes."
-            verified={FACTS_VERIFIED}
+            verified={COMMERCIAL_FACTS_VERIFIED}
           />
           <FactTable facts={COMMERCIAL} caption="PandaCodeGen commercial terms: starting prices, payment structure, refunds, performance acceptance and ownership." />
 

@@ -1,0 +1,945 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "P",
+        "text": "Work directly with Hassan and Imran on a business website or online store your team can run. A simpl",
+        "class": "max-w-[30rem] text-[18px] leading-[1.55] md:text-[20px]"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Talk to the founders",
+        "class": "cta-solid inline-flex items-center justify-center gap-3 bg-[#1C1917] px-6 py-4 text-[16px] font-medium text-white"
+      },
+      {
+        "tag": "A",
+        "text": "See the work",
+        "class": "inline-flex items-center justify-center px-6 py-4 text-[16px] font-medium"
+      },
+      {
+        "tag": "P",
+        "text": "Custom builds from $1,500. WordPress quoted to scope. Price agreed before work starts.",
+        "class": "mt-5 text-[14px]"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "class": "flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white transition-opacity disabled:opacity-40"
+      },
+      {
+        "tag": "P",
+        "text": "AI assistant. Privacy",
+        "class": "mt-2 text-[12px]"
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "class": "group relative block aspect-[1912/914] overflow-hidden rounded-[6px]"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14937,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12844,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "BUTTON",
+        "text": "02 / Emblematic Studio\n↗\n: show Emblematic Studio",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "03 / MyCustomPatches\n↗\n: show MyCustomPatches",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "04 / Ladies 4 Jesus\n↗\n: show Ladies 4 Jesus",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "05 / Saforne\n↗\n: show Saforne",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "02 / Enterprise operations platform\n↗\n: show Enterprise operations platform",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "02 / Panda Publisher\n↗\n: show Panda Publisher",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "03 / Sleek Jackets\n↗\n: show Sleek Jackets",
+        "class": "WorkReel-module__toVHgq__frame "
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 1,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2254,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "route": "/blog/website-portability",
+    "status": 200,
+    "title": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "h1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 46481,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14937,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12844,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "BUTTON",
+        "text": "03 / MyCustomPatches\n↗\n: show MyCustomPatches",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "04 / Ladies 4 Jesus\n↗\n: show Ladies 4 Jesus",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "05 / Saforne\n↗\n: show Saforne",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "03 / Sleek Jackets\n↗\n: show Sleek Jackets",
+        "class": "WorkReel-module__toVHgq__frame "
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2254,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "route": "/blog/website-portability",
+    "status": 200,
+    "title": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "h1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 46481,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14937,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12595,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "BUTTON",
+        "text": "05 / Saforne\n↗\n: show Saforne",
+        "class": "WorkReel-module__toVHgq__frame "
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2254,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 768,
+    "route": "/blog/website-portability",
+    "status": 200,
+    "title": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "h1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 45429,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14937,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12595,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2254,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1024,
+    "route": "/blog/website-portability",
+    "status": 200,
+    "title": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "h1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 45429,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14937,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12595,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2254,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "route": "/blog/website-portability",
+    "status": 200,
+    "title": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "h1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 45429,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14937,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12595,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2254,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1920,
+    "route": "/blog/website-portability",
+    "status": 200,
+    "title": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "h1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 45429,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "P",
+        "text": "Work directly with Hassan and Imran on a business website or online store your team can run. A simpl",
+        "class": "max-w-[30rem] text-[18px] leading-[1.55] md:text-[20px]"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Talk to the founders",
+        "class": "cta-solid inline-flex items-center justify-center gap-3 bg-[#1C1917] px-6 py-4 text-[16px] font-medium text-white"
+      },
+      {
+        "tag": "A",
+        "text": "See the work",
+        "class": "inline-flex items-center justify-center px-6 py-4 text-[16px] font-medium"
+      },
+      {
+        "tag": "P",
+        "text": "Custom builds from $1,500. WordPress quoted to scope. Price agreed before work starts.",
+        "class": "mt-5 text-[14px]"
+      },
+      {
+        "tag": "P",
+        "text": "AI assistant. Privacy",
+        "class": "mt-2 text-[12px]"
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "class": "group relative block aspect-[1912/914] overflow-hidden rounded-[6px]"
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14924,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12829,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "BUTTON",
+        "text": "02 / Emblematic Studio\n↗\n: show Emblematic Studio",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "03 / MyCustomPatches\n↗\n: show MyCustomPatches",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "04 / Ladies 4 Jesus\n↗\n: show Ladies 4 Jesus",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "05 / Saforne\n↗\n: show Saforne",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "02 / Enterprise operations platform\n↗\n: show Enterprise operations platform",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "02 / Panda Publisher\n↗\n: show Panda Publisher",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "03 / Sleek Jackets\n↗\n: show Sleek Jackets",
+        "class": "WorkReel-module__toVHgq__frame "
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 1,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2254,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "route": "/blog/website-portability",
+    "status": 200,
+    "title": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "h1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 46481,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14924,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12829,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [
+      {
+        "tag": "BUTTON",
+        "text": "03 / MyCustomPatches\n↗\n: show MyCustomPatches",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "04 / Ladies 4 Jesus\n↗\n: show Ladies 4 Jesus",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "05 / Saforne\n↗\n: show Saforne",
+        "class": "WorkReel-module__toVHgq__frame "
+      },
+      {
+        "tag": "BUTTON",
+        "text": "03 / Sleek Jackets\n↗\n: show Sleek Jackets",
+        "class": "WorkReel-module__toVHgq__frame "
+      }
+    ],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2254,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "route": "/blog/website-portability",
+    "status": 200,
+    "title": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "h1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 46481,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/",
+    "status": 200,
+    "title": "Custom Website Design & Development | PandaCodeGen",
+    "h1": [
+      "Websites built for the way you do business."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 14924,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/services/woocommerce",
+    "status": 200,
+    "title": "WooCommerce Development, Speed & Migration | PandaCodeGen",
+    "h1": [
+      "Your WooCommerce store. Built for buyers."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 12573,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/work",
+    "status": 200,
+    "title": "Website, Ecommerce & Software Projects | PandaCodeGen",
+    "h1": [
+      "Websites, stores and software."
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 2254,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "route": "/blog/website-portability",
+    "status": 200,
+    "title": "Can You Export Your Website? What 8 Platforms Let You Take",
+    "h1": [
+      "Can You Take Your Website With You? What 8 Platforms Let You Export"
+    ],
+    "overflow": false,
+    "outside": [],
+    "headingOverflow": [],
+    "brokenImages": [],
+    "unsettledImages": 0,
+    "duplicateParagraphs": [],
+    "missingHashTargets": [],
+    "unlabelledInputs": [],
+    "mainCount": 1,
+    "bodyChars": 45438,
+    "errors": []
+  }
+]

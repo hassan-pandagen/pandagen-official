@@ -10,8 +10,8 @@ import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 
 const path = "/services/wix";
-const name = "Wix Website Migration";
-const description = "Improve your Wix site or move to a custom website with a Sanity editor your team can use. Plan content, forms, integrations and URL redirects.";
+const name = "Wix Website Design, Redesign & Migration";
+const description = "Build or redesign a Wix website, improve mobile pages and forms, or plan a custom site with a Sanity editor. Agree content, integrations and redirects first.";
 
 export const metadata: Metadata = {
   title: name,

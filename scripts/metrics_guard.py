@@ -154,6 +154,14 @@ def values_of(metric: dict) -> list[str]:
     return [v for v in vals if v and v.lower() not in TOO_GENERIC]
 
 
+def withdrawn_value_pattern(value: str) -> str:
+    # The withdrawn URL count also appeared as "200-plus" in visible prose.
+    # Preserve the existing client-proximity rule, but match equivalent forms.
+    if value == "200+":
+        return r"\b(?:200\s*(?:\+|[-–—]?\s*plus\b)|two[ -]+hundred(?:[ -]+plus)?\b)"
+    return re.escape(value)
+
+
 def main() -> int:
     as_json = "--json" in sys.argv
     metrics = load_metrics()
@@ -196,7 +204,7 @@ def main() -> int:
         for val in values_of(m):
             for page, text in pages:
                 on_own_page = page == own_page.get(m["slug"])
-                for hit in re.finditer(re.escape(val), text, re.I):
+                for hit in re.finditer(withdrawn_value_pattern(val), text, re.I):
                     window = text[max(0, hit.start() - PROXIMITY): hit.start() + PROXIMITY]
                     after = text[hit.end(): hit.end() + 60].lower()
                     if any(phrase in after for phrase in SERVICE_BOILERPLATE):

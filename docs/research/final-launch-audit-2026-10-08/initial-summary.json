@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-08",
+  "verdict": "Fix confirmed launch findings before unconditional sign-off",
+  "candidate": {
+    "next": "16.3.8",
+    "sitemapPages": 157,
+    "blogPosts": 92,
+    "topicHubs": 11,
+    "generatedPages": 169
+  },
+  "browser": {
+    "pageViewportChecks": 506,
+    "uniquePageViewportChecks": 506,
+    "jsErrors": 0,
+    "brokenImages": 0,
+    "horizontalOverflow": [],
+    "headingOverflow": [
+      {
+        "route": "/services/woocommerce",
+        "width": 320,
+        "headings": [
+          {
+            "text": "YOUR WOOCOMMERCE STORE.\nBUILT FOR BUYERS.",
+            "overflow": 41
+          }
+        ]
+      }
+    ],
+    "screenshotToolLimits": [
+      {
+        "route": "/blog",
+        "width": 390,
+        "error": "page.screenshot: Cannot take screenshot larger than 32767 pixels on any dimension\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n"
+      },
+      {
+        "route": "/blog",
+        "width": 1440,
+        "error": "page.screenshot: Cannot take screenshot larger than 32767 pixels on any dimension\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n"
+      }
+    ]
+  },
+  "checks": {
+    "typecheck": {
+      "exitCode": 0
+    },
+    "lint": {
+      "exitCode": 0
+    },
+    "tests": {
+      "exitCode": 0
+    },
+    "build": {
+      "exitCode": 0
+    },
+    "claims": {
+      "exitCode": 0
+    },
+    "check_dates": {
+      "exitCode": 0
+    },
+    "spec_freshness": {
+      "exitCode": 0
+    },
+    "glossary_guard": {
+      "exitCode": 0
+    },
+    "retired_claims": {
+      "exitCode": 0
+    },
+    "production-smoke": {
+      "exitCode": 0
+    },
+    "production-seo": {
+      "exitCode": 0
+    },
+    "built-guards": {
+      "exitCode": 0
+    },
+    "pagefind": {
+      "exitCode": 0
+    }
+  },
+  "externalGaps": {
+    "dependencyAudit": "npm registry audit endpoint unavailable",
+    "lighthouse": "Chrome debugging endpoint unavailable in this tool environment",
+    "emailReceipt": "Test API accepted; provider/inbox receipt pending"
+  },
+  "sourceEdits": false,
+  "deployed": false
+}

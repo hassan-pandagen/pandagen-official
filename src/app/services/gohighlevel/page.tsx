@@ -10,8 +10,8 @@ import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 
 const path = "/services/gohighlevel";
-const name = "GoHighLevel Website Speed & Custom Builds";
-const description = "GHL site slow or outgrown the builder? Improve your pages, or keep GoHighLevel CRM and connect a custom site to forms, calendars and pipelines.";
+const name = "GoHighLevel Websites & CRM Integration Services";
+const description = "Slow GHL pages or outgrown the builder? Improve your site, or connect a custom website to GoHighLevel forms, calendars and pipelines.";
 
 export const metadata: Metadata = {
   title: name,

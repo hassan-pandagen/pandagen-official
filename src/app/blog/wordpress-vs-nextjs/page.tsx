@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-15",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-vs-nextjs")],
@@ -75,7 +75,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-vs-nextjs"),
             description,
             datePublished: "2026-03-15",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -621,7 +621,7 @@ export default function WordPressVsNextJsPage() {
                     <BlogText>
                         <Link href="/pricing" className="text-cognac hover:underline">Planning tiers</Link> start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with custom
                         scope where needed. A common payment option is 30 percent at onboarding and 70 percent on delivery, and another written schedule may be agreed.
-                        Package discussions may start with 15 business days of launch defect support on Starter and 30 on Growth and Scale; support applies only where the accepted project terms record it. A
+                        Package discussions may start with 15 calendar days of launch defect support on Starter and 30 on Growth and Scale; support applies only where the accepted project terms record it. A
                         90-plus Lighthouse target applies only under the representative pages, profiles, environment,
                         repeated runs, exclusions and remedy named in the signed scope.
                     </BlogText>

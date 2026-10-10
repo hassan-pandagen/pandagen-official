@@ -1,0 +1,53 @@
+{
+  "oldCount": 146,
+  "newCount": 157,
+  "removed": [
+    "/work/panda-codelab",
+    "/blog/how-to-cut-saas-bill-2026",
+    "/blog/why-is-my-website-loading-so-slow",
+    "/blog/wordpress-killer"
+  ],
+  "added": [
+    "/services/sanity-development",
+    "/services/backend-development",
+    "/services/wordpress",
+    "/work/medical-template",
+    "/work/panda-publisher",
+    "/work/sleek-jackets",
+    "/work/northdeck-group",
+    "/work/a-step-above-medical",
+    "/blog/sanity-vs-wordpress",
+    "/blog/sanity-vs-supabase",
+    "/blog/product-catalog-website-without-cart",
+    "/blog/website-monthly-running-cost",
+    "/blog/is-wix-bad-for-seo",
+    "/blog/gohighlevel-vs-wordpress",
+    "/blog/website-portability"
+  ],
+  "redirects": [
+    {
+      "path": "/work/panda-codelab",
+      "status": 308,
+      "location": "/work",
+      "finalStatus": 200
+    },
+    {
+      "path": "/blog/how-to-cut-saas-bill-2026",
+      "status": 308,
+      "location": "/blog/saas-software-pricing-audit-2026",
+      "finalStatus": 200
+    },
+    {
+      "path": "/blog/why-is-my-website-loading-so-slow",
+      "status": 308,
+      "location": "/blog/how-to-speed-up-your-website",
+      "finalStatus": 200
+    },
+    {
+      "path": "/blog/wordpress-killer",
+      "status": 308,
+      "location": "/blog/wordpress-vs-custom-code-real-cost-3-years",
+      "finalStatus": 200
+    }
+  ]
+}
