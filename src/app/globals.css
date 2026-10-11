@@ -723,3 +723,50 @@ body {
 body:has([role="dialog"][aria-modal="true"]:not([inert])) button[aria-label="Open cookie preferences"] {
   display: none;
 }
+
+/* 12 Oct 2026, owner: on phones, small labels (10-11.5px eyebrows, captions, kickers and the
+   chat card's footer) are raised to 12px for readability. Mapped from every sub-12px text
+   element on 17 pages at 393px. CSS-module class names carry a build hash, so each module
+   class is matched by its module name plus class name. The 9px text drawn inside the work
+   reel's mock browser screens is left alone: it is part of the picture, not reading text. */
+@media (max-width: 639.98px) {
+  :is(.text-\[9px\], .text-\[10px\], .text-\[11px\], .text-\[11\.5px\]),
+  :is(
+    [class*="CommercialPreview-module__"][class*="__eyebrow"],
+    [class*="CommercialPreview-module__"][class*="__tag"],
+    [class*="CommercialPreview-module__"][class*="__rail"] a,
+    [class*="ScreenshotDeck-module__"][class*="__footer"],
+    [class*="ServicesPreview-module__"][class*="__imageBar"],
+    [class*="ServicesPreview-module__"][class*="__heroVisual"] figcaption,
+    [class*="AboutPreview-module__"][class*="__kicker"],
+    [class*="AboutPreview-module__"][class*="__founderMeta"],
+    [class*="AboutPreview-module__"][class*="__stepNumber"],
+    [class*="AboutPreview-module__"][class*="__imageCaption"],
+    [class*="AboutPreview-module__"][class*="__heroTop"],
+    [class*="MigrationPreview-module__"][class*="__pathLabel"],
+    [class*="MigrationPreview-module__"][class*="__browserBar"],
+    [class*="MigrationPreview-module__"][class*="__browserCaption"],
+    [class*="WorkIndexDesign-module__"][class*="__heroNavNumber"],
+    [class*="WorkIndexDesign-module__"][class*="__eyebrow"],
+    [class*="WorkReel-module__"][class*="__eyebrow"],
+    [class*="WorkReel-module__"][class*="__projectIndex"],
+    [class*="WorkReel-module__"][class*="__relationship"],
+    [class*="PandaAssistant-module__"][class*="__inlineFooter"],
+    [class*="PandaAssistant-module__"][class*="__inlineComposerActions"] > span,
+    [class*="PandaAssistant-module__"][class*="__aiLabel"],
+    [class*="PricingPreview-module__"][class*="__proposalTop"],
+    [class*="OwnershipCompare-module__"][class*="__summaryLabel"],
+    [class*="CaseStudyWalkthrough-module__"][class*="__overviewLabel"],
+    [class*="FaqRows-module__"][class*="__eyebrow"],
+    [class*="StackGuide-module__"][class*="__eyebrow"],
+    [class*="not-found-module__"][class*="__code"] > span,
+    [class*="not-found-module__"][class*="__legal"],
+    [class*="ServicesPreview-module__"][class*="__scopeNotes"] b,
+    [class*="BlogRedesign-module__"][class*="__surface"] main article > header > p:first-child,
+    [class*="BlogRedesign-module__"][class*="__surface"] main article > header[data-article-hero] [data-article-hero-copy] > p:first-child
+  ) {
+    font-size: 12px !important;
+  }
+  /* The chat card's helper text was capped at 60px wide for 10px type. */
+  [class*="PandaAssistant-module__"][class*="__inlineComposerActions"] > span { max-width: 9rem !important; }
+}

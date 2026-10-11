@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import LocaleSwitcher from "@/components/i18n/LocaleSwitcher";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
+import CookieSettingsButton from "@/components/consent/CookieSettingsButton";
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -215,6 +216,9 @@ export default function SiteFooter({ compactTop = false, linksOnly = false }: { 
                 </Link>
               </li>
             ))}
+            <li>
+              <CookieSettingsButton style={{ color: T.onDarkQuiet }} />
+            </li>
             <li>
               <a href="mailto:info@pandacodegen.com?subject=Security%20report" style={{ color: T.onDarkQuiet }}>
                 Report a security issue

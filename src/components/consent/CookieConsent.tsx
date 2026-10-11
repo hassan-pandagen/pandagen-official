@@ -215,13 +215,15 @@ export default function CookieConsent() {
     <>
       {bannerHost ? createPortal(banner, bannerHost) : banner}
 
+      {/* 12 Oct 2026, owner: hidden on phones (it covered the corner of the text while reading);
+          the footer's "Cookie settings" button reopens the same choices on every screen size. */}
       {preferences && !preferencesOpen && !chatOpen && (
         <button
           type="button"
           data-cookie-control
           onClick={() => openPreferences()}
           style={{ zIndex: 2147483000 }}
-          className="fixed bottom-4 left-4 z-[90] inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone-300 bg-[#faf7f1] text-stone-600 shadow-md transition-colors hover:border-[#ad3d0b] hover:bg-white hover:text-[#ad3d0b] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ad3d0b]"
+          className="fixed bottom-4 left-4 z-[90] hidden sm:inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone-300 bg-[#faf7f1] text-stone-600 shadow-md transition-colors hover:border-[#ad3d0b] hover:bg-white hover:text-[#ad3d0b] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ad3d0b]"
           title="Cookie preferences"
           aria-label="Open cookie preferences"
         >

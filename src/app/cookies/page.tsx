@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FadeIn from "@/components/ui/FadeIn";
+import CookieSettingsButton from "@/components/consent/CookieSettingsButton";
 
 export const metadata: Metadata = {
   title: { absolute: "Cookie Policy | PandaCodeGen" },
@@ -118,6 +119,7 @@ export default function CookiesPage() {
           <div className="mb-16 animate-fade-in-up">
             <h1 className="text-5xl font-bold text-charcoal mb-4">Cookie Policy</h1>
             <p className="text-stone-600">Last updated: October 7, 2026</p>
+            <CookieSettingsButton className="mt-6 inline-flex min-h-11 items-center rounded-full bg-charcoal px-6 text-sm font-semibold text-white transition-colors hover:bg-cognac" />
           </div>
 
           <div className="space-y-8 text-stone-600 leading-relaxed">

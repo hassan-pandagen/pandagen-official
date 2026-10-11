@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, MessageCircle, Mail, type LucideIcon } from "lucide-react";
 import LocaleSwitcher from "@/components/i18n/LocaleSwitcher";
+import CookieSettingsButton from "@/components/consent/CookieSettingsButton";
 
 interface FooterProps {
   onOpenQuote?: () => void;
@@ -247,6 +248,7 @@ export default function Footer({ onOpenQuote, showCta = true }: FooterProps) {
             <Link href="/privacy" className="inline-flex min-h-6 items-center hover:text-cognac transition-colors">Privacy</Link>
             <Link href="/terms" className="inline-flex min-h-6 items-center hover:text-cognac transition-colors">Terms</Link>
             <Link href="/cookies" className="inline-flex min-h-6 items-center hover:text-cognac transition-colors">Cookies</Link>
+            <CookieSettingsButton className="inline-flex min-h-6 items-center underline-offset-2 hover:text-cognac hover:underline transition-colors" />
             <Link href="/security" className="inline-flex min-h-6 items-center hover:text-cognac transition-colors">Security</Link>
             <Link href="/editorial-policy" className="inline-flex min-h-6 items-center hover:text-cognac transition-colors">Editorial</Link>
           </div>
