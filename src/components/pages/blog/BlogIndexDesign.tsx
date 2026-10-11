@@ -1,6 +1,7 @@
 import Link from "next/link";
 import EditorialTheme from "@/components/redesign/EditorialTheme";
 import BlogVisual from "@/components/redesign/BlogVisual";
+import ShowMoreGuides from "@/components/blog/ShowMoreGuides";
 import visual from "@/components/redesign/BlogLibrary.module.css";
 import styles from "@/components/redesign/Editorial.module.css";
 import { blogPosts } from "@/data/blog";
@@ -57,10 +58,10 @@ export function BlogIndexDesign({ q, topicSlug }: { q: string; topicSlug?: strin
             {/* The featured card is dark; the shared eyebrow colour is for paper and read at 1.85:1 on it. */}
             <div><span className={styles.eyebrow} style={{ color: "#e8763a" }}>Latest guide / {posts[0].category}</span><h3>{posts[0].title}</h3><p>{posts[0].excerpt}</p><span className={visual.read}>Read the guide &#8599; &middot; {posts[0].readTime}</span></div>
           </Link>}
-          <div className={visual.cards}>{(q || topic ? posts : posts.slice(1)).map((p) => <Link key={p.id} href={`/blog/${p.id}`} className={visual.row}>
+          <ShowMoreGuides className={visual.cards} initial={q || topic ? posts.length : 12}>{(q || topic ? posts : posts.slice(1)).map((p) => <Link key={p.id} href={`/blog/${p.id}`} className={visual.row}>
             <div className={visual.visual}><BlogVisual id={p.id} /></div>
             <div><span className={styles.meta}>{p.category} &middot; {p.readTime} &middot; {p.lastModified ? `Updated ${p.lastModified}` : p.date}</span><h3>{p.title}</h3><p>{p.excerpt}</p><span className={visual.read}>Read the guide &#8599;</span></div>
-          </Link>)}</div>
+          </Link>)}</ShowMoreGuides>
         </>}
         <div className="mt-16 border-t pt-8" style={{ borderColor: "var(--rule)" }}><p className={styles.copy}>Want to understand how we check claims and maintain these guides?</p><Link className={styles.link} href="/editorial-policy">Read our editorial policy →</Link></div>
       </div></section>
