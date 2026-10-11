@@ -1,5 +1,6 @@
 import { serviceBuyerQuestions } from "@/data/service-buyer-questions";
 import { stackServiceFaqs } from "./stack-services";
+import { audienceServiceFaqs } from "./audience-services";
 import { serviceOwnershipAnswers } from "@/data/service-ownership-answers";
 import type { ServiceFaq } from "@/data/service-faqs";
 
@@ -8,6 +9,7 @@ import type { ServiceFaq } from "@/data/service-faqs";
 // promises, so they should not be carried into the preview unchanged.
 const basePreviewFaqs: Record<string, [string, string][]> = {
   ...stackServiceFaqs,
+  ...audienceServiceFaqs,
   wordpress: [
     ["Will you build on WordPress if that is what I want?", "Yes. We offer WordPress website design and development when it fits your pages, editing needs and budget. If a custom build would help, we explain why and compare the costs before you choose."],
     ["Do I need to be technical to update my website?", "No. We agree which text, images and pages you will edit, provide written instructions and give you a live demonstration. You speak directly with the founders when you need something explained."],

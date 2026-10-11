@@ -241,7 +241,9 @@ export default function WebsiteCostGuide() {
                         dependencies, exclusions, schedule, acceptance, ownership, support and remedy. The tiers are
                         also published on the <Link href="/pricing" className={sourceLinkClass}>pricing page</Link>, and
                         the commercial conditions behind them are set out in the{" "}
-                        <Link href="/terms" className={sourceLinkClass}>terms</Link>.
+                        <Link href="/terms" className={sourceLinkClass}>terms</Link>. If you run a small business, our{" "}
+                        <Link href="/services/small-business-website-design" className={sourceLinkClass}>small business website design</Link>{" "}
+                        page shows what each tier includes and how the build works.
                     </BlogText>
 
                     <BlogHeader id="is-1500-good">Is $1,500 a good price for a website?</BlogHeader>

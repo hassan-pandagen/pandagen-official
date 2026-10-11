@@ -129,6 +129,16 @@ const staticPages: Record<string, StaticOgContent> = {
     label: "Webflow Website Help",
     description: "Assess slow pages, CMS limits, forms and integrations. Scope improvements within Webflow or a rebuild in Next.js.",
   },
+  "/services/small-business-website-design": {
+    title: "Small Business Website Design",
+    label: "Small business websites",
+    description: "WordPress or a custom site with an editor you can use, built with the founders. Price agreed in writing before work starts.",
+  },
+  "/services/medical-website-design": {
+    title: "Medical Website Design & Development",
+    label: "Medical websites",
+    description: "Websites for practices and medical training providers: Next.js, a Sanity editor and Supabase for logins and records.",
+  },
   "/services/wix": {
     title: "Wix Website Migration",
     label: "Wix service",

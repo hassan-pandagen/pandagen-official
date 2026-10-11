@@ -99,6 +99,9 @@ export function MedicalTemplateCaseStudyPreview({ faqs = medicalTemplateFaqs }: 
             >
               Discuss your project <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </QuoteModalButton>
+            <Link href="/services/medical-website-design" className="text-[14px] font-medium underline underline-offset-4" style={{ color: T.onDarkQuiet }}>
+              Medical website design
+            </Link>
             <Link href="/services/cms-development" className="text-[14px] font-medium underline underline-offset-4" style={{ color: T.onDarkQuiet }}>
               Websites your team can update
             </Link>

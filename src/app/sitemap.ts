@@ -34,6 +34,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // 2. Service Pillars
     { path: '/services/wordpress', changeFrequency: 'monthly', priority: 0.9, lastModified: '2026-10-10' },
+    { path: '/services/small-business-website-design', changeFrequency: 'monthly', priority: 0.9, lastModified: '2026-10-12' },
+    { path: '/services/medical-website-design', changeFrequency: 'monthly', priority: 0.8, lastModified: '2026-10-12' },
     { path: '/services/wordpress-migration', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-10-10' },
     { path: '/services/ecommerce', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-10-10' },
     { path: '/services/ai-seo', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-10' },

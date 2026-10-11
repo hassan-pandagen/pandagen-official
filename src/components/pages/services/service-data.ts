@@ -1,5 +1,6 @@
 import { WORDPRESS_HOST_MIGRATION } from "@/data/company-facts";
 import { stackServices } from "./stack-services";
+import { audienceServices } from "./audience-services";
 import { asOf, spec } from "@/data/spec-facts";
 
 // 3 Oct 2026: the earlier live service pages asked owners to total what the
@@ -52,6 +53,7 @@ export type ServicePreview = {
 
 export const servicePreviews: ServicePreview[] = [
   ...stackServices,
+  ...audienceServices,
   {
     slug: "wordpress", name: "WordPress websites", category: "WordPress website design & development",
     title: "WordPress website development.", accent: "New sites and redesigns.",

@@ -20,7 +20,7 @@ const MigrationVisual = dynamicImport(() => import("@/components/blog/MigrationC
 const postId = "website-migration-cost-2026";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "Website Migration Cost in 2026: Seven-Platform Scope Guide";
+const title = "Website Migration Cost in 2026: Prices, Scope and Timeline";
 const description =
     "What it costs to move OFF WordPress, WooCommerce, Webflow, Wix, Squarespace, Shopify or GoHighLevel. Price the migration from current inventory, export limits, integrations, SEO, acceptance and operation.";
 
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-06",
-        modifiedTime: "2026-10-09",
+        modifiedTime: "2026-10-12",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-migration-cost-2026")],
@@ -73,7 +73,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-06",
-            dateModified: "2026-10-09",
+            dateModified: "2026-10-12",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -118,7 +118,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-06",
-            dateModified: "2026-10-09",
+            dateModified: "2026-10-12",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -150,13 +150,15 @@ export default function WebsiteMigrationCostPage() {
                       <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Website migration</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Website Migration Cost: <span className="italic text-cognac">Seven-Platform Scope Guide</span>
+                            Website Migration Cost: <span className="italic text-cognac">Prices, Scope and Timeline</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            What a migration costs comes down to what you already have and what it has to do once it
-                            lands. The platform you are leaving changes how hard the export is, but the price is set by
-                            how many pages and templates there are, what data has to move, what it has to connect to,
-                            and how much testing the launch needs. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
+                            A website migration with us starts at $1,500, at a fixed price agreed before we start. The
+                            final cost comes down to what you already have and what it has to do once it lands. The
+                            platform you are leaving changes how hard the export is, but the price is set by how many
+                            pages and templates there are, what data has to move, what it has to connect to, and how much
+                            testing the launch needs. There is no minimum project size, and the code, design files and
+                            accounts are yours at the end. Use those terms to check any quote you receive.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed August 2, 2026 against current platform and Google documentation; export links re-checked August 1, 2026. Quote sourcing and pricing claims re-audited September 12, 2026. Platform sections condensed and starting tiers re-checked against our published terms October 4, 2026.

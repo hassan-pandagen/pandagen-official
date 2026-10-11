@@ -35,6 +35,7 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-[14px] font-semibold" style={{ color: T.accentText }}>
             <a href="#a-step-above-medical-walkthrough" className="underline underline-offset-4">Explore the website and portal ↓</a>
             <Link href="/services/custom-engineering" className="underline underline-offset-4">Custom portal development →</Link>
+            <Link href="/services/medical-website-design" className="underline underline-offset-4">Medical website design →</Link>
           </div>
           <div className="mt-8 flex flex-wrap gap-x-10 gap-y-3 border-t pt-6" style={{ borderColor: T.rule }}>
             <div className="max-w-[20rem]">

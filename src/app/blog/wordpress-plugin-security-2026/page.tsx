@@ -441,6 +441,12 @@ export default function WordPressPluginSecurity2026Page() {
                     <BlogQuote>
                         Ask what someone patched last month, not how fast they promise to patch next time.
                     </BlogQuote>
+                    <BlogText>
+                        If you want to keep WordPress and need someone to repair it and look after updates, our{' '}
+                        <Link href="/services/wordpress" className={inlineLink}>WordPress website service</Link>{' '}
+                        covers fixes, redesigns and new builds. The written quote names who handles updates, backups and
+                        security patches after launch.
+                    </BlogText>
 
                     <BlogHeader id="honest-conclusion">So is a custom build safer?</BlogHeader>
                     <BlogText>

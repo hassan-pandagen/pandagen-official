@@ -47,6 +47,8 @@ const primary = [
 
 const buying = [
   { name: "Websites", href: "/services" },
+  { name: "Small business websites", href: "/services/small-business-website-design" },
+  { name: "Medical websites", href: "/services/medical-website-design" },
   { name: "WordPress websites & migration", href: "/services/wordpress-migration" },
   { name: "Online stores", href: "/services/ecommerce" },
   { name: "Custom software", href: "/services/custom-engineering" },

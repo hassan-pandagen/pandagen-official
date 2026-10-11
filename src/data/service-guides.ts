@@ -11,6 +11,16 @@
 // The six title-pilot pages (docs/research/seo-skill-pack-audit-2026-10-04/TITLE_PILOT.md)
 // get no new links here until the pilot reads, so they are left out on purpose.
 export const serviceGuides: Record<string, { title: string; href: string }[]> = {
+  "small-business-website-design": [
+    { title: "How much a website costs, line by line", href: "/blog/how-much-does-a-website-cost" },
+    { title: "What a website costs to run each month", href: "/blog/website-monthly-running-cost" },
+    { title: "How to check you own your website", href: "/blog/do-you-own-your-website" },
+  ],
+  "medical-website-design": [
+    { title: "Next.js and Sanity: fit, cost and tradeoffs", href: "/blog/nextjs-sanity-stack" },
+    { title: "Sanity vs Supabase: CMS, backend or both", href: "/blog/sanity-vs-supabase" },
+    { title: "What a website and database cost each month", href: "/blog/website-monthly-running-cost" },
+  ],
   "cms-development": [
     { title: "Sanity or WordPress: test the editing tasks", href: "/blog/sanity-vs-wordpress" },
     { title: "Next.js and Sanity: fit, cost and tradeoffs", href: "/blog/nextjs-sanity-stack" },

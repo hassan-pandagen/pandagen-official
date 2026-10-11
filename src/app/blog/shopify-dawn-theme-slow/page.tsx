@@ -592,7 +592,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
                             We will audit representative routes, trace the production configuration and show whether a
                             focused Dawn repair, theme change or SEO-conscious headless migration fits the evidence. Our{" "}
-                            <Link href="/services/ecommerce?ref=blog/shopify-dawn-theme-slow" className="font-semibold text-amber-300 underline underline-offset-4">
+                            <Link href="/services/ecommerce" className="font-semibold text-amber-300 underline underline-offset-4">
                                 e-commerce development service
                             </Link>{" "}
                             covers the full transition, including analytics, redirect and structured-data continuity.

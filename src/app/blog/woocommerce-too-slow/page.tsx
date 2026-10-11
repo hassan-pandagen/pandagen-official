@@ -21,9 +21,9 @@ const PageSpeedAnimation = dynamicImport(() => import("@/components/blog/PageSpe
 const postId = "woocommerce-too-slow";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "WooCommerce Too Slow? A 2026 Diagnosis and Fix Guide";
+const title = "WooCommerce Too Slow? Fix Checkout and Add to Cart (2026)";
 const description =
-    "Diagnose a slow WooCommerce store with field data, lab tests, server traces and transaction checks. Prioritize repairs before considering headless or replacement.";
+    "Why WooCommerce checkout, add to cart and admin pages slow down, how to measure each layer, and which fixes to try before considering headless or a replacement.";
 
 export const dynamic = "force-static";
 

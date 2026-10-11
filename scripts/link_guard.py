@@ -129,9 +129,13 @@ def structural_blocks(html: str) -> list[str]:
     """
     blocks = []
     for marker in ('data-related-posts', 'data-topic-uplink'):
-        i = html.find(marker)
-        if i != -1:
-            blocks.append(html[i:])
+        # 12 Oct 2026: match the marker only as an attribute on an HTML element. Inlined CSS
+        # now contains selectors such as `main:has([data-topic-uplink])`, and a plain text
+        # search found that CSS in the <head> first, so the "tail" was the whole article and
+        # every body link was counted as a sibling (42 false failures).
+        m = re.search(r'<[a-zA-Z][^<>]*?\s' + marker + r'(?=[\s=>/])', html)
+        if m:
+            blocks.append(html[m.start():])
     return blocks
 
 

@@ -381,8 +381,10 @@ export default function WordPressTrafficDropPage() {
                         the platform trade-offs in{" "}
                         <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress and Next.js side by side</Link>. Delivery
                         scope sits on our{" "}
-                        <Link href="/services/wordpress-migration" className="text-cognac hover:underline">WordPress migration service page</Link>{" "}
-                        and planning tiers on the{" "}
+                        <Link href="/services/wordpress-migration" className="text-cognac hover:underline">WordPress migration service page</Link>.
+                        If you would rather keep WordPress and fix what is slowing it down, see our{" "}
+                        <Link href="/services/wordpress" className="text-cognac hover:underline">WordPress website service</Link>.
+                        Planning tiers are on the{" "}
                         <Link href="/pricing" className="text-cognac hover:underline">pricing page</Link>.
                     </BlogText>
 

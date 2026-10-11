@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         description: "Vercel Hobby is free for personal, non-commercial projects and includes 100 GB Fast Data Transfer. Pro for businesses starts at $20/month plus usage.",
         type: "article",
         publishedTime: "2026-03-13",
-        modifiedTime: "2026-10-04T00:00:00-05:00",
+        modifiedTime: "2026-10-12T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
         images: [ogImageForPath("/blog/nextjs-hosting-zero-cost")],
@@ -57,7 +57,7 @@ const articleSchema = {
             "description": "Vercel Hobby is free for personal, non-commercial projects and includes 100 GB Fast Data Transfer. Pro for businesses starts at $20/month plus usage.",
             "image": ogImageUrlForPath("/blog/nextjs-hosting-zero-cost"),
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-10-04T00:00:00-05:00",
+            "dateModified": "2026-10-12T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -120,7 +120,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/nextjs-hosting-zero-cost") },
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-10-04T00:00:00-05:00",
+            "dateModified": "2026-10-12T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -669,11 +669,13 @@ export default function NextjsHostingZeroCostPage() {
                         <BlogHeader id="how-we-set-up-client-hosting">How We Set Up Vercel Hosting on a Client Build</BlogHeader>
 
                         <BlogText>
-                            Every commercial site we build launches on Pro inside the client&apos;s own Vercel team, on
-                            the client&apos;s own payment method, with no markup from us. We&apos;re added as a member of
-                            their team, not the other way round. It costs us nothing to do it this way, and it removes
-                            the worst outcome in agency hosting: a client who can&apos;t reach their own infrastructure
-                            because the account belongs to a company they no longer work with.
+                            Every commercial site we build runs on Vercel Pro. On our maintenance or SEO package, hosting
+                            on our Vercel account is included if you want it. Without a package, or whenever you ask, the
+                            site runs in a Vercel team in your own name, on your own payment method. Either way the
+                            domain, repository and billing contacts are written down at handover, so you&apos;re never
+                            locked out of your own site by a company you no longer work with. Our{" "}
+                            <Link href="/blog/website-monthly-running-cost" className="text-cognac hover:underline">monthly running cost breakdown</Link>{" "}
+                            shows the full bill line by line.
                         </BlogText>
 
                         <BlogText>
@@ -718,11 +720,11 @@ export default function NextjsHostingZeroCostPage() {
 
                         <BlogText>
                             For a business website, service site, or e-commerce storefront, start the Vercel pricing comparison with Pro&apos;s $20 monthly platform fee, then add any extra seats and expected usage. If you&apos;re moving off WordPress, our{" "}
-                            <Link href="/services/wordpress-migration?ref=blog/nextjs-hosting-zero-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                            <Link href="/services/wordpress-migration" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 WordPress migration service
                             </Link>{" "}
                             includes a free assessment. Building new instead, or need something beyond a marketing site, our{" "}
-                            <Link href="/services/custom-engineering?ref=blog/nextjs-hosting-zero-cost" className="text-cognac hover:underline">
+                            <Link href="/services/custom-engineering" className="text-cognac hover:underline">
                                 custom Next.js development
                             </Link>{" "}
                             work covers the same hosting and workload planning from day one.

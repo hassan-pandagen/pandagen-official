@@ -579,6 +579,8 @@ export const SERVICE_PORTABILITY: Record<string, PlatformId[]> = {
   "ai-seo": [],
   "cms-development": [],
   "backend-development": [],
+  "small-business-website-design": [],
+  "medical-website-design": [],
 };
 
 export function portabilityFact(platform: PlatformId, item: PortabilityItem): PortabilityFact | undefined {

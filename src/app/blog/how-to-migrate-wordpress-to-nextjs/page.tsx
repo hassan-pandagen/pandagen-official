@@ -555,7 +555,7 @@ export default function MigrateWordPressToNextJSPage() {
                                     Book Free Migration Assessment <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
                             <Link
-                                href="/services/wordpress-migration?ref=blog/how-to-migrate-wordpress-to-nextjs"
+                                href="/services/wordpress-migration"
                                 className="inline-flex items-center justify-center gap-2 border border-stone-300 text-stone-700 font-semibold px-6 py-3 rounded-lg hover:bg-stone-50 transition-colors"
                             >
                                 View WordPress Migration Service
