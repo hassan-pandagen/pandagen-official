@@ -122,8 +122,9 @@ export const COMMERCIAL: readonly Fact[] = [
     { label: 'None of these fit', value: `If none of these match what you have, call ${PHONE.display} or email info@pandacodegen.com and we will quote it.` },
     { label: 'Ongoing services', value: 'Everything above prices a build. Ongoing work is separate and optional: monthly AI SEO services start at $500 and monthly support is quoted against the site and the systems connected to it, both scoped and priced before they begin. No build requires a subscription, and the site keeps working without one.' },
     // 8 Oct 2026, owner: on a maintenance or SEO package, hosting on our Vercel account is
-    // included if the client wants it. Outside a package it stays agreed per client.
-    { label: 'Hosting', value: 'On a maintenance or SEO package, hosting on our Vercel account is included if you want it. Outside a package, whether PandaCodeGen hosts on its own account, and whether that carries a charge, is agreed per client and written into the quote. Hosting moves to an account in your name on request or when an engagement ends.' },
+    // included if the client wants it. Outside a package the client runs it on their own hosting
+    // (owner, 12 Oct 2026; replaced "agreed per client").
+    { label: 'Hosting', value: 'On a maintenance or SEO package, hosting on our Vercel account is included if you want it. Without a package, the site runs on hosting in your own name, paid to the provider directly. Hosting moves to an account in your name on request or when an engagement ends.' },
     // Added 3 Oct 2026 at the owner's direction, so the assistant can answer
     // "can I talk to you before I commit?" and "will you bill me extra?".
     // 8 Oct 2026, owner: the first call is 15 minutes (the only public Cal.com event,

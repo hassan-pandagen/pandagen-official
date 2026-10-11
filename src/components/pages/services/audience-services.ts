@@ -8,8 +8,10 @@ import { asOf, spec } from "@/data/spec-facts";
 // estimate) and "medical website design" (about 1,300) had no page aimed at them. Both show
 // the Next.js + Sanity + Supabase stack, with A Step Above Medical as the medical example.
 // ASAM is a medical TRAINING provider, built and in pre-launch testing: never describe it as
-// patient-care software, a live site or a source of results. No page here claims HIPAA
-// compliance. Prices, delivery times and support come from company-facts, not typed copy.
+// patient-care software, a live site or a source of results. Its website does not handle patient
+// health information and was not built as a HIPAA project. Owner, 12 Oct 2026: we take on HIPAA
+// projects and sign a BAA when a client needs it; provider BAA facts are in spec-facts.json.
+// Prices, delivery times and support come from company-facts, not typed copy.
 
 const fact = (label: string) => {
   const found = COMMERCIAL.find((item) => item.label === label)?.value;
@@ -21,6 +23,8 @@ const asam = MIGRATION_PROJECT_DETAILS.aStepAboveMedical;
 const vercelPro = spec("vercel-pro-price");
 const sanityFree = spec("sanity-free-plan");
 const supabasePro = spec("supabase-pro-price");
+const vercelBaa = spec("vercel-hipaa-baa");
+const supabaseBaa = spec("supabase-hipaa-baa");
 
 const stackCosts: ServicePreview["costs"] = {
   title: "What the stack costs to run.",
@@ -86,7 +90,7 @@ export const audienceServices: ServicePreview[] = [
       ["Services and treatments", "Plan a clear page for each treatment, service or course, with the questions people ask before they book."],
       ["Enquiries and booking", "Decide how people book or enquire: a form, a phone call or your existing booking system. We test the agreed route from the website to your inbox or system."],
       ["Staff editing", "Choose which text, staff profiles, locations and schedules your team edits in Sanity. We demonstrate those tasks before handover."],
-      ["Patient information", "Tell us what the site may collect. Forms ask only for what the agreed workflow needs. If the site must handle protected health information, that requirement is scoped with your advisers and suitable providers before the build is priced."],
+      ["Patient information", "Tell us what the site may collect. Forms ask only for what the agreed workflow needs. If the site must collect or store protected health information, we scope it as a HIPAA project: providers that sign a Business Associate Agreement (BAA), health information kept out of the content editor, and a BAA between you and us."],
     ],
     detailsTitle: "The stack behind a medical website.", detailsIntro: "Our usual stack is Next.js on Vercel, Sanity for content, and Supabase when the site needs a database and logins. The proposal names each account and what it costs to run.",
     details: [
@@ -132,7 +136,7 @@ export const audienceServiceFaqs: Record<string, [string, string][]> = {
     ["How much does a medical website cost?", `Custom medical websites start at ${startingPrice("Starter")} (Starter), ${startingPrice("Growth")} (Growth) and ${startingPrice("Scale")} (Scale). A portal with logins, classes or payments is priced after we review the workflow. The written proposal sets the price before work starts.`],
     ["Have you built a medical website before?", `Yes. For A Step Above Medical, a medical training provider, we rebuilt the website from WordPress with Next.js and Sanity and built a team portal on Supabase for classes, students, payments and certificates. ${asam.disclosure} We also built a medical practice demo with treatment pages and a consultation journey.`],
     ["Can my staff update the website?", "Yes. Staff update services, profiles, locations and announcements in Sanity Studio. Every build that uses Sanity includes training on Sanity Studio and written documentation."],
-    ["Is the website HIPAA compliant?", "We don't describe a website as HIPAA compliant on its own. Many practice websites avoid collecting health information through forms. If yours needs to handle protected health information, that requirement, the providers involved and any agreements are confirmed with your advisers before the build is scoped and priced."],
+    ["Can you build a HIPAA-compliant website?", `Yes, when your project needs it. Most practice websites don't collect health information, so HIPAA doesn't apply to the pages themselves. If yours must collect or store protected health information, such as intake forms or patient records, we scope it as a HIPAA project. The parts that handle that information run on providers that sign a Business Associate Agreement (BAA): Vercel's BAA is ${vercelBaa.value}, and for Supabase, ${supabaseBaa.value}. Health information stays out of the content editor, and we sign a BAA with you for our work. The extra provider costs and controls are listed in the proposal. HIPAA compliance is shared between you, us and those providers. A Step Above Medical's website doesn't handle patient health information, so it wasn't built as a HIPAA project.`],
     ["What does a medical website cost to run each month?", `On our usual stack, Vercel Pro hosting is ${vercelPro.value} and Sanity's Free plan is ${sanityFree.value} for most small teams. Supabase Pro, ${supabasePro.value}, is added only when you need logins or records. Prices as of ${asOf("vercel-pro-price")}. On our maintenance or SEO package, hosting is included if you want it.`],
   ],
 };

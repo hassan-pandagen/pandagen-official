@@ -935,6 +935,24 @@
       "reviewDays": 30,
       "source": "https://www.hostinger.com/web-hosting",
       "note": "US price shown on the vendor's own pricing page, read with a live fetch on 11 October 2026. Promotional prices change often."
+    },
+    "vercel-hipaa-baa": {
+      "vendor": "Vercel",
+      "label": "HIPAA Business Associate Agreement",
+      "value": "signed with eligible Pro and Enterprise customers",
+      "qualifier": "Pro teams buy the HIPAA BAA add-on in Billing settings; Enterprise teams request it from sales",
+      "verifiedAt": "2026-10-12",
+      "reviewDays": 90,
+      "source": "https://vercel.com/docs/security/compliance#hipaa"
+    },
+    "supabase-hipaa-baa": {
+      "vendor": "Supabase",
+      "label": "HIPAA Business Associate Agreement",
+      "value": "customers sign a BAA with Supabase for HIPAA projects",
+      "qualifier": "eligible plans and setup are in Supabase's HIPAA project guide",
+      "verifiedAt": "2026-10-12",
+      "reviewDays": 90,
+      "source": "https://supabase.com/docs/guides/security/hipaa-compliance"
     }
   }
 }
