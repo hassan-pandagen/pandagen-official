@@ -85,7 +85,7 @@ These are where new queries should appear after launch.
 
 Links from high-impression articles to the matching service page (main content only):
 
-- `/blog/nextjs-hosting-zero-cost`, the highest-impression page (111k impressions in 6 months), links to **no service page**.
+- `/blog/nextjs-hosting-zero-cost`, the highest-impression page (111k impressions in 6 months), was first reported here as linking to no service page. That was wrong: it linked two services through `?ref=` tracking parameters, which the check did not match. The parameters were removed from all four internal links that used them. The same page's hosting paragraph still said every client site runs in the client's own Vercel team, which contradicted the hosting canon; it was corrected.
 - `/blog/wordpress-plugin-security-2026` and `/blog/wordpress-traffic-drop-speed` link only to the Next.js rebuild page. They should also link the new `/services/wordpress`, which is for owners keeping WordPress.
 - The other 18 checked articles link their matching service.
 
@@ -108,6 +108,13 @@ Missing destinations with measured demand (owner-supplied estimates, see the key
 | wordpress to next.js migration services | 153 | 22.3 | services/wordpress-migration |
 
 The Vercel free-tier queries (position 8 to 10, thousands of impressions) are informational and rarely click. They are not a lead priority.
+
+## Done on 12 October (commit `db862d8d`)
+
+- New `/services/small-business-website-design` and `/services/medical-website-design`, in the sitemap and menu, linked from both medical work pages and the website cost article. The medical page shows the Next.js, Sanity and Supabase stack with A Step Above Medical (described as a medical training system in pre-launch testing, no HIPAA claim).
+- `/blog/website-migration-cost-2026` opens with the answer (from $1,500 at a fixed price agreed first) and its title drops "Seven-Platform Scope Guide". `/blog/woocommerce-too-slow` names checkout and add to cart in its title.
+- `/services/wordpress` linked from the two WordPress articles; the running-cost guide linked from the Next.js hosting article.
+- Checked on the isolated build: 14 of 14 browser checks on the new pages across widths and engines, SEO crawl 160 URLs with 0 failures, link crawl with 0 broken links and 0 orphans, assistant 25 of 25.
 
 ## Recommended actions
 
