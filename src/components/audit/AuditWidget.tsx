@@ -40,7 +40,9 @@ export default function AuditWidget() {
 
   const resultHeading = useRef<HTMLHeadingElement>(null);
 
-  const field = "w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-charcoal";
+  // text-base (16px): the two selects inherited 14px from their labels, and iPhone Safari zooms
+  // the page when a field under 16px is focused (iPhone pass, 12 Oct 2026).
+  const field = "w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base text-charcoal";
 
   async function scan(e: React.FormEvent) {
 

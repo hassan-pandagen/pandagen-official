@@ -95,7 +95,9 @@ function RowList({ list, showRelationship, className = "" }: { list: PortfolioPr
                 className="work-name min-w-0 [overflow-wrap:anywhere] md:whitespace-nowrap"
                 style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(1.9rem, 3.6vw, 3.4rem)", lineHeight: 1, letterSpacing: "-0.02em" }}
               >
-                {r.name}
+                {/* 12 Oct 2026, iPhone pass: long one-word names broke mid-word ("MYCUSTOMPATCH / ES").
+                    A soft hyphen at each inner capital lets them break as "MYCUSTOM- / PATCHES". */}
+                {r.name.replace(/\b[A-Za-z]{13,}\b/g, (word) => word.replace(/([a-z])([A-Z])/g, "$1\u00AD$2"))}
               </span>
             </span>
 

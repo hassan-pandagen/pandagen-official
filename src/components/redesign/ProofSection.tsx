@@ -229,7 +229,13 @@ export default function ProofSection() {
         .proof-card-flip .proof-flip { transition: transform .6s cubic-bezier(.2,.7,.2,1); transform-style: preserve-3d; }
         .proof-card-flip:hover .proof-flip, .proof-card-flip:focus-within .proof-flip { transform: rotateY(180deg); }
         .proof-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
-        .proof-face-back { transform: rotateY(180deg); }
+        /* 12 Oct 2026, iPhone pass: a WebKit build drew the back face mirrored over the front
+           when backface-visibility was not honoured. The back now stays hidden until the card
+           is halfway through the flip, so no engine can show it reversed. */
+        .proof-card-flip .proof-flip { -webkit-transform-style: preserve-3d; }
+        .proof-face-front { transform: rotateY(0deg); }
+        .proof-face-back { transform: rotateY(180deg); visibility: hidden; transition: visibility 0s linear .3s; }
+        .proof-card-flip:hover .proof-face-back, .proof-card-flip:focus-within .proof-face-back { visibility: visible; transition-delay: .3s; }
         @media (prefers-reduced-motion: reduce) { .proof-card, .proof-card *, .proof-card-flip .proof-flip, .proof-records-link, .proof-records-link svg { transition: none !important; } }
       `}</style>
     </section>

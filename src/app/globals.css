@@ -715,3 +715,11 @@ body {
     .text-stone-500 { color: var(--color-stone-500); }
   }
 }
+
+/* 12 Oct 2026, iPhone pass: the cookie-preferences button sits at the top of the stacking
+   order so it stays reachable, but it floated over the open site menu and the quote form
+   (covering the submit area). Hide it while any modal menu or dialog is open; the closed
+   menu is inert, so it does not count. */
+body:has([role="dialog"][aria-modal="true"]:not([inert])) button[aria-label="Open cookie preferences"] {
+  display: none;
+}
