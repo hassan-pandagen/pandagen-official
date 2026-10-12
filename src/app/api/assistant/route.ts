@@ -1,6 +1,6 @@
 import { AsyncLocalStorage } from "node:async_hooks";
 import { after } from "next/server";
-import { asksAboutCost, retrieve, type Passage } from "@/lib/assistant/knowledge";
+import { asksAboutCost, retrieve, sourceLabel, type Passage } from "@/lib/assistant/knowledge";
 import { logQuestion, pageFrom } from "@/lib/assistant/log";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -483,7 +483,7 @@ async function answerTurns(turns: Turn[]): Promise<Answer> {
     .filter((p): p is Passage => Boolean(p))
     .filter((p) => (seen.has(p.url) ? false : (seen.add(p.url), true)))
     .slice(0, 3)
-    .map((p) => ({ title: p.title, url: p.url.replace("https://www.pandacodegen.com", "") }));
+    .map((p) => ({ title: sourceLabel(p), url: p.url.replace("https://www.pandacodegen.com", "") }));
 
   const ungrounded = ungroundedNumbers(reply.answer, context, turns);
   const debug = { model: reply.model, lang: lang.code, topics, context: context.map((p) => p.id), ungrounded, answered: reply.answered, at: Date.now() };

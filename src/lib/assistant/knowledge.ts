@@ -54,9 +54,31 @@ const SKIP_SECTIONS = /guides by topic|verification note/i;
 function pageFor(title: string): string {
   if (/commercial|pricing|price/i.test(title)) return `${BASE}/pricing`;
   if (/service/i.test(title)) return `${BASE}/services`;
-  if (/polic/i.test(title)) return `${BASE}/editorial-policy`;
+  if (/polic|verification/i.test(title)) return `${BASE}/editorial-policy`;
   if (/work|project|case/i.test(title)) return `${BASE}/work`;
+  if (/guide/i.test(title)) return `${BASE}/blog`;
   return `${BASE}/about`;
+}
+
+// 13 Oct 2026, owner: the chat showed "Company facts" as a source link, which reads like an
+// internal file name. llms.txt section titles stay as they are (retrieval matches on them);
+// this is only the label a visitor sees under an answer.
+const SITE_SOURCE_LABELS: [RegExp, string][] = [
+  [/commercial terms/i, "Pricing and terms"],
+  [/^services$/i, "Our services"],
+  [/polic/i, "Editorial policy"],
+  [/verification/i, "How we check claims"],
+  [/project records/i, "Our work"],
+  [/guides$/i, ""],
+];
+
+/** The source label shown under an answer. */
+export function sourceLabel(p: Passage): string {
+  if (!p.id.startsWith("site-")) return p.title;
+  const match = SITE_SOURCE_LABELS.find(([re]) => re.test(p.title));
+  // Guide sections already read well ("SEO and AI Search Guides"), so they keep their title.
+  if (match) return match[1] || p.title;
+  return "About PandaCodeGen";
 }
 
 function llmsPassages(): Passage[] {
