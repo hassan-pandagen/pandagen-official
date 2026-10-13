@@ -20,7 +20,8 @@ export function proxy() {
         "base-uri 'self'",
         "object-src 'none'",
         "frame-ancestors 'none'",
-        "form-action 'self'",
+        // www.facebook.com: the Meta pixel posts its events there as a form.
+        "form-action 'self' https://www.facebook.com",
     ];
     if (process.env.NODE_ENV === "production") {
         enforcedPolicy.push("upgrade-insecure-requests");
@@ -39,13 +40,13 @@ export function proxy() {
             "img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://www.facebook.com https://*.facebook.com https://widget.trustpilot.com https://cal.com https://app.cal.com",
             "font-src 'self' data: https://cal.com https://app.cal.com",
             "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com https://www.facebook.com https://connect.facebook.net https://cal.com https://app.cal.com https://api.cal.com https://vitals.vercel-insights.com",
-            "frame-src https://cal.com https://app.cal.com https://widget.trustpilot.com",
+            "frame-src https://cal.com https://app.cal.com https://widget.trustpilot.com https://www.facebook.com",
             "worker-src 'self' blob:",
             "manifest-src 'self'",
             "media-src 'self'",
             "object-src 'none'",
             "base-uri 'self'",
-            "form-action 'self'",
+            "form-action 'self' https://www.facebook.com",
             "frame-ancestors 'none'",
         ].join("; ")
     );

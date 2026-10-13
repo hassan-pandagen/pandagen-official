@@ -229,7 +229,7 @@ const nextConfig = {
               "base-uri 'self'",
               "object-src 'none'",
               "frame-ancestors 'none'",
-              "form-action 'self'",
+              "form-action 'self' https://www.facebook.com",
               'upgrade-insecure-requests',
             ].join('; '),
           },

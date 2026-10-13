@@ -4,7 +4,11 @@ import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { hasConsent } from '@/components/consent/ConsentProvider';
 
-const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID?.trim();
+// Meta pixel ID, set 13 Oct 2026. A pixel ID is public: every browser that
+// loads the pixel sends it to Meta. It lives here so the pixel works without a Vercel
+// setting; NEXT_PUBLIC_META_PIXEL_ID still overrides it if set. Before this, no ID
+// was set in production, so the pixel never loaded.
+const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID?.trim() || "2084250398990867";
 
 export default function FacebookPixel() {
   const pathname = usePathname();
@@ -38,18 +42,13 @@ export default function FacebookPixel() {
 
       const t = b.createElement(e);
       t.async = true;
-      t.defer = true;
       t.src = v;
       const s = b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t, s);
 
-      // Initialize pixel after loading
-      setTimeout(() => {
-        if ((window as any).fbq) {
-          (window as any).fbq('init', META_PIXEL_ID);
-          (window as any).fbq('track', 'PageView');
-        }
-      }, 100);
+      // Same order as Meta's own snippet: the stub queues these until fbevents.js runs.
+      n('init', META_PIXEL_ID);
+      n('track', 'PageView');
     };
 
     // Load on user interaction
