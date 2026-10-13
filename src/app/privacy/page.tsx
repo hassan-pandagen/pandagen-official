@@ -1,7 +1,5 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
@@ -52,7 +50,6 @@ export default function PrivacyPage() {
   return (
     <main className="bg-paper min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Header />
 
       <div className="pt-20 md:pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-4xl">
@@ -291,7 +288,6 @@ export default function PrivacyPage() {
         </div>
       </div>
 
-      <Footer />
     </main>
   );
 }

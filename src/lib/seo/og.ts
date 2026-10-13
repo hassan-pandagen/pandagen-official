@@ -264,7 +264,7 @@ export function ogImageUrlForPath(path: string) {
   return url.toString();
 }
 
-export function ogAltForPath(path: string) {
+function ogAltForPath(path: string) {
   const content = ogContentForPath(path);
   if (content.path.startsWith("/blog/") && blogPosts.some((post) => `/blog/${post.id}` === content.path)) {
     return `Editorial visual for ${content.title}`;

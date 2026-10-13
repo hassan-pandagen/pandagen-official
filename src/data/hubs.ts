@@ -313,7 +313,7 @@ export function hubBySlug(slug: string): Hub | undefined {
     return hubs.find((h) => h.slug === slug);
 }
 
-export function clusterForHub(hub: Hub): Cluster {
+function clusterForHub(hub: Hub): Cluster {
     return clusters.find((c) => c.id === hub.clusterId)!;
 }
 

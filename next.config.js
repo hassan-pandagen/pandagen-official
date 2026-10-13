@@ -37,7 +37,14 @@ const nextConfig = {
   // 4. Optimize package imports for better tree-shaking + performance
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
-    inlineCss: true,
+    // inlineCss off since 13 Oct 2026. Inlined, the site's ~270 KB of CSS was sent
+    // three times per page (once in <style>, twice more in the React payload, as
+    // the Next docs warn), so pages were ~1 MB of HTML. As stylesheets it is sent
+    // once and cached between pages. Local mobile Lighthouse, 3-run medians on
+    // four pages: HTML gzip 150-190 KB -> 30-60 KB, performance +3 to +10.
+    // cssChunking: 'graph' was also tried: ~12 KB less CSS per page, same scores,
+    // so the default chunking stays rather than reorder CSS on every page.
+    inlineCss: false,
     staticGenerationMaxConcurrency: 4,
     staticGenerationMinPagesPerWorker: 25,
   },

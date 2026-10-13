@@ -147,11 +147,6 @@ export const CLIENT_REVIEWS: readonly ClientReview[] = [
     },
 ];
 
-/** Everything except the review already featured in full on the current page. */
-export function otherReviews(excludeId: string): readonly ClientReview[] {
-    return CLIENT_REVIEWS.filter(r => r.id !== excludeId);
-}
-
 /**
  * A review's verbatim quote, by id.
  *

@@ -13,7 +13,7 @@ import {
   type ReactNode,
 } from "react";
 
-export const CONSENT_STORAGE_KEY = "pandacodegen_consent_v1";
+const CONSENT_STORAGE_KEY = "pandacodegen_consent_v1";
 const CONSENT_VERSION = 1;
 const CONSENT_MAX_AGE_MS = 180 * 24 * 60 * 60 * 1000;
 
@@ -98,7 +98,7 @@ function applyGlobalPrivacyControl(preferences: ConsentPreferences | null): Cons
     : preferences;
 }
 
-export function readStoredConsent(): ConsentPreferences | null {
+function readStoredConsent(): ConsentPreferences | null {
   if (typeof window === "undefined") return null;
   if (window.__PCG_CONSENT__) return applyGlobalPrivacyControl(window.__PCG_CONSENT__);
 

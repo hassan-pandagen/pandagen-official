@@ -3,8 +3,6 @@ import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowRight, CheckCircle2, AlertTriangle, TrendingUp, Link2, Search, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -141,7 +139,6 @@ export default function WillMigratingHurtSeoPage() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
             />
             <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-            <Header />
 
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
@@ -420,7 +417,6 @@ export default function WillMigratingHurtSeoPage() {
             <TopicUpLink postId="will-migrating-hurt-my-seo" />
 
             <RelatedPosts currentPostId="will-migrating-hurt-my-seo" />
-            <Footer />
         </main>
     );
 }

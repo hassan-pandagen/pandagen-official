@@ -97,7 +97,6 @@ export const PORTABILITY_GUIDE = {
   href: "/blog/website-portability",
   label: "Compare what eight website platforms let you export",
 } as const;
-export const PORTABILITY_GUIDE_PLANNED_HREF = "/blog/website-portability";
 
 export const STATUS_LABELS: Record<PortabilityStatus, string> = {
   exports: "Exports",

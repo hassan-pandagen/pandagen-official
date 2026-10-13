@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { COMPANY, FOUNDING_DATE, SERVICES, COMMERCIAL, MIGRATION_CONTROLS, REFERENCE_LINKS, PROJECTS, ORGANIZATION_DESCRIPTION, PHONE, BEST_FIT, NOT_A_FIT, WHEN_PEOPLE_COME, AI_DESCRIPTION_GUIDE } from "@/data/company-facts";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, FileCheck2, Gauge, Route, Search, ShieldCheck } from "lucide-react";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import FaqRows from "@/components/ui/FaqRows";
 import { ogImageForPath } from "@/lib/seo/og";
 
@@ -179,7 +177,6 @@ export default function CompanyReferencePage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-paper text-charcoal">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Header />
 
       <article>
         <header className="border-b border-stone-300 px-6 pb-16 pt-28 md:pb-24 md:pt-40">
@@ -429,7 +426,6 @@ export default function CompanyReferencePage() {
         </section>
       </article>
 
-      <Footer />
     </main>
   );
 }

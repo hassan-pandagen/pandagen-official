@@ -498,7 +498,7 @@ export const topicalBoundary = {
 // ─────────────────────────────────────────────────────────────────────────────
 
 /** Clusters that contain a given post id. */
-export function getClustersForPost(postId: string): Cluster[] {
+function getClustersForPost(postId: string): Cluster[] {
   return clusters.filter((c) => c.postIds.includes(postId));
 }
 
@@ -608,27 +608,4 @@ export function getRelatedPostIds(postId: string, orderedAllIds: string[], max =
   }
   if (shown(oldIds).some((id) => TITLE_PILOT_PAGES.has(id))) return oldIds.slice(0, max);
   return byHash.map((s) => s.id).filter((id) => !TITLE_PILOT_PAGES.has(id)).slice(0, max);
-}
-
-/** All service pillar hrefs known to the map (deduped, in declaration order). */
-export const servicePillarHrefs: string[] = Array.from(
-  new Set(clusters.map((c) => c.pillarHref).filter((h): h is string => !!h && h.startsWith('/services')))
-);
-
-/**
- * Returns service pillar hrefs ordered by topical adjacency to the current
- * service. The current service's related clusters come first (closest topical
- * neighbours), then the rest. Drives RelatedServicesGrid ordering instead of a
- * static array.
- */
-export function getRelatedServiceHrefs(currentHref: string): string[] {
-  const current = clusters.find((c) => c.pillarHref === currentHref);
-  const related = current
-    ? current.relatedClusterIds
-        .map((id) => clusters.find((c) => c.id === id)?.pillarHref)
-        .filter((h): h is string => !!h && h.startsWith('/services') && h !== currentHref)
-    : [];
-
-  const rest = servicePillarHrefs.filter((h) => h !== currentHref && !related.includes(h));
-  return [...related, ...rest];
 }

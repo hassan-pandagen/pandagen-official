@@ -3,8 +3,6 @@ import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -147,7 +145,6 @@ export default function ShopifySpeedOptimizationPage() {
         <main className="min-h-screen bg-paper text-charcoal overflow-x-hidden">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
-            <Header />
 
             <article className="pt-28 md:pt-32 pb-12 md:pb-24">
                 <div className="container mx-auto px-6">
@@ -568,7 +565,6 @@ export default function ShopifySpeedOptimizationPage() {
                 </div>
             </article>
 
-            <Footer />
         </main>
     );
 }

@@ -1,7 +1,5 @@
 import { POST_LAUNCH_SUPPORT } from "@/data/company-facts";
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import { ogImageForPath } from "@/lib/seo/og";
 
 export const metadata: Metadata = {
@@ -152,7 +150,6 @@ export default function TermsPage() {
   return (
     <main className="min-h-screen bg-paper text-charcoal">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Header />
       <div className="px-6 pb-20 pt-28 md:pt-36">
         <div className="mx-auto max-w-4xl">
           <header className="mb-14">
@@ -171,7 +168,6 @@ export default function TermsPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </main>
   );
 }

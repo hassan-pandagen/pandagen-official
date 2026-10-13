@@ -75,7 +75,7 @@ export const periods = raw.periods as string[];
 export const source = raw.source as SeriesSource;
 export const platforms = raw.platforms as unknown as Platform[];
 
-export function platform(name: string): Platform {
+function platform(name: string): Platform {
     const found = platforms.find((p) => p.name === name);
     if (!found) {
         throw new Error(

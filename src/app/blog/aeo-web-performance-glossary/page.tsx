@@ -3,8 +3,6 @@ import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowRight, BookMarked, Hash } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -258,7 +256,6 @@ export default function GlossaryPage() {
   return (
     <main className="bg-paper min-h-screen overflow-x-hidden">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <Header />
 
       <article>
       <section className="relative pt-24 md:pt-40 pb-10 px-6">
@@ -635,7 +632,6 @@ export default function GlossaryPage() {
       </section>
       </article>
 
-      <Footer />
     </main>
   );
 }

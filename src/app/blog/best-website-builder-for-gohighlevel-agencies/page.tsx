@@ -3,8 +3,6 @@ import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowRight, Zap, Scale } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -151,7 +149,6 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
             />
-            <Header />
 
             <article>
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
@@ -669,7 +666,6 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
             <RelatedPosts currentPostId="best-website-builder-for-gohighlevel-agencies" />
             </article>
 
-            <Footer />
         </main>
     );
 }

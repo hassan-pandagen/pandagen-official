@@ -159,7 +159,7 @@ export function verifiedMetrics(slug: string): CaseStudyMetric[] {
 }
 
 /** Metrics currently pulled. Every surface renders the note instead of the number. */
-export function withdrawnMetrics(slug: string): CaseStudyMetric[] {
+function withdrawnMetrics(slug: string): CaseStudyMetric[] {
     return caseStudy(slug).metrics.filter(m => m.status === 'withdrawn');
 }
 
@@ -210,7 +210,7 @@ export function isDemo(slug: string): boolean {
  * it searches for the real withdrawn values leaking, and 95 was never a real
  * value of anything.
  */
-export function metricValue(slug: string, id: string): string | null {
+function metricValue(slug: string, id: string): string | null {
     const metric = caseStudy(slug).metrics.find(m => m.id === id);
     if (!metric || metric.status !== 'verified') return null;
     return metric.value ?? null;
@@ -234,11 +234,6 @@ export function requiredMetric(slug: string, id: string): string {
         );
     }
     return value;
-}
-
-/** True when anything is withdrawn, so surfaces know to show the disclosure. */
-export function hasWithdrawn(slug: string): boolean {
-    return withdrawnMetrics(slug).length > 0;
 }
 
 /**

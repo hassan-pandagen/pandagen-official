@@ -71,10 +71,6 @@ export function spec(id: string): SpecFact {
     return found;
 }
 
-export function allSpecIds(): string[] {
-    return Object.keys(SPECS);
-}
-
 const MONTHS = [
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December',
@@ -104,10 +100,4 @@ export function datedFact(id: string): string {
     const s = spec(id);
     const subject = s.plan ? `${s.vendor}'s ${s.plan} plan` : s.vendor;
     return `${subject} ${s.label.toLowerCase()} is ${s.value}, as of ${asOf(id)}`;
-}
-
-/** Days since a spec was verified, for freshness reporting. */
-export function ageInDays(id: string, today = new Date()): number {
-    const then = new Date(spec(id).verifiedAt + 'T00:00:00Z');
-    return Math.floor((today.getTime() - then.getTime()) / 86_400_000);
 }

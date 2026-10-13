@@ -15,7 +15,7 @@ export const SITE_URL = "https://www.pandacodegen.com";
 export const locales = ["en", "fr", "de"] as const;
 export type Locale = (typeof locales)[number];
 
-export const defaultLocale: Locale = "en";
+const defaultLocale: Locale = "en";
 
 /** Locale names written in their own language, for the visible switcher. */
 export const localeNames: Record<Locale, string> = {
@@ -59,10 +59,6 @@ export const routes: Record<LocalizedPage, Record<Locale, string>> = {
   about: { en: "/about", fr: "/fr/about", de: "/de/about" },
 };
 
-export function pathFor(page: LocalizedPage, locale: Locale): string {
-  return routes[page][locale];
-}
-
 export function urlFor(page: LocalizedPage, locale: Locale): string {
   const path = routes[page][locale];
   return path === "/" ? SITE_URL : `${SITE_URL}${path}`;
@@ -72,7 +68,7 @@ export function urlFor(page: LocalizedPage, locale: Locale): string {
  * Reciprocal hreflang set for one page: every locale (including the page's own
  * locale) plus x-default pointing at English.
  */
-export function languageAlternates(page: LocalizedPage): Record<string, string> {
+function languageAlternates(page: LocalizedPage): Record<string, string> {
   const languages: Record<string, string> = {};
   for (const locale of locales) {
     languages[locale] = urlFor(page, locale);

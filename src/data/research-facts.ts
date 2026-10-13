@@ -78,24 +78,3 @@ export function finding(id: string): ResearchFinding {
     }
     return found;
 }
-
-export function allFindingIds(): string[] {
-    return Object.keys(FINDINGS);
-}
-
-/**
- * The statement with its attribution, ready to render.
- *
- * "95.9% of the top one million home pages had detected WCAG 2 failures, up from
- *  94.8% in 2025 (The WebAIM Million 2026, WebAIM)"
- */
-export function cite(id: string): string {
-    const f = finding(id);
-    return `${f.statement} (${f.study}, ${f.publisher.split(',')[0]})`;
-}
-
-/** Age in days, so a yearly study can be re-checked when its next edition is due. */
-export function findingAgeInDays(id: string, today = new Date()): number {
-    const then = new Date(finding(id).verifiedAt + 'T00:00:00Z');
-    return Math.floor((today.getTime() - then.getTime()) / 86_400_000);
-}

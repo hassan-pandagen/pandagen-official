@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowDown, ArrowRight, ArrowUpRight, Mail } from "lucide-react";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import { ogImageForPath } from "@/lib/seo/og";
 
 export const metadata: Metadata = {
@@ -68,7 +66,6 @@ const pageSchema = {
 export default function EditorialPolicyPage() {
   return (
     <div className="min-h-screen bg-paper text-charcoal">
-      <Header />
       <main>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
         <section className="px-5 pb-12 pt-32 sm:px-8 md:pb-16 md:pt-40" aria-labelledby="policy-title">
@@ -198,7 +195,6 @@ export default function EditorialPolicyPage() {
           </div>
         </div>
       </main>
-      <Footer showCta={false} />
     </div>
   );
 }

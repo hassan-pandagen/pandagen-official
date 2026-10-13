@@ -17,7 +17,6 @@ import {
   useRef,
   useState,
   type CSSProperties,
-  type ReactNode,
 } from "react";
 
 type AnyProps = Record<string, any>;
@@ -139,7 +138,3 @@ export const motion = new Proxy({} as Record<string, ReturnType<typeof createCom
     return cache[key];
   },
 });
-
-export function AnimatePresence({ children }: { children: ReactNode; mode?: string; initial?: boolean; onExitComplete?: () => void }) {
-  return <>{children}</>;
-}

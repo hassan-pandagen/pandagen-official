@@ -4,8 +4,6 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -157,7 +155,6 @@ const shownIdx = SHOWN.map((p) => periods.indexOf(p));
 export default function CmsMarketShare2026Page() {
     return (
         <>
-            <Header />
             <main className="min-h-screen overflow-x-hidden bg-paper pb-10 pt-16 text-charcoal selection:bg-stone-200">
                 <article className="mx-auto max-w-3xl rounded-2xl border border-stone-200 bg-white px-8 py-10 shadow-xs md:px-14">
                     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
@@ -433,7 +430,6 @@ export default function CmsMarketShare2026Page() {
                     <RelatedPosts currentPostId={postId} />
                 </article>
             </main>
-            <Footer />
         </>
     );
 }

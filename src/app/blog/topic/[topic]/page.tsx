@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { ogImageForPath } from "@/lib/seo/og";
 import { blogPosts } from "@/data/blog";
@@ -163,7 +161,6 @@ export default async function TopicHubPage({ params }: Params) {
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-            <Header />
             <main className="min-h-screen bg-paper">
                 <div className="container mx-auto max-w-4xl px-6 pt-28 pb-16 md:pt-36">
                     <Breadcrumb items={hubCrumbs(hub)} />
@@ -274,7 +271,6 @@ export default async function TopicHubPage({ params }: Params) {
                     </nav>
                 </div>
             </main>
-            <Footer />
         </>
     );
 }

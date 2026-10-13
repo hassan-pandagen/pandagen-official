@@ -4,8 +4,6 @@ import { ArrowLeft, ArrowRight, Boxes, Code2, Pencil, Scale } from "lucide-react
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import { requiredMetric } from "@/data/case-study-facts";
@@ -129,7 +127,6 @@ const inlineLinkClass =
 export default function WixVsCustomWebsitePage() {
     return (
         <>
-            <Header />
             <main className="min-h-screen bg-white pb-24 pt-28">
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
                 <article className="mx-auto max-w-4xl px-5 sm:px-8">
@@ -475,7 +472,6 @@ export default function WixVsCustomWebsitePage() {
                     <RelatedPosts currentPostId={postId} />
                 </article>
             </main>
-            <Footer />
         </>
     );
 }

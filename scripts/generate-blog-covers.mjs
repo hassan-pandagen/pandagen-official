@@ -77,8 +77,8 @@ for (const post of posts) {
   const keepPhoto = photoKeeper.get(photo) === post.id && post.id !== "how-to-speed-up-your-website";
   const filename = `${post.id}.webp`;
   const sourcePhoto = keepPhoto
-    ? path.join(root, "public", "blog-photo-sources", photoSources[photo])
-    : path.join(root, "public", "blog-photo-sources", "unique", filename);
+    ? path.join(root, "assets", "blog-photo-sources", photoSources[photo])
+    : path.join(root, "assets", "blog-photo-sources", "unique", filename);
   try {
     await access(sourcePhoto);
   } catch {

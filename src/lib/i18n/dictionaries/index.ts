@@ -9,7 +9,7 @@ import de from "./de";
  */
 export type TranslatedLocale = Exclude<Locale, "en">;
 
-export const dictionaries: Record<TranslatedLocale, Dictionary> = { fr, de };
+const dictionaries: Record<TranslatedLocale, Dictionary> = { fr, de };
 
 export function getDictionary(locale: TranslatedLocale): Dictionary {
   return dictionaries[locale];

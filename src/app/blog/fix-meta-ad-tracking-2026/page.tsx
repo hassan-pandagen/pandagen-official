@@ -5,8 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -162,7 +160,6 @@ const sourceLinkClass = "font-semibold text-cognac underline decoration-cognac/3
 export default function MetaAdTrackingGuide() {
     return (
         <>
-            <Header />
             <main className="min-h-screen bg-white pb-24 pt-28">
                 <script
                     type="application/ld+json"
@@ -574,7 +571,6 @@ export default function MetaAdTrackingGuide() {
                     <RelatedPosts currentPostId={postId} />
                 </article>
             </main>
-            <Footer />
         </>
     );
 }

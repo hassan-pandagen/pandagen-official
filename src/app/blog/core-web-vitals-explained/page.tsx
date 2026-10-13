@@ -4,8 +4,6 @@ import { Activity, ArrowLeft, ArrowRight, CheckCircle2, Gauge, MousePointerClick
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -138,7 +136,6 @@ const inlineLinkClass = "font-medium text-cognac hover:underline";
 export default function CoreWebVitalsExplainedPage() {
     return (
         <>
-            <Header />
             <main className="min-h-screen overflow-x-hidden bg-paper pb-10 pt-16 text-charcoal selection:bg-stone-200 selection:text-stone-900 md:pb-20 md:pt-32">
                 <article className="mx-auto max-w-3xl rounded-2xl border border-stone-200 bg-white px-8 py-10 shadow-xs md:px-14">
                     <script
@@ -530,7 +527,6 @@ export default function CoreWebVitalsExplainedPage() {
                     <RelatedPosts currentPostId={postId} />
                 </article>
             </main>
-            <Footer />
         </>
     );
 }

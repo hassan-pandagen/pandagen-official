@@ -3,8 +3,6 @@ import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowRight, Scale, AlertTriangle, CheckCircle2, TrendingDown } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -121,7 +119,6 @@ export default function BuildVsBuySoftware2026Page() {
     return (
         <main className="bg-paper min-h-screen overflow-x-hidden">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-            <Header />
 
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
@@ -361,7 +358,6 @@ export default function BuildVsBuySoftware2026Page() {
                 </article>
             </section>
 
-            <Footer />
         </main>
     );
 }

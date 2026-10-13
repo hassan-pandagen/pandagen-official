@@ -4,8 +4,6 @@ import { ArrowLeft, ArrowRight, CheckCircle2, Gauge, Microscope, Route } from "l
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -156,7 +154,6 @@ const sourceLinkClass = "font-semibold text-cognac underline decoration-cognac/3
 export default function HighLevelSpeedGuide() {
     return (
         <>
-            <Header />
             <main className="min-h-screen bg-white pb-24 pt-28">
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
                 <article className="mx-auto max-w-4xl px-5 sm:px-8">
@@ -645,7 +642,6 @@ export default function HighLevelSpeedGuide() {
                     <RelatedPosts currentPostId={postId} />
                 </article>
             </main>
-            <Footer />
         </>
     );
 }

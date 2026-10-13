@@ -4,8 +4,6 @@ import { ArrowLeft, ArrowRight, CheckCircle2, Gauge, Search, Wrench } from "luci
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -160,7 +158,6 @@ const sourceLinkClass = "font-medium text-cognac underline underline-offset-4 ho
 export default function DiviThemeSlowPage() {
     return (
         <>
-            <Header />
             <main className="min-h-screen overflow-x-hidden bg-paper pb-10 pt-16 text-charcoal md:pb-20 md:pt-32">
                 <article className="mx-auto max-w-3xl rounded-2xl border border-stone-200 bg-white px-8 py-10 shadow-xs md:px-14">
                     <script
@@ -594,7 +591,6 @@ export default function DiviThemeSlowPage() {
                     <RelatedPosts currentPostId={postId} />
                 </article>
             </main>
-            <Footer />
         </>
     );
 }

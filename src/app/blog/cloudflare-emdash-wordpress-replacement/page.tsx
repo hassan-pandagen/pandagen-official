@@ -3,8 +3,6 @@ import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -225,7 +223,6 @@ const internalLinkClass = "text-charcoal underline decoration-stone-400 underlin
 export default function CloudflareEmDashPage() {
     return (
         <>
-            <Header />
             <main className="relative min-h-screen overflow-x-hidden bg-paper pt-16 pb-10 text-charcoal selection:bg-stone-200 selection:text-stone-900 md:pt-32 md:pb-20">
                 <div className="pointer-events-none fixed inset-0 z-50 bg-noise opacity-[0.03]" />
 
@@ -655,7 +652,6 @@ export default function CloudflareEmDashPage() {
                     <RelatedPosts currentPostId="cloudflare-emdash-wordpress-replacement" />
                 </article>
             </main>
-            <Footer />
         </>
     );
 }

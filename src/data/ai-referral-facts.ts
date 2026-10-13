@@ -67,9 +67,6 @@ export const outlier = DATA.outlierDisclosure;
 /** Rows sorted by revenue, which is the order a reader scans for. */
 export const rows: SourceRow[] = [...DATA.bySource].sort((a, b) => b.revenueUsd - a.revenueUsd);
 
-/** Kinds that are not acquisition channels, so a like-for-like share can be taken. */
-const NON_ACQUISITION = new Set(['retention', 'unclassified']);
-
 export const totalOrders = rows.reduce((n, r) => n + r.orders, 0);
 export const totalRevenue = rows.reduce((n, r) => n + r.revenueUsd, 0);
 
@@ -92,10 +89,6 @@ export const aiRows = rows.filter((r) => r.kind === 'ai-assistant');
 export const aiOrders = aiRows.reduce((n, r) => n + r.orders, 0);
 export const aiRevenue = aiRows.reduce((n, r) => n + r.revenueUsd, 0);
 
-const acquisitionRevenue = rows
-    .filter((r) => !NON_ACQUISITION.has(r.kind))
-    .reduce((n, r) => n + r.revenueUsd, 0);
-
 export function row(source: string): SourceRow {
     const found = rows.find((r) => r.source === source);
     if (!found) throw new Error(`No source "${source}" in ai-referral-data.json.`);
@@ -109,9 +102,6 @@ export const pct = (n: number, of: number) => `${((n / of) * 100).toFixed(1)}%`;
 
 /** AI as a share of ALL revenue. The conservative figure, used in the headline. */
 export const aiShareOfAll = pct(aiRevenue, totalRevenue);
-
-/** AI as a share of ACQUISITION revenue, excluding retention and unclassified. */
-export const aiShareOfAcquisition = pct(aiRevenue, acquisitionRevenue);
 
 export const siteAov = totalRevenue / totalOrders;
 

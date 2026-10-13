@@ -9,7 +9,7 @@ if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id ?? "") || !source) {
 }
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const out = path.join(root, "public", "blog-photo-sources", "unique");
+const out = path.join(root, "assets", "blog-photo-sources", "unique");
 await mkdir(out, { recursive: true });
 await sharp(source).webp({ quality: 85, effort: 5 }).toFile(path.join(out, `${id}.webp`));
 console.log(`Imported ${id}`);

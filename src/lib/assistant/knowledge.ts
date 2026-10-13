@@ -244,20 +244,12 @@ function getIndex(): Index {
   return index;
 }
 
-/**
- * Changes whenever any passage changes. Cached answers are keyed on it, so a
- * corrected fact on the site can never be answered from a cache made before it.
- */
-export function knowledgeVersion(): string {
-  return getIndex().version;
-}
-
 /** Always sent, whatever the question: who we are and the commercial terms. */
-export function corePassages(): Passage[] {
+function corePassages(): Passage[] {
   return getIndex().passages.filter((p) => /company facts|commercial terms/i.test(p.title));
 }
 
-export function search(query: string, k = 6): Passage[] {
+function search(query: string, k = 6): Passage[] {
   const { passages, docs, df, avgLen } = getIndex();
   const q = [...new Set(tokens(query))];
   if (!q.length) return [];
@@ -283,6 +275,8 @@ export function search(query: string, k = 6): Passage[] {
     .map((s) => passages[s.i]);
 }
 
+// passageCount and unresolvedPins have no caller in the site. They stay exported as
+// self-checks for the local assistant verification scripts (13 Oct 2026).
 export function passageCount(): number {
   return getIndex().passages.length;
 }
@@ -325,7 +319,6 @@ function platformsIn(query: string): string[] {
 // "packages" and "retainer" added 3 Oct 2026: "Do you have monthly packages?"
 // counted as not asking about cost, so the answer couldn't name the AI SEO price.
 const COST = /\b(costs?|prices?|pricing|how much|budget|afford|expensive|cheap|quotes?|rates?|fees?|packages?|retainers?)\b|\$/i;
-const STORE = /\b(stores?|shops?|e-?commerce|products?|catalog(ue)?s?|skus?|woocommerce|shopify)\b/i;
 const PRODUCT_COUNT = /\b\d{2,}\s*(products?|items?|skus?)\b/i;
 
 const TOPICS: Topic[] = [

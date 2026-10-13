@@ -15,11 +15,10 @@ import { DISPLAY, T } from "@/components/redesign/tokens";
 // pages" as an opening question for someone who has a business problem but no
 // site plan yet; and it made an already-long homepage longer for what is,
 // after three questions, still just a hand-off to a human. The homepage now
-// states the price model in two lines and links onward. The quiz itself isn't
-// deleted -- src/lib/tier-quiz.ts and src/components/sections/TierQuiz.tsx are
-// untouched -- moving it onto /pricing itself is the next pass, not done
-// here, so for now the "Explore pricing" link goes to the existing page as
-// it stands today.
+// states the price model in two lines and links onward, and the "Explore
+// pricing" link goes to the existing page. TierQuiz.tsx was later deleted, and
+// its questions file src/lib/tier-quiz.ts went in the 13 Oct 2026 launch
+// cleanup; both are in git history if the quiz ever moves onto /pricing.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function PricingFinder() {

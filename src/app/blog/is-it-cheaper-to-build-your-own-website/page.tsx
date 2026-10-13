@@ -3,8 +3,6 @@ import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Wallet } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -92,7 +90,6 @@ export default function IsItCheaperPage() {
     return (
         <main className="bg-paper min-h-screen overflow-x-hidden">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-            <Header />
             <section className="relative pt-24 md:pt-40 pb-10 px-5 md:px-6">
                 <div className="max-w-3xl mx-auto">
                     <Breadcrumb items={postCrumbs(postId, "Is it cheaper to build your own website")} />
@@ -260,7 +257,6 @@ export default function IsItCheaperPage() {
                     <RelatedPosts currentPostId={postId} />
                 </article>
             </section>
-            <Footer showCta={false} />
         </main>
     );
 }

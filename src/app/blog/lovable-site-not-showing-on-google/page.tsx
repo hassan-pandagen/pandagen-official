@@ -4,8 +4,6 @@ import { ArrowLeft, ArrowRight, Bot, CheckCircle2, Code2, SearchCheck } from "lu
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -145,7 +143,6 @@ const sourceLinkClass =
 export default function LovableSiteNotShowingPage() {
     return (
         <>
-            <Header />
             <main className="min-h-screen bg-white pb-24 pt-28">
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
                 <article className="mx-auto max-w-4xl px-5 sm:px-8">
@@ -503,7 +500,6 @@ export default function LovableSiteNotShowingPage() {
                     <RelatedPosts currentPostId={postId} />
                 </article>
             </main>
-            <Footer />
         </>
     );
 }

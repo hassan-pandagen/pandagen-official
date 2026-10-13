@@ -1,11 +1,9 @@
 import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { FOUNDING_DATE } from "@/data/company-facts";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
-import { ArrowRight, CheckCircle2, Zap, Scale, TrendingUp, AlertTriangle } from "lucide-react";
+import { ArrowRight, Zap, Scale } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -159,7 +157,6 @@ export default function AEOPlaybookPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
             />
-            <Header />
 
             <article>
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
@@ -741,7 +738,6 @@ export default function AEOPlaybookPage() {
             <RelatedPosts currentPostId="aeo-playbook-built-into-every-website" />
             </article>
 
-            <Footer />
         </main>
     );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import Lenis from "lenis";
+import type Lenis from "lenis";
 import { useEffect } from "react";
 
 // Matches `scroll-padding-top` on html in globals.css, so the native hash jump
@@ -12,6 +12,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const desktopViewport = window.matchMedia("(min-width: 768px)");
     let lenis: Lenis | null = null;
+    let loading = false;
     let disposed = false;
 
     const destroyLenis = () => {
@@ -19,17 +20,29 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       lenis = null;
     };
 
-    const init = () => {
-      if (lenis || disposed || reducedMotion.matches || !desktopViewport.matches) return;
+    const wanted = () => !disposed && !reducedMotion.matches && desktopViewport.matches;
 
-      lenis = new Lenis({
-        autoRaf: true,
-        lerp: 0.12,
-        smoothWheel: true,
-        wheelMultiplier: 1,
-        // Anchors are handled below instead of by Lenis. See onAnchorClick.
-        anchors: false,
-        stopInertiaOnNavigate: true,
+    // 13 Oct 2026: Lenis is fetched only once a desktop visitor without reduced
+    // motion needs it, so phones and reduced-motion visitors never download it.
+    const init = () => {
+      if (lenis || loading || !wanted()) return;
+      loading = true;
+      import("lenis").then(({ default: LenisScroll }) => {
+        loading = false;
+        // The viewport or motion setting may have changed while it loaded.
+        if (lenis || !wanted()) return;
+        lenis = new LenisScroll({
+          autoRaf: true,
+          lerp: 0.12,
+          smoothWheel: true,
+          wheelMultiplier: 1,
+          // Anchors are handled below instead of by Lenis. See onAnchorClick.
+          anchors: false,
+          stopInertiaOnNavigate: true,
+        });
+      }, () => {
+        // Native scrolling carries on if the chunk fails to load.
+        loading = false;
       });
     };
 

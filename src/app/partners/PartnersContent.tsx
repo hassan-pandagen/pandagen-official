@@ -3,19 +3,12 @@
 import { motion } from "@/components/ui/motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import PartnerModels from "@/components/partners/PartnerModels";
 import FaqRows from "@/components/ui/FaqRows";
 import { POST_LAUNCH_SUPPORT } from "@/data/company-facts";
 import { partnerFaqs } from "@/data/partner-faqs";
-import { useState } from "react";
-import dynamic from "next/dynamic";
 import hover from "./PartnersHover.module.css";
 
-// Lazy load: QuoteModal pulls in framer-motion (~37KB gzipped). Stays out of the
-// Partners page static bundle until a partner clicks "Send brief" / opens the modal.
-const QuoteModal = dynamic(() => import("@/components/ui/QuoteModal"), { ssr: false });
 const anton = { className: "font-anton-face" };
 
 const processSteps = [
@@ -45,13 +38,12 @@ const processSteps = [
   },
 ];
 
-export default function PartnersContent() {
-  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+// The site nav owns the page's one quote form; these buttons ask it to open.
+const openQuote = () => window.dispatchEvent(new Event("open-quote-modal"));
 
+export default function PartnersContent() {
   return (
     <main data-page="partners" className={`bg-paper min-h-screen overflow-x-hidden relative text-charcoal ${hover.root}`}>
-
-      <Header onOpenQuote={() => setIsQuoteModalOpen(true)} />
 
       {/* 1. HERO — empathetic anti-middleman positioning */}
       <section className="relative border-b border-stone-300 bg-paper px-6 pb-12 pt-28 md:pb-14 md:pt-40">
@@ -109,7 +101,7 @@ export default function PartnersContent() {
             className="flex flex-col sm:flex-row gap-4"
           >
             <button
-              onClick={() => setIsQuoteModalOpen(true)}
+              onClick={openQuote}
               className="inline-flex items-center justify-center gap-2 bg-charcoal px-8 py-4 font-bold text-white transition-colors hover:bg-cognac"
             >
               Apply for Partnership <ArrowRight className="w-5 h-5" />
@@ -258,7 +250,7 @@ export default function PartnersContent() {
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <button
-                onClick={() => setIsQuoteModalOpen(true)}
+                onClick={openQuote}
                 className="inline-flex items-center justify-center gap-2 bg-white px-8 py-4 font-bold text-charcoal hover:bg-orange-300"
               >
                 Apply for Partnership <ArrowRight className="w-5 h-5" />
@@ -310,8 +302,6 @@ export default function PartnersContent() {
         </div>
       </section>
 
-      <Footer onOpenQuote={() => setIsQuoteModalOpen(true)} />
-      <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </main>
   );
 }

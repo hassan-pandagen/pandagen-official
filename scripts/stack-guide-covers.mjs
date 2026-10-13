@@ -12,7 +12,7 @@ const covers = {
   "sanity-vs-wordpress": ["public/work/panda-patches-editor-blog.png", "top", { left: 352, top: 52, width: 1268, height: 862 }],
   "sanity-vs-supabase": ["public/work/a-step-above-medical-portal-dashboard.png", "left top"],
   "product-catalog-website-without-cart": ["public/work/emblematic-studio-library.png", "top"],
-  "website-monthly-running-cost": ["public/blog-photo-sources/server-cables.webp", "attention"],
+  "website-monthly-running-cost": ["assets/blog-photo-sources/server-cables.webp", "attention"],
 };
 for (const [id, [source, position, region]] of Object.entries(covers)) {
   // region: crop to the useful part of a wide screenshot first, so cards show the content.

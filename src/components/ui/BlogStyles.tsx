@@ -44,37 +44,6 @@ export function BlogQuote({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Comparison Table for Blog
-export function ComparisonTable() {
-  return (
-    <div className="my-12 border border-stone-200 rounded-2xl overflow-hidden shadow-card">
-      <div className="grid grid-cols-3 bg-stone-50 p-5 border-b border-stone-200 font-bold text-charcoal text-sm md:text-base uppercase tracking-wider">
-        <div>Feature</div>
-        <div className="text-red-600">Current system</div>
-        <div className="text-charcoal">Proposed system</div>
-      </div>
-      <TableRow label="Operating cost" bad="Use current invoices" good="Use a dated written estimate" />
-      <TableRow label="Security" bad="Document current controls" good="Document target controls" />
-      <TableRow label="Performance" bad="Measure representative pages" good="Define a comparable target method" />
-      <div className="grid grid-cols-3 p-5 bg-stone-50 text-charcoal font-bold border-t border-stone-200">
-        <div>Decision basis</div>
-        <div className="text-red-600">Verified baseline</div>
-        <div className="text-charcoal">Comparable scope</div>
-      </div>
-    </div>
-  );
-}
-
-function TableRow({ label, bad, good }: { label: string; bad: string; good: string }) {
-  return (
-    <div className="grid grid-cols-3 p-5 border-b border-stone-200 text-sm md:text-lg hover:bg-stone-50 transition-colors">
-      <div className="text-charcoal font-medium">{label}</div>
-      <div className="text-stone-600">{bad}</div>
-      <div className="text-charcoal font-bold">{good}</div>
-    </div>
-  );
-}
-
 // ─── InsightBox ────────────────────────────────────────────────────────────────
 // Usage: <InsightBox variant="warning">Google penalises slow sites.</InsightBox>
 // Variants: "info" (blue) | "warning" (orange) | "tip" (green) | "danger" (red)
@@ -208,15 +177,14 @@ export function BlogAuthor({
   name = "Hassan Jamal",
   role = "Co-Founder & Lead Engineer · PandaCodeGen",
   bio,
-  linkedIn,
   date,
   postId,
   published,
   readTime,
 }: BlogAuthorProps) {
   // The byline name links to the author page, not to LinkedIn. A reader asking "who wrote
-  // this?" should land on the background, not on a social profile. LinkedIn stays available
-  // as a separate labelled link below.
+  // this?" should land on the background, not on a social profile. The byline no longer
+  // renders `linkedIn`; the author pages carry the LinkedIn link.
   const authorHref = name.trim().toLowerCase().startsWith("imran")
     ? "/about/imran"
     : "/about/hassan";

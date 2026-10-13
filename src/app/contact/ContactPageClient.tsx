@@ -4,8 +4,6 @@ import { ArrowDown, ArrowUpRight, CheckCircle2, ChevronDown, Mail, Send } from "
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
 import { getAttribution } from "@/lib/analytics/trafficSource";
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
@@ -151,7 +149,6 @@ export default function ContactPageClient() {
   return (
     <div data-page="contact" className="min-h-screen bg-paper text-charcoal">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
-      <Header />
       <main>
       <section className="bg-[#1C1917] px-5 pb-16 pt-28 sm:px-8 md:pb-20 md:pt-36" style={{ color: T.onDark }}>
         <div className="mx-auto grid max-w-6xl items-start gap-10 lg:grid-cols-[1fr_1.12fr] lg:gap-16">
@@ -284,7 +281,6 @@ export default function ContactPageClient() {
         </div>
       </section>
       </main>
-      <Footer showCta={false} />
     </div>
   );
 }

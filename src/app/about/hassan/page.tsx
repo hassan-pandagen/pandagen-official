@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import FounderRoleStack from "@/components/about/FounderRoleStack";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import { blogPosts } from "@/data/blog";
 import { ogImageForPath } from "@/lib/seo/og";
 
@@ -96,7 +94,6 @@ export default function HassanProfilePage() {
   return (
     <main className="min-h-screen overflow-x-clip bg-paper text-charcoal">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema) }} />
-      <Header />
 
       <section className="border-b border-stone-300 px-6 pb-16 pt-28 md:pb-24 md:pt-40">
         <div className="mx-auto max-w-6xl">
@@ -249,7 +246,6 @@ export default function HassanProfilePage() {
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

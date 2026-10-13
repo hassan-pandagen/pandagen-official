@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
 import { ArrowRight, Gauge, ListChecks, ShieldCheck } from "lucide-react";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import { ogImageForPath } from "@/lib/seo/og";
 
 const AuditWidget = dynamicImport(() => import("@/components/audit/AuditWidget"));
@@ -80,7 +78,6 @@ export default function FreeAuditPage() {
   return (
     <main className="min-h-screen bg-paper text-charcoal">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Header />
 
       <section className="border-b border-stone-300 px-6 pb-16 pt-28 md:pb-24 md:pt-40">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
@@ -150,7 +147,6 @@ export default function FreeAuditPage() {
         <h2 className="mt-8 text-2xl font-bold">Does a good result mean everything works?</h2>
         <p className="mt-4 leading-7">No. These checks are a technical snapshot, not a complete crawl or a certification. A human still needs to test important journeys. Use our <Link href="/blog/ai-built-website-checklist" className="underline">website launch checklist</Link> and <Link href="/blog/how-to-speed-up-your-website" className="underline">guide to diagnosing a slow website</Link> for the next steps.</p>
       </section>
-      <Footer />
     </main>
   );
 }

@@ -53,7 +53,7 @@ export function redact(text: string): string {
   return text.replace(EMAIL, "[email]").replace(PHONE, "[phone]").slice(0, MAX_CHARS);
 }
 
-export function logKey(date: Date, prefix = process.env.ASSISTANT_LOG_KEY || "assistant:questions"): string {
+function logKey(date: Date, prefix = process.env.ASSISTANT_LOG_KEY || "assistant:questions"): string {
   return `${prefix}:${date.toISOString().slice(0, 10)}`;
 }
 

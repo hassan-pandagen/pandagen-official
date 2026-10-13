@@ -12,7 +12,6 @@ coverage
 out/
 
 # Pagefind search index (generated at build time from .next/server/app)
-public/_pagefind/
 
 # Production
 build

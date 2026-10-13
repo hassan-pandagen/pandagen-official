@@ -1,4 +1,4 @@
-export const MAX_QUOTE_REQUEST_BYTES = 128 * 1024;
+const MAX_QUOTE_REQUEST_BYTES = 128 * 1024;
 
 export class QuoteRequestError extends Error {
   public readonly status: number;
@@ -373,10 +373,3 @@ export function validateQuoteScalarFields(formData: FormData): QuoteScalarFields
     formLoadedAt: readQuoteFormLoadedAt(formData),
   };
 }
-
-export const QUOTE_SERVICE_ALLOWLIST = ALLOWED_SERVICES;
-export const QUOTE_PLATFORM_ALLOWLIST = ALLOWED_PLATFORMS;
-export const QUOTE_GOAL_ALLOWLIST = ALLOWED_GOALS;
-export const QUOTE_TRAFFIC_ALLOWLIST = ALLOWED_TRAFFIC_BANDS;
-export const QUOTE_TIMELINE_ALLOWLIST = ALLOWED_TIMELINES;
-export const QUOTE_BUDGET_ALLOWLIST = ALLOWED_BUDGETS;

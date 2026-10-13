@@ -228,7 +228,7 @@ async function withDeadline<T>(promise: Promise<T>, deadline: number): Promise<T
 }
 
 /** Resolves every address and rejects a hostname if any answer is non-public. */
-export async function resolvePublicAddresses(url: URL, deadline: number): Promise<ResolvedAddress[]> {
+async function resolvePublicAddresses(url: URL, deadline: number): Promise<ResolvedAddress[]> {
   const hostname = stripIpv6Brackets(url.hostname);
   const literalFamily = isIP(hostname);
   if (literalFamily) {

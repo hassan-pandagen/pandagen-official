@@ -12,8 +12,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -219,7 +217,6 @@ const decisionSignals = [
 export default function LeavingWebflow2026Page() {
     return (
         <>
-            <Header />
             <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
 
@@ -771,7 +768,6 @@ export default function LeavingWebflow2026Page() {
                     <RelatedPosts currentPostId="leaving-webflow-2026" />
                 </article>
             </main>
-            <Footer />
         </>
     );
 }

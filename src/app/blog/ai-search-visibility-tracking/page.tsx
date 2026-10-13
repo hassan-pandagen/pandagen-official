@@ -4,8 +4,6 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
@@ -118,7 +116,6 @@ export default function AiSearchVisibilityTracking() {
     return (
         <main className="min-h-screen bg-cream">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-            <Header />
 
             <article className="container mx-auto max-w-3xl px-6 pt-28 pb-20 md:pt-36">
                 <Breadcrumb items={postCrumbs(postId, title)} />
@@ -585,7 +582,6 @@ export default function AiSearchVisibilityTracking() {
                 </div>
             </article>
 
-            <Footer />
         </main>
     );
 }

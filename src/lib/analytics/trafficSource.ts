@@ -83,7 +83,7 @@ const REFERRER_MAP: ReadonlyArray<readonly [string, string, string]> = [
 
 const DIRECT: TrafficSource = { source: 'Direct', medium: 'none', campaign: 'none' };
 
-export function resolveTrafficSource(): TrafficSource {
+function resolveTrafficSource(): TrafficSource {
   if (typeof window === 'undefined') return DIRECT;
 
   try {
