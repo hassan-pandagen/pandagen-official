@@ -16,6 +16,11 @@ export const MIGRATION_PROJECT_DETAILS = {
     summary: "We rebuilt our own WordPress and WooCommerce store with Next.js, a Sanity content editor, custom product pricing and checkout. A custom Supabase backend connects the storefront to a separate operations system for orders, production, payments and reporting.",
     paymentHistory: "Panda Patches started with Stripe. We later moved its payments to Square, which is the current provider.",
     confirmedOn: "2026-09-18",
+    // 13 Oct 2026: every tool below was opened live that day. The fal.ai figure is the
+    // owner's dashboard for 1 to 13 Oct 2026 (one endpoint, 39 megapixels, $0.003 each).
+    tools: "The store also runs six free tools we built: a thread colour chart of 719 thread codes that matches the colours in an uploaded logo on the visitor's own device, DST and PES embroidery file viewers, a DST and PES converter that works in both directions, a stitch count calculator that prices the estimate from the live pricing engine, and an AI patch generator that uses the FLUX.1 [schnell] model through fal.ai.",
+    aiGeneratorCost: "fal.ai billed $0.12 for the AI patch generator from 1 to 13 October 2026: 39 megapixels of images at $0.003 per megapixel.",
+    toolsCheckedOn: "2026-10-13",
   },
   ladies4Jesus: {
     status: "Live",

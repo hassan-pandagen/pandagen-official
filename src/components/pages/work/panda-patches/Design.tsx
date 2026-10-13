@@ -88,7 +88,7 @@ const techStack = [
   { name: "Sanity CMS", role: "Structured content models, the team edits content without a developer" },
   { name: "Supabase", role: "Database, auth and storage, shared with the operations platform" },
   { name: "Square", role: "Checkout, Apple/Google Pay, Cash App, Afterpay" },
-  { name: "FAL (Flux Schnell)", role: "AI patch mockup generator" },
+  { name: "fal.ai (FLUX.1 [schnell])", role: "AI patch mockup generator" },
   { name: "Meta CAPI, GA4/GTM, Google Ads", role: "Server-side conversion tracking" },
   { name: "ZeptoMail", role: "Order and abandoned-cart email" },
   { name: "Vercel", role: "Hosting, CDN and cron" },
@@ -99,7 +99,8 @@ const fullScope = [
   "4 additional product pages (lapel pins, challenge coins, keychains, PVC shoe charms)",
   "Configurator with backing, shape, border, size and quantity, feeding a quote request",
   "Square checkout: card, Apple Pay, Google Pay, Cash App Pay, Afterpay BNPL",
-  "AI patch generator (FAL) with a prompt pipeline and abuse-blocking rules",
+  "AI patch generator (fal.ai) with a prompt pipeline and abuse-blocking rules",
+  "Free embroidery tools: thread colour chart with logo colour matching, DST and PES viewers, a DST and PES converter, a stitch count calculator",
   "Customer portal: Supabase auth, order history, tracking, one-click reorder",
   "Server-side conversion stack: Meta CAPI, GA4/GTM, Google Ads, Pinterest, Bing, an OpenAI pixel",
   "Two-stage abandoned-cart recovery (email at 30 min, then 24h with a code)",
@@ -108,6 +109,17 @@ const fullScope = [
   "63-post blog library feeding the topical cluster",
   "Supabase ops portal: order pipeline, sales dashboards, clock in/out, role-based access, full audit log",
   "Responsive storefront with a touch-friendly configuration flow",
+];
+
+// The six free tools on pandapatches.com, each opened live on 13 Oct 2026. The
+// descriptions say only what each page itself shows.
+const pandaTools = [
+  { name: "Thread colour chart", href: "https://www.pandapatches.com/thread-color-chart", does: "719 thread codes, searchable by code, Pantone or hex. Drop in a logo and it suggests matching thread codes, working on the visitor's own device; the image is never uploaded." },
+  { name: "DST file viewer", href: "https://www.pandapatches.com/tools/dst-viewer", does: "Opens a Tajima DST embroidery file and shows the stitch pattern, size, stitch count and colour blocks." },
+  { name: "PES file viewer", href: "https://www.pandapatches.com/tools/pes-viewer", does: "Opens a Brother PES file and shows the design with its thread colour names, size and stitch count." },
+  { name: "DST and PES converter", href: "https://www.pandapatches.com/tools/dst-pes-converter", does: "Converts between Tajima DST and Brother PES in both directions, downloaded straight to the visitor's device." },
+  { name: "Stitch count calculator", href: "https://www.pandapatches.com/tools/stitch-count-calculator", does: "Estimates stitches from size, coverage and detail, or counts them exactly from an uploaded file, then prices the patch from the live pricing engine." },
+  { name: "AI patch generator", href: "https://www.pandapatches.com/ai-patch-generator", does: "Turns a description into a patch concept in a chosen shape, style and border, using the FLUX.1 [schnell] model through fal.ai. A designer then prepares the real production mockup." },
 ];
 
 export function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
@@ -200,7 +212,8 @@ export function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
             </h2>
             <p className="mt-4 max-w-[40rem] text-[14px] leading-[1.55]" style={{ color: T.quiet }}>
               {PAYMENT_INTEGRATION_SCOPE} The owner estimates current tooling at about $55/month (Supabase ~$25, Vercel
-              ~$20, ~$10 for the AI patch generator). That&apos;s an owner estimate, not a reconciled accounting total.
+              ~$20, ~$10 for the AI patch generator). That&apos;s an owner estimate, not a reconciled accounting total.{" "}
+              {MIGRATION_PROJECT_DETAILS.pandaPatches.aiGeneratorCost}
             </p>
             <div className="mt-4 border-t" style={{ borderColor: T.rule }}>
               {techStack.map((t) => (
@@ -213,7 +226,7 @@ export function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
 
             <details className="mt-5">
               <summary className="cursor-pointer text-[13px] font-medium" style={{ color: T.body }}>
-                The full build scope (13 items)
+                The full build scope ({fullScope.length} items)
               </summary>
               <ul className="mt-3 space-y-1.5">
                 {fullScope.map((item) => (
@@ -221,6 +234,42 @@ export function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
                 ))}
               </ul>
             </details>
+          </div>
+        </section>
+      </div>
+
+      {/* ── 6b. Free tools on the store (each opened live 13 Oct 2026) ─────── */}
+      <div className="story-block">
+        <section className="story-section px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paperHi }} aria-labelledby="panda-tools-title">
+          <div className="mx-auto max-w-[1100px]">
+            <p className="text-[12px] uppercase tracking-[0.1em]" style={{ fontFamily: MONO, color: T.quiet }}>06</p>
+            <h2 id="panda-tools-title" className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
+              Free tools on the <span style={{ color: T.accent }}>store.</span>
+            </h2>
+            <p className="mt-4 max-w-[42rem] text-[15px] leading-[1.6]" style={{ color: T.body }}>
+              Alongside the shop we built six free tools for people working with embroidery files and patch designs.
+              The file viewers, the stitch calculator and the AI generator each lead to a patch price or a quote.
+            </p>
+            <div className="mt-6 border-t" style={{ borderColor: T.rule }}>
+              {pandaTools.map((tool) => (
+                <div key={tool.href} className="grid gap-1 border-b py-3 md:grid-cols-12 md:gap-6" style={{ borderColor: T.rule }}>
+                  <a
+                    href={tool.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[15px] font-medium underline underline-offset-4 md:col-span-4"
+                    style={{ color: T.accentText }}
+                  >
+                    {tool.name}
+                    <span className="sr-only"> (opens pandapatches.com in a new tab)</span>
+                  </a>
+                  <span className="text-[14px] leading-[1.5] md:col-span-8" style={{ color: T.body }}>{tool.does}</span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-4 max-w-[42rem] text-[13px] leading-[1.55]" style={{ color: T.quiet }}>
+              {MIGRATION_PROJECT_DETAILS.pandaPatches.aiGeneratorCost} All six were checked live on 13 October 2026.
+            </p>
           </div>
         </section>
       </div>

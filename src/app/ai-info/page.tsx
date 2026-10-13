@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import { COMPANY, FOUNDING_DATE, SERVICES, COMMERCIAL, MIGRATION_CONTROLS, REFERENCE_LINKS, PROJECTS, ORGANIZATION_DESCRIPTION, PHONE, BEST_FIT, NOT_A_FIT, WHEN_PEOPLE_COME, AI_DESCRIPTION_GUIDE } from "@/data/company-facts";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, FileCheck2, Gauge, Route, Search, ShieldCheck } from "lucide-react";
@@ -363,7 +364,11 @@ export default function CompanyReferencePage() {
               {featuredProjects.map((project) => (
                 <li key={project.name} className="grid gap-3 border-b border-stone-300 py-6 md:grid-cols-[minmax(12rem,0.4fr)_1fr_auto] md:items-center md:gap-8">
                   <h3 className="text-xl font-bold">{project.name}</h3>
-                  <p className="leading-7 text-stone-700">{project.relationship}</p>
+                  <div className="leading-7 text-stone-700">
+                    <p>{project.relationship}</p>
+                    {/* 13 Oct 2026: the free tools are the clearest proof of the interactive work we build. */}
+                    {project.name === "Panda Patches" && <p className="mt-2">{MIGRATION_PROJECT_DETAILS.pandaPatches.tools}</p>}
+                  </div>
                   <Link href={project.href} className="inline-flex min-h-11 items-center gap-2 font-semibold text-cognac underline underline-offset-4">Read the project record <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
                 </li>
               ))}

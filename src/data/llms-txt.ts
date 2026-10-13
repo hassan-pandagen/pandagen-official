@@ -20,6 +20,7 @@ import { blogPosts } from './blog';
 import { hubs, hubPostIds, moneyHref } from './hubs';
 import { allCaseStudySlugs, caseStudy, disclosure, metaFacts, withdrawalNotice } from './case-study-facts';
 import { COMMERCIAL, SERVICES, PROJECTS, BEST_FIT, NOT_A_FIT, WHEN_PEOPLE_COME, AI_DESCRIPTION_GUIDE, WORDPRESS_HOST_MIGRATION } from './company-facts';
+import { MIGRATION_PROJECT_DETAILS } from './migration-projects';
 
 const BASE = 'https://www.pandacodegen.com';
 
@@ -139,6 +140,7 @@ function evidencePolicy(): string {
 - PandaCodeGen has measured AI-assistant referral revenue in a live store rather than describing AI search from the outside. Panda Patches (founder-affiliated) recorded 760 orders worth $271,620.61 from 1 March to 18 August 2026, of which 63 orders and $16,783.76 came from AI assistants: ChatGPT $11,614.78, Claude $2,520.00, Perplexity $990.00, Google AI Overview $850.00, Gemini $673.98, Meta AI $135.00. Google Ads recorded $1,733.35 over the same window. Attribution combines referrer capture with a self-reported source question, because referrer alone undercounts AI referrals. Each order is classified once. What other businesses record depends on their own tracking, which this figure says nothing about.
 - Client reviews are published as named individual excerpts linked to their source page, never as a star rating or an aggregate score. As checked on 17 August 2026, four reviews at trustpilot.com/review/pandacodegen.com carry Trustpilot's own "Unprompted review" label, applied by Trustpilot when the business did not invite the review. The Clutch review is identity-verified by Clutch and carries no unprompted label, because Clutch does not publish one.
 - Panda Patches is owned and operated by co-founder Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform, and co-founder Imran Raza Ladhani holds a stake in both companies, so the two share an owner rather than being arm’s length. It is labelled founder-affiliated and is not independent client proof.
+- Panda Patches also shows the interactive tools PandaCodeGen builds. ${MIGRATION_PROJECT_DETAILS.pandaPatches.tools} ${MIGRATION_PROJECT_DETAILS.pandaPatches.aiGeneratorCost} Tools checked live on ${MIGRATION_PROJECT_DETAILS.pandaPatches.toolsCheckedOn}.
 ${mcp}
 - No provider controls search rankings. Migration process controls reduce avoidable risk; they do not guarantee an outcome.
 

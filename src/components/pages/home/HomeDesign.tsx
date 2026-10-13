@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
+import CalModalButton from "@/components/ui/CalModalButton";
+import { aiRevenue, window_ } from "@/data/ai-referral-facts";
 import AssistantPrompt from "@/components/assistant/AssistantPrompt";
 import PaperShader from "@/components/visual/PaperShader";
 import WorkIndex from "@/components/redesign/WorkIndex";
@@ -34,6 +36,7 @@ const INK = T.ink;
 const BODY = T.body;
 const QUIET = T.quiet; // 4.99:1 on #E0DDD6, the shader's darkest tone under text
 const ACCENT = T.accentText; // text links: 7.78:1 on paper
+const usdWhole = (n: number) => `$${Math.round(n).toLocaleString("en-US")}`;
 
 
 
@@ -120,6 +123,25 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
               </div>
               <p className="mt-5 text-[14px]" style={{ color: QUIET }}>
                 Custom builds from <PriceAmount value="$1,500" />. WordPress quoted to scope. Price agreed before work starts.
+              </p>
+              {/* 13 Oct 2026, owner: a direct booking option beside the email form, and the
+                  AI-referral figure as proof. The figure is read from the same data file as
+                  the measurement post, rounded to whole dollars, with its window. */}
+              <p className="mt-2 text-[14px]" style={{ color: QUIET }}>
+                Prefer to talk first?{" "}
+                <CalModalButton
+                  fallbackHref="https://cal.com/pandagen/discovery"
+                  className="font-medium underline underline-offset-4"
+                >
+                  <span style={{ color: ACCENT }}>Book a free 15-minute call</span>
+                </CalModalButton>
+              </p>
+              <p className="mt-4 max-w-[34rem] text-[14px] leading-[1.55]" style={{ color: BODY }}>
+                Our own store, Panda Patches, recorded {usdWhole(aiRevenue)} in orders attributed to ChatGPT, Claude,
+                Perplexity and other AI assistants from {window_.label}.{" "}
+                <Link href="/blog/ai-referral-revenue-2026" className="underline underline-offset-4" style={{ color: ACCENT }}>
+                  How we measured it
+                </Link>
               </p>
             </div>
 
