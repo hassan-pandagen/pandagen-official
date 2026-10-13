@@ -14,14 +14,16 @@ concurrency:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    # Pinned 13 Oct 2026: ubuntu-latest moves to Ubuntu 26 from 19 Oct 2026. Move
+    # deliberately after checking the build there, not mid-launch.
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
