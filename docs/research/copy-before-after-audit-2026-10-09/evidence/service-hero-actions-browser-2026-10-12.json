@@ -1,0 +1,890 @@
+{
+  "pass": true,
+  "cases": 18,
+  "apiIntercepted": true,
+  "physicalDevices": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "controls": [
+          {
+            "text": "Discuss your project ↗",
+            "left": 20,
+            "right": 300,
+            "width": 280,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See a completed project↓",
+            "left": 21,
+            "right": 160,
+            "width": 139,
+            "height": 78.5625,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 160,
+            "right": 299,
+            "width": 139,
+            "height": 78.5625,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "preview_cms-development_hero",
+        "location": "cms-development"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "controls": [
+          {
+            "text": "Discuss your project ↗",
+            "left": 20,
+            "right": 300,
+            "width": 280,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See the visibility report↓",
+            "left": 21,
+            "right": 160,
+            "width": 139,
+            "height": 78.5625,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 160,
+            "right": 299,
+            "width": 139,
+            "height": 78.5625,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "preview_ai-seo_hero",
+        "location": "ai-seo"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "controls": [
+          {
+            "text": "Discuss your website ↗",
+            "left": 20,
+            "right": 300,
+            "width": 280,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See a completed project↓",
+            "left": 21,
+            "right": 160,
+            "width": 139,
+            "height": 78.5625,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 160,
+            "right": 299,
+            "width": 139,
+            "height": 78.5625,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "wp_preview_hero",
+        "location": "wordpress_migration"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "controls": [
+          {
+            "text": "Discuss your project ↗",
+            "left": 20,
+            "right": 370,
+            "width": 350,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See a completed project↓",
+            "left": 21,
+            "right": 195,
+            "width": 174,
+            "height": 60.375,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 195,
+            "right": 369,
+            "width": 174,
+            "height": 60.375,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "preview_cms-development_hero",
+        "location": "cms-development"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "controls": [
+          {
+            "text": "Discuss your project ↗",
+            "left": 20,
+            "right": 370,
+            "width": 350,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See the visibility report↓",
+            "left": 21,
+            "right": 195,
+            "width": 174,
+            "height": 60.375,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 195,
+            "right": 369,
+            "width": 174,
+            "height": 60.375,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "preview_ai-seo_hero",
+        "location": "ai-seo"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "controls": [
+          {
+            "text": "Discuss your website ↗",
+            "left": 20,
+            "right": 370,
+            "width": 350,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See a completed project↓",
+            "left": 21,
+            "right": 195,
+            "width": 174,
+            "height": 60.375,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 195,
+            "right": 369,
+            "width": 174,
+            "height": 60.375,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "wp_preview_hero",
+        "location": "wordpress_migration"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 768,
+        "pageWidth": 768,
+        "controls": [
+          {
+            "text": "Discuss your project ↗",
+            "left": 24,
+            "right": 225.890625,
+            "width": 201.890625,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See a completed project↓",
+            "left": 25,
+            "right": 268.328125,
+            "width": 243.328125,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 268.328125,
+            "right": 463,
+            "width": 194.671875,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "preview_cms-development_hero",
+        "location": "cms-development"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 768,
+        "pageWidth": 768,
+        "controls": [
+          {
+            "text": "Discuss your project ↗",
+            "left": 24,
+            "right": 225.890625,
+            "width": 201.890625,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See the visibility report↓",
+            "left": 25,
+            "right": 268.328125,
+            "width": 243.328125,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 268.328125,
+            "right": 463,
+            "width": 194.671875,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "preview_ai-seo_hero",
+        "location": "ai-seo"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 768,
+        "pageWidth": 768,
+        "controls": [
+          {
+            "text": "Discuss your website ↗",
+            "left": 24,
+            "right": 231.40625,
+            "width": 207.40625,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See a completed project↓",
+            "left": 25,
+            "right": 268.328125,
+            "width": 243.328125,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 268.328125,
+            "right": 463,
+            "width": 194.671875,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "wp_preview_hero",
+        "location": "wordpress_migration"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "controls": [
+          {
+            "text": "Discuss your project ↗",
+            "left": 24,
+            "right": 225.890625,
+            "width": 201.890625,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See a completed project↓",
+            "left": 25,
+            "right": 268.328125,
+            "width": 243.328125,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 268.328125,
+            "right": 463,
+            "width": 194.671875,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "preview_cms-development_hero",
+        "location": "cms-development"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "controls": [
+          {
+            "text": "Discuss your project ↗",
+            "left": 24,
+            "right": 225.890625,
+            "width": 201.890625,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See the visibility report↓",
+            "left": 25,
+            "right": 268.328125,
+            "width": 243.328125,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 268.328125,
+            "right": 463,
+            "width": 194.671875,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "preview_ai-seo_hero",
+        "location": "ai-seo"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "controls": [
+          {
+            "text": "Discuss your website ↗",
+            "left": 24,
+            "right": 231.40625,
+            "width": 207.40625,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See a completed project↓",
+            "left": 25,
+            "right": 268.328125,
+            "width": 243.328125,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 268.328125,
+            "right": 463,
+            "width": 194.671875,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "wp_preview_hero",
+        "location": "wordpress_migration"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1920,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 1920,
+        "pageWidth": 1920,
+        "controls": [
+          {
+            "text": "Discuss your project ↗",
+            "left": 264,
+            "right": 465.890625,
+            "width": 201.890625,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See a completed project↓",
+            "left": 265,
+            "right": 508.328125,
+            "width": 243.328125,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 508.328125,
+            "right": 703,
+            "width": 194.671875,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "preview_cms-development_hero",
+        "location": "cms-development"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1920,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 1920,
+        "pageWidth": 1920,
+        "controls": [
+          {
+            "text": "Discuss your project ↗",
+            "left": 264,
+            "right": 465.890625,
+            "width": 201.890625,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See the visibility report↓",
+            "left": 265,
+            "right": 508.328125,
+            "width": 243.328125,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 508.328125,
+            "right": 703,
+            "width": 194.671875,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "preview_ai-seo_hero",
+        "location": "ai-seo"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1920,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 1920,
+        "pageWidth": 1920,
+        "controls": [
+          {
+            "text": "Discuss your website ↗",
+            "left": 264,
+            "right": 471.40625,
+            "width": 207.40625,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.8px",
+            "clipped": false
+          },
+          {
+            "text": "See a completed project↓",
+            "left": 265,
+            "right": 508.328125,
+            "width": 243.328125,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 508.328125,
+            "right": 703,
+            "width": 194.671875,
+            "height": 48,
+            "fontSize": "13px",
+            "lineHeight": "18.2px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "wp_preview_hero",
+        "location": "wordpress_migration"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "controls": [
+          {
+            "text": "Discuss your project ↗",
+            "left": 20,
+            "right": 370,
+            "width": 350,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.800001px",
+            "clipped": false
+          },
+          {
+            "text": "See a completed project↓",
+            "left": 21,
+            "right": 195,
+            "width": 174,
+            "height": 60.375,
+            "fontSize": "13px",
+            "lineHeight": "18.199999px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 195,
+            "right": 369,
+            "width": 174,
+            "height": 60.375,
+            "fontSize": "13px",
+            "lineHeight": "18.199999px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "preview_cms-development_hero",
+        "location": "cms-development"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "controls": [
+          {
+            "text": "Discuss your project ↗",
+            "left": 20,
+            "right": 370,
+            "width": 350,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.800001px",
+            "clipped": false
+          },
+          {
+            "text": "See the visibility report↓",
+            "left": 21,
+            "right": 195,
+            "width": 174,
+            "height": 60.375,
+            "fontSize": "13px",
+            "lineHeight": "18.199999px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 195,
+            "right": 369,
+            "width": 174,
+            "height": 60.375,
+            "fontSize": "13px",
+            "lineHeight": "18.199999px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "preview_ai-seo_hero",
+        "location": "ai-seo"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "controls": [
+          {
+            "text": "Discuss your website ↗",
+            "left": 20,
+            "right": 370,
+            "width": 350,
+            "height": 48,
+            "fontSize": "14px",
+            "lineHeight": "23.800001px",
+            "clipped": false
+          },
+          {
+            "text": "See a completed project↓",
+            "left": 21,
+            "right": 195,
+            "width": 174,
+            "height": 60.375,
+            "fontSize": "13px",
+            "lineHeight": "18.199999px",
+            "clipped": false
+          },
+          {
+            "text": "Common questions↓",
+            "left": 195,
+            "right": 369,
+            "width": 174,
+            "height": 60.375,
+            "fontSize": "13px",
+            "lineHeight": "18.199999px",
+            "clipped": false
+          }
+        ]
+      },
+      "quoteOpened": true,
+      "ctaEvent": {
+        "cta": "wp_preview_hero",
+        "location": "wordpress_migration"
+      },
+      "jumpLinksWorked": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    }
+  ]
+}

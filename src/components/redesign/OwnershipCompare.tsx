@@ -1,3 +1,4 @@
+import HeadingEmphasis from "./HeadingEmphasis";
 import Link from "next/link";
 import { SERVICE_OWNERSHIP } from "@/data/service-ownership-answers";
 import { Check, Minus, LockKeyhole, KeyRound } from "lucide-react";
@@ -61,7 +62,7 @@ export default function OwnershipCompare({
 
   return <section id="what-you-keep" className={`${s.section} ${o.section} ${alt ? s.sectionAlt : ""}`} aria-labelledby={headingId}><div className={s.wrap}>
     <FadeIn className={o.intro}>
-      <div><p className={s.eyebrow}>{number} / Ownership & exports</p><h2 id={headingId} className={o.title}>{title}</h2></div>
+      <div><p className={s.eyebrow}>{number} / Ownership & exports</p><h2 id={headingId} className={o.title}><HeadingEmphasis text={title} /></h2></div>
       <div>
         <p>{content?.intro ?? "You receive the files we create for your project, written instructions and control of the production accounts. Your proposal sets out the delivery and any third-party terms."}</p>
         <div className={o.summary}><p className={o.summaryLabel}><KeyRound size={16} aria-hidden="true" /> {monthly ? "The work you keep" : "Your project handover"}</p><p className={o.canon}>{OWNERSHIP_ON_HANDOVER}</p></div>
@@ -114,7 +115,7 @@ export default function OwnershipCompare({
       </table>
     </div>}
 
-    <div className={o.notes}>
+    <div className={`${o.notes} ${!compared ? o.projectNotes : ""}`}>
       <div><h3 className={compared ? o.handoverTitle : o.assetsTitle}>{compared ? "Also included at handover" : (monthly ? "Your monthly deliverables" : "Your project assets")}</h3><ul className={o.keepList} aria-label={monthly ? "Monthly deliverables" : "Also handed over"}>
         {outputs.map((item) => <li key={item.label}><b>{item.label}</b><p>{item.detail}</p></li>)}
       </ul></div>

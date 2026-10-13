@@ -1,0 +1,544 @@
+{
+  "pass": true,
+  "cases": 5,
+  "serviceDestinations": 1,
+  "apiIntercepted": true,
+  "physicalDevices": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "oneH1": true,
+        "sections": [
+          {
+            "id": "client-work",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "decision",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "search-foundations",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "owner-voices",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "running-costs",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "process",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "what-you-keep",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "questions",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          }
+        ],
+        "heads": [
+          {
+            "margin": "24px",
+            "gap": "16px"
+          },
+          {
+            "margin": "24px",
+            "gap": "16px"
+          },
+          {
+            "margin": "24px",
+            "gap": "16px"
+          },
+          {
+            "margin": "24px",
+            "gap": "16px"
+          }
+        ],
+        "detailRows": [],
+        "steps": [
+          {
+            "size": "20px",
+            "lineHeight": "27px",
+            "font": "Inter, \"Inter Fallback\", sans-serif"
+          },
+          {
+            "size": "20px",
+            "lineHeight": "27px",
+            "font": "Inter, \"Inter Fallback\", sans-serif"
+          },
+          {
+            "size": "20px",
+            "lineHeight": "27px",
+            "font": "Inter, \"Inter Fallback\", sans-serif"
+          },
+          {
+            "size": "20px",
+            "lineHeight": "27px",
+            "font": "Inter, \"Inter Fallback\", sans-serif"
+          }
+        ],
+        "search": {
+          "padding": "32px",
+          "noteSize": "15px",
+          "noteColor": "rgb(58, 55, 51)"
+        },
+        "clipped": []
+      },
+      "faqTouchOrKeyboard": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "oneH1": true,
+        "sections": [
+          {
+            "id": "client-work",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "decision",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "search-foundations",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "owner-voices",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "running-costs",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "process",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "what-you-keep",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "questions",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          }
+        ],
+        "heads": [
+          {
+            "margin": "24px",
+            "gap": "16px"
+          },
+          {
+            "margin": "24px",
+            "gap": "16px"
+          },
+          {
+            "margin": "24px",
+            "gap": "16px"
+          },
+          {
+            "margin": "24px",
+            "gap": "16px"
+          }
+        ],
+        "detailRows": [],
+        "steps": [
+          {
+            "size": "20px",
+            "lineHeight": "27px",
+            "font": "Inter, \"Inter Fallback\", sans-serif"
+          },
+          {
+            "size": "20px",
+            "lineHeight": "27px",
+            "font": "Inter, \"Inter Fallback\", sans-serif"
+          },
+          {
+            "size": "20px",
+            "lineHeight": "27px",
+            "font": "Inter, \"Inter Fallback\", sans-serif"
+          },
+          {
+            "size": "20px",
+            "lineHeight": "27px",
+            "font": "Inter, \"Inter Fallback\", sans-serif"
+          }
+        ],
+        "search": {
+          "padding": "32px",
+          "noteSize": "15px",
+          "noteColor": "rgb(58, 55, 51)"
+        },
+        "clipped": []
+      },
+      "faqTouchOrKeyboard": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 768,
+        "pageWidth": 768,
+        "oneH1": true,
+        "sections": [
+          {
+            "id": "client-work",
+            "paddingTop": "56px",
+            "paddingBottom": "56px"
+          },
+          {
+            "id": "decision",
+            "paddingTop": "56px",
+            "paddingBottom": "56px"
+          },
+          {
+            "id": "search-foundations",
+            "paddingTop": "80px",
+            "paddingBottom": "80px"
+          },
+          {
+            "id": "owner-voices",
+            "paddingTop": "56px",
+            "paddingBottom": "56px"
+          },
+          {
+            "id": "running-costs",
+            "paddingTop": "56px",
+            "paddingBottom": "56px"
+          },
+          {
+            "id": "process",
+            "paddingTop": "56px",
+            "paddingBottom": "56px"
+          },
+          {
+            "id": "",
+            "paddingTop": "56px",
+            "paddingBottom": "56px"
+          },
+          {
+            "id": "what-you-keep",
+            "paddingTop": "56px",
+            "paddingBottom": "56px"
+          },
+          {
+            "id": "questions",
+            "paddingTop": "56px",
+            "paddingBottom": "56px"
+          }
+        ],
+        "heads": [
+          {
+            "margin": "48px",
+            "gap": "24px"
+          },
+          {
+            "margin": "64px",
+            "gap": "15px"
+          },
+          {
+            "margin": "48px",
+            "gap": "24px"
+          },
+          {
+            "margin": "48px",
+            "gap": "24px"
+          }
+        ],
+        "detailRows": [],
+        "steps": [
+          {
+            "size": "32px",
+            "lineHeight": "32px",
+            "font": "Anton, \"Anton Fallback\", Impact, sans-serif"
+          },
+          {
+            "size": "32px",
+            "lineHeight": "32px",
+            "font": "Anton, \"Anton Fallback\", Impact, sans-serif"
+          },
+          {
+            "size": "32px",
+            "lineHeight": "32px",
+            "font": "Anton, \"Anton Fallback\", Impact, sans-serif"
+          },
+          {
+            "size": "32px",
+            "lineHeight": "32px",
+            "font": "Anton, \"Anton Fallback\", Impact, sans-serif"
+          }
+        ],
+        "search": {
+          "padding": "80px",
+          "noteSize": "15px",
+          "noteColor": "rgb(58, 55, 51)"
+        },
+        "clipped": []
+      },
+      "faqTouchOrKeyboard": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "oneH1": true,
+        "sections": [
+          {
+            "id": "client-work",
+            "paddingTop": "72px",
+            "paddingBottom": "72px"
+          },
+          {
+            "id": "decision",
+            "paddingTop": "72px",
+            "paddingBottom": "72px"
+          },
+          {
+            "id": "search-foundations",
+            "paddingTop": "80px",
+            "paddingBottom": "80px"
+          },
+          {
+            "id": "owner-voices",
+            "paddingTop": "72px",
+            "paddingBottom": "72px"
+          },
+          {
+            "id": "running-costs",
+            "paddingTop": "72px",
+            "paddingBottom": "72px"
+          },
+          {
+            "id": "process",
+            "paddingTop": "72px",
+            "paddingBottom": "72px"
+          },
+          {
+            "id": "",
+            "paddingTop": "72px",
+            "paddingBottom": "72px"
+          },
+          {
+            "id": "what-you-keep",
+            "paddingTop": "72px",
+            "paddingBottom": "72px"
+          },
+          {
+            "id": "questions",
+            "paddingTop": "72px",
+            "paddingBottom": "72px"
+          }
+        ],
+        "heads": [
+          {
+            "margin": "48px",
+            "gap": "115.2px"
+          },
+          {
+            "margin": "64px",
+            "gap": "72px"
+          },
+          {
+            "margin": "48px",
+            "gap": "115.2px"
+          },
+          {
+            "margin": "48px",
+            "gap": "115.2px"
+          }
+        ],
+        "detailRows": [],
+        "steps": [
+          {
+            "size": "40.32px",
+            "lineHeight": "40.32px",
+            "font": "Anton, \"Anton Fallback\", Impact, sans-serif"
+          },
+          {
+            "size": "40.32px",
+            "lineHeight": "40.32px",
+            "font": "Anton, \"Anton Fallback\", Impact, sans-serif"
+          },
+          {
+            "size": "40.32px",
+            "lineHeight": "40.32px",
+            "font": "Anton, \"Anton Fallback\", Impact, sans-serif"
+          },
+          {
+            "size": "40.32px",
+            "lineHeight": "40.32px",
+            "font": "Anton, \"Anton Fallback\", Impact, sans-serif"
+          }
+        ],
+        "search": {
+          "padding": "80px",
+          "noteSize": "15px",
+          "noteColor": "rgb(58, 55, 51)"
+        },
+        "clipped": []
+      },
+      "faqTouchOrKeyboard": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "oneH1": true,
+        "sections": [
+          {
+            "id": "client-work",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "decision",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "search-foundations",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "owner-voices",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "running-costs",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "process",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "what-you-keep",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          },
+          {
+            "id": "questions",
+            "paddingTop": "32px",
+            "paddingBottom": "32px"
+          }
+        ],
+        "heads": [
+          {
+            "margin": "24px",
+            "gap": "16px"
+          },
+          {
+            "margin": "24px",
+            "gap": "16px"
+          },
+          {
+            "margin": "24px",
+            "gap": "16px"
+          },
+          {
+            "margin": "24px",
+            "gap": "16px"
+          }
+        ],
+        "detailRows": [],
+        "steps": [
+          {
+            "size": "20px",
+            "lineHeight": "27px",
+            "font": "Inter, Inter Fallback, sans-serif"
+          },
+          {
+            "size": "20px",
+            "lineHeight": "27px",
+            "font": "Inter, Inter Fallback, sans-serif"
+          },
+          {
+            "size": "20px",
+            "lineHeight": "27px",
+            "font": "Inter, Inter Fallback, sans-serif"
+          },
+          {
+            "size": "20px",
+            "lineHeight": "27px",
+            "font": "Inter, Inter Fallback, sans-serif"
+          }
+        ],
+        "search": {
+          "padding": "32px",
+          "noteSize": "15px",
+          "noteColor": "rgb(58, 55, 51)"
+        },
+        "clipped": []
+      },
+      "faqTouchOrKeyboard": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    }
+  ]
+}

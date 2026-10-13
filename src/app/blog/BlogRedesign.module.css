@@ -50,27 +50,30 @@
   border: 0 !important;
 }
 .surface :global(main article > header > p:first-child) {
-  font: 500 11px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace !important;
+  font: 500 11px/1.5 var(--font-sans), Arial, sans-serif !important;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #e8763a !important;
   margin: 0 0 24px;
 }
 .surface :global(main article > header h1) {
-  font-family: Georgia, "Times New Roman", serif !important;
-  font-weight: 500 !important;
+  font-family: var(--display), Impact, sans-serif !important;
+  font-weight: 400 !important;
   font-size: clamp(2.6rem, 5.4vw, 5.4rem) !important;
   line-height: 1.05 !important;
   letter-spacing: -0.045em !important;
-  text-transform: none !important;
+  text-transform: uppercase !important;
   text-wrap: balance;
   max-width: 1000px;
   color: #ebe9e4 !important;
   margin: 0 0 24px;
 }
-.surface :global(main article > header h1 span) {
+.surface :global(main article > header h1 span:not([data-heading-emphasis])) {
   font-family: inherit !important;
   font-style: normal !important;
+  color: #e8763a !important;
+}
+.surface :global(main article > header h1 [data-heading-emphasis]) {
   color: #e8763a !important;
 }
 .surface :global(main article > header p) {
@@ -105,7 +108,7 @@
   min-width: 0;
 }
 .surface :global(main article > header[data-article-hero="split"] [data-article-hero-copy] > p:first-child) {
-  font: 500 11px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace !important;
+  font: 500 11px/1.5 var(--font-sans), Arial, sans-serif !important;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: #e8763a !important;
@@ -126,7 +129,7 @@
   display: block;
   height: 19px;
   color: #7a2e0e;
-  font: 700 13px/12px ui-monospace, SFMono-Regular, Menlo, monospace;
+  font: 700 13px/12px var(--font-sans), Arial, sans-serif;
   letter-spacing: 3px;
 }
 .surface :global(main article > header[data-article-hero="split"] figure) {
@@ -180,9 +183,9 @@
   max-width: 1000px;
   margin: 0 0 24px;
   color: #ebe9e4 !important;
-  font: 500 clamp(3rem, 3.4vw, 4.25rem)/1.05 Georgia, "Times New Roman", serif !important;
+  font: 400 clamp(3rem, 3.4vw, 4.25rem)/1.05 var(--display), Impact, sans-serif !important;
   letter-spacing: -.045em;
-  text-transform: none !important;
+  text-transform: uppercase !important;
 }
 .surface :global(main [data-article-hero-variant="nested"] h1 span[class*="text-cognac"]) {
   color: #e8763a !important;
@@ -215,7 +218,7 @@
   display: block;
   height: 19px;
   color: #7a2e0e;
-  font: 700 13px/12px ui-monospace, SFMono-Regular, Menlo, monospace;
+  font: 700 13px/12px var(--font-sans), Arial, sans-serif;
   letter-spacing: 3px;
 }
 .surface :global(main [data-article-hero-variant="nested"] figure) {
@@ -248,16 +251,16 @@
 
 /* ── Titles elsewhere (older articles, topic pages): serif on paper ─────── */
 .surface :global(main h1) {
-  font-family: Georgia, "Times New Roman", serif !important;
-  font-weight: 500 !important;
+  font-family: var(--display), Impact, sans-serif !important;
+  font-weight: 400 !important;
   font-size: clamp(2.4rem, 4.6vw, 4.4rem) !important;
   line-height: 1.08 !important;
   letter-spacing: -0.04em !important;
-  text-transform: none !important;
+  text-transform: uppercase !important;
   text-wrap: balance;
   color: #1c1917;
 }
-.surface :global(main h1 span) {
+.surface :global(main h1 span:not([data-heading-emphasis])) {
   font-family: inherit !important;
   font-style: normal !important;
   color: #ad3d0b !important;
@@ -266,12 +269,12 @@
 /* ── Reading column ─────────────────────────────────────────────────────── */
 .surface :global(main .blog-section-heading),
 .surface :global(main article h2[id]) {
-  font-family: Georgia, "Times New Roman", serif !important;
-  font-weight: 500 !important;
+  font-family: var(--display), Impact, sans-serif !important;
+  font-weight: 400 !important;
   font-size: clamp(2rem, 3vw, 2.9rem) !important;
   line-height: 1.12 !important;
   letter-spacing: -0.035em;
-  text-transform: none !important;
+  text-transform: uppercase !important;
   text-wrap: balance;
   color: #1c1917 !important;
   border-top: 1px solid rgba(28, 25, 23, 0.22);
@@ -284,7 +287,7 @@
   content: "/";
   display: block;
   margin-bottom: 16px;
-  font: 500 12px ui-monospace, SFMono-Regular, Menlo, monospace;
+  font: 500 12px var(--font-sans), Arial, sans-serif;
   letter-spacing: 0;
   color: #ad3d0b;
 }
@@ -443,4 +446,28 @@
 .surface :global(main section:has([data-article-hero-variant="nested"])){padding-top:0!important}
 .surface :global(main article > header),
 .surface :global(main [data-article-hero-variant="nested"]){padding-top:32px!important}
+}
+
+/* A framed block already ends in a rule; the following heading needs no second one. */
+.surface :global(main :is([class~="border"], [data-topic-uplink], figure, ul:has(> li[class~="border"]), div:has(> [class~="border"]:last-child), ul.space-y-3) + :is(.blog-section-heading, article h2[id])) {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 32px !important;
+}
+.surface :global(main:has([data-topic-uplink]) [data-related-posts]) {
+  border-top: 0;
+  padding-top: 0;
+}
+
+/* Preserve the framed answer box as the single boundary after a flat checklist. */
+.surface :global(main ul.space-y-3:has(+ :is([class~="border"], details, div:has(> [class~="border"]))) > li:last-child) {
+  border-bottom: 0 !important;
+}
+
+/* Boxed summaries end at the frame, rather than another checklist rule inside it. */
+.surface :global(main :is(section, div)[class~="border"] > ul.space-y-3:last-child) {
+  margin-bottom: 0;
+}
+.surface :global(main :is(section, div)[class~="border"] > ul.space-y-3:last-child > li:last-child) {
+  border-bottom: 0 !important;
 }

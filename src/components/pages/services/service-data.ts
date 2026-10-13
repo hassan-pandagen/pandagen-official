@@ -1,3 +1,4 @@
+import { pandaPatchesAiProof } from "./panda-patches-ai-proof";
 import { WORDPRESS_HOST_MIGRATION } from "@/data/company-facts";
 import { stackServices } from "./stack-services";
 import { audienceServices } from "./audience-services";
@@ -264,7 +265,7 @@ export const servicePreviews: ServicePreview[] = [
     relatedService: { name: "CMS website development", href: "/services/cms-development" },
     title: "AI SEO services.", accent: "AEO & GEO.",
     lead: "AI SEO services for businesses that want their website found and understood in AI search. Our answer engine optimization (AEO) and generative engine optimization (GEO) work covers buyer questions, agreed page improvements and visibility reporting. Monthly work starts at $500.",
-    image: "/proof/google-ai-impressions.svg", imageAlt: "PandaCodeGen Google Generative AI impressions, full daily series from June 12 to September 11, 2026", imageCaption: "Our Search Console export / Recreated chart / June–September 2026",
+    image: pandaPatchesAiProof.src, imageAlt: pandaPatchesAiProof.alt, imageCaption: "Panda Patches / Founder-affiliated / Search Console screenshot",
     problemTitle: "Is your business missing from AI answers?", problemIntro: "We review the questions buyers ask, whether search systems can access the answers and which useful business facts are missing. One agreed improvement is implemented and verified within the monthly starting scope.",
     checks: [["Buyer questions", "Choose ten questions across one product or service area and up to five priority pages."], ["Page access", "Check whether the answer is in readable HTML, with descriptive headings and appropriate structured data."], ["An improvement shipped", "Agree one page improvement or small technical task, implement it and verify it each month."], ["Measurement limits", "Report changes, visibility signals and enquiries separately; an impression is not a visit or a sale."]],
     detailsTitle: "What our AI SEO services include.", detailsIntro: "The $500 monthly starting scope covers focused research, one agreed improvement and reporting. AEO and GEO work can support the website you already run.",

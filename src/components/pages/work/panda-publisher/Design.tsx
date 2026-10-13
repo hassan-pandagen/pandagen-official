@@ -1,12 +1,14 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import WorkCaseTitle from "@/components/redesign/case-study/WorkCaseTitle";
+import WorkCaseOpening from "@/components/redesign/case-study/WorkCaseOpening";
+import WorkCasePreview from "@/components/redesign/case-study/WorkCasePreview";
+import WorkCaseFacts from "@/components/redesign/case-study/WorkCaseFacts";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import PandaPublisherWalkthrough from "@/components/redesign/case-study/PandaPublisherWalkthrough";
-import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
+import { BODY, DISPLAY, MONO, T } from "@/components/redesign/tokens";
 import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-study/CaseStudyFaqs";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -20,48 +22,48 @@ import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-stu
 export function PandaPublisherCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed footerLinksOnly>
-      <section className="px-6 pb-16 pt-8 md:pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
-        <div className="mx-auto max-w-[1100px]">
-          <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-            <Link href="/work" style={{ color: T.quiet }}>Work</Link> / Panda Publisher / Concept build
-          </p>
+      <WorkCaseOpening>
+        <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
+          <Link href="/work" style={{ color: T.quiet }}>Work</Link> / Panda Publisher / Concept build
+        </p>
 
-            <WorkCaseTitle>Panda Publisher</WorkCaseTitle>
-          <p className="mt-3 max-w-[38rem]" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
-            An author-services website, shown as a concept.
-          </p>
+        <WorkCaseTitle>Panda Publisher</WorkCaseTitle>
+        <p className="mt-3 max-w-[38rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
+          An author-services website, shown as a concept.
+        </p>
 
-          <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
-            A concept site for a business that helps authors write, publish and launch a book. There is no
-            publishing business behind it: the cover gallery is labelled as concept work on the site itself.
-          </p>
+        <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
+          A concept site for a business that helps authors write, publish and launch a book. There is no
+          publishing business behind it: the cover gallery is labelled as concept work on the site itself.
+        </p>
 
-          <div className="mt-6 flex flex-wrap items-center gap-4">
-            <a
-              href="https://pandapublisher-eight.vercel.app/"
-              target="_blank"
-              rel="noopener"
-              className="cta-solid inline-flex items-center gap-2 px-5 py-3 text-[14px] font-medium"
-              style={{ backgroundColor: T.ink, color: T.paper }}
-            >
-              Visit the concept <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-              <span className="sr-only"> (opens in a new tab)</span>
-            </a>
-          </div>
-
-          <figure className="mt-10 border" style={{ borderColor: T.rule, backgroundColor: T.paperHi }}>
-            <Image src="/work/panda-publisher.png" alt="The Panda Publisher demo homepage, a library of book covers for author services" width={1912} height={914} sizes="(min-width: 1100px) 1100px, 100vw" priority />
-            <figcaption className="px-4 py-3 text-[12px] uppercase tracking-[0.08em]" style={{ fontFamily: MONO, color: T.quiet }}>The demo homepage / Concept build</figcaption>
-          </figure>
-          <RelationshipDisclosure slug="panda-publisher" variant="editorial" />
+        <div className="mt-6 flex flex-wrap items-center gap-4">
+          <a
+            href="https://pandapublisher-eight.vercel.app/"
+            target="_blank"
+            rel="noopener"
+            className="cta-solid inline-flex items-center gap-2 px-5 py-3 text-[14px] font-medium"
+            style={{ backgroundColor: T.ink, color: T.paper }}
+          >
+            Visit the concept <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
         </div>
-      </section>
+
+        <WorkCasePreview src="/work/panda-publisher.png" alt="The Panda Publisher demo homepage, a library of book covers for author services" width={1912} height={914} caption="The demo homepage / Concept build" />
+        <WorkCaseFacts items={[
+          { label: "Project", value: "Author-services website" },
+          { label: "Status", value: "Concept build" },
+          { label: "Content", value: "Demo book covers; no publishing business" },
+        ]} />
+        <RelationshipDisclosure slug="panda-publisher" variant="editorial" />
+      </WorkCaseOpening>
 
       <PandaPublisherWalkthrough />
 
       <CaseStudyFaqs faqs={faqs} />
 
-      <section className="px-6 py-20 md:px-10" style={{ backgroundColor: T.dark, color: T.onDark }}>
+      <section className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
         <div className="mx-auto max-w-[1100px]">
           <h2 style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2rem, 3.6vw, 2.8rem)", lineHeight: 1.05 }}>
             Selling a service that&apos;s hard to picture?

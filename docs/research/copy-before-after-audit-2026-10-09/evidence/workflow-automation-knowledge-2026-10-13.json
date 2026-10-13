@@ -1,0 +1,25 @@
+{
+  "pass": true,
+  "results": [
+    {
+      "question": "Can you automate order and booking emails?",
+      "sharedFaqAndAssistantPassage": true
+    },
+    {
+      "question": "Can you send booking and payment reminders?",
+      "sharedFaqAndAssistantPassage": true
+    },
+    {
+      "question": "Can my system generate PDF invoices?",
+      "sharedFaqAndAssistantPassage": true
+    },
+    {
+      "question": "Can you stop us entering the same details twice?",
+      "sharedFaqAndAssistantPassage": true
+    },
+    {
+      "question": "Can you replace paid apps with custom business software?",
+      "sharedFaqAndAssistantPassage": true
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "date": "2026-10-13",
+  "origin": "http://localhost:3003",
+  "build": ".next-audit",
+  "route": "/work/a-step-above-medical",
+  "note": "Local Chromium/WebKit; WebKit strips upgrade-insecure-requests only for local HTTP.",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "pass": true,
+      "violations": [],
+      "links": [
+        {
+          "alt": "A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "href": "/work/a-step-above-medical-preview-homepage.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "nameMatches": true
+        },
+        {
+          "alt": "Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "href": "/work/a-step-above-medical-editor-locations.png",
+          "name": "Open full-size screenshot (new tab): Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "href": "/work/a-step-above-medical-editor-courses.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "href": "/work/a-step-above-medical-portal-classes.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "href": "/work/a-step-above-medical-portal-exports.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "nameMatches": true
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "pass": true,
+      "violations": [],
+      "links": [
+        {
+          "alt": "A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "href": "/work/a-step-above-medical-preview-homepage.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "nameMatches": true
+        },
+        {
+          "alt": "Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "href": "/work/a-step-above-medical-editor-locations.png",
+          "name": "Open full-size screenshot (new tab): Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "href": "/work/a-step-above-medical-editor-courses.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "href": "/work/a-step-above-medical-portal-classes.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "href": "/work/a-step-above-medical-portal-exports.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "nameMatches": true
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "pass": true,
+      "violations": [],
+      "links": [
+        {
+          "alt": "A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "href": "/work/a-step-above-medical-preview-homepage.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "nameMatches": true
+        },
+        {
+          "alt": "Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "href": "/work/a-step-above-medical-editor-locations.png",
+          "name": "Open full-size screenshot (new tab): Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "href": "/work/a-step-above-medical-editor-courses.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "href": "/work/a-step-above-medical-portal-classes.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "href": "/work/a-step-above-medical-portal-exports.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "nameMatches": true
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "pass": true,
+      "violations": [],
+      "links": [
+        {
+          "alt": "A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "href": "/work/a-step-above-medical-preview-homepage.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "nameMatches": true
+        },
+        {
+          "alt": "Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "href": "/work/a-step-above-medical-editor-locations.png",
+          "name": "Open full-size screenshot (new tab): Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "href": "/work/a-step-above-medical-editor-courses.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "href": "/work/a-step-above-medical-portal-classes.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "href": "/work/a-step-above-medical-portal-exports.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "nameMatches": true
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "pass": true,
+      "violations": [],
+      "links": [
+        {
+          "alt": "A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "href": "/work/a-step-above-medical-preview-homepage.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "nameMatches": true
+        },
+        {
+          "alt": "Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "href": "/work/a-step-above-medical-editor-locations.png",
+          "name": "Open full-size screenshot (new tab): Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "href": "/work/a-step-above-medical-editor-courses.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "href": "/work/a-step-above-medical-portal-classes.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "href": "/work/a-step-above-medical-portal-exports.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "nameMatches": true
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1920,
+      "pass": true,
+      "violations": [],
+      "links": [
+        {
+          "alt": "A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "href": "/work/a-step-above-medical-preview-homepage.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "nameMatches": true
+        },
+        {
+          "alt": "Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "href": "/work/a-step-above-medical-editor-locations.png",
+          "name": "Open full-size screenshot (new tab): Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "href": "/work/a-step-above-medical-editor-courses.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "href": "/work/a-step-above-medical-portal-classes.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "href": "/work/a-step-above-medical-portal-exports.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "nameMatches": true
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "pass": true,
+      "violations": [],
+      "links": [
+        {
+          "alt": "A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "href": "/work/a-step-above-medical-preview-homepage.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "nameMatches": true
+        },
+        {
+          "alt": "Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "href": "/work/a-step-above-medical-editor-locations.png",
+          "name": "Open full-size screenshot (new tab): Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "href": "/work/a-step-above-medical-editor-courses.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "href": "/work/a-step-above-medical-portal-classes.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "href": "/work/a-step-above-medical-portal-exports.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "nameMatches": true
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "pass": true,
+      "violations": [],
+      "links": [
+        {
+          "alt": "A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "href": "/work/a-step-above-medical-preview-homepage.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
+          "nameMatches": true
+        },
+        {
+          "alt": "Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "href": "/work/a-step-above-medical-editor-locations.png",
+          "name": "Open full-size screenshot (new tab): Sanity location editor for A Step Above Medical showing Chicago, a web address field, a location availability toggle and a city photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "href": "/work/a-step-above-medical-editor-courses.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical course editor showing IV therapy and phlebotomy entries, course content, duration and a course photograph",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "href": "/work/a-step-above-medical-portal-classes.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical operations portal showing a class schedule, enrolment, instructor assignments, readiness indicators and an attention panel",
+          "nameMatches": true
+        },
+        {
+          "alt": "A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "href": "/work/a-step-above-medical-portal-exports.png",
+          "name": "Open full-size screenshot (new tab): A Step Above Medical portal export screen with CSV downloads for students, classes, registrations, attendance, payments, certificates and terms records",
+          "nameMatches": true
+        }
+      ]
+    }
+  ]
+}

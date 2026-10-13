@@ -1,13 +1,15 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import WorkCaseTitle from "@/components/redesign/case-study/WorkCaseTitle";
+import WorkCaseOpening from "@/components/redesign/case-study/WorkCaseOpening";
+import WorkCasePreview from "@/components/redesign/case-study/WorkCasePreview";
+import WorkCaseFacts from "@/components/redesign/case-study/WorkCaseFacts";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import Ladies4JesusWalkthrough from "@/components/redesign/case-study/Ladies4JesusWalkthrough";
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
-import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
+import { BODY, DISPLAY, MONO, T } from "@/components/redesign/tokens";
 import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-study/CaseStudyFaqs";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -40,45 +42,45 @@ const built = [
 export function Ladies4JesusCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed footerLinksOnly>
-      <section className="px-6 pb-16 pt-8 md:pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
-        <div className="mx-auto max-w-[1100px]">
-          <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-            <Link href="/work" style={{ color: T.quiet }}>Work</Link> / Ladies 4 Jesus / Independent client
-          </p>
+      <WorkCaseOpening>
+        <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
+          <Link href="/work" style={{ color: T.quiet }}>Work</Link> / Ladies 4 Jesus / Independent client
+        </p>
 
-            <WorkCaseTitle>Ladies 4 Jesus</WorkCaseTitle>
-          <p className="mt-3 max-w-[38rem]" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
-            A moderated community an owner runs alone.
-          </p>
+        <WorkCaseTitle>Ladies 4 Jesus</WorkCaseTitle>
+        <p className="mt-3 max-w-[38rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
+          A moderated community an owner runs alone.
+        </p>
 
-          <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
-            {MIGRATION_PROJECT_DETAILS.ladies4Jesus.summary}
-          </p>
+        <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
+          {MIGRATION_PROJECT_DETAILS.ladies4Jesus.summary}
+        </p>
 
-          <div className="mt-6 flex flex-wrap items-center gap-4">
-            <a
-              href="https://www.ladies4jesus.com"
-              target="_blank"
-              rel="noopener"
-              className="cta-solid inline-flex items-center gap-2 px-5 py-3 text-[14px] font-medium"
-              style={{ backgroundColor: T.ink, color: T.paper }}
-            >
-              Visit the live site <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-              <span className="sr-only"> ladies4jesus.com (opens in a new tab)</span>
-            </a>
-          </div>
-
-          <figure className="mt-10 border" style={{ borderColor: T.rule, backgroundColor: T.paperHi }}>
-            <Image src="/work/ladies-4-jesus-hero.png" alt="Ladies 4 Jesus homepage, with stories, devotionals and community navigation" width={1912} height={914} sizes="(min-width: 1100px) 1100px, 100vw" priority />
-            <figcaption className="px-4 py-3 text-[12px] uppercase tracking-[0.08em]" style={{ fontFamily: MONO, color: T.quiet }}>The public homepage / Independent client</figcaption>
-          </figure>
-          <RelationshipDisclosure slug="ladies-4-jesus" variant="editorial" />
+        <div className="mt-6 flex flex-wrap items-center gap-4">
+          <a
+            href="https://www.ladies4jesus.com"
+            target="_blank"
+            rel="noopener"
+            className="cta-solid inline-flex items-center gap-2 px-5 py-3 text-[14px] font-medium"
+            style={{ backgroundColor: T.ink, color: T.paper }}
+          >
+            Visit the live site <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            <span className="sr-only"> ladies4jesus.com (opens in a new tab)</span>
+          </a>
         </div>
-      </section>
+
+        <WorkCasePreview src="/work/ladies-4-jesus-hero.png" alt="Ladies 4 Jesus homepage, with stories, devotionals and community navigation" width={1912} height={914} caption="The public homepage / Independent client" />
+        <WorkCaseFacts items={[
+          { label: "Project", value: "Community and publishing website" },
+          { label: "Team editing", value: "Sanity content editor" },
+          { label: "Visitor features", value: "Moderated submissions" },
+        ]} />
+        <RelationshipDisclosure slug="ladies-4-jesus" variant="editorial" />
+      </WorkCaseOpening>
 
       <Ladies4JesusWalkthrough />
 
-      <section className="px-6 py-16 md:px-10 md:py-24" style={{ backgroundColor: T.paperHi }}>
+      <section className="px-6 py-8 md:px-10 md:py-24" style={{ backgroundColor: T.paperHi }}>
         <div className="mx-auto max-w-[1100px]">
           <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>03</span>
           <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
@@ -103,7 +105,7 @@ export function Ladies4JesusCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
 
       <CaseStudyFaqs faqs={faqs} />
 
-      <section className="px-6 py-20 md:px-10" style={{ backgroundColor: T.dark, color: T.onDark }}>
+      <section className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
         <div className="mx-auto max-w-[1100px]">
           <h2 style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2rem, 3.6vw, 2.8rem)", lineHeight: 1.05 }}>
             Building a community you can&apos;t moderate alone?

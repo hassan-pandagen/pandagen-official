@@ -1,3 +1,4 @@
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
@@ -35,15 +36,15 @@ const founders = [
 
 export default function FoundersDark() {
   return (
-    <section aria-labelledby="founders-title" className="px-6 py-16 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
+    <section aria-labelledby="founders-title" className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
       <div className="mx-auto max-w-[1440px]">
-        <div className="grid gap-10 lg:grid-cols-12">
+        <div className="grid gap-6 md:gap-10 lg:grid-cols-12">
           <h2
             id="founders-title"
             className="lg:col-span-6"
             style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2.6rem, 5.4vw, 5.2rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}
           >
-            <span style={{ color: T.onDarkAccent }}>Founder-built,</span> not farmed out.
+            <HeadingEmphasis text="Founder-built," phrase="Founder-built" onDark /> not farmed out.
           </h2>
           <p className="max-w-[34rem] self-end text-[17px] leading-[1.6] lg:col-span-5 lg:col-start-8" style={{ color: T.onDarkQuiet }}>
             Hassan leads development. Imran leads marketing and the customer journey. You work directly with the founders. Contracts
@@ -52,9 +53,9 @@ export default function FoundersDark() {
           </p>
         </div>
 
-        <ul className="mt-16 border-t md:mt-24" style={{ borderColor: T.onDarkRule }}>
+        <ul className="mt-8 border-t md:mt-24" style={{ borderColor: T.onDarkRule }}>
           {founders.map((f) => (
-            <li key={f.last} className="founder grid gap-10 border-b py-12 md:py-16 lg:grid-cols-12" style={{ borderColor: T.onDarkRule }}>
+            <li key={f.last} className="founder grid gap-6 border-b py-8 last:border-b-0 last:pb-0 md:gap-10 md:py-16 md:last:pb-16 lg:grid-cols-12" style={{ borderColor: T.onDarkRule }}>
               <div className="lg:col-span-6">
                 <p className="text-[12px] uppercase tracking-[0.14em]" style={{ fontFamily: MONO, color: T.onDarkQuiet }}>
                   {f.title}

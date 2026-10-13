@@ -43,7 +43,7 @@ const chapters: WalkthroughChapter[] = [
     ],
   },
   {
-    id: "content", label: "Content editor", title: "What your team can change.",
+    id: "content", label: "Content editor", title: "An editor built for the patch business.",
     description: "Sanity is where your website content lives. You or your marketing team can edit copy, publish articles and add case studies without editing code.",
     detail: "The editor gives your team fields for the content they manage, including promotional banners where configured. Change the content, then publish it to the website without asking a developer to rewrite the page.",
     note: "These three screens show the actual editing experience: homepage copy, a blog post and a case study.",

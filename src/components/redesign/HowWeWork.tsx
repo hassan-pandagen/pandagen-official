@@ -1,3 +1,4 @@
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import { POST_LAUNCH_SUPPORT_SUMMARY } from "@/data/company-facts";
 import { FileCheck2, Gauge, KeyRound, LifeBuoy, PencilLine, UserRound } from "lucide-react";
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
@@ -30,17 +31,17 @@ const rows = [
 
 export default function HowWeWork() {
   return (
-    <section aria-labelledby="how-title" className="px-6 py-16 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
+    <section aria-labelledby="how-title" className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
       <div className="mx-auto max-w-[1440px]">
         <p className="text-[12px] uppercase tracking-[0.16em]" style={{ fontFamily: MONO, color: T.onDarkQuiet }}>
           What you get
         </p>
         <h2 id="how-title" className="mt-5 max-w-[18ch]" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2.6rem, 5.4vw, 5.2rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}>
-          Know what is included <span style={{ color: T.onDarkAccent }}>before we build.</span>
+          Know what is included <HeadingEmphasis text="before we build." onDark />
         </h2>
-        <ul className="how-list mt-10 border-t" style={{ borderColor: T.onDarkRule }}>
+        <ul className="how-list mt-8 border-t md:mt-10" style={{ borderColor: T.onDarkRule }}>
           {rows.map(({ label, Icon, text }) => (
-            <li key={label} className="how-row grid items-start gap-3 border-b py-8 md:grid-cols-12 md:gap-8 md:py-10" style={{ borderColor: T.onDarkRule }}>
+            <li key={label} className="how-row grid items-start gap-3 border-b py-6 last:border-b-0 last:pb-0 md:grid-cols-12 md:gap-8 md:py-10 md:last:pb-10" style={{ borderColor: T.onDarkRule }}>
               <span className="md:col-span-4 md:text-right" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.6rem, 2.6vw, 2.4rem)", lineHeight: 1.1 }}>
                 {label}
               </span>

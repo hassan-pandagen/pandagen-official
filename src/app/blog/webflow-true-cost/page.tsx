@@ -1,3 +1,4 @@
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -145,7 +146,7 @@ export default function WebflowTrueCostPage() {
                     <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
                       <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Webflow pricing and running costs</p>
-                        <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">How much does Webflow cost in 2026?</h1>
+                        <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl"><HeadingEmphasis text={"How much does Webflow cost in 2026?"} /></h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             For a custom-domain website, Basic starts at {spec("webflow-basic-price").value} billed yearly; Premium with a CMS starts at {spec("webflow-premium-price").value} billed yearly. Your full budget also depends on the people editing it, enabled extras and the work needed to keep it useful.
                         </p>

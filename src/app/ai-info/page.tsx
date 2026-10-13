@@ -7,8 +7,8 @@ import { ogImageForPath } from "@/lib/seo/og";
 
 export const dynamic = "force-static";
 
-const modified = "2026-10-09";
-const modifiedLabel = "October 9, 2026";
+const modified = "2026-10-11";
+const modifiedLabel = "October 11, 2026";
 
 export const metadata: Metadata = {
   title: { absolute: "PandaCodeGen Company Reference | People, Services & Projects" },

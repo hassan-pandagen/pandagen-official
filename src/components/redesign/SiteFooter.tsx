@@ -110,7 +110,7 @@ export default function SiteFooter({ compactTop = false, linksOnly = false }: { 
       </section>}
 
       {/* Links. */}
-      <div className="border-t px-6 pb-10 pt-16 md:px-10" style={{ borderColor: T.onDarkRule }}>
+      <div data-footer-links className={`border-t px-6 pb-10 md:px-10 ${linksOnly ? "pt-8 md:pt-16" : "pt-16"}`} style={{ borderColor: T.onDarkRule }}>
         <div className="mx-auto grid max-w-[1440px] gap-12 md:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-3">
             <Link href="/" className="text-[22px]" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.onDark, textDecoration: "none" }}>

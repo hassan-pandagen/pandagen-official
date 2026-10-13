@@ -1,6 +1,7 @@
 import { WORDPRESS_HOST_MIGRATION } from "@/data/company-facts";
 import type { ServiceFaq } from "@/data/service-faqs";
 import { serviceSearchFoundations } from "./service-search-foundations";
+import { businessAutomationFaqs } from "./business-features";
 
 // Buyer questions describe the work we actually scope. They are not keyword-
 // volume claims. Visible service FAQs, JSON-LD and assistant knowledge share them.
@@ -37,11 +38,12 @@ const questions: Record<string, ServiceFaq[]> = {
     { q: "Can you add customer logins and private file uploads to our website?", a: "Yes, as a separately scoped backend or portal project. We agree the user roles, records, files and actions each person may access, then implement and test the permissions and connections to your website. Supabase is our usual platform, but we assess your existing database and APIs first. A content editor or Starter website does not automatically include this application work." },
   ],
   "custom-engineering": [
+    ...businessAutomationFaqs,
     { q: "Can you replace spreadsheets with a customer portal or staff dashboard?", a: "Yes, when a defined application solves the workflow. We map the records, repeated data entry, approvals and users, then scope one complete process for the first release. The quote lists the screens, permissions, integrations, data migration and ongoing costs. Your team reviews a working workflow before launch rather than buying an undefined software package." },
   ],
   "ai-seo": [
     { q: "Can you help if my business is missing from ChatGPT or Google AI answers?", a: "We can investigate the agreed questions and pages, check access to the content and identify missing or unsupported business information. The monthly starting scope includes focused research, monitoring, one implemented improvement, a report and a review. We report observed visibility separately from visits and enquiries; no service can guarantee that an AI system will include or cite your business." },
-    { q: "What are AEO and GEO services?", a: "Answer engine optimization (AEO) and generative engine optimization (GEO) describe work aimed at making useful business information accessible to answer and AI search systems. PandaCodeGen includes this work within its AI SEO service: research buyer questions, improve the agreed pages and report available visibility signals. It is a scoped service for your website, rather than a subscription to automated SEO software." },
+    { q: "What is the difference between AI SEO, AEO and GEO services?", a: "AI SEO is our broader service for improving how a business website can be found and understood in AI search. Answer engine optimization (AEO) focuses on answering buyer questions clearly. Generative engine optimization (GEO) focuses on how the business and its pages are represented in generative search responses. The work overlaps: useful content, accessible pages and reliable evidence. PandaCodeGen scopes this work to agreed questions and pages, with visibility reported separately from visits, enquiries and sales. It is website research and implementation, rather than a subscription to automated SEO software." },
   ],
 };
 

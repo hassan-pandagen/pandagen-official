@@ -1,3 +1,4 @@
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { ArrowDownLeft, ArrowRight } from "lucide-react";
@@ -163,7 +164,7 @@ export default function ServicesStack() {
           className="max-w-[32ch]"
           style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2.6rem, 4.6vw, 4.4rem)", lineHeight: 1.1, letterSpacing: "-0.02em", paddingBottom: "0.08em" }}
         >
-          Engineered around how your <span style={{ color: T.onDarkAccent }}>business runs,</span> and what can break.
+          Engineered around how your <HeadingEmphasis text="business runs," onDark /> and what can break.
         </h2>
 
         {/* One grid: see the note at the top of the file. */}

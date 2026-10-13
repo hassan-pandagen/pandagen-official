@@ -1,0 +1,147 @@
+{
+  "pass": true,
+  "rows": [
+    {
+      "slug": "wordpress",
+      "faq": {
+        "q": "Is SEO and AI search setup included in a new WordPress website?",
+        "a": "Yes. The agreed WordPress build includes public-page content, titles, headings, links and launch checks. Repairs to an existing theme or its settings are quoted after review. Ongoing buyer research and visibility reporting are optional monthly work."
+      },
+      "heading": "WordPress SEO and AI search setup.",
+      "pass": true
+    },
+    {
+      "slug": "wordpress-migration",
+      "faq": {
+        "q": "Can Google and AI search read my website after a WordPress migration?",
+        "a": "We check the replacement pages, preserve useful addresses or map redirects, and compare the agreed content before launch. These controls reduce avoidable access problems; search systems still decide rankings and citations. Ongoing monitoring and research are scoped separately."
+      },
+      "heading": "SEO and AI search after a WordPress migration.",
+      "pass": true
+    },
+    {
+      "slug": "ecommerce",
+      "faq": {
+        "q": "Can Google and AI search read my product pages?",
+        "a": "Public product and category pages get the agreed descriptions, search settings and relevant product markup. Checkout, accounts and order records stay separate from that public content. Product writing and ongoing search campaigns beyond the storefront scope are quoted separately."
+      },
+      "heading": "Ecommerce SEO and AI-readable product pages.",
+      "pass": true
+    },
+    {
+      "slug": "woocommerce",
+      "faq": {
+        "q": "What SEO and AI search checks do you make on WooCommerce?",
+        "a": "We inspect the agreed product/category content and how the theme and extensions publish it, then quote fixes. A rebuild also needs a product-address and content plan. Ongoing search research and reporting are a separate scope."
+      },
+      "heading": "WooCommerce SEO and AI search checks.",
+      "pass": true
+    },
+    {
+      "slug": "wix",
+      "faq": {
+        "q": "Can you improve Wix SEO and AI search access without moving platforms?",
+        "a": "Yes, where the changes fit Wix's tools. We assess the agreed pages and available search settings, then quote improvements on Wix. A platform move is a separate decision with content and redirect planning. Monthly research and reporting are optional."
+      },
+      "heading": "Wix SEO and AI search access.",
+      "pass": true
+    },
+    {
+      "slug": "squarespace",
+      "faq": {
+        "q": "Can you improve Squarespace SEO and AI search access?",
+        "a": "We review the agreed Squarespace content and available search controls before scoping improvements or a rebuild. A move also needs a plan for pages, posts and existing addresses. Ongoing buyer research and content work are priced separately."
+      },
+      "heading": "Squarespace SEO and AI-readable content.",
+      "pass": true
+    },
+    {
+      "slug": "webflow",
+      "faq": {
+        "q": "Do you handle Webflow SEO and AI search setup?",
+        "a": "Yes, within the agreed website scope. We check the published CMS templates as well as individual pages, so collection fields produce useful content and search settings. Migration adds imported-content and redirect checks. Monthly monitoring or writing is separate work."
+      },
+      "heading": "Webflow SEO, CMS pages and AI search.",
+      "pass": true
+    },
+    {
+      "slug": "gohighlevel",
+      "faq": {
+        "q": "Can you improve GoHighLevel website SEO while keeping the CRM?",
+        "a": "Yes. We assess the public pages alongside the forms and calendars connected to GoHighLevel. The agreed CRM workflow can remain while its website is improved or replaced. Private customer records stay protected; ongoing search research and reporting are optional."
+      },
+      "heading": "GoHighLevel website SEO and AI search.",
+      "pass": true
+    },
+    {
+      "slug": "cms-development",
+      "faq": {
+        "q": "Will our CMS website be readable by Google and AI search?",
+        "a": "We check what the agreed CMS fields actually publish, including readable page content and search settings. Editorial access alone is not enough: the public website needs checking after publication. Ongoing research, content improvements and visibility reporting are separately scoped."
+      },
+      "heading": "CMS websites built for search and AI.",
+      "pass": true
+    },
+    {
+      "slug": "custom-engineering",
+      "faq": {
+        "q": "Can our public website be found in AI search while the CRM stays private?",
+        "a": "Yes, these have separate access requirements. Public service, product or help pages can receive the agreed search setup while customer and staff records remain private. We do not expose the CRM for SEO. Ongoing work on public-page visibility is quoted separately."
+      },
+      "heading": "Searchable public pages. Private business records.",
+      "pass": true
+    },
+    {
+      "slug": "backend-development",
+      "faq": {
+        "q": "Does backend development include SEO and AI search setup?",
+        "a": "Backend work covers the agreed data, logins, permissions and workflows. If public website pages are included, their search setup belongs in that website scope. Private accounts and uploads retain access controls. Ongoing visibility work is a separate option."
+      },
+      "heading": "Public website SEO. Private portal access.",
+      "pass": true
+    }
+  ],
+  "aiFaqs": [
+    [
+      "Can you help if my business is missing from ChatGPT or Google AI answers?",
+      "We can investigate the agreed questions and pages, check access to the content and identify missing or unsupported business information. The monthly starting scope includes focused research, monitoring, one implemented improvement, a report and a review. We report observed visibility separately from visits and enquiries; no service can guarantee that an AI system will include or cite your business."
+    ],
+    [
+      "What is the difference between AI SEO, AEO and GEO services?",
+      "AI SEO is our broader service for improving how a business website can be found and understood in AI search. Answer engine optimization (AEO) focuses on answering buyer questions clearly. Generative engine optimization (GEO) focuses on how the business and its pages are represented in generative search responses. The work overlaps: useful content, accessible pages and reliable evidence. PandaCodeGen scopes this work to agreed questions and pages, with visibility reported separately from visits, enquiries and sales. It is website research and implementation, rather than a subscription to automated SEO software."
+    ],
+    [
+      "What does the $500 monthly AI SEO and GEO service include?",
+      "The optional starting scope covers ten buyer questions, up to five priority pages and two agreed AI-search surfaces. Each month includes research, monitoring, one agreed page improvement or small technical change with a revision round, a report and a review. In the first month we establish the baseline and agree the questions and pages. Original articles, dashboards, extra platforms and larger changes need a separate quote. Ending the retainer does not disable the website."
+    ],
+    [
+      "Are AI SEO services just AI-written articles?",
+      "No. Our offer is research and implementation to improve a website's information and access for AI search, with reporting on the agreed questions and pages. Automated article production is not the monthly offer. Original long-form content is scoped and priced separately."
+    ],
+    [
+      "Can you guarantee citations or rankings?",
+      "No. Search and AI systems choose their sources. We agree the work and checks, then report the changes and available measurements with their limits."
+    ],
+    [
+      "What evidence can you show?",
+      "We can show first-party visibility reports and the order-source tracking used by Panda Patches. Impressions are not visits or sales, and Panda Patches shares an owner with PandaCodeGen, so it is not independent client proof."
+    ],
+    [
+      "Can you tell whether a lead came from an AI answer?",
+      "Sometimes a referral or campaign signal is captured, but some visits are grouped within broader search reporting. Customer-declared discovery is useful but different evidence from a recorded click. We inspect your existing analytics and form data before proposing attribution work."
+    ],
+    [
+      "Does the $500 starting scope include new articles or a dashboard?",
+      "No. It covers the focused monthly work described here. Original long-form writing, a reporting dashboard, broader markets, major integrations or a larger engineering backlog are proposed and priced separately."
+    ]
+  ],
+  "supportSummary": "Starter: 15 calendar days from launch; upgrades: 30. Bugs in delivered work stay covered afterward; new features quoted separately.",
+  "supportWords": 19,
+  "asamPlan": {
+    "id": "work-a-step-above-medical",
+    "title": "Our work: A Step Above Medical",
+    "text": "A Step Above Medical (Independent client project, in pre-launch testing). A complete medical training management system: a public course website, a content editor and a separate team portal for classes, students, payments and certificates. The website was rebuilt from WordPress with Next.js and Sanity; the portal uses Supabase. The build is complete and undergoing pre-launch testing. Website and operations portal built; pre-launch testing underway as of 2026-10-10. Launch is planned for 2026-10-19; this is a schedule, not confirmation that the replacement site is live. Independent client project. The build is complete and in pre-launch testing. Screenshots show the new website and portal before launch; no live-site performance or business results are claimed.",
+    "url": "https://www.pandacodegen.com/work/a-step-above-medical"
+  },
+  "unresolvedPins": []
+}

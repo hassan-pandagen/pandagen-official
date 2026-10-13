@@ -1,0 +1,116 @@
+{
+  "pass": true,
+  "projects": 11,
+  "results": [
+    {
+      "slug": "a-step-above-medical",
+      "pass": true,
+      "paragraphsPreserved": 32,
+      "linksPreserved": 17,
+      "faqAnswersInInitialHtml": 5,
+      "schemaUnchanged": true,
+      "factsImmediatelyAfterPreview": true,
+      "relationshipAfterFacts": true
+    },
+    {
+      "slug": "emblematic-studio",
+      "pass": true,
+      "paragraphsPreserved": 30,
+      "linksPreserved": 21,
+      "faqAnswersInInitialHtml": 7,
+      "schemaUnchanged": true,
+      "factsImmediatelyAfterPreview": true,
+      "relationshipAfterFacts": true
+    },
+    {
+      "slug": "enterprise-ops",
+      "pass": true,
+      "paragraphsPreserved": 28,
+      "linksPreserved": 17,
+      "faqAnswersInInitialHtml": 7,
+      "schemaUnchanged": true,
+      "factsImmediatelyAfterPreview": true,
+      "relationshipAfterFacts": true
+    },
+    {
+      "slug": "ladies-4-jesus",
+      "pass": true,
+      "paragraphsPreserved": 24,
+      "linksPreserved": 16,
+      "faqAnswersInInitialHtml": 5,
+      "schemaUnchanged": true,
+      "factsImmediatelyAfterPreview": true,
+      "relationshipAfterFacts": true
+    },
+    {
+      "slug": "medical-template",
+      "pass": true,
+      "paragraphsPreserved": 23,
+      "linksPreserved": 14,
+      "faqAnswersInInitialHtml": 4,
+      "schemaUnchanged": true,
+      "factsImmediatelyAfterPreview": true,
+      "relationshipAfterFacts": true
+    },
+    {
+      "slug": "mycustompatches",
+      "pass": true,
+      "paragraphsPreserved": 32,
+      "linksPreserved": 12,
+      "faqAnswersInInitialHtml": 5,
+      "schemaUnchanged": true,
+      "factsImmediatelyAfterPreview": true,
+      "relationshipAfterFacts": true
+    },
+    {
+      "slug": "northdeck-group",
+      "pass": true,
+      "paragraphsPreserved": 37,
+      "linksPreserved": 25,
+      "faqAnswersInInitialHtml": 0,
+      "schemaUnchanged": true,
+      "factsImmediatelyAfterPreview": true,
+      "relationshipAfterFacts": true
+    },
+    {
+      "slug": "panda-patches",
+      "pass": true,
+      "paragraphsPreserved": 38,
+      "linksPreserved": 22,
+      "faqAnswersInInitialHtml": 6,
+      "schemaUnchanged": true,
+      "factsImmediatelyAfterPreview": true,
+      "relationshipAfterFacts": true
+    },
+    {
+      "slug": "panda-publisher",
+      "pass": true,
+      "paragraphsPreserved": 27,
+      "linksPreserved": 16,
+      "faqAnswersInInitialHtml": 0,
+      "schemaUnchanged": true,
+      "factsImmediatelyAfterPreview": true,
+      "relationshipAfterFacts": true
+    },
+    {
+      "slug": "saforne",
+      "pass": true,
+      "paragraphsPreserved": 5,
+      "linksPreserved": 3,
+      "faqAnswersInInitialHtml": 0,
+      "schemaUnchanged": true,
+      "factsImmediatelyAfterPreview": true,
+      "relationshipAfterFacts": true
+    },
+    {
+      "slug": "sleek-jackets",
+      "pass": true,
+      "paragraphsPreserved": 21,
+      "linksPreserved": 13,
+      "faqAnswersInInitialHtml": 0,
+      "schemaUnchanged": true,
+      "factsImmediatelyAfterPreview": true,
+      "relationshipAfterFacts": true
+    }
+  ]
+}

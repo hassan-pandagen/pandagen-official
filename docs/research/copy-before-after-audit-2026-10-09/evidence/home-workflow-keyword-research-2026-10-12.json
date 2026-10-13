@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-12",
+  "scope": "Homepage workflow heading and mobile review/feature presentation",
+  "heading_before": "Let customers get a quote, reach your team and stay informed.",
+  "heading_after": "Workflow automation. Less busywork.",
+  "positioning": "Manual quotes, repeated data entry, order follow-up and connected custom tools; compare retiring subscriptions with replacement running and maintenance costs.",
+  "primary_phrase": "workflow automation",
+  "research_candidates": [
+    {
+      "keyword": "workflow automation services",
+      "us_volume": null,
+      "status": "Unmeasured hiring or buyer-problem candidate; not a ranking claim."
+    },
+    {
+      "keyword": "custom workflow automation",
+      "us_volume": null,
+      "status": "Unmeasured hiring or buyer-problem candidate; not a ranking claim."
+    },
+    {
+      "keyword": "custom business software",
+      "us_volume": null,
+      "status": "Unmeasured hiring or buyer-problem candidate; not a ranking claim."
+    },
+    {
+      "keyword": "CRM workflow automation",
+      "us_volume": null,
+      "status": "Unmeasured hiring or buyer-problem candidate; not a ranking claim."
+    },
+    {
+      "keyword": "automate customer quotes and follow-ups",
+      "us_volume": null,
+      "status": "Unmeasured hiring or buyer-problem candidate; not a ranking claim."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.brainslogic.com/services/workflow-automation",
+      "role": "First-party service category and manual-workflow examples; not demand or quality proof."
+    },
+    {
+      "url": "https://www.visualwebsite.com/services/custom-software-development/",
+      "role": "First-party custom software hiring offer; search result reviewed, not a measured volume."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "role": "Contrast/readability guidance; WCAG is not a Google ranking or approval score."
+    }
+  ],
+  "limits": [
+    "No fresh keyword volumes or organic difficulty measured.",
+    "No universal no-subscription or immediate-delivery promise added.",
+    "Reviews remain verbatim and attributed; existing costs and editing-scope limits retained."
+  ]
+}

@@ -1,3 +1,4 @@
+import HeadingEmphasis from "../HeadingEmphasis";
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import ScreenshotDeck from "./ScreenshotDeck";
@@ -77,7 +78,7 @@ export default function CaseStudyWalkthrough({
         <section key={chapter.id} id={`${slug}-${chapter.id}`} aria-labelledby={`${slug}-${chapter.id}-title`} className={styles.chapter}>
           <div className={styles.explanation}>
             <p className={styles.eyebrow}>{String(index + 1).padStart(2, "0")} / {chapter.label}</p>
-            <h3 id={`${slug}-${chapter.id}-title`}>{chapter.title}</h3>
+            <h3 id={`${slug}-${chapter.id}-title`}><HeadingEmphasis text={chapter.title} /></h3>
             <p>{chapter.description}</p>
             <p>{chapter.detail}</p>
             <p className={styles.note}>{chapter.note}</p>

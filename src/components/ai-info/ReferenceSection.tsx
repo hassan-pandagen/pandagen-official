@@ -1,4 +1,5 @@
 import { OFFER_LINE, type Fact } from "@/data/company-facts";
+import styles from "./ReferenceSection.module.css";
 
 /**
  * Renders a labelled fact table for the /ai-info reference pages.
@@ -47,7 +48,7 @@ export function ReferenceIntro({
     verified: string;
 }) {
     return (
-        <header className="mb-8 border-b border-stone-200 pb-8">
+        <header className={`${styles.header} mb-8 border-b border-stone-200 pb-8`}>
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">
                 PandaCodeGen reference
             </p>

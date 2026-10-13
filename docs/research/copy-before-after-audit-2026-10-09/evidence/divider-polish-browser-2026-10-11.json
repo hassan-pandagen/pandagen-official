@@ -1,0 +1,252 @@
+{
+  "pass": true,
+  "cases": 10,
+  "apiIntercepted": true,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/",
+      "geometry": {
+        "pageWidth": 320,
+        "clipped": [],
+        "work": {
+          "gap": 24,
+          "lastBorder": "1px",
+          "summaryBorder": "0px"
+        },
+        "features": {
+          "gap": 24,
+          "lastBorder": "1px",
+          "costBorder": "0px",
+          "editPadding": "16px"
+        },
+        "faq": null,
+        "footer": {
+          "padding": "64px",
+          "border": "1px"
+        }
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "pageWidth": 320,
+        "clipped": [],
+        "work": null,
+        "features": null,
+        "faq": {
+          "gap": 48,
+          "padding": "24px",
+          "rowsMargin": "24px"
+        },
+        "footer": {
+          "padding": "32px",
+          "border": "1px"
+        }
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/",
+      "geometry": {
+        "pageWidth": 390,
+        "clipped": [],
+        "work": {
+          "gap": 24,
+          "lastBorder": "1px",
+          "summaryBorder": "0px"
+        },
+        "features": {
+          "gap": 24,
+          "lastBorder": "1px",
+          "costBorder": "0px",
+          "editPadding": "16px"
+        },
+        "faq": null,
+        "footer": {
+          "padding": "64px",
+          "border": "1px"
+        }
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "pageWidth": 390,
+        "clipped": [],
+        "work": null,
+        "features": null,
+        "faq": {
+          "gap": 48,
+          "padding": "24px",
+          "rowsMargin": "24px"
+        },
+        "footer": {
+          "padding": "32px",
+          "border": "1px"
+        }
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/",
+      "geometry": {
+        "pageWidth": 1440,
+        "clipped": [],
+        "work": {
+          "gap": 80,
+          "lastBorder": "1px",
+          "summaryBorder": "0px"
+        },
+        "features": {
+          "gap": 48,
+          "lastBorder": "1px",
+          "costBorder": "0px",
+          "editPadding": "32px"
+        },
+        "faq": null,
+        "footer": {
+          "padding": "64px",
+          "border": "1px"
+        }
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "pageWidth": 1440,
+        "clipped": [],
+        "work": null,
+        "features": null,
+        "faq": {
+          "gap": 208,
+          "padding": "96px",
+          "rowsMargin": "32px"
+        },
+        "footer": {
+          "padding": "64px",
+          "border": "1px"
+        }
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/",
+      "geometry": {
+        "pageWidth": 382,
+        "clipped": [],
+        "work": {
+          "gap": 24,
+          "lastBorder": "1px",
+          "summaryBorder": "0px"
+        },
+        "features": {
+          "gap": 24,
+          "lastBorder": "1px",
+          "costBorder": "0px",
+          "editPadding": "16px"
+        },
+        "faq": null,
+        "footer": {
+          "padding": "64px",
+          "border": "1px"
+        }
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "pageWidth": 382,
+        "clipped": [],
+        "work": null,
+        "features": null,
+        "faq": {
+          "gap": 48,
+          "padding": "24px",
+          "rowsMargin": "24px"
+        },
+        "footer": {
+          "padding": "32px",
+          "border": "1px"
+        }
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/",
+      "geometry": {
+        "pageWidth": 1432,
+        "clipped": [],
+        "work": {
+          "gap": 80,
+          "lastBorder": "1px",
+          "summaryBorder": "0px"
+        },
+        "features": {
+          "gap": 48,
+          "lastBorder": "1px",
+          "costBorder": "0px",
+          "editPadding": "32px"
+        },
+        "faq": null,
+        "footer": {
+          "padding": "64px",
+          "border": "1px"
+        }
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "pageWidth": 1432,
+        "clipped": [],
+        "work": null,
+        "features": null,
+        "faq": {
+          "gap": 208,
+          "padding": "96px",
+          "rowsMargin": "32px"
+        },
+        "footer": {
+          "padding": "64px",
+          "border": "1px"
+        }
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    }
+  ]
+}

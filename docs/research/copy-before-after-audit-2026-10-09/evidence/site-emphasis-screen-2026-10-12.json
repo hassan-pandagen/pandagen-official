@@ -1,0 +1,6567 @@
+{
+  "pass": true,
+  "pages": 160,
+  "cases": 320,
+  "staticRenderedStyleScreen": true,
+  "physicalDevices": false,
+  "results": [
+    {
+      "path": "/",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "$1,500",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/pricing",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "your project",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$3,500",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$5,000",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/free-audit",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/services/cms-development",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "editor",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "search",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/backend-development",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/wordpress",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "AI search",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/small-business-website-design",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/medical-website-design",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/ecommerce",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "redesign",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/wordpress-migration",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "Own",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/ai-seo",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "your business",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "AEO",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "pricing",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "AI SEO",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/custom-engineering",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/woocommerce",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "AI search",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/wix",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "editor",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "AI search",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/squarespace",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "your business",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "content",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/webflow",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "editing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "AI search",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migrate",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/gohighlevel",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "AI search",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/work",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/partners",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Sanity editor",
+          "ratio": 8.65293515194306,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/work/mycustompatches",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/enterprise-ops",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/panda-patches",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "editor",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "your business",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/work/emblematic-studio",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/ladies-4-jesus",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "editor",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/work/saforne",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/medical-template",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/panda-publisher",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/sleek-jackets",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/northdeck-group",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "handover",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/work/a-step-above-medical",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "editor",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/about/imran",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/about/hassan",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/ai-info",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/ai-info/pricing-and-guarantees",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/ai-info/migration-services",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/ai-info/case-studies",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/ai-info/team-and-company",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/manifesto",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/privacy",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/terms",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/cookies",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/security",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/editorial-policy",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/wordpress",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/shopify",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/webflow",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/squarespace",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/custom-development",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/agencies",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/website-migration",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/website-cost",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/ecommerce",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/website-speed",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/seo-and-ai-search",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/fr",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/de",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/fr/services",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/de/services",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/fr/pricing",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/de/pricing",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/fr/contact",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/de/contact",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/de/about",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/fr/about",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/sanity-vs-wordpress",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Editor",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "editing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/sanity-vs-supabase",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/product-catalog-website-without-cart",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "editor",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/website-monthly-running-cost",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/is-wix-bad-for-seo",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/gohighlevel-vs-wordpress",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/ai-built-website-checklist",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/is-it-cheaper-to-build-your-own-website",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/what-is-llms-txt",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/nextjs-sanity-stack",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Content",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "handover",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/aeo-web-performance-glossary",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/lovable-site-not-showing-on-google",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/fix-meta-ad-tracking-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/woocommerce-migration-cost",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migrate",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/wix-migration-cost",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/woocommerce-vs-custom-website",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "workflow",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/agentic-browsing-pagespeed-score",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/custom-website-5000-whats-included",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/spending-more-on-ads-fewer-orders-tracking",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/meta-conversions-api-setup-cost",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/will-migrating-hurt-my-seo",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/do-you-own-your-website",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/saas-price-increases-2026-tracker",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/how-long-does-a-custom-website-take",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "content",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/build-vs-buy-software-2026-cost-comparison",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/saas-software-pricing-audit-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/top-nextjs-agencies-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-april-2026-evidence",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/aeo-playbook-built-into-every-website",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "AEO",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "your business",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Search",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "AEO",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "AEO",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/website-developer-agency",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/how-much-does-a-website-cost",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-store-speed-optimization",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Performance",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Cost",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Content",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Migration",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/is-squarespace-bad-for-seo",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migrate",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/gohighlevel-keep-crm-replace-website",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/pagepro-alternatives",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/cheap-web-developer",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Handover",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/website-redesign-cost",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Redesign",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/how-to-speed-up-your-website",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/website-migration-cost-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-stocky-sunset-date-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "workflow",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/webflow-user-accounts-sunset-date-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/website-rebuild-cost-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "redesign",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/woocommerce-low-conversion-rate",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/which-website-builders-can-go-headless",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "content",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/ai-search-visibility-tracking",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/ai-referral-revenue-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "your business",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/cms-market-share-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/web-accessibility-glossary",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/web-accessibility-statistics-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/core-web-vitals-explained",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/squarespace-vs-custom-website",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "editing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/wix-vs-custom-website",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Editing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/squarespace-migration-cost",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/top-custom-web-development-agencies-usa-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/wix-too-slow",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "editor",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/divi-theme-slow",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "migrate",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/leaving-webflow-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Migrate",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/cloudflare-emdash-wordpress-replacement",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/google-algorithm-updates",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/webflow-vs-custom-website",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/squarespace-too-slow",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-vs-custom-website",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/webflow-migration-cost",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/woocommerce-too-slow",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-migration-cost",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "editing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/gohighlevel-website-speed",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/best-website-builder-for-gohighlevel-agencies",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Pricing",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-app-costs-real-monthly-bill",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/webflow-true-cost",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/nextjs-hosting-zero-cost",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/how-to-migrate-wordpress-to-nextjs",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/how-website-speed-affects-seo",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-vs-nextjs",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Editing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-dawn-theme-slow",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/for-agencies-offer-custom-web-development",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/why-we-chose-nextjs-over-wordpress-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-vs-custom-code-real-cost-3-years",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/google-universal-commerce-protocol-what-it-means-for-your-store",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-ai-security-risk-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "Content",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-plugin-security-2026",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-headless",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/elementor-kills-seo",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-plugins-destroy-speed",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-plus-still-slow",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-traffic-drop-speed",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-slow-losing-sales",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-conversion-rate-speed-fix",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/why-competitor-outranks-you",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "AEO",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "workflow",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "AI SEO",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/how-to-achieve-100-pagespeed",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/what-is-headless-commerce",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/how-to-fix-slow-wordpress",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/website-portability",
+      "width": 390,
+      "status": 200,
+      "pageWidth": 390,
+      "emphasis": [
+        {
+          "text": "content",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "content",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "handover",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/pricing",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "your project",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$3,500",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$5,000",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "$1,500",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/free-audit",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/services/cms-development",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "editor",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "search",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/backend-development",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/wordpress",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "AI search",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/small-business-website-design",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/medical-website-design",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/ecommerce",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "redesign",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/wordpress-migration",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "Own",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/ai-seo",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "your business",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "AEO",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "pricing",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "AI SEO",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/custom-engineering",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/woocommerce",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "AI search",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/wix",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "editor",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "AI search",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/squarespace",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "your business",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "content",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/gohighlevel",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "AI search",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/webflow",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "editing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "AI search",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migrate",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "hand over",
+          "ratio": 8.57707334585642,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "$1,500",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/partners",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Sanity editor",
+          "ratio": 8.65293515194306,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/work",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/mycustompatches",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/enterprise-ops",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/panda-patches",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "editor",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "your business",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/work/emblematic-studio",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/saforne",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/ladies-4-jesus",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "editor",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/work/medical-template",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/panda-publisher",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/sleek-jackets",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/work/northdeck-group",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "handover",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/work/a-step-above-medical",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "editor",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/about/hassan",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/about/imran",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/ai-info",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/ai-info/pricing-and-guarantees",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/ai-info/migration-services",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/ai-info/case-studies",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/ai-info/team-and-company",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/manifesto",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/privacy",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/terms",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/cookies",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/security",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/editorial-policy",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/wordpress",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/shopify",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/webflow",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/squarespace",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/custom-development",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/website-migration",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/agencies",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/website-cost",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/ecommerce",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/website-speed",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/topic/seo-and-ai-search",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/fr",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/fr/services",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/de",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/de/services",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/fr/pricing",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/de/pricing",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/fr/contact",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/de/contact",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/fr/about",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/de/about",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/sanity-vs-wordpress",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Editor",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "editing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/sanity-vs-supabase",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/product-catalog-website-without-cart",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "editor",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/website-monthly-running-cost",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/gohighlevel-vs-wordpress",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/is-wix-bad-for-seo",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/ai-built-website-checklist",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/is-it-cheaper-to-build-your-own-website",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/what-is-llms-txt",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/nextjs-sanity-stack",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Content",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "handover",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/aeo-web-performance-glossary",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/lovable-site-not-showing-on-google",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/fix-meta-ad-tracking-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/wix-migration-cost",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/woocommerce-migration-cost",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migrate",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/agentic-browsing-pagespeed-score",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/woocommerce-vs-custom-website",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "workflow",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/custom-website-5000-whats-included",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/meta-conversions-api-setup-cost",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/spending-more-on-ads-fewer-orders-tracking",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/will-migrating-hurt-my-seo",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/how-long-does-a-custom-website-take",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "content",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/do-you-own-your-website",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/saas-price-increases-2026-tracker",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/saas-software-pricing-audit-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/build-vs-buy-software-2026-cost-comparison",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/top-nextjs-agencies-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-april-2026-evidence",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/aeo-playbook-built-into-every-website",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "AEO",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "your business",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Search",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "AEO",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "AEO",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/website-developer-agency",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/how-much-does-a-website-cost",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-store-speed-optimization",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Performance",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Cost",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Content",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Migration",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/is-squarespace-bad-for-seo",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migrate",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/gohighlevel-keep-crm-replace-website",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/pagepro-alternatives",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/cheap-web-developer",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Handover",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/website-redesign-cost",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Redesign",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/how-to-speed-up-your-website",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/website-migration-cost-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-stocky-sunset-date-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "workflow",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/webflow-user-accounts-sunset-date-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/website-rebuild-cost-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "redesign",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/which-website-builders-can-go-headless",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "content",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/woocommerce-low-conversion-rate",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/ai-search-visibility-tracking",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/cms-market-share-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/ai-referral-revenue-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "your business",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/web-accessibility-glossary",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/web-accessibility-statistics-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/squarespace-vs-custom-website",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "editing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/core-web-vitals-explained",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/wix-vs-custom-website",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Editing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/squarespace-migration-cost",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/top-custom-web-development-agencies-usa-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/divi-theme-slow",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "migrate",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/wix-too-slow",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "editor",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/leaving-webflow-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Migrate",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/cloudflare-emdash-wordpress-replacement",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/google-algorithm-updates",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/webflow-vs-custom-website",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-vs-custom-website",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/woocommerce-too-slow",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/squarespace-too-slow",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/webflow-migration-cost",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-migration-cost",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "editing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/gohighlevel-website-speed",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/best-website-builder-for-gohighlevel-agencies",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Pricing",
+          "ratio": 9.439668932697101,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-app-costs-real-monthly-bill",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/webflow-true-cost",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 5.899094291144899,
+          "color": "rgb(232, 118, 58)",
+          "clipped": false
+        },
+        {
+          "text": "pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/nextjs-hosting-zero-cost",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/how-to-migrate-wordpress-to-nextjs",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-vs-nextjs",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Editing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "control",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/how-website-speed-affects-seo",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-dawn-theme-slow",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/why-we-chose-nextjs-over-wordpress-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/for-agencies-offer-custom-web-development",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Ownership",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-vs-custom-code-real-cost-3-years",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Price",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/google-universal-commerce-protocol-what-it-means-for-your-store",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-plugin-security-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-ai-security-risk-2026",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "Content",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-headless",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/elementor-kills-seo",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-plugins-destroy-speed",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "migration",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-plus-still-slow",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/wordpress-traffic-drop-speed",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "Search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "search",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-conversion-rate-speed-fix",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "cost",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/shopify-slow-losing-sales",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "performance",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "pricing",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/why-competitor-outranks-you",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "AEO",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "workflow",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "AI SEO",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/how-to-achieve-100-pagespeed",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/how-to-fix-slow-wordpress",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [],
+      "pass": true
+    },
+    {
+      "path": "/blog/what-is-headless-commerce",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "costs",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/website-portability",
+      "width": 1440,
+      "status": 200,
+      "pageWidth": 1440,
+      "emphasis": [
+        {
+          "text": "content",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "content",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        },
+        {
+          "text": "handover",
+          "ratio": 7.780213867661871,
+          "color": "rgb(122, 46, 14)",
+          "clipped": false
+        }
+      ],
+      "pass": true
+    }
+  ]
+}

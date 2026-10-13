@@ -1,0 +1,663 @@
+{
+  "pass": true,
+  "interfaceCases": [
+    {
+      "case": "cookie banner",
+      "text": [
+        {
+          "text": "Your privacy choices",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Optional analytics, advertising and scheduling stay off until you allow them. Ch",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Choose which ones",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Reject optional",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Accept all",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        }
+      ]
+    },
+    {
+      "case": "cookie preferences",
+      "text": [
+        {
+          "text": "Privacy controls",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Cookie preferences",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Choose which optional services may load. You can change or withdraw your choice ",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "NecessaryStores your privacy choice and supports security and forms. Always on.",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "AnalyticsGoogle Analytics and Microsoft Clarity help us understand visits and im",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "AdvertisingMeta Pixel measures campaigns and may support advertising on Meta pla",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "SchedulingCal.com provides booking. It loads only when Functional is enabled. Li",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Reject optional",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Save choices",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "See the Cookie Policy for provider details and retention information.",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        }
+      ]
+    },
+    {
+      "case": "quote form",
+      "text": [
+        {
+          "text": "×Close menu",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Talk to the founders",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "What would you like help with?",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Name *",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "name",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Email *",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "email",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Your message (optional)",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "details",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Your website (optional)",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "currentUrl",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Phone (optional)",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "phone",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Leave this field empty",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "website_url_confirm",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Send your message ",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        }
+      ]
+    },
+    {
+      "case": "CMS enlarged preview",
+      "text": [
+        {
+          "text": "×Close menu",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        },
+        {
+          "text": "Talk to the founders",
+          "font": "Inter, \"Inter Fallback\", Arial, sans-serif"
+        }
+      ]
+    }
+  ],
+  "loadingCases": [
+    {
+      "path": "/",
+      "width": 390,
+      "layoutShiftSum": 0.014525825881410255,
+      "fontRequests": [
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/inter-83afe278b6a6bb3c-s.woff2",
+          "bytes": 48732,
+          "duration": 26.700000047683716
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-normal-400-latin.woff2",
+          "bytes": 33416,
+          "duration": 28.200000047683716
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/anton-9e9f04e3c37952ab-s.woff2",
+          "bytes": 12304,
+          "duration": 30.199999928474426
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/zodiak/zodiak-700.woff2",
+          "bytes": 21972,
+          "duration": 35.199999928474426
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-normal-700-latin.woff2",
+          "bytes": 29888,
+          "duration": 250.30000007152557
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-italic-400-latin.woff2",
+          "bytes": 35196,
+          "duration": 234.39999997615814
+        }
+      ],
+      "loadedFaces": [
+        {
+          "family": "Inter",
+          "style": "normal",
+          "weight": "100 900"
+        },
+        {
+          "family": "Inter Fallback",
+          "style": "normal",
+          "weight": "normal"
+        },
+        {
+          "family": "Anton",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Anton Fallback",
+          "style": "normal",
+          "weight": "normal"
+        },
+        {
+          "family": "PT Serif",
+          "style": "italic",
+          "weight": "400"
+        },
+        {
+          "family": "PT Serif",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "PT Serif",
+          "style": "normal",
+          "weight": "700"
+        },
+        {
+          "family": "Zodiak",
+          "style": "normal",
+          "weight": "700"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/cms-development",
+      "width": 390,
+      "layoutShiftSum": 0.017513237499999997,
+      "fontRequests": [
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/inter-83afe278b6a6bb3c-s.woff2",
+          "bytes": 48732,
+          "duration": 51
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-normal-400-latin.woff2",
+          "bytes": 33416,
+          "duration": 52.799999952316284
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/anton-9e9f04e3c37952ab-s.woff2",
+          "bytes": 12304,
+          "duration": 54.299999952316284
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/zodiak/zodiak-700.woff2",
+          "bytes": 21972,
+          "duration": 54.90000009536743
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-italic-400-latin.woff2",
+          "bytes": 35196,
+          "duration": 269.6999999284744
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-normal-700-latin.woff2",
+          "bytes": 29888,
+          "duration": 270.3000000715256
+        }
+      ],
+      "loadedFaces": [
+        {
+          "family": "Inter",
+          "style": "normal",
+          "weight": "100 900"
+        },
+        {
+          "family": "Inter Fallback",
+          "style": "normal",
+          "weight": "normal"
+        },
+        {
+          "family": "Anton",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Anton Fallback",
+          "style": "normal",
+          "weight": "normal"
+        },
+        {
+          "family": "PT Serif",
+          "style": "italic",
+          "weight": "400"
+        },
+        {
+          "family": "PT Serif",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "PT Serif",
+          "style": "normal",
+          "weight": "700"
+        },
+        {
+          "family": "Zodiak",
+          "style": "normal",
+          "weight": "700"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/nextjs-sanity-stack",
+      "width": 390,
+      "layoutShiftSum": 0.013455630769230767,
+      "fontRequests": [
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/inter-83afe278b6a6bb3c-s.woff2",
+          "bytes": 48732,
+          "duration": 49.199999928474426
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/anton-9e9f04e3c37952ab-s.woff2",
+          "bytes": 12304,
+          "duration": 47
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-normal-400-latin.woff2",
+          "bytes": 33416,
+          "duration": 47.59999990463257
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/zodiak/zodiak-700.woff2",
+          "bytes": 21972,
+          "duration": 51
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-normal-700-latin.woff2",
+          "bytes": 29888,
+          "duration": 254.39999997615814
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-italic-400-latin.woff2",
+          "bytes": 35196,
+          "duration": 254.59999990463257
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-italic-700-latin.woff2",
+          "bytes": 28816,
+          "duration": 256.5
+        }
+      ],
+      "loadedFaces": [
+        {
+          "family": "Inter",
+          "style": "normal",
+          "weight": "100 900"
+        },
+        {
+          "family": "Inter Fallback",
+          "style": "normal",
+          "weight": "normal"
+        },
+        {
+          "family": "Anton",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Anton Fallback",
+          "style": "normal",
+          "weight": "normal"
+        },
+        {
+          "family": "PT Serif",
+          "style": "italic",
+          "weight": "400"
+        },
+        {
+          "family": "PT Serif",
+          "style": "italic",
+          "weight": "700"
+        },
+        {
+          "family": "PT Serif",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "PT Serif",
+          "style": "normal",
+          "weight": "700"
+        },
+        {
+          "family": "Zodiak",
+          "style": "normal",
+          "weight": "700"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "layoutShiftSum": 0.006582565624095775,
+      "fontRequests": [
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/inter-83afe278b6a6bb3c-s.woff2",
+          "bytes": 48732,
+          "duration": 26.899999976158142
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-normal-400-latin.woff2",
+          "bytes": 33416,
+          "duration": 25
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/anton-9e9f04e3c37952ab-s.woff2",
+          "bytes": 12304,
+          "duration": 24.799999952316284
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/zodiak/zodiak-700.woff2",
+          "bytes": 21972,
+          "duration": 24.600000023841858
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-normal-700-latin.woff2",
+          "bytes": 29888,
+          "duration": 323.60000002384186
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-italic-400-latin.woff2",
+          "bytes": 35196,
+          "duration": 306.5
+        }
+      ],
+      "loadedFaces": [
+        {
+          "family": "Inter",
+          "style": "normal",
+          "weight": "100 900"
+        },
+        {
+          "family": "Inter Fallback",
+          "style": "normal",
+          "weight": "normal"
+        },
+        {
+          "family": "Anton",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Anton Fallback",
+          "style": "normal",
+          "weight": "normal"
+        },
+        {
+          "family": "PT Serif",
+          "style": "italic",
+          "weight": "400"
+        },
+        {
+          "family": "PT Serif",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "PT Serif",
+          "style": "normal",
+          "weight": "700"
+        },
+        {
+          "family": "Zodiak",
+          "style": "normal",
+          "weight": "700"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/services/cms-development",
+      "width": 1440,
+      "layoutShiftSum": 0.007534257752218364,
+      "fontRequests": [
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/inter-83afe278b6a6bb3c-s.woff2",
+          "bytes": 48732,
+          "duration": 36.60000002384186
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-normal-400-latin.woff2",
+          "bytes": 33416,
+          "duration": 34
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/anton-9e9f04e3c37952ab-s.woff2",
+          "bytes": 12304,
+          "duration": 37.699999928474426
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/zodiak/zodiak-700.woff2",
+          "bytes": 21972,
+          "duration": 37.60000002384186
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-italic-400-latin.woff2",
+          "bytes": 35196,
+          "duration": 324.6999999284744
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-normal-700-latin.woff2",
+          "bytes": 29888,
+          "duration": 328.5
+        }
+      ],
+      "loadedFaces": [
+        {
+          "family": "Inter",
+          "style": "normal",
+          "weight": "100 900"
+        },
+        {
+          "family": "Inter Fallback",
+          "style": "normal",
+          "weight": "normal"
+        },
+        {
+          "family": "Anton",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Anton Fallback",
+          "style": "normal",
+          "weight": "normal"
+        },
+        {
+          "family": "PT Serif",
+          "style": "italic",
+          "weight": "400"
+        },
+        {
+          "family": "PT Serif",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "PT Serif",
+          "style": "normal",
+          "weight": "700"
+        },
+        {
+          "family": "Zodiak",
+          "style": "normal",
+          "weight": "700"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "path": "/blog/nextjs-sanity-stack",
+      "width": 1440,
+      "layoutShiftSum": 0.0038167319140022184,
+      "fontRequests": [
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/inter-83afe278b6a6bb3c-s.woff2",
+          "bytes": 48732,
+          "duration": 35.699999928474426
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-normal-400-latin.woff2",
+          "bytes": 33416,
+          "duration": 35
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/anton-9e9f04e3c37952ab-s.woff2",
+          "bytes": 12304,
+          "duration": 34.89999997615814
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/zodiak/zodiak-700.woff2",
+          "bytes": 21972,
+          "duration": 35.299999952316284
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-normal-700-latin.woff2",
+          "bytes": 29888,
+          "duration": 252.80000007152557
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-italic-400-latin.woff2",
+          "bytes": 35196,
+          "duration": 254.19999992847443
+        },
+        {
+          "url": "http://127.0.0.1:3004/fonts/site/pt-serif-italic-700-latin.woff2",
+          "bytes": 28816,
+          "duration": 254.29999995231628
+        }
+      ],
+      "loadedFaces": [
+        {
+          "family": "Inter",
+          "style": "normal",
+          "weight": "100 900"
+        },
+        {
+          "family": "Inter Fallback",
+          "style": "normal",
+          "weight": "normal"
+        },
+        {
+          "family": "Anton",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "PT Serif",
+          "style": "italic",
+          "weight": "400"
+        },
+        {
+          "family": "PT Serif",
+          "style": "italic",
+          "weight": "700"
+        },
+        {
+          "family": "PT Serif",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "PT Serif",
+          "style": "normal",
+          "weight": "700"
+        },
+        {
+          "family": "Zodiak",
+          "style": "normal",
+          "weight": "700"
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "physicalDevices": false
+}

@@ -1,3 +1,4 @@
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import Link from "next/link";
 import EditorialTheme from "@/components/redesign/EditorialTheme";
 import BlogVisual from "@/components/redesign/BlogVisual";
@@ -32,18 +33,18 @@ export function BlogIndexDesign({ q, topicSlug }: { q: string; topicSlug?: strin
       <main>
       <header className={`${styles.hero} ${visual.hero}`}><div className={styles.wrap}>
         <p className={styles.eyebrow}>PandaCodeGen / Field notes</p>
-        <h1 className={visual.title}>Good questions.{" "}<br /><span>Worth a read.</span></h1>
+        <h1 className={visual.title}>Good questions.{" "}<br /><HeadingEmphasis text="Worth a read." phrase="read" /></h1>
         <p className={visual.intro}>Welcome to our notebook. Explore guides, comparisons and lessons from building websites, online stores and the systems behind them. Pick a topic, or see what catches your eye.</p>
         <form action="/blog#guides" method="get" className={styles.search}>
           {topic && <input type="hidden" name="topic" value={topic.slug} />}
           <div><label htmlFor="guide-search">Search the notebook</label><input id="guide-search" name="q" type="search" defaultValue={q} placeholder="WordPress, costs, checkout..." /></div>
           <button type="submit">Search guides &#8594;</button>
         </form>
-        <details className={visual.browser} open>
+        <details className={visual.browser} data-topic-browser open>
           <summary>Browse topics {topic ? ` / ${topic.shortLabel}` : ` / ${hubs.length} to explore`}</summary>
           <nav aria-label="Browse guide topics" className={visual.topics}>
-            <Link className={visual.topic} href={topicHref()} aria-current={!topic ? "page" : undefined}><strong>All guides</strong><span>{blogPosts.length} articles across the notebook</span></Link>
-            {hubs.map((h) => <Link className={visual.topic} key={h.slug} href={topicHref(h.slug)} aria-current={topic?.slug === h.slug ? "page" : undefined}><strong>{h.shortLabel} <span aria-hidden="true" style={{ display: "inline" }}>&#8599;</span></strong><span>{hubPostIds(h).length} guides</span></Link>)}
+            <Link className={visual.topic} href={topicHref()} aria-current={!topic ? "page" : undefined}><strong>All guides</strong><span>{blogPosts.length} guides</span></Link>
+            {hubs.map((h) => <Link className={visual.topic} key={h.slug} href={topicHref(h.slug)} aria-current={topic?.slug === h.slug ? "page" : undefined}><strong>{h.shortLabel}</strong><span>{hubPostIds(h).length} guides</span></Link>)}
           </nav>
         </details>
       </div></header>
@@ -63,7 +64,7 @@ export function BlogIndexDesign({ q, topicSlug }: { q: string; topicSlug?: strin
             <div><span className={styles.meta}>{p.category} &middot; {p.readTime} &middot; {p.lastModified ? `Updated ${p.lastModified}` : p.date}</span><h3>{p.title}</h3><p>{p.excerpt}</p><span className={visual.read}>Read the guide &#8599;</span></div>
           </Link>)}</ShowMoreGuides>
         </>}
-        <div className="mt-16 border-t pt-8" style={{ borderColor: "var(--rule)" }}><p className={styles.copy}>Want to understand how we check claims and maintain these guides?</p><Link className={styles.link} href="/editorial-policy">Read our editorial policy →</Link></div>
+        <div data-library-policy className="mt-6 md:mt-10"><p className={styles.copy}>Want to understand how we check claims and maintain these guides?</p><Link className={styles.link} href="/editorial-policy">Read our editorial policy →</Link></div>
       </div></section>
       </main>
     </EditorialTheme>

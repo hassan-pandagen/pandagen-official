@@ -1,0 +1,739 @@
+{
+  "pass": true,
+  "cases": 61,
+  "apiIntercepted": true,
+  "physicalDevices": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/work/medical-template",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/work/a-step-above-medical",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/wordpress",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/ecommerce",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/woocommerce",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/wix",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/squarespace",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/webflow",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/gohighlevel",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/custom-engineering",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/backend-development",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 390,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/work/medical-template",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/work/a-step-above-medical",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/wordpress",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/ecommerce",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/woocommerce",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/wix",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/squarespace",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/webflow",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/gohighlevel",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/custom-engineering",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/backend-development",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/work/medical-template",
+      "geometry": {
+        "width": 320,
+        "scrollWidth": 320,
+        "clipped": []
+      },
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/work/medical-template",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/work/a-step-above-medical",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/wordpress",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/ecommerce",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/woocommerce",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/wix",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/squarespace",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/webflow",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/gohighlevel",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/custom-engineering",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/backend-development",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 382,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/work/medical-template",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/work/a-step-above-medical",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/services/wordpress",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/services/ecommerce",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/services/woocommerce",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/services/wix",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/services/squarespace",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/services/webflow",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/services/gohighlevel",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/services/custom-engineering",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/services/backend-development",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 1440,
+        "scrollWidth": 1432,
+        "clipped": []
+      },
+      "scopedViolations": [],
+      "pass": true
+    }
+  ]
+}

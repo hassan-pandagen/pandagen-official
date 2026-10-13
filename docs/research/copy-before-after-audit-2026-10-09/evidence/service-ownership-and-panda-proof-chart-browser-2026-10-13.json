@@ -1,0 +1,170 @@
+{
+  "pass": true,
+  "cases": 6,
+  "apiIntercepted": true,
+  "physicalDevices": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "geometry": [
+        {
+          "width": 278,
+          "height": 64.0312,
+          "x": 377.95567862358916,
+          "y": 325.9747757174469,
+          "endX": 1879.9860197715552,
+          "endY": 671.9587543098273,
+          "src": "/_next/image?url=%2Fproof%2FPerformance-on-Search-generative-AI-features-10-13-2026_12_37_AM.png&w=3840&q=75"
+        },
+        {
+          "width": 278,
+          "height": 64.0312,
+          "x": 377.95567862358916,
+          "y": 325.9747757174469,
+          "endX": 1879.9860197715552,
+          "endY": 671.9587543098273,
+          "src": "/_next/image?url=%2Fproof%2FPerformance-on-Search-generative-AI-features-10-13-2026_12_37_AM.png&w=3840&q=75"
+        }
+      ],
+      "fullTimelineAndOriginalModalPreserved": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "geometry": [
+        {
+          "width": 348,
+          "height": 80.1562,
+          "x": 377.9975721826078,
+          "y": 325.94726360887563,
+          "endX": 1880.007265468344,
+          "endY": 671.9247047109228,
+          "src": "/_next/image?url=%2Fproof%2FPerformance-on-Search-generative-AI-features-10-13-2026_12_37_AM.png&w=3840&q=75"
+        },
+        {
+          "width": 348,
+          "height": 80.1562,
+          "x": 377.9975721826078,
+          "y": 325.94726360887563,
+          "endX": 1880.007265468344,
+          "endY": 671.9247047109228,
+          "src": "/_next/image?url=%2Fproof%2FPerformance-on-Search-generative-AI-features-10-13-2026_12_37_AM.png&w=3840&q=75"
+        }
+      ],
+      "fullTimelineAndOriginalModalPreserved": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "geometry": [
+        {
+          "width": 718,
+          "height": 165.391,
+          "x": 377.98695157613975,
+          "y": 325.7231018328047,
+          "endX": 1879.993898532597,
+          "endY": 671.4354868677754,
+          "src": "/_next/image?url=%2Fproof%2FPerformance-on-Search-generative-AI-features-10-13-2026_12_37_AM.png&w=3840&q=75"
+        },
+        {
+          "width": 718,
+          "height": 165.391,
+          "x": 377.98695157613975,
+          "y": 325.7231018328047,
+          "endX": 1879.993898532597,
+          "endY": 671.4354868677754,
+          "src": "/_next/image?url=%2Fproof%2FPerformance-on-Search-generative-AI-features-10-13-2026_12_37_AM.png&w=3840&q=75"
+        }
+      ],
+      "fullTimelineAndOriginalModalPreserved": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "geometry": [
+        {
+          "width": 728.75,
+          "height": 167.859,
+          "x": 377.98492185579465,
+          "y": 325.9817572696103,
+          "endX": 1880.0025334202137,
+          "endY": 671.9627620593085,
+          "src": "/_next/image?url=%2Fproof%2FPerformance-on-Search-generative-AI-features-10-13-2026_12_37_AM.png&w=3840&q=75"
+        },
+        {
+          "width": 1390,
+          "height": 320.188,
+          "x": 377.99848043988453,
+          "y": 325.9804855402496,
+          "endX": 1879.9992345919418,
+          "endY": 671.9689753707988,
+          "src": "/_next/image?url=%2Fproof%2FPerformance-on-Search-generative-AI-features-10-13-2026_12_37_AM.png&w=3840&q=75"
+        }
+      ],
+      "fullTimelineAndOriginalModalPreserved": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1920,
+      "geometry": [
+        {
+          "width": 720.859,
+          "height": 166.047,
+          "x": 377.9828947039998,
+          "y": 325.96208417947173,
+          "endX": 1879.9859789097627,
+          "endY": 671.9459640024608,
+          "src": "/_next/image?url=%2Fproof%2FPerformance-on-Search-generative-AI-features-10-13-2026_12_37_AM.png&w=3840&q=75"
+        },
+        {
+          "width": 1390,
+          "height": 320.188,
+          "x": 377.99848043988453,
+          "y": 325.9804855402496,
+          "endX": 1879.9992345919418,
+          "endY": 671.9689753707988,
+          "src": "/_next/image?url=%2Fproof%2FPerformance-on-Search-generative-AI-features-10-13-2026_12_37_AM.png&w=3840&q=75"
+        }
+      ],
+      "fullTimelineAndOriginalModalPreserved": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "geometry": [
+        {
+          "width": 348,
+          "height": 80.15625,
+          "x": 377.9978925184405,
+          "y": 325.94811590065655,
+          "endX": 1880.0084299262383,
+          "endY": 671.9265629460463,
+          "src": "/_next/image?url=%2Fproof%2FPerformance-on-Search-generative-AI-features-10-13-2026_12_37_AM.png&w=3840&q=75"
+        },
+        {
+          "width": 348,
+          "height": 80.15625,
+          "x": 377.9978925184405,
+          "y": 325.94811590065655,
+          "endX": 1880.0084299262383,
+          "endY": 671.9265629460463,
+          "src": "/_next/image?url=%2Fproof%2FPerformance-on-Search-generative-AI-features-10-13-2026_12_37_AM.png&w=3840&q=75"
+        }
+      ],
+      "fullTimelineAndOriginalModalPreserved": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    }
+  ]
+}

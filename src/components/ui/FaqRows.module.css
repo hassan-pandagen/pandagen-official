@@ -45,7 +45,7 @@
   align-items: flex-start;
   gap: 12px;
   color: #7a2e0e;
-  font: 500 11px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  font: 500 11px/1.2 var(--font-sans), Arial, sans-serif;
   font-variant-numeric: tabular-nums;
   letter-spacing: .09em;
 }
@@ -111,7 +111,7 @@
 .eyebrow {
   margin: 0;
   color: #7a2e0e;
-  font: 500 11px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+  font: 500 11px/1.5 var(--font-sans), Arial, sans-serif;
   letter-spacing: .14em;
   text-transform: uppercase;
 }

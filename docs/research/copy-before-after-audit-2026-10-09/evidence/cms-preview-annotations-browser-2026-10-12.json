@@ -1,0 +1,314 @@
+{
+  "pass": true,
+  "cases": 6,
+  "physicalDevices": false,
+  "apiIntercepted": true,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "legendClipped": false,
+        "imageRatio": 2.0902255639097747,
+        "pins": [
+          {
+            "left": 47,
+            "top": 35,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          },
+          {
+            "left": 236,
+            "top": 28,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          },
+          {
+            "left": 259,
+            "top": 117,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          }
+        ]
+      },
+      "overlay": {
+        "width": 286,
+        "height": 137,
+        "imageWidth": 286,
+        "imageHeight": 137,
+        "labelDisplays": [
+          "none",
+          "none",
+          "none"
+        ]
+      },
+      "zoomed": {
+        "width": 1912,
+        "imageWidth": 1912,
+        "height": 914,
+        "imageHeight": 914,
+        "pins": 3
+      },
+      "annotationLegendVisible": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "legendClipped": false,
+        "imageRatio": 2.0963855421686746,
+        "pins": [
+          {
+            "left": 59,
+            "top": 43,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          },
+          {
+            "left": 296,
+            "top": 35,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          },
+          {
+            "left": 324,
+            "top": 150,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          }
+        ]
+      },
+      "overlay": {
+        "width": 356,
+        "height": 170,
+        "imageWidth": 356,
+        "imageHeight": 170,
+        "labelDisplays": [
+          "none",
+          "none",
+          "none"
+        ]
+      },
+      "zoomed": {
+        "width": 1912,
+        "imageWidth": 1912,
+        "height": 914,
+        "imageHeight": 914,
+        "pins": 3
+      },
+      "annotationLegendVisible": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "geometry": {
+        "pageWidth": 768,
+        "width": 768,
+        "legendClipped": false,
+        "imageRatio": 2.0932944606413995,
+        "pins": [
+          {
+            "left": 122,
+            "top": 89,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          },
+          {
+            "left": 610,
+            "top": 72,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          },
+          {
+            "left": 668,
+            "top": 327,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          }
+        ]
+      },
+      "overlay": {
+        "width": 702,
+        "height": 336,
+        "imageWidth": 702,
+        "imageHeight": 336,
+        "labelDisplays": [
+          "none",
+          "none",
+          "none"
+        ]
+      },
+      "zoomed": {
+        "width": 1912,
+        "imageWidth": 1912,
+        "height": 914,
+        "imageHeight": 914,
+        "pins": 3
+      },
+      "annotationLegendVisible": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "legendClipped": false,
+        "imageRatio": 2.0888252148997135,
+        "pins": [
+          {
+            "left": 124,
+            "top": 91,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          },
+          {
+            "left": 619,
+            "top": 73,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          },
+          {
+            "left": 678,
+            "top": 333,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          }
+        ]
+      },
+      "overlay": {
+        "width": 1374,
+        "height": 657,
+        "imageWidth": 1374,
+        "imageHeight": 657,
+        "labelDisplays": [
+          "block",
+          "block",
+          "block"
+        ]
+      },
+      "zoomed": {
+        "width": 2748,
+        "imageWidth": 2748,
+        "height": 1314,
+        "imageHeight": 1314,
+        "pins": 3
+      },
+      "annotationLegendVisible": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1920,
+      "geometry": {
+        "pageWidth": 1920,
+        "width": 1920,
+        "legendClipped": false,
+        "imageRatio": 2.0959302325581395,
+        "pins": [
+          {
+            "left": 123,
+            "top": 90,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          },
+          {
+            "left": 613,
+            "top": 72,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          },
+          {
+            "left": 670,
+            "top": 328,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          }
+        ]
+      },
+      "overlay": {
+        "width": 1446,
+        "height": 691,
+        "imageWidth": 1446,
+        "imageHeight": 691,
+        "labelDisplays": [
+          "block",
+          "block",
+          "block"
+        ]
+      },
+      "zoomed": {
+        "width": 2892,
+        "imageWidth": 2892,
+        "height": 1382,
+        "imageHeight": 1382,
+        "pins": 3
+      },
+      "annotationLegendVisible": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "legendClipped": false,
+        "imageRatio": 2.0963855421686746,
+        "pins": [
+          {
+            "left": 59,
+            "top": 43,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          },
+          {
+            "left": 296,
+            "top": 35,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          },
+          {
+            "left": 324,
+            "top": 150,
+            "color": "rgb(173, 61, 11)",
+            "inBounds": true
+          }
+        ]
+      },
+      "overlay": {
+        "width": 356,
+        "height": 170,
+        "imageWidth": 356,
+        "imageHeight": 170,
+        "labelDisplays": [
+          "none",
+          "none",
+          "none"
+        ]
+      },
+      "zoomed": {
+        "width": 1912,
+        "imageWidth": 1912,
+        "height": 914,
+        "imageHeight": 914,
+        "pins": 3
+      },
+      "annotationLegendVisible": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    }
+  ]
+}

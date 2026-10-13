@@ -1,12 +1,12 @@
 .page { color: #1c1917; background: #ebe9e4; scroll-behavior: smooth; }
 .wrap { width: min(100% - 3rem, 1440px); margin-inline: auto; }
-.kicker, .heroTop, .imageCaption, .founderMeta, .stepNumber { font: 600 .72rem/1.4 ui-monospace, Menlo, monospace; letter-spacing: .1em; text-transform: uppercase; }
+.kicker, .heroTop, .imageCaption, .founderMeta, .stepNumber { font: 600 .72rem/1.4 var(--font-sans),Arial,sans-serif; letter-spacing: .1em; text-transform: uppercase; }
 .kicker { color: #7a2e0e; }
 .hero { padding: 4.5rem 0 5rem; overflow: hidden; }
 .heroTop { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #a8a39a; color: #5e5b55; }
 .heroGrid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(2rem, 6vw, 7rem); align-items: center; padding-top: 2.5rem; }
 .hero h1 { margin-top: 1.7rem; font: 400 clamp(4.2rem, 7.6vw, 9.5rem)/.88 var(--display, Georgia), serif; letter-spacing: -.035em; text-transform: uppercase; }
-.hero h1 em, .whyGrid h2 em, .sectionHead h2 em, .processIntro h2 em, .closingGrid h2 em { font-family: Georgia, serif; font-weight: 400; text-transform: none; letter-spacing: -.055em; color: #ad3d0b; }
+.hero h1 em, .whyGrid h2 em, .sectionHead h2 em, .processIntro h2 em, .closingGrid h2 em { font-family: var(--font-body, "PT Serif"), Georgia, serif; font-weight: 400; text-transform: none; letter-spacing: -.055em; color: #ad3d0b; white-space: nowrap; }
 .heroLead { max-width: 34rem; margin-top: 2.5rem; color: #3a3733; font-size: clamp(1.1rem, 1.5vw, 1.35rem); line-height: 1.55; }
 .heroActions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.4rem 2rem; margin-top: 2rem; }
 .primaryLink { display: inline-flex; min-height: 3.4rem; align-items: center; justify-content: space-between; gap: 2rem; padding: .9rem 1.25rem; border: 1px solid #1c1917; background: #1c1917; color: #fff; font-weight: 700; transition: background .25s, transform .25s; }
@@ -21,7 +21,7 @@
 .imageCaption { display: flex; justify-content: space-between; gap: 1rem; padding-top: .75rem; color: #5e5b55; }
 .sectionNav { position: relative; background: #e5e2db; border-block: 1px solid #c5c0b8; }
 .sectionNav .wrap { display: flex; gap: 2.5rem; overflow-x: auto; scrollbar-width: none; }
-.sectionNav a { flex: none; padding: 1rem 0; color: #3a3733; font: 600 .75rem ui-monospace, monospace; text-decoration: none; text-transform: uppercase; letter-spacing: .05em; border-bottom: 2px solid transparent; }
+.sectionNav a { flex: none; padding: 1rem 0; color: #3a3733; font: 600 .75rem var(--font-sans),Arial,sans-serif; text-decoration: none; text-transform: uppercase; letter-spacing: .05em; border-bottom: 2px solid transparent; }
 .sectionNav a:hover, .sectionNav a:focus-visible { color: #7a2e0e; border-color: #7a2e0e; }
 .whySection, .foundersSection, .processSection, .closingSection { padding: clamp(3.5rem, 6vw, 6rem) 0; scroll-margin-top: 4rem; }
 .whyGrid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 9vw, 9rem); }

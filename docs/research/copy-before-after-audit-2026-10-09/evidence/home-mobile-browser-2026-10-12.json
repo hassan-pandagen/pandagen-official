@@ -1,0 +1,1400 @@
+{
+  "pass": true,
+  "cases": 12,
+  "apiIntercepted": true,
+  "physicalDevices": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "touch": true,
+      "reducedMotion": "no-preference",
+      "javascriptEnabled": true,
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "fineHover": false,
+        "featuredGap": 32,
+        "quoteFont": "Inter, \"Inter Fallback\", Georgia, serif",
+        "quoteLineHeight": "30.24px",
+        "noteLabels": [
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          },
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          }
+        ],
+        "cards": [
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          }
+        ],
+        "clipped": [],
+        "mobileReviewBorders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ]
+      },
+      "projectNavigation": true,
+      "previewOpens": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "touch": true,
+      "reducedMotion": "reduce",
+      "javascriptEnabled": true,
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "fineHover": false,
+        "featuredGap": 32,
+        "quoteFont": "Inter, \"Inter Fallback\", Georgia, serif",
+        "quoteLineHeight": "30.24px",
+        "noteLabels": [
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          },
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          }
+        ],
+        "cards": [
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          }
+        ],
+        "clipped": [],
+        "mobileReviewBorders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ]
+      },
+      "projectNavigation": true,
+      "previewOpens": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "touch": true,
+      "reducedMotion": "no-preference",
+      "javascriptEnabled": true,
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "fineHover": false,
+        "featuredGap": 32,
+        "quoteFont": "Inter, \"Inter Fallback\", Georgia, serif",
+        "quoteLineHeight": "30.24px",
+        "noteLabels": [
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          },
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          }
+        ],
+        "cards": [
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          }
+        ],
+        "clipped": [],
+        "mobileReviewBorders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ]
+      },
+      "projectNavigation": true,
+      "previewOpens": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "touch": true,
+      "reducedMotion": "reduce",
+      "javascriptEnabled": true,
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "fineHover": false,
+        "featuredGap": 32,
+        "quoteFont": "Inter, \"Inter Fallback\", Georgia, serif",
+        "quoteLineHeight": "30.24px",
+        "noteLabels": [
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          },
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          }
+        ],
+        "cards": [
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          }
+        ],
+        "clipped": [],
+        "mobileReviewBorders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ]
+      },
+      "projectNavigation": true,
+      "previewOpens": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "touch": false,
+      "reducedMotion": "no-preference",
+      "javascriptEnabled": true,
+      "geometry": {
+        "pageWidth": 768,
+        "width": 768,
+        "fineHover": true,
+        "featuredGap": 64,
+        "quoteFont": "Inter, \"Inter Fallback\", Georgia, serif",
+        "quoteLineHeight": "37.3248px",
+        "noteLabels": [
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          },
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          }
+        ],
+        "cards": [
+          {
+            "padding": "28px",
+            "width": 344,
+            "scrollWidth": 344,
+            "clientWidth": 344,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "28px",
+            "width": 344,
+            "scrollWidth": 343,
+            "clientWidth": 343,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "28px",
+            "width": 344,
+            "scrollWidth": 343,
+            "clientWidth": 343,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "28px",
+            "width": 344,
+            "scrollWidth": 343,
+            "clientWidth": 343,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          }
+        ],
+        "clipped": [],
+        "mobileReviewBorders": [
+          "0px",
+          "1px",
+          "0px",
+          "1px"
+        ]
+      },
+      "projectNavigation": true,
+      "previewOpens": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "touch": false,
+      "reducedMotion": "reduce",
+      "javascriptEnabled": true,
+      "geometry": {
+        "pageWidth": 768,
+        "width": 768,
+        "fineHover": true,
+        "featuredGap": 64,
+        "quoteFont": "Inter, \"Inter Fallback\", Georgia, serif",
+        "quoteLineHeight": "37.3248px",
+        "noteLabels": [
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          },
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          }
+        ],
+        "cards": [
+          {
+            "padding": "28px",
+            "width": 344,
+            "scrollWidth": 344,
+            "clientWidth": 344,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "28px",
+            "width": 344,
+            "scrollWidth": 343,
+            "clientWidth": 343,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "28px",
+            "width": 344,
+            "scrollWidth": 343,
+            "clientWidth": 343,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "28px",
+            "width": 344,
+            "scrollWidth": 343,
+            "clientWidth": 343,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          }
+        ],
+        "clipped": [],
+        "mobileReviewBorders": [
+          "0px",
+          "1px",
+          "0px",
+          "1px"
+        ]
+      },
+      "projectNavigation": true,
+      "previewOpens": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "touch": false,
+      "reducedMotion": "no-preference",
+      "javascriptEnabled": true,
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "fineHover": true,
+        "featuredGap": 64,
+        "quoteFont": "Inter, \"Inter Fallback\", Georgia, serif",
+        "quoteLineHeight": "69.984px",
+        "noteLabels": [
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          },
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          }
+        ],
+        "cards": [
+          {
+            "padding": "28px",
+            "width": 340,
+            "scrollWidth": 340,
+            "clientWidth": 340,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "28px",
+            "width": 340,
+            "scrollWidth": 339,
+            "clientWidth": 339,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "28px",
+            "width": 340,
+            "scrollWidth": 339,
+            "clientWidth": 339,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "28px",
+            "width": 340,
+            "scrollWidth": 339,
+            "clientWidth": 339,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          }
+        ],
+        "clipped": [],
+        "mobileReviewBorders": [
+          "0px",
+          "1px",
+          "1px",
+          "1px"
+        ]
+      },
+      "projectNavigation": true,
+      "previewOpens": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "touch": false,
+      "reducedMotion": "reduce",
+      "javascriptEnabled": true,
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "fineHover": true,
+        "featuredGap": 64,
+        "quoteFont": "Inter, \"Inter Fallback\", Georgia, serif",
+        "quoteLineHeight": "69.984px",
+        "noteLabels": [
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          },
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          }
+        ],
+        "cards": [
+          {
+            "padding": "28px",
+            "width": 340,
+            "scrollWidth": 340,
+            "clientWidth": 340,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "28px",
+            "width": 340,
+            "scrollWidth": 339,
+            "clientWidth": 339,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "28px",
+            "width": 340,
+            "scrollWidth": 339,
+            "clientWidth": 339,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "28px",
+            "width": 340,
+            "scrollWidth": 339,
+            "clientWidth": 339,
+            "tags": "flex",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          }
+        ],
+        "clipped": [],
+        "mobileReviewBorders": [
+          "0px",
+          "1px",
+          "1px",
+          "1px"
+        ]
+      },
+      "projectNavigation": true,
+      "previewOpens": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "touch": true,
+      "reducedMotion": "no-preference",
+      "javascriptEnabled": true,
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "fineHover": false,
+        "featuredGap": 32,
+        "quoteFont": "Inter, Inter Fallback, Georgia, serif",
+        "quoteLineHeight": "30.24px",
+        "noteLabels": [
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          },
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          }
+        ],
+        "cards": [
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          }
+        ],
+        "clipped": [],
+        "mobileReviewBorders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ]
+      },
+      "projectNavigation": true,
+      "previewOpens": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "touch": true,
+      "reducedMotion": "reduce",
+      "javascriptEnabled": true,
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "fineHover": false,
+        "featuredGap": 32,
+        "quoteFont": "Inter, Inter Fallback, Georgia, serif",
+        "quoteLineHeight": "30.24px",
+        "noteLabels": [
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          },
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          }
+        ],
+        "cards": [
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 272,
+            "scrollWidth": 272,
+            "clientWidth": 272,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          }
+        ],
+        "clipped": [],
+        "mobileReviewBorders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ]
+      },
+      "projectNavigation": true,
+      "previewOpens": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "touch": true,
+      "reducedMotion": "no-preference",
+      "javascriptEnabled": true,
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "fineHover": false,
+        "featuredGap": 32,
+        "quoteFont": "Inter, Inter Fallback, Georgia, serif",
+        "quoteLineHeight": "30.24px",
+        "noteLabels": [
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          },
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          }
+        ],
+        "cards": [
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          }
+        ],
+        "clipped": [],
+        "mobileReviewBorders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ]
+      },
+      "projectNavigation": true,
+      "previewOpens": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "touch": true,
+      "reducedMotion": "reduce",
+      "javascriptEnabled": true,
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "fineHover": false,
+        "featuredGap": 32,
+        "quoteFont": "Inter, Inter Fallback, Georgia, serif",
+        "quoteLineHeight": "30.24px",
+        "noteLabels": [
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          },
+          {
+            "color": "rgb(28, 25, 23)",
+            "weight": "700",
+            "size": "13px"
+          }
+        ],
+        "cards": [
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          },
+          {
+            "padding": "20px",
+            "width": 342,
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "tags": "none",
+            "labels": [
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              },
+              {
+                "color": "rgb(28, 25, 23)",
+                "size": "14px",
+                "weight": "700"
+              }
+            ]
+          }
+        ],
+        "clipped": [],
+        "mobileReviewBorders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ]
+      },
+      "projectNavigation": true,
+      "previewOpens": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    }
+  ]
+}

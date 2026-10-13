@@ -12,7 +12,7 @@
 .meta,
 .sectionNumber,
 .rowNumber {
-  font: 700 11px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font: 700 11px/1.5 var(--font-sans), Arial, sans-serif;
   letter-spacing: .15em;
   text-transform: uppercase;
 }
@@ -299,7 +299,7 @@
 
 .checkList li span:first-child {
   color: #e8763a;
-  font: 700 11px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font: 700 11px/1.6 var(--font-sans), Arial, sans-serif;
 }
 
 .closingLinks {
@@ -360,7 +360,7 @@
 
 .securityList li span {
   color: #7a2e0e;
-  font: 700 12px/2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font: 700 12px/2 var(--font-sans), Arial, sans-serif;
 }
 
 .scopeSection {

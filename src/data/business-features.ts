@@ -1,33 +1,47 @@
-// Buyer-facing examples, scoped per project. Shared by homepage and redesign preview.
+// Buyer-facing automation examples and service FAQs, scoped per project.
 export const businessFeatureCopy = {
-  heading: "Let customers get a quote, reach your team and stay informed.",
-  intro: "A pricing tool can use your rates. Enquiries can reach the right person. Order updates can go out when the status changes. These are examples: we work out which would help your business and agree the cost before building.",
-  costs: "Your quote separates the build, ongoing support and third-party costs, including hosting, email, AI services and payments. We compare subscriptions you could retire with the cost of running and maintaining their replacement.",
+  heading: "You run the business. We automate the busywork.",
+  intro: "An order is confirmed. A booking needs a reminder. An invoice needs sending. Tell us the steps your team repeats, and we'll build workflow automation around your business, so routine work happens without someone doing it by hand each time.",
+  costs: "Some platforms charge a subscription for these features. We can build the agreed workflow into your website or business software, with no required PandaCodeGen monthly plan. We compare the build and running costs with the apps it could replace; hosting, email delivery and connected services still have their own costs.",
+  cta: "Tell us what you repeat",
 };
 
 export const businessFeatures = [
   {
-    title: "Give customers a useful price estimate",
-    body: "Let customers enter quantities, sizes and extras. Show an estimate based on your rates, or send the details to your team to price personally.",
-    fit: "Print shops, signage and custom merchandise",
-    edits: "Agreed rates, options and minimum quantities",
+    title: "Can you automate order and booking emails?",
+    body: "Yes. When an order is accepted or a booking is confirmed, your system can send the customer an email with the details and next steps. Your team gets the update too.",
+    example: "Booking confirmed → email with the time and location",
+    edits: "Message templates, recipients and when emails go out",
   },
   {
-    title: "Send each enquiry to the right person",
-    body: "A form can save the details in your customer system, alert the right teammate and create a follow-up task automatically.",
-    fit: "Agencies, B2B suppliers and multi-location services",
-    edits: "Agreed questions, routing rules and confirmations",
+    title: "Can you send booking and payment reminders?",
+    body: "Yes. Send appointment reminders before a booking or payment reminders when an invoice is due. The workflow checks the current status so paid invoices and cancelled bookings leave the reminder queue.",
+    example: "Appointment tomorrow → reminder email today",
+    edits: "Reminder timing, wording and when reminders stop",
   },
   {
-    title: "Keep customers updated on their orders",
-    body: "Send an update when an order moves forward or an invoice when payment is confirmed, using the order system your team already works in.",
-    fit: "Manufacturers, wholesalers and made-to-order stores",
-    edits: "Agreed message templates and notification settings",
+    title: "Can my system generate PDF invoices?",
+    body: "Yes. Create a branded PDF invoice from the customer and order details, then email it or make it available to download. Your team can review and approve it before it goes out.",
+    example: "Order approved → PDF invoice created and emailed",
+    edits: "Invoice layout, numbering and approval settings",
   },
   {
-    title: "Answer common questions after hours",
-    body: "An AI assistant can answer using information you approve. When it cannot help, it collects the visitor's question and contact details for your team.",
-    fit: "Software companies, equipment suppliers and training providers",
-    edits: "Approved source material and the follow-up contact",
+    title: "Can you stop us entering the same details twice?",
+    body: "Yes. Connect your website, CRM, booking or order system so the same customer details reach the right record and teammate. We build the handoffs around your process, including any approvals your team needs.",
+    example: "New enquiry → CRM record and a follow-up task",
+    edits: "Agreed fields, routing and notification settings",
+  },
+];
+
+// Customer questions shared with the service FAQ and assistant knowledge.
+// New workflow rules or integrations are scoped development work.
+export const businessAutomationFaqs = [
+  ...businessFeatures.map(({ title, body }) => ({
+    q: title,
+    a: `${body} We check the connected systems and agree the workflow, editable settings and running costs before building.`,
+  })),
+  {
+    q: "Can you replace paid apps with custom business software?",
+    a: "Yes, when a tailored workflow is a better fit. We review what each app does, the records and connections you need, then compare the custom build, hosting, email delivery and maintenance costs with the subscriptions it could replace. Keep useful existing tools and replace the parts that do not fit your business. There is no required PandaCodeGen monthly plan, but connected providers may still charge for their services.",
   },
 ];

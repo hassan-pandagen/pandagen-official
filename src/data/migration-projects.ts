@@ -25,6 +25,7 @@ export const MIGRATION_PROJECT_DETAILS = {
   aStepAboveMedical: {
     name: "A Step Above Medical",
     status: "In testing",
+    plannedLaunchOn: "2026-10-19",
     summary: "A complete medical training management system: a public course website, a content editor and a separate team portal for classes, students, payments and certificates. The website was rebuilt from WordPress with Next.js and Sanity; the portal uses Supabase. The build is complete and undergoing pre-launch testing.",
     progress: "Website and operations portal built; pre-launch testing underway",
     disclosure: "Independent client project. The build is complete and in pre-launch testing. Screenshots show the new website and portal before launch; no live-site performance or business results are claimed.",

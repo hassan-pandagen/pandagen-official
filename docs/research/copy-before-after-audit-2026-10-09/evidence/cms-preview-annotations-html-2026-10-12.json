@@ -1,0 +1,90 @@
+{
+  "pass": true,
+  "pages": 14,
+  "results": [
+    {
+      "path": "services/ai-seo.html",
+      "copyTitleLinksSchemaPreservedApartFromCmsAnnotations": true,
+      "cmsAnnotationLabelsVerified": false,
+      "otherPreviewsUnannotated": true
+    },
+    {
+      "path": "services/backend-development.html",
+      "copyTitleLinksSchemaPreservedApartFromCmsAnnotations": true,
+      "cmsAnnotationLabelsVerified": false,
+      "otherPreviewsUnannotated": true
+    },
+    {
+      "path": "services/cms-development.html",
+      "copyTitleLinksSchemaPreservedApartFromCmsAnnotations": true,
+      "cmsAnnotationLabelsVerified": true,
+      "otherPreviewsUnannotated": false
+    },
+    {
+      "path": "services/custom-engineering.html",
+      "copyTitleLinksSchemaPreservedApartFromCmsAnnotations": true,
+      "cmsAnnotationLabelsVerified": false,
+      "otherPreviewsUnannotated": true
+    },
+    {
+      "path": "services/ecommerce.html",
+      "copyTitleLinksSchemaPreservedApartFromCmsAnnotations": true,
+      "cmsAnnotationLabelsVerified": false,
+      "otherPreviewsUnannotated": true
+    },
+    {
+      "path": "services/gohighlevel.html",
+      "copyTitleLinksSchemaPreservedApartFromCmsAnnotations": true,
+      "cmsAnnotationLabelsVerified": false,
+      "otherPreviewsUnannotated": true
+    },
+    {
+      "path": "services/medical-website-design.html",
+      "copyTitleLinksSchemaPreservedApartFromCmsAnnotations": true,
+      "cmsAnnotationLabelsVerified": false,
+      "otherPreviewsUnannotated": true
+    },
+    {
+      "path": "services/small-business-website-design.html",
+      "copyTitleLinksSchemaPreservedApartFromCmsAnnotations": true,
+      "cmsAnnotationLabelsVerified": false,
+      "otherPreviewsUnannotated": true
+    },
+    {
+      "path": "services/squarespace.html",
+      "copyTitleLinksSchemaPreservedApartFromCmsAnnotations": true,
+      "cmsAnnotationLabelsVerified": false,
+      "otherPreviewsUnannotated": true
+    },
+    {
+      "path": "services/webflow.html",
+      "copyTitleLinksSchemaPreservedApartFromCmsAnnotations": true,
+      "cmsAnnotationLabelsVerified": false,
+      "otherPreviewsUnannotated": true
+    },
+    {
+      "path": "services/wix.html",
+      "copyTitleLinksSchemaPreservedApartFromCmsAnnotations": true,
+      "cmsAnnotationLabelsVerified": false,
+      "otherPreviewsUnannotated": true
+    },
+    {
+      "path": "services/woocommerce.html",
+      "copyTitleLinksSchemaPreservedApartFromCmsAnnotations": true,
+      "cmsAnnotationLabelsVerified": false,
+      "otherPreviewsUnannotated": true
+    },
+    {
+      "path": "services/wordpress-migration.html",
+      "copyTitleLinksSchemaPreservedApartFromCmsAnnotations": true,
+      "cmsAnnotationLabelsVerified": false,
+      "otherPreviewsUnannotated": true
+    },
+    {
+      "path": "services/wordpress.html",
+      "copyTitleLinksSchemaPreservedApartFromCmsAnnotations": true,
+      "cmsAnnotationLabelsVerified": false,
+      "otherPreviewsUnannotated": true
+    }
+  ]
+}

@@ -39,7 +39,7 @@
 .inlineTitle > div { flex: 1; min-width: 0; }
 .inlineTitle .avatar { width: 34px; height: 34px; border: 0; border-radius: 9px; background: #ad3d0b10; color: #7a2e0e; }
 .inlineTitle small { display: block; font-size: 10px; line-height: 1.5; font-weight: 400; color: #5e5b55; margin-top: 3px; }
-.aiLabel { align-self: flex-start; margin-top: 2px; padding: 4px 6px; border: 1px solid #b7a998; border-radius: 4px; color: #5e5b55; font: 10px/1.2 ui-monospace, monospace; white-space: nowrap; }
+.aiLabel { align-self: flex-start; margin-top: 2px; padding: 4px 6px; border: 1px solid #b7a998; border-radius: 4px; color: #5e5b55; font: 10px/1.2 var(--font-sans), Arial, sans-serif; white-space: nowrap; }
 .inlineIntro { margin: 10px 0 16px; color: #5e5b55; font-size: 13px; line-height: 1.65; max-width: 34ch; }
 .inlineComposer { display: flex; flex-direction: column; gap: 6px; padding: 12px; border: 1px solid #b9a997; border-radius: 10px; background: #fff; box-shadow: 0 4px 16px #402b1506; transition: border-color .2s, box-shadow .2s; }
 .inlineComposer:focus-within { border-color: #ad3d0b; box-shadow: 0 0 0 3px #ad3d0b14; }
@@ -67,13 +67,13 @@
 @media (prefers-reduced-motion: reduce) { .panel { animation: none; } .launcher, .suggestions button { transition: none; } .launcher:hover { transform: none; } }
 
 /* Intent-based starting points: a greeting, concrete tasks and a human route. */
-.welcome h3 span { display: block; margin-top: 2px; font-family: Georgia, serif; font-size: 1.3em; font-style: italic; font-weight: 400; letter-spacing: -.045em; }
+.welcome h3 span { display: block; margin-top: 2px; font-family: var(--font-body, "PT Serif"), Georgia, serif; font-size: 1.3em; font-style: italic; font-weight: 400; letter-spacing: -.045em; }
 .suggestions button { padding: 13px 0; min-height: 66px; gap: 12px; background: transparent; border: 0; border-bottom: 1px solid #d6cec2; border-radius: 0; }
 .suggestions button:hover { background: #eee5d9; }
 .founderLink { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 44px; margin-top: 12px; font-size: 13px; color: #7a2e0e; text-decoration: underline; text-underline-offset: 4px; }
 .founderLink svg { flex-shrink: 0; }
 .inlineWelcome { font-family: inherit; font-size: 24px; line-height: 1.2; letter-spacing: -.04em; font-weight: 600; margin: 0; }
-.inlineWelcome span { display: block; color: #ad3d0b; font-family: Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.35em; letter-spacing: -.04em; }
+.inlineWelcome span { display: block; color: #ad3d0b; font-family: var(--font-body, "PT Serif"), Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.35em; letter-spacing: -.04em; }
 .inlineStarters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 @media(max-width:360px) { .inlineCard { padding: 18px; } .inlineTitle { flex-wrap: wrap; } .inlineComposerActions > span { max-width: 60px; } }
 @media(max-width:600px) { .welcome h3 { font-size: 32px; } .suggestions button { padding: 12px; gap: 10px; } }

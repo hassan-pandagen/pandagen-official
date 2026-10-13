@@ -1,0 +1,96 @@
+{
+  "pass": true,
+  "pages": 15,
+  "results": [
+    {
+      "path": "services.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    },
+    {
+      "path": "services/ai-seo.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    },
+    {
+      "path": "services/backend-development.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    },
+    {
+      "path": "services/cms-development.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    },
+    {
+      "path": "services/custom-engineering.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    },
+    {
+      "path": "services/ecommerce.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    },
+    {
+      "path": "services/gohighlevel.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    },
+    {
+      "path": "services/medical-website-design.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    },
+    {
+      "path": "services/small-business-website-design.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    },
+    {
+      "path": "services/squarespace.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    },
+    {
+      "path": "services/webflow.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    },
+    {
+      "path": "services/wix.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    },
+    {
+      "path": "services/woocommerce.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    },
+    {
+      "path": "services/wordpress-migration.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    },
+    {
+      "path": "services/wordpress.html",
+      "copyTitleLinksSchemaPreservedApartFromEnlargeControl": true,
+      "enlargeControlInInitialHtml": true,
+      "dialogImageDeferredUntilOpen": true
+    }
+  ]
+}

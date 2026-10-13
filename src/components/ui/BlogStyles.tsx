@@ -1,3 +1,4 @@
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import Link from "next/link";
 import React from "react";
 import PostDateline from "@/components/blog/PostDateline";
@@ -5,7 +6,7 @@ import PostDateline from "@/components/blog/PostDateline";
 export function BlogHeader({ children, id }: { children: React.ReactNode; id?: string }) {
   return (
     <h2 id={id} className="blog-section-heading text-3xl md:text-4xl font-sans font-bold text-charcoal mt-16 mb-6 leading-tight">
-      {children}
+      {typeof children === "string" ? <HeadingEmphasis text={children} /> : children}
     </h2>
   );
 }

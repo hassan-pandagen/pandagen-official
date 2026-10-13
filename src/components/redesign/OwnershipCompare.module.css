@@ -5,7 +5,7 @@
 .intro p{font-size:16px;line-height:1.65;color:#3a3733;max-width:640px;margin:0}
 .intro p + p{margin-top:14px}
 .summary{margin-top:22px;padding:20px 22px;border:1px solid #1c191726;border-left:3px solid #ad3d0b;background:#ebe9e4}
-.summary .summaryLabel{display:flex;align-items:center;gap:9px;font:600 11px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;color:#7a2e0e;margin:0 0 10px}
+.summary .summaryLabel{display:flex;align-items:center;gap:9px;font:600 11px/1.5 var(--font-sans), Arial, sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#7a2e0e;margin:0 0 10px}
 .summary .canon{font-size:14px;line-height:1.65;color:#3a3733;margin:0}
 .legend{display:flex;align-items:center;flex-wrap:wrap;gap:10px 12px;padding:0 0 18px}
 .legend .status{margin:0}
@@ -72,4 +72,35 @@
 .assetsTitle{font-family:var(--display,Anton),Impact,sans-serif;font-size:clamp(2.2rem,3.4vw,3rem);font-weight:400;line-height:1.1;color:#1c1917;letter-spacing:-.015em;margin:0 0 22px}
 @media(max-width:760px){.answers{grid-template-columns:1fr;gap:28px;margin-bottom:32px}.answer h3{font-size:20px}.assetsTitle{margin-bottom:20px}}
 
+/* The handover panel and licence box already provide their own boundaries. */
+@media(max-width:900px){.answers{border-top:0;padding-top:0}.intro{margin-bottom:24px}.keepList li:last-child{border-bottom:0}}
+
 .section,.answer{scroll-margin-top:100px}
+
+/* Keep the service handover notes readable at phone widths. */
+@media(max-width:760px){
+  .summary .summaryLabel{font-size:12px;font-weight:700;line-height:1.6}
+  .aside > p{font-size:14px;color:#3a3733}
+}
+
+/* Keep the ownership heading, handover and deliverables in one reading sequence. */
+.intro{display:block;margin-bottom:32px}
+.title{max-width:30ch;font-size:clamp(2.35rem,3.6vw,3.6rem);line-height:1.08;text-wrap:balance;margin-bottom:20px}
+.intro > div:last-child > p{max-width:85ch}
+.summary{display:grid;grid-template-columns:minmax(160px,.28fr) minmax(0,1fr);gap:24px;margin-top:24px}
+.summary .summaryLabel{align-items:flex-start;font-size:12px;line-height:1.6;margin:0}
+.summary .summaryLabel svg{flex-shrink:0;margin-top:2px}
+.projectNotes{display:block;margin-top:32px}
+.projectNotes .keepList li{grid-template-columns:minmax(180px,.28fr) minmax(0,1fr);gap:24px;padding:20px}
+.projectNotes .keepList li:nth-child(odd){background:#ebe9e470}
+.projectNotes .keepList b,.projectNotes .keepList p{font-size:15px;line-height:1.65}
+.projectNotes .aside{padding:20px 0 0;margin-top:24px;border:0;border-top:1px solid #1c191726;background:transparent}
+.projectNotes .aside > p{max-width:none;margin-bottom:12px}
+.projectNotes .links{flex-direction:row;flex-wrap:wrap;gap:12px 28px;margin-top:0}
+@media(max-width:760px){
+ .title{max-width:none;font-size:clamp(2rem,8vw,2.6rem);text-wrap:pretty}
+ .summary{grid-template-columns:1fr;gap:12px;margin-top:20px}
+ .projectNotes{margin-top:24px}
+ .projectNotes .keepList li{grid-template-columns:1fr;gap:8px;padding:18px}
+ .projectNotes .links{flex-direction:column;gap:12px}
+}

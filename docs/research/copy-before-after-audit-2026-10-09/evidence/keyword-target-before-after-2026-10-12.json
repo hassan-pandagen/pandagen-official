@@ -1,0 +1,1276 @@
+{
+  "date": "2026-10-12",
+  "kind": "Local copy and keyword-coverage comparison, not rankings",
+  "service_baseline": "858aa1bd4340b2e16e73e2e961b1862cb3db6903",
+  "homepage_baseline": "ae4342b112c04a3c0ff59c0ed42956c63e5c42fe",
+  "work_baseline_limit": "Some work pages already used preview components at the service baseline; work findings compare naming/positioning, not a fully reconstructed old visual design.",
+  "current_build": ".next-audit/server/app",
+  "head_read_at_audit": "b4347610a685e6650c6113edc14336f96e018e72",
+  "old_sources_checked": [
+    "src/app/preview/work/enterprise-ops/page.tsx",
+    "src/app/preview/work/medical-template/page.tsx",
+    "src/app/services/PageContent.tsx",
+    "src/app/services/ai-seo/PageContent.tsx",
+    "src/app/services/ai-seo/page.tsx",
+    "src/app/services/custom-engineering/PageContent.tsx",
+    "src/app/services/custom-engineering/page.tsx",
+    "src/app/services/ecommerce/PageContent.tsx",
+    "src/app/services/ecommerce/page.tsx",
+    "src/app/services/gohighlevel/PageContent.tsx",
+    "src/app/services/gohighlevel/page.tsx",
+    "src/app/services/page.tsx",
+    "src/app/services/squarespace/PageContent.tsx",
+    "src/app/services/squarespace/page.tsx",
+    "src/app/services/webflow/PageContent.tsx",
+    "src/app/services/webflow/page.tsx",
+    "src/app/services/wix/PageContent.tsx",
+    "src/app/services/wix/page.tsx",
+    "src/app/services/woocommerce/PageContent.tsx",
+    "src/app/services/woocommerce/page.tsx",
+    "src/app/services/wordpress-migration/PageContent.tsx",
+    "src/app/services/wordpress-migration/page.tsx",
+    "src/app/services/wordpress/page.tsx",
+    "src/app/work/a-step-above-medical/page.tsx",
+    "src/app/work/emblematic-studio/page.tsx",
+    "src/app/work/enterprise-ops/page.tsx",
+    "src/app/work/ladies-4-jesus/page.tsx",
+    "src/app/work/medical-template/page.tsx",
+    "src/app/work/mycustompatches/page.tsx",
+    "src/app/work/northdeck-group/page.tsx",
+    "src/app/work/page.tsx",
+    "src/app/work/panda-codelab/page.tsx",
+    "src/app/work/panda-patches/page.tsx",
+    "src/app/work/panda-publisher/page.tsx",
+    "src/app/work/sleek-jackets/page.tsx",
+    "src/data/service-faqs.ts",
+    "src/data/home-faqs.ts",
+    "src/components/sections/Hero.tsx"
+  ],
+  "selected_old_source_mentions": {
+    "custom crm": [
+      {
+        "path": "src/app/services/gohighlevel/PageContent.tsx",
+        "line": 487,
+        "text": "{/* Full Custom CRM + Website */}"
+      },
+      {
+        "path": "src/app/services/gohighlevel/PageContent.tsx",
+        "line": 491,
+        "text": "<h3 className=\"text-xl font-bold text-charcoal mb-4\">Custom CRM + Website</h3>"
+      },
+      {
+        "path": "src/app/services/gohighlevel/PageContent.tsx",
+        "line": 503,
+        "text": "Discuss custom CRM scope"
+      }
+    ],
+    "workflow automation": [
+      {
+        "path": "src/app/services/custom-engineering/PageContent.tsx",
+        "line": 144,
+        "text": "{[\"Operations & logistics dashboards\", \"Inventory management systems\", \"Employee onboarding portals\", \"Real-time analytics & reporting\", \"Workflow automation engines\", \"Custom admin panels\"].map((ex, i) => ("
+      }
+    ],
+    "generative engine optimization": [],
+    "generative engine optimisation": [],
+    "medical website design": [],
+    "medical web design": [],
+    "cms website development": [],
+    "backend development": [],
+    "customer portal": [
+      {
+        "path": "src/app/work/panda-patches/page.tsx",
+        "line": 42,
+        "text": "answer: \"A custom e-commerce platform with a real-time pricing engine, CMS, Square checkout (card, Apple Pay, Google Pay, Cash App Pay, and Afterpay BNPL), an AI mockup generator, a customer portal, and a full server-side conversion-tracking stack starts at $15,000 to $30,000 depending on complexity. The owner estimates Panda Patches' current tooling at about $55/month (Supabase ~$25, Vercel ~$20, and ~$10 for the AI patch generator); this is not a reconciled accounting total.\","
+      },
+      {
+        "path": "src/app/work/panda-patches/page.tsx",
+        "line": 50,
+        "text": "answer: `The initial storefront rebuild launched within 8 weeks. ${MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory} The current storefront includes custom pricing, Sanity CMS, an AI patch generator, a customer portal and server-side conversion tracking; the current feature set should not be read as the original launch scope. The connected staff CRM is a separate application sharing the same Supabase backend.`,"
+      },
+      {
+        "path": "src/data/service-faqs.ts",
+        "line": 304,
+        "text": "a: \"Yes. We connect to your existing Stripe account using your live keys. All Customer IDs, saved payment methods, subscription IDs, and Stripe Customer Portal history carry over untouched. Your buyers never re-enter a card.\","
+      }
+    ],
+    "without rebuilding": [
+      {
+        "path": "src/data/service-faqs.ts",
+        "line": 77,
+        "text": "q: \"Can you work on WordPress without rebuilding it?\","
+      }
+    ],
+    "without moving": [],
+    "another hosting provider": [],
+    "ChatGPT": [
+      {
+        "path": "src/app/services/ai-seo/PageContent.tsx",
+        "line": 42,
+        "text": "* not separately identified. OpenAI documents utm_source=chatgpt.com, which is a"
+      },
+      {
+        "path": "src/app/services/ai-seo/PageContent.tsx",
+        "line": 75,
+        "text": "\"Claims about ChatGPT, Claude or Perplexity behaviour that we cannot show you evidence for\","
+      },
+      {
+        "path": "src/app/services/ai-seo/PageContent.tsx",
+        "line": 81,
+        "text": "[\"It covers Google's features only.\", \"It says nothing about ChatGPT, Claude or Perplexity.\"],"
+      },
+      {
+        "path": "src/app/services/ai-seo/page.tsx",
+        "line": 23,
+        "text": "\"chatgpt seo\","
+      },
+      {
+        "path": "src/app/services/ecommerce/PageContent.tsx",
+        "line": 185,
+        "text": "{ icon: Globe, pain: \"AI Search Won't Recommend a Slow Storefront\", detail: \"ChatGPT, Perplexity, and Google's AI Overviews now answer 'where should I buy X?' directly. They surface fast, structured storefronts. Check what arrives as HTML on your own product page before assuming an answer engine can read it that influences a growing share of buying decisions.\" },"
+      },
+      {
+        "path": "src/app/services/wordpress-migration/PageContent.tsx",
+        "line": 270,
+        "text": "{ icon: AlertTriangle, title: \"AI Search Sends Buyers to Competitors\", detail: \"ChatGPT, Perplexity, and Google's AI Overviews now answer 'which brand should I buy' directly. What they cite is not something anyone can guarantee. WordPress page builder bloat makes you invisible to AI-driven traffic.\" },"
+      },
+      {
+        "path": "src/components/sections/Hero.tsx",
+        "line": 121,
+        "text": "\"ai ready website\", \"ai optimized website\" and \"get cited by chatgpt\" all"
+      }
+    ]
+  },
+  "current_pages": [
+    {
+      "route": "/",
+      "built_html_path": ".next-audit/server/app/index.html",
+      "sha256": "b661cee731d874dff66ee6e0957f8b35969510e9421a7558e0c025b69fdaca13",
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "description": "Work directly with the founders on WordPress sites, custom websites, stores and migrations. Custom builds from $1,500. Code you own, price agreed upfront.",
+      "canonical": "https://www.pandacodegen.com",
+      "h1": [
+        "Websites built for the way you do business."
+      ],
+      "h2": [
+        "Let's talk about your website.",
+        "Look at the work before you read about it.",
+        "Engineered around how your business runs, and what can break.",
+        "What our clients say.",
+        "Know what is included before we build.",
+        "Let customers get a quote, reach your team and stay informed.",
+        "A clear price before we build.",
+        "From First Call to Launch.",
+        "Founder-built, not farmed out.",
+        "Common questions about working with us",
+        "Latest Insights"
+      ],
+      "questions": [
+        "01 If the site is custom code, do I need a developer every time I want to change something?",
+        "02 If the features are built in, is every future feature included too?",
+        "03 Do I need your monthly plan to keep a custom feature working?",
+        "04 Do you have a minimum project size?",
+        "05 Will I lose SEO rankings when migrating from WordPress?"
+      ],
+      "opening_paragraphs": [
+        "Work with Hassan and Imran on a business website or online store your team can edit. We can build on WordPress, create a custom site or improve what you already have. You get an agreed price, written instructions and a live editing walkthrough.",
+        "Custom builds from $1,500. WordPress quoted to scope. Price agreed before work starts.",
+        "Ideas, improvements or costs. Ask away."
+      ],
+      "internal_links": [
+        "/about",
+        "/about/hassan",
+        "/about/imran",
+        "/blog",
+        "/blog/how-to-fix-slow-wordpress",
+        "/blog/website-portability",
+        "/blog/what-is-headless-commerce",
+        "/contact",
+        "/pricing",
+        "/privacy",
+        "/services",
+        "/services/custom-engineering",
+        "/services/ecommerce",
+        "/services/gohighlevel",
+        "/services/squarespace",
+        "/services/webflow",
+        "/services/wix",
+        "/services/woocommerce",
+        "/services/wordpress",
+        "/services/wordpress-migration",
+        "/work",
+        "/work/a-step-above-medical",
+        "/work/emblematic-studio",
+        "/work/enterprise-ops",
+        "/work/ladies-4-jesus",
+        "/work/medical-template",
+        "/work/mycustompatches",
+        "/work/northdeck-group",
+        "/work/panda-patches",
+        "/work/panda-publisher",
+        "/work/saforne",
+        "/work/sleek-jackets"
+      ]
+    },
+    {
+      "route": "/services",
+      "built_html_path": ".next-audit/server/app/services.html",
+      "sha256": "6a9f0ce322e1695843272633f1cb936b7bec1944728ed90af4d63ac8bda3de0e",
+      "title": "Website Design, Redesign and Development Services | PandaCodeGen",
+      "description": "Websites, stores, Sanity editors and custom software. Work with the founders on design, development and migration, with scope and price agreed.",
+      "canonical": "https://www.pandacodegen.com/services",
+      "h1": [
+        "Website design. Development, too."
+      ],
+      "h2": [
+        "What do you need to build or improve?",
+        "The work is the proof.",
+        "You know the work before it starts."
+      ],
+      "questions": [],
+      "opening_paragraphs": [
+        "PandaCodeGen / Services",
+        "Website design and development for small businesses, custom sites and online stores. Build a new website, redesign what you have, fix a specific problem or plan a platform move. We agree the work and price before starting.",
+        "01 / Find your route"
+      ],
+      "internal_links": [
+        "/pricing",
+        "/services/ai-seo",
+        "/services/backend-development",
+        "/services/cms-development",
+        "/services/custom-engineering",
+        "/services/ecommerce",
+        "/services/gohighlevel",
+        "/services/squarespace",
+        "/services/webflow",
+        "/services/wix",
+        "/services/woocommerce",
+        "/services/wordpress",
+        "/services/wordpress-migration",
+        "/work/emblematic-studio"
+      ]
+    },
+    {
+      "route": "/pricing",
+      "built_html_path": ".next-audit/server/app/pricing.html",
+      "sha256": "45ee52f454e6b3b75f06fe3e2d4e5aad664140bbe635f6b13d0649e342b7a691",
+      "title": "Website & Online Store Pricing | PandaCodeGen",
+      "description": "Custom website and online store builds have published starting prices from $1,500. WordPress websites are quoted to scope. Final work and price are agreed in writing.",
+      "canonical": "https://www.pandacodegen.com/pricing",
+      "h1": [
+        "A better site. A clear price."
+      ],
+      "h2": [
+        "What are you building?",
+        "Find the shape of your project.",
+        "The useful detail is in writing.",
+        "Before you commit."
+      ],
+      "questions": [
+        "01 Which package should I start with?",
+        "02 What can I change myself, and what still needs you?",
+        "03 When do I pay?",
+        "04 What support is included?",
+        "05 How is the 90+ performance target checked?",
+        "06 What if the honest answer is that we should not migrate?"
+      ],
+      "opening_paragraphs": [
+        "PandaCodeGen / Example scopes",
+        "Custom website builds start at $1,500 . WordPress builds are quoted to their own scope. We agree the pages, features, handover checks and final price in writing before work begins.",
+        "$1,500"
+      ],
+      "internal_links": [
+        "/pricing",
+        "/services/wordpress",
+        "/services/wordpress-migration",
+        "/work/emblematic-studio"
+      ]
+    },
+    {
+      "route": "/work/enterprise-ops",
+      "built_html_path": ".next-audit/server/app/work/enterprise-ops.html",
+      "sha256": "47b9b182321bb185635b6d70ffaa0f2a77fbf7bfb665558f7ab647bc630c45ae",
+      "title": "Custom CRM Development: Panda Patches Case Study | PandaCodeGen",
+      "description": "A custom CRM built for our Panda Patches team to manage customers, orders, production, payments and reports, with workflow automation and role-based access.",
+      "canonical": "https://www.pandacodegen.com/work/enterprise-ops",
+      "h1": [
+        "Custom CRM development for Panda Patches ."
+      ],
+      "h2": [
+        "One workspace. The team's working day.",
+        "What the CRM handles.",
+        "Questions about this project.",
+        "Still running the business on spreadsheets and group chats?"
+      ],
+      "questions": [
+        "01 What can a custom CRM help our team manage?",
+        "02 Can you build a CRM around our existing workflow?",
+        "03 Should we build a custom CRM or customise the one we already use?",
+        "04 How much does it cost to replace Google Sheets with a custom business dashboard?",
+        "05 What is role-based access control (RBAC) and why does a small business need it?",
+        "06 How long did it take to build the Panda Patches CRM?",
+        "07 Can a custom dashboard work offline?"
+      ],
+      "opening_paragraphs": [
+        "Work / Panda Patches CRM / Founder-affiliated",
+        "One place for our team to manage the working day.",
+        "We built a custom CRM for the Panda Patches team to manage customers, orders, production, payments, attendance and reports in one place. Workflow automation handles steps such as wholesale pricing, invoices and delivery follow-up. It's our own system, built for the business owned by co-founder Imran Raza Ladhani."
+      ],
+      "internal_links": [
+        "/services/backend-development",
+        "/services/custom-engineering",
+        "/work",
+        "/work/panda-patches-crm-new-order.png",
+        "/work/panda-patches-crm-permissions.png",
+        "/work/panda-patches-crm-sign-in.png",
+        "/work/panda-patches-crm-source-orders.png",
+        "/work/panda-patches-crm-source-reports.png"
+      ]
+    },
+    {
+      "route": "/work/medical-template",
+      "built_html_path": ".next-audit/server/app/work/medical-template.html",
+      "sha256": "03a20ff44de547f26d9c7f814b1a7d75ac94ebf753bd926308ec34969b7f306e",
+      "title": "Medical Website Design: Practice Demo | PandaCodeGen",
+      "description": "Medical practice website design demonstrated through a fictional clinic: consultation-focused homepage, treatment pages and care steps. Explore the demo.",
+      "canonical": "https://www.pandacodegen.com/work/medical-template",
+      "h1": [
+        "Medical website design: a practice demo ."
+      ],
+      "h2": [
+        "Healthcare website design. A clear way through.",
+        "Need a website and a system for your team?",
+        "Questions about this project.",
+        "Medical website development for your practice."
+      ],
+      "questions": [
+        "01 What does this medical practice website design demonstrate?",
+        "02 Can you redesign an existing medical website?",
+        "03 Can our team update a healthcare website themselves?",
+        "04 What is included in medical website development?"
+      ],
+      "opening_paragraphs": [
+        "Work / Medical Template / Concept build",
+        "A medical practice website design, shown as a demo.",
+        "A website design for a fictional surgical practice: clear treatment information, care steps and a route to booking a consultation. We built this concept to show how those pages work together. Every name, credential, review, location and price is invented, and the demo says so on every screen."
+      ],
+      "internal_links": [
+        "/services/cms-development",
+        "/work",
+        "/work/a-step-above-medical",
+        "/work/medical-template-areas.png",
+        "/work/medical-template-care.png",
+        "/work/medical-template-hero.png",
+        "/work/medical-template-non-surgical.png"
+      ]
+    },
+    {
+      "route": "/work/a-step-above-medical",
+      "built_html_path": ".next-audit/server/app/work/a-step-above-medical.html",
+      "sha256": "f68239c0f1d367ec064fc9b4464ff46371eaa9c4d32be1f8fb5dc7f2cd704a69",
+      "title": "A Step Above Medical: Website & Training System | PandaCodeGen",
+      "description": "Medical website design and a custom training management system for courses, classes, students, payments and certificates. Built; pre-launch testing underway.",
+      "canonical": "https://www.pandacodegen.com/work/a-step-above-medical",
+      "h1": [
+        "A Step Above Medical ."
+      ],
+      "h2": [
+        "A website for students. A workspace for the team.",
+        "Questions about this project.",
+        "A better website. Less work behind it."
+      ],
+      "questions": [
+        "01 Is the A Step Above Medical build finished?",
+        "02 What did you build for A Step Above Medical?",
+        "03 Can the team update courses and locations themselves?",
+        "04 Can staff export the portal's records?",
+        "05 What can the team manage in the medical training system?"
+      ],
+      "opening_paragraphs": [
+        "Work / A Step Above Medical / In testing",
+        "A complete medical training management system.",
+        "A complete medical training management system: a public course website, a content editor and a separate team portal for classes, students, payments and certificates. The website was rebuilt from WordPress with Next.js and Sanity; the portal uses Supabase. The build is complete and undergoing pre-launch testing."
+      ],
+      "internal_links": [
+        "/services/custom-engineering",
+        "/services/wordpress-migration",
+        "/work",
+        "/work/a-step-above-medical-editor-courses.png",
+        "/work/a-step-above-medical-editor-locations.png",
+        "/work/a-step-above-medical-portal-classes.png",
+        "/work/a-step-above-medical-portal-exports.png",
+        "/work/a-step-above-medical-preview-homepage.png"
+      ]
+    },
+    {
+      "route": "/services/ai-seo",
+      "built_html_path": ".next-audit/server/app/services/ai-seo.html",
+      "sha256": "ba40a1d4a5cbf6fbc2657dd5583b3230285233d83a08e01d95101b24ec73e783",
+      "title": "AI SEO & GEO Services | PandaCodeGen",
+      "description": "AI SEO, AEO and generative engine optimization (GEO) services. From $500/month for buyer research, page improvements and AI search visibility reporting.",
+      "canonical": "https://www.pandacodegen.com/services/ai-seo",
+      "h1": [
+        "AI SEO services. AEO & GEO."
+      ],
+      "h2": [
+        "Our Google AI visibility.",
+        "AI discovery and order-source evidence.",
+        "Is your business missing from AI answers?",
+        "AEO & GEO services.",
+        "Research, improve and review.",
+        "AI SEO & GEO pricing.",
+        "What do you keep when AI SEO work ends?",
+        "Questions people ask."
+      ],
+      "questions": [
+        "01 Can you help if my business is missing from ChatGPT or Google AI answers?",
+        "02 What is the difference between AI SEO, AEO and GEO services?",
+        "03 What does the $500 monthly AI SEO and GEO service include?",
+        "04 Are AI SEO services just AI-written articles?",
+        "05 Can you guarantee citations or rankings?",
+        "06 What evidence can you show?",
+        "07 Can you tell whether a lead came from an AI answer?",
+        "08 Does the $500 starting scope include new articles or a dashboard?"
+      ],
+      "opening_paragraphs": [
+        "PandaCodeGen / AI SEO, AEO & GEO services",
+        "AI SEO services for businesses that want their website found and understood in AI search. Our answer engine optimization (AEO) and generative engine optimization (GEO) work covers buyer questions, agreed page improvements and visibility reporting. Monthly work starts at $500.",
+        "First-party evidence / Our own website"
+      ],
+      "internal_links": [
+        "/ai-info/pricing-and-guarantees",
+        "/blog/aeo-web-performance-glossary",
+        "/blog/ai-search-visibility-tracking",
+        "/blog/google-algorithm-updates",
+        "/blog/how-website-speed-affects-seo",
+        "/blog/lovable-site-not-showing-on-google",
+        "/blog/website-portability",
+        "/blog/what-is-llms-txt",
+        "/blog/why-competitor-outranks-you",
+        "/pricing",
+        "/proof/google-ai-impressions.csv",
+        "/services",
+        "/services/cms-development",
+        "/work/panda-patches"
+      ]
+    },
+    {
+      "route": "/services/backend-development",
+      "built_html_path": ".next-audit/server/app/services/backend-development.html",
+      "sha256": "bdf7f8072f5a99047b5135f3df8df49c31ecf2c2eafdd04f6025c5d4a5c24f4e",
+      "title": "Backend Development Services: Supabase & APIs | PandaCodeGen",
+      "description": "Backend development for logins, private files and business records. Scope Supabase or your existing database, access rules, APIs and admin screens.",
+      "canonical": "https://www.pandacodegen.com/services/backend-development",
+      "h1": [
+        "Backend development services. Customer logins, data and workflows."
+      ],
+      "h2": [
+        "The backend behind an operations app.",
+        "Who can do what with each record?",
+        "Public website SEO. Private portal access.",
+        "Improve an app or build the first release.",
+        "Build, test and hand over.",
+        "Backend development cost.",
+        "What do you keep after a backend build?",
+        "Questions people ask."
+      ],
+      "questions": [
+        "01 Can you add customer logins and private file uploads to our website?",
+        "02 Does backend development include SEO and AI search setup?",
+        "03 Do you only build on Supabase?",
+        "04 Does Supabase replace all backend development?",
+        "05 Can you connect Supabase to Next.js?",
+        "06 Is Supabase an editor like Sanity?",
+        "07 Is a backend included in a $1,500 website?"
+      ],
+      "opening_paragraphs": [
+        "PandaCodeGen / Backend development for portals, CRMs & internal tools",
+        "Backend development for customer logins, private uploads, business records and connected tools. We usually build on Supabase, or work with your existing database and APIs. The quote names the data, access rules, integrations and admin screens your application needs.",
+        "01 / See the work"
+      ],
+      "internal_links": [
+        "/ai-info/pricing-and-guarantees",
+        "/blog/ai-built-website-checklist",
+        "/blog/build-vs-buy-software-2026-cost-comparison",
+        "/blog/sanity-vs-supabase",
+        "/blog/website-monthly-running-cost",
+        "/blog/website-portability",
+        "/pricing",
+        "/services",
+        "/services/ai-seo",
+        "/services/custom-engineering",
+        "/work/a-step-above-medical",
+        "/work/enterprise-ops"
+      ]
+    },
+    {
+      "route": "/services/cms-development",
+      "built_html_path": ".next-audit/server/app/services/cms-development.html",
+      "sha256": "b27ca7667aa83d1aee1d14339c76a6a0d178ce5aaf5d86802aa24976ae297f57",
+      "title": "CMS Website Development & Integration | PandaCodeGen",
+      "description": "CMS website development with an editor your team can use. Build with Sanity and Next.js, improve WordPress, or plan a content migration with the founders.",
+      "canonical": "https://www.pandacodegen.com/services/cms-development",
+      "h1": [
+        "CMS website development. An editor for your team."
+      ],
+      "h2": [
+        "A publishing site and its editor.",
+        "What should your team be able to edit?",
+        "CMS websites built for search and AI.",
+        "Keep the CMS that fits the work.",
+        "Build, test and hand over.",
+        "CMS website development cost.",
+        "What do you keep with a website you can edit?",
+        "Questions people ask."
+      ],
+      "questions": [
+        "01 Can you improve a website that is difficult to update?",
+        "02 Will our CMS website be readable by Google and AI search?",
+        "03 Which CMS should our website use?",
+        "04 Does a custom Next.js website include an editor?",
+        "05 Can you migrate Wix or Squarespace content to Sanity?",
+        "06 Can my team publish without a developer?",
+        "07 Do I also need Supabase?"
+      ],
+      "opening_paragraphs": [
+        "PandaCodeGen / CMS website development & integration",
+        "CMS website development for a team that needs easier content editing. We can improve a suitable WordPress editor or build a custom Next.js website with Sanity. Agree the pages, publishing tasks, migration and training together before work starts.",
+        "01 / See the work"
+      ],
+      "internal_links": [
+        "/ai-info",
+        "/ai-info/pricing-and-guarantees",
+        "/blog/nextjs-sanity-stack",
+        "/blog/sanity-vs-supabase",
+        "/blog/sanity-vs-wordpress",
+        "/blog/website-monthly-running-cost",
+        "/blog/website-portability",
+        "/pricing",
+        "/services",
+        "/services/ai-seo",
+        "/services/backend-development",
+        "/work/ladies-4-jesus",
+        "/work/panda-patches"
+      ]
+    },
+    {
+      "route": "/services/custom-engineering",
+      "built_html_path": ".next-audit/server/app/services/custom-engineering.html",
+      "sha256": "09856c4fb48fcfdb3534244609a96f70f536bc1044910e16e68988370d15ee32",
+      "title": "Custom Software & CRM Development | PandaCodeGen",
+      "description": "Custom CRM development, workflow automation and customer portals. Build around your team's work, with scoped screens, permissions, integrations and handover.",
+      "canonical": "https://www.pandacodegen.com/services/custom-engineering",
+      "h1": [
+        "Custom software development. CRMs, portals and team tools."
+      ],
+      "h2": [
+        "A custom CRM our team uses.",
+        "Replace spreadsheets and disconnected tools.",
+        "Searchable public pages. Private business records.",
+        "Build what the job needs.",
+        "Build, test and hand over.",
+        "Custom software and CRM development cost.",
+        "What do you own after a custom software project?",
+        "Questions people ask."
+      ],
+      "questions": [
+        "01 Can you replace spreadsheets with a customer portal or staff dashboard?",
+        "02 Can our public website be found in AI search while the CRM stays private?",
+        "03 What does custom software development include?",
+        "04 What can our team change itself?",
+        "05 How long does a custom application take?",
+        "06 Who owns the code?",
+        "07 Can you build an AI assistant from our own information?",
+        "08 What belongs in the first release of a SaaS product?"
+      ],
+      "opening_paragraphs": [
+        "PandaCodeGen / Custom software development & internal tools",
+        "Need a custom CRM, customer portal or a way to stop copying records between spreadsheets? We map the workflow, users and data, then scope a useful first release with the screens, automation, integrations and handover your team needs.",
+        "01 / See the work"
+      ],
+      "internal_links": [
+        "/ai-info/pricing-and-guarantees",
+        "/blog/ai-built-website-checklist",
+        "/blog/build-vs-buy-software-2026-cost-comparison",
+        "/blog/custom-website-5000-whats-included",
+        "/blog/do-you-own-your-website",
+        "/blog/how-long-does-a-custom-website-take",
+        "/blog/product-catalog-website-without-cart",
+        "/blog/sanity-vs-supabase",
+        "/blog/website-portability",
+        "/pricing",
+        "/services",
+        "/services/ai-seo",
+        "/services/backend-development",
+        "/work/enterprise-ops"
+      ]
+    },
+    {
+      "route": "/services/ecommerce",
+      "built_html_path": ".next-audit/server/app/services/ecommerce.html",
+      "sha256": "cc54a37261aa2f8c6b6abc1b53f1782bcb0734a772474db0a7778aa163028806",
+      "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+      "description": "Build or improve a Shopify or WooCommerce store. Plan products, checkout and orders together, with a custom storefront where the requirements justify it.",
+      "canonical": "https://www.pandacodegen.com/services/ecommerce",
+      "h1": [
+        "Ecommerce website development. Shopify, WooCommerce or custom."
+      ],
+      "h2": [
+        "A storefront with real buyers.",
+        "Where are shoppers getting stuck?",
+        "Ecommerce SEO and AI-readable product pages.",
+        "Online store redesign or a custom storefront.",
+        "Build, test and hand over.",
+        "Ecommerce website development cost.",
+        "What can you keep when you rebuild your online store?",
+        "Questions people ask."
+      ],
+      "questions": [
+        "01 Can you improve an online store that is difficult to buy from?",
+        "02 Can Google and AI search read my product pages?",
+        "03 What is included in an ecommerce website build?",
+        "04 Can we keep our current commerce backend?",
+        "05 Will the new store be faster?",
+        "06 What happens to checkout and orders?",
+        "07 Does a headless Shopify store replace Shopify checkout?",
+        "08 Can you improve our current store without rebuilding it?"
+      ],
+      "opening_paragraphs": [
+        "PandaCodeGen / Ecommerce website development",
+        "Build or redesign an online store with Shopify, WooCommerce or a custom storefront where it fits. We scope product pages, mobile shopping, checkout and order handling together, or improve the store you already run.",
+        "01 / See the work"
+      ],
+      "internal_links": [
+        "/blog/shopify-app-costs-real-monthly-bill",
+        "/blog/shopify-conversion-rate-speed-fix",
+        "/blog/shopify-dawn-theme-slow",
+        "/blog/shopify-headless",
+        "/blog/shopify-slow-losing-sales",
+        "/blog/shopify-stocky-sunset-date-2026",
+        "/blog/shopify-store-speed-optimization",
+        "/blog/shopify-vs-custom-website",
+        "/blog/website-portability",
+        "/blog/what-is-headless-commerce",
+        "/pricing",
+        "/services",
+        "/services/ai-seo",
+        "/services/ecommerce",
+        "/services/woocommerce",
+        "/work/mycustompatches"
+      ]
+    },
+    {
+      "route": "/services/gohighlevel",
+      "built_html_path": ".next-audit/server/app/services/gohighlevel.html",
+      "sha256": "1b6bb0458a235351c5829195d1bce846a1ad8941e377cf4c2e28d30f3957bab3",
+      "title": "GoHighLevel Websites & CRM Integration | PandaCodeGen",
+      "description": "Slow GHL pages or outgrown the builder? Improve your site, or connect a custom website to GoHighLevel forms, calendars and pipelines.",
+      "canonical": "https://www.pandacodegen.com/services/gohighlevel",
+      "h1": [
+        "GoHighLevel website design. Keep your CRM. Improve the site."
+      ],
+      "h2": [
+        "Custom frontend, visible work.",
+        "Slow pages or missing GoHighLevel enquiries?",
+        "GoHighLevel website SEO and AI search.",
+        "Keep the parts that earn their place.",
+        "Build, test and hand over.",
+        "GoHighLevel website design and integration cost.",
+        "What can you keep when you change your GoHighLevel website?",
+        "Questions people ask."
+      ],
+      "questions": [
+        "01 Can you fix a slow GoHighLevel website and keep the CRM?",
+        "02 Can you improve GoHighLevel website SEO while keeping the CRM?",
+        "03 What does a GoHighLevel website integration cover?",
+        "04 Do we have to leave GoHighLevel?",
+        "05 Will our automations keep working?",
+        "06 What does the integration cost?",
+        "07 What if we change CRM later?",
+        "08 Which GoHighLevel account receives the enquiries?"
+      ],
+      "opening_paragraphs": [
+        "PandaCodeGen / GoHighLevel website & CRM integration",
+        "Is your GoHighLevel website slow, or have you outgrown the builder? We scope page improvements or a custom site connected to your GHL forms, calendars and pipelines. Forms and bookings are tested against the agreed account and workflows.",
+        "01 / See the work"
+      ],
+      "internal_links": [
+        "/blog/best-website-builder-for-gohighlevel-agencies",
+        "/blog/core-web-vitals-explained",
+        "/blog/gohighlevel-keep-crm-replace-website",
+        "/blog/gohighlevel-website-speed",
+        "/blog/website-portability",
+        "/pricing",
+        "/services",
+        "/services/ai-seo",
+        "/services/custom-engineering",
+        "/services/gohighlevel",
+        "/work/northdeck-group"
+      ]
+    },
+    {
+      "route": "/services/squarespace",
+      "built_html_path": ".next-audit/server/app/services/squarespace.html",
+      "sha256": "a79c8dd2641b26ae26b3c01e2a7209720db6efb0f316d408580de302c34aab82",
+      "title": "Squarespace Website Design & Migration | PandaCodeGen",
+      "description": "Build or redesign your Squarespace website, or move to a custom site with a Sanity editor. Scope content, mobile layouts, forms, scheduling and redirects.",
+      "canonical": "https://www.pandacodegen.com/services/squarespace",
+      "h1": [
+        "Squarespace website design. New sites and redesigns."
+      ],
+      "h2": [
+        "A brand carried through the build.",
+        "Does your Squarespace site still fit your business?",
+        "Squarespace SEO and AI-readable content.",
+        "Keep the fit, or create one.",
+        "Build, test and hand over.",
+        "Squarespace website design and migration cost.",
+        "What can you take when you leave Squarespace?",
+        "Questions people ask."
+      ],
+      "questions": [
+        "01 Can you redesign my Squarespace website without starting over?",
+        "02 Can you improve Squarespace SEO and AI search access?",
+        "03 What is included in a Squarespace migration plan?",
+        "04 Can we still edit our pages?",
+        "05 Will our design transfer exactly?",
+        "06 What does a Squarespace migration cost?",
+        "07 Can you move our Squarespace blog and keep old links working?",
+        "08 Will our Squarespace appointments or Member Areas still work?"
+      ],
+      "opening_paragraphs": [
+        "PandaCodeGen / Squarespace website design, redesign & migration",
+        "Build or redesign a Squarespace website around your services, content and enquiries. If layouts, editing or connected tools are getting in the way, we compare improvements with a custom site and Sanity editor before you choose.",
+        "01 / See the work"
+      ],
+      "internal_links": [
+        "/blog/is-squarespace-bad-for-seo",
+        "/blog/nextjs-sanity-stack",
+        "/blog/squarespace-migration-cost",
+        "/blog/squarespace-too-slow",
+        "/blog/squarespace-vs-custom-website",
+        "/blog/website-portability",
+        "/pricing",
+        "/services",
+        "/services/ai-seo",
+        "/services/cms-development",
+        "/work/emblematic-studio"
+      ]
+    },
+    {
+      "route": "/services/webflow",
+      "built_html_path": ".next-audit/server/app/services/webflow.html",
+      "sha256": "29ae875a2db7312511c5b0da31da75a68bd378f00021b861c81ec32d03deec0f",
+      "title": "Webflow Development, Redesign & Migration | PandaCodeGen",
+      "description": "Build or redesign a Webflow website. Improve CMS editing, mobile layouts and forms, or plan a custom site with content, integrations and redirects in scope.",
+      "canonical": "https://www.pandacodegen.com/services/webflow",
+      "h1": [
+        "Webflow development services. New sites, redesigns and migration."
+      ],
+      "h2": [
+        "Relevant CMS and integration work.",
+        "Difficult editing, broken forms or a redesign backlog?",
+        "Webflow SEO, CMS pages and AI search.",
+        "Improve or migrate.",
+        "Build, test and hand over.",
+        "Webflow development and migration cost.",
+        "What can you take when you leave Webflow?",
+        "Questions people ask."
+      ],
+      "questions": [
+        "01 Can you improve a Webflow site our team struggles to update?",
+        "02 Do you handle Webflow SEO and AI search setup?",
+        "03 How do you handle Webflow collections and interactions?",
+        "04 Can you improve our Webflow site without moving it?",
+        "05 What happens to Webflow CMS content?",
+        "06 Will a migration preserve our rankings?",
+        "07 What does our team have to provide for a Webflow migration?",
+        "08 Will our Webflow animations still work?"
+      ],
+      "opening_paragraphs": [
+        "PandaCodeGen / Webflow development, redesign & migration",
+        "Webflow development and redesign for a new website or an existing site that needs attention. We review mobile layouts, CMS editing, forms and integrations, then scope improvements or a move to a custom build when it fits.",
+        "01 / See the work"
+      ],
+      "internal_links": [
+        "/blog/leaving-webflow-2026",
+        "/blog/webflow-migration-cost",
+        "/blog/webflow-true-cost",
+        "/blog/webflow-user-accounts-sunset-date-2026",
+        "/blog/webflow-vs-custom-website",
+        "/blog/website-portability",
+        "/pricing",
+        "/services",
+        "/services/ai-seo",
+        "/services/cms-development",
+        "/work/panda-patches"
+      ]
+    },
+    {
+      "route": "/services/wix",
+      "built_html_path": ".next-audit/server/app/services/wix.html",
+      "sha256": "440aa6cf97e4d06c72a581543d835d10005848f0d2b8c84d0e5d11477355f997",
+      "title": "Wix Website Design, Redesign & Migration | PandaCodeGen",
+      "description": "Build or redesign a Wix website, improve mobile pages and forms, or plan a custom site with a Sanity editor. Agree content, integrations and redirects first.",
+      "canonical": "https://www.pandacodegen.com/services/wix",
+      "h1": [
+        "Wix website design. Redesign or move."
+      ],
+      "h2": [
+        "What editor freedom can look like.",
+        "Outdated design, slow pages or awkward mobile layouts?",
+        "Wix SEO and AI search access.",
+        "Choose the right amount of change.",
+        "Build, test and hand over.",
+        "Wix redesign and migration cost.",
+        "What can you take when you leave Wix?",
+        "Questions people ask."
+      ],
+      "questions": [
+        "01 Can you redesign my Wix website without moving platforms?",
+        "02 Can you improve Wix SEO and AI search access without moving platforms?",
+        "03 What happens to Wix content and apps when we migrate?",
+        "04 Will we lose our search rankings if we leave Wix?",
+        "05 Can we still edit the website?",
+        "06 How long does a Wix move take?",
+        "07 What happens to Wix Bookings, Stores and Members Area?",
+        "08 Does our Wix site stay available while you build?"
+      ],
+      "opening_paragraphs": [
+        "PandaCodeGen / Wix website design, redesign & migration",
+        "Need a Wix website redesign, a clearer mobile layout or forms that work with your business? We can build or improve the current site, or plan a custom website with a Sanity editor if you have outgrown the setup.",
+        "01 / See the work"
+      ],
+      "internal_links": [
+        "/blog/nextjs-sanity-stack",
+        "/blog/website-portability",
+        "/blog/wix-migration-cost",
+        "/blog/wix-too-slow",
+        "/blog/wix-vs-custom-website",
+        "/pricing",
+        "/services",
+        "/services/ai-seo",
+        "/services/cms-development",
+        "/work/ladies-4-jesus"
+      ]
+    },
+    {
+      "route": "/services/woocommerce",
+      "built_html_path": ".next-audit/server/app/services/woocommerce.html",
+      "sha256": "c5f6d8ab59c9932f9e49265b2a67aa4d281a3aa9566917494b4dd82a70021d06",
+      "title": "WooCommerce Development Services & Migration | PandaCodeGen",
+      "description": "Build or improve a WooCommerce store. Review slow pages, checkout and extensions, or plan a custom storefront with products, orders and payments in scope.",
+      "canonical": "https://www.pandacodegen.com/services/woocommerce",
+      "h1": [
+        "WooCommerce development services. Build, improve or migrate."
+      ],
+      "h2": [
+        "A completed client migration.",
+        "Slow checkout or a store that is hard to run?",
+        "WooCommerce SEO and AI search checks.",
+        "Repair or rebuild the store.",
+        "Build, test and hand over.",
+        "WooCommerce development and migration cost.",
+        "What can you keep when you move a WooCommerce store?",
+        "Questions people ask."
+      ],
+      "questions": [
+        "01 Can you fix a slow WooCommerce checkout without replacing the store?",
+        "02 What SEO and AI search checks do you make on WooCommerce?",
+        "03 What needs special planning in a WooCommerce migration?",
+        "04 How much does a WooCommerce migration cost?",
+        "05 Do products and orders have to move?",
+        "06 Can you guarantee our Google rankings?",
+        "07 Can our team still manage the shop?",
+        "08 What happens to subscriptions and saved payment methods?",
+        "09 Will we still use WooCommerce after a storefront rebuild?"
+      ],
+      "opening_paragraphs": [
+        "PandaCodeGen / WooCommerce development, speed & migration",
+        "WooCommerce development services for new stores and existing shops. Need help with slow product pages, checkout or connected extensions? We review the purchase journey and order handling, then quote improvements or a rebuild that fits.",
+        "01 / See the work"
+      ],
+      "internal_links": [
+        "/blog/website-portability",
+        "/blog/woocommerce-low-conversion-rate",
+        "/blog/woocommerce-migration-cost",
+        "/blog/woocommerce-too-slow",
+        "/blog/woocommerce-vs-custom-website",
+        "/blog/wordpress-plugins-destroy-speed",
+        "/pricing",
+        "/services",
+        "/services/ai-seo",
+        "/services/ecommerce",
+        "/work/mycustompatches"
+      ]
+    },
+    {
+      "route": "/services/wordpress",
+      "built_html_path": ".next-audit/server/app/services/wordpress.html",
+      "sha256": "f85f9a3f5f4d3b423e254cf25c581cee2c7feed8c4e3c6c5d5b34e5dd1544265",
+      "title": "WordPress Website Design & Development | PandaCodeGen",
+      "description": "WordPress design, development and redesign for small businesses. Improve existing pages or build a new site, with a written quote and editing walkthrough.",
+      "canonical": "https://www.pandacodegen.com/services/wordpress",
+      "h1": [
+        "WordPress website development. New sites and redesigns."
+      ],
+      "h2": [
+        "From WordPress. Built around the business.",
+        "Need a new WordPress site or help with the one you have?",
+        "WordPress SEO and AI search setup.",
+        "Choose the build that fits.",
+        "Build, test and hand over.",
+        "WordPress website development cost.",
+        "What do you own with a WordPress website?",
+        "Questions people ask."
+      ],
+      "questions": [
+        "01 Can you move my WordPress website to another hosting provider?",
+        "02 Can you fix a slow WordPress website without rebuilding it?",
+        "03 Is SEO and AI search setup included in a new WordPress website?",
+        "04 Will you build on WordPress if that is what I want?",
+        "05 Do I need to be technical to update my website?",
+        "06 How much does a WordPress website cost?",
+        "07 Who handles hosting, backups and updates?",
+        "08 What if I want to move away from WordPress?",
+        "09 How long does a WordPress website take?"
+      ],
+      "opening_paragraphs": [
+        "PandaCodeGen / WordPress website design & development",
+        "WordPress website design and development for small businesses. Build a new site, refresh an outdated design or investigate slow pages and broken forms. Work directly with the founders, agree the scope and price, and learn how to update the site yourself.",
+        "01 / See the work"
+      ],
+      "internal_links": [
+        "/ai-info/pricing-and-guarantees",
+        "/blog/divi-theme-slow",
+        "/blog/elementor-kills-seo",
+        "/blog/how-to-fix-slow-wordpress",
+        "/blog/website-portability",
+        "/blog/wordpress-ai-security-risk-2026",
+        "/blog/wordpress-plugin-security-2026",
+        "/pricing",
+        "/services",
+        "/services/ai-seo",
+        "/services/wordpress-migration",
+        "/work/ladies-4-jesus",
+        "/work/panda-patches"
+      ]
+    },
+    {
+      "route": "/services/wordpress-migration",
+      "built_html_path": ".next-audit/server/app/services/wordpress-migration.html",
+      "sha256": "fc0e3cae1256d4042ec6cbe70f7e34fe3893ea967061ecead2f463948f0168d9",
+      "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+      "description": "Move a WordPress site to Next.js with a written plan for content, URLs, redirects and forms. Review it with Hassan, then get an editing demo and documentation.",
+      "canonical": "https://www.pandacodegen.com/services/wordpress-migration",
+      "h1": [
+        "Move from WordPress to Next.js. Keep what works."
+      ],
+      "h2": [
+        "A new shop. A happy client.",
+        "Start. Improve. Or migrate.",
+        "SEO and AI search after a WordPress migration.",
+        "Plugins, quotes and code.",
+        "Add up what the site costs.",
+        "A move with a plan.",
+        "Know the scope. Own the result.",
+        "What can you keep when you move from WordPress?",
+        "Questions worth asking."
+      ],
+      "questions": [
+        "01 Is moving WordPress to Next.js the same as changing hosts?",
+        "02 Can Google and AI search read my website after a WordPress migration?",
+        "03 Will every old address keep working?",
+        "04 Should we repair WordPress or migrate?",
+        "05 What if I just need a simple WordPress site?",
+        "06 What moves in a WordPress to Next.js migration?",
+        "07 Can my team edit the new site?",
+        "08 How long does a WordPress migration take?",
+        "09 How much does a WordPress migration cost?"
+      ],
+      "opening_paragraphs": [
+        "WordPress to Next.js migration",
+        "Thinking of moving your WordPress site to Next.js? Tell Hassan what the site needs to do. We'll explain what can move as it is, what needs rebuilding, and how your team will edit it after launch. Only need a WordPress site built or fixed? See WordPress websites .",
+        "A WordPress community site rebuilt for owner-managed publishing and moderated submissions. See the case study ↗"
+      ],
+      "internal_links": [
+        "/blog/elementor-kills-seo",
+        "/blog/how-to-fix-slow-wordpress",
+        "/blog/how-to-migrate-wordpress-to-nextjs",
+        "/blog/website-portability",
+        "/blog/will-migrating-hurt-my-seo",
+        "/blog/wordpress-ai-security-risk-2026",
+        "/blog/wordpress-migration-cost",
+        "/blog/wordpress-plugins-destroy-speed",
+        "/blog/wordpress-traffic-drop-speed",
+        "/blog/wordpress-vs-custom-code-real-cost-3-years",
+        "/blog/wordpress-vs-nextjs",
+        "/pricing",
+        "/services/ai-seo",
+        "/services/wordpress",
+        "/work/ladies-4-jesus",
+        "/work/mycustompatches",
+        "/work/panda-patches"
+      ]
+    }
+  ],
+  "buyer_question_verification": [
+    {
+      "source": "src/data/service-buyer-questions.ts",
+      "question": "Can you move my WordPress website to another hosting provider?",
+      "route": "/services/wordpress",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-buyer-questions.ts",
+      "question": "Can you fix a slow WordPress website without rebuilding it?",
+      "route": "/services/wordpress",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-buyer-questions.ts",
+      "question": "Is moving WordPress to Next.js the same as changing hosts?",
+      "route": "/services/wordpress-migration",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-buyer-questions.ts",
+      "question": "Can you improve an online store that is difficult to buy from?",
+      "route": "/services/ecommerce",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-buyer-questions.ts",
+      "question": "Can you fix a slow WooCommerce checkout without replacing the store?",
+      "route": "/services/woocommerce",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-buyer-questions.ts",
+      "question": "Can you redesign my Wix website without moving platforms?",
+      "route": "/services/wix",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-buyer-questions.ts",
+      "question": "Can you redesign my Squarespace website without starting over?",
+      "route": "/services/squarespace",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-buyer-questions.ts",
+      "question": "Can you improve a Webflow site our team struggles to update?",
+      "route": "/services/webflow",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-buyer-questions.ts",
+      "question": "Can you fix a slow GoHighLevel website and keep the CRM?",
+      "route": "/services/gohighlevel",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-buyer-questions.ts",
+      "question": "Can you improve a website that is difficult to update?",
+      "route": "/services/cms-development",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-buyer-questions.ts",
+      "question": "Can you add customer logins and private file uploads to our website?",
+      "route": "/services/backend-development",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-buyer-questions.ts",
+      "question": "Can you replace spreadsheets with a customer portal or staff dashboard?",
+      "route": "/services/custom-engineering",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-buyer-questions.ts",
+      "question": "Can you help if my business is missing from ChatGPT or Google AI answers?",
+      "route": "/services/ai-seo",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-buyer-questions.ts",
+      "question": "What is the difference between AI SEO, AEO and GEO services?",
+      "route": "/services/ai-seo",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-search-foundations.ts",
+      "question": "Is SEO and AI search setup included in a new WordPress website?",
+      "route": "/services/wordpress",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-search-foundations.ts",
+      "question": "Can Google and AI search read my website after a WordPress migration?",
+      "route": "/services/wordpress-migration",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-search-foundations.ts",
+      "question": "Can Google and AI search read my product pages?",
+      "route": "/services/ecommerce",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-search-foundations.ts",
+      "question": "What SEO and AI search checks do you make on WooCommerce?",
+      "route": "/services/woocommerce",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-search-foundations.ts",
+      "question": "Can you improve Wix SEO and AI search access without moving platforms?",
+      "route": "/services/wix",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-search-foundations.ts",
+      "question": "Can you improve Squarespace SEO and AI search access?",
+      "route": "/services/squarespace",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-search-foundations.ts",
+      "question": "Do you handle Webflow SEO and AI search setup?",
+      "route": "/services/webflow",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-search-foundations.ts",
+      "question": "Can you improve GoHighLevel website SEO while keeping the CRM?",
+      "route": "/services/gohighlevel",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-search-foundations.ts",
+      "question": "Will our CMS website be readable by Google and AI search?",
+      "route": "/services/cms-development",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-search-foundations.ts",
+      "question": "Can our public website be found in AI search while the CRM stays private?",
+      "route": "/services/custom-engineering",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    },
+    {
+      "source": "src/data/service-search-foundations.ts",
+      "question": "Does backend development include SEO and AI search setup?",
+      "route": "/services/backend-development",
+      "in_initial_html_main_text": true,
+      "in_question_schema": true,
+      "exact_wording_found_in_selected_baseline_sources": false,
+      "volume": null,
+      "volume_status": "Not measured for this full question; exact wording novelty does not prove topic novelty."
+    }
+  ],
+  "checks": {
+    "pages": 18,
+    "services": 12,
+    "buyer_questions_verified": 25,
+    "all_have_one_h1": true,
+    "scope": "Local built initial HTML and selected historical source, not live indexing or search rankings."
+  }
+}

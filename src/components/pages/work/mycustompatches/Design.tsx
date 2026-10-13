@@ -1,13 +1,15 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import WorkCaseTitle from "@/components/redesign/case-study/WorkCaseTitle";
+import WorkCaseOpening from "@/components/redesign/case-study/WorkCaseOpening";
+import WorkCasePreview from "@/components/redesign/case-study/WorkCasePreview";
+import WorkCaseFacts from "@/components/redesign/case-study/WorkCaseFacts";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import MyCustomPatchesWalkthrough from "@/components/redesign/case-study/MyCustomPatchesWalkthrough";
 import { requiredMetric, clientIdentity } from "@/data/case-study-facts";
-import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
+import { BODY, DISPLAY, MONO, T } from "@/components/redesign/tokens";
 import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-study/CaseStudyFaqs";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -51,73 +53,49 @@ const built = [
 export function MyCustomPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed footerLinksOnly>
-      <section className="px-6 pb-16 pt-8 md:pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
-        <div className="mx-auto max-w-[1100px]">
-          <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-            <Link href="/work" style={{ color: T.quiet }}>Work</Link> / MyCustomPatches / Independent client
-          </p>
+      <WorkCaseOpening>
+        <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
+          <Link href="/work" style={{ color: T.quiet }}>Work</Link> / MyCustomPatches / Independent client
+        </p>
 
-          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-12">
-            <div>
-            <WorkCaseTitle>MyCustomPatches</WorkCaseTitle>
-          <p className="mt-3 max-w-[38rem]" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
-            A decade-old WordPress store, off it in about 22 days, with zero downtime recorded at cutover.
-          </p>
+        <WorkCaseTitle>MyCustomPatches</WorkCaseTitle>
+        <p className="mt-3 max-w-[38rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
+          A decade-old WordPress store, off it in about 22 days, with zero downtime recorded at cutover.
+        </p>
 
-          <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
-            {clientIdentity("mycustompatches")} ran on WordPress for years before moving to a custom Next.js build --
-            URL mapping and redirects were planned before cutover. The project record reports no ranking losses
-            in the 30-day post-launch monitoring window.
-          </p>
+        <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
+          {clientIdentity("mycustompatches")} ran on WordPress for years before moving to a custom Next.js build --
+          URL mapping and redirects were planned before cutover. The project record reports no ranking losses
+          in the 30-day post-launch monitoring window.
+        </p>
 
-          <div className="mt-6 flex flex-wrap items-center gap-4">
-            <a
-              href="https://www.mycustompatches.net"
-              target="_blank"
-              rel="noopener"
-              className="cta-solid inline-flex items-center gap-2 px-5 py-3 text-[14px] font-medium"
-              style={{ backgroundColor: T.ink, color: T.paper }}
-            >
-              Visit the live site <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-              <span className="sr-only"> mycustompatches.net (opens in a new tab)</span>
-            </a>
-          </div>
-
-            </div>
-          <div className="w-full lg:pt-8">
-            <Image
-              src="/work/mycustompatches.png"
-              alt="The MyCustomPatches storefront home page after migration, showing the patch category navigation, the hero product imagery and the quote request entry point."
-              width={1912}
-              height={914}
-              sizes="(min-width: 1024px) 500px, 100vw"
-              priority
-              className="w-full border"
-              style={{ borderColor: T.rule }}
-            />
-          </div>
-          </div>
-
-          <RelationshipDisclosure slug="mycustompatches" variant="editorial" />
-
-          <div className="mt-2 flex flex-wrap gap-x-10 gap-y-3 border-t pt-6" style={{ borderColor: T.rule }}>
-            {[
-              { label: "Migration completed in", value: requiredMetric("mycustompatches", "delivery-days") },
-              { label: "Distinct templates rebuilt", value: requiredMetric("mycustompatches", "templates") },
-              { label: "Downtime at cutover", value: requiredMetric("mycustompatches", "downtime") },
-            ].map((f) => (
-              <div key={f.label} className="max-w-[16rem]">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.1em]" style={{ color: T.quiet }}>{f.label}</p>
-                <p className="mt-1 text-[14px] leading-[1.5]" style={{ color: T.body }}>{f.value}</p>
-              </div>
-            ))}
-          </div>
+        <div className="mt-6 flex flex-wrap items-center gap-4">
+          <a
+            href="https://www.mycustompatches.net"
+            target="_blank"
+            rel="noopener"
+            className="cta-solid inline-flex items-center gap-2 px-5 py-3 text-[14px] font-medium"
+            style={{ backgroundColor: T.ink, color: T.paper }}
+          >
+            Visit the live site <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            <span className="sr-only"> mycustompatches.net (opens in a new tab)</span>
+          </a>
         </div>
-      </section>
+
+        <WorkCasePreview src="/work/mycustompatches.png" alt="The MyCustomPatches storefront home page after migration, showing the patch category navigation, the hero product imagery and the quote request entry point." width={1912} height={914} caption="The storefront homepage after migration / Independent client" />
+        <WorkCaseFacts items={[
+          { label: "Migration completed in", value: requiredMetric("mycustompatches", "delivery-days") },
+          { label: "Distinct templates rebuilt", value: requiredMetric("mycustompatches", "templates") },
+          { label: "Downtime at cutover", value: requiredMetric("mycustompatches", "downtime") },
+        ]} />
+
+        <RelationshipDisclosure slug="mycustompatches" variant="editorial" />
+
+      </WorkCaseOpening>
 
       <MyCustomPatchesWalkthrough />
 
-      <section className="px-6 py-16 md:px-10 md:py-24" style={{ backgroundColor: T.paperHi }}>
+      <section className="px-6 py-8 md:px-10 md:py-24" style={{ backgroundColor: T.paperHi }}>
         <div className="mx-auto max-w-[1100px]">
           <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>04</span>
           <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
@@ -142,7 +120,7 @@ export function MyCustomPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStud
 
       <CaseStudyFaqs faqs={faqs} />
 
-      <section className="px-6 py-20 md:px-10" style={{ backgroundColor: T.dark, color: T.onDark }}>
+      <section className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
         <div className="mx-auto max-w-[1100px]">
           <h2 style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2rem, 3.6vw, 2.8rem)", lineHeight: 1.05 }}>
             Stuck on an old platform you&apos;re afraid to touch?

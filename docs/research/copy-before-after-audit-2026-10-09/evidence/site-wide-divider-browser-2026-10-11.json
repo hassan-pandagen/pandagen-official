@@ -1,0 +1,1676 @@
+{
+  "pass": true,
+  "cases": 64,
+  "apiIntercepted": true,
+  "physicalDevices": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": {
+          "guidesBorder": "0px",
+          "guidesGap": 48,
+          "founderLastBorder": "0px",
+          "proofNotesBorder": "0px"
+        },
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/about",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": {
+          "border": "0px",
+          "margin": "24px"
+        },
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/wordpress",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": [
+          {
+            "border": "0px",
+            "margin": "24px"
+          }
+        ]
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/partners",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": {
+          "chapterBorders": [
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "handoffBorder": "0px"
+        },
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/work/panda-publisher",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": {
+          "chapterBorders": [
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "handoffBorder": "0px"
+        },
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog/sanity-vs-wordpress",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog/what-is-llms-txt",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog/website-portability",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [
+          {
+            "margin": "0px",
+            "border": "0px"
+          }
+        ],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog/nextjs-sanity-stack",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [
+          {
+            "margin": "0px",
+            "border": "0px"
+          }
+        ],
+        "referenceHeader": null,
+        "gridHeading": {
+          "border": "0px",
+          "padding": "0px",
+          "margin": "32px"
+        },
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/ai-info/migration-services",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog/is-wix-bad-for-seo",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [
+          {
+            "margin": "0px",
+            "border": "0px"
+          }
+        ],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": {
+          "guidesBorder": "0px",
+          "guidesGap": 48,
+          "founderLastBorder": "0px",
+          "proofNotesBorder": "0px"
+        },
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/about",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/blog",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": {
+          "border": "0px",
+          "margin": "24px"
+        },
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/wordpress",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": [
+          {
+            "border": "0px",
+            "margin": "24px"
+          }
+        ]
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/partners",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": {
+          "chapterBorders": [
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "handoffBorder": "0px"
+        },
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/work/panda-publisher",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": {
+          "chapterBorders": [
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "handoffBorder": "0px"
+        },
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/blog/sanity-vs-wordpress",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/blog/what-is-llms-txt",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/blog/website-portability",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [
+          {
+            "margin": "0px",
+            "border": "0px"
+          }
+        ],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/blog/nextjs-sanity-stack",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [
+          {
+            "margin": "0px",
+            "border": "0px"
+          }
+        ],
+        "referenceHeader": null,
+        "gridHeading": {
+          "border": "0px",
+          "padding": "0px",
+          "margin": "32px"
+        },
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/ai-info/migration-services",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/blog/is-wix-bad-for-seo",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [
+          {
+            "margin": "0px",
+            "border": "0px"
+          }
+        ],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": {
+          "guidesBorder": "0px",
+          "guidesGap": 112,
+          "founderLastBorder": "0px",
+          "proofNotesBorder": "1px"
+        },
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/about",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": {
+          "border": "0px",
+          "margin": "40px"
+        },
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/wordpress",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "1px",
+          "padding": "28px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "1px",
+          "padding": "28px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "1px",
+          "padding": "28px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "1px",
+          "padding": "28px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": [
+          {
+            "border": "0px",
+            "margin": "24px"
+          }
+        ]
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/partners",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": {
+          "chapterBorders": [
+            "1px",
+            "1px",
+            "1px"
+          ],
+          "handoffBorder": "1px"
+        },
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/work/panda-publisher",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": {
+          "chapterBorders": [
+            "1px",
+            "1px",
+            "1px"
+          ],
+          "handoffBorder": "1px"
+        },
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog/sanity-vs-wordpress",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog/what-is-llms-txt",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog/website-portability",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [
+          {
+            "margin": "0px",
+            "border": "0px"
+          }
+        ],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog/nextjs-sanity-stack",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [
+          {
+            "margin": "0px",
+            "border": "0px"
+          }
+        ],
+        "referenceHeader": null,
+        "gridHeading": {
+          "border": "0px",
+          "padding": "0px",
+          "margin": "32px"
+        },
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/ai-info/migration-services",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog/is-wix-bad-for-seo",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [
+          {
+            "margin": "0px",
+            "border": "0px"
+          }
+        ],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": {
+          "guidesBorder": "0px",
+          "guidesGap": 48,
+          "founderLastBorder": "0px",
+          "proofNotesBorder": "0px"
+        },
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/about",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": {
+          "border": "0px",
+          "margin": "24px"
+        },
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/wordpress",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": [
+          {
+            "border": "0px",
+            "margin": "24px"
+          }
+        ]
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/partners",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": {
+          "chapterBorders": [
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "handoffBorder": "0px"
+        },
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/work/panda-publisher",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": {
+          "chapterBorders": [
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "handoffBorder": "0px"
+        },
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog/sanity-vs-wordpress",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog/what-is-llms-txt",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog/website-portability",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [
+          {
+            "margin": "0px",
+            "border": "0px"
+          }
+        ],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog/nextjs-sanity-stack",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [
+          {
+            "margin": "0px",
+            "border": "0px"
+          }
+        ],
+        "referenceHeader": null,
+        "gridHeading": {
+          "border": "0px",
+          "padding": "0px",
+          "margin": "32px"
+        },
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/ai-info/migration-services",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": null,
+        "walkthrough": null,
+        "summaryLists": [],
+        "referenceHeader": {
+          "border": "0px",
+          "padding": "0px"
+        },
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog/is-wix-bad-for-seo",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 382,
+        "clipped": [],
+        "home": null,
+        "ownership": null,
+        "library": null,
+        "related": {
+          "hasTopic": true,
+          "border": "0px",
+          "padding": "0px"
+        },
+        "walkthrough": null,
+        "summaryLists": [
+          {
+            "margin": "0px",
+            "border": "0px"
+          }
+        ],
+        "referenceHeader": null,
+        "gridHeading": null,
+        "relatedProject": []
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    }
+  ]
+}

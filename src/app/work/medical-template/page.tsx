@@ -44,7 +44,7 @@ const schema = {
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             about: { "@id": `${canonicalUrl}#demo` },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            dateModified: "2026-10-10",
+            dateModified: "2026-10-11",
         },
         {
             "@type": "CreativeWork",
@@ -54,7 +54,7 @@ const schema = {
             genre: "Portfolio demo",
             creativeWorkStatus: caseStudy("medical-template").relationship,
             description: disclosure("medical-template"),
-            dateModified: "2026-10-10",
+            dateModified: "2026-10-11",
             creator: { "@id": "https://www.pandacodegen.com/#organization" },
         },
         {

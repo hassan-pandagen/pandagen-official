@@ -154,3 +154,9 @@ Things worth trying, in rough order of likely effect (not done in this review):
 - Field performance, real-device behaviour, ranking or conversion change, or how a live AI model answers. All checks here are lab or emulated.
 - New email delivery. Earlier provider receipts belong to their recorded date.
 - Keyword volumes. Keyword snapshots in this folder are provider estimates with dates; no new ones were taken.
+
+## Owner-approved copy follow-up - 11 October (implemented by Codex)
+
+The owner approved the five observations listed in the 10 October review. They are now applied: "a practice demo" in the medical H1, plain AI-search links/shorter answers on the 11 service pages, consolidated AI SEO FAQs, the 19-word support row and three 53-character search/social titles. The original review observations remain above as historical findings; they are no longer awaiting an owner decision. This is Codex's implementation/test follow-up, not a new independent review by this document's original author.
+
+The final production build, full check, guards, 158-page structural SEO crawl, initial-HTML/schema checks and 61 responsive/browser cases passed. The actual assistant index retrieved all 25 buyer questions consistently. Results and limitations are in [the main audit's follow-up](README.md#owner-approved-five-copy-fix-follow-up---11-october). No live delivery, PageSpeed-on-the-new-deployment or physical-device pass is claimed. ASAM's owner-supplied planned launch is 19 October; its page still accurately says In testing and will require a confirmed cutover before it becomes Live.

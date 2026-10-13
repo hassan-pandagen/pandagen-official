@@ -1,0 +1,296 @@
+{
+  "pass": true,
+  "cases": 6,
+  "apiIntercepted": true,
+  "physicalDevices": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "parentShadow": "none",
+        "imageShadow": "none",
+        "quoteFont": 24,
+        "frame": {
+          "x": 20,
+          "y": 101.9375,
+          "width": 280,
+          "height": 210.203125,
+          "right": 300,
+          "bottom": 312.140625
+        },
+        "image": {
+          "x": 21,
+          "y": 102.9375,
+          "width": 278,
+          "height": 133.203125,
+          "right": 299,
+          "bottom": 236.140625
+        },
+        "button": {
+          "x": 131.375,
+          "y": 253.140625,
+          "width": 151.625,
+          "height": 44,
+          "right": 283,
+          "bottom": 297.140625
+        },
+        "copy": {
+          "x": 20,
+          "y": 336.140625,
+          "width": 280,
+          "height": 388.8125,
+          "right": 300,
+          "bottom": 724.953125
+        },
+        "pins": 0,
+        "legends": 0,
+        "clipped": []
+      },
+      "previewOpenZoomCloseFocus": true,
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "parentShadow": "none",
+        "imageShadow": "none",
+        "quoteFont": 24,
+        "frame": {
+          "x": 20,
+          "y": 257.5,
+          "width": 350,
+          "height": 243.75,
+          "right": 370,
+          "bottom": 501.25
+        },
+        "image": {
+          "x": 21,
+          "y": 258.5,
+          "width": 348,
+          "height": 166.75,
+          "right": 369,
+          "bottom": 425.25
+        },
+        "button": {
+          "x": 201.375,
+          "y": 442.25,
+          "width": 151.625,
+          "height": 44,
+          "right": 353,
+          "bottom": 486.25
+        },
+        "copy": {
+          "x": 20,
+          "y": 525.25,
+          "width": 350,
+          "height": 317.59375,
+          "right": 370,
+          "bottom": 842.84375
+        },
+        "pins": 0,
+        "legends": 0,
+        "clipped": []
+      },
+      "previewOpenZoomCloseFocus": true,
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "geometry": {
+        "pageWidth": 768,
+        "width": 768,
+        "parentShadow": "none",
+        "imageShadow": "none",
+        "quoteFont": 24,
+        "frame": {
+          "x": 24,
+          "y": 338.5625,
+          "width": 413.5625,
+          "height": 273.765625,
+          "right": 437.5625,
+          "bottom": 612.328125
+        },
+        "image": {
+          "x": 25,
+          "y": 339.5625,
+          "width": 411.5625,
+          "height": 196.765625,
+          "right": 436.5625,
+          "bottom": 536.328125
+        },
+        "button": {
+          "x": 268.9375,
+          "y": 553.328125,
+          "width": 151.625,
+          "height": 44,
+          "right": 420.5625,
+          "bottom": 597.328125
+        },
+        "copy": {
+          "x": 468.28125,
+          "y": 338.5625,
+          "width": 275.71875,
+          "height": 422.25,
+          "right": 744,
+          "bottom": 760.8125
+        },
+        "pins": 0,
+        "legends": 0,
+        "clipped": []
+      },
+      "previewOpenZoomCloseFocus": true,
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "parentShadow": "none",
+        "imageShadow": "none",
+        "quoteFont": 27.36,
+        "frame": {
+          "x": 24,
+          "y": 320.78125,
+          "width": 800.640625,
+          "height": 458.953125,
+          "right": 824.640625,
+          "bottom": 779.734375
+        },
+        "image": {
+          "x": 25,
+          "y": 321.78125,
+          "width": 798.640625,
+          "height": 381.953125,
+          "right": 823.640625,
+          "bottom": 703.734375
+        },
+        "button": {
+          "x": 656.015625,
+          "y": 720.734375,
+          "width": 151.625,
+          "height": 44,
+          "right": 807.640625,
+          "bottom": 764.734375
+        },
+        "copy": {
+          "x": 882.234375,
+          "y": 320.78125,
+          "width": 533.765625,
+          "height": 313.015625,
+          "right": 1416,
+          "bottom": 633.796875
+        },
+        "pins": 0,
+        "legends": 0,
+        "clipped": []
+      },
+      "previewOpenZoomCloseFocus": true,
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1920,
+      "geometry": {
+        "pageWidth": 1920,
+        "width": 1920,
+        "parentShadow": "none",
+        "imageShadow": "none",
+        "quoteFont": 34.4,
+        "frame": {
+          "x": 264,
+          "y": 319.546875,
+          "width": 796.796875,
+          "height": 456.734375,
+          "right": 1060.796875,
+          "bottom": 776.28125
+        },
+        "image": {
+          "x": 265,
+          "y": 320.546875,
+          "width": 794.796875,
+          "height": 379.734375,
+          "right": 1059.796875,
+          "bottom": 700.28125
+        },
+        "button": {
+          "x": 892.171875,
+          "y": 717.28125,
+          "width": 151.625,
+          "height": 44,
+          "right": 1043.796875,
+          "bottom": 761.28125
+        },
+        "copy": {
+          "x": 1124.796875,
+          "y": 319.546875,
+          "width": 531.203125,
+          "height": 461.5625,
+          "right": 1656,
+          "bottom": 781.109375
+        },
+        "pins": 0,
+        "legends": 0,
+        "clipped": []
+      },
+      "previewOpenZoomCloseFocus": true,
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "parentShadow": "none",
+        "imageShadow": "none",
+        "quoteFont": 24,
+        "frame": {
+          "x": 20,
+          "y": 132.203125,
+          "width": 350,
+          "height": 243.75,
+          "right": 370,
+          "bottom": 375.953125
+        },
+        "image": {
+          "x": 21,
+          "y": 133.203125,
+          "width": 348,
+          "height": 166.75,
+          "right": 369,
+          "bottom": 299.953125
+        },
+        "button": {
+          "x": 199.28125,
+          "y": 316.953125,
+          "width": 153.71875,
+          "height": 44,
+          "right": 353,
+          "bottom": 360.953125
+        },
+        "copy": {
+          "x": 20,
+          "y": 399.953125,
+          "width": 350,
+          "height": 317.59375,
+          "right": 370,
+          "bottom": 717.546875
+        },
+        "pins": 0,
+        "legends": 0,
+        "clipped": []
+      },
+      "previewOpenZoomCloseFocus": true,
+      "pass": true
+    }
+  ]
+}

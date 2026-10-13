@@ -1,3 +1,4 @@
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 
@@ -72,7 +73,7 @@ export default function ProcessSplit() {
               id="process-title"
               style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.6rem, 5.4vw, 5.2rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}
             >
-              From First Call to Launch.
+              <HeadingEmphasis text="From First Call to Launch." />
             </h2>
             <p className="mt-6 max-w-[26rem] text-[18px] leading-[1.6]" style={{ color: T.body }}>
               Four reviewable stages, with the important decisions recorded before launch.

@@ -1,3 +1,4 @@
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
@@ -39,7 +40,7 @@ export function WorkPreview() {
         <div className={styles.wrap}>
           <div className={styles.heroInner}>
             <p className={styles.eyebrow}>Selected work / Website, commerce and software projects</p>
-            <h1 className={styles.heroTitle}>Websites, stores <span>and software.</span></h1>
+      <h1 className={styles.heroTitle}>Websites, stores <span style={{ color: "#ebe9e4" }}><HeadingEmphasis text="and software." phrase="software" onDark /></span></h1>
             <p className={styles.heroCopy}>Browse independent client work, founder-owned systems and portfolio concepts. Each project record explains what we built and the evidence behind it.</p>
             <nav className={styles.heroNav} aria-label="Work categories">
               <a href="#client-work"><span className={styles.heroNavNumber}>01</span><span>Client work</span><span aria-hidden="true">↓</span></a>

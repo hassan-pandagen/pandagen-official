@@ -1,3 +1,4 @@
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Calculator, FileInput, ListChecks, Route } from "lucide-react";
@@ -186,7 +187,7 @@ export default function WebsiteMigrationCostPage() {
                     </div>
 
                     <section id="short-answer" data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
-                        <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer: what a website migration costs</h2>
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal"><HeadingEmphasis text="The short answer: what a website migration costs" /></h2>
                         <p className="mb-4 leading-relaxed text-stone-700">
                             First work out which job you&apos;re buying. Moving the same site to a new host is a small
                             job that many hosting companies do when you buy a plan, often free or for a small fixed fee.

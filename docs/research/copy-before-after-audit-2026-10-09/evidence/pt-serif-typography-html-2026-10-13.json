@@ -1,0 +1,1143 @@
+{
+  "pass": true,
+  "pages": 162,
+  "headings": 26,
+  "prices": 19,
+  "results": [
+    {
+      "path": "about.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "ai-info.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "contact.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "cookies.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "de.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "editorial-policy.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "fr.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "free-audit.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "index.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 3,
+      "priceEmphasisCount": 2
+    },
+    {
+      "path": "manifesto.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "partners.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "pricing.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 5
+    },
+    {
+      "path": "privacy.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "security.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "services.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "terms.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "work.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "_global-error.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "_not-found.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "about/hassan.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "about/imran.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "ai-info/case-studies.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "ai-info/migration-services.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "ai-info/pricing-and-guarantees.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "ai-info/team-and-company.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/aeo-playbook-built-into-every-website.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/aeo-web-performance-glossary.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/agentic-browsing-pagespeed-score.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/ai-built-website-checklist.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/ai-referral-revenue-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/ai-search-visibility-tracking.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/best-website-builder-for-gohighlevel-agencies.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/build-vs-buy-software-2026-cost-comparison.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/cheap-web-developer.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/cloudflare-emdash-wordpress-replacement.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/cms-market-share-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/core-web-vitals-explained.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/custom-website-5000-whats-included.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/divi-theme-slow.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/do-you-own-your-website.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/elementor-kills-seo.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/fix-meta-ad-tracking-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/for-agencies-offer-custom-web-development.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/gohighlevel-keep-crm-replace-website.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/gohighlevel-vs-wordpress.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/gohighlevel-website-speed.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/google-algorithm-updates.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/google-universal-commerce-protocol-what-it-means-for-your-store.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/how-long-does-a-custom-website-take.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/how-much-does-a-website-cost.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/how-to-achieve-100-pagespeed.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/how-to-fix-slow-wordpress.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/how-to-migrate-wordpress-to-nextjs.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/how-to-speed-up-your-website.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/how-website-speed-affects-seo.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/is-it-cheaper-to-build-your-own-website.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/is-squarespace-bad-for-seo.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/is-wix-bad-for-seo.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/leaving-webflow-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/lovable-site-not-showing-on-google.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/meta-conversions-api-setup-cost.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/nextjs-hosting-zero-cost.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/nextjs-sanity-stack.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/pagepro-alternatives.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/product-catalog-website-without-cart.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/saas-price-increases-2026-tracker.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/saas-software-pricing-audit-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/sanity-vs-supabase.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/sanity-vs-wordpress.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/shopify-app-costs-real-monthly-bill.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/shopify-conversion-rate-speed-fix.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/shopify-dawn-theme-slow.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/shopify-headless.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/shopify-plus-still-slow.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/shopify-slow-losing-sales.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/shopify-stocky-sunset-date-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/shopify-store-speed-optimization.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/shopify-vs-custom-website.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/spending-more-on-ads-fewer-orders-tracking.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/squarespace-migration-cost.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/squarespace-too-slow.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/squarespace-vs-custom-website.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/top-custom-web-development-agencies-usa-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/top-nextjs-agencies-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/web-accessibility-glossary.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/web-accessibility-statistics-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/webflow-migration-cost.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/webflow-true-cost.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/webflow-user-accounts-sunset-date-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/webflow-vs-custom-website.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/website-developer-agency.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/website-migration-cost-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/website-monthly-running-cost.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/website-portability.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/website-rebuild-cost-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/website-redesign-cost.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/what-is-headless-commerce.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/what-is-llms-txt.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/which-website-builders-can-go-headless.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/why-competitor-outranks-you.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/why-we-chose-nextjs-over-wordpress-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/will-migrating-hurt-my-seo.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/wix-migration-cost.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/wix-too-slow.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/wix-vs-custom-website.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/woocommerce-low-conversion-rate.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/woocommerce-migration-cost.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/woocommerce-too-slow.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/woocommerce-vs-custom-website.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/wordpress-ai-security-risk-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/wordpress-april-2026-evidence.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/wordpress-migration-cost.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/wordpress-plugin-security-2026.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/wordpress-plugins-destroy-speed.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/wordpress-traffic-drop-speed.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/wordpress-vs-custom-code-real-cost-3-years.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/wordpress-vs-nextjs.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "de/about.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "de/contact.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "de/pricing.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "de/services.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "demo/featured-products.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "fr/about.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "fr/contact.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "fr/pricing.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "fr/services.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "services/ai-seo.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 1
+    },
+    {
+      "path": "services/backend-development.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "services/cms-development.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 1
+    },
+    {
+      "path": "services/custom-engineering.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 1
+    },
+    {
+      "path": "services/ecommerce.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 1
+    },
+    {
+      "path": "services/gohighlevel.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 1
+    },
+    {
+      "path": "services/medical-website-design.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 1
+    },
+    {
+      "path": "services/small-business-website-design.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 1
+    },
+    {
+      "path": "services/squarespace.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 1
+    },
+    {
+      "path": "services/webflow.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 1
+    },
+    {
+      "path": "services/wix.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 1
+    },
+    {
+      "path": "services/woocommerce.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 1
+    },
+    {
+      "path": "services/wordpress-migration.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 2,
+      "priceEmphasisCount": 1
+    },
+    {
+      "path": "services/wordpress.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 1,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "work/a-step-above-medical.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "work/emblematic-studio.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "work/enterprise-ops.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "work/ladies-4-jesus.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "work/medical-template.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "work/mycustompatches.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "work/northdeck-group.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "work/panda-patches.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "work/panda-publisher.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "work/saforne.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "work/sleek-jackets.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/topic/agencies.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/topic/custom-development.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/topic/ecommerce.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/topic/seo-and-ai-search.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/topic/shopify.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/topic/squarespace.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/topic/webflow.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/topic/website-cost.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/topic/website-migration.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/topic/website-speed.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    },
+    {
+      "path": "blog/topic/wordpress.html",
+      "titleLinksSchemaPreserved": true,
+      "copyPreservedApartFromApprovedEditorChanges": true,
+      "headingEmphasisCount": 0,
+      "priceEmphasisCount": 0
+    }
+  ],
+  "unexpectedCopyDifferences": []
+}

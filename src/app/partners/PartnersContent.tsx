@@ -1,4 +1,5 @@
 "use client";
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 
 import { motion } from "@/components/ui/motion";
 import { ArrowRight } from "lucide-react";
@@ -115,7 +116,7 @@ export default function PartnersContent() {
 
       {/* 2. PROOF STRIP — real numbers */}
       <section className="px-6 py-12 md:py-16">
-        <div className="mx-auto grid max-w-6xl border-t border-stone-400 md:grid-cols-3">
+        <div className="mx-auto grid max-w-6xl md:grid-cols-3">
           {[
             { label: "01 / Start small", title: "One scoped pilot", body: "Test the working relationship on a single project before discussing repeat work." },
             { label: "02 / Keep control", title: "Your client relationship", body: "The NDA, communication route and handover are agreed with your agency." },
@@ -148,7 +149,7 @@ export default function PartnersContent() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className={`grid gap-4 border-b border-stone-400 py-7 md:grid-cols-[4rem_minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-8 md:py-9 ${hover.processRow}`}
+                className={`grid gap-4 border-b border-stone-400 py-7 last:border-b-0 md:grid-cols-[4rem_minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-8 md:py-9 ${hover.processRow}`}
               >
                 <span className="font-mono text-xs font-bold text-cognac">{item.step}</span>
                 <h3 className={`text-2xl leading-none md:text-3xl ${anton.className}`}>{item.title}</h3>
@@ -224,7 +225,7 @@ export default function PartnersContent() {
 
       <section className="border-y border-stone-300 bg-paper px-6 py-12 md:py-16" aria-labelledby="partner-editor">
         <div className="mx-auto max-w-6xl">
-          <h2 id="partner-editor" className="text-3xl font-bold text-charcoal md:text-5xl">White-label websites with a Sanity editor</h2>
+          <h2 id="partner-editor" className="text-3xl font-bold text-charcoal md:text-5xl"><HeadingEmphasis text="A Sanity editor built for your client's content." /></h2>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">The pilot can cover a custom website, Sanity content models, agreed preview and publishing behavior, and an editor walkthrough under your agency's brand. Send representative content and the tasks your client needs to perform; the quote names the templates, migration, training and account handover.</p>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-stone-700">Customer accounts, private portals and custom backend workflows receive a separate scope. We agree who owns the Sanity project, repository and hosting accounts, and who handles support after your client accepts the work.</p>
           <div className="mt-6 flex flex-wrap gap-6"><Link className="font-semibold text-cognac underline underline-offset-4" href="/services/cms-development">See the Sanity service and real editor</Link><Link className="font-semibold text-cognac underline underline-offset-4" href="/services/backend-development">Scope a backend or portal</Link></div>

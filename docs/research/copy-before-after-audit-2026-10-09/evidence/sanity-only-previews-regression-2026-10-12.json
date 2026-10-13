@@ -1,0 +1,387 @@
+{
+  "pass": true,
+  "cases": 8,
+  "annotatedAssets": [
+    "panda-patches-editor.png",
+    "panda-patches-editor-blog.png",
+    "panda-patches-editor-case-study.png",
+    "ladies-4-jesus-editor-devotional.png",
+    "ladies-4-jesus-editor-settings.png",
+    "a-step-above-medical-editor-locations.png",
+    "a-step-above-medical-editor-courses.png"
+  ],
+  "apiIntercepted": true,
+  "physicalDevices": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor.png",
+          "width": 356,
+          "height": 167,
+          "imageWidth": 356,
+          "imageHeight": 167,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-case-study.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/work/ladies-4-jesus",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-devotional.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-settings.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/work/a-step-above-medical",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/a-step-above-medical-editor-locations.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/a-step-above-medical-editor-courses.png",
+          "width": 356,
+          "height": 191,
+          "imageWidth": 356,
+          "imageHeight": 191,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/blog/sanity-vs-wordpress",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-case-study.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor.png&w=640&q=75",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor-blog.png&w=640&q=75",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor-case-study.png&w=640&q=75",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor.png",
+          "width": 356,
+          "height": 167,
+          "imageWidth": 356,
+          "imageHeight": 167,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-case-study.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/work/ladies-4-jesus",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fladies-4-jesus-editor-devotional.png&w=640&q=75",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fladies-4-jesus-editor-settings.png&w=640&q=75",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-devotional.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-settings.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/work/a-step-above-medical",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fa-step-above-medical-editor-locations.png&w=640&q=75",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fa-step-above-medical-editor-courses.png&w=640&q=75",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/a-step-above-medical-editor-locations.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/a-step-above-medical-editor-courses.png",
+          "width": 356,
+          "height": 191,
+          "imageWidth": 356,
+          "imageHeight": 191,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog/sanity-vs-wordpress",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor-blog.png&w=640&q=75",
+            "pins": 3,
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor-case-study.png&w=640&q=75",
+            "pins": 3,
+            "loaded": true
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-case-study.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    }
+  ]
+}

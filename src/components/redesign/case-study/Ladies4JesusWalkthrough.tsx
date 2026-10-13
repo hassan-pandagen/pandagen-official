@@ -48,7 +48,7 @@ const chapters: WalkthroughChapter[] = [
   {
     id: "editor",
     label: "Content editor",
-    title: "What the owner can change.",
+    title: "An editor built for your publishing.",
     description: "Sanity Studio, embedded at /studio: nine content types in the sidebar, from site-wide settings down to individual devotionals.",
     detail: "This devotional (“Get Real with God”) shows the fields the owner actually fills in: a rich-text body, a scripture reference, and the scripture text itself. Site Settings, a separate content type, controls the site name, tagline and logo shown on every page.",
     note: "Publishing a devotional here reaches the live site in about sixty seconds through incremental regeneration -- no deploy, no developer.",

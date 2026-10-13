@@ -1,0 +1,646 @@
+{
+  "pass": true,
+  "pages": 160,
+  "results": [
+    {
+      "path": "about.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "ai-info.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "contact.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "cookies.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "de.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "editorial-policy.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "fr.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "free-audit.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "index.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "manifesto.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "partners.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "pricing.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "privacy.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "security.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "services.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "terms.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "work.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "_global-error.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "_not-found.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "about/hassan.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "about/imran.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "ai-info/case-studies.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "ai-info/migration-services.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "ai-info/pricing-and-guarantees.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "ai-info/team-and-company.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/aeo-playbook-built-into-every-website.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/aeo-web-performance-glossary.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/agentic-browsing-pagespeed-score.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/ai-built-website-checklist.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/ai-referral-revenue-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/ai-search-visibility-tracking.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/best-website-builder-for-gohighlevel-agencies.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/build-vs-buy-software-2026-cost-comparison.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/cheap-web-developer.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/cloudflare-emdash-wordpress-replacement.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/cms-market-share-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/core-web-vitals-explained.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/custom-website-5000-whats-included.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/divi-theme-slow.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/do-you-own-your-website.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/elementor-kills-seo.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/fix-meta-ad-tracking-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/for-agencies-offer-custom-web-development.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/gohighlevel-keep-crm-replace-website.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/gohighlevel-vs-wordpress.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/gohighlevel-website-speed.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/google-algorithm-updates.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/google-universal-commerce-protocol-what-it-means-for-your-store.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/how-long-does-a-custom-website-take.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/how-much-does-a-website-cost.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/how-to-achieve-100-pagespeed.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/how-to-fix-slow-wordpress.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/how-to-migrate-wordpress-to-nextjs.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/how-to-speed-up-your-website.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/how-website-speed-affects-seo.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/is-it-cheaper-to-build-your-own-website.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/is-squarespace-bad-for-seo.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/is-wix-bad-for-seo.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/leaving-webflow-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/lovable-site-not-showing-on-google.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/meta-conversions-api-setup-cost.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/nextjs-hosting-zero-cost.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/nextjs-sanity-stack.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/pagepro-alternatives.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/product-catalog-website-without-cart.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/saas-price-increases-2026-tracker.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/saas-software-pricing-audit-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/sanity-vs-supabase.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/sanity-vs-wordpress.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/shopify-app-costs-real-monthly-bill.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/shopify-conversion-rate-speed-fix.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/shopify-dawn-theme-slow.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/shopify-headless.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/shopify-plus-still-slow.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/shopify-slow-losing-sales.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/shopify-stocky-sunset-date-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/shopify-store-speed-optimization.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/shopify-vs-custom-website.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/spending-more-on-ads-fewer-orders-tracking.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/squarespace-migration-cost.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/squarespace-too-slow.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/squarespace-vs-custom-website.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/top-custom-web-development-agencies-usa-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/top-nextjs-agencies-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/web-accessibility-glossary.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/web-accessibility-statistics-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/webflow-migration-cost.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/webflow-true-cost.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/webflow-user-accounts-sunset-date-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/webflow-vs-custom-website.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/website-developer-agency.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/website-migration-cost-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/website-monthly-running-cost.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/website-portability.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/website-rebuild-cost-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/website-redesign-cost.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/what-is-headless-commerce.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/what-is-llms-txt.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/which-website-builders-can-go-headless.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/why-competitor-outranks-you.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/why-we-chose-nextjs-over-wordpress-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/will-migrating-hurt-my-seo.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/wix-migration-cost.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/wix-too-slow.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/wix-vs-custom-website.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/woocommerce-low-conversion-rate.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/woocommerce-migration-cost.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/woocommerce-too-slow.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/woocommerce-vs-custom-website.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/wordpress-ai-security-risk-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/wordpress-april-2026-evidence.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/wordpress-migration-cost.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/wordpress-plugin-security-2026.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/wordpress-plugins-destroy-speed.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/wordpress-traffic-drop-speed.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/wordpress-vs-custom-code-real-cost-3-years.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/wordpress-vs-nextjs.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "de/about.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "de/contact.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "de/pricing.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "de/services.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "demo/featured-products.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "fr/about.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "fr/contact.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "fr/pricing.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "fr/services.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "services/ai-seo.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "services/backend-development.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "services/cms-development.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "services/custom-engineering.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "services/ecommerce.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "services/gohighlevel.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "services/squarespace.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "services/webflow.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "services/wix.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "services/woocommerce.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "services/wordpress-migration.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "services/wordpress.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "work/a-step-above-medical.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "work/emblematic-studio.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "work/enterprise-ops.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "work/ladies-4-jesus.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "work/medical-template.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "work/mycustompatches.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "work/northdeck-group.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "work/panda-patches.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "work/panda-publisher.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "work/saforne.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "work/sleek-jackets.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/topic/agencies.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/topic/custom-development.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/topic/ecommerce.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/topic/seo-and-ai-search.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/topic/shopify.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/topic/squarespace.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/topic/webflow.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/topic/website-cost.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/topic/website-migration.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/topic/website-speed.html",
+      "copySchemaLinksPreserved": true
+    },
+    {
+      "path": "blog/topic/wordpress.html",
+      "copySchemaLinksPreserved": true
+    }
+  ]
+}

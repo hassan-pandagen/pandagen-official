@@ -1,0 +1,90 @@
+{
+  "pass": true,
+  "pages": 14,
+  "results": [
+    {
+      "path": "services/ai-seo.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "threeHeroActions": true,
+      "jumpDestinationsExist": true
+    },
+    {
+      "path": "services/backend-development.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "threeHeroActions": true,
+      "jumpDestinationsExist": true
+    },
+    {
+      "path": "services/cms-development.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "threeHeroActions": true,
+      "jumpDestinationsExist": true
+    },
+    {
+      "path": "services/custom-engineering.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "threeHeroActions": true,
+      "jumpDestinationsExist": true
+    },
+    {
+      "path": "services/ecommerce.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "threeHeroActions": true,
+      "jumpDestinationsExist": true
+    },
+    {
+      "path": "services/gohighlevel.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "threeHeroActions": true,
+      "jumpDestinationsExist": true
+    },
+    {
+      "path": "services/medical-website-design.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "threeHeroActions": true,
+      "jumpDestinationsExist": true
+    },
+    {
+      "path": "services/small-business-website-design.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "threeHeroActions": true,
+      "jumpDestinationsExist": true
+    },
+    {
+      "path": "services/squarespace.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "threeHeroActions": true,
+      "jumpDestinationsExist": true
+    },
+    {
+      "path": "services/webflow.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "threeHeroActions": true,
+      "jumpDestinationsExist": true
+    },
+    {
+      "path": "services/wix.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "threeHeroActions": true,
+      "jumpDestinationsExist": true
+    },
+    {
+      "path": "services/woocommerce.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "threeHeroActions": true,
+      "jumpDestinationsExist": true
+    },
+    {
+      "path": "services/wordpress-migration.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "threeHeroActions": true,
+      "jumpDestinationsExist": true
+    },
+    {
+      "path": "services/wordpress.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "threeHeroActions": true,
+      "jumpDestinationsExist": true
+    }
+  ]
+}

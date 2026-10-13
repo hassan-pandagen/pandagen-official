@@ -1,0 +1,6 @@
+/* The following boxed offer already provides the separator below the introduction. */
+.header:has(+ [data-speakable][class~="border"]) {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 24px;
+}

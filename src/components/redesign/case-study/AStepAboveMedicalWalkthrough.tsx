@@ -16,7 +16,7 @@ const chapters: WalkthroughChapter[] = [
     }],
   },
   {
-    id: "editor", label: "Content editor", title: "Let the team keep courses and locations up to date.",
+    id: "editor", label: "Content editor", title: "An editor built for courses and locations.",
     description: "The content editor separates courses from locations. Staff can change descriptions, durations and photographs without asking a developer to rewrite a page.",
     detail: "Each location has its own web address and an active toggle. The editor explains how to remove a city from the location list without deleting its page, and warns against changing an existing address unnecessarily.",
     note: "The screenshots show the Sanity editor used for the website's content. Class operations have their own portal.",

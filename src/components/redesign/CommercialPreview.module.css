@@ -1,7 +1,7 @@
 .page{background:#ebe9e4;color:#1c1917;overflow:hidden}
 .page section[id]{scroll-margin-top:100px}
 .wrap{width:min(100% - 48px,1392px);margin-inline:auto}
-.eyebrow{font:500 11px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:#7a2e0e}
+.eyebrow{font:500 11px/1.5 var(--font-sans), Arial, sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7a2e0e}
 .hero{padding:80px 0 64px;border-bottom:1px solid rgba(28,25,23,.16)}
 .heroGrid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,.7fr);gap:7vw;align-items:end}
 .title{font-family:var(--display),Impact,sans-serif;font-size:clamp(4.2rem,8.4vw,9rem);font-weight:400;line-height:.91;letter-spacing:-.038em;text-transform:uppercase;margin:20px 0 0;max-width:1050px}
@@ -30,7 +30,7 @@
 .tierBody{font-size:15px;line-height:1.6;color:#3a3733;max-width:420px}
 .tierPrice{font-size:clamp(2rem,3.1vw,3.6rem);line-height:1;font-weight:750;letter-spacing:-.06em;white-space:nowrap}
 .tierMeta{font-size:12px;line-height:1.5;color:#5e5b55;margin-top:10px}
-.tag{display:inline-block;font:500 11px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.09em;text-transform:uppercase;color:#7a2e0e;margin-bottom:10px}
+.tag{display:inline-block;font:500 11px/1.4 var(--font-sans), Arial, sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#7a2e0e;margin-bottom:10px}
 .numberGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(28,25,23,.18)}
 .numberItem{padding:26px 28px 30px 0;border-right:1px solid rgba(28,25,23,.18);min-height:210px}
 .numberItem+ .numberItem{padding-left:28px}
@@ -40,7 +40,7 @@
 .split{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:start}
 .steps{border-top:1px solid rgba(28,25,23,.18)}
 .step{display:grid;grid-template-columns:44px 1fr;gap:20px;padding:25px 0;border-bottom:1px solid rgba(28,25,23,.18)}
-.stepNum{font:500 12px ui-monospace,SFMono-Regular,Menlo,monospace;color:#7a2e0e;padding-top:5px}
+.stepNum{font:500 12px var(--font-sans), Arial, sans-serif;color:#7a2e0e;padding-top:5px}
 .step h3{font-size:19px;line-height:1.25;margin-bottom:7px}
 .step p{font-size:15px;line-height:1.6;color:#5e5b55}
 .featureBox{background:#f5f4f0;padding:32px;border-top:3px solid #ad3d0b}
@@ -53,13 +53,13 @@
 .sectionDark .eyebrow{color:#e8763a}
 .ruleDark{border-color:rgba(235,233,228,.16)}
 .rail{display:flex;flex-wrap:wrap;gap:10px;margin-top:33px}
-.rail a{font:500 11px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.08em;color:#5e5b55;border:1px solid rgba(28,25,23,.2);padding:10px 12px;text-decoration:none;transition:background .2s,color .2s}
+.rail a{font:500 11px/1.4 var(--font-sans), Arial, sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#5e5b55;border:1px solid rgba(28,25,23,.2);padding:10px 12px;text-decoration:none;transition:background .2s,color .2s}
 .rail a:hover,.rail a:focus-visible{background:#1c1917;color:#ebe9e4}
 .proof{display:grid;grid-template-columns:minmax(240px,.7fr) 1.3fr;gap:6vw;padding:35px 0;border-top:1px solid rgba(28,25,23,.18);border-bottom:1px solid rgba(28,25,23,.18)}
 .proof strong{font-family:var(--display),Impact,sans-serif;font-size:clamp(2rem,3vw,3.5rem);line-height:1;text-transform:uppercase}
 .proof p{font-size:16px;line-height:1.65;color:#3a3733}
 .heroImage{display:block;width:100%;height:auto;border:1px solid rgba(28,25,23,.2);box-shadow:22px 22px 0 #d8d3ca}
-.imageCaption{font:500 11px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.06em;color:#5e5b55;margin-top:34px}
+.imageCaption{font:500 11px/1.5 var(--font-sans), Arial, sans-serif;text-transform:uppercase;letter-spacing:.06em;color:#5e5b55;margin-top:34px}
 .decision{border-top:1px solid rgba(28,25,23,.18);padding:30px 0;display:grid;grid-template-columns:140px 1fr;gap:25px}
 .decision:last-child{border-bottom:1px solid rgba(28,25,23,.18)}
 .decision h3{font-size:20px;line-height:1.3;margin-bottom:10px}

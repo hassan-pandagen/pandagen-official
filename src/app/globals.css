@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-/* Playfair is the 400-weight editorial accent. Prevent browsers from inventing
+/* PT Serif is the 400-weight editorial accent. Prevent browsers from inventing
    a bold face when the accent sits inside an Inter heading. */
 .font-serif {
   font-weight: 400;

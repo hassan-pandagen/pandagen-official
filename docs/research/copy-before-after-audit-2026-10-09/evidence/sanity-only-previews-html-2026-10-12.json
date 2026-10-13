@@ -1,0 +1,96 @@
+{
+  "pass": true,
+  "pages": 15,
+  "results": [
+    {
+      "path": "services.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 2
+    },
+    {
+      "path": "services/ai-seo.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 3
+    },
+    {
+      "path": "services/backend-development.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 3
+    },
+    {
+      "path": "services/cms-development.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 3
+    },
+    {
+      "path": "services/custom-engineering.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 2
+    },
+    {
+      "path": "services/ecommerce.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 2
+    },
+    {
+      "path": "services/gohighlevel.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 2
+    },
+    {
+      "path": "services/medical-website-design.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 3
+    },
+    {
+      "path": "services/small-business-website-design.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 3
+    },
+    {
+      "path": "services/squarespace.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 2
+    },
+    {
+      "path": "services/webflow.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 2
+    },
+    {
+      "path": "services/wix.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 2
+    },
+    {
+      "path": "services/woocommerce.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 2
+    },
+    {
+      "path": "services/wordpress-migration.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 2
+    },
+    {
+      "path": "services/wordpress.html",
+      "titleCopyLinksSchemaPreservedApartFromAnnotations": true,
+      "heroAnnotationsOnlyForSanity": true,
+      "enlargementControls": 3
+    }
+  ]
+}

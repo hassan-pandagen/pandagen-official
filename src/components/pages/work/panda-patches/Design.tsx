@@ -1,14 +1,16 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import WorkCaseTitle from "@/components/redesign/case-study/WorkCaseTitle";
+import WorkCaseOpening from "@/components/redesign/case-study/WorkCaseOpening";
+import WorkCasePreview from "@/components/redesign/case-study/WorkCasePreview";
+import WorkCaseFacts from "@/components/redesign/case-study/WorkCaseFacts";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import PandaPatchesWalkthrough from "@/components/redesign/case-study/PandaPatchesWalkthrough";
 import { requiredMetric } from "@/data/case-study-facts";
 import { MIGRATION_PROJECT_DETAILS, PAYMENT_INTEGRATION_SCOPE } from "@/data/migration-projects";
-import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
+import { BODY, DISPLAY, MONO, T } from "@/components/redesign/tokens";
 import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-study/CaseStudyFaqs";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -116,61 +118,43 @@ export function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
 
       {/* ── 1. Opening ────────────────────────────────────────────────── */}
       <div className="story-block">
-        <section className="story-section px-6 pb-16 pt-8 md:pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
-          <div className="mx-auto max-w-[1100px]">
-            <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-              <Link href="/work" style={{ color: T.quiet }}>Work</Link> / Panda Patches / Founder-affiliated
-            </p>
+        <WorkCaseOpening>
+          <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
+            <Link href="/work" style={{ color: T.quiet }}>Work</Link> / Panda Patches / Founder-affiliated
+          </p>
 
-            <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-12">
-              <div>
-            <WorkCaseTitle>Panda Patches</WorkCaseTitle>
-            <p className="mt-3 max-w-[38rem]" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
-              A custom-patch storefront connected to the team&apos;s order-management system.
-            </p>
+          <WorkCaseTitle>Panda Patches</WorkCaseTitle>
+          <p className="mt-3 max-w-[38rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
+            A custom-patch storefront connected to the team&apos;s order-management system.
+          </p>
 
-            <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
-              A 3-year-old WordPress store, rebuilt with a patch configurator, an editor the team controls,
-              and a connected system for orders, production and payments.
-            </p>
+          <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
+            A 3-year-old WordPress store, rebuilt with a patch configurator, an editor the team controls,
+            and a connected system for orders, production and payments.
+          </p>
 
-            <div className="mt-6 flex flex-wrap items-center gap-4">
-              <a
-                href="https://pandapatches.com"
-                target="_blank"
-                rel="noopener"
-                className="cta-solid inline-flex items-center gap-2 px-5 py-3 text-[14px] font-medium"
-                style={{ backgroundColor: T.ink, color: T.paper }}
-              >
-                Visit the live site <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-                <span className="sr-only"> pandapatches.com (opens in a new tab)</span>
-              </a>
-            </div>
-
-              </div>
-            <a href="#panda-walkthrough" className="panda-hero-preview block w-full lg:pt-8" style={{ color: T.accentText }}>
-              <Image src="/work/panda-patches.png" alt="Panda Patches storefront preview. Explore the complete build below." width={1912} height={914} sizes="(min-width: 1024px) 500px, 100vw" priority className="h-auto w-full border" style={{ borderColor: T.rule }} />
-              <span className="mt-4 flex items-center justify-between gap-4 text-[14px] font-semibold leading-relaxed">
-                Explore the website, editor &amp; operations <span aria-hidden="true">↓</span>
-              </span>
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <a
+              href="https://pandapatches.com"
+              target="_blank"
+              rel="noopener"
+              className="cta-solid inline-flex items-center gap-2 px-5 py-3 text-[14px] font-medium"
+              style={{ backgroundColor: T.ink, color: T.paper }}
+            >
+              Visit the live site <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+              <span className="sr-only"> pandapatches.com (opens in a new tab)</span>
             </a>
-            </div>
-            <RelationshipDisclosure slug="panda-patches" variant="editorial" />
-
-            <div className="mt-2 flex flex-wrap gap-x-10 gap-y-3 border-t pt-6" style={{ borderColor: T.rule }}>
-              {[
-                { label: "Revenue today", value: `${REVENUE} (owner-reported, 20 Sep 2026)` },
-                { label: "Migration", value: "3-year-old site, no ranking losses in the 30 days after launch" },
-                { label: "Payments", value: MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory },
-              ].map((f) => (
-                <div key={f.label} className="max-w-[20rem]">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.1em]" style={{ color: T.quiet }}>{f.label}</p>
-                  <p className="mt-1 text-[14px] leading-[1.5]" style={{ color: T.body }}>{f.value}</p>
-                </div>
-              ))}
-            </div>
           </div>
-        </section>
+
+          <WorkCasePreview src="/work/panda-patches.png" alt="Panda Patches storefront preview. Explore the complete build below." width={1912} height={914} caption="Explore the website, editor & operations / Founder-affiliated" href="#panda-walkthrough" />
+          <WorkCaseFacts items={[
+            { label: "Revenue today", value: `${REVENUE} (owner-reported, 20 Sep 2026)` },
+            { label: "Migration", value: "3-year-old site, no ranking losses in the 30 days after launch" },
+            { label: "Payments", value: MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory },
+          ]} />
+
+          <RelationshipDisclosure slug="panda-patches" variant="editorial" />
+      </WorkCaseOpening>
       </div>
 
       <PandaPatchesWalkthrough />
@@ -208,9 +192,12 @@ export function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
 
       {/* ── 6. Tech stack, secondary ───────────────────────────────────── */}
       <div className="story-block">
-        <section className="story-section px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
+        <section className="story-section px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paper }} aria-labelledby="panda-stack-title">
           <div className="mx-auto max-w-[1100px]">
-            <p className="text-[12px] uppercase tracking-[0.1em]" style={{ fontFamily: MONO, color: T.quiet }}>05 · Stack</p>
+            <p className="text-[12px] uppercase tracking-[0.1em]" style={{ fontFamily: MONO, color: T.quiet }}>05</p>
+            <h2 id="panda-stack-title" className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
+              Technology <span style={{ color: T.accent }}>stack.</span>
+            </h2>
             <p className="mt-4 max-w-[40rem] text-[14px] leading-[1.55]" style={{ color: T.quiet }}>
               {PAYMENT_INTEGRATION_SCOPE} The owner estimates current tooling at about $55/month (Supabase ~$25, Vercel
               ~$20, ~$10 for the AI patch generator). That&apos;s an owner estimate, not a reconciled accounting total.
@@ -268,15 +255,12 @@ export function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
       </div>
 
       <style>{`
-        .panda-hero-preview:focus-visible { outline: 2px solid ${T.accentText}; outline-offset: 8px; }
-        .panda-hero-preview:hover > span { text-decoration: underline; text-underline-offset: 4px; }
-        /* Vertical rhythm for the sections outside the walkthrough (opening,
+        /* Vertical rhythm for the sections outside the walkthrough (
            results, stack, next step) -- generous, consistent top/bottom
            padding so each reads as its own beat in the page's scroll. */
         .panda-story .story-block { position: relative; }
         .panda-story .story-section { padding-top: clamp(4rem, 8vw, 7rem); padding-bottom: clamp(4rem, 8vw, 7rem); }
-        .panda-story .story-block:first-child .story-section { padding-top: 9rem; }
-        @media(max-width:760px){.panda-story .story-block:first-child .story-section{padding-top:32px}}
+        @media (max-width: 767px) { .panda-story .story-section { padding-top: 2rem; padding-bottom: 1.5rem; } }
       `}
       </style>
       </div>

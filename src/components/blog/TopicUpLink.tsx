@@ -48,7 +48,7 @@ export default function TopicUpLink({ postId }: { postId: string }) {
     const hubCount = hub ? hubPostIds(hub).length : (owned?.postIds.length ?? 0);
 
     return (
-        <aside data-topic-uplink className="my-12 rounded-2xl border border-stone-200 bg-stone-50/60 p-6">
+        <aside data-topic-uplink className="mb-0 mt-8 rounded-2xl border border-stone-200 bg-stone-50/60 p-6 md:mt-12">
             <p className="mb-3 text-xs font-bold uppercase tracking-widest text-stone-500">
                 Where this sits
             </p>

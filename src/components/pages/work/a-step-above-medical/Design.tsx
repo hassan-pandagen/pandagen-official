@@ -1,12 +1,15 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import WorkCaseTitle from "@/components/redesign/case-study/WorkCaseTitle";
+import WorkCaseOpening from "@/components/redesign/case-study/WorkCaseOpening";
+import WorkCasePreview from "@/components/redesign/case-study/WorkCasePreview";
+import WorkCaseFacts from "@/components/redesign/case-study/WorkCaseFacts";
+import WorkCaseLabel from "@/components/redesign/case-study/WorkCaseLabel";
 import AStepAboveMedicalWalkthrough from "@/components/redesign/case-study/AStepAboveMedicalWalkthrough";
 import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-study/CaseStudyFaqs";
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
-import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
+import { BODY, DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 const details = MIGRATION_PROJECT_DETAILS.aStepAboveMedical;
 
@@ -22,44 +25,34 @@ export const aStepAboveMedicalFaqs: CaseStudyFaq[] = [
 export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed footerLinksOnly>
-      <section className="px-6 pb-16 pt-8 md:pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
-        <div className="mx-auto max-w-[1100px]">
-          <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-            <Link href="/work" style={{ color: T.quiet }}>Work</Link> / A Step Above Medical / {details.status}
-          </p>
-          <WorkCaseTitle>A Step Above Medical</WorkCaseTitle>
-          <p className="mt-3 max-w-[42rem]" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
-            A complete medical training management system.
-          </p>
-          <p className="mt-6 max-w-[44rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>{details.summary}</p>
-          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-[14px] font-semibold" style={{ color: T.accentText }}>
-            <a href="#a-step-above-medical-walkthrough" className="underline underline-offset-4">Explore the website and portal ↓</a>
-            <Link href="/services/custom-engineering" className="underline underline-offset-4">Custom portal development →</Link>
-            <Link href="/services/medical-website-design" className="underline underline-offset-4">Medical website design →</Link>
-          </div>
-          <div className="mt-8 flex flex-wrap gap-x-10 gap-y-3 border-t pt-6" style={{ borderColor: T.rule }}>
-            <div className="max-w-[20rem]">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.1em]" style={{ color: T.quiet }}>Status</p>
-              <p className="mt-1 text-[16px] font-semibold leading-[1.5]" style={{ color: T.accentText }}>Built · In testing</p>
-            </div>
-            <div className="max-w-[30rem]">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.1em]" style={{ color: T.quiet }}>Owner confirmation</p>
-              <p className="mt-1 text-[14px] leading-[1.5]" style={{ color: T.body }}>{details.progress}, as of <time dateTime={details.confirmedOn}>October 10, 2026</time>.</p>
-            </div>
-          </div>
-          <figure className="mt-10 border" style={{ borderColor: T.rule, backgroundColor: T.paperHi }}>
-            <Image src="/work/a-step-above-medical-preview-homepage.png" alt="New A Step Above Medical course website with location navigation and an upcoming IV therapy class" width={1912} height={914} sizes="(min-width: 1100px) 1100px, 100vw" preload />
-            <figcaption className="px-4 py-3 text-[12px] uppercase tracking-[0.08em]" style={{ fontFamily: MONO, color: T.quiet }}>Replacement website / Independent client / Pre-launch testing</figcaption>
-          </figure>
-          <aside data-relationship-disclosure className="my-8 border-t pt-5" style={{ borderColor: T.rule }}>
-            <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.12em]" style={{ color: T.quiet }}>Relationship and release status</p>
-            <p className="max-w-[65rem] text-sm leading-relaxed" style={{ color: T.body }}>{details.disclosure}</p>
-          </aside>
+      <WorkCaseOpening>
+        <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
+          <Link href="/work" style={{ color: T.quiet }}>Work</Link> / A Step Above Medical / {details.status}
+        </p>
+        <WorkCaseTitle>A Step Above Medical</WorkCaseTitle>
+        <p className="mt-3 max-w-[42rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
+          A complete medical training management system.
+        </p>
+        <p className="mt-6 max-w-[44rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>{details.summary}</p>
+        <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-[14px] font-semibold" style={{ color: T.accentText }}>
+          <a href="#a-step-above-medical-walkthrough" className="underline underline-offset-4">Explore the website and portal ↓</a>
+          <Link href="/services/custom-engineering" className="underline underline-offset-4">Custom portal development →</Link>
+          <Link href="/services/medical-website-design" className="underline underline-offset-4">Medical website design →</Link>
         </div>
-      </section>
+        <WorkCasePreview src="/work/a-step-above-medical-preview-homepage.png" alt="New A Step Above Medical course website with location navigation and an upcoming IV therapy class" width={1912} height={914} caption="Replacement website / Independent client / Pre-launch testing" />
+        <WorkCaseFacts items={[
+          { label: "Status", value: "Built · In testing" },
+          { label: "Planned launch", value: <time dateTime={details.plannedLaunchOn}>October 19, 2026</time> },
+          { label: "Owner confirmation", value: <>{details.progress}, as of <time dateTime={details.confirmedOn}>October 10, 2026</time>.</> },
+        ]} />
+        <aside data-relationship-disclosure className="mb-0 mt-6 border-t pt-5 md:my-8" style={{ borderColor: T.rule }}>
+          <WorkCaseLabel className="mb-3">Relationship and release status</WorkCaseLabel>
+          <p className="max-w-[65rem] text-sm leading-relaxed" style={{ color: T.body }}>{details.disclosure}</p>
+        </aside>
+      </WorkCaseOpening>
       <AStepAboveMedicalWalkthrough />
       <CaseStudyFaqs faqs={faqs} />
-      <section className="px-6 py-20 md:px-10" style={{ backgroundColor: T.dark, color: T.onDark }}>
+      <section className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
         <div className="mx-auto max-w-[1100px]">
           <h2 style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2rem, 3.6vw, 2.8rem)", lineHeight: 1.05 }}>A better website. Less work behind it.</h2>
           <p className="mt-4 max-w-[38rem] text-[16px] leading-[1.6]" style={{ color: T.onDarkQuiet }}>Tell us what visitors need to find and what your team currently manages by hand. We can scope the website, a custom portal, or an improvement to your existing system.</p>

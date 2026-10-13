@@ -1,4 +1,6 @@
 import Image from "next/image";
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
+import PriceAmount from "@/components/redesign/PriceAmount";
 import Link from "next/link";
 import FadeIn from "@/components/ui/FadeIn";
 import PreviewShell from "@/components/redesign/PreviewShell";
@@ -49,8 +51,8 @@ export function PricingPreview() {
   if (!review) throw new Error("Missing Emblematic Studio review");
   return <PreviewShell condensed><div className={s.page}>
     <header className={v.hero}><div className={`${s.wrap} ${v.heroGrid}`}>
-      <div><p className={s.eyebrow} style={{ color: "#E8763A" }}>PandaCodeGen / Example scopes</p><h1 className={v.heroTitle}>A better site.{" "}<br /><span>A clear price.</span></h1><p className={v.heroCopy}>Custom website builds start at <strong>$1,500</strong>. WordPress builds are quoted to their own scope. We agree the pages, features, handover checks and final price in writing before work begins.</p><div className={s.heroActions}><a href="#find-your-fit" className={s.buttonLight}>Find your starting point ↓</a><QuoteModalButton cta="pricing_preview_hero" location="pricing" className={s.buttonLight}>Talk about your project ↗</QuoteModalButton></div></div>
-      <div className={v.proposal} aria-label="Illustration of the three parts of a written proposal"><div className={v.proposalTop}><span>Example custom build</span><span>01 / 03</span></div><p className={v.proposalPrice}>$1,500</p><p className={v.proposalLabel}>Published starting price for a focused custom website. Your quote sets the final amount.</p><div style={{ marginTop: 34 }}><div className={v.proposalRow}><span>What gets built</span><span>Named</span></div><div className={v.proposalRow}><span>How it is checked</span><span>Named</span></div><div className={v.proposalRow}><span>What you own</span><span>Named</span></div></div></div>
+      <div><p className={s.eyebrow} style={{ color: "#E8763A" }}>PandaCodeGen / Example scopes</p><h1 className={v.heroTitle}>A better site.{" "}<br /><span style={{ color: "#ebe9e4" }}><HeadingEmphasis text="A clear price." phrase="clear price" onDark /></span></h1><p className={v.heroCopy}>Custom website builds start at <strong><PriceAmount value="$1,500" onDark /></strong>. WordPress builds are quoted to their own scope. We agree the pages, features, handover checks and final price in writing before work begins.</p><div className={s.heroActions}><a href="#find-your-fit" className={s.buttonLight}>Find your starting point ↓</a><QuoteModalButton cta="pricing_preview_hero" location="pricing" className={s.buttonLight}>Talk about your project ↗</QuoteModalButton></div></div>
+      <div className={v.proposal} aria-label="Illustration of the three parts of a written proposal"><div className={v.proposalTop}><span>Example custom build</span><span>01 / 03</span></div><p className={v.proposalPrice}><PriceAmount value="$1,500" /></p><p className={v.proposalLabel}>Published starting price for a focused custom website. Your quote sets the final amount.</p><div style={{ marginTop: 34 }}><div className={v.proposalRow}><span>What gets built</span><span>Named</span></div><div className={v.proposalRow}><span>How it is checked</span><span>Named</span></div><div className={v.proposalRow}><span>What you own</span><span>Named</span></div></div></div>
     </div></header>
 
     <section id="find-your-fit" className={`${s.section} ${s.sectionAlt}`}><div className={s.wrap}>
@@ -63,14 +65,14 @@ export function PricingPreview() {
     </div></section>
 
     <section id="scopes" className={s.section}><div className={s.wrap}>
-      <div className={s.sectionHead}><div><p className={s.eyebrow}>01 / Starting points</p><h2 className={s.heading}>Find the shape{" "}<br />of your project.</h2></div><p>These are custom-build starting prices, not instant quotes. Page count helps place a project; content, integrations, approvals and migration risk set its actual scope. WordPress work is quoted separately.</p></div>
+      <div className={s.sectionHead}><div><p className={s.eyebrow}>01 / Starting points</p><h2 className={s.heading}>Find the shape{" "}<br /><HeadingEmphasis text="of your project." /></h2></div><p>These are custom-build starting prices, not instant quotes. Page count helps place a project; content, integrations, approvals and migration risk set its actual scope. WordPress work is quoted separately.</p></div>
       <div className={s.tierList}>{tiers.map(tier => {
         const price = tier.detail.match(/From \$[\d,]+/)?.[0];
         if (!price) throw new Error(`Missing price in ${tier.name} fact`);
         return <FadeIn className={`${s.tier} ${v.tierAnchor}`} id={tier.name.toLowerCase()} key={tier.name}>
           <div><span className={s.tag}>{tier.number} / {tier.note}</span><h3 className={s.tierName}>{tier.name}</h3></div>
           <div><p className={s.tierBody}>{tier.detail.replace(`${price}. `, "")}</p><p className={s.tierMeta}>Planning delivery range: {tier.timing}</p></div>
-          <div><p className={s.tierPrice}>{price.replace("From ", "")}</p><p className={s.tierMeta}>Starting price{" "}<br />Final amount in your written quote</p></div>
+          <div><p className={s.tierPrice}><PriceAmount value={price.replace("From ", "")} /></p><p className={s.tierMeta}>Starting price{" "}<br />Final amount in your written quote</p></div>
         </FadeIn>;
       })}</div>
       <p style={{ maxWidth: 760, marginTop: 28, fontSize: 15, lineHeight: 1.65, color: "#5E5B55" }}>{fact("Above that range")} Delivery ranges overlap; the accepted written terms set your project&apos;s dates. <Link href="/services/wordpress" className={s.textLink}>Explore WordPress website builds ↗</Link></p>

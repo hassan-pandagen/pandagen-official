@@ -1,3 +1,5 @@
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
+import PriceAmount from "@/components/redesign/PriceAmount";
 import Image from "next/image";
 import Link from "next/link";
 import PreviewShell from "@/components/redesign/PreviewShell";
@@ -13,9 +15,7 @@ import TickerBand from "@/components/redesign/TickerBand";
 import ProofSection from "@/components/redesign/ProofSection";
 import FeaturesTrio from "@/components/redesign/FeaturesTrio";
 import PricingFinder from "@/components/redesign/PricingFinder";
-// Founders: FoundersDark (owner, 26 Sep), chosen over the live FounderSection
-// for consistency with the rest of this redesign -- the rounded cards and
-// italic accent word are the template look the redesign moved away from.
+// The shared founder section uses the same selective italic/cognac heading accent.
 import FoundersDark from "@/components/redesign/FoundersDark";
 import FaqOpen from "@/components/redesign/FaqOpen";
 import GuidesList from "@/components/redesign/GuidesList";
@@ -89,7 +89,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
             className="hero-h1"
             style={{ fontFamily: "var(--display), Georgia, serif", fontWeight: condensed ? 400 : 700, color: INK, fontSize: "var(--hero-size)", lineHeight: "var(--hero-lh)", letterSpacing: "var(--hero-ls)" }}
           >
-            Websites built for the way you do <span style={{ color: T.accent }}>business.</span>
+            Websites built for the way you do <HeadingEmphasis text="business." phrase="business" />
           </h1>
 
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(250px,.72fr)_minmax(0,1.2fr)] lg:gap-6 xl:gap-8">
@@ -119,7 +119,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
                 </Link>
               </div>
               <p className="mt-5 text-[14px]" style={{ color: QUIET }}>
-                Custom builds from $1,500. WordPress quoted to scope. Price agreed before work starts.
+                Custom builds from <PriceAmount value="$1,500" />. WordPress quoted to scope. Price agreed before work starts.
               </p>
             </div>
 
@@ -140,10 +140,10 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
       <WorkIndex />
       {/* Answer-first summary, unchanged in wording from the live page, where it
           must stay in the first 30% for extraction (after Work it sits at ~22%). Restyled only. */}
-      <section className="relative px-6 pb-16 md:px-10" style={{ backgroundColor: T.paper }}>
+      <section data-home-summary className="relative px-6 pb-8 md:px-10 md:pb-16" style={{ backgroundColor: T.paper }}>
         <p
-          className="mx-auto max-w-[44rem] border-t pt-10 text-[18px] leading-[1.65]"
-          style={{ color: BODY, borderColor: "rgba(28,25,23,0.12)" }}
+          className="mx-auto max-w-[44rem] text-[18px] leading-[1.65] md:pt-10"
+          style={{ color: BODY }}
         >
           <strong style={{ color: INK }}>
             PandaCodeGen designs and builds fast business websites and{" "}

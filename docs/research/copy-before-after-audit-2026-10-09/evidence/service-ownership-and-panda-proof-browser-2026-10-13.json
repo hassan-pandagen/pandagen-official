@@ -1,0 +1,2009 @@
+{
+  "pass": true,
+  "cases": 42,
+  "apiIntercepted": true,
+  "physicalDevices": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "title": {
+          "x": 20,
+          "y": -750.90625,
+          "width": 280,
+          "height": 107.484375,
+          "bottom": -643.421875
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -365.90625,
+          "width": 280,
+          "height": 346.3125,
+          "bottom": -19.59375
+        },
+        "list": {
+          "x": 20,
+          "y": 975.34375,
+          "width": 280,
+          "height": 774,
+          "bottom": 1749.34375
+        },
+        "aside": {
+          "x": 20,
+          "y": 1773.34375,
+          "width": 280,
+          "height": 212.390625,
+          "bottom": 1985.734375
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/backend-development",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "title": {
+          "x": 20,
+          "y": -860.796875,
+          "width": 280,
+          "height": 107.484375,
+          "bottom": -753.3125
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -449.40625,
+          "width": 280,
+          "height": 346.3125,
+          "bottom": -103.09375
+        },
+        "list": {
+          "x": 20,
+          "y": 916.625,
+          "width": 280,
+          "height": 942.75,
+          "bottom": 1859.375
+        },
+        "aside": {
+          "x": 20,
+          "y": 1883.375,
+          "width": 280,
+          "height": 212.390625,
+          "bottom": 2095.765625
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 280,
+          "x": 20,
+          "y": -9762.09375,
+          "bottom": -9205.4375
+        },
+        {
+          "width": 280,
+          "x": 20,
+          "y": -9181.4375,
+          "bottom": -8714.984375
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/cms-development",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "title": {
+          "x": 20,
+          "y": -840.90625,
+          "width": 280,
+          "height": 107.484375,
+          "bottom": -733.421875
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -429.515625,
+          "width": 280,
+          "height": 346.3125,
+          "bottom": -83.203125
+        },
+        "list": {
+          "x": 20,
+          "y": 896.515625,
+          "width": 280,
+          "height": 942.75,
+          "bottom": 1839.265625
+        },
+        "aside": {
+          "x": 20,
+          "y": 1863.265625,
+          "width": 280,
+          "height": 212.390625,
+          "bottom": 2075.65625
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 280,
+          "x": 20,
+          "y": -10054.515625,
+          "bottom": -9539.375
+        },
+        {
+          "width": 280,
+          "x": 20,
+          "y": -9515.375,
+          "bottom": -8902.625
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/custom-engineering",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "title": {
+          "x": 20,
+          "y": -802.65625,
+          "width": 280,
+          "height": 107.484375,
+          "bottom": -695.171875
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -391.265625,
+          "width": 280,
+          "height": 346.3125,
+          "bottom": -44.953125
+        },
+        "list": {
+          "x": 20,
+          "y": 858.765625,
+          "width": 280,
+          "height": 942.75,
+          "bottom": 1801.515625
+        },
+        "aside": {
+          "x": 20,
+          "y": 1825.515625,
+          "width": 280,
+          "height": 212.390625,
+          "bottom": 2037.90625
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/ecommerce",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "title": {
+          "x": 20,
+          "y": -4740.65625,
+          "width": 280,
+          "height": 107.484375,
+          "bottom": -4633.171875
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -4329.265625,
+          "width": 280,
+          "height": 346.3125,
+          "bottom": -3982.953125
+        },
+        "list": {
+          "x": 20,
+          "y": 4517.9375,
+          "width": 280,
+          "height": 755.6875,
+          "bottom": 5273.625
+        },
+        "aside": {
+          "x": 20,
+          "y": 5297.625,
+          "width": 280,
+          "height": 677.3125,
+          "bottom": 5974.9375
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/gohighlevel",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "title": {
+          "x": 20,
+          "y": -3383.046875,
+          "width": 280,
+          "height": 107.484375,
+          "bottom": -3275.5625
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -2998.046875,
+          "width": 280,
+          "height": 346.3125,
+          "bottom": -2651.734375
+        },
+        "list": {
+          "x": 20,
+          "y": 3257.59375,
+          "width": 280,
+          "height": 755.6875,
+          "bottom": 4013.28125
+        },
+        "aside": {
+          "x": 20,
+          "y": 4037.28125,
+          "width": 280,
+          "height": 581.4375,
+          "bottom": 4618.71875
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/medical-website-design",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "title": {
+          "x": 20,
+          "y": -312.21875,
+          "width": 280,
+          "height": 71.65625,
+          "bottom": -240.5625
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -68.609375,
+          "width": 280,
+          "height": 346.3125,
+          "bottom": 277.703125
+        },
+        "list": {
+          "x": 20,
+          "y": 368.421875,
+          "width": 280,
+          "height": 942.75,
+          "bottom": 1311.171875
+        },
+        "aside": {
+          "x": 20,
+          "y": 1335.171875,
+          "width": 280,
+          "height": 212.390625,
+          "bottom": 1547.5625
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 280,
+          "x": 20,
+          "y": -8531.234375,
+          "bottom": -7816.34375
+        },
+        {
+          "width": 280,
+          "x": 20,
+          "y": -7792.34375,
+          "bottom": -7326.203125
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/small-business-website-design",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "title": {
+          "x": 20,
+          "y": -312.109375,
+          "width": 280,
+          "height": 71.65625,
+          "bottom": -240.453125
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -68.5,
+          "width": 280,
+          "height": 346.3125,
+          "bottom": 277.8125
+        },
+        "list": {
+          "x": 20,
+          "y": 368.53125,
+          "width": 280,
+          "height": 942.75,
+          "bottom": 1311.28125
+        },
+        "aside": {
+          "x": 20,
+          "y": 1335.28125,
+          "width": 280,
+          "height": 212.390625,
+          "bottom": 1547.671875
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 280,
+          "x": 20,
+          "y": -7855.46875,
+          "bottom": -7384.015625
+        },
+        {
+          "width": 280,
+          "x": 20,
+          "y": -7360.015625,
+          "bottom": -6939.75
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/squarespace",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "title": {
+          "x": 20,
+          "y": -3390.03125,
+          "width": 280,
+          "height": 107.484375,
+          "bottom": -3282.546875
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -3005.03125,
+          "width": 280,
+          "height": 346.3125,
+          "bottom": -2658.71875
+        },
+        "list": {
+          "x": 20,
+          "y": 3285.609375,
+          "width": 280,
+          "height": 755.6875,
+          "bottom": 4041.296875
+        },
+        "aside": {
+          "x": 20,
+          "y": 4065.296875,
+          "width": 280,
+          "height": 560,
+          "bottom": 4625.296875
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/webflow",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "title": {
+          "x": 20,
+          "y": -3324.203125,
+          "width": 280,
+          "height": 107.484375,
+          "bottom": -3216.71875
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -2912.8125,
+          "width": 280,
+          "height": 346.3125,
+          "bottom": -2566.5
+        },
+        "list": {
+          "x": 20,
+          "y": 3176.484375,
+          "width": 280,
+          "height": 755.6875,
+          "bottom": 3932.171875
+        },
+        "aside": {
+          "x": 20,
+          "y": 3956.171875,
+          "width": 280,
+          "height": 602.875,
+          "bottom": 4559.046875
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/wix",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "title": {
+          "x": 20,
+          "y": -3628.59375,
+          "width": 280,
+          "height": 71.65625,
+          "bottom": -3556.9375
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -3253.03125,
+          "width": 280,
+          "height": 346.3125,
+          "bottom": -2906.71875
+        },
+        "list": {
+          "x": 20,
+          "y": 3523.796875,
+          "width": 280,
+          "height": 755.6875,
+          "bottom": 4279.484375
+        },
+        "aside": {
+          "x": 20,
+          "y": 4303.484375,
+          "width": 280,
+          "height": 560,
+          "bottom": 4863.484375
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/woocommerce",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "title": {
+          "x": 20,
+          "y": -3327.875,
+          "width": 280,
+          "height": 107.484375,
+          "bottom": -3220.390625
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -2942.875,
+          "width": 280,
+          "height": 346.3125,
+          "bottom": -2596.5625
+        },
+        "list": {
+          "x": 20,
+          "y": 3202.3125,
+          "width": 280,
+          "height": 755.6875,
+          "bottom": 3958
+        },
+        "aside": {
+          "x": 20,
+          "y": 3982,
+          "width": 280,
+          "height": 581.4375,
+          "bottom": 4563.4375
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/wordpress",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "title": {
+          "x": 20,
+          "y": -3576.578125,
+          "width": 280,
+          "height": 71.65625,
+          "bottom": -3504.921875
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -3201.015625,
+          "width": 280,
+          "height": 346.3125,
+          "bottom": -2854.703125
+        },
+        "list": {
+          "x": 20,
+          "y": 3355.078125,
+          "width": 280,
+          "height": 755.6875,
+          "bottom": 4110.765625
+        },
+        "aside": {
+          "x": 20,
+          "y": 4134.765625,
+          "width": 280,
+          "height": 677.3125,
+          "bottom": 4812.078125
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 280,
+          "x": 20,
+          "y": -12735.0625,
+          "bottom": -12243.015625
+        },
+        {
+          "width": 280,
+          "x": 20,
+          "y": -12219.015625,
+          "bottom": -11726.96875
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "title": {
+          "x": 20,
+          "y": -3620.75,
+          "width": 280,
+          "height": 107.484375,
+          "bottom": -3513.265625
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -3235.75,
+          "width": 280,
+          "height": 346.3125,
+          "bottom": -2889.4375
+        },
+        "list": {
+          "x": 20,
+          "y": 3398.34375,
+          "width": 280,
+          "height": 755.6875,
+          "bottom": 4154.03125
+        },
+        "aside": {
+          "x": 20,
+          "y": 4178.03125,
+          "width": 280,
+          "height": 677.3125,
+          "bottom": 4855.34375
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "title": {
+          "x": 24,
+          "y": 19.34375,
+          "width": 768.484375,
+          "height": 111.96875,
+          "bottom": 131.3125
+        },
+        "titleLine": 55.9872,
+        "summary": {
+          "x": 24,
+          "y": 254.484375,
+          "width": 1392,
+          "height": 134.375,
+          "bottom": 388.859375
+        },
+        "list": {
+          "x": 24,
+          "y": 782.03125,
+          "width": 1392,
+          "height": 313.5,
+          "bottom": 1095.53125
+        },
+        "aside": {
+          "x": 24,
+          "y": 1119.53125,
+          "width": 1392,
+          "height": 103.09375,
+          "bottom": 1222.625
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/backend-development",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "title": {
+          "x": 24,
+          "y": -12.171875,
+          "width": 768.484375,
+          "height": 111.96875,
+          "bottom": 99.796875
+        },
+        "titleLine": 55.9872,
+        "summary": {
+          "x": 24,
+          "y": 249.359375,
+          "width": 1392,
+          "height": 134.375,
+          "bottom": 383.734375
+        },
+        "list": {
+          "x": 24,
+          "y": 772.71875,
+          "width": 1392,
+          "height": 354.5,
+          "bottom": 1127.21875
+        },
+        "aside": {
+          "x": 24,
+          "y": 1151.21875,
+          "width": 1392,
+          "height": 103.09375,
+          "bottom": 1254.3125
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 674.40625,
+          "x": 24,
+          "y": -5272.0625,
+          "bottom": -4607.8125
+        },
+        {
+          "width": 674.40625,
+          "x": 741.59375,
+          "y": -5272.0625,
+          "bottom": -4673.296875
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/cms-development",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "title": {
+          "x": 24,
+          "y": 13.109375,
+          "width": 768.484375,
+          "height": 111.96875,
+          "bottom": 125.078125
+        },
+        "titleLine": 55.9872,
+        "summary": {
+          "x": 24,
+          "y": 248.25,
+          "width": 1392,
+          "height": 134.375,
+          "bottom": 382.625
+        },
+        "list": {
+          "x": 24,
+          "y": 746.109375,
+          "width": 1392,
+          "height": 354.5,
+          "bottom": 1100.609375
+        },
+        "aside": {
+          "x": 24,
+          "y": 1124.609375,
+          "width": 1392,
+          "height": 103.09375,
+          "bottom": 1227.703125
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 674.40625,
+          "x": 24,
+          "y": -5389.3125,
+          "bottom": -4790.453125
+        },
+        {
+          "width": 674.40625,
+          "x": 741.59375,
+          "y": -5389.3125,
+          "bottom": -4753
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/custom-engineering",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "title": {
+          "x": 24,
+          "y": 13.15625,
+          "width": 768.484375,
+          "height": 111.96875,
+          "bottom": 125.125
+        },
+        "titleLine": 55.9872,
+        "summary": {
+          "x": 24,
+          "y": 248.296875,
+          "width": 1392,
+          "height": 134.375,
+          "bottom": 382.671875
+        },
+        "list": {
+          "x": 24,
+          "y": 746.15625,
+          "width": 1392,
+          "height": 354.5,
+          "bottom": 1100.65625
+        },
+        "aside": {
+          "x": 24,
+          "y": 1124.65625,
+          "width": 1392,
+          "height": 103.09375,
+          "bottom": 1227.75
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/ecommerce",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "title": {
+          "x": 24,
+          "y": -1090.0625,
+          "width": 768.484375,
+          "height": 111.96875,
+          "bottom": -978.09375
+        },
+        "titleLine": 55.9872,
+        "summary": {
+          "x": 24,
+          "y": -854.921875,
+          "width": 1392,
+          "height": 134.375,
+          "bottom": -720.546875
+        },
+        "list": {
+          "x": 24,
+          "y": 1871.296875,
+          "width": 734.796875,
+          "height": 460.03125,
+          "bottom": 2331.328125
+        },
+        "aside": {
+          "x": 814.796875,
+          "y": 1823.90625,
+          "width": 601.203125,
+          "height": 424.46875,
+          "bottom": 2248.375
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/gohighlevel",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "title": {
+          "x": 24,
+          "y": -876.796875,
+          "width": 768.484375,
+          "height": 111.96875,
+          "bottom": -764.828125
+        },
+        "titleLine": 55.9872,
+        "summary": {
+          "x": 24,
+          "y": -641.65625,
+          "width": 1392,
+          "height": 134.375,
+          "bottom": -507.28125
+        },
+        "list": {
+          "x": 24,
+          "y": 1658.515625,
+          "width": 734.796875,
+          "height": 460.03125,
+          "bottom": 2118.546875
+        },
+        "aside": {
+          "x": 814.796875,
+          "y": 1611.125,
+          "width": 601.203125,
+          "height": 392.90625,
+          "bottom": 2004.03125
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/medical-website-design",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "title": {
+          "x": 24,
+          "y": 182.71875,
+          "width": 768.484375,
+          "height": 55.984375,
+          "bottom": 238.703125
+        },
+        "titleLine": 55.9872,
+        "summary": {
+          "x": 24,
+          "y": 335.484375,
+          "width": 1392,
+          "height": 134.375,
+          "bottom": 469.859375
+        },
+        "list": {
+          "x": 24,
+          "y": 576.65625,
+          "width": 1392,
+          "height": 354.5,
+          "bottom": 931.15625
+        },
+        "aside": {
+          "x": 24,
+          "y": 955.15625,
+          "width": 1392,
+          "height": 103.09375,
+          "bottom": 1058.25
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 674.40625,
+          "x": 24,
+          "y": -4698.734375,
+          "bottom": -4023.09375
+        },
+        {
+          "width": 674.40625,
+          "x": 741.59375,
+          "y": -4698.734375,
+          "bottom": -4064.03125
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/small-business-website-design",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "title": {
+          "x": 24,
+          "y": 182.4375,
+          "width": 768.484375,
+          "height": 55.984375,
+          "bottom": 238.421875
+        },
+        "titleLine": 55.9872,
+        "summary": {
+          "x": 24,
+          "y": 335.203125,
+          "width": 1392,
+          "height": 134.375,
+          "bottom": 469.578125
+        },
+        "list": {
+          "x": 24,
+          "y": 576.375,
+          "width": 1392,
+          "height": 354.5,
+          "bottom": 930.875
+        },
+        "aside": {
+          "x": 24,
+          "y": 954.875,
+          "width": 1392,
+          "height": 103.09375,
+          "bottom": 1057.96875
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 674.40625,
+          "x": 24,
+          "y": -4455.734375,
+          "bottom": -3877.671875
+        },
+        {
+          "width": 674.40625,
+          "x": 741.59375,
+          "y": -4455.734375,
+          "bottom": -3877.765625
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/squarespace",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "title": {
+          "x": 24,
+          "y": -853.96875,
+          "width": 768.484375,
+          "height": 111.96875,
+          "bottom": -742
+        },
+        "titleLine": 55.9872,
+        "summary": {
+          "x": 24,
+          "y": -618.828125,
+          "width": 1392,
+          "height": 134.375,
+          "bottom": -484.453125
+        },
+        "list": {
+          "x": 24,
+          "y": 1636.03125,
+          "width": 734.796875,
+          "height": 460.03125,
+          "bottom": 2096.0625
+        },
+        "aside": {
+          "x": 814.796875,
+          "y": 1588.640625,
+          "width": 601.203125,
+          "height": 371.46875,
+          "bottom": 1960.109375
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/webflow",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "title": {
+          "x": 24,
+          "y": -789.9375,
+          "width": 768.484375,
+          "height": 111.96875,
+          "bottom": -677.96875
+        },
+        "titleLine": 55.9872,
+        "summary": {
+          "x": 24,
+          "y": -554.796875,
+          "width": 1392,
+          "height": 134.375,
+          "bottom": -420.421875
+        },
+        "list": {
+          "x": 24,
+          "y": 1571.015625,
+          "width": 734.796875,
+          "height": 460.03125,
+          "bottom": 2031.046875
+        },
+        "aside": {
+          "x": 814.796875,
+          "y": 1523.625,
+          "width": 601.203125,
+          "height": 392.90625,
+          "bottom": 1916.53125
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/wix",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "title": {
+          "x": 24,
+          "y": -941.78125,
+          "width": 768.484375,
+          "height": 111.96875,
+          "bottom": -829.8125
+        },
+        "titleLine": 55.9872,
+        "summary": {
+          "x": 24,
+          "y": -706.640625,
+          "width": 1392,
+          "height": 134.375,
+          "bottom": -572.265625
+        },
+        "list": {
+          "x": 24,
+          "y": 1722.578125,
+          "width": 734.796875,
+          "height": 460.03125,
+          "bottom": 2182.609375
+        },
+        "aside": {
+          "x": 814.796875,
+          "y": 1675.1875,
+          "width": 601.203125,
+          "height": 371.46875,
+          "bottom": 2046.65625
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/woocommerce",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "title": {
+          "x": 24,
+          "y": -866.234375,
+          "width": 768.484375,
+          "height": 111.96875,
+          "bottom": -754.265625
+        },
+        "titleLine": 55.9872,
+        "summary": {
+          "x": 24,
+          "y": -631.09375,
+          "width": 1392,
+          "height": 134.375,
+          "bottom": -496.71875
+        },
+        "list": {
+          "x": 24,
+          "y": 1648.515625,
+          "width": 734.796875,
+          "height": 460.03125,
+          "bottom": 2108.546875
+        },
+        "aside": {
+          "x": 814.796875,
+          "y": 1601.125,
+          "width": 601.203125,
+          "height": 371.46875,
+          "bottom": 1972.59375
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/wordpress",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "title": {
+          "x": 24,
+          "y": -767.109375,
+          "width": 768.484375,
+          "height": 111.96875,
+          "bottom": -655.140625
+        },
+        "titleLine": 55.9872,
+        "summary": {
+          "x": 24,
+          "y": -531.96875,
+          "width": 1392,
+          "height": 134.375,
+          "bottom": -397.59375
+        },
+        "list": {
+          "x": 24,
+          "y": 1547.859375,
+          "width": 734.796875,
+          "height": 460.03125,
+          "bottom": 2007.890625
+        },
+        "aside": {
+          "x": 814.796875,
+          "y": 1500.46875,
+          "width": 601.203125,
+          "height": 467.34375,
+          "bottom": 1967.8125
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 674.40625,
+          "x": 24,
+          "y": -6181.3125,
+          "bottom": -5582.453125
+        },
+        {
+          "width": 674.40625,
+          "x": 741.59375,
+          "y": -6181.3125,
+          "bottom": -5603.34375
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "title": {
+          "x": 24,
+          "y": -779.9375,
+          "width": 768.484375,
+          "height": 111.96875,
+          "bottom": -667.96875
+        },
+        "titleLine": 55.9872,
+        "summary": {
+          "x": 24,
+          "y": -544.796875,
+          "width": 1392,
+          "height": 134.375,
+          "bottom": -410.421875
+        },
+        "list": {
+          "x": 24,
+          "y": 1560.53125,
+          "width": 734.796875,
+          "height": 460.03125,
+          "bottom": 2020.5625
+        },
+        "aside": {
+          "x": 814.796875,
+          "y": 1513.140625,
+          "width": 601.203125,
+          "height": 467.34375,
+          "bottom": 1980.484375
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "title": {
+          "x": 20,
+          "y": -695.734375,
+          "width": 350,
+          "height": 71.65625,
+          "bottom": -624.078125
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -399.34375,
+          "width": 350,
+          "height": 277.03125,
+          "bottom": -122.3125
+        },
+        "list": {
+          "x": 20,
+          "y": 718.09375,
+          "width": 350,
+          "height": 650.25,
+          "bottom": 1368.34375
+        },
+        "aside": {
+          "x": 20,
+          "y": 1392.34375,
+          "width": 350,
+          "height": 188.59375,
+          "bottom": 1580.9375
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/backend-development",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "title": {
+          "x": 20,
+          "y": -761.109375,
+          "width": 350,
+          "height": 71.65625,
+          "bottom": -689.453125
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -438.328125,
+          "width": 350,
+          "height": 277.03125,
+          "bottom": -161.296875
+        },
+        "list": {
+          "x": 20,
+          "y": 638.90625,
+          "width": 350,
+          "height": 794.25,
+          "bottom": 1433.15625
+        },
+        "aside": {
+          "x": 20,
+          "y": 1457.15625,
+          "width": 350,
+          "height": 188.59375,
+          "bottom": 1645.75
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 350,
+          "x": 20,
+          "y": -8670.515625,
+          "bottom": -8124.625
+        },
+        {
+          "width": 350,
+          "x": 20,
+          "y": -8100.625,
+          "bottom": -7601.03125
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/cms-development",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "title": {
+          "x": 20,
+          "y": -767.984375,
+          "width": 350,
+          "height": 71.65625,
+          "bottom": -696.328125
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -445.203125,
+          "width": 350,
+          "height": 277.03125,
+          "bottom": -168.171875
+        },
+        "list": {
+          "x": 20,
+          "y": 644.53125,
+          "width": 350,
+          "height": 794.25,
+          "bottom": 1438.78125
+        },
+        "aside": {
+          "x": 20,
+          "y": 1462.78125,
+          "width": 350,
+          "height": 188.59375,
+          "bottom": 1651.375
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 350,
+          "x": 20,
+          "y": -8959.8125,
+          "bottom": -8460.1875
+        },
+        {
+          "width": 350,
+          "x": 20,
+          "y": -8436.1875,
+          "bottom": -7813
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/custom-engineering",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "title": {
+          "x": 20,
+          "y": -748.59375,
+          "width": 350,
+          "height": 71.65625,
+          "bottom": -676.9375
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -425.8125,
+          "width": 350,
+          "height": 277.03125,
+          "bottom": -148.78125
+        },
+        "list": {
+          "x": 20,
+          "y": 625.921875,
+          "width": 350,
+          "height": 794.25,
+          "bottom": 1420.171875
+        },
+        "aside": {
+          "x": 20,
+          "y": 1444.171875,
+          "width": 350,
+          "height": 188.59375,
+          "bottom": 1632.765625
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/ecommerce",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "title": {
+          "x": 20,
+          "y": -4419.984375,
+          "width": 350,
+          "height": 107.484375,
+          "bottom": -4312.5
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -4061.375,
+          "width": 350,
+          "height": 277.03125,
+          "bottom": -3784.34375
+        },
+        "list": {
+          "x": 20,
+          "y": 4053.984375,
+          "width": 350,
+          "height": 686.40625,
+          "bottom": 4740.390625
+        },
+        "aside": {
+          "x": 20,
+          "y": 4764.390625,
+          "width": 350,
+          "height": 539.25,
+          "bottom": 5303.640625
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/gohighlevel",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "title": {
+          "x": 20,
+          "y": -3173.15625,
+          "width": 350,
+          "height": 107.484375,
+          "bottom": -3065.671875
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -2814.546875,
+          "width": 350,
+          "height": 277.03125,
+          "bottom": -2537.515625
+        },
+        "list": {
+          "x": 20,
+          "y": 2882.75,
+          "width": 350,
+          "height": 686.40625,
+          "bottom": 3569.15625
+        },
+        "aside": {
+          "x": 20,
+          "y": 3593.15625,
+          "width": 350,
+          "height": 464.8125,
+          "bottom": 4057.96875
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/medical-website-design",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "title": {
+          "x": 20,
+          "y": -353.453125,
+          "width": 350,
+          "height": 71.65625,
+          "bottom": -281.796875
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -136.234375,
+          "width": 350,
+          "height": 277.03125,
+          "bottom": 140.796875
+        },
+        "list": {
+          "x": 20,
+          "y": 231.5,
+          "width": 350,
+          "height": 794.25,
+          "bottom": 1025.75
+        },
+        "aside": {
+          "x": 20,
+          "y": 1049.75,
+          "width": 350,
+          "height": 188.59375,
+          "bottom": 1238.34375
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 350,
+          "x": 20,
+          "y": -7641.90625,
+          "bottom": -6991.21875
+        },
+        {
+          "width": 350,
+          "x": 20,
+          "y": -6967.21875,
+          "bottom": -6516.3125
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/small-business-website-design",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "title": {
+          "x": 20,
+          "y": -353.53125,
+          "width": 350,
+          "height": 71.65625,
+          "bottom": -281.875
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -136.3125,
+          "width": 350,
+          "height": 277.03125,
+          "bottom": 140.71875
+        },
+        "list": {
+          "x": 20,
+          "y": 231.421875,
+          "width": 350,
+          "height": 794.25,
+          "bottom": 1025.671875
+        },
+        "aside": {
+          "x": 20,
+          "y": 1049.671875,
+          "width": 350,
+          "height": 188.59375,
+          "bottom": 1238.265625
+        },
+        "fullWidthDeliverables": true,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 350,
+          "x": 20,
+          "y": -7216.5,
+          "bottom": -6737.46875
+        },
+        {
+          "width": 350,
+          "x": 20,
+          "y": -6713.46875,
+          "bottom": -6260.03125
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/squarespace",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "title": {
+          "x": 20,
+          "y": -3116.71875,
+          "width": 350,
+          "height": 71.65625,
+          "bottom": -3045.0625
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -2820.328125,
+          "width": 350,
+          "height": 277.03125,
+          "bottom": -2543.296875
+        },
+        "list": {
+          "x": 20,
+          "y": 2825.96875,
+          "width": 350,
+          "height": 686.40625,
+          "bottom": 3512.375
+        },
+        "aside": {
+          "x": 20,
+          "y": 3536.375,
+          "width": 350,
+          "height": 464.8125,
+          "bottom": 4001.1875
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/webflow",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "title": {
+          "x": 20,
+          "y": -3020.546875,
+          "width": 350,
+          "height": 71.65625,
+          "bottom": -2948.890625
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -2697.765625,
+          "width": 350,
+          "height": 277.03125,
+          "bottom": -2420.734375
+        },
+        "list": {
+          "x": 20,
+          "y": 2686.390625,
+          "width": 350,
+          "height": 686.40625,
+          "bottom": 3372.796875
+        },
+        "aside": {
+          "x": 20,
+          "y": 3396.796875,
+          "width": 350,
+          "height": 507.6875,
+          "bottom": 3904.484375
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/wix",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "title": {
+          "x": 20,
+          "y": -3418.578125,
+          "width": 350,
+          "height": 71.65625,
+          "bottom": -3346.921875
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -3095.796875,
+          "width": 350,
+          "height": 277.03125,
+          "bottom": -2818.765625
+        },
+        "list": {
+          "x": 20,
+          "y": 3128.140625,
+          "width": 350,
+          "height": 686.40625,
+          "bottom": 3814.546875
+        },
+        "aside": {
+          "x": 20,
+          "y": 3838.546875,
+          "width": 350,
+          "height": 464.8125,
+          "bottom": 4303.359375
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/woocommerce",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "title": {
+          "x": 20,
+          "y": -3103.6875,
+          "width": 350,
+          "height": 107.484375,
+          "bottom": -2996.203125
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -2771.46875,
+          "width": 350,
+          "height": 277.03125,
+          "bottom": -2494.4375
+        },
+        "list": {
+          "x": 20,
+          "y": 2813.625,
+          "width": 350,
+          "height": 686.40625,
+          "bottom": 3500.03125
+        },
+        "aside": {
+          "x": 20,
+          "y": 3524.03125,
+          "width": 350,
+          "height": 464.8125,
+          "bottom": 3988.84375
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/wordpress",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "title": {
+          "x": 20,
+          "y": -3249.765625,
+          "width": 350,
+          "height": 71.65625,
+          "bottom": -3178.109375
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -2953.375,
+          "width": 350,
+          "height": 277.03125,
+          "bottom": -2676.34375
+        },
+        "list": {
+          "x": 20,
+          "y": 2885.078125,
+          "width": 350,
+          "height": 686.40625,
+          "bottom": 3571.484375
+        },
+        "aside": {
+          "x": 20,
+          "y": 3595.484375,
+          "width": 350,
+          "height": 539.25,
+          "bottom": 4134.734375
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": [
+        {
+          "width": 350,
+          "x": 20,
+          "y": -11331.953125,
+          "bottom": -10832.328125
+        },
+        {
+          "width": 350,
+          "x": 20,
+          "y": -10808.328125,
+          "bottom": -10308.703125
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "title": {
+          "x": 20,
+          "y": -3288,
+          "width": 350,
+          "height": 71.65625,
+          "bottom": -3216.34375
+        },
+        "titleLine": 35.84,
+        "summary": {
+          "x": 20,
+          "y": -2991.609375,
+          "width": 350,
+          "height": 277.03125,
+          "bottom": -2714.578125
+        },
+        "list": {
+          "x": 20,
+          "y": 2923.34375,
+          "width": 350,
+          "height": 686.40625,
+          "bottom": 3609.75
+        },
+        "aside": {
+          "x": 20,
+          "y": 3633.75,
+          "width": 350,
+          "height": 539.25,
+          "bottom": 4173
+        },
+        "fullWidthDeliverables": false,
+        "clipped": []
+      },
+      "paired": null,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    }
+  ]
+}

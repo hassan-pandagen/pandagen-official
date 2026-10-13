@@ -1,0 +1,76 @@
+{
+  "pass": true,
+  "pages": 14,
+  "results": [
+    {
+      "path": "services/ai-seo.html",
+      "ownershipCopyAndTitlePreserved": true,
+      "otherCopyLinksSchemaPreservedUnlessApprovedAiProofReplacement": true
+    },
+    {
+      "path": "services/backend-development.html",
+      "ownershipCopyAndTitlePreserved": true,
+      "otherCopyLinksSchemaPreservedUnlessApprovedAiProofReplacement": true
+    },
+    {
+      "path": "services/cms-development.html",
+      "ownershipCopyAndTitlePreserved": true,
+      "otherCopyLinksSchemaPreservedUnlessApprovedAiProofReplacement": true
+    },
+    {
+      "path": "services/custom-engineering.html",
+      "ownershipCopyAndTitlePreserved": true,
+      "otherCopyLinksSchemaPreservedUnlessApprovedAiProofReplacement": true
+    },
+    {
+      "path": "services/ecommerce.html",
+      "ownershipCopyAndTitlePreserved": true,
+      "otherCopyLinksSchemaPreservedUnlessApprovedAiProofReplacement": true
+    },
+    {
+      "path": "services/gohighlevel.html",
+      "ownershipCopyAndTitlePreserved": true,
+      "otherCopyLinksSchemaPreservedUnlessApprovedAiProofReplacement": true
+    },
+    {
+      "path": "services/medical-website-design.html",
+      "ownershipCopyAndTitlePreserved": true,
+      "otherCopyLinksSchemaPreservedUnlessApprovedAiProofReplacement": true
+    },
+    {
+      "path": "services/small-business-website-design.html",
+      "ownershipCopyAndTitlePreserved": true,
+      "otherCopyLinksSchemaPreservedUnlessApprovedAiProofReplacement": true
+    },
+    {
+      "path": "services/squarespace.html",
+      "ownershipCopyAndTitlePreserved": true,
+      "otherCopyLinksSchemaPreservedUnlessApprovedAiProofReplacement": true
+    },
+    {
+      "path": "services/webflow.html",
+      "ownershipCopyAndTitlePreserved": true,
+      "otherCopyLinksSchemaPreservedUnlessApprovedAiProofReplacement": true
+    },
+    {
+      "path": "services/wix.html",
+      "ownershipCopyAndTitlePreserved": true,
+      "otherCopyLinksSchemaPreservedUnlessApprovedAiProofReplacement": true
+    },
+    {
+      "path": "services/woocommerce.html",
+      "ownershipCopyAndTitlePreserved": true,
+      "otherCopyLinksSchemaPreservedUnlessApprovedAiProofReplacement": true
+    },
+    {
+      "path": "services/wordpress-migration.html",
+      "ownershipCopyAndTitlePreserved": true,
+      "otherCopyLinksSchemaPreservedUnlessApprovedAiProofReplacement": true
+    },
+    {
+      "path": "services/wordpress.html",
+      "ownershipCopyAndTitlePreserved": true,
+      "otherCopyLinksSchemaPreservedUnlessApprovedAiProofReplacement": true
+    }
+  ]
+}

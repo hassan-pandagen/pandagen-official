@@ -1,0 +1,1661 @@
+{
+  "pass": true,
+  "cases": 44,
+  "annotatedAssets": [
+    "ladies-4-jesus-editor-devotional.png",
+    "panda-patches-editor.png",
+    "panda-patches-editor-blog.png",
+    "panda-patches-editor-case-study.png",
+    "ladies-4-jesus-editor-settings.png",
+    "a-step-above-medical-editor-locations.png",
+    "a-step-above-medical-editor-courses.png"
+  ],
+  "apiIntercepted": true,
+  "physicalDevices": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "14px"
+          },
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "18px"
+          }
+        ],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/pricing",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "$1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": null,
+            "valueSize": "17px"
+          },
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "80px"
+          },
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "32px"
+          },
+          {
+            "text": "$3,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "32px"
+          },
+          {
+            "text": "$5,000",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "32px"
+          }
+        ],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "From $1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": "18px",
+            "valueSize": "59.2px"
+          }
+        ],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fladies-4-jesus-editor-devotional.png&w=384&q=75",
+            "pins": 3,
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor.png&w=384&q=75",
+            "pins": 3,
+            "loaded": true
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-devotional.png",
+          "width": 286,
+          "height": 137,
+          "imageWidth": 286,
+          "imageHeight": 137,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor.png",
+          "width": 286,
+          "height": 134,
+          "imageWidth": 286,
+          "imageHeight": 134,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/webflow",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "From $1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": "18px",
+            "valueSize": "59.2px"
+          }
+        ],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor-blog.png&w=384&q=75",
+            "pins": 3,
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor.png&w=384&q=75",
+            "pins": 3,
+            "loaded": true
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 286,
+          "height": 137,
+          "imageWidth": 286,
+          "imageHeight": 137,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor.png",
+          "width": 286,
+          "height": 134,
+          "imageWidth": 286,
+          "imageHeight": 134,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "$1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": null,
+            "valueSize": "88px"
+          }
+        ],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor.png",
+          "width": 286,
+          "height": 134,
+          "imageWidth": 286,
+          "imageHeight": 134,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 286,
+          "height": 137,
+          "imageWidth": 286,
+          "imageHeight": 137,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-case-study.png",
+          "width": 286,
+          "height": 137,
+          "imageWidth": 286,
+          "imageHeight": 137,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/work/ladies-4-jesus",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-devotional.png",
+          "width": 286,
+          "height": 137,
+          "imageWidth": 286,
+          "imageHeight": 137,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-settings.png",
+          "width": 286,
+          "height": 137,
+          "imageWidth": 286,
+          "imageHeight": 137,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/work/a-step-above-medical",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/a-step-above-medical-editor-locations.png",
+          "width": 286,
+          "height": 137,
+          "imageWidth": 286,
+          "imageHeight": 137,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/a-step-above-medical-editor-courses.png",
+          "width": 286,
+          "height": 154,
+          "imageWidth": 286,
+          "imageHeight": 154,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog/sanity-vs-wordpress",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 286,
+          "height": 137,
+          "imageWidth": 286,
+          "imageHeight": 137,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-case-study.png",
+          "width": 286,
+          "height": 137,
+          "imageWidth": 286,
+          "imageHeight": 137,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog/website-migration-cost-2026",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "prices": [],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/partners",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "prices": [],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "14px"
+          },
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "18px"
+          }
+        ],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/pricing",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "$1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": null,
+            "valueSize": "17px"
+          },
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "80px"
+          },
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "32px"
+          },
+          {
+            "text": "$3,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "32px"
+          },
+          {
+            "text": "$5,000",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "32px"
+          }
+        ],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "From $1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": "18px",
+            "valueSize": "59.2px"
+          }
+        ],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fladies-4-jesus-editor-devotional.png&w=640&q=75",
+            "pins": 3,
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor.png&w=640&q=75",
+            "pins": 3,
+            "loaded": true
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-devotional.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor.png",
+          "width": 356,
+          "height": 167,
+          "imageWidth": 356,
+          "imageHeight": 167,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/webflow",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "From $1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": "18px",
+            "valueSize": "59.2px"
+          }
+        ],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor-blog.png&w=640&q=75",
+            "pins": 3,
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor.png&w=640&q=75",
+            "pins": 3,
+            "loaded": true
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor.png",
+          "width": 356,
+          "height": 167,
+          "imageWidth": 356,
+          "imageHeight": 167,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "$1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": null,
+            "valueSize": "88px"
+          }
+        ],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor.png",
+          "width": 356,
+          "height": 167,
+          "imageWidth": 356,
+          "imageHeight": 167,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-case-study.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/work/ladies-4-jesus",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-devotional.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-settings.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/work/a-step-above-medical",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/a-step-above-medical-editor-locations.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/a-step-above-medical-editor-courses.png",
+          "width": 356,
+          "height": 191,
+          "imageWidth": 356,
+          "imageHeight": 191,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/blog/sanity-vs-wordpress",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-case-study.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/blog/website-migration-cost-2026",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/partners",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "14px"
+          },
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "18px"
+          }
+        ],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/pricing",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "$1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": null,
+            "valueSize": "20.16px"
+          },
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "100.8px"
+          },
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "44.64px"
+          },
+          {
+            "text": "$3,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "44.64px"
+          },
+          {
+            "text": "$5,000",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "44.64px"
+          }
+        ],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "From $1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": "25.92px",
+            "valueSize": "86.4px"
+          }
+        ],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fladies-4-jesus-editor-devotional.png&w=750&q=75",
+            "pins": 3,
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor.png&w=640&q=75",
+            "pins": 3,
+            "loaded": true
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-devotional.png",
+          "width": 1374,
+          "height": 657,
+          "imageWidth": 1374,
+          "imageHeight": 657,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor.png",
+          "width": 1374,
+          "height": 645,
+          "imageWidth": 1374,
+          "imageHeight": 645,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/webflow",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "From $1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": "25.92px",
+            "valueSize": "86.4px"
+          }
+        ],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor-blog.png&w=750&q=75",
+            "pins": 3,
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor.png&w=828&q=75",
+            "pins": 3,
+            "loaded": true
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 1374,
+          "height": 657,
+          "imageWidth": 1374,
+          "imageHeight": 657,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor.png",
+          "width": 1374,
+          "height": 645,
+          "imageWidth": 1374,
+          "imageHeight": 645,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "$1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": null,
+            "valueSize": "115.2px"
+          }
+        ],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor.png",
+          "width": 1374,
+          "height": 645,
+          "imageWidth": 1374,
+          "imageHeight": 645,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 1374,
+          "height": 657,
+          "imageWidth": 1374,
+          "imageHeight": 657,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-case-study.png",
+          "width": 1374,
+          "height": 657,
+          "imageWidth": 1374,
+          "imageHeight": 657,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/work/ladies-4-jesus",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-devotional.png",
+          "width": 1374,
+          "height": 657,
+          "imageWidth": 1374,
+          "imageHeight": 657,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-settings.png",
+          "width": 1374,
+          "height": 657,
+          "imageWidth": 1374,
+          "imageHeight": 657,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/work/a-step-above-medical",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/a-step-above-medical-editor-locations.png",
+          "width": 1374,
+          "height": 657,
+          "imageWidth": 1374,
+          "imageHeight": 657,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/a-step-above-medical-editor-courses.png",
+          "width": 1354,
+          "height": 728,
+          "imageWidth": 1354,
+          "imageHeight": 728,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog/sanity-vs-wordpress",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 1374,
+          "height": 657,
+          "imageWidth": 1374,
+          "imageHeight": 657,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-case-study.png",
+          "width": 1374,
+          "height": 657,
+          "imageWidth": 1374,
+          "imageHeight": 657,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog/website-migration-cost-2026",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "prices": [],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/partners",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "prices": [],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "14px"
+          },
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "18px"
+          }
+        ],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/pricing",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "$1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": null,
+            "valueSize": "17px"
+          },
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "80px"
+          },
+          {
+            "text": "$1,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "32px"
+          },
+          {
+            "text": "$3,500",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "32px"
+          },
+          {
+            "text": "$5,000",
+            "color": "rgb(122, 46, 14)",
+            "prefixSize": null,
+            "valueSize": "32px"
+          }
+        ],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "From $1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": "18px",
+            "valueSize": "59.200001px"
+          }
+        ],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fladies-4-jesus-editor-devotional.png&w=640&q=75",
+            "pins": 3,
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor.png&w=640&q=75",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-devotional.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor.png",
+          "width": 356,
+          "height": 167,
+          "imageWidth": 356,
+          "imageHeight": 167,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/webflow",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "From $1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": "18px",
+            "valueSize": "59.200001px"
+          }
+        ],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor-blog.png&w=640&q=75",
+            "pins": 3,
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor.png&w=640&q=75",
+            "pins": 3,
+            "loaded": true
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor.png",
+          "width": 356,
+          "height": 167,
+          "imageWidth": 356,
+          "imageHeight": 167,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [
+          {
+            "text": "$1,500",
+            "color": "rgb(232, 118, 58)",
+            "prefixSize": null,
+            "valueSize": "88px"
+          }
+        ],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor.png&w=640&q=75",
+            "pins": 3,
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor-blog.png&w=640&q=75",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor-case-study.png&w=640&q=75",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor.png",
+          "width": 356,
+          "height": 167,
+          "imageWidth": 356,
+          "imageHeight": 167,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-case-study.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/work/ladies-4-jesus",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fladies-4-jesus-editor-devotional.png&w=640&q=75",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fladies-4-jesus-editor-settings.png&w=640&q=75",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-devotional.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/ladies-4-jesus-editor-settings.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/work/a-step-above-medical",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fa-step-above-medical-editor-locations.png&w=640&q=75",
+            "pins": 3,
+            "loaded": false
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fa-step-above-medical-editor-courses.png&w=640&q=75",
+            "pins": 3,
+            "loaded": false
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/a-step-above-medical-editor-locations.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/a-step-above-medical-editor-courses.png",
+          "width": 356,
+          "height": 191,
+          "imageWidth": 356,
+          "imageHeight": 191,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog/sanity-vs-wordpress",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": [
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor-blog.png&w=640&q=75",
+            "pins": 3,
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:3004/_next/image?url=%2Fwork%2Fpanda-patches-editor-case-study.png&w=640&q=75",
+            "pins": 3,
+            "loaded": true
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-blog.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        },
+        {
+          "src": "http://127.0.0.1:3004/work/panda-patches-editor-case-study.png",
+          "width": 356,
+          "height": 170,
+          "imageWidth": 356,
+          "imageHeight": 170,
+          "pins": 3
+        }
+      ],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog/website-migration-cost-2026",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/partners",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "prices": [],
+        "editorImages": []
+      },
+      "annotations": [],
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    }
+  ]
+}

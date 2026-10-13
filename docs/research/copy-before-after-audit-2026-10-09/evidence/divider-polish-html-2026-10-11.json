@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "results": [
+    {
+      "page": "index",
+      "pass": true,
+      "copyLinksSchemaPreserved": true,
+      "faqAnswersInInitialHtml": true
+    },
+    {
+      "page": "work/panda-patches",
+      "pass": true,
+      "copyLinksSchemaPreserved": true,
+      "faqAnswersInInitialHtml": true
+    }
+  ]
+}

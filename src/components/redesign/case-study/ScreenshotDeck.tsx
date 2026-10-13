@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import Image from "next/image";
+import EditorScreenshot, { EditorPreviewNotes } from "@/components/pages/services/EditorScreenshot";
 import { T } from "@/components/redesign/tokens";
 import styles from "./ScreenshotDeck.module.css";
 
@@ -28,9 +28,11 @@ export default function ScreenshotDeck({ shots, id, project, chapter }: { shots:
                 </div>
                 <p className={styles.description}>{shot.body}</p>
               </figcaption>
-              <a href={shot.src} target="_blank" rel="noopener noreferrer" className={styles.imageLink} aria-label={`Open full-size ${shot.label.toLowerCase()} screenshot (new tab)`}>
-                <Image src={shot.src} alt={shot.alt} width={shot.width} height={shot.height} sizes="(min-width: 1536px) 1080px, (min-width: 1024px) 70vw, (min-width: 768px) calc(100vw - 80px), calc(100vw - 48px)" className={styles.image} />
+              <a href={shot.src} target="_blank" rel="noopener noreferrer" className={styles.imageLink}>
+                <span className="sr-only">Open full-size screenshot (new tab): </span>
+                <EditorScreenshot notes={false} src={shot.src} alt={shot.alt} width={shot.width} height={shot.height} sizes="(min-width: 1536px) 1080px, (min-width: 1024px) 70vw, (min-width: 768px) calc(100vw - 80px), calc(100vw - 48px)" className={styles.image} />
               </a>
+              <EditorPreviewNotes src={shot.src} alt={shot.alt} />
               <div className={styles.footer}><span>{project} / {chapter}</span><span>Open full-size image ↗</span></div>
             </figure>
           </li>

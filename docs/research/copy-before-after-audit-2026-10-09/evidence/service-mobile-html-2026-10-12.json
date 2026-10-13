@@ -1,0 +1,81 @@
+{
+  "pass": true,
+  "pages": 15,
+  "results": [
+    {
+      "path": "services.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    },
+    {
+      "path": "services/ai-seo.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    },
+    {
+      "path": "services/backend-development.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    },
+    {
+      "path": "services/cms-development.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    },
+    {
+      "path": "services/custom-engineering.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    },
+    {
+      "path": "services/ecommerce.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    },
+    {
+      "path": "services/gohighlevel.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    },
+    {
+      "path": "services/medical-website-design.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    },
+    {
+      "path": "services/small-business-website-design.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    },
+    {
+      "path": "services/squarespace.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    },
+    {
+      "path": "services/webflow.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    },
+    {
+      "path": "services/wix.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    },
+    {
+      "path": "services/woocommerce.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    },
+    {
+      "path": "services/wordpress-migration.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    },
+    {
+      "path": "services/wordpress.html",
+      "copyTitleLinksSchemaPreserved": true,
+      "oneH1": true
+    }
+  ]
+}

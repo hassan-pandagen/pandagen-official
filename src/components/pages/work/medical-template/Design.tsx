@@ -1,12 +1,14 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import WorkCaseTitle from "@/components/redesign/case-study/WorkCaseTitle";
+import WorkCaseOpening from "@/components/redesign/case-study/WorkCaseOpening";
+import WorkCasePreview from "@/components/redesign/case-study/WorkCasePreview";
+import WorkCaseFacts from "@/components/redesign/case-study/WorkCaseFacts";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import MedicalTemplateWalkthrough from "@/components/redesign/case-study/MedicalTemplateWalkthrough";
-import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
+import { BODY, DISPLAY, MONO, T } from "@/components/redesign/tokens";
 import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-study/CaseStudyFaqs";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -29,47 +31,47 @@ export const medicalTemplateFaqs: CaseStudyFaq[] = [
 export function MedicalTemplateCaseStudyPreview({ faqs = medicalTemplateFaqs }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed footerLinksOnly>
-      <section className="px-6 pb-16 pt-8 md:pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
-        <div className="mx-auto max-w-[1100px]">
-          <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-            <Link href="/work" style={{ color: T.quiet }}>Work</Link> / Medical Template / Concept build
-          </p>
+      <WorkCaseOpening>
+        <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
+          <Link href="/work" style={{ color: T.quiet }}>Work</Link> / Medical Template / Concept build
+        </p>
 
-          <WorkCaseTitle>Medical website design</WorkCaseTitle>
-          <p className="mt-3 max-w-[38rem]" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
-            A medical practice website design, shown as a demo.
-          </p>
+        <WorkCaseTitle>Medical website design: a practice demo</WorkCaseTitle>
+        <p className="mt-3 max-w-[38rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
+          A medical practice website design, shown as a demo.
+        </p>
 
-          <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
-            A website design for a fictional surgical practice: clear treatment information, care steps and a
-            route to booking a consultation. We built this concept to show how those pages work together.
-            Every name, credential, review, location and price is invented, and the demo says so on every screen.
-          </p>
+        <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
+          A website design for a fictional surgical practice: clear treatment information, care steps and a
+          route to booking a consultation. We built this concept to show how those pages work together.
+          Every name, credential, review, location and price is invented, and the demo says so on every screen.
+        </p>
 
-          <div className="mt-6 flex flex-wrap items-center gap-4">
-            <a
-              href="https://pandacodegen-medical-template.vercel.app/"
-              target="_blank"
-              rel="noopener"
-              className="cta-solid inline-flex items-center gap-2 px-5 py-3 text-[14px] font-medium"
-              style={{ backgroundColor: T.ink, color: T.paper }}
-            >
-              Visit the demo <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-              <span className="sr-only"> (opens in a new tab)</span>
-            </a>
-          </div>
-
-          <figure className="mt-10 border" style={{ borderColor: T.rule, backgroundColor: T.paperHi }}>
-            <Image src="/work/medical-template-hero.png" alt="The Medical Template demo homepage, a fictional surgical practice with a booking button" width={1600} height={900} sizes="(min-width: 1100px) 1100px, 100vw" priority />
-            <figcaption className="px-4 py-3 text-[12px] uppercase tracking-[0.08em]" style={{ fontFamily: MONO, color: T.quiet }}>The demo homepage / Concept build, fictional content</figcaption>
-          </figure>
-          <RelationshipDisclosure slug="medical-template" variant="editorial" />
+        <div className="mt-6 flex flex-wrap items-center gap-4">
+          <a
+            href="https://pandacodegen-medical-template.vercel.app/"
+            target="_blank"
+            rel="noopener"
+            className="cta-solid inline-flex items-center gap-2 px-5 py-3 text-[14px] font-medium"
+            style={{ backgroundColor: T.ink, color: T.paper }}
+          >
+            Visit the demo <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
         </div>
-      </section>
+
+        <WorkCasePreview src="/work/medical-template-hero.png" alt="The Medical Template demo homepage, a fictional surgical practice with a booking button" width={1600} height={900} caption="The demo homepage / Concept build, fictional content" />
+        <WorkCaseFacts items={[
+          { label: "Project", value: "Medical practice website demo" },
+          { label: "Status", value: "Concept build" },
+          { label: "Content", value: "Fictional practice details" },
+        ]} />
+        <RelationshipDisclosure slug="medical-template" variant="editorial" />
+      </WorkCaseOpening>
 
       <MedicalTemplateWalkthrough />
 
-      <section className="px-6 py-12 md:px-10" style={{ backgroundColor: T.paperHi }}>
+      <section className="px-6 py-8 md:px-10 md:py-12" style={{ backgroundColor: T.paperHi }}>
         <div className="mx-auto max-w-[1100px] border-t pt-8" style={{ borderColor: T.rule }}>
           <h2 className="text-[22px] font-semibold" style={{ color: T.ink }}>Need a website and a system for your team?</h2>
           <p className="mt-4 max-w-[48rem] text-[16px] leading-[1.65]" style={{ color: T.body }}>
@@ -82,7 +84,7 @@ export function MedicalTemplateCaseStudyPreview({ faqs = medicalTemplateFaqs }: 
 
       <CaseStudyFaqs faqs={faqs} />
 
-      <section className="px-6 py-20 md:px-10" style={{ backgroundColor: T.dark, color: T.onDark }}>
+      <section className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
         <div className="mx-auto max-w-[1100px]">
           <h2 style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2rem, 3.6vw, 2.8rem)", lineHeight: 1.05 }}>
             Medical website development for your practice.

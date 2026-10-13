@@ -1,0 +1,2277 @@
+{
+  "pass": true,
+  "cases": 18,
+  "filterAndSearchFlows": 6,
+  "aboutTypography": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "headingFont": "Anton, \"Anton Fallback\", serif",
+      "accentFont": "Georgia, serif",
+      "accentStyle": "italic",
+      "accentColor": "rgb(173, 61, 11)"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "headingFont": "Anton, Anton Fallback, serif",
+      "accentFont": "Georgia, serif",
+      "accentStyle": "italic",
+      "accentColor": "rgb(173, 61, 11)"
+    }
+  ],
+  "apiIntercepted": true,
+  "physicalDevices": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 72,
+            "href": "/blog#guides",
+            "current": "page"
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=wordpress#guides",
+            "current": null
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog?topic=wordpress",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog#guides",
+            "current": null
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 72,
+            "href": "/blog?topic=wordpress#guides",
+            "current": "page"
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog?topic=wordpress&q=wordpress",
+      "geometry": {
+        "pageWidth": 320,
+        "width": 320,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress#guides",
+            "current": null
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=wordpress#guides",
+            "current": "page"
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/blog",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 72,
+            "href": "/blog#guides",
+            "current": "page"
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=wordpress#guides",
+            "current": null
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/blog?topic=wordpress",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog#guides",
+            "current": null
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 72,
+            "href": "/blog?topic=wordpress#guides",
+            "current": "page"
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "path": "/blog?topic=wordpress&q=wordpress",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress#guides",
+            "current": null
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=wordpress#guides",
+            "current": "page"
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "path": "/blog",
+      "geometry": {
+        "pageWidth": 768,
+        "width": 768,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 48,
+            "href": "/blog#guides",
+            "current": "page"
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=wordpress#guides",
+            "current": null
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "path": "/blog?topic=wordpress",
+      "geometry": {
+        "pageWidth": 768,
+        "width": 768,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog#guides",
+            "current": null
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 48,
+            "href": "/blog?topic=wordpress#guides",
+            "current": "page"
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(232, 224, 213)",
+            "height": 48,
+            "href": "/blog?topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "path": "/blog?topic=wordpress&q=wordpress",
+      "geometry": {
+        "pageWidth": 768,
+        "width": 768,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress#guides",
+            "current": null
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=wordpress#guides",
+            "current": "page"
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 48,
+            "href": "/blog#guides",
+            "current": "page"
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=wordpress#guides",
+            "current": null
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog?topic=wordpress",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog#guides",
+            "current": null
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 48,
+            "href": "/blog?topic=wordpress#guides",
+            "current": "page"
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog?topic=wordpress&q=wordpress",
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress#guides",
+            "current": null
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=wordpress#guides",
+            "current": "page"
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1920,
+      "path": "/blog",
+      "geometry": {
+        "pageWidth": 1920,
+        "width": 1920,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 48,
+            "href": "/blog#guides",
+            "current": "page"
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=wordpress#guides",
+            "current": null
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1920,
+      "path": "/blog?topic=wordpress",
+      "geometry": {
+        "pageWidth": 1920,
+        "width": 1920,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog#guides",
+            "current": null
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 48,
+            "href": "/blog?topic=wordpress#guides",
+            "current": "page"
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1920,
+      "path": "/blog?topic=wordpress&q=wordpress",
+      "geometry": {
+        "pageWidth": 1920,
+        "width": 1920,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress#guides",
+            "current": null
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=wordpress#guides",
+            "current": "page"
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 48,
+            "href": "/blog?q=wordpress&topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 72,
+            "href": "/blog#guides",
+            "current": "page"
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=wordpress#guides",
+            "current": null
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog?topic=wordpress",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog#guides",
+            "current": null
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 72,
+            "href": "/blog?topic=wordpress#guides",
+            "current": "page"
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog?topic=wordpress&q=wordpress",
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390,
+        "border": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "topics": [
+          {
+            "label": "All guides92 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress#guides",
+            "current": null
+          },
+          {
+            "label": "WordPress16 guides",
+            "border": "0px",
+            "color": "rgb(122, 46, 14)",
+            "background": "rgb(241, 228, 217)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=wordpress#guides",
+            "current": "page"
+          },
+          {
+            "label": "Shopify9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=shopify#guides",
+            "current": null
+          },
+          {
+            "label": "Webflow5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=webflow#guides",
+            "current": null
+          },
+          {
+            "label": "Squarespace4 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=squarespace#guides",
+            "current": null
+          },
+          {
+            "label": "Custom Development12 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=custom-development#guides",
+            "current": null
+          },
+          {
+            "label": "For Agencies6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=agencies#guides",
+            "current": null
+          },
+          {
+            "label": "Migration5 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 72,
+            "href": "/blog?q=wordpress&topic=website-migration#guides",
+            "current": null
+          },
+          {
+            "label": "Cost & SaaS Spend6 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=website-cost#guides",
+            "current": null
+          },
+          {
+            "label": "Ecommerce & Tracking9 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=ecommerce#guides",
+            "current": null
+          },
+          {
+            "label": "Speed & Core Web Vitals8 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=website-speed#guides",
+            "current": null
+          },
+          {
+            "label": "SEO & AI Search11 guides",
+            "border": "0px",
+            "color": "rgb(28, 25, 23)",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 86.375,
+            "href": "/blog?q=wordpress&topic=seo-and-ai-search#guides",
+            "current": null
+          }
+        ],
+        "clipped": []
+      },
+      "disclosureKeyboardToggle": true,
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    }
+  ]
+}

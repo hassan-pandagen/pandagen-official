@@ -1,3 +1,4 @@
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
@@ -7,7 +8,7 @@ import { portfolioProjects, type PortfolioProject } from "@/data/portfolio";
 
 export default function WorkIndex() {
   return (
-    <section aria-labelledby="work-title" className="relative px-6 py-16 md:px-10 md:py-20" style={{ backgroundColor: T.paper }}>
+    <section aria-labelledby="work-title" className="relative px-6 pb-6 pt-16 md:px-10 md:py-20" style={{ backgroundColor: T.paper }}>
       <div className="mx-auto max-w-[1440px]">
         <div className="grid gap-8 lg:grid-cols-12">
           <h2
@@ -15,7 +16,7 @@ export default function WorkIndex() {
             className="lg:col-span-7"
             style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.6rem, 5.4vw, 5.2rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}
           >
-            Look at the work before you read about it.
+            <HeadingEmphasis text="Look at the work before you read about it." />
           </h2>
           <p className="max-w-[34rem] self-end text-[17px] leading-[1.6] lg:col-span-5" style={{ color: T.body }}>
             Open any project below and check it yourself. Client projects, founder-affiliated work, previews and concepts are labelled.

@@ -31,7 +31,7 @@ const schema = {
       description,
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       about: { "@id": "https://www.pandacodegen.com/#organization" },
-      dateModified: "2026-10-10",
+      dateModified: "2026-10-11",
       inLanguage: "en-US",
       breadcrumb: { "@id": canonicalUrl + "#breadcrumb" },
     },

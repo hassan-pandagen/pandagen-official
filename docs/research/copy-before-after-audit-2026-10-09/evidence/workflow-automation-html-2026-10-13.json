@@ -1,0 +1,15 @@
+{
+  "pass": true,
+  "results": [
+    {
+      "path": "index.html",
+      "metadataAndLinksPreserved": true,
+      "copyOutsideApprovedSectionsPreserved": true
+    },
+    {
+      "path": "services/custom-engineering.html",
+      "metadataAndLinksPreserved": true,
+      "copyOutsideApprovedSectionsPreserved": true
+    }
+  ]
+}

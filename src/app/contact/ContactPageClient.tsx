@@ -1,5 +1,8 @@
 "use client";
 
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
+
+
 import { ArrowDown, ArrowUpRight, CheckCircle2, ChevronDown, Mail, Send } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -156,7 +159,7 @@ export default function ContactPageClient() {
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em]" style={{ color: T.onDarkAccent, fontFamily: MONO }}>A conversation starts here</p>
             <h1 className="max-w-xl tracking-tight" style={{ color: T.onDark }}>
               <span className="block">Talk directly</span>{" "}
-              <span className="block" style={{ color: T.onDarkAccent }}>to the founders.</span>
+              <span className="block"><HeadingEmphasis text="to the founders." phrase="founders" onDark /></span>
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed" style={{ color: T.onDarkQuiet }}>
               A new website, a better online store, or something that isn&apos;t working? Tell us what you have in mind. You&apos;ll hear from Hassan or Imran.
@@ -266,7 +269,7 @@ export default function ContactPageClient() {
       <section aria-labelledby="next-steps-heading" className="border-t border-stone-200 px-5 py-12 sm:px-8 md:py-16">
         <div className="mx-auto max-w-6xl">
           <p className="mb-4 text-xs uppercase tracking-[0.18em]" style={{ color: T.accentText, fontFamily: MONO }}>After you get in touch</p>
-          <h2 id="next-steps-heading" className="max-w-3xl leading-[0.98]" style={{ fontFamily: DISPLAY, fontSize: "clamp(3rem, 6vw, 6rem)", color: T.ink }}>What happens <span style={{ color: T.accentText }}>next.</span></h2>
+          <h2 id="next-steps-heading" className="max-w-3xl leading-[0.98]" style={{ fontFamily: DISPLAY, fontSize: "clamp(3rem, 6vw, 6rem)", color: T.ink }}>What happens <HeadingEmphasis text="next." /></h2>
           <ol className="mt-12 grid gap-7 md:grid-cols-3 md:gap-10">
             {[
               { title: "We start with your idea", text: "Hassan or Imran reads what you have in mind and replies personally. You can come with a clear plan or just a question." },

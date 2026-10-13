@@ -2,7 +2,7 @@
 .wrap { max-width: 1280px; margin-inline: auto; }
 .section { padding: 4rem 1.5rem; }
 .hero { padding: 10rem 1.5rem 4rem; }
-.eyebrow { color: var(--accent); font: 0.75rem ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
+.eyebrow { color: var(--accent); font: 0.75rem var(--font-sans), Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
 .title { font-family: var(--display); font-size: clamp(3rem, 7vw, 6rem); font-weight: 400; line-height: 1; max-width: 950px; margin-top: 1.5rem; }
 .lead { color: var(--body); max-width: 640px; font-size: 1.125rem; line-height: 1.75; margin-top: 1.75rem; }
 .split { display: grid; gap: 3rem; }
@@ -21,7 +21,7 @@
 .row { display: grid; gap: 1rem; padding: 2rem 0; border-bottom: 1px solid var(--rule); text-decoration: none; }
 .row h2 { font-family: inherit; text-transform: none !important; font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 650; line-height: 1.25; }
 .row p { max-width: 760px; margin-top: .75rem; color: var(--body); line-height: 1.65; }
-.meta { font-size: .75rem; color: var(--quiet); line-height: 1.7; }
+.meta { font-family: var(--font-sans), Arial, sans-serif; font-size: .75rem; color: var(--quiet); line-height: 1.7; }
 .arrow { color: var(--accent); font-size: 1.5rem; }
 .row:hover h2 { color: var(--accent); }
 .person { display: grid; gap: 2rem; padding-block: 3rem; border-top: 1px solid var(--rule); }

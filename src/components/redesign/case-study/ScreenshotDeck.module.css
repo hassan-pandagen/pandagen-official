@@ -3,13 +3,13 @@
 .sheet { overflow: hidden; background: var(--deck-paper); color: var(--deck-ink); border: 1px solid var(--deck-rule); box-shadow: 0 24px 60px -32px #0009; }
 .caption { display: grid; gap: 1rem; padding: 1.25rem; border-bottom: 1px solid var(--deck-rule); }
 .heading { display: flex; align-items: baseline; gap: 1rem; }
-.number { color: var(--deck-accent); font: 0.75rem ui-monospace, monospace; }
+.number { color: var(--deck-accent); font: 0.75rem var(--font-sans), Arial, sans-serif; }
 .title { font-size: 1.25rem; font-weight: 600; line-height: 1.2; }
 .description { max-width: 36rem; font-size: 0.9375rem; line-height: 1.55; }
 .image { display: block; width: 100%; height: auto; }
 .imageLink { display: block; }
 .imageLink:focus-visible { outline: 3px solid var(--deck-accent); outline-offset: -3px; }
-.footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; padding: 0.85rem 1.25rem; border-top: 1px solid var(--deck-rule); font: 0.6875rem ui-monospace, monospace; letter-spacing: 0.08em; text-transform: uppercase; }
+.footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; padding: 0.85rem 1.25rem; border-top: 1px solid var(--deck-rule); font: 0.6875rem var(--font-sans), Arial, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
 .index { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; padding: 0; margin: 0; list-style: none; }
 .index a { display: inline-block; padding: 0.5rem 0; color: inherit; text-underline-offset: 0.3em; font-size: 0.875rem; }
 .index a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }

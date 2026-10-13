@@ -1,3 +1,5 @@
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
+import { Children, cloneElement, isValidElement } from "react";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
@@ -19,6 +21,13 @@ function getPost(id: string) {
   return { ...post, published: guide.published, eyebrow: guide.eyebrow };
 }
 
+const titleFocus: Record<string, string> = {
+  "sanity-vs-wordpress": "Editor",
+  "sanity-vs-supabase": "Both",
+  "product-catalog-website-without-cart": "Quote Requests",
+  "website-monthly-running-cost": "Under $50",
+};
+
 export function stackGuideMetadata(id: string): Metadata {
   const post = getPost(id);
   const path = `/blog/${id}`;
@@ -31,6 +40,8 @@ export function stackGuideMetadata(id: string): Metadata {
 
 export default function StackGuide({ id, children }: { id: string; children: ReactNode }) {
   const post = getPost(id);
+  const content = Children.map(children, child => isValidElement<{ children?: ReactNode }>(child) && child.type === "h2" && typeof child.props.children === "string"
+    ? cloneElement(child, undefined, <HeadingEmphasis text={child.props.children} />) : child);
   const url = `https://www.pandacodegen.com/blog/${id}`;
   const schema = { "@context": "https://schema.org", "@graph": [
     { "@type": "Article", "@id": `${url}#article`, headline: post.title, description: post.excerpt, datePublished: post.published, dateModified: post.lastModified, image: ogImageUrlForPath(`/blog/${id}`), mainEntityOfPage: url, inLanguage: "en-US", author: { "@type": "Person", "@id": "https://www.pandacodegen.com/#/schema/person/hassan", name: "Hassan Jamal", url: "https://www.pandacodegen.com/about/hassan" }, publisher: { "@id": "https://www.pandacodegen.com/#organization" } },
@@ -39,8 +50,8 @@ export default function StackGuide({ id, children }: { id: string; children: Rea
   return <main className={s.main}><article className={s.article}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
     <Breadcrumb items={postCrumbs(id, post.title)} />
-    <header className={s.header}><p className={s.eyebrow}>{post.eyebrow}</p><h1>{post.title}</h1><p className={s.summary}>{post.excerpt}</p><p>By <Link href="/about/hassan">Hassan Jamal</Link>, Co-founder and Lead Engineer</p><PostDateline postId={id} published={post.published} /></header>
-    <div className={s.body}>{children}</div>
+    <header className={s.header}><p className={s.eyebrow}>{post.eyebrow}</p><h1><HeadingEmphasis text={post.title} phrase={titleFocus[id]} /></h1><p className={s.summary}>{post.excerpt}</p><p>By <Link href="/about/hassan">Hassan Jamal</Link>, Co-founder and Lead Engineer</p><PostDateline postId={id} published={post.published} /></header>
+    <div className={s.body}>{content}</div>
     <section className={s.faq}><h2>Common questions</h2><FaqRows faqs={post.faqs ?? []} /></section>
     <TopicUpLink postId={id} />
     <RelatedPosts currentPostId={id} />

@@ -1,3 +1,4 @@
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FactTable, OfferLine, ReferenceIntro } from "@/components/ai-info/ReferenceSection";
@@ -67,7 +68,7 @@ export default function Page() {
           <OfferLine />
           <FactTable facts={SERVICES} caption="PandaCodeGen services, website search foundations, optional AI SEO/AEO/GEO scope, platforms and migration controls." />
 
-          <h2 className="mt-10 mb-3 text-2xl font-bold text-charcoal">The three control groups in every migration</h2>
+          <h2 className="mt-10 mb-3 text-2xl font-bold text-charcoal"><HeadingEmphasis text={"The three control groups in every migration"} /></h2>
           <div className="my-6 grid gap-4 md:grid-cols-3">
             {MIGRATION_CONTROLS.map(({ title: controlTitle, body: controlBody }) => (
               <div key={controlTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">

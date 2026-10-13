@@ -1,0 +1,158 @@
+{
+  "pass": true,
+  "cases": 10,
+  "physicalDevices": false,
+  "apiIntercepted": true,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": []
+      },
+      "fonts": {
+        "title": "Anton, \"Anton Fallback\", Georgia, serif",
+        "question": "Inter, \"Inter Fallback\", Georgia, serif",
+        "body": "\"PT Serif\", Georgia, serif"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/services/custom-engineering",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": []
+      },
+      "visibleNewQuestions": 5,
+      "schemaMatchesVisibleQuestions": true,
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "route": "/",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": []
+      },
+      "fonts": {
+        "title": "Anton, \"Anton Fallback\", Georgia, serif",
+        "question": "Inter, \"Inter Fallback\", Georgia, serif",
+        "body": "\"PT Serif\", Georgia, serif"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "route": "/services/custom-engineering",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": []
+      },
+      "visibleNewQuestions": 5,
+      "schemaMatchesVisibleQuestions": true,
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "route": "/",
+      "geometry": {
+        "width": 768,
+        "pageWidth": 768,
+        "clipped": []
+      },
+      "fonts": {
+        "title": "Anton, \"Anton Fallback\", Georgia, serif",
+        "question": "Inter, \"Inter Fallback\", Georgia, serif",
+        "body": "\"PT Serif\", Georgia, serif"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "route": "/services/custom-engineering",
+      "geometry": {
+        "width": 768,
+        "pageWidth": 768,
+        "clipped": []
+      },
+      "visibleNewQuestions": 5,
+      "schemaMatchesVisibleQuestions": true,
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": []
+      },
+      "fonts": {
+        "title": "Anton, \"Anton Fallback\", Georgia, serif",
+        "question": "Inter, \"Inter Fallback\", Georgia, serif",
+        "body": "\"PT Serif\", Georgia, serif"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/services/custom-engineering",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": []
+      },
+      "visibleNewQuestions": 5,
+      "schemaMatchesVisibleQuestions": true,
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": []
+      },
+      "fonts": {
+        "title": "Anton, Anton Fallback, Georgia, serif",
+        "question": "Inter, Inter Fallback, Georgia, serif",
+        "body": "PT Serif, Georgia, serif"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/services/custom-engineering",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": []
+      },
+      "visibleNewQuestions": 5,
+      "schemaMatchesVisibleQuestions": true,
+      "pass": true
+    }
+  ]
+}

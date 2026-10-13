@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./site-fonts.css";
 import "./globals.css";
+import "./typography.css";
 import "lenis/dist/lenis.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import HtmlShell from "@/components/layout/HtmlShell";
@@ -12,23 +13,11 @@ import CookieConsent from "@/components/consent/CookieConsent";
 import AskAssistant from "@/components/assistant/AskAssistant";
 import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, PHONE } from "@/data/company-facts";
 
-// Inter is the body font and it is used above the fold on every page, so it is
-// preloaded. It was not, and that was the homepage's largest layout shift.
-// Measured 9 Sep 2026 on production builds with the cache disabled, comparing
-// the live site against this build at three widths, three runs each:
-//
-//   1024 x 768   0.137  ->  0.002     was failing Google's 0.1 threshold
-//    390 x 844   0.035  ->  0
-//   1440 x 900   0.080  ->  0.074     intermittent, and the largest left
-//
-// The mechanism: display "swap" plus no preload meant the real font arrived
-// around 1.3 seconds, the hero's left column reflowed by up to 29px, and
-// because that grid centres its two columns the whole column then moved.
-// Playfair stays unpreloaded on purpose: it is only used for serif italic
-// accents, and preloading a font a page may not use is wasted bandwidth.
-// If you set this back to false, measure the homepage first.
+// Inter serves interface text; PT Serif serves paragraphs and italic accents.
+// Preload their Latin regular faces to avoid reflow above the fold. Other
+// weights and language subsets load only when the page needs them.
 const inter = { variable: "font-inter" };
-const playfair = { variable: "font-playfair" };
+const ptSerif = { variable: "font-pt-serif" };
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.pandacodegen.com'),
@@ -152,9 +141,10 @@ export default function RootLayout({
 
   return (
     <HtmlShell
-      bodyClassName={`${inter.variable} ${playfair.variable} font-sans antialiased bg-background text-charcoal`}
+      bodyClassName={`${inter.variable} ${ptSerif.variable} font-body antialiased bg-background text-charcoal`}
     >
       <link rel="preload" href="/fonts/site/inter-83afe278b6a6bb3c-s.woff2" as="font" type="font/woff2" crossOrigin="" />
+      <link rel="preload" href="/fonts/site/pt-serif-normal-400-latin.woff2" as="font" type="font/woff2" crossOrigin="" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraph) }}

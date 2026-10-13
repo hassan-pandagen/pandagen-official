@@ -1,5 +1,6 @@
 import { AlertCircle, BadgeCheck, Info } from "lucide-react";
 import { disclosure, isDemo, isFounderAffiliated } from "@/data/case-study-facts";
+import WorkCaseLabel from "@/components/redesign/case-study/WorkCaseLabel";
 
 /**
  * The relationship disclosure every case study owes the reader.
@@ -21,8 +22,8 @@ export default function RelationshipDisclosure({ slug, variant = "panel" }: { sl
     const text = disclosure(slug);
     if (variant === "editorial") {
         return (
-            <aside data-relationship-disclosure className="my-8 border-t border-stone-400/30 pt-5">
-                <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.12em] text-stone-600">Relationship disclosure</p>
+            <aside data-relationship-disclosure className="mb-0 mt-6 border-t border-stone-400/30 pt-5 md:my-8">
+                <WorkCaseLabel className="mb-3">Relationship disclosure</WorkCaseLabel>
                 <p className="max-w-[65rem] text-sm leading-relaxed text-stone-700">{text}</p>
             </aside>
         );

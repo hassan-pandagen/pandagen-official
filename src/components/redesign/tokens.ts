@@ -44,4 +44,7 @@ export const DISPLAY = "var(--display, Zodiak), Georgia, serif";
 // by default; in condensed mode it becomes the body sans, because Anton is only
 // legible large. grigoletti.ch does the same with its own condensed face.
 export const DISPLAY_SM = "var(--display-sm, Zodiak), Georgia, serif";
-export const MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
+export const BODY = 'var(--font-body, "PT Serif"), Georgia, serif';
+export const UI = "var(--font-sans), Arial, sans-serif";
+// Historical export name used by compact labels; code blocks keep font-mono.
+export const MONO = UI;

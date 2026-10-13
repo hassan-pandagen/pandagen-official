@@ -1,0 +1,112 @@
+{
+  "pass": true,
+  "pages": 15,
+  "initialHtml": true,
+  "results": [
+    {
+      "path": "/",
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "titleCharacters": 50,
+      "schemaAnswers": 5,
+      "pass": true
+    },
+    {
+      "path": "/work/medical-template",
+      "title": "Medical Website Design: Practice Demo | PandaCodeGen",
+      "titleCharacters": 52,
+      "schemaAnswers": 4,
+      "pass": true
+    },
+    {
+      "path": "/work/a-step-above-medical",
+      "title": "A Step Above Medical: Website & Training System | PandaCodeGen",
+      "titleCharacters": 62,
+      "schemaAnswers": 5,
+      "pass": true
+    },
+    {
+      "path": "/services/wordpress",
+      "title": "WordPress Website Design & Development | PandaCodeGen",
+      "titleCharacters": 53,
+      "schemaAnswers": 11,
+      "pass": true
+    },
+    {
+      "path": "/services/wordpress-migration",
+      "title": "WordPress to Next.js Migration Services | PandaCodeGen",
+      "titleCharacters": 54,
+      "schemaAnswers": 11,
+      "pass": true
+    },
+    {
+      "path": "/services/ecommerce",
+      "title": "Shopify & WooCommerce Ecommerce Development | PandaCodeGen",
+      "titleCharacters": 58,
+      "schemaAnswers": 10,
+      "pass": true
+    },
+    {
+      "path": "/services/woocommerce",
+      "title": "WooCommerce Development Services & Migration | PandaCodeGen",
+      "titleCharacters": 59,
+      "schemaAnswers": 11,
+      "pass": true
+    },
+    {
+      "path": "/services/wix",
+      "title": "Wix Website Design, Redesign & Migration | PandaCodeGen",
+      "titleCharacters": 55,
+      "schemaAnswers": 10,
+      "pass": true
+    },
+    {
+      "path": "/services/squarespace",
+      "title": "Squarespace Website Design & Migration | PandaCodeGen",
+      "titleCharacters": 53,
+      "schemaAnswers": 10,
+      "pass": true
+    },
+    {
+      "path": "/services/webflow",
+      "title": "Webflow Development, Redesign & Migration | PandaCodeGen",
+      "titleCharacters": 56,
+      "schemaAnswers": 10,
+      "pass": true
+    },
+    {
+      "path": "/services/gohighlevel",
+      "title": "GoHighLevel Websites & CRM Integration | PandaCodeGen",
+      "titleCharacters": 53,
+      "schemaAnswers": 10,
+      "pass": true
+    },
+    {
+      "path": "/services/cms-development",
+      "title": "CMS Website Development & Integration | PandaCodeGen",
+      "titleCharacters": 52,
+      "schemaAnswers": 9,
+      "pass": true
+    },
+    {
+      "path": "/services/custom-engineering",
+      "title": "Custom Software & CRM Development | PandaCodeGen",
+      "titleCharacters": 48,
+      "schemaAnswers": 10,
+      "pass": true
+    },
+    {
+      "path": "/services/backend-development",
+      "title": "Backend Development Services: Supabase & APIs | PandaCodeGen",
+      "titleCharacters": 60,
+      "schemaAnswers": 9,
+      "pass": true
+    },
+    {
+      "path": "/services/ai-seo",
+      "title": "AI SEO & GEO Services | PandaCodeGen",
+      "titleCharacters": 36,
+      "schemaAnswers": 10,
+      "pass": true
+    }
+  ]
+}

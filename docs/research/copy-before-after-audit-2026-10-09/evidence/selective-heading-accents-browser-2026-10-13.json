@@ -1,0 +1,1992 @@
+{
+  "pass": true,
+  "cases": 81,
+  "paths": 27,
+  "apiIntercepted": true,
+  "physicalDevices": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "business",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          },
+          {
+            "text": "clear price",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          },
+          {
+            "text": "Founder-built",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Websites built for the way you do business."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Development",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Website design. Development, too."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "GEO",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "AI SEO services. AEO & GEO."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/backend-development",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "workflows",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Backend development services. Customer logins, data and workflows."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "business",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "CMS website development. An editor built for your business."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/custom-engineering",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "team tools",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Custom software development. CRMs, portals and team tools."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/ecommerce",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "custom",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Ecommerce website development. Shopify, WooCommerce or custom."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/gohighlevel",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "CRM",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "GoHighLevel website design. Keep your CRM. Improve the site."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/medical-website-design",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "training",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Medical website design. For practices and medical training providers."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/small-business-website-design",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "founders",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Small business website design. Built with the founders."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/squarespace",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "redesigns",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Squarespace website design. New sites and redesigns."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/webflow",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "migration",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Webflow development services. New sites, redesigns and migration."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/wix",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Redesign",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Wix website design. Redesign or move."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/woocommerce",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "migrate",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "WooCommerce development services. Build, improve or migrate."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/wordpress",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "redesigns",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "WordPress website development. New sites and redesigns."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Keep",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          },
+          {
+            "text": "Own",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Move from WordPress to Next.js. Keep what works."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/pricing",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "clear price",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "A better site. A clear price."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/work",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "software",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Websites, stores and software."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/about",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [],
+        "h1": "Know who you're building with."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/contact",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "founders",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Talk directly to the founders."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "read",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Good questions. Worth a read."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [],
+        "h1": "Panda Patches."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog/sanity-vs-wordpress",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Editor",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Sanity vs WordPress: Which Editor Fits Your Website?"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog/website-migration-cost-2026",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [],
+        "h1": "Website Migration Cost: Prices, Scope and Timeline"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog/product-catalog-website-without-cart",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Quote Requests",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Product Catalog Website Without a Cart: Take Quote Requests"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/blog/website-monthly-running-cost",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Under $50",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "How Much Does a Website Cost per Month? Our Stack Runs Under $50"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/partners",
+      "geometry": {
+        "width": 320,
+        "pageWidth": 320,
+        "clipped": [],
+        "accents": [],
+        "h1": "White-label web development.Your client. Your brand."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "business",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          },
+          {
+            "text": "clear price",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          },
+          {
+            "text": "Founder-built",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Websites built for the way you do business."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Development",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Website design. Development, too."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "GEO",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "AI SEO services. AEO & GEO."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/backend-development",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "workflows",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Backend development services. Customer logins, data and workflows."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "business",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "CMS website development. An editor built for your business."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/custom-engineering",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "team tools",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Custom software development. CRMs, portals and team tools."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/ecommerce",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "custom",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Ecommerce website development. Shopify, WooCommerce or custom."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/gohighlevel",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "CRM",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "GoHighLevel website design. Keep your CRM. Improve the site."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/medical-website-design",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "training",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Medical website design. For practices and medical training providers."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/small-business-website-design",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "founders",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Small business website design. Built with the founders."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/squarespace",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "redesigns",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Squarespace website design. New sites and redesigns."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/webflow",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "migration",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Webflow development services. New sites, redesigns and migration."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/wix",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Redesign",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Wix website design. Redesign or move."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/woocommerce",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "migrate",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "WooCommerce development services. Build, improve or migrate."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/wordpress",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "redesigns",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "WordPress website development. New sites and redesigns."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Keep",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          },
+          {
+            "text": "Own",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Move from WordPress to Next.js. Keep what works."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/pricing",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "clear price",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "A better site. A clear price."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/work",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "software",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Websites, stores and software."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/about",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [],
+        "h1": "Know who you're building with."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/contact",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "founders",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Talk directly to the founders."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "read",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Good questions. Worth a read."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [],
+        "h1": "Panda Patches."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog/sanity-vs-wordpress",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Editor",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Sanity vs WordPress: Which Editor Fits Your Website?"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog/website-migration-cost-2026",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [],
+        "h1": "Website Migration Cost: Prices, Scope and Timeline"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog/product-catalog-website-without-cart",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Quote Requests",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Product Catalog Website Without a Cart: Take Quote Requests"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/blog/website-monthly-running-cost",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Under $50",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "How Much Does a Website Cost per Month? Our Stack Runs Under $50"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "path": "/partners",
+      "geometry": {
+        "width": 1440,
+        "pageWidth": 1440,
+        "clipped": [],
+        "accents": [],
+        "h1": "White-label web development.Your client. Your brand."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "business",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          },
+          {
+            "text": "clear price",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          },
+          {
+            "text": "Founder-built",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Websites built for the way you do business."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Development",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Website design. Development, too."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/ai-seo",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "GEO",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "AI SEO services. AEO & GEO."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/backend-development",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "workflows",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Backend development services. Customer logins, data and workflows."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/cms-development",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "business",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "CMS website development. An editor built for your business."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/custom-engineering",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "team tools",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Custom software development. CRMs, portals and team tools."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/ecommerce",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "custom",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Ecommerce website development. Shopify, WooCommerce or custom."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/gohighlevel",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "CRM",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "GoHighLevel website design. Keep your CRM. Improve the site."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/medical-website-design",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "training",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Medical website design. For practices and medical training providers."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/small-business-website-design",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "founders",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Small business website design. Built with the founders."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/squarespace",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "redesigns",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Squarespace website design. New sites and redesigns."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/webflow",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "migration",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Webflow development services. New sites, redesigns and migration."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/wix",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Redesign",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Wix website design. Redesign or move."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/woocommerce",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "migrate",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "WooCommerce development services. Build, improve or migrate."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/wordpress",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "redesigns",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "WordPress website development. New sites and redesigns."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/services/wordpress-migration",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Keep",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          },
+          {
+            "text": "Own",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Move from WordPress to Next.js. Keep what works."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/pricing",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "clear price",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "A better site. A clear price."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/work",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "software",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Websites, stores and software."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/about",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [],
+        "h1": "Know who you're building with."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/contact",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "founders",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Talk directly to the founders."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "read",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(122, 46, 14)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Good questions. Worth a read."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/work/panda-patches",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [],
+        "h1": "Panda Patches."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog/sanity-vs-wordpress",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Editor",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Sanity vs WordPress: Which Editor Fits Your Website?"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog/website-migration-cost-2026",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [],
+        "h1": "Website Migration Cost: Prices, Scope and Timeline"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog/product-catalog-website-without-cart",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Quote Requests",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "Product Catalog Website Without a Cart: Take Quote Requests"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/blog/website-monthly-running-cost",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [
+          {
+            "text": "Under $50",
+            "font": "Georgia, serif",
+            "style": "italic",
+            "weight": "400",
+            "transform": "none",
+            "color": "rgb(232, 118, 58)",
+            "whiteSpace": "nowrap",
+            "rects": 1
+          }
+        ],
+        "h1": "How Much Does a Website Cost per Month? Our Stack Runs Under $50"
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "path": "/partners",
+      "geometry": {
+        "width": 390,
+        "pageWidth": 390,
+        "clipped": [],
+        "accents": [],
+        "h1": "White-label web development.Your client. Your brand."
+      },
+      "scopedAccessibilityViolations": [],
+      "pass": true
+    }
+  ]
+}

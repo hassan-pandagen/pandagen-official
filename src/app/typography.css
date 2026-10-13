@@ -1,0 +1,49 @@
+/* Three roles: Anton display, PT Serif reading/italic, Inter interface.
+   Explicit display, code and brand faces remain scoped by their components. */
+.font-pt-serif {
+  --font-body: "PT Serif", Georgia, serif;
+  --font-serif: "PT Serif", Georgia, serif;
+}
+
+.font-body {
+  font-family: var(--font-body);
+  font-synthesis: none;
+}
+
+/* Include older article callouts that used the font-serif utility on headings. */
+[data-font="anton"] :where(h1, h2) {
+  font-family: var(--font-anton), Impact, sans-serif;
+}
+
+:where(nav, button, input, textarea, select, summary, label, small,
+  figcaption, caption, th, dt, h3, h4, h5, h6,
+  [role="button"], [role="tab"], [role="dialog"], dialog,
+  [data-cookie-control], .uppercase) {
+  font-family: var(--font-sans), Arial, sans-serif;
+}
+
+/* Some forms use font: inherit in their component styles. Keep their
+   interactive fields in the interface face rather than inheriting prose. */
+.font-pt-serif :is(button, input, textarea, select, summary, label) {
+  font-family: var(--font-sans), Arial, sans-serif;
+}
+
+/* Standalone links are interface actions; links within reading copy follow it. */
+a { font-family: var(--font-sans), Arial, sans-serif; }
+:is(p, li, dd, blockquote, h1, h2, h3, h4, h5, h6) a:not([class*="bg-"]) {
+  font-family: inherit;
+}
+
+/* A card can be a link, but its description still belongs to the reading face. */
+:where(main, footer) :where(p:not(.uppercase), blockquote) {
+  font-family: var(--font-body);
+}
+
+/* Keep navigation, consent/chat interfaces and attribution text in Inter. */
+:where(nav, [role="dialog"], figcaption, caption) p {
+  font-family: var(--font-sans), Arial, sans-serif;
+}
+
+.font-pt-serif :is([role="dialog"], dialog, [data-cookie-control]) :is(p, h1, h2) {
+  font-family: var(--font-sans), Arial, sans-serif;
+}

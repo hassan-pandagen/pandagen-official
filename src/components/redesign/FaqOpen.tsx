@@ -1,3 +1,4 @@
+import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import { homeFaqs } from "@/data/home-faqs";
 import FaqRows from "@/components/ui/FaqRows";
 import { DISPLAY, T } from "@/components/redesign/tokens";
@@ -25,13 +26,13 @@ export default function FaqOpen() {
   const faqs = homepageFaqs();
 
   return (
-    <section aria-labelledby="faq-title" className="px-6 py-12 md:px-10 md:py-16" style={{ backgroundColor: T.paper }}>
+    <section aria-labelledby="faq-title" className="px-6 pb-6 pt-8 md:px-10 md:py-16" style={{ backgroundColor: T.paper }}>
       <div className="mx-auto max-w-[1440px]">
         <h2
           id="faq-title"
           style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.8vw, 4rem)", lineHeight: 1.08, letterSpacing: "-0.02em" }}
         >
-          Common questions about <span style={{ color: T.accent }}>working with us</span>
+          Common questions about <HeadingEmphasis text="working with us" />
         </h2>
 
         <FaqRows className="mt-10 md:mt-14" faqs={faqs.map(({ q, a }) => ({ question: q, answer: a }))} />
