@@ -136,7 +136,7 @@
   }
 
   // ── Helpers ──
-  function head(id, t, ins, out, outDur = 0.3) {
+  function head(id, t, ins, out, outDur = 0.4) {
     // Each line rises out of its own clip on the way in and leaves upward on the way out.
     const el = $(id), ls = lines[id];
     const on = t >= ins[0] - 0.01 && t < out + outDur + 0.01;
@@ -149,7 +149,7 @@
         ln.style.transform = "none";
         return;
       }
-      const pin = move(t, t0, 0.62, ease.settle);
+      const pin = move(t, t0, 0.85, ease.settle);
       const pout = move(t, tOut, outDur, ease.in);
       ln.style.opacity = "1";
       ln.style.transform = `translateY(${((1 - pin) * 112 - pout * 112).toFixed(2)}%)`;
@@ -158,23 +158,23 @@
   // A visual enters (rise + fade) and exits (slide left + fade).
   function vis(id, t, tin, tout) {
     const r = BR[id];
-    const a = fade(t, tin, 0.4), b = fade(t, tout, 0.3);
-    const dy = (1 - move(t, tin, 0.6)) * RISE * 1.5;
-    const dx = reduced ? 0 : -90 * move(t, tout, 0.35, ease.in);
+    const a = fade(t, tin, 0.55), b = fade(t, tout, 0.4);
+    const dy = (1 - move(t, tin, 0.9)) * RISE * 1.5;
+    const dx = reduced ? 0 : -70 * move(t, tout, 0.5, ease.in);
     const push = reduced ? 0 : 0.025 * clamp((t - tin) / Math.max(0.1, tout - tin));
-    const s = reduced ? 1 : lerp(1.035, 1, move(t, tin, 0.8)) + push;
+    const s = reduced ? 1 : lerp(1.035, 1, move(t, tin, 1.1)) + push;
     const o = Math.min(a, 1 - b);
     $(id).style.opacity = String(Math.round(o * 1000) / 1000);
     $(id).style.visibility = o <= 0.001 ? "hidden" : "visible";
     $(id).style.transform = `translate(${px(dx + r.w * (1 - s) / 2)},${px(dy + r.h * (1 - s) / 2)}) scale(${s})`;
   }
   function el(id, t, tin, tout, dy0 = 0.8) {
-    const o = Math.min(fade(t, tin, 0.3), 1 - fade(t, tout, 0.25));
-    show($(id), o, 0, (1 - move(t, tin, 0.45)) * dy0 * (reduced ? 0 : 16));
+    const o = Math.min(fade(t, tin, 0.4), 1 - fade(t, tout, 0.3));
+    show($(id), o, 0, (1 - move(t, tin, 0.6)) * dy0 * (reduced ? 0 : 16));
   }
   // How much of the screen the charcoal panel covers: 0 = paper, 1 = charcoal.
   function nightAt(t) {
-    const into = (t0) => move(t, t0, 0.5, ease.inOut);
+    const into = (t0) => move(t, t0, 0.7, ease.inOut);
     if (t < C.turn) return 0;
     if (t < C.s5) return into(C.turn);
     if (t < C.founders) return 1 - into(C.s5 - 0.1);
@@ -205,24 +205,24 @@
   function s1(t) {
     vis("v1", t, -1, C.s2 - 0.15);
     const q = "Who can build a booking site for my clinic?";
-    const n = Math.round(clamp((t + 0.45) / 1.75) * q.length);
+    const n = Math.round(clamp((t + 0.45) / 2.4) * q.length);
     const ut = $("utext"); const s = q.slice(0, n);
     if (ut.textContent !== s) ut.textContent = s;
     show($("ubub"), 1);
-    show(document.querySelector("#v1 .adot"), t >= 1.9 ? 1 : 0);
-    const seekOn = t >= 1.95 && t < 2.75;
+    show(document.querySelector("#v1 .adot"), t >= 2.4 ? 1 : 0);
+    const seekOn = t >= 2.45 && t < 3.3;
     const sk = $("seek");
-    sk.style.opacity = seekOn ? String(0.55 + 0.45 * Math.abs(Math.sin((t - 1.95) * Math.PI * 1.6))) : t >= 2.75 ? "0" : "0";
-    for (const [id, t0] of [["ans1", 2.7], ["ans2", 2.85]]) {
-      const p = move(t, t0, 0.45);
+    sk.style.opacity = seekOn ? String(0.55 + 0.45 * Math.abs(Math.sin((t - 2.45) * Math.PI * 1.2))) : "0";
+    for (const [id, t0] of [["ans1", 3.35], ["ans2", 3.55]]) {
+      const p = move(t, t0, 0.6);
       $(id).style.transform = `scaleX(${reduced ? (t >= t0 ? 1 : 0) : p})`; $(id).style.transformOrigin = "0 50%";
       $(id).style.opacity = t >= t0 ? "1" : "0";
     }
-    el("src1", t, 3.05, 99); el("src2", t, 3.25, 99);
+    el("src1", t, 3.7, 99); el("src2", t, 3.95, 99);
     const y = $("src3");
-    const o = fade(t, 3.99, 0.3);
+    const o = fade(t, C.showUp, 0.4);
     y.style.opacity = String(o); y.style.visibility = o > 0 ? "visible" : "hidden";
-    y.style.transform = `scale(${reduced ? 1 : lerp(1.18, 1, move(t, 3.99, 0.5))})`;
+    y.style.transform = `scale(${reduced ? 1 : lerp(1.18, 1, move(t, C.showUp, 0.7))})`;
     head("h1", t, [-1, -1], C.s2 - 0.2);
   }
 
@@ -230,12 +230,12 @@
     vis("v2", t, C.s2 + 0.05, C.s3 - 0.15);
     const em = BR.v2.em;
     APPS.forEach((_, k) => {
-      const t0 = C.s2 + 0.1 + k * 0.2;
-      const p = move(t, t0, 0.5);
+      const t0 = C.s2 + 0.2 + k * 0.32;
+      const p = move(t, t0, 0.75);
       const a = $(`app${k}`);
       const gx = (k % 3) * 10.7, gy = Math.floor(k / 3) * 8.6;
       a.style.left = `${gx}em`; a.style.top = `${gy}em`;
-      a.style.opacity = String(fade(t, t0, 0.25));
+      a.style.opacity = String(fade(t, t0, 0.35));
       a.style.transform = `translateY(${px((1 - p) * -2.2 * em)}) rotate(${(APP_ROT[k] * (reduced ? 1 : p)).toFixed(2)}deg)`;
     });
     head("h2", t, [C.s2 + 0.05, C.s2 + 0.3], C.s3 - 0.2);
@@ -247,18 +247,18 @@
     const step = M.titem;
     let count = 0;
     TODO.forEach((_, k) => {
-      const t0 = C.s3 + 0.2 + k * 0.38;
+      const t0 = C.s3 + 0.35 + k * 0.52;
       if (t >= t0) count = k + 1;
       const r = $(`ti${k}`);
-      r.style.opacity = String(fade(t, t0, 0.2));
-      r.style.transform = `translateX(${px((1 - move(t, t0, 0.35)) * -1.2 * em)})`;
+      r.style.opacity = String(fade(t, t0, 0.3));
+      r.style.transform = `translateX(${px((1 - move(t, t0, 0.5)) * -1.2 * em)})`;
     });
     // Keep the newest item in view: the list scrolls as it grows.
     const visible = Math.floor(M.todoView / step);
     const over = Math.max(0, count - visible);
     const prev = Math.max(0, count - 1 - visible);
     const kLast = Math.max(0, count - 1);
-    const p = move(t, C.s3 + 0.2 + kLast * 0.38, 0.3);
+    const p = move(t, C.s3 + 0.35 + kLast * 0.52, 0.45);
     const scroll = reduced ? over : lerp(prev, over, p);
     $("titems").style.transform = `translateY(${px(-scroll * step)})`;
     head("h3a", t, [C.s3 + 0.05, C.s3 + 0.25], C.ageAI - 0.15);
@@ -267,10 +267,10 @@
 
   function s4(t) {
     vis("v4", t, C.turn + 0.25, C.s5 - 0.1);
-    MODS.forEach((_, k) => el(`m4${k}`, t, C.turn + 0.3 + k * 0.18, 99, 0.5));
+    MODS.forEach((_, k) => el(`m4${k}`, t, C.turn + 0.4 + k * 0.25, 99, 0.5));
     // The frame draws on at "We'll build it."
     const fr = $("v4").firstElementChild;
-    const p = reduced ? (t >= C.engine ? 1 : 0) : move(t, C.engine, 0.6, ease.inOut);
+    const p = reduced ? (t >= C.engine ? 1 : 0) : move(t, C.engine, 0.8, ease.inOut);
     fr.style.borderColor = `rgba(232,118,58,${p.toFixed(3)})`;
     fr.style.clipPath = "none";
     const nm = fr.querySelector(".name");
@@ -283,7 +283,7 @@
     // a · readable website
     vis("v5a", t, C.s5 + 0.1, C.flow - 0.1);
     const em = BR.v5a.em;
-    const scanT0 = C.s5 + 0.5, scanT1 = C.s5 + 3.0;
+    const scanT0 = C.s5 + 0.6, scanT1 = C.s5 + 3.6;
     const sp = reduced ? 1 : clamp((t - scanT0) / (scanT1 - scanT0));
     const sy = lerp(3.2 * em, M.siteH - 0.4 * em, sp);
     const scan = $("scan");
@@ -298,7 +298,7 @@
       const tr = scanT0 + (scanT1 - scanT0) * ((s.y + s.h * 0.5 - 3.2 * em) / (M.siteH - 3.6 * em));
       ok.style.opacity = reached ? String(fade(t, reduced ? scanT0 + 0.3 * k : tr, 0.2)) : "0";
     });
-    el("fine", t, C.s5 + 0.9, C.flow - 0.15, 0.4);
+    el("fine", t, C.s5 + 1.0, C.flow - 0.15, 0.4);
     head("h5a", t, [C.s5 + 0.05, C.s5 + 0.25], C.flow - 0.2);
 
     // b · busywork automated
@@ -310,7 +310,7 @@
     const wire = $("wire"), wfill = $("wfill");
     wire.style.left = `${cx(0)}em`; wire.style.width = `${cx(3) - cx(0)}em`; wire.style.top = `${cy - 0.11}em`;
     wfill.style.left = `${cx(0)}em`; wfill.style.top = `${cy - 0.11}em`;
-    const hits = [18.4, 19.25, 20.1, 21.0];
+    const hits = [C.hit0, C.hit1, C.hit2, C.hit3];
     let fx = cx(0);
     for (let k = 0; k < 3; k++) {
       const p = reduced ? (t >= hits[k + 1] ? 1 : 0) : clamp((t - hits[k]) / (hits[k + 1] - hits[k]));
@@ -327,18 +327,18 @@
       const c = $(`ndc${k}`);
       const sv = c.querySelector("svg");
       sv.setAttribute("stroke", on ? "#EBE9E4" : "#1C1917");
-      c.style.transform = `scale(${on && !reduced ? lerp(1.12, 1, move(t, h, 0.4)) : 1})`;
+      c.style.transform = `scale(${on && !reduced ? lerp(1.12, 1, move(t, h, 0.55)) : 1})`;
     });
     head("h5b", t, [C.flow + 0.06, C.flow + 0.25], C.tools - 0.15);
 
     // c · built around how you work
     vis("v5c", t, C.tools, C.founders + 0.1);
     MODS.forEach((_, k) => {
-      const t0 = C.tools + 0.15 + k * 0.25;
+      const t0 = C.tools + 0.3 + k * 0.35;
       const m = $(`m5${k}`);
       const on = t >= t0;
       m.classList.toggle("done", on);
-      m.style.transform = `scale(${on && !reduced ? lerp(0.94, 1, move(t, t0, 0.35)) : 1})`;
+      m.style.transform = `scale(${on && !reduced ? lerp(0.94, 1, move(t, t0, 0.5)) : 1})`;
     });
     head("h5c", t, [C.tools + 0.03, C.tools + 0.23], C.founders - 0.15);
   }
@@ -348,8 +348,8 @@
     const em = BR.v6.em;
     // Five nodes in a column; the three in the middle are struck out and fold away.
     const gap = 4.9, nh = 3.4;
-    const strikeT = C.direct + 0.05, foldT = C.direct + 0.75;
-    const fold = reduced ? (t >= foldT ? 1 : 0) : move(t, foldT, 0.7, ease.inOut);
+    const strikeT = C.direct + 0.1, foldT = C.direct + 1.1;
+    const fold = reduced ? (t >= foldT ? 1 : 0) : move(t, foldT, 0.9, ease.inOut);
     const ys = [0, gap, 2 * gap, 3 * gap, 4 * gap];
     const yEnd4 = gap * 1.45;
     const groupShift = lerp(0, (4 * gap - yEnd4) / 2, fold);
@@ -359,14 +359,14 @@
       if (k === 4) y = lerp(ys[4], yEnd4, fold);
       if (k > 0 && k < 4) y = lerp(ys[k], yEnd4 * (0.25 + 0.2 * k) , fold);
       n.style.top = `${(y + groupShift).toFixed(3)}em`;
-      const t0 = C.founders + 0.25 + k * 0.14;
-      let o = fade(t, t0, 0.3);
+      const t0 = C.founders + 0.35 + k * 0.22;
+      let o = fade(t, t0, 0.4);
       if (k > 0 && k < 4) o = Math.min(o, 1 - (reduced ? fade(t, foldT, 0.45) : move(t, foldT, 0.35)));
       n.style.opacity = String(Math.round(o * 1000) / 1000);
-      n.style.transform = `translateX(${px((1 - move(t, t0, 0.5)) * (reduced ? 0 : -1.2 * em))})`;
+      n.style.transform = `translateX(${px((1 - move(t, t0, 0.7)) * (reduced ? 0 : -1.2 * em))})`;
       if (k > 0 && k < 4) {
         const sk = $(`sk${k}`);
-        sk.style.transform = `scaleX(${reduced ? (t >= strikeT ? 1 : 0) : move(t, strikeT + (k - 1) * 0.12, 0.3, ease.out)})`;
+        sk.style.transform = `scaleX(${reduced ? (t >= strikeT ? 1 : 0) : move(t, strikeT + (k - 1) * 0.18, 0.4, ease.out)})`;
       }
     });
     const ln = $("cline");
@@ -385,8 +385,8 @@
   function s7(t) {
     head("h7", t, [C.end + 0.15, C.end + 0.35], 99);
     el("endWm", t, C.end + 0.1, 99, 0.6);
-    el("endCta", t, C.end + 0.6, 99, 0.6);
-    el("endDomain", t, 31.82, 99, 0.6);
+    el("endCta", t, C.end + 0.8, 99, 0.6);
+    el("endDomain", t, C.domain, 99, 0.6);
   }
 
   function render(t) {

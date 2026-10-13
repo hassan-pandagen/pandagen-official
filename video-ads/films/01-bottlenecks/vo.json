@@ -1,38 +1,19 @@
 {
   "voice": "af_heart",
-  "speed": 0.96,
+  "speed": 0.9,
   "lines": [
-    {
-      "id": "L1",
-      "text": "When customers ask ChatGPT or Claude who to hire, does your business come up?"
-    },
-    {
-      "id": "L2",
-      "text": "Still paying for apps that don't quite fit?"
-    },
-    {
-      "id": "L3",
-      "text": "Still running it all by hand, in the age of AI?"
-    },
-    {
-      "id": "L4",
-      "text": "Tell us what you need. We'll build it.",
-      "say": "Tell us what you need... We'll build it."
-    },
-    {
-      "id": "L5",
-      "text": "A website that search engines and AI assistants can read. Confirmations, reminders and invoices that send themselves. Tools built around how you work.",
-      "say": "A website that search engines, and AI assistants, can read. Confirmations, reminders and invoices, that send themselves. Tools, built around how you work."
-    },
-    {
-      "id": "L6",
-      "text": "Work with experts. Talk directly to the founders who build it, not a sales agent.",
-      "say": "Work with experts. Talk directly to the founders who build it... not a sales agent."
-    },
-    {
-      "id": "L7",
-      "text": "Tell us what you need, at pandacodegen.com.",
-      "say": "Tell us what you need, at Panda Code Gen dot com."
-    }
+    {"id": "L1", "text": "When customers ask ChatGPT or Claude who to hire, are you showing up?",
+     "say": "When customers ask ChatGPT or Claude who to hire... are you showing up?"},
+    {"id": "L2", "text": "Are you paying for apps that still don't do what you need?"},
+    {"id": "L3", "text": "Are you still doing it all by hand, in the age of AI?",
+     "say": "Are you still doing it all by hand... in the age of AI?"},
+    {"id": "L4", "text": "Tell us what you need. We'll build it.", "say": "Tell us what you need... We'll build it."},
+    {"id": "L5", "text": "A website that search engines and AI assistants can read."},
+    {"id": "L6", "text": "Confirmations, reminders and invoices that send themselves.",
+     "say": "Confirmations, reminders, and invoices, that send themselves."},
+    {"id": "L7", "text": "And tools built around the way you work."},
+    {"id": "L8", "text": "Work with experts. Talk directly to the founders who build it, not a sales agent.",
+     "say": "Work with experts. Talk directly to the founders who build it... not a sales agent."},
+    {"id": "L9", "text": "Tell us what you need, at pandacodegen.com.", "say": "Tell us what you need, at Panda Code Gen dot com."}
   ]
 }

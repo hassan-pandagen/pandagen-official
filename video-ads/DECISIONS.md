@@ -56,3 +56,10 @@ One line per call, newest last. "Brief" means the campaign brief pasted on 13 Oc
 - **No burned-in captions,** at the owner's request. The SRT files are still exported (`captions_*.srt`) for platforms that take caption files; `burnCaptions: false` in the timeline controls it.
 - **Polish:** headlines now rise out of a mask line by line and leave upward. The visuals use the space the caption band freed (16:9 860×840, 9:16 960×820, 1:1 860×700).
 - **Brand name in the voice:** the offline speech model spells "Panda Code Gen dot com" as "pandacogen.com" whatever the phrasing. It also mishears an earlier take that passed in the full mix, so the test is unreliable on this made-up name. The domain is on screen when it's spoken; a human should still listen once.
+
+## Film 01 v4 (owner feedback, 13 Oct 2026)
+
+- **"Too fast; should read like an ad."** The script is now three direct questions ("…are you showing up?", "Are you paying for apps that still don't do what you need?", "Are you still doing it all by hand, in the age of AI?") before the turn. Each line gets its own beat with 0.8–1.15 s of quiet before the next scene.
+- **Slower overall:** the voice runs at speed 0.90 (was 0.96), the film is 44.1 s (was 36), and the promise is split into three lines with their own scenes. Headline reveals, visual entrances, list items, app tiles, workflow nodes and the founders fold all move about 30–50 % slower. Music is 96 BPM (was 104).
+- **`retime.py`** generates the timeline from the recorded voice, so a studio voice later needs only: tts → retime → audio → render.
+- **Checks on the final files:** 44.1 s, 2646 frames at 60 fps, −16.0 LUFS, −2.2 dBTP on all four; voice about 11.8 dB above the ducked music. ASR word error 0.044; the only misses are "chat GPT", "assistance" and the brand name at the end.
