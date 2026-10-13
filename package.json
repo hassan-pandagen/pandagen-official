@@ -28,7 +28,7 @@
     "check": "npm run typecheck && npm run lint && npm test && npm run claims:check && npm run dates:check",
     "smoke:release": "node release-smoke.mjs",
     "seo:check": "node seo-audit.mjs",
-    "audit:dependencies": "npm audit --audit-level=high",
+    "audit:dependencies": "node scripts/audit-dependencies.mjs",
     "indexnow": "node indexnow-ping.mjs",
     "verify": "npm run check && npm run build && npm run guard:all",
     "assistant:questions": "node scripts/assistant-questions.mjs",
