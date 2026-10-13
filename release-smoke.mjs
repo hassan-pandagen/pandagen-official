@@ -54,7 +54,8 @@ try {
     "base-uri 'self'",
     "object-src 'none'",
     "frame-ancestors 'none'",
-    "form-action 'self'",
+    // www.facebook.com: the consent-gated Meta pixel posts its events there (13 Oct 2026).
+    "form-action 'self' https://www.facebook.com",
   ]) {
     expect(containsDirective(csp, directive), `/: enforced CSP is missing ${directive}`);
   }
