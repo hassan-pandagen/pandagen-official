@@ -262,7 +262,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 <X className="h-5 w-5" />
               </button>
 
-              <div data-lenis-prevent className="relative overflow-y-auto p-5 md:p-8">
+              <div data-lenis-prevent className="relative overflow-y-auto p-5 md:px-8 md:py-6">
                 {isSubmitted ? (
                   <div role="status" aria-live="polite" className="flex min-h-80 flex-col items-center justify-center px-4 text-center">
                     <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-cognac/10 text-cognac">
@@ -280,7 +280,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                   </div>
                 ) : (
                   <>
-                    <div className="mb-7 pr-10">
+                    <div className="mb-5 pr-10">
                       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-cognac">Direct to the founders</p>
                       <h2 id="quote-modal-title" className="text-2xl font-bold text-charcoal md:text-3xl">
                         What would you like <span className="font-serif italic text-cognac">help with?</span>
@@ -298,7 +298,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                       onBlurCapture={formFunnel.onBlurCapture}
                       onInvalidCapture={handleInvalidCapture}
                       aria-busy={isLoading}
-                      className="space-y-5"
+                      className="space-y-4"
                     >
                       <div className="grid gap-4 md:grid-cols-2">
                         <Field label="Name" id="quote-name" required>
@@ -337,7 +337,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                           id="quote-details"
                           name="details"
                           maxLength={5000}
-                          rows={details ? 6 : 4}
+                          rows={details ? 5 : 3}
                           value={details}
                           onChange={(event) => setDetails(event.target.value)}
                           autoComplete="off"
@@ -359,7 +359,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                         />
                       </Field>
 
-                      <details className="group border-y border-stone-200 py-3">
+                      <details className="group border-y border-stone-200 py-2">
                         <summary className="flex cursor-pointer list-none items-center justify-between gap-3 py-1 text-sm font-medium text-stone-600 transition-colors hover:text-charcoal [&::-webkit-details-marker]:hidden">
                           Add a phone number <span className="sr-only">(optional)</span>
                           <ChevronDown aria-hidden="true" className="h-4 w-4 transition-transform group-open:rotate-180" />
