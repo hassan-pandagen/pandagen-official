@@ -1,0 +1,14 @@
+/* PandaCodeGen campaign tokens. Values copied from src/components/redesign/tokens.ts (24 Sep 2026 palette). */
+:root{
+  --paper:#EBE9E4; --paper-hi:#F5F4F0; --ink:#1C1917; --body:#3A3733; --quiet:#5E5B55;
+  --rule:rgba(28,25,23,.16); --accent:#AD3D0B; --accent-text:#7A2E0E;
+  --dark:#1C1917; --on-dark:#EBE9E4; --on-dark-quiet:#A8A49C; --on-dark-accent:#E8763A; --on-dark-rule:rgba(235,233,228,.16);
+  --display:"Anton",Impact,sans-serif; --serif:"PT Serif",Georgia,serif; --ui:"Inter",Arial,sans-serif;
+}
+/* Locally bundled OFL fonts (see brand/fonts/OFL-*.txt). Latin subsets only. */
+@font-face{font-family:Anton;font-weight:400;font-style:normal;src:url(fonts/anton-latin.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:100 900;font-style:normal;src:url(fonts/inter-latin.woff2) format("woff2")}
+@font-face{font-family:"PT Serif";font-weight:400;font-style:normal;src:url(fonts/pt-serif-normal-400-latin.woff2) format("woff2")}
+@font-face{font-family:"PT Serif";font-weight:400;font-style:italic;src:url(fonts/pt-serif-italic-400-latin.woff2) format("woff2")}
+@font-face{font-family:"PT Serif";font-weight:700;font-style:normal;src:url(fonts/pt-serif-normal-700-latin.woff2) format("woff2")}
+@font-face{font-family:"PT Serif";font-weight:700;font-style:italic;src:url(fonts/pt-serif-italic-700-latin.woff2) format("woff2")}

@@ -1,0 +1,32 @@
+{
+  "voice": "af_heart",
+  "speed": 1.0,
+  "sample_rate": 24000,
+  "lines": [
+    {
+      "id": "L1",
+      "text": "Your website can look good and still make it hard for customers to take the next step.",
+      "duration": 4.602
+    },
+    {
+      "id": "L2",
+      "text": "PandaCodeGen builds business websites around what you need: clear service pages, useful enquiries and content your team can update.",
+      "duration": 8.689
+    },
+    {
+      "id": "L3",
+      "text": "Improve your current website, build on WordPress or choose a custom site where it fits.",
+      "duration": 4.851
+    },
+    {
+      "id": "L4",
+      "text": "Work directly with Hassan and Imran, with the scope and price agreed before building.",
+      "duration": 4.876
+    },
+    {
+      "id": "L5",
+      "text": "Tell us what your website needs to do, at pandacodegen.com.",
+      "duration": 3.983
+    }
+  ]
+}

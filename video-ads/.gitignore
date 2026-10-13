@@ -1,0 +1,13 @@
+# The repository root ignores *.md and out/. This workspace's docs and rendered outputs are deliverables.
+!*.md
+!out/
+node_modules/
+# Full-page captures are large and re-creatable with `npm run capture`; the crops the films use are kept.
+screens/*-full.png
+films/*/audio/mix_prenorm.wav
+films/*/audio/mix_limited.wav
+# Re-creatable intermediates: stems come from tools/audio.py; source.zip repackages files already in this folder.
+films/*/audio/bed.wav
+films/*/audio/sfx.wav
+films/*/audio/vo_track.wav
+out/*/source.zip

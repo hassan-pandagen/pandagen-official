@@ -1,0 +1,13 @@
+{
+  "name": "pandacodegen-video-ads",
+  "private": true,
+  "type": "module",
+  "description": "Campaign video workspace. Separate from the website: no imports from src/, no changes to the site's dependencies.",
+  "scripts": {
+    "capture": "node tools/capture-screens.mjs",
+    "render": "node tools/render.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "1.56.1"
+  }
+}
