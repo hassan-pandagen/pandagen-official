@@ -83,6 +83,10 @@ const faqs = [
     answer: `${factValue(SERVICES, "Primary offer")} ${factValue(SERVICES, "Build stack")}`,
   },
   {
+    question: "What kind of tools can PandaCodeGen build for a business?",
+    answer: factValue(SERVICES, "Interactive website tools"),
+  },
+  {
     question: "Does SEO-safe mean rankings are guaranteed?",
     answer: "No. SEO-safe describes the controls used to reduce avoidable migration risk, including URL inventory, redirect mapping, metadata and canonical parity, internal links, structured data, staging checks, cutover monitoring, and rollback planning. Search engines control crawling, indexing, rankings, and rich results.",
   },

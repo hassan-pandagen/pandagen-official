@@ -40,6 +40,7 @@ const HEADER = `# PandaCodeGen
 - AI SEO, AEO and GEO services: ${SERVICES.find(fact => fact.label === 'AI SEO, AEO and GEO services')!.value}
 - Core platforms: WordPress, Webflow, and GoHighLevel. Also: Wix, Squarespace, Shopify (headless), and WooCommerce.
 - Custom work: Next.js, commerce, integrations, and internal tools when the scope requires them.
+- Interactive website tools: ${SERVICES.find(fact => fact.label === 'Interactive website tools')!.value}
 - Founded: PandaCodeGen has traded since February 2026. Panda Group Ventures L.L.C. was formed on 12 August 2026.
 - Legal name: Panda Group Ventures L.L.C., trading as PandaCodeGen.
 - Formation: Wyoming, United States, filed 12 August 2026
