@@ -37,3 +37,14 @@ One line per call, newest last. "Brief" means the campaign brief pasted on 13 Oc
 - **Kept deliberately:** the Emblematic crop's light-grey text (the client's own design), and the voice saying "pandacodegen.com" while the card shows "/contact".
 - **16:9 founder cards** sit as a row under the homepage price line, inside the empty part of the frame, so they cover no page text.
 - **9:16 and 1:1 screenshot windows** end at the caption band. The space below is left to the platform's interface in 9:16.
+
+## Film 01 v2 (owner feedback, 13 Oct 2026)
+
+- **New direction from the owner:** make it read like an ad. Ask about AI search, apps that don't fit and doing it all by hand; then "Tell us your bottlenecks. We build the engine."; founders full frame; original visuals using only the logo, colours and founder photos; no "independent client" or other company-fact labels. Built as `films/01-bottlenecks/`; v1 (`01-business-website`) stays as a reference.
+- **ChatGPT and Claude** are named in the voiceover (it's what customers do). Their logos and interfaces aren't copied, and the film doesn't show either one recommending PandaCodeGen, because that would be a made-up AI result. The chat is a generic "AI assistant" tagged Illustrative.
+- **One small line of fine print stays:** "Rankings and AI answers aren't guaranteed." It's on the AI-search beat only, so the ad doesn't promise placement.
+- **Subscriptions:** the line asks about "apps that don't quite fit", not apps in general, so it doesn't call every subscription bad.
+- **Professional voice:** ElevenLabs and other voice APIs are blocked by this environment's network policy. Amazon Polly is reachable, but the AWS variables here are placeholders it rejects (UnrecognizedClientException on a free DescribeVoices call), and Google Text-to-Speech is reachable with no key. v2 uses the free Kokoro voice at speed 0.96; `tools/tts.py` is the only thing to change once a key is added.
+- **Music:** a new ad-style track in `tools/audio.py` (`music.style: "ad"`): 104 BPM, A-minor pop loop, kick/clap/hats/bass, a riser into the turn, hits on "We'll build the engine" and the end card, and a calm break under the founders. Voice is about 12 dB above the ducked music.
+- **Vertical safe area, loosened on purpose:** text now stays inside y 220–1440 and x ≤ 940 (clear of the top bar, the bottom quarter and the right-hand rail, per TikTok and Shorts) so the frame is fuller. Meta's stricter Reels guidance keeps the bottom 35 % clear; on that placement the last caption line can sit near the CTA overlay.
+- **Founders:** photos take the full visual area (16:9: 390×700 each; 9:16: 470×680 each), with names set on the photos over a dark gradient.

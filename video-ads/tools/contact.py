@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 d, out, title = sys.argv[1], sys.argv[2], sys.argv[3]
 F = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 fb = ImageFont.truetype(F.replace("Sans.ttf", "Sans-Bold.ttf"), 34); f = ImageFont.truetype(F, 18); fl = ImageFont.truetype(F.replace("Sans.ttf", "Sans-Bold.ttf"), 22)
-rows = [("master_16x9", "16:9 master", 370, 8), ("social_9x16", "9:16 social", 184, 15), ("square_1x1", "1:1 square", 184, 15), ("reduced_motion_9x16", "9:16 reduced motion", 184, 15)]
+rows = [("master_16x9", "16:9 master", 370, 7), ("social_9x16", "9:16 social", 184, 14), ("square_1x1", "1:1 square", 184, 14), ("reduced_motion_9x16", "9:16 reduced motion", 184, 14)]
 blocks = []
 for key, label, tw, per in rows:
     fs = sorted(glob.glob(os.path.join(d, f"{key}-*.png")), key=lambda p: float(p.rsplit("-", 1)[1][:-4]))

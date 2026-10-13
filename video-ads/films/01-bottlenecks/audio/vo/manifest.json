@@ -1,0 +1,42 @@
+{
+  "voice": "af_heart",
+  "speed": 0.96,
+  "sample_rate": 24000,
+  "lines": [
+    {
+      "id": "L1",
+      "text": "When customers ask ChatGPT or Claude who to hire, does your business come up?",
+      "duration": 4.78
+    },
+    {
+      "id": "L2",
+      "text": "Still paying for apps that don't quite fit?",
+      "duration": 2.171
+    },
+    {
+      "id": "L3",
+      "text": "Still running it all by hand, in the age of AI?",
+      "duration": 2.857
+    },
+    {
+      "id": "L4",
+      "text": "Tell us your bottlenecks. We'll build the engine.",
+      "duration": 2.44
+    },
+    {
+      "id": "L5",
+      "text": "A website search engines and AI assistants can read. Confirmations, reminders and invoices that send themselves. Tools built around how you work.",
+      "duration": 10.549
+    },
+    {
+      "id": "L6",
+      "text": "Work directly with Hassan and Imran, with the price agreed before we build.",
+      "duration": 4.306
+    },
+    {
+      "id": "L7",
+      "text": "Tell us what's slowing you down, at pandacodegen.com.",
+      "duration": 3.511
+    }
+  ]
+}

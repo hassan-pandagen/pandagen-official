@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Film 01 · Tell us your bottlenecks</title>
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* Everything moves from seek(t) in film.js. No CSS transitions or keyframes. */
+  html,body{margin:0;padding:0;background:var(--paper);overflow:hidden}
+  *{box-sizing:border-box}
+  #stage{position:relative;overflow:hidden;background:var(--paper);font-family:var(--ui);-webkit-font-smoothing:antialiased}
+  .abs{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform,opacity}
+  p{margin:0}
+  #night{background:var(--dark)}
+  /* Headlines: Anton with one italic cognac phrase */
+  .hl{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:-.005em;color:var(--ink);white-space:nowrap}
+  .hl em{font-family:var(--serif);font-style:italic;text-transform:none;color:var(--accent);letter-spacing:-.01em}
+  .hl.on-dark{color:var(--on-dark)} .hl.on-dark em{color:var(--on-dark-accent)}
+  .ln{display:inline-block}
+  .fine{font:500 1em/1.3 var(--ui);color:var(--quiet);white-space:nowrap}
+  /* A visual "box" is designed in em and scaled to fit its slot */
+  .box{position:absolute;font-size:16px}
+  .card{background:var(--paper-hi);border:1px solid var(--rule);border-radius:.8em;box-shadow:0 1.4em 3.4em rgba(28,25,23,.16)}
+  /* V1 AI assistant (generic; no product's branding) */
+  .chat{position:absolute;inset:0;display:flex;flex-direction:column;overflow:hidden}
+  .chat .bar{display:flex;align-items:center;gap:.6em;padding:.9em 1.2em;border-bottom:1px solid var(--rule);font:600 .95em/1 var(--ui);color:var(--ink)}
+  .spark{width:1.5em;height:1.5em;border-radius:.45em;background:var(--ink);display:grid;place-items:center}
+  .spark svg{width:1em;height:1em}
+  .chat .body{flex:1;padding:1.2em;display:flex;flex-direction:column;gap:1em}
+  .ubub{align-self:flex-end;max-width:82%;background:var(--ink);color:var(--paper);font:500 1.3em/1.35 var(--ui);padding:.65em .9em;border-radius:1em 1em .25em 1em}
+  .arow{display:flex;gap:.7em;align-items:flex-start}
+  .adot{width:1.7em;height:1.7em;flex:none;border-radius:50%;background:var(--ink)}
+  .acol{flex:1;display:flex;flex-direction:column;gap:.55em}
+  .seek{font:500 1em/1.2 var(--ui);color:var(--quiet)}
+  .gbar{height:.7em;border-radius:.35em;background:rgba(28,25,23,.12)}
+  .srcs{display:flex;gap:.7em;margin-top:.3em}
+  .src{flex:1;height:4.6em;border-radius:.6em;background:#fff;border:1px solid var(--rule);padding:.7em;display:flex;flex-direction:column;gap:.45em}
+  .src i{display:block;width:1.3em;height:1.3em;border-radius:50%;background:rgba(28,25,23,.18)}
+  .src b{display:block;height:.5em;width:80%;border-radius:.25em;background:rgba(28,25,23,.12)}
+  .src.you{background:transparent;border:.16em dashed var(--accent);display:grid;place-items:center;font:700 1em/1.1 var(--ui);color:var(--accent-text);text-align:center}
+  .tagc{font:600 .7em/1 var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--quiet);margin-left:auto}
+  /* V2 apps */
+  .apps{position:absolute;inset:0}
+  .app{position:absolute;width:9.6em;height:7.6em;padding:.9em;display:flex;flex-direction:column;justify-content:space-between}
+  .app .ic{width:2.4em;height:2.4em;border-radius:.7em;display:grid;place-items:center;background:var(--ink)}
+  .app .ic svg{width:1.4em;height:1.4em}
+  .app b{font:600 1.05em/1.1 var(--ui);color:var(--ink)}
+  .app small{font:600 .8em/1 var(--ui);color:var(--accent-text)}
+  /* V3 to-do */
+  .todo{position:absolute;inset:0;overflow:hidden;padding:1.3em 1.5em}
+  .todo h4{margin:0 0 .7em;font:600 .85em/1 var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-text)}
+  .tview{position:absolute;left:1.5em;right:1.5em;top:3.2em;bottom:1em;overflow:hidden}
+  .titems{position:relative}
+  .ti{display:flex;align-items:center;gap:.7em;height:2.55em;border-bottom:1px solid var(--rule);font:500 1.15em/1.2 var(--ui);color:var(--ink);white-space:nowrap}
+  .ti i{width:1.05em;height:1.05em;flex:none;border:.13em solid var(--ink);border-radius:.25em}
+  /* V4/V5c engine */
+  .engine{position:absolute;inset:0;border:.18em solid var(--on-dark-accent);border-radius:1.2em;padding:2.6em 1.4em 1.4em}
+  .engine .name{position:absolute;left:1.4em;top:.9em;font:600 .85em/1 var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-accent)}
+  .mods{display:grid;grid-template-columns:1fr 1fr;gap:1em;height:100%}
+  .mod{border:.14em dashed rgba(235,233,228,.45);border-radius:.8em;display:flex;align-items:center;gap:.7em;padding:0 1.1em;font:600 1.2em/1.1 var(--ui);color:var(--on-dark)}
+  .mod i{width:1.9em;height:1.9em;flex:none;border-radius:.55em;display:grid;place-items:center}
+  .mod i svg{width:1.15em;height:1.15em}
+  .light .engine{border-color:var(--accent)} .light .engine .name{color:var(--accent-text)}
+  .light .mod{border-color:rgba(28,25,23,.3);color:var(--ink)}
+  .mod.done{border-style:solid;border-color:transparent;background:var(--ink);color:var(--paper)}
+  .light .mod.done{background:var(--ink);color:var(--paper)}
+  /* V5a readable website */
+  .site{position:absolute;inset:0;overflow:hidden}
+  .site .top{display:flex;justify-content:space-between;align-items:center;padding:.9em 1.3em;border-bottom:1px solid var(--rule)}
+  .site .logo{font:700 1.05em/1 var(--serif);color:#2E3A2F}
+  .site .menu{display:flex;gap:1.1em;font:500 .8em/1 var(--ui);color:#4A4F45}
+  .sec{margin:.75em 1.3em 0;padding:.65em .8em;border-radius:.55em;display:flex;align-items:center;justify-content:space-between;gap:1em;border:1px solid transparent}
+  .sec b{font:600 1em/1.2 var(--ui);color:#22291F}
+  .sec span{font:500 .82em/1.2 var(--ui);color:#5E5B55}
+  .sec .ok{width:1.4em;height:1.4em;border-radius:50%;background:var(--accent);display:grid;place-items:center;flex:none}
+  .sec .ok svg{width:.85em;height:.85em}
+  .scan{position:absolute;left:0;right:0;height:.22em;background:var(--accent);box-shadow:0 0 0 .3em rgba(173,61,11,.12)}
+  .chip{position:absolute;font:600 .85em/1 var(--ui);color:var(--paper);background:var(--ink);padding:.5em .7em;border-radius:2em;white-space:nowrap}
+  /* V5b workflow */
+  .flow{position:absolute;inset:0}
+  .wire{position:absolute;height:.22em;background:rgba(28,25,23,.18);border-radius:.11em}
+  .wfill{position:absolute;height:.22em;background:var(--accent);border-radius:.11em}
+  .node{position:absolute;width:8.6em;display:flex;flex-direction:column;align-items:center;gap:.7em;text-align:center}
+  .node .c{width:5.4em;height:5.4em;border-radius:50%;background:var(--paper-hi);border:.16em solid rgba(28,25,23,.25);display:grid;place-items:center}
+  .node .c svg{width:2.3em;height:2.3em}
+  .node b{font:600 1.15em/1.2 var(--ui);color:var(--ink)}
+  .node.on .c{background:var(--ink);border-color:var(--ink)}
+  .pulse{position:absolute;width:1.1em;height:1.1em;border-radius:50%;background:var(--accent)}
+  /* Founders */
+  .fphoto{position:absolute;overflow:hidden;border-radius:.6em;background:#333}
+  .fphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block;transform-origin:50% 30%}
+  .fphoto::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(to bottom,rgba(28,25,23,0),rgba(28,25,23,.88))}
+  .fname{font-family:var(--display);text-transform:uppercase;color:var(--on-dark);line-height:.95;white-space:nowrap}
+  .frole{font:500 1em/1.2 var(--ui);color:var(--on-dark-quiet);white-space:nowrap}
+  /* End */
+  .cta{display:inline-flex;align-items:center;gap:.7em;background:var(--on-dark);color:var(--ink);font:600 1em/1 var(--ui);padding:.62em 1.25em .62em .62em;border-radius:.2em;white-space:nowrap}
+  .cta .av{display:flex}.cta .av img{width:1.9em;height:1.9em;border-radius:50%;object-fit:cover;object-position:50% 18%;border:.12em solid var(--on-dark)}
+  .cta .av img+img{margin-left:-.55em}
+  .cta svg{width:.9em;height:.9em}
+  .domain{font:600 1em/1 var(--ui);color:var(--on-dark);white-space:nowrap}
+  /* Captions: separate opaque plate, fixed bottom edge */
+  #cap{display:flex;justify-content:center;align-items:flex-end;pointer-events:none}
+  #cap span{display:inline-block;background:#1C1917;color:var(--on-dark);font:500 1em/1.28 var(--ui);padding:.34em .7em .4em;border-radius:.3em;text-align:center;text-wrap:balance}
+  #wipe{background:var(--accent)}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="night" class="abs"></div>
+  <img id="wmInk" class="abs" src="../../brand/wordmark-ink.png" alt="PandaCodeGen">
+  <img id="wmPaper" class="abs" src="../../brand/wordmark-paper.png" alt="">
+
+  <!-- V1: AI assistant -->
+  <div id="v1" class="box">
+    <div class="card chat">
+      <div class="bar"><span class="spark"><svg viewBox="0 0 16 16"><path d="M8 1l1.6 4.4L14 7l-4.4 1.6L8 13l-1.6-4.4L2 7l4.4-1.6z" fill="#EBE9E4"/></svg></span>AI assistant<span class="tagc">Illustrative</span></div>
+      <div class="body">
+        <div id="ubub" class="ubub"><span id="utext"></span></div>
+        <div class="arow"><div class="adot"></div><div class="acol">
+          <div id="seek" class="seek">Searching the web…</div>
+          <div id="ans1" class="gbar" style="width:92%"></div>
+          <div id="ans2" class="gbar" style="width:70%"></div>
+          <div id="srcs" class="srcs">
+            <div id="src1" class="src"><i></i><b></b><b style="width:55%"></b></div>
+            <div id="src2" class="src"><i></i><b></b><b style="width:60%"></b></div>
+            <div id="src3" class="src you">Your<br>business?</div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- V2: apps -->
+  <div id="v2" class="box"><div class="apps" id="apps"></div></div>
+
+  <!-- V3: to-do -->
+  <div id="v3" class="box"><div class="card todo"><h4>Today, by hand</h4><div id="tview" class="tview"><div id="titems" class="titems"></div></div></div></div>
+
+  <!-- V4: engine with empty slots (on charcoal) -->
+  <div id="v4" class="box"><div class="engine"><div class="name">Your business</div><div class="mods" id="mods4"></div></div></div>
+
+  <!-- V5a: a website search engines and AI assistants can read -->
+  <div id="v5a" class="box">
+    <div class="card site">
+      <div class="top"><div class="logo">Your Business</div><div class="menu"><span>Services</span><span>Prices</span><span>FAQ</span><span>Contact</span></div></div>
+      <div id="sec1" class="sec"><div><b>Services</b><br><span>What you do, one page each</span></div><i class="ok"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.4" fill="none"/></svg></i></div>
+      <div id="sec2" class="sec"><div><b>Prices from</b><br><span>Clear starting points</span></div><i class="ok"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.4" fill="none"/></svg></i></div>
+      <div id="sec3" class="sec"><div><b>Questions and answers</b><br><span>The ones customers actually ask</span></div><i class="ok"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.4" fill="none"/></svg></i></div>
+      <div id="sec4" class="sec"><div><b>Hours and service area</b><br><span>Business details in one place</span></div><i class="ok"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7" stroke="#fff" stroke-width="2.4" fill="none"/></svg></i></div>
+      <div id="scan" class="scan"></div>
+    </div>
+  </div>
+  <p id="fine" class="abs fine">Rankings and AI answers aren't guaranteed.</p>
+
+  <!-- V5b: busywork automated -->
+  <div id="v5b" class="box"><div class="flow" id="flow"></div></div>
+
+  <!-- V5c: the engine, built -->
+  <div id="v5c" class="box light"><div class="engine"><div class="name">Your business</div><div class="mods" id="mods5"></div></div></div>
+
+  <!-- Founders -->
+  <div id="fH" class="abs fphoto"><img src="../../brand/founder-hassan.png" alt="Hassan Jamal"></div>
+  <div id="fI" class="abs fphoto"><img src="../../brand/founder-imran.png" alt="Imran Raza Ladhani"></div>
+  <p id="fHn" class="abs fname">Hassan<br>Jamal</p>
+  <p id="fIn" class="abs fname">Imran Raza<br>Ladhani</p>
+  <p id="fHr" class="abs frole">Co-founder</p>
+  <p id="fIr" class="abs frole">Co-founder</p>
+
+  <!-- Headlines (two lines max) -->
+  <p id="h1" class="abs hl">Does AI<br><em>find you?</em></p>
+  <p id="h2" class="abs hl">Still paying for<br><em>apps that don't fit?</em></p>
+  <p id="h3a" class="abs hl">Still running it<br><em>by hand?</em></p>
+  <p id="h3b" class="abs hl">In the age<br><em>of AI?</em></p>
+  <p id="h4a" class="abs hl on-dark">Tell us your<br><em>bottlenecks.</em></p>
+  <p id="h4b" class="abs hl on-dark">We build<br><em>the engine.</em></p>
+  <p id="h5a" class="abs hl">A website AI search<br><em>can read.</em></p>
+  <p id="h5b" class="abs hl">We automate<br><em>the busywork.</em></p>
+  <p id="h5c" class="abs hl">Built around<br><em>how you work.</em></p>
+  <p id="h6" class="abs hl on-dark">Work with<br><em>the founders.</em></p>
+  <p id="h6s" class="abs fine" style="color:var(--on-dark-quiet)">Price agreed before we build.</p>
+  <p id="h7" class="abs hl on-dark">Tell us your<br><em>bottleneck.</em></p>
+
+  <!-- End card -->
+  <img id="endWm" class="abs" src="../../brand/wordmark-paper.png" alt="PandaCodeGen">
+  <div id="endCta" class="abs cta"><span class="av"><img src="../../brand/founder-hassan.png" alt=""><img src="../../brand/founder-imran.png" alt=""></span>Talk to the founders<svg viewBox="0 0 16 16"><path d="M3 8h9M8 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+  <div id="endDomain" class="abs domain">pandacodegen.com/contact</div>
+
+  <div id="wipe" class="abs"></div>
+  <div id="cap" class="abs"><span></span></div>
+</div>
+<script src="../../tools/engine.js"></script>
+<script src="timeline.js"></script>
+<script src="film.js"></script>
+</body>
+</html>

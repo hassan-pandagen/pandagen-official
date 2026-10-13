@@ -130,7 +130,7 @@ pulse = hp(pulse, 4000)
 # Motif: A4 – D5 – F#5, a soft bell, on the key idea (the next step appears) and its returns.
 motif = np.zeros((N, 2))
 for s in T["music"]["motif"]:
-    for i, m in enumerate((69, 74, 78)):
+    for i, m in enumerate((69, 72, 76) if T["music"].get("style") == "ad" else (69, 74, 78)):
         st = s + i * beat / 2
         j0 = int(st * SR); n = min(int(2.4 * SR), N - j0)
         if n <= 0:
@@ -144,6 +144,102 @@ for s in T["music"]["motif"]:
         motif[j0:j0 + n, 1] += 0.11 * e * v * (1 + pan)
 
 bed = pad + np.stack([bass, bass], 1) + np.stack([pulse, pulse * 0.9], 1)
+
+
+# ── Ad-style track (music.style == "ad"): drums, bass, pad, riser into the turn, hits on key lines ──
+def ad_track():
+    bpm = T["music"]["bpm"]; beat = 60.0 / bpm; bar = 4 * beat
+    out = np.zeros((N, 2))
+    # A minor pop loop: Am7 – Fmaj7 – C – G (one chord per bar)
+    LOOP = [[45, 57, 60, 64, 67], [41, 57, 60, 64, 65], [48, 55, 60, 64, 67], [43, 55, 59, 62, 67]]
+    drop0, drop1 = T["music"].get("drop", [None, None])
+    br0, br1 = T["music"].get("breakdown", [None, None])
+    end_t = T["cues"].get("end", DUR - 6)
+    def section(tt):
+        if drop0 is not None and drop0 <= tt < drop1: return "drop"
+        if br0 is not None and br0 <= tt < br1: return "break"
+        if tt >= end_t: return "end"
+        if tt < T["cues"].get("s2", 5.3): return "intro"
+        return "groove"
+    def add(buf, t0, sig, gain=1.0, pan=0.0):
+        j0 = int(round(t0 * SR)); n = min(len(sig), N - j0)
+        if n <= 0 or j0 < 0: return
+        buf[j0:j0 + n, 0] += sig[:n] * gain * (1 - pan)
+        buf[j0:j0 + n, 1] += sig[:n] * gain * (1 + pan)
+    def kick():
+        n = int(0.42 * SR); tt = np.arange(n) / SR
+        f = 48 + 90 * np.exp(-tt * 28)
+        return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt * 7.5) + 0.25 * np.exp(-tt * 140) * rng.standard_normal(n) * 0.2
+    def clap():
+        n = int(0.25 * SR); tt = np.arange(n) / SR
+        nz = hp(rng.standard_normal(n), 900)
+        e = np.exp(-tt * 22) * (1 + 0.6 * (np.sin(2 * np.pi * 90 * tt) > 0) * np.exp(-tt * 60))
+        return lp(nz * e, 6500)
+    def hat(open_=False):
+        n = int((0.2 if open_ else 0.06) * SR); tt = np.arange(n) / SR
+        return hp(rng.standard_normal(n), 7000) * np.exp(-tt * (18 if open_ else 80))
+    def pluck_bass(freq, length):
+        n = int(length * SR); tt = np.arange(n) / SR
+        saw = 2 * ((freq * tt) % 1) - 1
+        return lp(saw * np.exp(-tt * 3.2) * np.minimum(1, tt / 0.004), 700) + 0.4 * np.sin(2 * np.pi * freq * tt) * np.exp(-tt * 3)
+    K, CL, HC, HO = kick(), clap(), hat(), hat(True)
+    nbeats = int(DUR / beat) + 1
+    for b in range(nbeats):
+        tt = b * beat
+        sec = section(tt); pos = b % 4
+        chord = LOOP[(b // 4) % 4]
+        if sec in ("intro",):
+            if pos in (0, 2): add(out, tt, K, 0.32)
+            add(out, tt + beat / 2, HC, 0.035, 0.2)
+        elif sec == "groove":
+            add(out, tt, K, 0.55)
+            if pos in (1, 3): add(out, tt, CL, 0.16, -0.05)
+            add(out, tt, HC, 0.04, 0.25); add(out, tt + beat / 2, HO if pos == 3 else HC, 0.05, -0.2)
+            for half in (0, 0.5):
+                add(out, tt + half * beat, pluck_bass(midi(chord[0] - 12 + (12 if (pos == 3 and half) else 0)), beat * 0.48), 0.2)
+        elif sec == "end":
+            if tt < end_t + bar: 
+                if pos in (0, 2): add(out, tt, K, 0.4)
+        # drop and break: no drums
+    # Pad on every bar (softer in the drop, warm in the break)
+    nb = int(DUR / bar) + 1
+    for k in range(nb):
+        t0 = k * bar; sec = section(t0 + 0.01)
+        chord = LOOP[k % 4] if sec != "end" else [45, 57, 60, 64, 69, 72]
+        length = min(bar + 0.6, DUR - t0) if sec != "end" else DUR - t0
+        n = int(length * SR); tt = np.arange(n) / SR
+        e = env_adsr(n, 0.25, 0.4, 0.8, 0.6 if sec != "end" else min(3.5, length))
+        g = {"intro": 0.05, "groove": 0.045, "drop": 0.03, "break": 0.06, "end": 0.06}[sec]
+        for i, m in enumerate(chord[1:]):
+            f = midi(m)
+            for ch, det in ((0, -0.002), (1, 0.002)):
+                v = np.sin(2 * np.pi * f * (1 + det) * tt) + 0.3 * np.sin(2 * np.pi * 2 * f * (1 + det) * tt) * np.exp(-tt * 1.5)
+                j0 = int(t0 * SR); m2 = min(n, N - j0)
+                out[j0:j0 + m2, ch] += (g * e * v / (1 + 0.2 * i))[:m2]
+    # Riser into "We'll build the engine", and impacts on the key lines
+    if drop0 is not None:
+        n = int((drop1 - drop0 + 0.05) * SR); tt = np.arange(n) / SR
+        ramp = (tt / tt[-1]) ** 2.2
+        nz = rng.standard_normal(n)
+        swept = np.zeros(n)
+        for s0 in range(0, n, 2048):
+            fc = 400 + 7000 * ramp[min(n - 1, s0)]
+            seg = nz[s0:s0 + 2048]
+            swept[s0:s0 + len(seg)] = lp(hp(seg, max(200, fc * 0.4)), fc)
+        tone = np.sin(2 * np.pi * np.cumsum(220 + 660 * ramp) / SR) * 0.15
+        add(out, drop0, (swept * 0.22 + tone) * ramp, 0.9)
+    def impact():
+        n = int(1.8 * SR); tt = np.arange(n) / SR
+        boom = np.sin(2 * np.pi * np.cumsum(40 + 60 * np.exp(-tt * 12)) / SR) * np.exp(-tt * 2.8)
+        crash = lp(hp(rng.standard_normal(n), 3000), 12000) * np.exp(-tt * 3.2) * 0.25
+        return boom * 0.9 + crash
+    for s_ in [x["t"] for x in T.get("sfx", []) if x["kind"] == "impact"]:
+        add(out, s_, impact(), 0.55)
+    return lp(out[:, 0], 14000), lp(out[:, 1], 14000)
+
+if T["music"].get("style") == "ad":
+    _l, _r = ad_track()
+    bed = np.stack([_l, _r], 1)
 
 # ── SFX ──────────────────────────────────────────────────────────────────────
 sfx = np.zeros((N, 2))
@@ -160,6 +256,18 @@ for cue in T.get("sfx", []):
         e = (tb / tb[-1]) ** 2 * np.exp(-np.maximum(0, tb - tb[-1] + 0.06) * 40)
         v = 0.06 * noise * e
         sfx[j0:j0 + m] += np.stack([v, v * 0.95], 1)[: N - j0]
+    elif kind == "whoosh":
+        m = int(0.45 * SR); j0 = max(0, j0 - int(0.22 * SR)); tb = np.arange(m) / SR
+        e = np.sin(np.pi * tb / tb[-1]) ** 2
+        v = 0.07 * lp(hp(rng.standard_normal(m), 900), 5000) * e
+        sfx[j0:j0 + m] += np.stack([v * 1.1, v * 0.9], 1)[: N - j0]
+    elif kind == "type":
+        for k in range(14):
+            tk = j0 + int(k * 0.105 * SR + rng.uniform(0, 0.02) * SR); m = int(0.03 * SR); tb = np.arange(m) / SR
+            v = 0.05 * hp(rng.standard_normal(m), 2500) * np.exp(-tb * 220)
+            sfx[tk:tk + m] += np.stack([v, v], 1)[: max(0, N - tk)]
+    elif kind == "impact":
+        pass  # drawn into the music track
     elif kind in ("tap", "tick"):
         m = int(0.09 * SR); tb = np.arange(m) / SR
         f = 1500 if kind == "tap" else 2300
@@ -190,12 +298,13 @@ for i, v in enumerate(r):
     e2[i] = acc
 env = np.interp(np.arange(N), np.arange(len(e2)) * dec, e2)
 env = np.clip(env / (np.percentile(env[env > 1e-4], 90) + 1e-9), 0, 1)
-duck = 1 - 0.66 * env  # about -9.4 dB under full voice
+AD = T["music"].get("style") == "ad"
+duck = 1 - (0.75 if AD else 0.66) * env  # about -12 dB (ad) / -9.4 dB under full voice
 bed_d = bed * duck[:, None]
 motif_d = motif * (1 - 0.35 * env)[:, None]
 
 music = bed_d + motif_d
-mix = np.stack([vo, vo], 1) * 1.0 + music * 0.7 + sfx * 0.8
+mix = np.stack([vo, vo], 1) * 1.0 + music * (0.42 if AD else 0.7) + sfx * 0.8
 
 os.makedirs(aud, exist_ok=True)
 def write(name, x):
@@ -209,7 +318,11 @@ write("mix_prenorm.wav", mix / max(1.0, peak / 0.89))
 # Gentle peak limiter (-4 dBFS ceiling) so the loudness gain stays linear, then
 # two-pass loudnorm to -16 LUFS / -1.5 dBTP.
 raw_pre = os.path.join(aud, "mix_prenorm.wav"); pre = os.path.join(aud, "mix_limited.wav"); out = os.path.join(aud, "mix.wav")
-subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", raw_pre, "-af", "alimiter=limit=0.63:attack=4:release=60:level=disabled:asc=1",
+# The limiter ceiling is chosen from a first loudness reading so the later gain stays linear.
+m0 = subprocess.run(["ffmpeg", "-hide_banner", "-i", raw_pre, "-af", "loudnorm=I=-16:TP=-1.5:print_format=json", "-f", "null", "-"], capture_output=True, text=True).stderr
+gain = -16.0 - float(json.loads(m0[m0.rindex("{"): m0.rindex("}") + 1])["input_i"])
+limit = min(0.89, 10 ** ((-1.5 - gain - 0.8) / 20))
+subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", raw_pre, "-af", f"alimiter=limit={limit:.4f}:attack=4:release=60:level=disabled:asc=1",
                 "-c:a", "pcm_s24le", pre], check=True)
 m1 = subprocess.run(["ffmpeg", "-hide_banner", "-i", pre, "-af", "loudnorm=I=-16:TP=-1.5:LRA=11:print_format=json", "-f", "null", "-"], capture_output=True, text=True).stderr
 js = json.loads(m1[m1.rindex("{"): m1.rindex("}") + 1])
