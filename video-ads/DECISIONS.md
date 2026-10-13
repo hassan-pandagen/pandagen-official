@@ -48,3 +48,11 @@ One line per call, newest last. "Brief" means the campaign brief pasted on 13 Oc
 - **Music:** a new ad-style track in `tools/audio.py` (`music.style: "ad"`): 104 BPM, A-minor pop loop, kick/clap/hats/bass, a riser into the turn, hits on "We'll build the engine" and the end card, and a calm break under the founders. Voice is about 12 dB above the ducked music.
 - **Vertical safe area, loosened on purpose:** text now stays inside y 220–1440 and x ≤ 940 (clear of the top bar, the bottom quarter and the right-hand rail, per TikTok and Shorts) so the frame is fuller. Meta's stricter Reels guidance keeps the bottom 35 % clear; on that placement the last caption line can sit near the CTA overlay.
 - **Founders:** photos take the full visual area (16:9: 390×700 each; 9:16: 470×680 each), with names set on the photos over a dark gradient.
+
+## Film 01 v3 (owner feedback, 13 Oct 2026)
+
+- **No founder names or photos.** The founders beat is now "Work with the experts. Talk directly to the founders." The visual is a chain: You → Sales rep → Account manager → Project manager → The founders who build it. The three middle roles are struck out and fold away, leaving a "Direct line". The end-card button keeps the words "Talk to the founders" but drops the avatars.
+- **Plain language:** "bottlenecks" and "engine" are gone from voice and screen. It's now "Tell us what you need. We'll build it." and the close is "Tell us what you need, at pandacodegen.com."
+- **No burned-in captions,** at the owner's request. The SRT files are still exported (`captions_*.srt`) for platforms that take caption files; `burnCaptions: false` in the timeline controls it.
+- **Polish:** headlines now rise out of a mask line by line and leave upward. The visuals use the space the caption band freed (16:9 860×840, 9:16 960×820, 1:1 860×700).
+- **Brand name in the voice:** the offline speech model spells "Panda Code Gen dot com" as "pandacogen.com" whatever the phrasing. It also mishears an earlier take that passed in the full mix, so the test is unreliable on this made-up name. The domain is on screen when it's spoken; a human should still listen once.

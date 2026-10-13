@@ -1,6 +1,6 @@
 # PandaCodeGen campaign videos
 
-Workspace for the six-film campaign. **Status: Film 01 v2 (`01-bottlenecks`, reworked from the owner's feedback) is rendered and waiting for sign-off; v1 (`01-business-website`) is kept for reference. Films 02–06 have not started.**
+Workspace for the six-film campaign. **Status: Film 01 v3 (`01-bottlenecks`: "Tell us what you need", reworked from the owner's feedback) is rendered and waiting for sign-off; v1 (`01-business-website`) is kept for reference. Films 02–06 have not started.**
 
 Separate from the website: own `package.json`, no imports from `src/`, no changes to the site's code, pricing, dependencies or deployment settings.
 

@@ -16,8 +16,8 @@
     },
     {
       "id": "L4",
-      "text": "Tell us your bottlenecks. We'll build the engine.",
-      "say": "Tell us your bottlenecks... We'll build the engine."
+      "text": "Tell us what you need. We'll build it.",
+      "say": "Tell us what you need... We'll build it."
     },
     {
       "id": "L5",
@@ -26,12 +26,13 @@
     },
     {
       "id": "L6",
-      "text": "Work directly with Hassan and Imran, with the price agreed before we build."
+      "text": "Work with experts. Talk directly to the founders who build it, not a sales agent.",
+      "say": "Work with experts. Talk directly to the founders who build it... not a sales agent."
     },
     {
       "id": "L7",
-      "text": "Tell us what's slowing you down, at pandacodegen.com.",
-      "say": "Tell us what's slowing you down, at Panda Code Gen dot com."
+      "text": "Tell us what you need, at pandacodegen.com.",
+      "say": "Tell us what you need, at Panda Code Gen dot com."
     }
   ]
 }

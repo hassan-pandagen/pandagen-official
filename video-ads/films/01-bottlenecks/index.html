@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Film 01 · Tell us your bottlenecks</title>
+<title>Film 01 · Tell us what you need</title>
 <link rel="stylesheet" href="../../brand/tokens.css">
 <style>
   /* Everything moves from seek(t) in film.js. No CSS transitions or keyframes. */
@@ -86,14 +86,22 @@
   .node b{font:600 1.15em/1.2 var(--ui);color:var(--ink)}
   .node.on .c{background:var(--ink);border-color:var(--ink)}
   .pulse{position:absolute;width:1.1em;height:1.1em;border-radius:50%;background:var(--accent)}
-  /* Founders */
-  .fphoto{position:absolute;overflow:hidden;border-radius:.6em;background:#333}
-  .fphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block;transform-origin:50% 30%}
-  .fphoto::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(to bottom,rgba(28,25,23,0),rgba(28,25,23,.88))}
-  .fname{font-family:var(--display);text-transform:uppercase;color:var(--on-dark);line-height:.95;white-space:nowrap}
-  .frole{font:500 1em/1.2 var(--ui);color:var(--on-dark-quiet);white-space:nowrap}
+  /* V6 chain */
+  .chain{position:absolute;inset:0}
+  .cline{position:absolute;width:.2em;background:rgba(235,233,228,.3);border-radius:.1em}
+  .cnode{position:absolute;left:1.5em;width:19em;height:3.4em;border-radius:.7em;display:flex;align-items:center;gap:.8em;padding:0 1em;background:#2A2623;border:1px solid rgba(235,233,228,.14);color:var(--on-dark);white-space:nowrap}
+  .cnode .cl{font:600 1.15em/1.1 var(--ui)}
+  .cnode i{width:2em;height:2em;flex:none;border-radius:50%;display:grid;place-items:center;background:rgba(235,233,228,.1)}
+  .cnode i svg{width:1.15em;height:1.15em}
+  .cnode.you{background:var(--on-dark);color:var(--ink)} .cnode.you i{background:var(--ink)}
+  .cnode.build{background:var(--on-dark-accent);color:var(--ink);border-color:transparent} .cnode.build i{background:var(--ink)}
+  .strike{position:absolute;left:.6em;right:.6em;top:50%;height:.16em;margin-top:-.08em;background:var(--on-dark-accent);transform-origin:0 50%}
+  .direct{position:absolute;left:4.2em;color:var(--on-dark-accent);white-space:nowrap}
+  .direct span{font:600 .85em/1 var(--ui);letter-spacing:.14em;text-transform:uppercase}
+  /* Headline mask reveal: each line rises out of its own clip */
+  .mask{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .05em .16em;margin:0 -.05em -.16em}
   /* End */
-  .cta{display:inline-flex;align-items:center;gap:.7em;background:var(--on-dark);color:var(--ink);font:600 1em/1 var(--ui);padding:.62em 1.25em .62em .62em;border-radius:.2em;white-space:nowrap}
+  .cta{display:inline-flex;align-items:center;gap:.7em;background:var(--on-dark);color:var(--ink);font:600 1em/1 var(--ui);padding:.85em 1.3em;border-radius:.2em;white-space:nowrap}
   .cta .av{display:flex}.cta .av img{width:1.9em;height:1.9em;border-radius:50%;object-fit:cover;object-position:50% 18%;border:.12em solid var(--on-dark)}
   .cta .av img+img{margin-left:-.55em}
   .cta svg{width:.9em;height:.9em}
@@ -158,31 +166,26 @@
   <!-- V5c: the engine, built -->
   <div id="v5c" class="box light"><div class="engine"><div class="name">Your business</div><div class="mods" id="mods5"></div></div></div>
 
-  <!-- Founders -->
-  <div id="fH" class="abs fphoto"><img src="../../brand/founder-hassan.png" alt="Hassan Jamal"></div>
-  <div id="fI" class="abs fphoto"><img src="../../brand/founder-imran.png" alt="Imran Raza Ladhani"></div>
-  <p id="fHn" class="abs fname">Hassan<br>Jamal</p>
-  <p id="fIn" class="abs fname">Imran Raza<br>Ladhani</p>
-  <p id="fHr" class="abs frole">Co-founder</p>
-  <p id="fIr" class="abs frole">Co-founder</p>
+  <!-- V6: a direct line to the people who build it -->
+  <div id="v6" class="box"><div class="chain" id="chain"></div></div>
 
   <!-- Headlines (two lines max) -->
   <p id="h1" class="abs hl">Does AI<br><em>find you?</em></p>
   <p id="h2" class="abs hl">Still paying for<br><em>apps that don't fit?</em></p>
   <p id="h3a" class="abs hl">Still running it<br><em>by hand?</em></p>
   <p id="h3b" class="abs hl">In the age<br><em>of AI?</em></p>
-  <p id="h4a" class="abs hl on-dark">Tell us your<br><em>bottlenecks.</em></p>
-  <p id="h4b" class="abs hl on-dark">We build<br><em>the engine.</em></p>
+  <p id="h4a" class="abs hl on-dark">Tell us<br><em>what you need.</em></p>
+  <p id="h4b" class="abs hl on-dark">We'll<br><em>build it.</em></p>
   <p id="h5a" class="abs hl">A website AI search<br><em>can read.</em></p>
   <p id="h5b" class="abs hl">We automate<br><em>the busywork.</em></p>
   <p id="h5c" class="abs hl">Built around<br><em>how you work.</em></p>
-  <p id="h6" class="abs hl on-dark">Work with<br><em>the founders.</em></p>
-  <p id="h6s" class="abs fine" style="color:var(--on-dark-quiet)">Price agreed before we build.</p>
-  <p id="h7" class="abs hl on-dark">Tell us your<br><em>bottleneck.</em></p>
+  <p id="h6a" class="abs hl on-dark">Work with<br><em>the experts.</em></p>
+  <p id="h6b" class="abs hl on-dark">Talk directly to<br><em>the founders.</em></p>
+  <p id="h7" class="abs hl on-dark">Tell us<br><em>what you need.</em></p>
 
   <!-- End card -->
   <img id="endWm" class="abs" src="../../brand/wordmark-paper.png" alt="PandaCodeGen">
-  <div id="endCta" class="abs cta"><span class="av"><img src="../../brand/founder-hassan.png" alt=""><img src="../../brand/founder-imran.png" alt=""></span>Talk to the founders<svg viewBox="0 0 16 16"><path d="M3 8h9M8 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+  <div id="endCta" class="abs cta">Talk to the founders<svg viewBox="0 0 16 16"><path d="M3 8h9M8 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
   <div id="endDomain" class="abs domain">pandacodegen.com/contact</div>
 
   <div id="wipe" class="abs"></div>

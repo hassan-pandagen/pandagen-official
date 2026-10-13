@@ -22,12 +22,12 @@ it all by hand,
 in the age of AI?
 
 6
-00:00:11,200 --> 00:00:12,450
-Tell us your bottlenecks.
+00:00:11,200 --> 00:00:12,400
+Tell us what you need.
 
 7
-00:00:12,650 --> 00:00:13,950
-We'll build the engine.
+00:00:12,550 --> 00:00:13,900
+We'll build it.
 
 8
 00:00:14,150 --> 00:00:17,950
@@ -45,20 +45,22 @@ Tools built around
 how you work.
 
 11
-00:00:25,200 --> 00:00:27,450
-Work directly with
-Hassan and Imran,
+00:00:25,200 --> 00:00:26,400
+Work with experts.
 
 12
-00:00:27,740 --> 00:00:29,750
-with the price agreed
-before we build.
+00:00:26,550 --> 00:00:28,750
+Talk directly to the
+founders who build it,
 
 13
-00:00:30,000 --> 00:00:31,450
-Tell us what's
-slowing you down,
+00:00:28,900 --> 00:00:30,300
+not a sales agent.
 
 14
-00:00:31,670 --> 00:00:34,000
+00:00:30,600 --> 00:00:31,700
+Tell us what you need,
+
+15
+00:00:31,820 --> 00:00:34,100
 at pandacodegen.com.

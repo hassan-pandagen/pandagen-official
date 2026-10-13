@@ -8,28 +8,26 @@
   const RISE = reduced ? 0 : 28;
 
   // ── Layout per format. 9:16 keeps words inside y 220–1440 and x ≤ 940: clear of the top bar,
-  // the bottom quarter and the right-hand action rail (TikTok / Shorts / Reels interface areas). ──
+  // the bottom quarter and the right-hand action rail (TikTok / Shorts / Reels interface areas).
+  // No burned-in captions (owner's call), so visuals take the space a caption band would use. ──
   const LAY = {
     "16x9": {
-      wm: { x: 120, y: 64, w: 230 }, head: { x: 120, y: 330, w: 800, size: 128 }, sub: 40,
-      vis: { x: 1000, y: 150, w: 800, h: 640 }, fine: { size: 24, below: true },
+      wm: { x: 120, y: 64, w: 230 }, head: { x: 120, y: 400, w: 780, size: 132 },
+      vis: { x: 960, y: 120, w: 860, h: 840 }, fine: { size: 24, below: true },
       cap: { cx: 960, bottom: 1040, w: 1640, size: 54 },
-      photos: [{ x: 1000, y: 120, w: 390, h: 700 }, { x: 1420, y: 120, w: 390, h: 700 }], fname: 52, frole: 24,
-      end: { wmW: 560, wmY: 150, h7Y: 290, h7Size: 150, ctaY: 640, ctaSize: 46, domY: 830, domSize: 60 },
+      end: { wmW: 560, wmY: 170, h7Y: 330, h7Size: 156, ctaY: 690, ctaSize: 50, domY: 840, domSize: 62 },
     },
     "9x16": {
-      wm: { x: 80, y: 236, w: 200 }, head: { x: 80, y: 300, w: 860, size: 118 }, sub: 36,
-      vis: { x: 60, y: 600, w: 960, h: 680 }, fine: { size: 28, y: 548 },
+      wm: { x: 80, y: 236, w: 200 }, head: { x: 80, y: 300, w: 860, size: 118 },
+      vis: { x: 60, y: 600, w: 960, h: 820 }, fine: { size: 28, y: 548 },
       cap: { cx: 515, bottom: 1440, w: 850, size: 48 },
-      photos: [{ x: 60, y: 600, w: 470, h: 680 }, { x: 550, y: 600, w: 470, h: 680 }], fname: 56, frole: 26,
-      end: { wmW: 760, wmY: 450, h7Y: 610, h7Size: 136, ctaY: 920, ctaSize: 50, domY: 1110, domSize: 58 },
+      end: { wmW: 760, wmY: 500, h7Y: 660, h7Size: 140, ctaY: 990, ctaSize: 52, domY: 1150, domSize: 60 },
     },
     "1x1": {
-      wm: { x: 70, y: 52, w: 180 }, head: { x: 70, y: 110, w: 940, size: 84 }, sub: 30,
-      vis: { x: 140, y: 336, w: 800, h: 520 }, fine: { size: 22, below: true },
+      wm: { x: 70, y: 52, w: 180 }, head: { x: 70, y: 110, w: 940, size: 86 },
+      vis: { x: 110, y: 320, w: 860, h: 700 }, fine: { size: 22, below: true },
       cap: { cx: 540, bottom: 1040, w: 1000, size: 42 },
-      photos: [{ x: 140, y: 330, w: 390, h: 540 }, { x: 550, y: 330, w: 390, h: 540 }], fname: 42, frole: 20,
-      end: { wmW: 560, wmY: 140, h7Y: 280, h7Size: 104, ctaY: 530, ctaSize: 40, domY: 690, domSize: 48 },
+      end: { wmW: 560, wmY: 170, h7Y: 320, h7Size: 110, ctaY: 590, ctaSize: 44, domY: 730, domSize: 52 },
     },
   }[F];
 
@@ -62,6 +60,10 @@
   $("flow").innerHTML = '<div class="wire" id="wire"></div><div class="wfill" id="wfill"></div><div class="pulse" id="pulse"></div>' +
     NODES.map(([i, l], k) => `<div class="node" id="nd${k}"><div class="c" id="ndc${k}">${svg(i, "#1C1917", 1.5)}</div><b>${l}</b></div>`).join("");
 
+  const CHAIN = [["person", "You", "you"], ["mail", "Sales rep", ""], ["calendar", "Account manager", ""], ["form", "Project manager", ""], ["bolt", "The founders who build it", "build"]];
+  $("chain").innerHTML = '<div class="cline" id="cline"></div><div class="direct" id="direct"><span>Direct line</span></div>' +
+    CHAIN.map(([i, l, c], k) => `<div class="cnode ${c}" id="cn${k}"><i>${svg(i, "#EBE9E4")}</i><span class="cl">${l}</span>${k > 0 && k < 4 ? '<span class="strike" id="sk' + k + '"></span>' : ""}</div>`).join("");
+
   // ── Setup ──
   const stage = $("stage");
   stage.style.width = px(W); stage.style.height = px(H);
@@ -70,7 +72,7 @@
   for (const id of ["wmInk", "wmPaper"]) { $(id).style.width = px(LAY.wm.w); place($(id), { x: LAY.wm.x, y: LAY.wm.y }); }
 
   // Visual boxes: designed in em, scaled to fit the format's slot, centred.
-  const BOX = { v1: [30, 21.5], v2: [31, 17.2], v3: [28, 19], v4: [28, 17], v5a: [30, 21], v5b: [37.4, 11.5], v5c: [28, 17] };
+  const BOX = { v1: [30, 21.5], v2: [31, 17.2], v3: [28, 19], v4: [28, 17], v5a: [30, 21], v5b: [37.4, 11.5], v5c: [28, 17], v6: [22, 23.5] };
   const BR = {};
   for (const [id, [bw, bh]] of Object.entries(BOX)) {
     const s = Math.min(LAY.vis.w / bw, LAY.vis.h / bh);
@@ -82,11 +84,11 @@
   // Workflow layout inside its box
   NODES.forEach((_, k) => { const n = $(`nd${k}`); n.style.left = `${k * 9.6}em`; n.style.top = "0em"; });
 
-  const heads = ["h1", "h2", "h3a", "h3b", "h4a", "h4b", "h5a", "h5b", "h5c", "h6", "h7"];
+  const heads = ["h1", "h2", "h3a", "h3b", "h4a", "h4b", "h5a", "h5b", "h5c", "h6a", "h6b", "h7"];
   const lines = {};
   for (const id of heads) {
     const el = $(id);
-    el.innerHTML = el.innerHTML.split(/<br\s*\/?>/i).map((h) => `<span class="ln">${h}</span>`).join("<br>");
+    el.innerHTML = el.innerHTML.split(/<br\s*\/?>/i).map((h) => `<span class="mask"><span class="ln">${h}</span></span>`).join("<br>");
     lines[id] = [...el.querySelectorAll(".ln")];
   }
   const cap = $("cap");
@@ -103,7 +105,7 @@
       const base = end ? LAY.end.h7Size : LAY.head.size;
       const w = end ? W - 2 * LAY.head.x : LAY.head.w;
       el.style.fontSize = px(base);
-      const widest = Math.max(...lines[id].map((l) => l.offsetWidth));
+      const widest = Math.max(...lines[id].map((l) => l.parentElement.offsetWidth));
       el.style.fontSize = px(Math.floor(widest > w ? base * w / widest : base));
       M[id] = { w: el.offsetWidth, h: el.offsetHeight };
       if (end) { el.style.textAlign = "center"; }
@@ -111,21 +113,9 @@
     for (const id of heads) if (id !== "h7") place($(id), { x: LAY.head.x, y: LAY.head.y });
     M.h7 = { w: $("h7").offsetWidth, h: $("h7").offsetHeight };
     place($("h7"), { x: (W - M.h7.w) / 2, y: LAY.end.h7Y });
-    // Sub-lines
-    const h6s = $("h6s"); h6s.style.fontSize = px(LAY.sub);
-    place(h6s, { x: LAY.head.x, y: LAY.head.y + M.h6.h + LAY.sub * 0.6 });
     const fine = $("fine"); fine.style.fontSize = px(LAY.fine.size);
     if (LAY.fine.below) place(fine, { x: BR.v5a.x, y: BR.v5a.y + BR.v5a.h + 14 });
     else place(fine, { x: LAY.head.x, y: LAY.fine.y });
-    // Founders
-    const P = LAY.photos;
-    place($("fH"), P[0]); place($("fI"), P[1]);
-    for (const [n, r, p] of [["fHn", "fHr", P[0]], ["fIn", "fIr", P[1]]]) {
-      $(n).style.fontSize = px(LAY.fname); $(r).style.fontSize = px(LAY.frole);
-      M[n] = $(n).offsetHeight; M[r] = $(r).offsetHeight;
-      place($(n), { x: p.x + 22, y: p.y + p.h - 22 - M[r] - 8 - M[n] });
-      place($(r), { x: p.x + 22, y: p.y + p.h - 22 - M[r] });
-    }
     // End card
     const E = LAY.end;
     $("endWm").style.width = px(E.wmW);
@@ -146,18 +136,23 @@
   }
 
   // ── Helpers ──
-  function head(id, t, ins, out, outDur = 0.22) {
+  function head(id, t, ins, out, outDur = 0.3) {
+    // Each line rises out of its own clip on the way in and leaves upward on the way out.
     const el = $(id), ls = lines[id];
     const on = t >= ins[0] - 0.01 && t < out + outDur + 0.01;
     el.style.visibility = on ? "visible" : "hidden";
-    const o = 1 - fade(t, out, outDur);
-    const up = reduced ? 0 : -14 * move(t, out, outDur);
     ls.forEach((ln, i) => {
       const t0 = ins[Math.min(i, ins.length - 1)];
-      const a = fade(t, t0, 0.32);
-      const m = move(t, t0, 0.5);
-      ln.style.opacity = String(Math.round(Math.min(a, o) * 1000) / 1000);
-      ln.style.transform = `translateY(${px((1 - m) * RISE * 1.4 + up)})`;
+      const tOut = out + i * 0.05;
+      if (reduced) {
+        ln.style.opacity = String(Math.round(Math.min(fade(t, t0, 0.45), 1 - fade(t, tOut, 0.45)) * 1000) / 1000);
+        ln.style.transform = "none";
+        return;
+      }
+      const pin = move(t, t0, 0.62, ease.settle);
+      const pout = move(t, tOut, outDur, ease.in);
+      ln.style.opacity = "1";
+      ln.style.transform = `translateY(${((1 - pin) * 112 - pout * 112).toFixed(2)}%)`;
     });
   }
   // A visual enters (rise + fade) and exits (slide left + fade).
@@ -273,7 +268,7 @@
   function s4(t) {
     vis("v4", t, C.turn + 0.25, C.s5 - 0.1);
     MODS.forEach((_, k) => el(`m4${k}`, t, C.turn + 0.3 + k * 0.18, 99, 0.5));
-    // The frame draws on at "We'll build the engine."
+    // The frame draws on at "We'll build it."
     const fr = $("v4").firstElementChild;
     const p = reduced ? (t >= C.engine ? 1 : 0) : move(t, C.engine, 0.6, ease.inOut);
     fr.style.borderColor = `rgba(232,118,58,${p.toFixed(3)})`;
@@ -349,34 +344,56 @@
   }
 
   function s6(t) {
-    const P = LAY.photos;
-    [["fH", 0, -1], ["fI", 1, 1]].forEach(([id, k, dir]) => {
-      const t0 = C.founders + 0.15 + k * 0.15;
-      const p = move(t, t0, 0.7);
-      const o = Math.min(fade(t, t0, 0.35), 1 - fade(t, C.end - 0.05, 0.3));
-      const e = $(id);
-      e.style.opacity = String(Math.round(o * 1000) / 1000); e.style.visibility = o > 0.001 ? "visible" : "hidden";
-      e.style.transform = `translateX(${px((1 - p) * dir * (reduced ? 0 : 80))})`;
-      const img = e.firstElementChild;
-      img.style.transform = `scale(${reduced ? 1 : lerp(1.08, 1.0, move(t, t0, 2.5, ease.out))})`;
+    vis("v6", t, C.founders + 0.1, C.end - 0.1);
+    const em = BR.v6.em;
+    // Five nodes in a column; the three in the middle are struck out and fold away.
+    const gap = 4.9, nh = 3.4;
+    const strikeT = C.direct + 0.05, foldT = C.direct + 0.75;
+    const fold = reduced ? (t >= foldT ? 1 : 0) : move(t, foldT, 0.7, ease.inOut);
+    const ys = [0, gap, 2 * gap, 3 * gap, 4 * gap];
+    const yEnd4 = gap * 1.45;
+    const groupShift = lerp(0, (4 * gap - yEnd4) / 2, fold);
+    CHAIN.forEach((_, k) => {
+      const n = $(`cn${k}`);
+      let y = ys[k];
+      if (k === 4) y = lerp(ys[4], yEnd4, fold);
+      if (k > 0 && k < 4) y = lerp(ys[k], yEnd4 * (0.25 + 0.2 * k) , fold);
+      n.style.top = `${(y + groupShift).toFixed(3)}em`;
+      const t0 = C.founders + 0.25 + k * 0.14;
+      let o = fade(t, t0, 0.3);
+      if (k > 0 && k < 4) o = Math.min(o, 1 - (reduced ? fade(t, foldT, 0.45) : move(t, foldT, 0.35)));
+      n.style.opacity = String(Math.round(o * 1000) / 1000);
+      n.style.transform = `translateX(${px((1 - move(t, t0, 0.5)) * (reduced ? 0 : -1.2 * em))})`;
+      if (k > 0 && k < 4) {
+        const sk = $(`sk${k}`);
+        sk.style.transform = `scaleX(${reduced ? (t >= strikeT ? 1 : 0) : move(t, strikeT + (k - 1) * 0.12, 0.3, ease.out)})`;
+      }
     });
-    for (const [id, t0] of [["fHn", 0.45], ["fIn", 0.6], ["fHr", 0.55], ["fIr", 0.7]]) el(id, t, C.founders + t0, C.end - 0.05, 0.6);
-    head("h6", t, [C.founders + 0.2, C.founders + 0.4], C.end - 0.1);
-    el("h6s", t, 27.74, C.end - 0.1, 0.5);
-    void P;
+    const ln = $("cline");
+    const top = 0 + groupShift + nh / 2, bot = lerp(ys[4], yEnd4, fold) + groupShift + nh / 2;
+    ln.style.left = "3.4em"; ln.style.top = `${top.toFixed(3)}em`; ln.style.height = `${Math.max(0, bot - top).toFixed(3)}em`;
+    ln.style.opacity = String(fade(t, C.founders + 0.25, 0.4));
+    ln.style.background = fold > 0.5 ? "var(--on-dark-accent)" : "rgba(235,233,228,.3)";
+    const d = $("direct");
+    d.style.top = `${((top + bot) / 2 - 0.5).toFixed(3)}em`;
+    d.style.left = "4.8em";
+    d.style.opacity = String(Math.min(fade(t, foldT + 0.55, 0.3), 1 - fade(t, C.end - 0.1, 0.25)));
+    head("h6a", t, [C.founders + 0.2, C.founders + 0.35], C.direct - 0.2);
+    head("h6b", t, [C.direct, C.direct + 0.15], C.end - 0.15);
   }
 
   function s7(t) {
     head("h7", t, [C.end + 0.15, C.end + 0.35], 99);
     el("endWm", t, C.end + 0.1, 99, 0.6);
     el("endCta", t, C.end + 0.6, 99, 0.6);
-    el("endDomain", t, 31.67, 99, 0.6);
+    el("endDomain", t, 31.82, 99, 0.6);
   }
 
   function render(t) {
     background(t);
     s1(t); s2(t); s3(t); s4(t); s5(t); s6(t); s7(t);
-    captions(t, T.captions, cap);
+    if (T.burnCaptions !== false) captions(t, T.captions, cap);
+    else cap.style.visibility = "hidden";
   }
 
   window.seek = (t) => { render(t); return new Promise((ok) => requestAnimationFrame(() => ok(t))); };

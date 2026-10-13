@@ -40,15 +40,14 @@ The "Your Business" page, phone screens, enquiry form and editor in S1–S3 and 
 
 Delivery times, Lighthouse targets, support days, page counts, hosting, AI-referral figures, MyCustomPatches performance figures (withdrawn), rankings, conversions and any monthly-plan statement. None of them are needed for this film's one idea.
 
-## Film 01 v2: Tell us your bottlenecks
+## Film 01 v2/v3: Tell us what you need
 
 | On screen or spoken | Source |
 |---|---|
-| "Work directly with Hassan and Imran" · names on the photos | `src/data/company-facts.ts` line 66 (Founders) and line 80 (founders work directly with clients) |
-| "with the price agreed before we build" · "Price agreed before we build." | `src/data/company-facts.ts` line 117 (price fixed once the written scope is agreed) |
+| "Work with experts. Talk directly to the founders who build it, not a sales agent." · the struck-out sales/account/project manager chain | `src/data/company-facts.ts` line 80 (the founders work directly with clients) and NOT_A_FIT line 194 ("The work is done by two founders, remotely"; no large in-house team) |
 | "A website that search engines and AI assistants can read" | `src/data/company-facts.ts` line 76: new builds include readable content, descriptive titles and headings, structured data and sitemap/indexing checks; "indexing, rankings and citations are not guaranteed" (the film's small print) |
 | "Confirmations, reminders and invoices that send themselves" · the booking → confirmation → reminder → PDF invoice flow | `src/data/business-features.ts` (order/booking emails, reminders that stop for paid or cancelled items, branded PDF invoices), built per agreed scope |
 | "Still paying for apps that don't quite fit?" | `src/data/business-features.ts` `costs` and FAQ: compare build and running costs with the subscriptions a tool could replace; keep useful tools |
 | "Tools built around how you work" | `src/data/company-facts.ts` line 84 (custom work: integrations and internal tools) |
 
-No prices, client names, project results or numbers appear in v2. The AI-assistant chat, app tiles, to-do list, example website, workflow and engine are original illustrations.
+No prices, client names, founder names or photos, project results or numbers appear in v3. The AI-assistant chat, app tiles, to-do list, example website, workflow and engine are original illustrations.
