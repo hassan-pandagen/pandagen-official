@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8" /><title>s06 phone and long pages</title></head>
+<body>
+<template>
+<style>
+#s06 { position: absolute; inset: 0; overflow: hidden; }
+#s06-all { position: absolute; inset: 0; }
+#s06 .lcol { position: absolute; top: 0; border-radius: 10px; overflow: hidden; background: var(--card); box-shadow: var(--shadow); }
+#s06 .lcol img { display: block; width: 100%; }
+#s06-scrim { position: absolute; left: 0; right: 0; top: 0; }
+#s06-ph { transform-origin: 0 0; }
+#s06-ph .screen { background: var(--card); }
+</style>
+
+<div id="s06" data-composition-id="s06">
+  <div id="s06-all">
+    <div id="s06-cols"></div>
+    <div id="s06-scrim"></div>
+    <div class="phone" id="s06-phw"><div class="screen"><div class="island"></div><div class="page" id="s06-mpage" data-layout-allow-overflow></div></div></div>
+    <h2 class="ttl" id="s06-h"><span class="ln"><span class="in">Looks right</span></span><span class="ln"><span class="in">on every screen<b>.</b></span></span></h2>
+  </div>
+</div>
+
+<script>
+(() => {
+  const K = window.KIT;
+  const P = K.P;
+  // Three long pages built from each site's own sections, top to bottom.
+  const COLS = [[P.nd, P.ndIntro, P.ndSys, P.ndEnv, P.ndProc, P.ndScen], [P.sleek, P.sleekCol, P.sleekCore, P.sleekDet, P.emb, P.embEmb], [P.med, P.medCare, P.medAreas, P.medNon, P.l4j, P.l4jSec]];
+  const cols = document.getElementById("s06-cols");
+  COLS.forEach((c, i) => {
+    const el = document.createElement("div");
+    el.className = "lcol"; el.id = "s06-l" + i; el.setAttribute("data-layout-allow-overflow", "");
+    el.innerHTML = c.map((s) => `<img src="${s}" alt="" />`).join("");
+    cols.appendChild(el);
+  });
+  document.getElementById("s06-mpage").innerHTML = [P.mHead, P.mServ, P.mAuto].map((s) => `<img src="${s}" alt="" />`).join("");
+  K.ready("s06", (tl) => {
+    const [W, H] = K.SIZE;
+    const f = K.F.format;
+    const h = K.head(document.getElementById("s06-h"),
+      f === "16x9" ? { x: 150, y: 96, w: 560, size: 58, anchor: "top" } : f === "9x16" ? { x: 80, y: 240, w: 900, size: 88, anchor: "top" } : { x: 60, y: 50, w: 900, size: 54, anchor: "top" });
+    // Columns [x0, width, gap], phone [x, y, scale].
+    const L = {
+      "16x9": { c: [760, 330, 40], ph: [190, h.bottom + 60, 0.78] },
+      "9x16": { c: [40, 320, 20], ph: [90, 760, 0.95] },
+      "1x1": { c: [440, 190, 20], ph: [70, h.bottom + 40, 0.6] },
+    }[f];
+    const colH = [];
+    for (let i = 0; i < 3; i++) {
+      const el = document.getElementById("s06-l" + i);
+      Object.assign(el.style, { left: L.c[0] + i * (L.c[1] + L.c[2]) + "px", width: L.c[1] + "px" });
+      colH.push(L.c[1] * 900 / 1440 * 6);
+    }
+    const ph = document.getElementById("s06-phw");
+    Object.assign(ph.style, { left: L.ph[0] + "px", top: L.ph[1] + "px", transformOrigin: "0 0" });
+    gsap.set(ph, { scale: L.ph[2] });
+    if (f !== "16x9") document.getElementById("s06-scrim").style.cssText += `;height:${h.bottom + 160}px;background:linear-gradient(180deg, rgba(232,231,228,1) 0, rgba(232,231,228,.96) ${h.bottom + 40}px, rgba(232,231,228,0) 100%)`;
+
+    // Columns rise in, staggered (first lands on the cut at 0.6); the phone slides in from the left.
+    for (let i = 0; i < 3; i++) {
+      const travel = Math.max(0, colH[i] - H + 120);
+      const a = i % 2 ? -travel : 60, b = i % 2 ? 60 : -travel;
+      K.inn(tl, "#s06-l" + i, { y: H }, { y: a }, i * 0.12, 0.9, "power3.out");
+      K.drift(tl, "#s06-l" + i, { y: a }, { y: b }, 0.9 + i * 0.12, 3.9);
+    }
+    K.inn(tl, "#s06-phw", { x: -700 }, { x: 0 }, 0.2, 0.9, "power3.out");
+    K.reveal(tl, document.getElementById("s06-h"), 0.6, 0.12);
+    // The mobile page scrolls in steps.
+    K.move(tl, "#s06-mpage", { y: 0 }, { y: -300 }, 1.6, 0.7, "power3.inOut", "#s06-mpage");
+    K.move(tl, "#s06-mpage", { y: -300 }, { y: -900 }, 2.8, 0.8, "power3.inOut", "#s06-mpage");
+    K.move(tl, "#s06-mpage", { y: -900 }, { y: -1600 }, 3.9, 0.8, "power3.inOut", "#s06-mpage");
+
+    // Exit (cut at 5.4): push off to the left.
+    K.conceal(tl, document.getElementById("s06-h"), 4.55);
+    K.out(tl, "#s06-all", { x: 0 }, { x: -W }, 4.8, 0.6, "power3.in");
+  });
+})();
+</script>
+</template>
+</body>
+</html>

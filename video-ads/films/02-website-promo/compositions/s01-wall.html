@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8" /><title>s01 wall of pages</title></head>
+<body>
+<template>
+<style>
+#s01 { position: absolute; inset: 0; overflow: hidden; }
+#s01-stage { position: absolute; inset: 0; perspective: 3600px; perspective-origin: 50% 40%; }
+#s01-plane { position: absolute; width: 5520px; height: 3700px; transform-style: preserve-3d; }
+</style>
+
+<div id="s01" data-composition-id="s01">
+  <div id="s01-stage" data-layout-allow-overflow><div id="s01-plane" data-layout-allow-overflow></div></div>
+</div>
+
+<script>
+(() => {
+  const K = window.KIT;
+  // Seven columns of real front pages and phones; the title card sits in the middle column.
+  const T = { eyebrow: "PandaCodeGen", title: "Websites<br>that work<b>.</b>" };
+  const COLS = [
+    ["ndSys", "sleek", "phones", "medAreas", "ndEnv", "embLib"],
+    ["pubJour", "nd", "l4j", "phones", "sleekCol", "pub"],
+    ["mcpProc", "embDir", "saf", "medNon", "phones", "l4jDev"],
+    ["med", "emb", T, "mcp", "ndProc", "sleekCore"],
+    ["l4jSec", "saf", "phones", "sleekDet", "medCare", "ndIntro"],
+    ["embEmb", "pubLib", "asm", "phones", "ndScen", "mcpCat"],
+    ["sleekCol", "mcpCat", "sleekDet", "phones", "med", "emb"],
+  ];
+  const plane = document.getElementById("s01-plane");
+  COLS.forEach((c, i) => plane.appendChild(K.wallColumn("s01-c" + i, c, i * 800)));
+
+  K.ready("s01", (tl) => {
+    const [W, H] = K.SIZE;
+    const f = K.F.format;
+    // Rotate around the title card's centre (column 3, third item) and put that point near the frame centre.
+    const ox = 3 * 800 + 360, oy = 450 + 60 + 450 + 60 + 225;
+    const at = { "16x9": [W * 0.5, H * 0.5], "9x16": [W * 0.5, H * 0.46], "1x1": [W * 0.5, H * 0.5] }[f];
+    plane.style.left = at[0] - ox + "px"; plane.style.top = at[1] - oy + "px";
+    gsap.set(plane, { transformOrigin: `${ox}px ${oy}px`, rotateX: 50, rotateZ: -32, scale: { "16x9": 0.74, "9x16": 0.86, "1x1": 0.62 }[f] });
+
+    // On screen from the first frame (thumbnail). Columns slide past each other; the camera creeps in.
+    for (let i = 0; i < 7; i++) K.drift(tl, "#s01-c" + i, { y: i === 3 ? 40 : i % 2 ? -420 : 0 }, { y: i === 3 ? -60 : i % 2 ? 0 : -420 }, 0, 5.2);
+    K.drift(tl, "#s01-stage", { scale: 1.0 }, { scale: 1.07 }, 0, 5.2);
+    // The next scene slides up over this one on the cut (4.8).
+  });
+})();
+</script>
+</template>
+</body>
+</html>

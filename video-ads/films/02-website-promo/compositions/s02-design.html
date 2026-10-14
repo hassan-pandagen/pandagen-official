@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8" /><title>s02 title and browser</title></head>
+<body>
+<template>
+<style>
+#s02 { position: absolute; inset: 0; overflow: hidden; }
+#s02-panel { position: absolute; inset: 0; background: var(--ground); overflow: hidden; box-shadow: 0 -40px 80px -20px rgba(28, 25, 23, .25); }
+#s02-p { text-align: right; }
+</style>
+
+<div id="s02" data-composition-id="s02">
+  <div id="s02-panel">
+    <h2 class="ttl" id="s02-h"><span class="ln"><span class="in">Modern website</span></span><span class="ln"><span class="in">design<b>.</b></span></span></h2>
+    <p class="para" id="s02-p">Websites, online stores and custom tools, built around the way your business works.</p>
+    <div class="browser" id="s02-b" data-layout-allow-overflow>
+      <div class="bar"><i></i><i></i><i></i></div>
+      <div class="vp"><div class="page" id="s02-page" data-layout-allow-overflow></div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const K = window.KIT;
+  const page = document.getElementById("s02-page");
+  page.innerHTML = [K.P.sleek, K.P.sleekCol, K.P.sleekCore, K.P.sleekDet].map((s) => `<img src="${s}" alt="" />`).join("");
+  K.ready("s02", (tl) => {
+    const [W, H] = K.SIZE;
+    const f = K.F.format;
+    const b = document.getElementById("s02-b"), p = document.getElementById("s02-p");
+    let bw, by;
+    if (f === "16x9") {
+      K.head(document.getElementById("s02-h"), { x: 150, y: 104, w: 820, size: 92, anchor: "top" });
+      Object.assign(p.style, { left: "1080px", top: "116px", width: "690px" });
+      bw = 1500; by = 400; b.style.left = (W - bw) / 2 + "px";
+    } else {
+      const h = K.head(document.getElementById("s02-h"), f === "9x16" ? { x: 80, y: 230, w: 900, size: 100, anchor: "top" } : { x: 70, y: 60, w: 940, size: 66, anchor: "top" });
+      Object.assign(p.style, { left: (f === "9x16" ? 80 : 70) + "px", top: h.bottom + 26 + "px", width: (f === "9x16" ? 860 : 900) + "px", textAlign: "left", fontSize: (f === "1x1" ? 22 : 28) + "px" });
+      bw = f === "9x16" ? 960 : 900; by = h.bottom + (f === "9x16" ? 230 : 130); b.style.left = (W - bw) / 2 + "px";
+    }
+    Object.assign(b.style, { top: by + "px", width: bw + "px", height: H - by + 60 + "px" });
+    const imgH = bw * 900 / 1600;
+
+    // A fresh panel slides up over the wall and lands on the cut (0.6).
+    K.inn(tl, "#s02-panel", { yPercent: 100 }, { yPercent: 0 }, 0, 0.62, "power3.inOut");
+    K.reveal(tl, document.getElementById("s02-h"), 0.75, 0.1);
+    K.inn(tl, "#s02-p", { opacity: 0, y: 24 }, { opacity: 1, y: 0 }, 1.0, 0.7, "power2.out");
+    K.inn(tl, "#s02-b", { y: 260, opacity: 0 }, { y: 0, opacity: 1 }, 0.55, 1.0, "power3.out");
+    // The page scrolls: hero, collection, the core edit, details.
+    K.move(tl, "#s02-page", { y: 0 }, { y: -imgH * 1.02 }, 1.7, 1.2, "power2.inOut", "#s02-page");
+    K.move(tl, "#s02-page", { y: -imgH * 1.02 }, { y: -imgH * 2.05 }, 3.2, 1.2, "power2.inOut", "#s02-page");
+
+    // Exit (cut at 5.4): the panel pushes off to the left as the next layers slide in from the right.
+    K.out(tl, "#s02-panel", { xPercent: 0 }, { xPercent: -100 }, 4.85, 0.6, "power3.inOut");
+  });
+})();
+</script>
+</template>
+</body>
+</html>

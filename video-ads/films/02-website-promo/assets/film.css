@@ -1,53 +1,77 @@
-/* Film 02 shared styles: brand tokens (from video-ads/brand/tokens.css), type, device mockups.
+/* Film 02 shared styles. Look: the owner's reference template ("Web Design Promotional Video"):
+   light grey ground, thin uppercase titles with a grey paragraph, white browser windows with
+   coloured window dots, phones and a 3D laptop, real website pages. Colours are PandaCodeGen's.
    Fonts are declared with @font-face in each root file (HyperFrames lint wants them in-file). */
 :root {
-  --paper: #EBE9E4; --paper-hi: #F5F4F0; --ink: #1C1917; --body: #3A3733; --quiet: #5E5B55;
-  --rule: rgba(28, 25, 23, .16); --accent: #AD3D0B; --accent-text: #7A2E0E;
-  --dark: #1C1917; --on-dark: #EBE9E4; --on-dark-quiet: #A8A49C; --on-dark-accent: #E8763A;
-  --display: "Anton", Impact, sans-serif; --serif: "PT Serif", Georgia, serif; --ui: "Inter", Arial, sans-serif;
+  --ground: #E8E7E4; --ground-hi: #F4F3F1; --card: #FFFFFF; --ink: #24221F; --para: #66625B;
+  --accent: #AD3D0B; --dark: #1C1917; --on-dark: #EBE9E4;
+  --display: "Anton", Impact, sans-serif; --ui: "Inter", Arial, sans-serif;
+  --shadow: 0 2px 0 rgba(28, 25, 23, .04), 0 30px 60px -28px rgba(28, 25, 23, .32), 0 70px 120px -60px rgba(28, 25, 23, .28);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { overflow: hidden; background: var(--paper); }
-#main { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--paper); }
+html, body { overflow: hidden; background: var(--ground); }
+#main { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--ground); }
 
+/* Titles: Inter Light, uppercase, large; lines rise out of a mask. One cognac full stop. */
+.ttl { position: absolute; margin: 0; font: 300 96px/1.04 var(--ui); text-transform: uppercase; letter-spacing: -.012em; color: var(--ink); }
+.ttl .ln { display: block; overflow: hidden; padding: .05em 0 .1em; margin: -.05em 0 -.1em; }
+.ttl .in { display: inline-block; white-space: nowrap; }
+.ttl b { font-weight: 300; color: var(--accent); }
+.para { position: absolute; margin: 0; font: 400 26px/1.45 var(--ui); color: var(--para); }
+.eyebrow { position: absolute; font: 600 18px/1.2 var(--ui); letter-spacing: .2em; text-transform: uppercase; color: var(--accent); }
 
-/* Headlines: Anton, uppercase, one PT Serif italic phrase in cognac. Lines rise out of a mask. */
-.head { position: absolute; margin: 0; font: 400 118px/0.98 var(--display); text-transform: uppercase; color: var(--ink); letter-spacing: -.004em; }
-.head .ln { display: block; overflow: hidden; padding: .07em 0 .13em; margin: -.07em 0 -.13em; }
-.head .in { display: inline-block; white-space: nowrap; }
-.head .it { font-family: var(--serif); font-style: italic; text-transform: none; color: var(--accent); font-size: .86em; line-height: 1.1; letter-spacing: -.012em; }
-.on-dark .head, .head.on-dark { color: var(--on-dark); }
-.on-dark .head .it, .head.on-dark .it { color: var(--on-dark-accent); }
-.eyebrow { position: absolute; font: 600 22px/1.2 var(--ui); letter-spacing: .16em; text-transform: uppercase; color: var(--accent-text); }
-.fine { position: absolute; font: 500 21px/1.35 var(--ui); color: var(--quiet); }
-
-/* Browser window */
-.browser { position: absolute; border-radius: 16px; background: var(--paper-hi); overflow: hidden;
-  box-shadow: 0 1px 0 rgba(28, 25, 23, .08), 0 28px 60px -24px rgba(28, 25, 23, .38), 0 70px 120px -50px rgba(28, 25, 23, .32); }
-.bar { position: absolute; left: 0; right: 0; top: 0; height: 40px; display: flex; align-items: center; gap: 8px; padding: 0 16px; background: #E1DED7; border-bottom: 1px solid rgba(28, 25, 23, .1); }
-.bar i { display: block; width: 11px; height: 11px; border-radius: 50%; background: #C7C3BA; }
-.bar b { display: block; margin-left: 14px; width: 300px; height: 24px; border-radius: 12px; background: var(--paper-hi); font: 500 13px/24px var(--ui); color: var(--quiet); padding: 0 14px; }
-.vp { position: absolute; left: 0; right: 0; top: 40px; bottom: 0; overflow: hidden; background: var(--paper); }
+/* Browser window: white, coloured window dots. */
+.browser { position: absolute; border-radius: 14px; background: var(--card); overflow: hidden; box-shadow: var(--shadow); }
+.bar { position: absolute; left: 0; right: 0; top: 0; height: 40px; display: flex; align-items: center; gap: 9px; padding: 0 18px; background: var(--card); }
+.bar i { display: block; width: 12px; height: 12px; border-radius: 50%; }
+.bar i:nth-child(1) { background: #FF5F57; } .bar i:nth-child(2) { background: #FEBC2E; } .bar i:nth-child(3) { background: #28C840; }
+.vp { position: absolute; left: 0; right: 0; top: 40px; bottom: 0; overflow: hidden; background: var(--card); }
 .page { position: absolute; left: 0; top: 0; width: 100%; }
 .page img { display: block; width: 100%; }
 
-/* Laptop: lid 1000 x 650 (screen 964 x 608), base 1120 wide. */
-.laptop { position: absolute; width: 1120px; height: 690px; }
-.laptop .lid { position: absolute; left: 60px; top: 0; width: 1000px; height: 650px; border-radius: 28px 28px 12px 12px; background: #1C1917; padding: 18px 18px 24px;
-  box-shadow: inset 0 0 0 2px #2E2A27, 0 40px 80px -30px rgba(28, 25, 23, .45); }
-.laptop .screen { position: relative; width: 100%; height: 100%; border-radius: 6px; overflow: hidden; background: var(--paper); }
-.laptop .base { position: absolute; left: 0; top: 648px; width: 1120px; height: 34px; border-radius: 4px 4px 30px 30px; background: linear-gradient(#DAD7D0, #B7B3AB);
-  box-shadow: 0 30px 50px -20px rgba(28, 25, 23, .45); }
-.laptop .base::after { content: ""; position: absolute; left: 50%; top: 0; width: 170px; margin-left: -85px; height: 12px; border-radius: 0 0 12px 12px; background: #A9A59D; }
+/* Page card: a website page lying on a surface (wall shots). */
+.card { position: absolute; border-radius: 10px; overflow: hidden; background: var(--card) no-repeat top center / 100% auto;
+  box-shadow: 0 2px 0 rgba(28, 25, 23, .05), 0 24px 40px -22px rgba(28, 25, 23, .35); }
 
-/* Phone: 380 x 800, screen 352 x 772. */
-.phone { position: absolute; width: 380px; height: 800px; border-radius: 62px; background: #1C1917; padding: 14px;
-  box-shadow: inset 0 0 0 2px #34302C, 0 50px 90px -30px rgba(28, 25, 23, .5); }
-.phone .screen { position: relative; width: 100%; height: 100%; border-radius: 48px; overflow: hidden; background: var(--paper); }
+/* Phone: 380 x 800, screen 352 x 772. .white for the light frame in the wall shots. */
+.phone { position: absolute; width: 380px; height: 800px; border-radius: 62px; background: #1C1917; padding: 14px; box-shadow: var(--shadow); }
+.phone.white { background: #F7F6F4; box-shadow: inset 0 0 0 2px #DCDAD6, var(--shadow); }
+.phone .screen { position: relative; width: 100%; height: 100%; border-radius: 48px; overflow: hidden; background: var(--card); background-repeat: no-repeat; background-size: 100% auto; }
 .phone .island { position: absolute; left: 50%; top: 12px; width: 112px; height: 32px; margin-left: -56px; border-radius: 16px; background: #1C1917; z-index: 3; }
 
-/* Chips: small labels that point at what the picture shows. */
-.chip { position: absolute; display: flex; align-items: center; gap: 12px; padding: 14px 22px 14px 16px; border-radius: 999px; background: var(--paper-hi);
-  font: 600 26px/1 var(--ui); color: var(--ink); white-space: nowrap; box-shadow: 0 2px 0 rgba(28, 25, 23, .06), 0 18px 36px -16px rgba(28, 25, 23, .35); }
+/* 3D laptop. Sits flat on a plane (.lp-plane) whose rotation the scene sets; the lid rises out of it.
+   Deck 1000 x 660 (keyboard and trackpad), lid 1000 x 640 hinged on the deck's back edge. */
+.lp-plane { position: absolute; transform-style: preserve-3d; }
+.lp { position: absolute; width: 1000px; height: 660px; transform-style: preserve-3d; }
+.lp-shadow { position: absolute; left: -120px; right: -120px; top: -760px; bottom: -110px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(28, 25, 23, .32), rgba(28, 25, 23, .12) 55%, rgba(28, 25, 23, 0)); }
+.lp-deck { position: absolute; inset: 0; border-radius: 30px; background: linear-gradient(160deg, #DCDBD8, #BDBBB6); box-shadow: inset 0 0 0 2px #ABA9A4, inset 0 -10px 0 #A5A39E; }
+.lp-keys { position: absolute; left: 64px; right: 64px; top: 56px; height: 300px; border-radius: 10px; background-color: #2A2826;
+  background-image: linear-gradient(90deg, #CFCDC9 7px, transparent 7px), linear-gradient(#CFCDC9 7px, transparent 7px); background-size: 62px 60px; background-position: -7px -7px; }
+.lp-pad { position: absolute; left: 50%; width: 400px; margin-left: -200px; top: 392px; height: 228px; border-radius: 16px; background: linear-gradient(160deg, #D3D1CD, #C3C1BC); box-shadow: inset 0 0 0 2px #B3B1AC; }
+.lp-lid { position: absolute; left: 0; top: -640px; width: 1000px; height: 640px; transform-origin: 50% 100%;
+  border-radius: 30px 30px 8px 8px; background: #141312; padding: 26px 26px 34px; box-shadow: inset 0 0 0 3px #3A3734; backface-visibility: hidden; }
+.lp-screen { position: relative; width: 100%; height: 100%; border-radius: 6px; overflow: hidden; background: var(--card); }
+.lp-screen img { display: block; width: 100%; }
+
+/* Chips and buttons. */
+.chip { position: absolute; display: flex; align-items: center; gap: 12px; padding: 14px 22px 14px 16px; border-radius: 999px; background: var(--card);
+  font: 600 26px/1 var(--ui); color: var(--ink); white-space: nowrap; box-shadow: var(--shadow); }
 .chip .tick { display: block; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); position: relative; flex: none; }
 .chip .tick::after { content: ""; position: absolute; left: 12px; top: 8px; width: 8px; height: 15px; border: solid #fff; border-width: 0 3px 3px 0; transform: rotate(45deg); }
+
+/* Small phone lying in a wall of pages (two fit side by side in a 720 px column). */
+.mphone { position: relative; width: 320px; height: 660px; border-radius: 46px; background: #F7F6F4; padding: 11px; flex: none;
+  box-shadow: inset 0 0 0 2px #DCDAD6, 0 24px 40px -22px rgba(28, 25, 23, .35); }
+.mphone.dark { background: #1C1917; box-shadow: inset 0 0 0 2px #34302C, 0 24px 40px -22px rgba(28, 25, 23, .45); }
+.mphone .screen { width: 100%; height: 100%; border-radius: 36px; overflow: hidden; background: var(--card) no-repeat top center / 100% auto; }
+.wcol { position: absolute; top: 0; width: 720px; display: flex; flex-direction: column; gap: 60px; }
+.wcol .card { position: relative; width: 720px; height: 450px; flex: none; }
+.wcol .pair { display: flex; gap: 80px; justify-content: center; }
+.wtitle { position: relative; width: 720px; height: 450px; flex: none; border-radius: 10px; background: var(--card); padding: 60px 56px; display: flex; flex-direction: column; justify-content: flex-end; gap: 18px;
+  box-shadow: 0 2px 0 rgba(28, 25, 23, .05), 0 24px 40px -22px rgba(28, 25, 23, .35); }
+.wtitle .w1 { font: 300 92px/1 var(--ui); text-transform: uppercase; letter-spacing: -.015em; color: var(--ink); }
+.wtitle .w1 b { font-weight: 300; color: var(--accent); }
+.wtitle .w0 { font: 600 20px/1 var(--ui); letter-spacing: .2em; text-transform: uppercase; color: var(--accent); }
+.lp-deck { transform: translateZ(3px); }
+.lp-shadow { transform: translateZ(1px); }

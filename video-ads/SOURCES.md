@@ -66,3 +66,15 @@ Every page in the film is a capture of the redesigned site at the commit above, 
 | "Work with experts. Talk to the founders." · You → Sales rep / Account manager / Project manager (crossed out) → The founders who build it · "Direct line" | `src/data/company-facts.ts` line 80: "The founders work directly with clients…"; the homepage's "Founder-built, not farmed out." section ("no account managers"). The middle roles are the illustration's own, as in Film 01. |
 | End card "Let's build yours." · "Talk to the founders →" · pandacodegen.com | The site's primary CTA label ("Talk to the founders", site header) and domain |
 | Hook "Is your website working for you?" · generic grey site "yourbusiness.com" · "Where do I book?" | Illustration drawn for the film; represents no real business (`yourbusiness.com` is shown only as an address-bar label) |
+
+### Film 02 v2 additions
+
+| On screen | Source |
+|---|---|
+| Front pages of Sleek Jackets, NorthDeck Group, Emblematic Studio, the medical template, MyCustomPatches, Ladies 4 Jesus, Panda Publisher, Saforne, A Step Above Medical | The site's own published portfolio screenshots, `public/work/*.png` (copied to `films/02-website-promo/assets/work/` by `tools/prepare_work.py`). Shown without names or labels. |
+| Quote-form cards (backing and shape, size and quantity, upload artwork) | `public/work/panda-patches-calculator-configure.png` and `panda-patches-calculator-submit.png`, cropped |
+| "Modern website design." · "Websites, online stores and custom tools, built around the way your business works." | Service description: `src/data/company-facts.ts` line 80 (Primary offer); services list in `src/components/redesign/ServicesStack.tsx` |
+| "Built around your business." · "WordPress, Shopify or fully custom. Every page is made to help customers take the next step." | Homepage hero "Websites built for the way you do business." (`src/components/pages/home/HomeDesign.tsx` line 92); platforms in the homepage services list (WordPress, Shopify, custom builds) |
+| "Online stores and quote forms." | Work shown: MyCustomPatches product page, Panda Patches quote calculator, Sleek Jackets store |
+| "Easy to edit. Yours to keep." · "You get the code, a content editor and a live walkthrough." | Homepage ticker "Code you own · Content editor included"; services copy "written instructions and a live walkthrough with the founders" (`src/components/redesign/ServicesStack.tsx`) |
+| "Talk directly to the founders." · "No sales agents…" | `src/data/company-facts.ts` line 80 ("The founders work directly with clients…"); homepage "Founder-built, not farmed out" ("no account managers"); the ringed button is the site header's own "Talk to the founders" |

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8" /><title>s03 layered showreel</title></head>
+<body>
+<template>
+<style>
+#s03 { position: absolute; inset: 0; overflow: hidden; }
+#s03-kk { position: absolute; }
+#s03 .back { position: absolute; inset: 0; border-radius: 6px; overflow: hidden; background: var(--card) no-repeat top center / cover; box-shadow: var(--shadow); }
+#s03-b .vp .page img { height: auto; }
+#s03-eb { left: 150px; top: 110px; }
+</style>
+
+<div id="s03" data-composition-id="s03">
+  <div id="s03-kk"><div class="back" id="s03-k1"></div><div class="back" id="s03-k2"></div></div>
+  <div class="browser" id="s03-b">
+    <div class="bar"><i></i><i></i><i></i></div>
+    <div class="vp" id="s03-vp"><div class="page" id="s03-page" data-layout-allow-overflow></div></div>
+  </div>
+  <div class="eyebrow" id="s03-eb">Recent websites</div>
+</div>
+
+<script>
+(() => {
+  const K = window.KIT;
+  const FRONT = [K.P.emb, K.P.med, K.P.l4j, K.P.saf];
+  document.getElementById("s03-k1").style.backgroundImage = `url(${K.P.ndEnv})`;
+  document.getElementById("s03-k2").style.backgroundImage = `url(${K.P.sleekCol})`;
+  K.ready("s03", (tl) => {
+    const [W, H] = K.SIZE;
+    const f = K.F.format;
+    // Back page and front browser, per format: [x, y, w, h].
+    const L = {
+      "16x9": { back: [560, 150, 1360, 780], front: [150, 300, 1000, 600], eb: [150, 110] },
+      "9x16": { back: [200, 300, 980, 1180], front: [60, 980, 900, 560], eb: [80, 220] },
+      "1x1": { back: [330, 150, 760, 600], front: [70, 470, 760, 470], eb: [70, 70] },
+    }[f];
+    Object.assign(document.getElementById("s03-kk").style, { left: L.back[0] + "px", top: L.back[1] + "px", width: L.back[2] + "px", height: L.back[3] + "px" });
+    const b = document.getElementById("s03-b");
+    Object.assign(b.style, { left: L.front[0] + "px", top: L.front[1] + "px", width: L.front[2] + "px", height: L.front[3] + "px" });
+    Object.assign(document.getElementById("s03-eb").style, { left: L.eb[0] + "px", top: L.eb[1] + "px" });
+    const vpH = L.front[3] - 40;
+    // Each front page fills the window height; they sit in a vertical strip and step up one at a time.
+    document.getElementById("s03-page").innerHTML = FRONT.map((s) => `<div style="height:${vpH}px;background:url(${s}) top center / cover no-repeat"></div>`).join("");
+
+    // Layers slide in from the right at different speeds (lands on the cut at 0.6), then keep drifting.
+    K.inn(tl, "#s03-kk", { x: W - L.back[0] }, { x: 0 }, 0, 0.95, "power3.out");
+    K.inn(tl, "#s03-b", { x: W - L.front[0] + 200 }, { x: 0 }, 0.08, 1.0, "power3.out");
+    K.drift(tl, "#s03-kk", { x: 0 }, { x: -140 }, 0.95, 3.9);
+    K.drift(tl, "#s03-b", { y: 0 }, { y: -30 }, 1.1, 3.8);
+    K.inn(tl, "#s03-eb", { opacity: 0, x: -20 }, { opacity: 1, x: 0 }, 0.7, 0.6, "power2.out");
+    // The back page changes halfway (a wipe from the right).
+    if (K.R) tl.fromTo("#s03-k2", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "none" }, 3.0);
+    else tl.fromTo("#s03-k2", { clipPath: "inset(0 0 0 100%)" }, { clipPath: "inset(0 0 0 0%)", duration: 0.8, ease: "power3.inOut" }, 3.0);
+    gsap.set("#s03-k2", { opacity: K.R ? 0 : 1, clipPath: K.R ? "none" : "inset(0 0 0 100%)" });
+    // The front window steps through four front pages, one every two beats.
+    for (let i = 1; i < FRONT.length; i++) K.move(tl, "#s03-page", { y: -vpH * (i - 1) }, { y: -vpH * i }, 0.6 + i * 1.2 - 0.25, 0.55, "power3.inOut", "#s03-vp");
+
+    // Exit (cut at 5.4): both layers slide off to the left.
+    K.out(tl, "#s03-eb", { opacity: 1 }, { opacity: 0 }, 4.7, 0.3);
+    K.out(tl, "#s03-b", { x: 0 }, { x: -(L.front[0] + L.front[2] + 80) }, 4.75, 0.6, "power3.in");
+    K.out(tl, "#s03-kk", { x: -140 }, { x: -(L.back[0] + L.back[2] + 80) }, 4.85, 0.55, "power3.in");
+  });
+})();
+</script>
+</template>
+</body>
+</html>

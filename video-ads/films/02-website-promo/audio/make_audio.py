@@ -1,9 +1,9 @@
 """Film 02 soundtrack, synthesised from a fixed seed (no third-party music or samples).
 
 A 100 BPM tech-promo track in C major (C - G - Am - F, one chord per bar): plucked 16th-note arpeggio,
-pumping bass and pad, four-on-the-floor kick, claps and hats. It drops on the first cut (4.8 s), keeps
-one bar per beat of the picture, breaks down under "Talk to the founders" (33.6 s) and lands on the end
-card (38.4 s). Whooshes mark every cut; soft ticks mark list lines, chips and badges as they appear.
+pumping bass and pad, four-on-the-floor kick, claps and hats. It drops on the first cut (4.8 s), changes
+scene every two bars, breaks down under "Talk directly to the founders" (33.6 s) and lands on the end
+card (38.4 s). Whooshes mark every cut and page move; pops and ticks mark cards and screen changes.
 
 Run from films/02-website-promo with a Python that has numpy and soundfile:
     python audio/make_audio.py
@@ -24,7 +24,7 @@ rng = np.random.default_rng(2026)
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 # Picture cues (seconds, global). Cuts land on bars; scene starts are in build.mjs.
-CUTS = [4.8, 9.6, 19.2, 24.0, 28.8, 33.6, 38.4]
+CUTS = [4.8, 9.6, 14.4, 19.2, 24.0, 28.8, 33.6, 38.4]
 DROP, BREAK, END = 4.8, 33.6, 38.4
 
 
@@ -302,28 +302,25 @@ def ding(m=84):
     return (np.sin(2 * np.pi * f * tt) + 0.3 * np.sin(2 * np.pi * 2 * f * tt) * np.exp(-tt * 6)) * np.exp(-tt * 6) * np.minimum(1, tt / 0.003)
 
 
-# Cut whooshes peak on the cut.
+# Cut whooshes peak on the cut (each scene slides, pushes or rises in on a bar).
 for c in CUTS[1:-1]:
     add(sfx, c - 0.32, whoosh(0.55), 0.10, 0.1)
-add(sfx, 4.8 - 0.4, whoosh(0.6, 4200), 0.08)                 # the wall rises as the hook falls away
-add(sfx, 2.1, tick(1500, 90), 0.16)                          # click on the missing button
-add(sfx, 2.35, pop(), 0.12)                                  # "Where do I book?"
-for t in (9.85, 12.25, 14.65, 17.05):                       # list lines (s03 at 9.0 + 0.85, 3.25 ...)
-    add(sfx, t, tick(2200, 120), 0.09)
-for t in (11.65, 14.05, 16.45):                             # page scrolls
+add(sfx, 4.8 - 0.4, whoosh(0.6, 4200), 0.09)                 # panel rises over the wall of pages
+for t in (5.9, 7.4):                                        # s02 page scrolls
+    add(sfx, t, whoosh(1.1, 2600), 0.045, -0.2)
+for t in (10.55, 11.75, 12.95):                             # s03 front window steps to the next site
+    add(sfx, t, whoosh(0.4, 4800), 0.06, 0.2)
+add(sfx, 12.0, whoosh(0.8, 3000), 0.05, -0.2)               # s03 back page wipes
+for t in (15.95, 17.55):                                    # s04 laptop screen changes
+    add(sfx, t, tick(2200, 120), 0.08)
+for t in (19.6, 19.9, 20.2):                                # s05 form pieces pop out as cards
+    add(sfx, t, pop(), 0.11, 0.2)
+for t in (25.0, 26.2, 27.3):                                # s06 mobile page scrolls
     add(sfx, t, whoosh(0.7, 2600), 0.045, -0.2)
-add(sfx, 20.25, whoosh(0.9, 2600), 0.04)                    # phone scroll
-for t in (20.1, 20.8, 21.5, 25.15, 25.7, 26.25):            # phone chips, search chips
-    add(sfx, t, pop(), 0.10, 0.15)
-add(sfx, 24.6, whoosh(1.8, 3200), 0.035, -0.1)              # reading line passes down the section
-for i, t in enumerate((30.25, 30.85, 31.45, 32.05)):        # "sent" badges, rising
-    add(sfx, t, ding((84, 86, 88, 91)[i]), 0.06, (-0.3, 0.3, -0.3, 0.3)[i])
-for t in (34.95, 35.07, 35.19):                             # middlemen crossed out
-    add(sfx, t, whoosh(0.18, 6500), 0.06)
-add(sfx, 35.75, whoosh(0.7, 1800), 0.07)                    # ...and drop away
-add(sfx, 36.2, riser(0.6), 0.12)                            # direct line draws
-add(sfx, 36.7, pop(), 0.11)                                 # "Direct line"
-add(sfx, 39.25, tick(1500, 90), 0.12)                       # button lands
+add(sfx, 31.15, tick(2200, 120), 0.08)                      # s07 laptop screen changes
+for i, t in enumerate((34.7, 36.1)):                        # s08 ring on "Talk to the founders"
+    add(sfx, t, ding((84, 88)[i]), 0.07)
+add(sfx, 39.25, tick(1500, 90), 0.12)                       # end card button lands
 
 mix = music * 0.9 + sfx
 os.makedirs(HERE, exist_ok=True)

@@ -1,30 +1,27 @@
-# Film 02 · Website promo (HyperFrames)
+# Film 02 · Website promo (HyperFrames) · v2
 
-**Format reference:** the owner pointed at "Web Design Promotional Video – After Effects Template" (YouTube `g7xkVEWrX8E`, template by alexeguy). YouTube is blocked in this environment, so the video itself wasn't watched. The film follows that genre: real site pages on tilted 3D planes, a wall of pages, laptop and phone mock-ups with the site scrolling, short kinetic headlines, check-mark callouts, and a music-only track that cuts on the bar. No footage, music or design was taken from the template.
+**Format reference:** the owner's template, "Web Design Promotional Video – After Effects Template" (YouTube `g7xkVEWrX8E`). v1 followed the genre from a description; v2 follows the owner's screenshots of it: a tilted wall of website pages and phones, a title card over a browser that scrolls, a browser sliding over a second page, a floating 3D laptop beside a title, page pieces popping out as cards, a phone beside columns of long pages, and a laptop standing on a wall of pages. Light grey ground, thin uppercase titles with a grey paragraph. Nothing was taken from the template itself; every page shown is PandaCodeGen's own work, from the screenshots the site already publishes in `public/work/` and captures of the redesigned site.
 
-**Length:** 43.2 s (18 bars at 100 BPM). **Voice:** none, like the template; every word is on screen. **Built with:** HyperFrames 0.8.153 (HTML + GSAP compositions in `compositions/`).
-
-**Audience:** owners of small and growing businesses whose website isn't bringing in work.
-**Promise:** PandaCodeGen designs and builds websites that work, makes them readable by search and AI, automates routine work, and you deal with the founders directly.
-**CTA:** Talk to the founders → pandacodegen.com
+**Length:** 43.2 s (18 bars at 100 BPM, a scene every two bars). **Voice:** none, like the template. **Built with:** HyperFrames 0.8.153.
 
 ## Shot list
 
-| Time | Scene | On screen | Picture |
+| Time | Scene | On screen | Picture (template move) |
 |---|---|---|---|
-| 0.0–4.8 | s01 hook | IS YOUR WEBSITE / *working for you?* | A generic grey placeholder site. A cursor looks for a way to book, finds a dashed gap where the button should be; chip "Where do I book?" |
-| 4.8–9.6 | s02 wall | WE DESIGN AND BUILD / *websites that work.* | Wall of real PandaCodeGen pages on a tilted plane, columns sliding past each other, then rushing toward the camera |
-| 9.6–19.2 | s03 laptop tour | WHAT YOU GET · 01 Designed for your business · 02 A page for every service · 03 Routine work, automated · 04 A clear plan to launch | Laptop with pandacodegen.com; the page scrolls to the matching section on each bar: hero, services, automation, process |
-| 19.2–24.0 | s04 phone | LOOKS SHARP / *on every phone.* · chips: Easy to read · Easy to tap · Quick to load | Phone spins in; the mobile homepage scrolls |
-| 24.0–28.8 | s05 search | EASY FOR GOOGLE / *and AI to read.* · fine print "Rankings and AI answers aren't guaranteed." · chips: Same details everywhere · Structured data · Claims with sources | The site's own "Search & AI Foundations" section; a reading line passes down it |
-| 28.8–33.6 | s06 automation | WE AUTOMATE / *the busywork.* · badges: Email sent · Reminder sent · Invoice sent · Details synced | The site's four automation cards fly in; each one "runs" on the beat |
-| 33.6–38.4 | s07 founders | WORK WITH EXPERTS. / *Talk to the founders.* · You · Sales rep · Account manager · Project manager · The founders who build it · Direct line | The three middlemen are crossed out and drop away, leaving one line |
-| 38.4–43.2 | s08 end card | PandaCodeGen. · LET'S BUILD / *yours.* · [Talk to the founders →] · pandacodegen.com | Charcoal rises over the frame; the button's arrow nudges once |
+| 0.0–4.8 | s01 wall | PANDACODEGEN · WEBSITES THAT WORK. (a card in the wall) | Tilted wall of front pages and phones, columns sliding past each other |
+| 4.8–9.6 | s02 design | MODERN WEBSITE DESIGN. · "Websites, online stores and custom tools, built around the way your business works." | Panel slides up; a browser rises and the Sleek Jackets site scrolls |
+| 9.6–14.4 | s03 showreel | RECENT WEBSITES | Browser slides over a second page; four front pages step through it (Emblematic Studio, medical template, Ladies 4 Jesus, Saforne) over NorthDeck and Sleek Jackets |
+| 14.4–19.2 | s04 laptop | BUILT AROUND YOUR BUSINESS. · "WordPress, Shopify or fully custom. Every page is made to help customers take the next step." | Floating 3D laptop turning slowly: NorthDeck, medical template, Panda Publisher |
+| 19.2–24.0 | s05 UI | ONLINE STORES AND QUOTE FORMS. | MyCustomPatches product page; three pieces of the Panda Patches quote form slide out as cards |
+| 24.0–28.8 | s06 screens | LOOKS RIGHT ON EVERY SCREEN. | Phone with the PandaCodeGen mobile site beside three long pages scrolling in opposite directions |
+| 28.8–33.6 | s07 desk | EASY TO EDIT. YOURS TO KEEP. · "You get the code, a content editor and a live walkthrough." | Laptop standing on a turning wall of pages |
+| 33.6–38.4 | s08 founders | TALK DIRECTLY TO THE FOUNDERS. · "No sales agents. Tell us what you need, and the people who build it reply." | pandacodegen.com in a browser; its "Talk to the founders" button is ringed twice |
+| 38.4–43.2 | s09 end | PandaCodeGen. · LET'S BUILD YOURS. · [Talk to the founders →] · pandacodegen.com | Light panel rises; wordmark, title, button, address |
 
 ## Sound
 
-Music only, synthesised by `audio/make_audio.py`: intro with a filtered arpeggio and a riser, drop and impact on the first cut (4.8 s), four-on-the-floor groove through the tour, phone, search and automation scenes, a half-time breakdown under "Talk to the founders", and an impact plus a four-note bell on the end card. Whooshes on every cut; ticks, pops and rising dings when list lines, chips and badges appear.
+Music only (`audio/make_audio.py`): filtered intro and riser, drop on 4.8 s, four-on-the-floor groove, half-time breakdown under "Talk directly to the founders", impact and bell on the end card. Whooshes on cuts and page moves, pops for the form cards, ticks for laptop screen changes, two dings for the button ring.
 
-## What the film deliberately doesn't show
+## Left out on purpose
 
-No founder names or photos, no client names, logos or quotes, no "independent client" labels, no prices, no invented search or AI results. Page sections that carry any of those were left out of the captures (see `tools/capture-promo.mjs`).
+No founder names or photos, no client names or "independent client" labels on screen, no prices, no invented results. Admin, CRM and editor screens stay out of the walls; the Panda Patches homepage is left out because it shows other companies' logos.

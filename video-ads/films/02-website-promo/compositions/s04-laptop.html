@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8" /><title>s04 floating laptop</title></head>
+<body>
+<template>
+<style>
+#s04 { position: absolute; inset: 0; overflow: hidden; }
+#s04-cam { position: absolute; left: 0; top: 0; width: 1600px; height: 1200px; perspective: 3000px; perspective-origin: 50% 35%; }
+#s04-float { position: absolute; left: 800px; top: 760px; transform-style: preserve-3d; }
+#s04-plane { left: 0; top: 0; }
+#s04-lp { left: -500px; top: -330px; }
+</style>
+
+<div id="s04" data-composition-id="s04">
+  <h2 class="ttl" id="s04-h"><span class="ln"><span class="in">Built around</span></span><span class="ln"><span class="in">your business<b>.</b></span></span></h2>
+  <p class="para" id="s04-p">WordPress, Shopify or fully custom. Every page is made to help customers take the next step.</p>
+  <div id="s04-v">
+    <div id="s04-cam" data-layout-allow-overflow><div id="s04-float"><div class="lp-plane" id="s04-plane"></div></div></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const K = window.KIT;
+  document.getElementById("s04-plane").innerHTML = K.laptop("s04-lp", []);
+  K.ready("s04", (tl) => {
+    const [W, H] = K.SIZE;
+    const f = K.F.format;
+    const scr = 580;
+    document.getElementById("s04-lp-page").innerHTML = [K.P.nd, K.P.med, K.P.pub].map((s) => `<div style="height:${scr}px;background:url(${s}) top center / cover no-repeat"></div>`).join("");
+    let h;
+    if (f === "16x9") h = K.head(document.getElementById("s04-h"), { x: 150, y: 470, w: 740, size: 84, anchor: "mid" });
+    else h = K.head(document.getElementById("s04-h"), f === "9x16" ? { x: 80, y: 240, w: 900, size: 96, anchor: "top" } : { x: 70, y: 60, w: 940, size: 64, anchor: "top" });
+    const p = document.getElementById("s04-p");
+    Object.assign(p.style, { left: K.SLOT.head.x + (f === "1x1" ? -20 : 0) + "px", top: h.bottom + 30 + "px", width: (f === "16x9" ? 600 : 880) + "px", fontSize: (f === "1x1" ? 22 : 26) + "px" });
+    const pb = h.bottom + 30 + p.getBoundingClientRect().height;
+    K.place(document.getElementById("s04-v"), 1600, 1200,
+      f === "16x9" ? { x: 840, y: 150, w: 980, h: 860 } : f === "9x16" ? { x: -170, y: pb + 30, w: 1420, h: 1720 - pb } : { x: 300, y: pb - 30, w: 800, h: 1080 - pb + 30 });
+
+    // The laptop floats in from below, turning toward us (lands on the cut at 0.6), then keeps a slow turn and bob.
+    gsap.set("#s04-plane", { rotateX: 70, rotateZ: 36 });
+    // (Opacity goes on the flat camera layer: opacity on a 3D layer would flatten the open lid.)
+    K.inn(tl, "#s04-cam", { opacity: 0 }, { opacity: 1 }, 0, 0.45, "none");
+    if (!K.R) tl.fromTo("#s04-float", { y: 520, rotateY: -25 }, { y: 0, rotateY: 0, duration: 1.1, ease: "power3.out" }, 0);
+    K.drift(tl, "#s04-plane", { rotateZ: 36 }, { rotateZ: 22 }, 0.4, 5.0);
+    K.drift(tl, "#s04-cam", { y: 0 }, { y: -26 }, 1.1, 3.7);
+    K.reveal(tl, document.getElementById("s04-h"), 0.6, 0.12);
+    K.inn(tl, "#s04-p", { opacity: 0, y: 20 }, { opacity: 1, y: 0 }, 1.0, 0.7, "power2.out");
+    // Screen changes on the bar: NorthDeck, then the medical template, then Panda Publisher.
+    K.move(tl, "#s04-lp-page", { y: 0 }, { y: -scr }, 2.15, 0.6, "power3.inOut", "#s04-lp-page");
+    K.move(tl, "#s04-lp-page", { y: -scr }, { y: -scr * 2 }, 3.75, 0.6, "power3.inOut", "#s04-lp-page");
+
+    // Exit (cut at 5.4).
+    K.conceal(tl, document.getElementById("s04-h"), 4.6);
+    K.out(tl, "#s04-p", { opacity: 1 }, { opacity: 0 }, 4.6, 0.4);
+    K.out(tl, "#s04-cam", { opacity: 1 }, { opacity: 0, x: 500 }, 4.75, 0.6, "power2.in");
+  });
+})();
+</script>
+</template>
+</body>
+</html>

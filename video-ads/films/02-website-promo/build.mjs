@@ -12,18 +12,19 @@ import { fileURLToPath } from "node:url";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DURATION = 43.2; // 18 bars at 100 BPM
-// [id, file, start, duration]. Cuts land on bars (2.4 s): 4.8, 9.6, 19.2, 24.0, 28.8, 33.6, 38.4.
+// [id, file, start, duration]. Cuts land on bars (2.4 s): 4.8, 9.6, 14.4, 19.2, 24.0, 28.8, 33.6, 38.4.\n// ONLY=s01,s02 node build.mjs  builds roots with just those scenes (for quick checks).
 // Each scene starts 0.6 s before its cut (its entrance) and stays 0.4 s past the next cut (overlap).
 export const SCENES = [
-  ["s01", "s01-hook", 0, 5.2],
-  ["s02", "s02-wall", 4.2, 5.8],
-  ["s03", "s03-tour", 9.0, 10.6],
-  ["s04", "s04-phone", 18.6, 5.8],
-  ["s05", "s05-search", 23.4, 5.8],
-  ["s06", "s06-automation", 28.2, 5.8],
-  ["s07", "s07-founders", 33.0, 5.8],
-  ["s08", "s08-end", 37.8, 5.4],
-];
+  ["s01", "s01-wall", 0, 5.2],
+  ["s02", "s02-design", 4.2, 5.8],
+  ["s03", "s03-showreel", 9.0, 5.8],
+  ["s04", "s04-laptop", 13.8, 5.8],
+  ["s05", "s05-ui", 18.6, 5.8],
+  ["s06", "s06-screens", 23.4, 5.8],
+  ["s07", "s07-desk", 28.2, 5.8],
+  ["s08", "s08-founders", 33.0, 5.8],
+  ["s09", "s09-end", 37.8, 5.4],
+].filter(([, file]) => !process.env.ONLY || process.env.ONLY.split(",").some((k) => file.startsWith(k)));
 const FORMATS = [
   { dir: ".", format: "16x9", motion: "full", W: 1920, H: 1080, label: "16:9 master" },
   { dir: "formats/9x16", format: "9x16", motion: "full", W: 1080, H: 1920, label: "9:16 social" },

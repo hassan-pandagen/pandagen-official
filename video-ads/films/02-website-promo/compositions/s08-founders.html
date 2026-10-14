@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8" /><title>s08 talk to the founders</title></head>
+<body>
+<template>
+<style>
+#s08 { position: absolute; inset: 0; overflow: hidden; }
+#s08-panel { position: absolute; inset: 0; background: var(--ground); overflow: hidden; box-shadow: 0 -40px 80px -20px rgba(28, 25, 23, .25); }
+#s08-b .vp { background: var(--card); }
+#s08-ring { position: absolute; border-radius: 6px; border: 3px solid var(--accent); box-shadow: 0 0 0 6px rgba(173, 61, 11, .15); opacity: 0; }
+</style>
+
+<div id="s08" data-composition-id="s08">
+  <div id="s08-panel">
+    <h2 class="ttl" id="s08-h"><span class="ln"><span class="in">Talk directly</span></span><span class="ln"><span class="in">to the founders<b>.</b></span></span></h2>
+    <p class="para" id="s08-p">No sales agents. Tell us what you need, and the people who build it reply.</p>
+    <div class="browser" id="s08-b"><div class="bar"><i></i><i></i><i></i></div><div class="vp"><div class="page" id="s08-page" data-layout-allow-overflow></div><div id="s08-ring"></div></div></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const K = window.KIT;
+  document.getElementById("s08-page").innerHTML = [K.P.pcgHead, K.P.pcgServ].map((s) => `<img src="${s}" alt="" />`).join("");
+  K.ready("s08", (tl) => {
+    const [W, H] = K.SIZE;
+    const f = K.F.format;
+    const h = K.head(document.getElementById("s08-h"),
+      f === "16x9" ? { x: 150, y: 480, w: 700, size: 78, anchor: "mid" } : f === "9x16" ? { x: 80, y: 240, w: 900, size: 92, anchor: "top" } : { x: 60, y: 50, w: 900, size: 58, anchor: "top" });
+    const p = document.getElementById("s08-p");
+    Object.assign(p.style, { left: K.SLOT.head.x + (f === "1x1" ? -30 : 0) + "px", top: h.bottom + 28 + "px", width: (f === "16x9" ? 600 : 880) + "px", fontSize: (f === "1x1" ? 22 : 26) + "px" });
+    const pb = h.bottom + 28 + p.getBoundingClientRect().height;
+    // Browser [x, y, w, h] showing pandacodegen.com, whose header button reads "Talk to the founders".
+    const B = { "16x9": [900, 250, 900, 600], "9x16": [60, pb + 90, 960, 640], "1x1": [260, pb + 40, 760, 1080 - pb - 40 + 40] }[f];
+    Object.assign(document.getElementById("s08-b").style, { left: B[0] + "px", top: B[1] + "px", width: B[2] + "px", height: B[3] + "px" });
+    // The header button sits at x 1143-1310, y 22-66 of the 1440-px-wide page.
+    const k = B[2] / 1440;
+    Object.assign(document.getElementById("s08-ring").style, { left: 1143 * k - 7 + "px", top: 22 * k - 7 + "px", width: 167 * k + 14 + "px", height: 44 * k + 14 + "px" });
+
+    // A fresh panel slides up over the wall (lands on the cut at 0.6).
+    K.inn(tl, "#s08-panel", { yPercent: 100 }, { yPercent: 0 }, 0, 0.62, "power3.inOut");
+    K.reveal(tl, document.getElementById("s08-h"), 0.75, 0.12);
+    K.inn(tl, "#s08-p", { opacity: 0, y: 20 }, { opacity: 1, y: 0 }, 1.1, 0.7, "power2.out");
+    K.inn(tl, "#s08-b", { y: 200 }, { y: 0 }, 0.55, 0.9, "power3.out");
+    K.drift(tl, "#s08-b", { y: 0 }, { y: -16 }, 1.45, 3.3);
+    // The site's own "Talk to the founders" button is ringed, twice.
+    for (const t of [1.7, 3.1]) {
+      tl.fromTo("#s08-ring", { opacity: 0, scale: K.R ? 1 : 1.35 }, { opacity: 1, scale: 1, duration: 0.35, ease: "power2.out", immediateRender: false }, t);
+      if (!K.R) tl.fromTo("#s08-ring", { opacity: 1 }, { opacity: 0.35, duration: 0.7, ease: "power1.inOut", immediateRender: false }, t + 0.5);
+    }
+
+    // Exit: the end card rises over this scene from 4.8.
+    K.conceal(tl, document.getElementById("s08-h"), 4.4);
+    K.out(tl, "#s08-p", { opacity: 1 }, { opacity: 0 }, 4.4, 0.4);
+  });
+})();
+</script>
+</template>
+</body>
+</html>

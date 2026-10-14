@@ -74,13 +74,11 @@
     if (R) return tl.fromTo(el, { opacity: from.opacity ?? 1 }, { opacity: 0, duration: Math.max(0.45, d), ease: "none", immediateRender: false }, t);
     tl.fromTo(el, from, Object.assign({}, to, { duration: d, ease, immediateRender: false }), t);
   }
-  // A move inside a scene (page scroll, camera drift). Reduced motion: hold, then a short dip to the new state.
-  function move(tl, el, from, to, t, d = 0.9, ease = "power2.inOut", dip) {
+  // A move inside a scene (page scroll, screen change). Reduced motion: hold, then a plain cut to the
+  // new state halfway through (no slide, no fade to blank).
+  function move(tl, el, from, to, t, d = 0.9, ease = "power2.inOut") {
     if (!R) return tl.fromTo(el, from, Object.assign({}, to, { duration: d, ease, immediateRender: false }), t);
-    const target = dip || el;
-    tl.fromTo(target, { opacity: 1 }, { opacity: 0, duration: 0.25, ease: "none", immediateRender: false }, t);
-    tl.fromTo(el, from, Object.assign({}, to, { duration: 0.01, immediateRender: false }), t + 0.25);
-    tl.fromTo(target, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "none", immediateRender: false }, t + 0.27);
+    tl.fromTo(el, from, Object.assign({}, to, { duration: 0.001, immediateRender: false }), t + d / 2);
   }
   // A long settle into a pose. Reduced motion: start in the final pose.
   function settle(tl, el, from, to, t, d, ease = "sine.out") {
@@ -122,5 +120,48 @@
     });
   }
 
-  window.KIT = { F, R, SIZE, SLOT, fit, head, place, reveal, conceal, inn, out, move, settle, drift, pop, ready };
+  // Portfolio pages (assets/work, copied from public/work by tools/prepare_work.py) and site captures.
+  const W = (n) => `assets/work/${n}.jpg`;
+  const P = {
+    sleek: W("sleek-jackets-hero"), sleekCol: W("sleek-jackets-collection"), sleekCore: W("sleek-jackets-core-edit"), sleekDet: W("sleek-jackets-details"),
+    med: W("medical-template-hero"), medAreas: W("medical-template-areas"), medCare: W("medical-template-care"), medNon: W("medical-template-non-surgical"),
+    nd: W("northdeck-group-home"), ndEnv: W("northdeck-group-environments"), ndProc: W("northdeck-group-process"), ndScen: W("northdeck-group-scenario"),
+    ndIntro: W("northdeck-group-services-intro"), ndSys: W("northdeck-group-systems"),
+    emb: W("emblematic-studio-home"), embEmb: W("emblematic-studio-embroidered"), embLib: W("emblematic-studio-library"), embDir: W("emblematic-studio-direction-test"),
+    mcp: W("mycustompatches"), mcpCat: W("mycustompatches-categories"), mcpProc: W("mycustompatches-process"), mcpProd: W("mycustompatches-product-template"),
+    l4j: W("ladies-4-jesus-hero"), l4jSec: W("ladies-4-jesus-sections"), l4jDev: W("ladies-4-jesus-devotionals"),
+    pub: W("panda-publisher"), pubLib: W("panda-publisher-library"), pubJour: W("panda-publisher-journey"),
+    saf: W("saforne"), asm: W("a-step-above-medical-preview-homepage"),
+    pcgHead: "assets/site/home-head.png", pcgServ: "assets/site/home-services.png", pcgAuto: "assets/site/home-automation.png",
+    mHead: "assets/site/m-home-head.png", mServ: "assets/site/m-home-services.png", mAuto: "assets/site/m-home-automation.png", mAudit: "assets/site/m-audit-top.png",
+  };
+  // Mobile screens for phones: the PandaCodeGen mobile homepage, stacked (header + services), or the audit page.
+  const MOBILE = [[P.mHead, P.mServ], [P.mAudit], [P.mServ], [P.mAuto]];
+  const bg = (srcs, offs) => `background-image:${srcs.map((s) => `url(${s})`).join(",")};background-position:${srcs.map((_, i) => `0 ${offs ? offs[i] : 0}px`).join(",")};background-size:100% auto;background-repeat:no-repeat`;
+
+  // A wall column: items are page keys, "phones" (two small phones side by side) or {title, eyebrow}.
+  function wallColumn(id, items, x) {
+    const el = document.createElement("div");
+    el.className = "wcol"; el.id = id; el.style.left = x + "px"; el.setAttribute("data-layout-allow-overflow", "");
+    let ph = 0;
+    el.innerHTML = items.map((it) => {
+      if (it === "phones") {
+        const a = MOBILE[ph++ % MOBILE.length], b = MOBILE[ph++ % MOBILE.length];
+        const scr = (m) => `<div class="mphone"><div class="screen" style="${bg(m, m.length > 1 ? [0, 227] : null)}"></div></div>`;
+        return `<div class="pair">${scr(a)}${scr(b)}</div>`;
+      }
+      if (typeof it === "object") return `<div class="wtitle"><div class="w0">${it.eyebrow}</div><div class="w1">${it.title}</div></div>`;
+      return `<div class="card" style="background-image:url(${P[it]})"></div>`;
+    }).join("");
+    return el;
+  }
+
+  // 3D laptop markup; the page images stack in #<id>-page so the screen can scroll.
+  function laptop(id, srcs, lid = -76) {
+    return `<div class="lp" id="${id}"><div class="lp-shadow"></div><div class="lp-deck"><div class="lp-keys"></div><div class="lp-pad"></div></div>` +
+      `<div class="lp-lid" style="transform: rotateX(${lid}deg)"><div class="lp-screen"><div class="page" id="${id}-page" data-layout-allow-overflow>` +
+      srcs.map((s) => `<img src="${s}" alt="" />`).join("") + `</div></div></div></div>`;
+  }
+
+  window.KIT = { F, R, SIZE, SLOT, fit, head, place, reveal, conceal, inn, out, move, settle, drift, pop, ready, P, MOBILE, bg, wallColumn, laptop };
 })();

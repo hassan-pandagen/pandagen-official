@@ -67,27 +67,26 @@ Only checks that were actually run are listed.
 
 Not done: real-time human viewing and listening, playback on actual phones, and platform upload previews.
 
-## Film 02 outputs (`out/02-website-promo/`)
+## Film 02 outputs (`out/02-website-promo/`, v2)
 
 | File | Spec |
 |---|---|
-| `master_16x9.mp4` | 1920×1080, 43.200 s, 60 fps (2592 frames), H.264 High, yuv420p, BT.709, CRF 16, AAC-LC 256 kb/s 48 kHz stereo |
-| `social_9x16.mp4` · `square_1x1.mp4` | 1080×1920 and 1080×1080, same encode, laid out for each frame |
-| `reduced_motion_9x16.mp4` | 1080×1920, same sequence and timings; entrances become fades, scrolls become short dips, no drift |
+| `master_16x9.mp4` | 1920×1080, 43.200 s, 60 fps (2592 frames), H.264 High, yuv420p, BT.709, CRF 16, AAC-LC 256 kb/s 48 kHz stereo (about 69 MB: moving photo-rich pages at CRF 16) |
+| `social_9x16.mp4` · `square_1x1.mp4` | 1080×1920 (56 MB) and 1080×1080 (44 MB), same encode, laid out for each frame |
+| `reduced_motion_9x16.mp4` | 1080×1920, same sequence and timings; no slides, drifts or turns; entrances fade, screen changes cut |
 | `contact.png` · `script.md` · `render-command.sh` | Frames from all four exports at 14 points, shot list, exact commands |
 
-No SRT files: the film has no voice-over, and every word is already on screen. Render with `bash films/02-website-promo/render.sh` (HyperFrames 0.8.153; `HF=` overrides the CLI command).
+No SRT files: the film has no voice-over, and every word is already on screen. Render with `bash films/02-website-promo/render.sh` (HyperFrames 0.8.153; `HF=` overrides the CLI command). `python3 tools/prepare_work.py` (in the film folder) refreshes the portfolio pages from `public/work/`.
 
-## Checks performed on Film 02
+## Checks performed on Film 02 (v2)
 
 Only checks that were actually run are listed.
 
-- **HyperFrames `lint`** on all four format projects: 0 errors, 0 warnings. **`check`** on the final 16:9 project: passed; lint, runtime, layout and motion 0 errors and 0 warnings; contrast 21/21 text checks pass WCAG AA. One layout note remains: at 28.2 s the outgoing and incoming headlines share a box while both are masked mid-transition. Intentional overflows (scrolling pages, the off-canvas wall, the drifting grid) are marked `data-layout-allow-overflow`.
+- **HyperFrames `lint`** on all four format projects: 0 errors, 0 warnings. **`check`** on the 16:9 project: passed; lint, runtime, layout (9 samples) and motion 0 issues; contrast 16/16 text checks pass WCAG AA.
 - **FFprobe** on all four MP4s: 43.200 s, 2592 video frames at 60/1, h264 High, yuv420p, bt709; aac LC, 2 channels, 48 kHz, about 264 kb/s.
-- **Loudness** (FFmpeg `ebur128=peak=true` on each MP4): integrated −15.9 LUFS, true peak −1.9 dBFS on all four. The mix's loudnorm pass is linear (no dynamic fallback).
-- **Deterministic frames:** three timestamps snapshotted in two separate runs with different seek orders gave identical PNG hashes.
-- **Encode quality:** a frame from the 16:9 MP4 against a lossless snapshot of the same time: PSNR 42.7 dB, with no visible artefacts on small text at 3× zoom.
-- **Stills at 14 points × 4 exports** extracted from the MP4s (`contact.png`) and inspected, plus frames either side of every cut in the 16:9 master. Earlier passes found and fixed: headlines measured at zero size in scenes not yet on screen, the wall headline unreadable without its scrim, a sliver of masked text showing, and exits overlapping the next scene.
-- **Content review against the owner's rules:** no founder names or photos, client names, "independent client" labels or prices appear in any capture used (each capture was viewed before use; `/services` and `/manifesto` were dropped for that reason).
+- **Loudness** (FFmpeg `ebur128=peak=true` on each MP4): integrated −15.9 LUFS, true peak −1.6 dBFS on all four. The mix's loudnorm pass is linear.
+- **Stills at 14 points × 4 exports** extracted from the MP4s (`contact.png`) and inspected, plus snapshot passes during the build. Fixed along the way: a laptop too large and cropped in 16:9 and too small in 9:16, the standing laptop covering the title, two overlapping form cards in 9:16, see-through crossfades replaced by slides, and reduced-motion screen changes that faded to a blank window (now plain cuts, checked again on the re-rendered file).
+- **Content review against the owner's rules:** no founder names or photos, no client names or labels on screen, no prices, no third-party brand logos (the Panda Patches homepage was left out for that). Each source image was viewed before use.
+- v1 checks (determinism across seek orders, encode PSNR 42.7 dB against a lossless frame) were run on the v1 build with the same renderer settings; they weren't repeated for v2.
 
-Not done: watching the reference template (YouTube is blocked here), real-time human viewing and listening, playback on phones, and platform upload previews.
+Not done: real-time human viewing and listening, playback on phones, and platform upload previews.

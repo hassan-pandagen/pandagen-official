@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8" /><title>s09 end card</title></head>
+<body>
+<template>
+<style>
+#s09 { position: absolute; inset: 0; overflow: hidden; }
+#s09-panel { position: absolute; inset: 0; background: var(--ground-hi); box-shadow: 0 -40px 80px -20px rgba(28, 25, 23, .25); }
+#s09-wm { position: absolute; display: block; height: auto; }
+#s09-h { text-align: center; }
+#s09-cta { position: absolute; display: flex; align-items: center; gap: 18px; padding: 0 46px; height: 96px; border-radius: 6px; background: var(--dark); color: #fff; font: 600 34px/1 var(--ui); white-space: nowrap; }
+#s09-cta .arr { display: block; font-weight: 500; }
+#s09-url { position: absolute; font: 500 32px/1 var(--ui); color: var(--ink); letter-spacing: .01em; white-space: nowrap; }
+</style>
+
+<div id="s09" data-composition-id="s09">
+  <div id="s09-panel"></div>
+  <img id="s09-wm" src="assets/brand/wordmark-ink.png" alt="PandaCodeGen." />
+  <h2 class="ttl" id="s09-h"><span class="ln"><span class="in">Let's build</span></span><span class="ln"><span class="in">yours<b>.</b></span></span></h2>
+  <div id="s09-cta">Talk to the founders <span class="arr" id="s09-arr">→</span></div>
+  <div id="s09-url">pandacodegen.com</div>
+</div>
+
+<script>
+(() => {
+  const K = window.KIT;
+  K.ready("s09", (tl) => {
+    const f = K.F.format;
+    const [W, H] = K.SIZE;
+    // One centred column: wordmark, headline, button, address.
+    const P = { "16x9": { wm: 600, top: 190, size: 120, gap: 50 }, "9x16": { wm: 620, top: 560, size: 136, gap: 64 }, "1x1": { wm: 480, top: 150, size: 100, gap: 40 } }[f];
+    const wm = document.getElementById("s09-wm");
+    Object.assign(wm.style, { width: P.wm + "px", left: (W - P.wm) / 2 + "px", top: P.top + "px" });
+    const hb = K.head(document.getElementById("s09-h"), { x: (W - 940) / 2, w: 940, size: P.size, anchor: "top", y: P.top + P.wm * 113 / 655 + P.gap });
+    const cta = document.getElementById("s09-cta");
+    Object.assign(cta.style, { left: (W - cta.offsetWidth) / 2 + "px", top: hb.bottom + P.gap + "px" });
+    const url = document.getElementById("s09-url");
+    Object.assign(url.style, { left: (W - url.offsetWidth) / 2 + "px", top: hb.bottom + P.gap + 96 + 36 + "px" });
+
+    // A light panel rises over the last scene and lands on the cut (0.6).
+    K.inn(tl, "#s09-panel", { yPercent: 100 }, { yPercent: 0 }, 0, 0.62, "power3.inOut");
+    K.inn(tl, "#s09-wm", { opacity: 0, y: 30 }, { opacity: 1, y: 0 }, 0.6, 0.7, "power3.out");
+    K.reveal(tl, document.getElementById("s09-h"), 0.85, 0.12);
+    K.inn(tl, "#s09-cta", { opacity: 0, y: 30 }, { opacity: 1, y: 0 }, 1.45, 0.6, "power3.out");
+    K.inn(tl, "#s09-url", { opacity: 0 }, { opacity: 1 }, 1.8, 0.6, "none");
+    if (!K.R) {
+      tl.fromTo("#s09-arr", { x: 0 }, { x: 10, duration: 0.3, ease: "power2.out", immediateRender: false }, 2.6);
+      tl.fromTo("#s09-arr", { x: 10 }, { x: 0, duration: 0.4, ease: "power2.inOut", immediateRender: false }, 2.9);
+    }
+  });
+})();
+</script>
+</template>
+</body>
+</html>

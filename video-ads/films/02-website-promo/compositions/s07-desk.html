@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8" /><title>s07 laptop on a wall of pages</title></head>
+<body>
+<template>
+<style>
+#s07 { position: absolute; inset: 0; overflow: hidden; }
+#s07-stage { position: absolute; inset: 0; perspective: 3400px; perspective-origin: 50% 35%; }
+#s07-plane { position: absolute; width: 5520px; height: 3700px; transform-style: preserve-3d; }
+#s07-lpw { position: absolute; transform-style: preserve-3d; }
+#s07-scrim { position: absolute; inset: 0; }
+</style>
+
+<div id="s07" data-composition-id="s07">
+  <div id="s07-stage" data-layout-allow-overflow><div id="s07-plane" data-layout-allow-overflow><div id="s07-lpw"></div></div></div>
+  <div id="s07-scrim"></div>
+  <h2 class="ttl" id="s07-h"><span class="ln"><span class="in">Easy to edit.</span></span><span class="ln"><span class="in">Yours to keep<b>.</b></span></span></h2>
+  <p class="para" id="s07-p">You get the code, a content editor and a live walkthrough.</p>
+</div>
+
+<script>
+(() => {
+  const K = window.KIT;
+  const COLS = [
+    ["medCare", "ndIntro", "phones", "sleekDet", "embDir", "l4j"],
+    ["sleek", "mcpCat", "embLib", "phones", "pubJour", "ndSys"],
+    ["phones", "saf", "medNon", "nd", "mcpProc", "sleekCol"],
+    ["pubLib", "l4jDev", "ndEnv", "med", "phones", "embEmb"],
+    ["emb", "phones", "sleekCore", "asm", "medAreas", "ndScen"],
+    ["l4jSec", "ndProc", "pub", "phones", "mcp", "sleek"],
+    ["ndSys", "medCare", "phones", "emb", "saf", "l4j"],
+  ];
+  const plane = document.getElementById("s07-plane");
+  COLS.forEach((c, i) => plane.insertBefore(K.wallColumn("s07-c" + i, c, i * 800), document.getElementById("s07-lpw")));
+  document.getElementById("s07-lpw").innerHTML = K.laptop("s07-lp", []);
+  K.ready("s07", (tl) => {
+    const [W, H] = K.SIZE;
+    const f = K.F.format;
+    const scr = 580;
+    document.getElementById("s07-lp-page").innerHTML = [K.P.emb, K.P.pub].map((s) => `<div style="height:${scr}px;background:url(${s}) top center / cover no-repeat"></div>`).join("");
+    // The laptop stands in the middle of the wall; the wall turns around it.
+    const ox = 2760, oy = 1850;
+    const lpw = document.getElementById("s07-lpw");
+    Object.assign(lpw.style, { left: ox - 500 + "px", top: oy - 330 + "px" });
+    gsap.set("#s07-lp", { rotateZ: 34, scale: 0.56, transformOrigin: "500px 330px" });
+    const at = { "16x9": [W * 0.68, H * 0.72], "9x16": [W * 0.52, H * 0.72], "1x1": [W * 0.62, H * 0.76] }[f];
+    plane.style.left = at[0] - ox + "px"; plane.style.top = at[1] - oy + "px";
+    gsap.set(plane, { transformOrigin: `${ox}px ${oy}px`, rotateX: 54, rotateZ: -36, scale: { "16x9": 0.66, "9x16": 0.82, "1x1": 0.56 }[f] });
+
+    // Title and paragraph over a paper scrim.
+    const h = K.head(document.getElementById("s07-h"),
+      f === "16x9" ? { x: 150, y: 100, w: 760, size: 72, anchor: "top" } : f === "9x16" ? { x: 80, y: 240, w: 900, size: 92, anchor: "top" } : { x: 60, y: 50, w: 900, size: 56, anchor: "top" });
+    const p = document.getElementById("s07-p");
+    Object.assign(p.style, { left: K.SLOT.head.x + (f === "1x1" ? -30 : 0) + "px", top: h.bottom + 24 + "px", width: (f === "16x9" ? 560 : 860) + "px", fontSize: (f === "1x1" ? 22 : 26) + "px" });
+    const G = "232, 231, 228";
+    document.getElementById("s07-scrim").style.background = f === "16x9"
+      ? `radial-gradient(70% 75% at 0% 0%, rgba(${G}, 1) 0%, rgba(${G}, .93) 45%, rgba(${G}, 0) 75%)`
+      : `linear-gradient(180deg, rgba(${G}, 1) 0px, rgba(${G}, .94) ${Math.round(h.bottom + 120)}px, rgba(${G}, 0) ${Math.round(h.bottom + 380)}px)`;
+
+    // Slides in from the right (lands on the cut at 0.6); the wall turns slowly and the camera moves in.
+    K.inn(tl, "#s07-stage", { x: W }, { x: 0 }, 0, 0.75, "power3.out");
+    K.inn(tl, "#s07-scrim", { opacity: 0 }, { opacity: 1 }, 0.3, 0.5, "none");
+    K.drift(tl, "#s07-plane", { rotateZ: -36 }, { rotateZ: -27 }, 0.6, 4.9);
+    K.drift(tl, "#s07-stage", { scale: 1 }, { scale: 1.06 }, 0.75, 4.6);
+    for (let i = 0; i < 7; i++) if (i !== 3) K.drift(tl, "#s07-c" + i, { y: i % 2 ? -300 : 0 }, { y: i % 2 ? 0 : -300 }, 0, 5.8);
+    K.reveal(tl, document.getElementById("s07-h"), 0.7, 0.12);
+    K.inn(tl, "#s07-p", { opacity: 0, y: 20 }, { opacity: 1, y: 0 }, 1.1, 0.7, "power2.out");
+    K.move(tl, "#s07-lp-page", { y: 0 }, { y: -scr }, 2.95, 0.6, "power3.inOut", "#s07-lp-page");
+
+    // Exit: the next scene's panel covers this one from 4.8.
+    K.conceal(tl, document.getElementById("s07-h"), 4.5);
+    K.out(tl, "#s07-p", { opacity: 1 }, { opacity: 0 }, 4.5, 0.4);
+  });
+})();
+</script>
+</template>
+</body>
+</html>
