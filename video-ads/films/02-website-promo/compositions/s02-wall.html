@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8" /><title>s02 wall of pages</title></head>
+<body>
+<template>
+<style>
+#s02 { position: absolute; inset: 0; overflow: hidden; }
+#s02-stage { position: absolute; inset: 0; perspective: 3200px; perspective-origin: 50% 30%; }
+#s02-plane { position: absolute; width: 3480px; height: 2420px; transform-style: preserve-3d; }
+#s02 .col { position: absolute; top: 0; width: 640px; }
+#s02 .pc { position: relative; width: 640px; height: 428px; margin-bottom: 56px; border-radius: 14px; overflow: hidden; background: var(--paper-hi);
+  box-shadow: 0 1px 0 rgba(28, 25, 23, .08), 0 34px 60px -26px rgba(28, 25, 23, .42); }
+#s02 .pc .bar { height: 28px; padding: 0 12px; gap: 6px; }
+#s02 .pc .bar i { width: 8px; height: 8px; }
+#s02 .pc .shot { position: absolute; left: 0; right: 0; top: 28px; bottom: 0; background-repeat: no-repeat; background-size: 100% auto; background-color: var(--paper); }
+#s02 .A { background-image: url(assets/site/home-head.png), url(assets/site/home-services.png); background-position: 0 0, 0 169px; }
+#s02 .B { background-image: url(assets/site/audit-top.png); }
+#s02 .C { background-image: url(assets/site/aiinfo-top.png); }
+#s02 .D { background-image: url(assets/site/blog-top.png); }
+#s02 .E { background-image: url(assets/site/home-services.png); background-position: 0 -250px; background-color: var(--dark); }
+#s02 .Fa { background-image: url(assets/site/home-automation.png); }
+#s02 .G { background-image: url(assets/site/home-process.png); }
+#s02 .H { background-image: url(assets/site/home-services.png); background-color: var(--dark); }
+#s02-scrim { position: absolute; inset: 0; }
+</style>
+
+<div id="s02" data-composition-id="s02">
+  <div id="s02-stage" data-layout-allow-overflow><div id="s02-plane" data-layout-allow-overflow></div></div>
+  <div id="s02-scrim"></div>
+  <h2 class="head" id="s02-h"><span class="ln"><span class="in">We design and build</span></span><span class="ln it"><span class="in">websites that work.</span></span></h2>
+</div>
+
+<script>
+(() => {
+  const K = window.KIT;
+  // Five columns of real PandaCodeGen pages (captured from the redesign; no founder, client or price sections).
+  const COLS = [["A", "Fa", "C", "G", "B"], ["D", "H", "B", "E", "A"], ["C", "G", "A", "Fa", "D"], ["E", "B", "D", "H", "G"], ["Fa", "C", "E", "A", "H"]];
+  const plane = document.getElementById("s02-plane");
+  COLS.forEach((col, i) => {
+    const c = document.createElement("div");
+    c.className = "col"; c.id = "s02-c" + i; c.setAttribute("data-layout-allow-overflow", ""); c.style.left = i * 710 + "px";
+    c.innerHTML = col.map((k) => `<div class="pc" data-layout-allow-overflow><div class="bar"><i></i><i></i><i></i></div><div class="shot ${k}"></div></div>`).join("");
+    plane.appendChild(c);
+  });
+  K.ready("s02", (tl) => {
+    const [W, H] = K.SIZE;
+    const f = K.F.format;
+    plane.style.left = W / 2 - 1740 + (f === "16x9" ? 260 : 0) + "px";
+    plane.style.top = H / 2 - 1210 + (f === "9x16" ? 260 : f === "1x1" ? 120 : 0) + "px";
+    gsap.set(plane, { rotateX: 52, rotateZ: -32, scale: f === "16x9" ? 0.92 : f === "9x16" ? 1.05 : 0.8, transformOrigin: "50% 50%" });
+    const h = K.head(document.getElementById("s02-h"), f === "16x9" ? { y: 520 } : null);
+    // Paper scrim behind the headline (set here: scene CSS is scoped, so html format classes don't reach it).
+    const P = "235, 233, 228";
+    document.getElementById("s02-scrim").style.background = f === "16x9"
+      ? `linear-gradient(90deg, rgba(${P}, 1) 0%, rgba(${P}, .95) 36%, rgba(${P}, 0) 62%)`
+      : `linear-gradient(180deg, rgba(${P}, 1) 0px, rgba(${P}, .95) ${Math.round(h.bottom + 30)}px, rgba(${P}, 0) ${Math.round(h.bottom + 330)}px)`;
+
+    // Rises in from below as the hook falls away; lands on the cut (0.6).
+    K.inn(tl, "#s02-stage", { yPercent: 105 }, { yPercent: 0 }, 0, 0.95, "power3.out");
+    // Columns slide past each other for the whole scene; the camera creeps forward.
+    for (let i = 0; i < 5; i++) K.drift(tl, "#s02-c" + i, { y: i % 2 ? -380 : 0 }, { y: i % 2 ? 0 : -380 }, 0, 5.8);
+    K.drift(tl, "#s02-stage", { scale: 1 }, { scale: 1.08 }, 0.9, 4.0);
+    K.inn(tl, "#s02-scrim", { opacity: 0 }, { opacity: 1 }, 0.4, 0.6, "none");
+    K.reveal(tl, document.getElementById("s02-h"), 0.75);
+
+    // Exit on the cut (5.4): the headline lifts, the wall rushes toward the camera.
+    K.conceal(tl, document.getElementById("s02-h"), 4.5);
+    K.out(tl, "#s02-scrim", { opacity: 1 }, { opacity: 0 }, 4.6, 0.45);
+    K.out(tl, "#s02-plane", { opacity: 1, z: 0 }, { opacity: 0, z: 900 }, 4.75, 0.55, "power2.in");
+  });
+})();
+</script>
+</template>
+</body>
+</html>

@@ -51,3 +51,18 @@ Delivery times, Lighthouse targets, support days, page counts, hosting, AI-refer
 | "Tools built around how you work" | `src/data/company-facts.ts` line 84 (custom work: integrations and internal tools) |
 
 No prices, client names, founder names or photos, project results or numbers appear in v3. The AI-assistant chat, app tiles, to-do list, example website, workflow and engine are original illustrations.
+
+## Film 02: Website promo (HyperFrames)
+
+Every page in the film is a capture of the redesigned site at the commit above, running locally (`tools/capture-promo.mjs`). No numbers, prices, client names or people appear.
+
+| On screen | Source |
+|---|---|
+| "We design and build websites that work." (headline over the wall of pages) | General description of the service: `src/data/company-facts.ts` (Primary offer, line 80) |
+| List: "Designed for your business" · "A page for every service" · "Routine work, automated" · "A clear plan to launch" | Each lands on the page section that says it: hero "Websites built for the way you do business." (`src/components/pages/home/HomeDesign.tsx` line 92); services list (`src/components/redesign/ServicesStack.tsx`); "You run the business. We automate the busywork." (`src/data/business-features.ts` line 3); "From First Call to Launch." four stages (`src/components/redesign/ProcessSplit.tsx` line 76) |
+| "Looks sharp on every phone." · chips "Easy to read" · "Easy to tap" · "Quick to load" | The mobile homepage itself, shown scrolling. "Quick to load": `src/data/company-facts.ts` line 137, Performance acceptance ("A 90+ Lighthouse handover target on mobile and desktop…") |
+| "Easy for Google and AI to read." + fine print "Rankings and AI answers aren't guaranteed." · chips "Same details everywhere" · "Structured data" · "Claims with sources" | `src/components/redesign/ServicesStack.tsx` lines 69–70, Search & AI Foundations: "a business described the same way everywhere, structured data that matches what visitors see, and claims backed by a source. We cannot guarantee a citation." The section is shown as captured. |
+| "We automate the busywork." · cards 01–04 · badges "Email sent" · "Reminder sent" · "Invoice sent" · "Details synced" | Cards are the site's own (`src/data/business-features.ts` lines 11–29). The badges are illustrative states of the automation each card describes (order/booking emails, reminders, PDF invoices, entering details once). |
+| "Work with experts. Talk to the founders." · You → Sales rep / Account manager / Project manager (crossed out) → The founders who build it · "Direct line" | `src/data/company-facts.ts` line 80: "The founders work directly with clients…"; the homepage's "Founder-built, not farmed out." section ("no account managers"). The middle roles are the illustration's own, as in Film 01. |
+| End card "Let's build yours." · "Talk to the founders →" · pandacodegen.com | The site's primary CTA label ("Talk to the founders", site header) and domain |
+| Hook "Is your website working for you?" · generic grey site "yourbusiness.com" · "Where do I book?" | Illustration drawn for the film; represents no real business (`yourbusiness.com` is shown only as an address-bar label) |

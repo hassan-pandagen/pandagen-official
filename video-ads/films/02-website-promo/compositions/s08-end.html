@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8" /><title>s08 end card</title></head>
+<body>
+<template>
+<style>
+#s08 { position: absolute; inset: 0; overflow: hidden; }
+#s08-panel { position: absolute; inset: 0; background: var(--dark); }
+#s08-panel .glow { position: absolute; inset: 0; background: radial-gradient(70% 55% at 50% 42%, rgba(232, 118, 58, .10), rgba(232, 118, 58, 0) 70%); }
+#s08-wm { position: absolute; display: block; height: auto; }
+#s08-h { text-align: center; }
+#s08-cta { position: absolute; display: flex; align-items: center; gap: 18px; padding: 0 44px; height: 92px; border-radius: 6px; background: var(--paper-hi); color: var(--ink); font: 600 34px/1 var(--ui); white-space: nowrap; }
+#s08-cta .arr { display: block; font-weight: 500; }
+#s08-url { position: absolute; font: 500 32px/1 var(--ui); color: var(--on-dark); letter-spacing: .01em; white-space: nowrap; }
+</style>
+
+<div id="s08" data-composition-id="s08">
+  <div id="s08-panel"><div class="glow"></div></div>
+  <img id="s08-wm" src="assets/brand/wordmark-paper.png" alt="PandaCodeGen." />
+  <h2 class="head on-dark" id="s08-h"><span class="ln"><span class="in">Let's build</span></span><span class="ln it"><span class="in">yours.</span></span></h2>
+  <div id="s08-cta">Talk to the founders <span class="arr" id="s08-arr">→</span></div>
+  <div id="s08-url">pandacodegen.com</div>
+</div>
+
+<script>
+(() => {
+  const K = window.KIT;
+  K.ready("s08", (tl) => {
+    const f = K.F.format;
+    const [W, H] = K.SIZE;
+    // One centred column: wordmark, headline, button, address.
+    const P = { "16x9": { wm: 600, top: 200, size: 150, gap: 48 }, "9x16": { wm: 600, top: 560, size: 150, gap: 60 }, "1x1": { wm: 460, top: 170, size: 112, gap: 40 } }[f];
+    const wm = document.getElementById("s08-wm");
+    wm.style.width = P.wm + "px"; wm.style.left = (W - P.wm) / 2 + "px"; wm.style.top = P.top + "px";
+    const wmH = P.wm * 113 / 655;
+    const head = document.getElementById("s08-h");
+    const hb = K.head(head, { x: (W - 900) / 2, w: 900, size: P.size, anchor: "top", y: P.top + wmH + P.gap });
+    const cta = document.getElementById("s08-cta");
+    cta.style.left = (W - cta.offsetWidth) / 2 + "px"; cta.style.top = hb.bottom + P.gap + 10 + "px";
+    const url = document.getElementById("s08-url");
+    url.style.left = (W - url.offsetWidth) / 2 + "px"; url.style.top = hb.bottom + P.gap + 10 + 92 + 34 + "px";
+
+    // Charcoal rises over the last scene and lands on the cut (0.6).
+    K.inn(tl, "#s08-panel", { yPercent: 100 }, { yPercent: 0 }, 0, 0.65, "power3.inOut");
+    K.inn(tl, "#s08-wm", { opacity: 0, y: 30 }, { opacity: 1, y: 0 }, 0.6, 0.7, "power3.out");
+    K.reveal(tl, head, 0.85);
+    K.inn(tl, "#s08-cta", { opacity: 0, y: 30 }, { opacity: 1, y: 0 }, 1.45, 0.6, "power3.out");
+    K.inn(tl, "#s08-url", { opacity: 0 }, { opacity: 1 }, 1.8, 0.6, "none");
+    if (!K.R) {
+      tl.fromTo("#s08-arr", { x: 0 }, { x: 10, duration: 0.3, ease: "power2.out", immediateRender: false }, 2.6);
+      tl.fromTo("#s08-arr", { x: 10 }, { x: 0, duration: 0.4, ease: "power2.inOut", immediateRender: false }, 2.9);
+    }
+  });
+})();
+</script>
+</template>
+</body>
+</html>

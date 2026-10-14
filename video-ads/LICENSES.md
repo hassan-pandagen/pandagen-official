@@ -13,3 +13,13 @@
 | Example illustrations (the "Your Business" page, phone screens, landscape SVG) | Drawn in the film's HTML/CSS/SVG | Original to this project | Tagged EXAMPLE PAGE or EXAMPLE JOURNEY on screen. |
 | Rendering tools | Chromium (Playwright build), playwright-core 1.56.1 (Apache-2.0), FFmpeg (LGPL/GPL build with libx264, used as an external program) | As stated | Not redistributed in the outputs. |
 | ASR check model | sherpa-onnx (Apache-2.0) with Whisper base.en (MIT) from github.com/k2-fsa/sherpa-onnx releases | As stated | Verification only. Not part of any output. |
+
+## Film 02 additions
+
+| Asset | Where it's from | Terms | Notes |
+|---|---|---|---|
+| Site section captures (`films/02-website-promo/assets/site/*.png`, crops `crop-*.png`) | Captured in this session from the redesigned site running locally at `63a6bdce` by `tools/capture-promo.mjs` | PandaCodeGen's own pages | Sections naming or picturing the founders, client names, quotes, "independent client" labels and prices were not captured. Floating overlays (dev badge, cookie control, assistant launcher) are hidden; page content is unaltered. |
+| GSAP 3.14.2 (`films/02-website-promo/assets/vendor/gsap.min.js`) | npm package `gsap` | GreenSock "Standard no-charge" licence (gsap.com/standard-license) | Bundled locally because CDNs are blocked here. Used only to animate the film's own compositions. |
+| HyperFrames CLI 0.8.153 and its pinned Chrome Headless Shell | npm package `hyperframes` (heygen-com/hyperframes); Chrome downloaded by `hyperframes browser ensure` | Apache-2.0 (HyperFrames); Chrome terms for the headless shell | Rendering tools only; not part of the outputs. |
+| Film 02 music and sound (`films/02-website-promo/audio/`) | Synthesised by `audio/make_audio.py` from a fixed seed | Original to this project | No samples, loops or the template's music. |
+| Reference template (YouTube `g7xkVEWrX8E`, "Web Design Promotional Video – After Effects Template") | Named by the owner | Not used | Only its genre was followed; no footage, music, project file or design was used (the video couldn't be opened here). |

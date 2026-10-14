@@ -1,6 +1,6 @@
 # PandaCodeGen campaign videos
 
-Workspace for the six-film campaign. **Status: Film 01 v4 (`01-bottlenecks`: question-led "Are you showing up?" ad, 44 s, reworked from the owner's feedback) is rendered and waiting for sign-off; v1 (`01-business-website`) is kept for reference. Films 02–06 have not started.**
+Workspace for the six-film campaign. **Status: Film 01 v4 (`01-bottlenecks`: question-led "Are you showing up?" ad, 44 s) and Film 02 (`02-website-promo`: music-only website promo built with HyperFrames in the style of the template the owner linked, 43 s) are rendered and waiting for sign-off. Film 01 v1 (`01-business-website`) is kept for reference. Films 03–06 have not started.**
 
 Separate from the website: own `package.json`, no imports from `src/`, no changes to the site's code, pricing, dependencies or deployment settings.
 
@@ -15,6 +15,8 @@ Separate from the website: own `package.json`, no imports from `src/`, no change
 | `screens/` | Captures of the redesigned site running locally at `63a6bdce` |
 | `tools/` | Engine, renderer, capture, voice, audio, captions, contact-sheet and ASR-check tools |
 | `films/01-business-website/` | Editable source: `index.html`, `film.js`, `timeline.js`, `vo.json`, `audio/`, script, scene spec, render script |
+| `films/01-bottlenecks/` | Film 01 v4 source (same structure; `retime.py` builds the timeline from the voice) |
+| `films/02-website-promo/` | Film 02 HyperFrames project: `compositions/` (scenes), `assets/` (site captures, kit, fonts, GSAP), `audio/make_audio.py`, `build.mjs`, `formats/` (9:16, 1:1, reduced-motion roots), `render.sh`, `script.md` |
 | `out/01-business-website/` | Deliverables (below) |
 
 ## Film 01 outputs (`out/01-business-website/`)
@@ -64,3 +66,28 @@ Only checks that were actually run are listed.
 - **Design review:** an independent review agent inspected frames from all four MP4s against the brief's review questions. It found no blockers; all seven should-fix items were addressed, re-rendered and re-checked. Findings, resolutions and before/after frame pairs are in `out/01-business-website/review/`.
 
 Not done: real-time human viewing and listening, playback on actual phones, and platform upload previews.
+
+## Film 02 outputs (`out/02-website-promo/`)
+
+| File | Spec |
+|---|---|
+| `master_16x9.mp4` | 1920×1080, 43.200 s, 60 fps (2592 frames), H.264 High, yuv420p, BT.709, CRF 16, AAC-LC 256 kb/s 48 kHz stereo |
+| `social_9x16.mp4` · `square_1x1.mp4` | 1080×1920 and 1080×1080, same encode, laid out for each frame |
+| `reduced_motion_9x16.mp4` | 1080×1920, same sequence and timings; entrances become fades, scrolls become short dips, no drift |
+| `contact.png` · `script.md` · `render-command.sh` | Frames from all four exports at 14 points, shot list, exact commands |
+
+No SRT files: the film has no voice-over, and every word is already on screen. Render with `bash films/02-website-promo/render.sh` (HyperFrames 0.8.153; `HF=` overrides the CLI command).
+
+## Checks performed on Film 02
+
+Only checks that were actually run are listed.
+
+- **HyperFrames `lint`** on all four format projects: 0 errors, 0 warnings. **`check`** on the final 16:9 project: passed; lint, runtime, layout and motion 0 errors and 0 warnings; contrast 21/21 text checks pass WCAG AA. One layout note remains: at 28.2 s the outgoing and incoming headlines share a box while both are masked mid-transition. Intentional overflows (scrolling pages, the off-canvas wall, the drifting grid) are marked `data-layout-allow-overflow`.
+- **FFprobe** on all four MP4s: 43.200 s, 2592 video frames at 60/1, h264 High, yuv420p, bt709; aac LC, 2 channels, 48 kHz, about 264 kb/s.
+- **Loudness** (FFmpeg `ebur128=peak=true` on each MP4): integrated −15.9 LUFS, true peak −1.9 dBFS on all four. The mix's loudnorm pass is linear (no dynamic fallback).
+- **Deterministic frames:** three timestamps snapshotted in two separate runs with different seek orders gave identical PNG hashes.
+- **Encode quality:** a frame from the 16:9 MP4 against a lossless snapshot of the same time: PSNR 42.7 dB, with no visible artefacts on small text at 3× zoom.
+- **Stills at 14 points × 4 exports** extracted from the MP4s (`contact.png`) and inspected, plus frames either side of every cut in the 16:9 master. Earlier passes found and fixed: headlines measured at zero size in scenes not yet on screen, the wall headline unreadable without its scrim, a sliver of masked text showing, and exits overlapping the next scene.
+- **Content review against the owner's rules:** no founder names or photos, client names, "independent client" labels or prices appear in any capture used (each capture was viewed before use; `/services` and `/manifesto` were dropped for that reason).
+
+Not done: watching the reference template (YouTube is blocked here), real-time human viewing and listening, playback on phones, and platform upload previews.

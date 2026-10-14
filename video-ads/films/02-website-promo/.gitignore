@@ -1,0 +1,7 @@
+renders/
+.hyperframes/
+audio/mix_prenorm.wav
+audio/mix_limited.wav
+formats/*/.hyperframes/
+audio/music.wav
+audio/sfx.wav

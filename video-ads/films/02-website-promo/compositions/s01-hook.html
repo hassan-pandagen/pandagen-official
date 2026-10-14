@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8" /><title>s01 hook</title></head>
+<body>
+<template>
+<style>
+#s01 { position: absolute; inset: 0; }
+#s01 .persp { position: absolute; inset: 0; perspective: 2200px; perspective-origin: 50% 40%; }
+#s01-b { left: 20px; top: 40px; width: 860px; height: 560px; }
+#s01 .sk { position: absolute; border-radius: 6px; background: #D7D3CB; }
+#s01 .sk.dark { background: #CAC5BC; }
+#s01 .card { position: absolute; top: 330px; width: 248px; height: 150px; border-radius: 10px; background: #E2DFD8; border: 1px solid rgba(28, 25, 23, .06); }
+#s01 .card .sk { left: 18px; height: 12px; }
+#s01-shine { position: absolute; top: 0; bottom: 0; left: 0; width: 34%; background: linear-gradient(100deg, rgba(245, 244, 240, 0), rgba(245, 244, 240, .75), rgba(245, 244, 240, 0)); }
+#s01-btn { position: absolute; left: 56px; top: 244px; width: 176px; height: 46px; border-radius: 8px; border: 2px dashed #B5B0A6; }
+#s01-cur { position: absolute; left: 0; top: 0; width: 40px; height: 48px; }
+#s01-ring { position: absolute; left: 0; top: 0; width: 60px; height: 60px; margin: -30px 0 0 -30px; border-radius: 50%; border: 3px solid var(--accent); opacity: 0; }
+#s01-ask { left: 330px; top: 286px; border: 2px dashed rgba(28, 25, 23, .3); background: var(--paper-hi); font-weight: 500; }
+</style>
+
+<div id="s01" data-composition-id="s01">
+  <h2 class="head" id="s01-h"><span class="ln"><span class="in">Is your website</span></span><span class="ln it" id="s01-h2"><span class="in">working for you?</span></span></h2>
+  <div id="s01-v">
+    <div class="persp">
+      <div class="browser" id="s01-b">
+        <div class="bar"><i></i><i></i><i></i><b>yourbusiness.com</b></div>
+        <div class="vp">
+          <div class="sk dark" style="left:40px;top:26px;width:130px;height:20px"></div>
+          <div class="sk" style="left:480px;top:30px;width:60px;height:12px"></div>
+          <div class="sk" style="left:560px;top:30px;width:60px;height:12px"></div>
+          <div class="sk" style="left:640px;top:30px;width:60px;height:12px"></div>
+          <div class="sk" style="left:720px;top:30px;width:60px;height:12px"></div>
+          <div class="sk dark" style="left:56px;top:96px;width:520px;height:40px"></div>
+          <div class="sk dark" style="left:56px;top:146px;width:380px;height:40px"></div>
+          <div class="sk" style="left:56px;top:204px;width:440px;height:12px"></div>
+          <div class="sk" style="left:56px;top:224px;width:360px;height:12px"></div>
+          <div id="s01-btn"></div>
+          <div class="sk" style="left:600px;top:96px;width:200px;height:190px;border-radius:12px"></div>
+          <div class="card" style="left:56px"><div class="sk dark" style="top:20px;width:120px;height:16px"></div><div class="sk" style="top:52px;width:200px"></div><div class="sk" style="top:72px;width:170px"></div><div class="sk" style="top:92px;width:190px"></div></div>
+          <div class="card" style="left:316px"><div class="sk dark" style="top:20px;width:140px;height:16px"></div><div class="sk" style="top:52px;width:190px"></div><div class="sk" style="top:72px;width:200px"></div><div class="sk" style="top:92px;width:150px"></div></div>
+          <div class="card" style="left:576px"><div class="sk dark" style="top:20px;width:110px;height:16px"></div><div class="sk" style="top:52px;width:200px"></div><div class="sk" style="top:72px;width:160px"></div><div class="sk" style="top:92px;width:180px"></div></div>
+          <div id="s01-shine" data-layout-allow-overflow></div>
+        </div>
+      </div>
+    </div>
+    <div id="s01-ring"></div>
+    <svg id="s01-cur" viewBox="0 0 40 48" aria-hidden="true"><path d="M4 3 L4 38 L13 30 L19 44 L26 41 L20 27 L32 27 Z" fill="#1C1917" stroke="#F5F4F0" stroke-width="2.5" stroke-linejoin="round"/></svg>
+    <div class="chip" id="s01-ask">Where do I book?</div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const K = window.KIT;
+  K.ready("s01", (tl) => {
+    const head = document.getElementById("s01-h");
+    const vis = document.getElementById("s01-v");
+    K.head(head);
+    const f = K.F.format;
+    // 16:9: visual right. 9:16 and 1:1: below the headline.
+    K.place(vis, 900, 640, f === "16x9" ? null : f === "9x16" ? { y: 700, h: 760 } : { y: 300, h: 720 });
+
+    // Line one is on screen from the first frame (thumbnail); line two lands on the first beat.
+    K.reveal(tl, document.getElementById("s01-h2"), 0.3);
+    // The generic site sits at an angle and turns slowly toward us.
+    gsap.set("#s01-b", { transformOrigin: "50% 50%" });
+    K.settle(tl, "#s01-b", { rotateY: -18, rotateX: 8 }, { rotateY: -8, rotateX: 3 }, 0, 4.2);
+    K.drift(tl, "#s01-shine", { xPercent: -120 }, { xPercent: 320 }, 0.1, 1.5);
+    // A visitor looks for a way to book: the cursor drifts to the dashed gap where a button should be.
+    K.inn(tl, "#s01-cur", { x: 760, y: 560, opacity: 0 }, { x: 156, y: 337, opacity: 1 }, 0.7, 1.3, "power2.inOut");
+    if (!K.R) tl.fromTo("#s01-ring", { x: 160, y: 340, scale: 0.3, opacity: 1 }, { scale: 1.6, opacity: 0, duration: 0.6, ease: "power2.out", immediateRender: false }, 2.1);
+    K.pop(tl, "#s01-ask", 2.35);
+    tl.fromTo("#s01-btn", { borderColor: "#B5B0A6" }, { borderColor: "#AD3D0B", duration: 0.3, ease: "none" }, 2.2);
+
+    // Exit on the cut (4.8): headline rises away, the site falls back.
+    K.conceal(tl, head, 3.95);
+    K.out(tl, "#s01-b", { y: 0, opacity: 1 }, { y: 260, rotateX: 40, opacity: 0 }, 4.05, 0.55);
+    K.out(tl, ["#s01-cur", "#s01-ask"], { opacity: 1 }, { opacity: 0, y: 120 }, 3.95, 0.45);
+  });
+})();
+</script>
+</template>
+</body>
+</html>

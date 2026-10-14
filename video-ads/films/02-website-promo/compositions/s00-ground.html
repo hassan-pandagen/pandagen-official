@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8" /><title>s00 paper ground</title></head>
+<body>
+<template>
+<style>
+#s00 { position: absolute; inset: 0; background: var(--paper); overflow: hidden; }
+#s00-light { position: absolute; inset: 0; background: radial-gradient(120% 90% at 18% 8%, rgba(255, 255, 255, .55), rgba(255, 255, 255, 0) 60%); }
+#s00-grid {
+  position: absolute; left: -240px; top: -240px; right: -240px; bottom: -240px;
+  background-image: linear-gradient(rgba(28, 25, 23, .055) 1px, transparent 1px), linear-gradient(90deg, rgba(28, 25, 23, .055) 1px, transparent 1px);
+  background-size: 120px 120px;
+}
+</style>
+<div id="s00" data-composition-id="s00"><div id="s00-grid" data-layout-allow-overflow></div><div id="s00-light"></div></div>
+<script>
+(() => {
+  // Paper with a faint grid that drifts very slowly for the whole film (held still in reduced motion).
+  const tl = gsap.timeline({ paused: true });
+  window.KIT.drift(tl, "#s00-grid", { x: 0, y: 0 }, { x: -120, y: -120 }, 0, 43.2);
+  window.__timelines["s00"] = tl;
+})();
+</script>
+</template>
+</body>
+</html>

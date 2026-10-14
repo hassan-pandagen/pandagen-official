@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8" /><title>s06 automation</title></head>
+<body>
+<template>
+<style>
+#s06 { position: absolute; inset: 0; }
+#s06 .persp { position: absolute; inset: 0; perspective: 2400px; perspective-origin: 50% 40%; }
+#s06 .ac { position: absolute; width: 430px; height: 421px; border-radius: 14px; overflow: hidden; background: var(--paper-hi);
+  box-shadow: 0 1px 0 rgba(28, 25, 23, .08), 0 26px 50px -24px rgba(28, 25, 23, .4); }
+#s06 .ac img { display: block; width: 100%; -webkit-mask-image: linear-gradient(180deg, #000 82%, transparent 100%); mask-image: linear-gradient(180deg, #000 82%, transparent 100%); }
+#s06 .ac .ring { position: absolute; inset: 0; border-radius: 14px; border: 3px solid var(--accent); opacity: 0; }
+#s06-a1 { left: 0; top: 0; } #s06-a2 { left: 454px; top: 0; } #s06-a3 { left: 0; top: 445px; } #s06-a4 { left: 454px; top: 445px; }
+#s06 .done { right: 14px; top: 14px; left: auto; padding: 8px 14px 8px 8px; gap: 8px; font-size: 19px; }
+#s06 .done .tick { width: 26px; height: 26px; }
+#s06 .done .tick::after { left: 9px; top: 5px; width: 6px; height: 12px; border-width: 0 3px 3px 0; }
+</style>
+
+<div id="s06" data-composition-id="s06">
+  <h2 class="head" id="s06-h"><span class="ln"><span class="in">We automate</span></span><span class="ln it"><span class="in">the busywork.</span></span></h2>
+  <div id="s06-v">
+    <div class="persp">
+      <div class="ac" id="s06-a1"><img src="assets/site/crop-auto-1.png" alt="" /><div class="ring" id="s06-r1"></div><div class="chip done" id="s06-d1"><span class="tick"></span>Email sent</div></div>
+      <div class="ac" id="s06-a2"><img src="assets/site/crop-auto-2.png" alt="" /><div class="ring" id="s06-r2"></div><div class="chip done" id="s06-d2"><span class="tick"></span>Reminder sent</div></div>
+      <div class="ac" id="s06-a3"><img src="assets/site/crop-auto-3.png" alt="" /><div class="ring" id="s06-r3"></div><div class="chip done" id="s06-d3"><span class="tick"></span>Invoice sent</div></div>
+      <div class="ac" id="s06-a4"><img src="assets/site/crop-auto-4.png" alt="" /><div class="ring" id="s06-r4"></div><div class="chip done" id="s06-d4"><span class="tick"></span>Details synced</div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const K = window.KIT;
+  K.ready("s06", (tl) => {
+    const f = K.F.format;
+    const h = K.head(document.getElementById("s06-h"));
+    const top = h.bottom + (f === "1x1" ? 30 : 80);
+    K.place(document.getElementById("s06-v"), 884, 866,
+      f === "16x9" ? { x: 930, y: 100, w: 900, h: 880 } : f === "9x16" ? { x: 50, y: top, w: 980, h: 1580 - top } : { x: 80, y: top, w: 920, h: 1050 - top });
+
+    // The four cards fly up out of depth, one after another (the first lands on the cut at 0.6).
+    for (let i = 1; i <= 4; i++) {
+      gsap.set("#s06-a" + i, { transformOrigin: "50% 100%" });
+      K.inn(tl, "#s06-a" + i, { z: -700, rotateX: 40, y: 120, opacity: 0 }, { z: 0, rotateX: 0, y: 0, opacity: 1 }, 0.05 + (i - 1) * 0.22, 0.9, "power3.out");
+    }
+    K.reveal(tl, document.getElementById("s06-h"), 0.7);
+    // Then each one runs: a cognac outline flashes and a "sent" badge pops, on the beat.
+    for (let i = 1; i <= 4; i++) {
+      const t = 2.0 + (i - 1) * 0.6;
+      if (!K.R) {
+        tl.fromTo("#s06-r" + i, { opacity: 0 }, { opacity: 1, duration: 0.12, ease: "none", immediateRender: false }, t);
+        tl.fromTo("#s06-r" + i, { opacity: 1 }, { opacity: 0, duration: 0.6, ease: "power1.out", immediateRender: false }, t + 0.15);
+      }
+      K.pop(tl, "#s06-d" + i, t + 0.05, 0.45);
+    }
+
+    // Exit on the cut (5.4).
+    K.conceal(tl, document.getElementById("s06-h"), 4.5);
+    for (let i = 1; i <= 4; i++) K.out(tl, "#s06-a" + i, { opacity: 1, y: 0 }, { opacity: 0, y: -160 }, 4.6 + (i - 1) * 0.05, 0.45);
+  });
+})();
+</script>
+</template>
+</body>
+</html>

@@ -1,0 +1,53 @@
+/* Film 02 shared styles: brand tokens (from video-ads/brand/tokens.css), type, device mockups.
+   Fonts are declared with @font-face in each root file (HyperFrames lint wants them in-file). */
+:root {
+  --paper: #EBE9E4; --paper-hi: #F5F4F0; --ink: #1C1917; --body: #3A3733; --quiet: #5E5B55;
+  --rule: rgba(28, 25, 23, .16); --accent: #AD3D0B; --accent-text: #7A2E0E;
+  --dark: #1C1917; --on-dark: #EBE9E4; --on-dark-quiet: #A8A49C; --on-dark-accent: #E8763A;
+  --display: "Anton", Impact, sans-serif; --serif: "PT Serif", Georgia, serif; --ui: "Inter", Arial, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { overflow: hidden; background: var(--paper); }
+#main { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--paper); }
+
+
+/* Headlines: Anton, uppercase, one PT Serif italic phrase in cognac. Lines rise out of a mask. */
+.head { position: absolute; margin: 0; font: 400 118px/0.98 var(--display); text-transform: uppercase; color: var(--ink); letter-spacing: -.004em; }
+.head .ln { display: block; overflow: hidden; padding: .07em 0 .13em; margin: -.07em 0 -.13em; }
+.head .in { display: inline-block; white-space: nowrap; }
+.head .it { font-family: var(--serif); font-style: italic; text-transform: none; color: var(--accent); font-size: .86em; line-height: 1.1; letter-spacing: -.012em; }
+.on-dark .head, .head.on-dark { color: var(--on-dark); }
+.on-dark .head .it, .head.on-dark .it { color: var(--on-dark-accent); }
+.eyebrow { position: absolute; font: 600 22px/1.2 var(--ui); letter-spacing: .16em; text-transform: uppercase; color: var(--accent-text); }
+.fine { position: absolute; font: 500 21px/1.35 var(--ui); color: var(--quiet); }
+
+/* Browser window */
+.browser { position: absolute; border-radius: 16px; background: var(--paper-hi); overflow: hidden;
+  box-shadow: 0 1px 0 rgba(28, 25, 23, .08), 0 28px 60px -24px rgba(28, 25, 23, .38), 0 70px 120px -50px rgba(28, 25, 23, .32); }
+.bar { position: absolute; left: 0; right: 0; top: 0; height: 40px; display: flex; align-items: center; gap: 8px; padding: 0 16px; background: #E1DED7; border-bottom: 1px solid rgba(28, 25, 23, .1); }
+.bar i { display: block; width: 11px; height: 11px; border-radius: 50%; background: #C7C3BA; }
+.bar b { display: block; margin-left: 14px; width: 300px; height: 24px; border-radius: 12px; background: var(--paper-hi); font: 500 13px/24px var(--ui); color: var(--quiet); padding: 0 14px; }
+.vp { position: absolute; left: 0; right: 0; top: 40px; bottom: 0; overflow: hidden; background: var(--paper); }
+.page { position: absolute; left: 0; top: 0; width: 100%; }
+.page img { display: block; width: 100%; }
+
+/* Laptop: lid 1000 x 650 (screen 964 x 608), base 1120 wide. */
+.laptop { position: absolute; width: 1120px; height: 690px; }
+.laptop .lid { position: absolute; left: 60px; top: 0; width: 1000px; height: 650px; border-radius: 28px 28px 12px 12px; background: #1C1917; padding: 18px 18px 24px;
+  box-shadow: inset 0 0 0 2px #2E2A27, 0 40px 80px -30px rgba(28, 25, 23, .45); }
+.laptop .screen { position: relative; width: 100%; height: 100%; border-radius: 6px; overflow: hidden; background: var(--paper); }
+.laptop .base { position: absolute; left: 0; top: 648px; width: 1120px; height: 34px; border-radius: 4px 4px 30px 30px; background: linear-gradient(#DAD7D0, #B7B3AB);
+  box-shadow: 0 30px 50px -20px rgba(28, 25, 23, .45); }
+.laptop .base::after { content: ""; position: absolute; left: 50%; top: 0; width: 170px; margin-left: -85px; height: 12px; border-radius: 0 0 12px 12px; background: #A9A59D; }
+
+/* Phone: 380 x 800, screen 352 x 772. */
+.phone { position: absolute; width: 380px; height: 800px; border-radius: 62px; background: #1C1917; padding: 14px;
+  box-shadow: inset 0 0 0 2px #34302C, 0 50px 90px -30px rgba(28, 25, 23, .5); }
+.phone .screen { position: relative; width: 100%; height: 100%; border-radius: 48px; overflow: hidden; background: var(--paper); }
+.phone .island { position: absolute; left: 50%; top: 12px; width: 112px; height: 32px; margin-left: -56px; border-radius: 16px; background: #1C1917; z-index: 3; }
+
+/* Chips: small labels that point at what the picture shows. */
+.chip { position: absolute; display: flex; align-items: center; gap: 12px; padding: 14px 22px 14px 16px; border-radius: 999px; background: var(--paper-hi);
+  font: 600 26px/1 var(--ui); color: var(--ink); white-space: nowrap; box-shadow: 0 2px 0 rgba(28, 25, 23, .06), 0 18px 36px -16px rgba(28, 25, 23, .35); }
+.chip .tick { display: block; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); position: relative; flex: none; }
+.chip .tick::after { content: ""; position: absolute; left: 12px; top: 8px; width: 8px; height: 15px; border: solid #fff; border-width: 0 3px 3px 0; transform: rotate(45deg); }
