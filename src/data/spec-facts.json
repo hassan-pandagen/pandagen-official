@@ -6,7 +6,7 @@
       "label": "Hobby plan price",
       "value": "$0",
       "qualifier": "for eligible personal, non-commercial projects",
-      "verifiedAt": "2026-10-04",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/pricing"
     },
@@ -16,7 +16,7 @@
       "label": "Fast Data Transfer",
       "value": "the first 100 GB a month",
       "qualifier": "listed under Hobby Included Usage; Hobby can't buy more, and going over a limit pauses that feature, in most cases for 30 days",
-      "verifiedAt": "2026-10-04",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/hobby"
     },
@@ -26,7 +26,7 @@
       "label": "Fast Origin Transfer",
       "value": "the first 10 GB a month",
       "qualifier": "listed under Hobby Included Usage",
-      "verifiedAt": "2026-10-04",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/hobby"
     },
@@ -36,7 +36,7 @@
       "label": "CDN Requests",
       "value": "the first 1,000,000 a month",
       "qualifier": "listed under Hobby Included Usage; Vercel previously called these Edge Requests",
-      "verifiedAt": "2026-10-04",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/hobby"
     },
@@ -45,7 +45,7 @@
       "plan": "Hobby",
       "label": "Deployments",
       "value": "up to 100 a day",
-      "verifiedAt": "2026-10-04",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/hobby"
     },
@@ -55,7 +55,7 @@
       "label": "Vercel Blob included usage",
       "value": "1 GB of storage, 10,000 simple operations, 2,000 advanced operations and 10 GB of Blob Data Transfer a month",
       "qualifier": "Hobby can't buy more; going over removes Blob access until 30 days have passed",
-      "verifiedAt": "2026-10-04",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/docs/vercel-blob/usage-and-pricing"
     },
@@ -75,7 +75,7 @@
       "label": "Included Flat Rate CDN capacity",
       "value": "1 million CDN requests and 1 TB of data transfer a month",
       "qualifier": "the lowest Flat Rate CDN capacity tier, included with Pro at no extra cost",
-      "verifiedAt": "2026-10-04",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/pro-plan"
     },
@@ -85,7 +85,7 @@
       "label": "Next Flat Rate CDN tier",
       "value": "$20 a month for 10 million CDN requests and 50 TB of data transfer",
       "qualifier": "a billing cycle over capacity moves the team up a tier at the start of the next cycle; a one-day spike doesn't",
-      "verifiedAt": "2026-10-04",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/docs/pricing/flat-rate-cdn"
     },
@@ -95,7 +95,7 @@
       "label": "Flat Rate CDN general availability",
       "value": "8 September 2026",
       "qualifier": "the changelog entry says new Pro teams have Flat Rate CDN on by default and existing teams can switch over in Billing settings",
-      "verifiedAt": "2026-10-04",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/changelog/flat-rate-cdn-is-now-ga-for-pro-teams"
     },
@@ -105,7 +105,7 @@
       "label": "Default spend notification amount",
       "value": "$200 per billing cycle",
       "qualifier": "Vercel enables spend management notifications at this amount by default for new customers",
-      "verifiedAt": "2026-10-04",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/pro-plan"
     },
@@ -115,7 +115,7 @@
       "label": "Fast Data Transfer on-demand rate",
       "value": "$0.15 to $0.35 per GB by region",
       "qualifier": "applies to Pro CDN usage billed on demand, not to usage covered by a Flat Rate CDN tier",
-      "verifiedAt": "2026-10-04",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/docs/pricing/regional-pricing"
     },
@@ -125,7 +125,7 @@
       "label": "CDN Requests on-demand rate",
       "value": "$2.00 to $3.20 per million by region",
       "qualifier": "applies to Pro CDN usage billed on demand, not to usage covered by a Flat Rate CDN tier",
-      "verifiedAt": "2026-10-04",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/docs/pricing/regional-pricing"
     },
@@ -135,7 +135,7 @@
       "label": "Fast Origin Transfer on-demand rate",
       "value": "$0.06 to $0.43 per GB by region",
       "qualifier": "usage-based on Pro; Flat Rate CDN doesn't cover it",
-      "verifiedAt": "2026-10-04",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/docs/pricing/regional-pricing"
     },
@@ -1160,8 +1160,7 @@
       "plan": "Pro",
       "label": "Additional deploying seat",
       "value": "$20 a month each",
-      "qualifier": "Read on 8 Oct 2026; not legible in the page's server HTML on 20 Oct 2026",
-      "verifiedAt": "2026-10-08",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/pro-plan"
     },
@@ -1198,6 +1197,116 @@
       "verifiedAt": "2026-10-20",
       "reviewDays": 180,
       "source": "https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code"
+    },
+    "vercel-hobby-compute": {
+      "vendor": "Vercel",
+      "plan": "Hobby",
+      "label": "Included function usage",
+      "value": "4 CPU-hours of Active CPU, 360 GB-hours of Provisioned Memory and 1,000,000 function invocations a month",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 30,
+      "source": "https://vercel.com/docs/plans/hobby"
+    },
+    "vercel-hobby-image-optimization": {
+      "vendor": "Vercel",
+      "plan": "Hobby",
+      "label": "Included Image Optimization",
+      "value": "5,000 transformations, 300,000 cache reads and 100,000 cache writes a month",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 30,
+      "source": "https://vercel.com/docs/plans/hobby"
+    },
+    "vercel-hobby-build-resources": {
+      "vendor": "Vercel",
+      "plan": "Hobby",
+      "label": "Build machine",
+      "value": "2 build vCPUs, 8 GB of build memory and a 32 GB build disk",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 60,
+      "source": "https://vercel.com/docs/plans/hobby"
+    },
+    "vercel-hobby-projects": {
+      "vendor": "Vercel",
+      "plan": "Hobby",
+      "label": "Project limit",
+      "value": "200",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 60,
+      "source": "https://vercel.com/docs/plans/hobby"
+    },
+    "vercel-pro-deployments": {
+      "vendor": "Vercel",
+      "plan": "Pro",
+      "label": "Deployments per day",
+      "value": "6,000",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 60,
+      "source": "https://vercel.com/docs/plans/hobby"
+    },
+    "vercel-blob-file-size": {
+      "vendor": "Vercel",
+      "label": "Vercel Blob file size",
+      "value": "up to 5 TB, but files above 512 MB are never cached",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 90,
+      "source": "https://vercel.com/docs/vercel-blob/usage-and-pricing"
+    },
+    "vercel-pro-credit-notification": {
+      "vendor": "Vercel",
+      "plan": "Pro",
+      "label": "Automatic usage notification",
+      "value": "75% of the monthly credit",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 60,
+      "source": "https://vercel.com/docs/plans/pro-plan"
+    },
+    "vercel-hobby-commercial-use": {
+      "vendor": "Vercel",
+      "plan": "Hobby",
+      "label": "Permitted use",
+      "value": "Personal, non-commercial use only",
+      "qualifier": "All commercial use requires Pro or Enterprise",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 90,
+      "source": "https://vercel.com/docs/limits/fair-use-guidelines"
+    },
+    "vercel-terms-model-training": {
+      "vendor": "Vercel",
+      "label": "Model training in the Terms of Service",
+      "value": "content on Hobby or a trial Pro plan may be used for model training, with an opt-out in team settings; on paid Pro it is off by default",
+      "qualifier": "Terms last updated June 1, 2026",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 90,
+      "source": "https://vercel.com/legal/terms"
+    },
+    "netlify-pro-price": {
+      "vendor": "Netlify",
+      "plan": "Pro",
+      "label": "Pro plan price",
+      "value": "$20 a month with unlimited members",
+      "qualifier": "Starts at 3,000 credits a month",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 60,
+      "source": "https://www.netlify.com/pricing/"
+    },
+    "netlify-pro-credits": {
+      "vendor": "Netlify",
+      "plan": "Pro",
+      "label": "Included credits",
+      "value": "3,000 credits a month",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 60,
+      "source": "https://www.netlify.com/pricing/"
+    },
+    "netlify-credit-pack": {
+      "vendor": "Netlify",
+      "plan": "Pro",
+      "label": "Extra credits",
+      "value": "1,500 credits for $10",
+      "qualifier": "Bought as packs or by auto recharge",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 60,
+      "source": "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans/"
     }
   }
 }

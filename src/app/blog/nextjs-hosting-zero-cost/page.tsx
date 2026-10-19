@@ -6,7 +6,7 @@ import lazyLoad from "next/dynamic";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import { asOf, spec } from "@/data/spec-facts";
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         description: "Vercel Hobby is free for personal, non-commercial projects and includes 100 GB Fast Data Transfer. Pro for businesses starts at $20/month plus usage.",
         type: "article",
         publishedTime: "2026-03-13",
-        modifiedTime: "2026-10-12T00:00:00-05:00",
+        modifiedTime: "2026-10-20T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
         images: [ogImageForPath("/blog/nextjs-hosting-zero-cost")],
@@ -55,7 +55,7 @@ const articleSchema = {
             "description": "Vercel Hobby is free for personal, non-commercial projects and includes 100 GB Fast Data Transfer. Pro for businesses starts at $20/month plus usage.",
             "image": ogImageUrlForPath("/blog/nextjs-hosting-zero-cost"),
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-10-12T00:00:00-05:00",
+            "dateModified": "2026-10-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -118,7 +118,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/nextjs-hosting-zero-cost") },
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-10-12T00:00:00-05:00",
+            "dateModified": "2026-10-20T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -129,6 +129,10 @@ const articleSchema = {
         }
     ]
 };
+
+// Worked monthly bill (illustrative, not a client). Prices mirror spec-facts.json:
+// vercel-pro-price, vercel-pro-additional-seat and vercel-flat-rate-cdn-next-tier.
+const BILL = { views: 25_000, pageMb: 1.5, requestsPerView: 30, platform: 20, extraSeats: 2, seatPrice: 20, nextTier: 20 };
 
 export default function NextjsHostingZeroCostPage() {
     return (
@@ -356,17 +360,16 @@ export default function NextjsHostingZeroCostPage() {
                         <BlogHeader>The Vercel Free Tier: What You Get</BlogHeader>
 
                         <BlogText>
-                            Vercel Hobby is a real deployment plan for eligible personal, non-commercial projects. These are the figures published on <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s Hobby plan docs</a>, <a href="https://vercel.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">pricing page</a> and <a href="https://vercel.com/docs/limits/fair-use-guidelines" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">fair-use guidelines</a>, checked October 4, 2026:
+                            Vercel Hobby is a real deployment plan for eligible personal, non-commercial projects. These are the figures published on <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s Hobby plan docs</a>, <a href="https://vercel.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">pricing page</a> and <a href="https://vercel.com/docs/limits/fair-use-guidelines" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">fair-use guidelines</a>, read in {asOf("vercel-hobby-compute")}:
                         </BlogText>
 
                         <BlogList items={[
                             `Fast Data Transfer on Vercel's Hobby plan: ${spec("vercel-hobby-fast-data-transfer").value}, as of ${asOf("vercel-hobby-fast-data-transfer")}.`,
                             `Fast Origin Transfer on Vercel's Hobby plan: ${spec("vercel-hobby-fast-origin-transfer").value}, as of ${asOf("vercel-hobby-fast-origin-transfer")}. This is the cap that gets left out of the comparisons. Vercel meters it on requests the CDN cannot answer from cache, so an uncached or dynamic site uses it up faster than a well-cached one.`,
                             `CDN Requests (Vercel's new name for Edge Requests): ${spec("vercel-hobby-cdn-requests").value}.`,
-                            "Function Invocations: 1,000,000 included.",
-                            "Active CPU: 4 CPU-hours. Provisioned Memory: 360 GB-hours.",
-                            "Image Optimization: 5,000 transformations, 300,000 cache reads and 100,000 cache writes.",
-                            "Builds: 2 build vCPUs, 8 GB build memory, 32 GB build disk, and up to 100 deployments a day. Vercel publishes no monthly Hobby build-minute allowance; build usage is priced per CPU minute on paid plans.",
+                            `Functions: ${spec("vercel-hobby-compute").value}.`,
+                            `Image Optimization: ${spec("vercel-hobby-image-optimization").value}.`,
+                            `Builds: ${spec("vercel-hobby-build-resources").value}, and deployments ${spec("vercel-hobby-deployments").value}. Vercel publishes no monthly Hobby build-minute allowance; build usage is priced per CPU minute on paid plans.`,
                             "Automatic HTTPS/SSL, managed delivery infrastructure, rollbacks and preview deployments."
                         ]} />
 
@@ -402,20 +405,20 @@ export default function NextjsHostingZeroCostPage() {
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-stone-200 text-stone-700">
-                                    <tr><td className="p-4 font-bold">Price</td><td className="p-4">$0</td><td className="p-4">$20/month, including one deploying seat and $20 of usage credit</td></tr>
+                                    <tr><td className="p-4 font-bold">Price</td><td className="p-4">$0</td><td className="p-4">{spec("vercel-pro-price").value}, including {spec("vercel-pro-included").value}</td></tr>
                                     <tr><td className="p-4 font-bold">Fast Data Transfer</td><td className="p-4">First 100 GB/month included</td><td className="p-4">1 TB/month in the included Flat Rate CDN tier</td></tr>
                                     <tr><td className="p-4 font-bold">Above the included amount</td><td className="p-4"><strong>Capped. You can&apos;t buy more usage.</strong></td><td className="p-4">With Flat Rate CDN (on by default for new Pro teams): spikes aren&apos;t billed, and a full billing cycle over capacity moves you to the next tier, {spec("vercel-flat-rate-cdn-next-tier").value}. Billed on demand instead: {spec("vercel-fast-data-transfer-on-demand").value}</td></tr>
                                     <tr><td className="p-4 font-bold">Fast Origin Transfer</td><td className="p-4">First 10 GB/month included</td><td className="p-4">Usage-based, {spec("vercel-fast-origin-transfer-on-demand").value}</td></tr>
                                     <tr><td className="p-4 font-bold">CDN requests (formerly Edge Requests)</td><td className="p-4">First 1M/month included</td><td className="p-4">1M/month in the included Flat Rate CDN tier; billed on demand, {spec("vercel-cdn-requests-on-demand").value}</td></tr>
-                                    <tr><td className="p-4 font-bold">Deploying seats</td><td className="p-4">Personal account</td><td className="p-4">1 included, $20/month each after that</td></tr>
+                                    <tr><td className="p-4 font-bold">Deploying seats</td><td className="p-4">Personal account</td><td className="p-4">1 included, then {spec("vercel-pro-additional-seat").value}</td></tr>
                                     <tr><td className="p-4 font-bold">Read-only viewer seats</td><td className="p-4">Not applicable</td><td className="p-4">Unlimited and free</td></tr>
-                                    <tr><td className="p-4 font-bold">Projects / deployments per day</td><td className="p-4">200 / 100</td><td className="p-4">Unlimited / 6,000</td></tr>
-                                    <tr><td className="p-4 font-bold">Permitted use</td><td className="p-4">Personal, non-commercial only</td><td className="p-4">Commercial use permitted</td></tr>
+                                    <tr><td className="p-4 font-bold">Projects / deployments per day</td><td className="p-4">{spec("vercel-hobby-projects").value} / 100</td><td className="p-4">Unlimited / {spec("vercel-pro-deployments").value}</td></tr>
+                                    <tr><td className="p-4 font-bold">Permitted use</td><td className="p-4">{spec("vercel-hobby-commercial-use").value}</td><td className="p-4">Commercial use permitted</td></tr>
                                 </tbody>
                             </table>
                         </div>
                         <p className="text-sm text-stone-500 -mt-2 mb-2">
-                            Every figure in this table was read from <a href="https://vercel.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s pricing page</a>, <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Hobby plan docs</a>, <a href="https://vercel.com/docs/plans/pro-plan" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Pro plan docs</a>, <a href="https://vercel.com/docs/pricing/flat-rate-cdn" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Flat Rate CDN docs</a> and <a href="https://vercel.com/docs/pricing/regional-pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">regional pricing</a> on October 4, 2026. On-demand rates vary by region; confirm yours before budgeting.
+                            Every figure in this table was read from <a href="https://vercel.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s pricing page</a>, <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Hobby plan docs</a>, <a href="https://vercel.com/docs/plans/pro-plan" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Pro plan docs</a>, <a href="https://vercel.com/docs/pricing/flat-rate-cdn" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Flat Rate CDN docs</a> and <a href="https://vercel.com/docs/pricing/regional-pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">regional pricing</a> in {asOf("vercel-pro-cdn-capacity")}. On-demand rates vary by region; confirm yours before budgeting.
                         </p>
 
                         <BlogText>
@@ -442,8 +445,8 @@ export default function NextjsHostingZeroCostPage() {
                                 Vercel Blob, the file-storage product, is free on Hobby within its usage limits:{" "}
                                 {spec("vercel-hobby-blob-included").value}, as of {asOf("vercel-hobby-blob-included")}.
                                 You can create as many Blob stores as you need, and each new store counts as one
-                                advanced operation. Individual files can be up to 5 TB, though anything above 512 MB is
-                                never cached, so every access to a file that large is a cache miss.
+                                advanced operation. Individual files can be {spec("vercel-blob-file-size").value}, so every
+                                access to a file that large is a cache miss.
                             </BlogText>
                         </div>
 
@@ -456,7 +459,7 @@ export default function NextjsHostingZeroCostPage() {
                             of your build. Two smaller details worth knowing: browsing your own Blob store
                             in the Vercel dashboard counts as advanced operations against your allowance, and if you do
                             exceed a Blob limit on Hobby you lose access to Blob for 30 days instead of receiving a bill.
-                            Source: <a href="https://vercel.com/docs/vercel-blob/usage-and-pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Blob pricing</a>, checked October 4, 2026.
+                            Source: <a href="https://vercel.com/docs/vercel-blob/usage-and-pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Blob pricing</a>, read in {asOf("vercel-hobby-blob-included")}.
                         </BlogText>
 
                         <BlogHeader id="check-usage">How to see your own usage before you hit a cap</BlogHeader>
@@ -473,7 +476,7 @@ export default function NextjsHostingZeroCostPage() {
                         </div>
 
                         <BlogText>
-                            On Pro, Vercel notifies you automatically when usage reaches 75% of the monthly credit. Spend
+                            On Pro, Vercel notifies you automatically when usage reaches {spec("vercel-pro-credit-notification").value}. Spend
                             Management, which can notify you, fire a webhook or pause production deployments at a set
                             spend amount, is a Pro feature. Vercel turns on spend notifications at{" "}
                             {spec("vercel-pro-spend-notification-default").value} by default for new customers, but
@@ -522,12 +525,11 @@ export default function NextjsHostingZeroCostPage() {
                             membership, and a lead-generation landing page are all commercial under that definition.
                             A portfolio, a personal blog with no ads, a learning project and an unreleased prototype
                             are not. If a project sits on the line, Vercel&apos;s guidelines direct you to ask their
-                            support team, not guess. Source: <a href="https://vercel.com/docs/limits/fair-use-guidelines" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Fair Use Guidelines</a>, checked October 4, 2026.
+                            support team, not guess. Source: <a href="https://vercel.com/docs/limits/fair-use-guidelines" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Fair Use Guidelines</a>, read in {asOf("vercel-hobby-commercial-use")}.
                         </BlogText>
                         <BlogText>
-                            <a href="https://vercel.com/legal/terms" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s terms</a> were last updated June 1, 2026 and were read here on August 2, 2026. They say content submitted on
-                            Hobby or a trial Pro plan may be used for model training, with an opt-out described in the
-                            account settings, while paid Pro doesn&apos;t enable model training by default. Teams handling
+                            <a href="https://vercel.com/legal/terms" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s terms</a>, last updated June 1, 2026 and read here in{" "}
+                            {asOf("vercel-terms-model-training")}, say {spec("vercel-terms-model-training").value}. Teams handling
                             confidential or regulated material should review the current terms, data-processing
                             agreement, account setting and approved data classification before deployment.
                         </BlogText>
@@ -575,6 +577,38 @@ export default function NextjsHostingZeroCostPage() {
                             Forget whether Vercel can start at $20. Ask what the complete production workload costs under normal, peak, and failure conditions.
                         </BlogQuote>
 
+                        {/* 20 Oct 2026: an illustrative monthly bill so the estimate method above has numbers in
+                            it. Inputs are invented and labelled; prices come from spec-facts.json. */}
+                        <BlogHeader id="worked-bill">A worked example: a three-person team&apos;s monthly Vercel bill</BlogHeader>
+                        <InsightBox variant="info" label="Illustrative, not a real client">
+                            An invented business site on Vercel Pro: three people who deploy, {BILL.views.toLocaleString("en-US")} page
+                            views a month, pages that weigh about {BILL.pageMb} MB, and about {BILL.requestsPerView} files
+                            (HTML, scripts, styles, images, fonts) fetched per page view. The only server code is a
+                            contact form, and we assume its function usage stays inside the {spec("vercel-pro-price").value} usage credit.
+                        </InsightBox>
+                        <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
+                            <table className="w-full min-w-[620px] border-collapse text-left text-sm">
+                                <thead className="bg-stone-100 text-charcoal">
+                                    <tr><th className="p-4">Line</th><th className="p-4">How it is worked out</th><th className="p-4">Monthly</th></tr>
+                                </thead>
+                                <tbody className="divide-y divide-stone-200 text-stone-700">
+                                    <tr><td className="p-4 font-bold">Platform fee</td><td className="p-4">Includes the first deploying seat and the usage credit</td><td className="p-4">${BILL.platform}</td></tr>
+                                    <tr><td className="p-4 font-bold">Two more deploying seats</td><td className="p-4">{spec("vercel-pro-additional-seat").value}</td><td className="p-4">${BILL.extraSeats * BILL.seatPrice}</td></tr>
+                                    <tr><td className="p-4 font-bold">CDN</td><td className="p-4">{(BILL.views * BILL.pageMb / 1000).toLocaleString("en-US")} GB and {(BILL.views * BILL.requestsPerView).toLocaleString("en-US")} requests, inside the included tier of {spec("vercel-pro-cdn-capacity").value}</td><td className="p-4">$0</td></tr>
+                                    <tr className="bg-stone-50 font-bold text-charcoal"><td className="p-4">Total</td><td className="p-4">Before tax, the domain and anything outside Vercel</td><td className="p-4">${BILL.platform + BILL.extraSeats * BILL.seatPrice}</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <BlogText>
+                            The seats cost more than the traffic here. Requests are the number to watch next: at about{" "}
+                            {BILL.requestsPerView} files a page, the included 1,000,000 requests cover roughly{" "}
+                            {Math.floor(1_000_000 / BILL.requestsPerView).toLocaleString("en-US")} page views, long before the 1 TB of data transfer runs
+                            out. If this site doubled its traffic and stayed over that for a full billing cycle, Vercel
+                            would move it to the next Flat Rate CDN tier, {spec("vercel-flat-rate-cdn-next-tier").value},
+                            and the bill would become ${BILL.platform + BILL.extraSeats * BILL.seatPrice + BILL.nextTier}. The same team on Netlify Pro would
+                            pay one $20 fee for all three people, and the question there becomes how many of its{" "}
+                            {spec("netlify-pro-credits").value} that traffic uses.
+                        </BlogText>
                         <BlogHeader>Vercel Hobby vs Pro: A Launch Checklist</BlogHeader>
 
                         <BlogText>
@@ -632,7 +666,7 @@ export default function NextjsHostingZeroCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            <strong>Netlify.</strong> On price the two are closest where team size decides it: Netlify Pro is $20 a month with unlimited members, while Vercel Pro is $20 a month for the first deploying seat and $20 for each one after it, so a five-developer team pays $20 against $100. Vercel answers back on framework integration, since it maintains Next.js. Netlify Pro includes 3,000 credits a month, with extra credits sold in packs from $10 per 1,500 (checked August 2, 2026). Compare how your deploys, bandwidth, compute and web requests use up those credits instead of comparing headline prices. Source: <a href="https://www.netlify.com/pricing/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Netlify pricing</a>.
+                            <strong>Netlify.</strong> On price the two are closest where team size decides it: Netlify Pro is {spec("netlify-pro-price").value}, while Vercel Pro is {spec("vercel-pro-price").value} for the first deploying seat and {spec("vercel-pro-additional-seat").value} after it, so a five-developer team pays $20 against $100. Vercel answers back on framework integration, since it maintains Next.js. Netlify Pro includes {spec("netlify-pro-credits").value}, with extra credits sold at {spec("netlify-credit-pack").value} (read in {asOf("netlify-pro-price")}). Compare how your deploys, bandwidth, compute and web requests use up those credits instead of comparing headline prices. Source: <a href="https://www.netlify.com/pricing/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Netlify pricing</a>.
                         </BlogText>
 
                         <BlogHeader id="controversial">Why is Vercel controversial?</BlogHeader>

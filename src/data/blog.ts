@@ -1708,7 +1708,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'hosting',
-    lastModified: "2026-10-12",
+    lastModified: "2026-10-20",
     faqs: [
       { question: "Is Vercel free?", answer: "Yes. Vercel Hobby costs $0 for personal, non-commercial projects. It isn't the plan for a live business, store, or client website. Commercial Next.js hosting should use Pro or another commercially permitted provider. Vercel currently lists a $20 monthly Pro platform fee that includes one deploying seat and a usage credit; added seats and on-demand usage can increase the bill." },
       { question: "What is the Vercel free tier bandwidth limit in 2026?", answer: `Vercel's Hobby plan page lists ${spec("vercel-hobby-fast-data-transfer").value} of Fast Data Transfer as included usage, plus ${spec("vercel-hobby-fast-origin-transfer").value} of Fast Origin Transfer and ${spec("vercel-hobby-cdn-requests").value} CDN Requests. Exceeding a Hobby limit pauses the feature, in most cases for 30 days, and Hobby can't buy additional usage. The figure answers a capacity question, not a commercial-use question: Hobby remains limited to personal, non-commercial projects. Checked ${asOf("vercel-hobby-fast-data-transfer")}.` },

@@ -113,3 +113,46 @@ $100 per site" was deliberately left out for the same reason.
 a host-only move) conflicts with the 9 Oct 2026 decision that PandaCodeGen offers WordPress
 host-to-host migration as a separately quoted service (`WORDPRESS_HOST_MIGRATION` in
 company-facts.ts).
+
+## 20 Oct 2026: /blog/nextjs-hosting-zero-cost
+
+**Verified 20 Oct 2026, all unchanged since the 4 Oct check:** Vercel Hobby included usage
+(Hobby plan docs, rendered: 100 GB Fast Data Transfer, 10 GB Fast Origin Transfer, 1,000,000
+CDN Requests, 4 CPU-hrs Active CPU, 360 GB-hrs Provisioned Memory, 1,000,000 function
+invocations, image allowances, 2 build vCPUs / 8 GB / 32 GB, 200 projects, 100 deployments a
+day); Pro docs ($20 platform fee, one seat, $20 credit, $20 per additional seat, 75% credit
+notification, $200 default spend notification, 1M requests / 1 TB Flat Rate tier); Flat Rate
+CDN tiers (next tier $20 for 10M requests and 50 TB); the 8 Sep 2026 GA changelog; regional
+on-demand ranges; Blob pricing (10 GB Hobby transfer, 5 TB file limit, 512 MB cache limit);
+Fair Use Guidelines; Terms (last updated June 1, 2026, model-training clause); Netlify Pro
+($20 a month, unlimited members, 3,000 credits) and Netlify's credit docs (1,500 credits for
+$10).
+
+**Resolved from the earlier batch:** Vercel's additional deploying seat ($20 a month each) is
+legible in the rendered Pro docs, so `vercel-pro-additional-seat` moved from 8 Oct to 20 Oct
+and its "not legible" note was removed.
+
+**Changed:**
+
+- 14 existing `vercel-*` entries re-dated to 2026-10-20 (values unchanged).
+- New entries: `vercel-hobby-compute`, `vercel-hobby-image-optimization`,
+  `vercel-hobby-build-resources`, `vercel-hobby-projects`, `vercel-pro-deployments`,
+  `vercel-blob-file-size`, `vercel-pro-credit-notification`, `vercel-hobby-commercial-use`,
+  `vercel-terms-model-training`, `netlify-pro-price`, `netlify-pro-credits`,
+  `netlify-credit-pack`. The Hobby list, the Hobby vs Pro table, the Blob paragraph, the
+  notification line, the terms paragraph and the Netlify paragraph now render from them.
+- Four hand-typed stamps ("checked October 4, 2026" three times, "checked August 2, 2026"
+  once) replaced with `asOf()`; the terms sentence now says it was read in October 2026
+  instead of August. Ratchet baseline 131 to 127.
+- New section "A worked example: a three-person team's monthly Vercel bill": invented site,
+  three deployers, 25,000 page views at about 1.5 MB and about 30 files each (37.5 GB,
+  750,000 requests, inside the included tier). $20 + $40 seats = $60 a month. At about 30
+  files a page the 1,000,000 included requests cover about 33,333 page views; doubled traffic
+  held for a full cycle moves the site to the $20 next tier, so $80. Assumes function usage
+  stays inside the $20 credit. Labelled "Illustrative, not a real client".
+- Dates moved to 2026-10-20. Title ("Is Vercel Free? 2026 Pricing & the 100GB Cap"),
+  description and URL unchanged.
+
+**Left as written:** "a five-developer team pays $20 against $100" (arithmetic from the
+verified prices), the "From $720 base" three-year row ($20 x 36), and the 100 GB sizing
+paragraph (arithmetic from the verified allowance).
