@@ -11,6 +11,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { spec, asOf } from "@/data/spec-facts";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-06",
-        modifiedTime: "2026-10-12",
+        modifiedTime: "2026-10-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-migration-cost-2026")],
@@ -72,7 +73,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-06",
-            dateModified: "2026-10-12",
+            dateModified: "2026-10-20",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -117,7 +118,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-06",
-            dateModified: "2026-10-12",
+            dateModified: "2026-10-20",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -159,7 +160,7 @@ export default function WebsiteMigrationCostPage() {
                             accounts are yours at the end. Use those terms to check any quote you receive.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 2, 2026 against current platform and Google documentation; export links re-checked August 1, 2026. Quote sourcing and pricing claims re-audited September 12, 2026. Platform sections condensed and starting tiers re-checked against our published terms October 4, 2026.
+                            Starting tiers are our published terms. Outside facts below link their source and show the month they were last read.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -241,6 +242,29 @@ export default function WebsiteMigrationCostPage() {
                             </tbody>
                         </table>
                     </div>
+                    <BlogText>
+                        Two of those rows, in the platforms&apos; own words, read in {asOf("squarespace-export-scope")}:{" "}
+                        <a href={spec("squarespace-export-scope").source} target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4">Squarespace&apos;s export guide</a>{" "}
+                        describes {spec("squarespace-export-scope").value}, and{" "}
+                        <a href={spec("webflow-code-export-scope").source} target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4">Webflow&apos;s code export guide</a>{" "}
+                        describes {spec("webflow-code-export-scope").value}; {spec("webflow-code-export-scope").qualifier}.
+                    </BlogText>
+                    {/* 20 Oct 2026: an illustrative scoping example built from the Squarespace export
+                        facts above and our published Growth tier. The site is invented and labelled. */}
+                    <BlogHeader id="scoping-example">A worked example: scoping a 12-page Squarespace site</BlogHeader>
+                    <InsightBox variant="info" label="Illustrative, not a real client">
+                        An invented 12-page Squarespace site: a home page, six service pages, a blog with 40 posts,
+                        a portfolio page, a contact form and a small store with eight products. The owner wants a
+                        site their team can edit, and to keep the blog&apos;s search traffic.
+                    </InsightBox>
+                    <BlogList
+                        items={[
+                            "Comes across in the export: the blog posts and the basic text of standard pages. They still need checking and reformatting once they land in the new editor.",
+                            "Has to be rebuilt by hand: the portfolio page and the store, because Squarespace's guide lists portfolio and store pages among the content that doesn't export, plus the eight products, the layouts and the form.",
+                            "Has to be planned whatever the platform: a redirect for every old URL, especially the 40 blog posts, and a check that each page keeps its title and description.",
+                            "Where it lands with us: 12 pages and a content model for the blog put it in Growth, from $3,500, which covers 8 to 20 pages and a full migration with a redirect map. The small store stays inside that scope; a large catalogue or subscriptions would move it to Scale.",
+                        ]}
+                    />
                     <InsightBox variant="info" label="Why we publish our tiers and not a market range">
                         We do not publish a market median or a cross-agency price range for these migrations. Ranges
                         like that mix unlike project types, scopes, regions and levels of finish, so a figure stated
@@ -267,10 +291,13 @@ export default function WebsiteMigrationCostPage() {
                             These are two different jobs and only one of them is worth paying an agency for. Moving a
                             WordPress site from one host to another host keeps the same software, the same theme, the
                             same plugins and the same database. Nothing is rebuilt. Most hosting companies will do that
-                            transfer for you when you buy a plan, frequently at no charge or for a small fixed fee, and
-                            that is the first place to ask. <strong>A host-only move should cost you between $0 and
-                            about $150. If all you need is a host change, do not pay migration prices for it, and do
-                            not hire us to do it.</strong>
+                            transfer for you when you buy a plan, and that is the first place to ask. Read in{" "}
+                            {asOf("hostinger-website-migration")},{" "}
+                            <a href={spec("hostinger-website-migration").source} target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4">Hostinger</a>{" "}
+                            advertised migration as {spec("hostinger-website-migration").value}, and{" "}
+                            <a href={spec("kinsta-wordpress-migration").source} target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4">Kinsta</a>{" "}
+                            as {spec("kinsta-wordpress-migration").value}. <strong>If all you need is a host change, do not
+                            pay migration prices for it, and do not hire us to do it.</strong>
                         </BlogText>
                     </div>
 

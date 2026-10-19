@@ -959,7 +959,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'migration',
-    lastModified: "2026-10-12",
+    lastModified: "2026-10-20",
     faqs: [
       { question: "How much does a website migration cost in 2026?", answer: "It depends on the job. Moving the same site to a new host is often free or a small fixed fee from the new host. Moving to a different platform is a rebuild, priced on the pages, templates, data and integrations that have to move and on whether your URLs must survive. PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale. These are PandaCodeGen planning anchors, not market averages." },
       { question: "Why can two migration quotes differ so much?", answer: "The quotes may cover different inventories, design changes, content work, integrations, accessibility, SEO safeguards, testing, governance, ownership or support. Normalize the statements of work before attributing the difference to markup or quality." },

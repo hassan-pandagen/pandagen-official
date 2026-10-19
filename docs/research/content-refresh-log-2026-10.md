@@ -81,3 +81,35 @@ was not legible in the page's server HTML; `vercel-pro-additional-seat` keeps 8 
 `saas-software-pricing-audit-2026` describe Microsoft's July 2026 increase (Standard
 $12.50 to $14). Still true as history, but neither mentions the current "with Copilot"
 pricing. Review in a later batch.
+
+## 20 Oct 2026: /blog/website-migration-cost-2026
+
+**Verified 20 Oct 2026:** Hostinger advertises free migration for an unlimited number of
+websites; Kinsta advertises free, unlimited WordPress migrations. Squarespace's export guide
+(rendered) describes a WordPress-format export that leaves out album, cover, index,
+portfolio and store pages, among others. Webflow's code export guide (rendered) describes a
+ZIP without CMS, User Accounts or Ecommerce content, with CSV export for those collections.
+
+**Changed because no source supported it:** "A host-only move should cost you between $0
+and about $150" had no source on the page. It now quotes Hostinger's and Kinsta's own pages
+(both free). No dollar range was added, which also matches the article's own note that it
+does not publish cross-market ranges. Hostinger's claim that other hosts charge "$30 to
+$100 per site" was deliberately left out for the same reason.
+
+**Changed:**
+
+- New `spec-facts.json` entries: `hostinger-website-migration`, `kinsta-wordpress-migration`,
+  `squarespace-export-scope`, `webflow-code-export-scope`. The export table now has a
+  sourced paragraph under it.
+- The dated note under the intro (three hand-typed stamps, including "export links
+  re-checked August 1" when the page no longer linked any export docs) replaced with a
+  plain statement. Ratchet baseline 133 to 131.
+- New section "A worked example: scoping a 12-page Squarespace site": what comes across,
+  what is rebuilt, what is planned, and which published tier it lands in (Growth, from
+  $3,500). Labelled "Illustrative, not a real client".
+- Dates moved to 2026-10-20. Title, description and URL unchanged.
+
+**Open question for the owner, not changed:** the bold line "do not hire us to do it" (for
+a host-only move) conflicts with the 9 Oct 2026 decision that PandaCodeGen offers WordPress
+host-to-host migration as a separately quoted service (`WORDPRESS_HOST_MIGRATION` in
+company-facts.ts).

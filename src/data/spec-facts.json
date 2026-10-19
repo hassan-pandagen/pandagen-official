@@ -1164,6 +1164,40 @@
       "verifiedAt": "2026-10-08",
       "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/pro-plan"
+    },
+    "hostinger-website-migration": {
+      "vendor": "Hostinger",
+      "label": "Website migration into Hostinger hosting",
+      "value": "free, for an unlimited number of websites",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 90,
+      "source": "https://www.hostinger.com/website-migration"
+    },
+    "kinsta-wordpress-migration": {
+      "vendor": "Kinsta",
+      "label": "WordPress migration into Kinsta hosting",
+      "value": "free and unlimited",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 90,
+      "source": "https://kinsta.com/wordpress-hosting/migration/"
+    },
+    "squarespace-export-scope": {
+      "vendor": "Squarespace",
+      "label": "Site content export",
+      "value": "a WordPress-format export that leaves out some content, including album, cover, index, portfolio and store pages",
+      "qualifier": "Squarespace states that many features rely on its own JavaScript and CSS, so some content doesn't export",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 180,
+      "source": "https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content"
+    },
+    "webflow-code-export-scope": {
+      "vendor": "Webflow",
+      "label": "Code export",
+      "value": "a ZIP of pages, styles, scripts and images, without CMS, User Accounts or Ecommerce content and functionality",
+      "qualifier": "CMS Collections, Ecommerce Collections and User Accounts can be exported separately as CSV",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 180,
+      "source": "https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code"
     }
   }
 }
