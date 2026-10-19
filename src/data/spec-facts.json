@@ -953,6 +953,150 @@
       "verifiedAt": "2026-10-12",
       "reviewDays": 90,
       "source": "https://supabase.com/docs/guides/security/hipaa-compliance"
+    },
+    "shopify-app-price-klaviyo": {
+      "vendor": "Klaviyo",
+      "label": "Published price on Shopify",
+      "value": "Free to 250 email contacts and 150 SMS/MMS credits; Email from $20/mo at 251 to 500 contacts; SMS from $15/mo for 1,250 credits, carrier fees included",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-19",
+      "reviewDays": 60,
+      "source": "https://apps.shopify.com/klaviyo-email-marketing"
+    },
+    "shopify-app-price-postscript": {
+      "vendor": "Postscript",
+      "label": "Published price on Shopify",
+      "value": "Starter free to install with a $49/mo minimum spend, then $0.009/SMS; Growth $100/mo; Professional $500/mo, plus carrier fees",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-19",
+      "reviewDays": 60,
+      "source": "https://apps.shopify.com/postscript-sms-marketing"
+    },
+    "shopify-app-price-attentive": {
+      "vendor": "Attentive",
+      "label": "Published price on Shopify",
+      "value": "Free to install, no published price. The listing states charges may be billed by Attentive separately from your Shopify invoice",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-19",
+      "reviewDays": 60,
+      "source": "https://apps.shopify.com/attentive"
+    },
+    "shopify-app-price-judgeme": {
+      "vendor": "Judge.me",
+      "label": "Published price on Shopify",
+      "value": "Forever Free $0, including Google rich snippets and Shop app sync; Awesome $15/mo",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-19",
+      "reviewDays": 60,
+      "source": "https://apps.shopify.com/judgeme"
+    },
+    "shopify-app-price-loox": {
+      "vendor": "Loox",
+      "label": "Published price on Shopify",
+      "value": "Beginner free; Convert $49.99/mo including 300 orders, then $50 per additional 300; Unlimited $299.99/mo",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-19",
+      "reviewDays": 60,
+      "source": "https://apps.shopify.com/loox"
+    },
+    "shopify-app-price-yotpo": {
+      "vendor": "Yotpo",
+      "label": "Published price on Shopify",
+      "value": "Free to 50 monthly orders; Starter $15/mo; Pro $119/mo, varying with order volume. The listing notes charges may be billed separately from your Shopify invoice",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-19",
+      "reviewDays": 60,
+      "source": "https://apps.shopify.com/yotpo-social-reviews"
+    },
+    "shopify-app-price-okendo": {
+      "vendor": "Okendo",
+      "label": "Published price on Shopify",
+      "value": "Reviews, by monthly orders: free to 50 on the App Store listing; $19/mo to 200; $119/mo to 1,500; $299/mo to 3,500; $499/mo to 10,000; custom above that. Loyalty, quizzes, referrals and surveys are priced separately",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-04",
+      "reviewDays": 60,
+      "source": "https://www.okendo.io/pricing/"
+    },
+    "shopify-app-price-recharge": {
+      "vendor": "Recharge",
+      "label": "Published price on Shopify",
+      "value": "Starter $99/mo plus 1.49% and 19¢ per transaction; Plus $499/mo plus 1.34% and 19¢; Custom volume-based. The App Store listing also shows a $25/mo plan with no transaction fees for the first 50 subscribers",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-19",
+      "reviewDays": 60,
+      "source": "https://getrecharge.com/pricing/"
+    },
+    "shopify-app-price-bold-subscriptions": {
+      "vendor": "Bold Subscriptions",
+      "label": "Published price on Shopify",
+      "value": "Launch $24.99/mo plus 2%; Grow $49.99/mo plus 1%; Scale $74.99/mo plus 0.9%",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-19",
+      "reviewDays": 60,
+      "source": "https://apps.shopify.com/bold-subscriptions"
+    },
+    "shopify-app-price-gorgias": {
+      "vendor": "Gorgias",
+      "label": "Published price on Shopify",
+      "value": "Starter $10/mo with $0.40 per additional ticket; Basic $60/mo; Pro $360/mo; Advanced $900/mo",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-19",
+      "reviewDays": 60,
+      "source": "https://apps.shopify.com/helpdesk"
+    },
+    "shopify-app-price-tidio": {
+      "vendor": "Tidio",
+      "label": "Published price on Shopify",
+      "value": "Free $0; Starter $24.17/mo and Growth from $49.17/mo when billed annually ($29 and from $59 billed monthly); Plus from $300/mo plus usage",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-04",
+      "reviewDays": 60,
+      "source": "https://www.tidio.com/pricing/"
+    },
+    "shopify-app-price-smile": {
+      "vendor": "Smile",
+      "label": "Published price on Shopify",
+      "value": "Free to 200 monthly orders; Essential $15/mo to 500; Standard $79/mo to 1,000; Growth $199/mo including 2,500, then $20 per additional 100",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-19",
+      "reviewDays": 60,
+      "source": "https://smile.io/pricing"
+    },
+    "shopify-app-price-pagefly": {
+      "vendor": "PageFly",
+      "label": "Published price on Shopify",
+      "value": "Free $0; Builder from $24/mo; Optimize from $39/mo; Accelerate $99/mo; Power $199/mo. Builder and Optimize rise with the slots and credits you choose",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-19",
+      "reviewDays": 60,
+      "source": "https://pagefly.io/pages/pricing"
+    },
+    "shopify-app-price-shogun": {
+      "vendor": "Shogun",
+      "label": "Published price on Shopify",
+      "value": "Draft Mode $0; Build $39/mo; Grow $199/mo; Advanced $499/mo",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-19",
+      "reviewDays": 60,
+      "source": "https://getshogun.com/pricing"
+    },
+    "shopify-app-price-vitals": {
+      "vendor": "Vitals",
+      "label": "Published price on Shopify",
+      "value": "All-in-One $29.99/mo. The listing states usage fees start after roughly $1,000/mo in Vitals-attributed sales, from $10/mo, and for Visitor Recordings volume",
+      "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
+      "verifiedAt": "2026-10-19",
+      "reviewDays": 60,
+      "source": "https://apps.shopify.com/vitals"
+    },
+    "shopify-third-party-payment-fee": {
+      "vendor": "Shopify",
+      "label": "Third-party payment provider fee (not using Shopify Payments)",
+      "value": "2% on Basic, 1% on Grow, 0.6% on Advanced and 0.2% on Plus",
+      "qualifier": "US pricing page. shopify.com/pricing redirects by country, and a 19 Oct 2026 check from Pakistan showed local pricing without these rates, so this value still dates from 2 Aug 2026",
+      "verifiedAt": "2026-08-02",
+      "reviewDays": 60,
+      "source": "https://www.shopify.com/pricing"
     }
   }
 }

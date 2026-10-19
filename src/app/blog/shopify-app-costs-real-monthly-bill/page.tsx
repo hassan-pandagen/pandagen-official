@@ -10,6 +10,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { spec, asOf } from "@/data/spec-facts";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-19",
-        modifiedTime: "2026-10-04T00:00:00-05:00",
+        modifiedTime: "2026-10-19T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-app-costs-real-monthly-bill")],
@@ -92,7 +93,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-19",
-            dateModified: "2026-10-04T00:00:00-05:00",
+            dateModified: "2026-10-19T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -138,7 +139,7 @@ const articleSchema = {
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             datePublished: "2026-03-19",
-            dateModified: "2026-10-04T00:00:00-05:00",
+            dateModified: "2026-10-19T00:00:00-05:00",
             inLanguage: "en-US",
         },
         {
@@ -155,6 +156,22 @@ const articleSchema = {
 
 const sourceLinkClass =
     "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
+
+// Worked example (illustrative store, not a customer). Prices are the published ones in
+// the matching spec-facts.json entries; keep these in step with them.
+const RECHARGE_FIXED = 99;
+const RECHARGE_VARIABLE = 3000 * 0.0149 + 90 * 0.19;
+const RECHARGE_TOTAL = RECHARGE_FIXED + RECHARGE_VARIABLE;
+const APP_BILL_EXAMPLE = [
+    { app: "Klaviyo Email", how: "Email plan for 251 to 500 contacts; the store has 450", monthly: 20 },
+    { app: "Judge.me Awesome", how: "Flat monthly plan", monthly: 15 },
+    { app: "Smile Essential", how: "Loyalty plan for up to 500 monthly orders; the store has 300", monthly: 15 },
+    { app: "Gorgias Starter", how: "Flat fee, assuming tickets stay within the plan's allowance", monthly: 10 },
+    { app: "Vitals All-in-One", how: "Flat fee, assuming Vitals-attributed sales stay under the usage threshold", monthly: 29.99 },
+    { app: "Recharge Starter", how: "$99 plus 1.49% of $3,000 in renewals ($44.70) plus 19¢ on 90 renewals ($17.10)", monthly: RECHARGE_TOTAL },
+];
+const APP_BILL_MONTHLY = APP_BILL_EXAMPLE.reduce((sum, row) => sum + row.monthly, 0);
+const usd = (n: number) => `$${n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
 export default function ShopifyAppCostsPage() {
     return (
@@ -368,14 +385,16 @@ export default function ShopifyAppCostsPage() {
                         before uninstalling. Read from <a href="https://help.shopify.com/en/manual/apps/uninstalling-apps" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shopify&apos;s uninstalling-apps documentation</a> on August 2, 2026 and unchanged on October 4, 2026.
                     </InsightBox>
 
-                    <BlogHeader id="published-prices">What the common apps publish, checked August 2 and October 4, 2026</BlogHeader>
+                    <BlogHeader id="published-prices">What the common apps publish, checked {asOf("shopify-app-price-klaviyo")}</BlogHeader>
                     <BlogText>
                         An expensive app bill is rarely one expensive app. It&apos;s a stack that grew one decision at a
                         time. Below is the published entry price for a common set of them, taken from
                         each vendor&apos;s own Shopify App Store listing or pricing page on August 2, 2026. We rechecked every
                         row on October 4, 2026. Fourteen prices were unchanged. Okendo&apos;s row changed: its pricing page
                         now shows a price for each order band, where our August row said it published none. A few other
-                        rows gained detail. Prices move, so recheck before you budget, and record what your
+                        rows gained detail. We read the listings again on October 19, 2026 and found no price
+                        changes. Okendo&apos;s pricing page and Tidio&apos;s monthly prices load by script, so those two
+                        rows still date from October 4. Prices move, so recheck before you budget, and record what your
                         store paid, not the list price.
                         We log vendor price movements in our{" "}
                         <Link href="/blog/saas-price-increases-2026-tracker" className={sourceLinkClass}>running log of software price changes</Link>.
@@ -383,24 +402,24 @@ export default function ShopifyAppCostsPage() {
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
-                                <tr><th className="p-4">Category</th><th className="p-4">App</th><th className="p-4">Published price, checked August 2 and October 4, 2026</th><th className="p-4">Source</th></tr>
+                                <tr><th className="p-4">Category</th><th className="p-4">App</th><th className="p-4">Published price and the month we last checked it</th><th className="p-4">Source</th></tr>
                             </thead>
                             <tbody className="divide-y divide-stone-200 text-stone-700">
-                                <tr><td className="p-4 font-bold">Email and SMS</td><td className="p-4">Klaviyo</td><td className="p-4">Free to 250 email contacts and 150 SMS/MMS credits; Email from $20/mo at 251 to 500 contacts; SMS from $15/mo for 1,250 credits, carrier fees included</td><td className="p-4"><a href="https://apps.shopify.com/klaviyo-email-marketing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
-                                <tr><td className="p-4 font-bold">SMS</td><td className="p-4">Postscript</td><td className="p-4">Starter free to install with a $49/mo minimum spend, then $0.009/SMS; Growth $100/mo; Professional $500/mo, plus carrier fees</td><td className="p-4"><a href="https://apps.shopify.com/postscript-sms-marketing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Email and SMS</td><td className="p-4">Attentive</td><td className="p-4">Free to install, no published price. The listing states charges may be billed by Attentive separately from your Shopify invoice</td><td className="p-4"><a href="https://apps.shopify.com/attentive" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Reviews</td><td className="p-4">Judge.me</td><td className="p-4">Forever Free $0, including Google rich snippets and Shop app sync; Awesome $15/mo</td><td className="p-4"><a href="https://apps.shopify.com/judgeme" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Reviews</td><td className="p-4">Loox</td><td className="p-4">Beginner free; Convert $49.99/mo including 300 orders, then $50 per additional 300; Unlimited $299.99/mo</td><td className="p-4"><a href="https://apps.shopify.com/loox" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Reviews</td><td className="p-4">Yotpo</td><td className="p-4">Free to 50 monthly orders; Starter $15/mo; Pro $119/mo, varying with order volume. The listing notes charges may be billed separately from your Shopify invoice</td><td className="p-4"><a href="https://apps.shopify.com/yotpo-social-reviews" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Reviews</td><td className="p-4">Okendo</td><td className="p-4">Reviews, by monthly orders: free to 50 on the App Store listing; $19/mo to 200; $119/mo to 1,500; $299/mo to 3,500; $499/mo to 10,000; custom above that. Loyalty, quizzes, referrals and surveys are priced separately</td><td className="p-4"><a href="https://www.okendo.io/pricing/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Okendo pricing</a> and <a href="https://apps.shopify.com/okendo-reviews" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Subscriptions</td><td className="p-4">Recharge</td><td className="p-4">Starter $99/mo plus 1.49% and 19&cent; per transaction; Plus $499/mo plus 1.34% and 19&cent;; Custom volume-based. The App Store listing also shows a $25/mo plan with no transaction fees for the first 50 subscribers</td><td className="p-4"><a href="https://getrecharge.com/pricing/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Recharge pricing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Subscriptions</td><td className="p-4">Bold Subscriptions</td><td className="p-4">Launch $24.99/mo plus 2%; Grow $49.99/mo plus 1%; Scale $74.99/mo plus 0.9%</td><td className="p-4"><a href="https://apps.shopify.com/bold-subscriptions" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Helpdesk</td><td className="p-4">Gorgias</td><td className="p-4">Starter $10/mo with $0.40 per additional ticket; Basic $60/mo; Pro $360/mo; Advanced $900/mo</td><td className="p-4"><a href="https://apps.shopify.com/helpdesk" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Helpdesk</td><td className="p-4">Tidio</td><td className="p-4">Free $0; Starter $24.17/mo and Growth from $49.17/mo when billed annually ($29 and from $59 billed monthly); Plus from $300/mo plus usage</td><td className="p-4"><a href="https://www.tidio.com/pricing/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Tidio pricing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Loyalty</td><td className="p-4">Smile</td><td className="p-4">Free to 200 monthly orders; Essential $15/mo to 500; Standard $79/mo to 1,000; Growth $199/mo including 2,500, then $20 per additional 100</td><td className="p-4"><a href="https://smile.io/pricing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Smile pricing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Page building</td><td className="p-4">PageFly</td><td className="p-4">Free $0; Builder from $24/mo; Optimize from $39/mo; Accelerate $99/mo; Power $199/mo. Builder and Optimize rise with the slots and credits you choose</td><td className="p-4"><a href="https://pagefly.io/pages/pricing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>PageFly pricing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Page building</td><td className="p-4">Shogun</td><td className="p-4">Draft Mode $0; Build $39/mo; Grow $199/mo; Advanced $499/mo</td><td className="p-4"><a href="https://getshogun.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shogun pricing</a></td></tr>
-                                <tr><td className="p-4 font-bold">Theme extensions</td><td className="p-4">Vitals</td><td className="p-4">All-in-One $29.99/mo. The listing states usage fees start after roughly $1,000/mo in Vitals-attributed sales, from $10/mo, and for Visitor Recordings volume</td><td className="p-4"><a href="https://apps.shopify.com/vitals" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Email and SMS</td><td className="p-4">Klaviyo</td><td className="p-4">{spec("shopify-app-price-klaviyo").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-klaviyo")}</span></td><td className="p-4"><a href="https://apps.shopify.com/klaviyo-email-marketing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
+                                <tr><td className="p-4 font-bold">SMS</td><td className="p-4">Postscript</td><td className="p-4">{spec("shopify-app-price-postscript").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-postscript")}</span></td><td className="p-4"><a href="https://apps.shopify.com/postscript-sms-marketing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Email and SMS</td><td className="p-4">Attentive</td><td className="p-4">{spec("shopify-app-price-attentive").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-attentive")}</span></td><td className="p-4"><a href="https://apps.shopify.com/attentive" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Reviews</td><td className="p-4">Judge.me</td><td className="p-4">{spec("shopify-app-price-judgeme").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-judgeme")}</span></td><td className="p-4"><a href="https://apps.shopify.com/judgeme" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Reviews</td><td className="p-4">Loox</td><td className="p-4">{spec("shopify-app-price-loox").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-loox")}</span></td><td className="p-4"><a href="https://apps.shopify.com/loox" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Reviews</td><td className="p-4">Yotpo</td><td className="p-4">{spec("shopify-app-price-yotpo").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-yotpo")}</span></td><td className="p-4"><a href="https://apps.shopify.com/yotpo-social-reviews" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Reviews</td><td className="p-4">Okendo</td><td className="p-4">{spec("shopify-app-price-okendo").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-okendo")}</span></td><td className="p-4"><a href="https://www.okendo.io/pricing/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Okendo pricing</a> and <a href="https://apps.shopify.com/okendo-reviews" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Subscriptions</td><td className="p-4">Recharge</td><td className="p-4">{spec("shopify-app-price-recharge").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-recharge")}</span></td><td className="p-4"><a href="https://getrecharge.com/pricing/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Recharge pricing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Subscriptions</td><td className="p-4">Bold Subscriptions</td><td className="p-4">{spec("shopify-app-price-bold-subscriptions").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-bold-subscriptions")}</span></td><td className="p-4"><a href="https://apps.shopify.com/bold-subscriptions" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Helpdesk</td><td className="p-4">Gorgias</td><td className="p-4">{spec("shopify-app-price-gorgias").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-gorgias")}</span></td><td className="p-4"><a href="https://apps.shopify.com/helpdesk" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Helpdesk</td><td className="p-4">Tidio</td><td className="p-4">{spec("shopify-app-price-tidio").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-tidio")}</span></td><td className="p-4"><a href="https://www.tidio.com/pricing/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Tidio pricing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Loyalty</td><td className="p-4">Smile</td><td className="p-4">{spec("shopify-app-price-smile").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-smile")}</span></td><td className="p-4"><a href="https://smile.io/pricing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Smile pricing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Page building</td><td className="p-4">PageFly</td><td className="p-4">{spec("shopify-app-price-pagefly").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-pagefly")}</span></td><td className="p-4"><a href="https://pagefly.io/pages/pricing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>PageFly pricing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Page building</td><td className="p-4">Shogun</td><td className="p-4">{spec("shopify-app-price-shogun").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-shogun")}</span></td><td className="p-4"><a href="https://getshogun.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shogun pricing</a></td></tr>
+                                <tr><td className="p-4 font-bold">Theme extensions</td><td className="p-4">Vitals</td><td className="p-4">{spec("shopify-app-price-vitals").value}<span className="mt-1 block text-xs text-stone-500">Checked {asOf("shopify-app-price-vitals")}</span></td><td className="p-4"><a href="https://apps.shopify.com/vitals" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>App Store listing</a></td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -411,6 +430,48 @@ export default function ShopifyAppCostsPage() {
                         revenue is two charges, not one: Recharge Starter publishes $99 a month plus 1.49% and 19&cent;
                         per transaction, Bold Launch publishes $24.99 a month plus 2%. Model the percentage against your
                         own subscription revenue before comparing it with a flat monthly fee.
+                    </BlogText>
+                    {/* 19 Oct 2026: an illustrative bill built from the published prices above, so a
+                        reader can see how fixed fees, percentages and per-transaction charges add up.
+                        The inputs are invented and labelled as such; the prices are the table's. If a
+                        price in the table changes, update APP_BILL_EXAMPLE to match. */}
+                    <BlogHeader id="worked-example">A worked example: one small store&apos;s monthly app bill</BlogHeader>
+                    <InsightBox variant="info" label="Illustrative, not a real store">
+                        An invented store doing $12,000 a month in sales across 300 orders, with 450 email
+                        subscribers and $3,000 of that in subscription renewals across 90 orders. It uses
+                        Shopify Payments, stays inside each plan&apos;s included allowance, and stays under the
+                        Vitals usage threshold. Prices are the published ones in the table above, checked{" "}
+                        {asOf("shopify-app-price-recharge")}.
+                    </InsightBox>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
+                        <table className="w-full min-w-[620px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">App and plan</th><th className="p-4">How the charge is worked out</th><th className="p-4">Monthly cost</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                {APP_BILL_EXAMPLE.map((row) => (
+                                    <tr key={row.app}><td className="p-4 font-bold">{row.app}</td><td className="p-4">{row.how}</td><td className="p-4">{usd(row.monthly)}</td></tr>
+                                ))}
+                                <tr className="bg-stone-50 font-bold text-charcoal"><td className="p-4">Total</td><td className="p-4">{usd(APP_BILL_MONTHLY)} a month is {usd(APP_BILL_MONTHLY * 12)} a year</td><td className="p-4">{usd(APP_BILL_MONTHLY)}</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        Three things stand out. First, the subscription app is the largest line, and much of it is
+                        the percentage: {usd(RECHARGE_VARIABLE)} of Recharge&apos;s {usd(RECHARGE_TOTAL)} comes from the 1.49% and
+                        19&cent; per renewal, so that line grows every time subscription sales do while the others
+                        stay flat. Second, this store pays nothing extra to Shopify because it uses Shopify
+                        Payments. Run the same store on a third-party gateway on the Basic plan and Shopify adds 2%
+                        of $12,000, another {usd(12000 * 0.02)} a month, before the gateway&apos;s own fee. Third, check
+                        for overlap: if a theme feature or another app already does a job one of these apps is paid
+                        for, you are paying for it twice.
+                    </BlogText>
+                    <BlogText>
+                        When you weigh replacing an app with something you own, compare like with like: the yearly
+                        cost of the app against the one-time cost of building the replacement plus what it takes to
+                        maintain it over the time you plan to keep it, and only after confirming the replacement keeps
+                        every workflow your team relies on. A cheaper line on the invoice that drops a workflow is not
+                        a saving.
                     </BlogText>
                     <InsightBox variant="info" label="Two costs, not one">
                         A page builder or theme extension has a monthly price and, depending on how it&apos;s built and
@@ -429,8 +490,7 @@ export default function ShopifyAppCostsPage() {
                             transaction fee</strong>. If you use any other gateway, Shopify charges a third-party payment
                             provider fee <em>on top of</em> whatever that gateway takes. Read from{" "}
                             <a href="https://www.shopify.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shopify&apos;s pricing page</a>{" "}
-                            on August 2, 2026, that fee is 2% on Basic, 1% on Grow, 0.6% on Advanced and 0.2%
-                            on Plus. On a $100 sale that is $2.00, $1.00, $0.60 or $0.20 to Shopify before your gateway
+                            in {asOf("shopify-third-party-payment-fee")}, that fee is {spec("shopify-third-party-payment-fee").value}. On a $100 sale that is $2.00, $1.00, $0.60 or $0.20 to Shopify before your gateway
                             has taken anything at all. That page geo-redirects, so read the box below before you use
                             these numbers.
                         </BlogText>
