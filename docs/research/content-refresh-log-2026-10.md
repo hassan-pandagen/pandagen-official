@@ -45,3 +45,39 @@ Bold Subscriptions, Gorgias, Smile, PageFly, Shogun, Vitals. Tidio's annual pric
 
 **Unchanged:** title, meta description, URL, headings other than the price-table heading
 (now "checked October 2026" from the registry).
+
+## 20 Oct 2026: /blog/how-much-does-a-website-cost
+
+**Verified 20 Oct 2026:**
+
+- Webflow Starter limits (pricing page, rendered) and the "50 lifetime form submissions"
+  wording (Webflow help centre, Form submissions article).
+- Vercel Pro: $20 platform fee, one deploying seat, $20 monthly usage credit, free viewer
+  seats (Pro plan docs).
+- Microsoft 365 US plans page (rendered): Business Basic $7.00 per user per month, paid
+  yearly.
+
+**Changed because the source changed:** the article said Business Standard was $14 and
+Business Premium $22. Microsoft's US page now shows those plans only "with Copilot", at
+$23.50 and $32.00 per user per month paid yearly ($20.30 and $28.80 without Teams). The
+line now quotes the current page.
+
+**Could not verify, kept the earlier date:** Vercel's additional deploying seat ($20 each)
+was not legible in the page's server HTML; `vercel-pro-additional-seat` keeps 8 Oct 2026.
+
+**Changed:**
+
+- Webflow, Microsoft and Vercel figures moved into `spec-facts.json`
+  (`webflow-starter-*`, `microsoft-365-business-*`, `vercel-pro-included`,
+  `vercel-pro-additional-seat`; `vercel-pro-price` re-dated). The article's four
+  hand-typed stamps are gone, and the ratchet baseline dropped from 137 to 133.
+- New section "A worked example: a small business site's first year": invented five-page
+  Starter site, Vercel Pro, two Microsoft 365 Business Basic users. $1,908 in year one,
+  $408 a year after, before the domain. Labelled "Illustrative, not a real client".
+- `lastModified`, `dateModified` and `modifiedTime` set to 2026-10-20. Title, description
+  and URL unchanged.
+
+**Follow-up noted, not changed:** `saas-price-increases-2026-tracker` and
+`saas-software-pricing-audit-2026` describe Microsoft's July 2026 increase (Standard
+$12.50 to $14). Still true as history, but neither mentions the current "with Copilot"
+pricing. Review in a later batch.

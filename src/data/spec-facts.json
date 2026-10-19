@@ -65,7 +65,7 @@
       "label": "Pro plan price",
       "value": "$20 a month",
       "qualifier": "platform fee including one deploying seat and $20 a month of usage credit; added seats and usage beyond the credit are extra",
-      "verifiedAt": "2026-10-08",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 30,
       "source": "https://vercel.com/docs/plans/pro-plan"
     },
@@ -1097,6 +1097,73 @@
       "verifiedAt": "2026-08-02",
       "reviewDays": 60,
       "source": "https://www.shopify.com/pricing"
+    },
+    "webflow-starter-limits": {
+      "vendor": "Webflow",
+      "plan": "Starter",
+      "label": "Free Starter site limits",
+      "value": "a webflow.io subdomain, two static pages, 1 GB bandwidth and 50 form submissions",
+      "qualifier": "Free Site plan; no custom domain",
+      "verifiedAt": "2026-10-20",
+      "source": "https://webflow.com/pricing"
+    },
+    "webflow-starter-form-cap": {
+      "vendor": "Webflow",
+      "plan": "Starter",
+      "label": "Starter form submission limit",
+      "value": "50 lifetime form submissions",
+      "qualifier": "A total for the life of the site, not a monthly allowance; other Site plans are unlimited",
+      "verifiedAt": "2026-10-20",
+      "source": "https://help.webflow.com/hc/en-us/articles/33961344521235-Form-submissions"
+    },
+    "microsoft-365-business-basic-price": {
+      "vendor": "Microsoft",
+      "plan": "Microsoft 365 Business Basic",
+      "label": "US list price",
+      "value": "$7.00 per user per month",
+      "qualifier": "Paid yearly; a version without Teams is listed at $5.40",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 60,
+      "source": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing"
+    },
+    "microsoft-365-business-standard-copilot-price": {
+      "vendor": "Microsoft",
+      "plan": "Microsoft 365 Business Standard with Copilot",
+      "label": "US list price",
+      "value": "$23.50 per user per month",
+      "qualifier": "Paid yearly; usage-based billing for some AI features; without Teams $20.30",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 60,
+      "source": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing"
+    },
+    "microsoft-365-business-premium-copilot-price": {
+      "vendor": "Microsoft",
+      "plan": "Microsoft 365 Business Premium with Copilot",
+      "label": "US list price",
+      "value": "$32.00 per user per month",
+      "qualifier": "Paid yearly; usage-based billing for some AI features; without Teams $28.80",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 60,
+      "source": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing"
+    },
+    "vercel-pro-included": {
+      "vendor": "Vercel",
+      "plan": "Pro",
+      "label": "What the Pro platform fee includes",
+      "value": "one deploying seat and $20 in monthly usage credit, with unlimited free read-only viewer seats",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 30,
+      "source": "https://vercel.com/docs/plans/pro-plan"
+    },
+    "vercel-pro-additional-seat": {
+      "vendor": "Vercel",
+      "plan": "Pro",
+      "label": "Additional deploying seat",
+      "value": "$20 a month each",
+      "qualifier": "Read on 8 Oct 2026; not legible in the page's server HTML on 20 Oct 2026",
+      "verifiedAt": "2026-10-08",
+      "reviewDays": 30,
+      "source": "https://vercel.com/docs/plans/pro-plan"
     }
   }
 }

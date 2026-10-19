@@ -755,7 +755,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "cost",
-    lastModified: "2026-10-09",
+    lastModified: "2026-10-20",
     faqs: [
       { question: "Can I build a website for free?", answer: "Some vendors offer no-cost or trial plans, but eligibility, branding, domains, features, usage and commercial terms differ. Infrastructure, domain, email, apps, payment, content, maintenance and internal time can still cost money. Check the current official plan and do not assume a personal free tier fits commercial use." },
       { question: "How much does a one-page website cost?", answer: "Price the actual copy, design states, form or payment flow, analytics, consent, accessibility, responsive behavior, integrations, QA, launch and support. PandaCodeGen's Starter planning anchor begins at $1,500, but the accepted scope determines whether a one-page project fits." },

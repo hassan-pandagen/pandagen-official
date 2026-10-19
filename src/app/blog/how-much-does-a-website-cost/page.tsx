@@ -10,6 +10,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { spec, asOf } from "@/data/spec-facts";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-12",
-        modifiedTime: "2026-10-09",
+        modifiedTime: "2026-10-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-much-does-a-website-cost")],
@@ -72,7 +73,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath(`/blog/${postId}`),
             datePublished: "2026-05-12",
-            dateModified: "2026-10-09",
+            dateModified: "2026-10-20",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -115,7 +116,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-12",
-            dateModified: "2026-10-09",
+            dateModified: "2026-10-20",
             inLanguage: "en-US",
         },
         {
@@ -131,6 +132,11 @@ const articleSchema = {
 };
 
 const sourceLinkClass = "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
+
+// First-year budget example (illustrative, not a client). Build is our published Starter
+// price; hosting and email are 12 months of the matching spec-facts.json prices.
+const BUDGET = { build: 1500, hosting: 20 * 12, email: 7 * 2 * 12 };
+const usd = (n: number) => `$${n.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 2 })}`;
 
 export default function WebsiteCostGuide() {
     return (
@@ -162,7 +168,7 @@ export default function WebsiteCostGuide() {
                             work. That is the difference between two numbers you can compare and two numbers you cannot.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            PandaCodeGen offer and vendor links reviewed August 1, 2026. Vendor prices can change.
+                            PandaCodeGen prices are our published terms. Vendor figures below carry the month they were last read; vendor prices can change.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -266,10 +272,10 @@ export default function WebsiteCostGuide() {
                         <BlogText>
                             Yes, and the free tiers are real rather than trials, but they are bounded in ways that
                             decide whether free is viable for you. Webflow&apos;s Starter plan, read from its pricing
-                            page on August 5, 2026, costs nothing and gives you a <BlogHighlight>webflow.io
-                            subdomain, two static pages, 1 GB of bandwidth and 50 form submissions</BlogHighlight>,
-                            and that submission cap is a lifetime total, not a monthly one (re-verified 13 September
-                            2026).
+                            page in {asOf("webflow-starter-limits")}, costs nothing and gives you{" "}
+                            <BlogHighlight>{spec("webflow-starter-limits").value}</BlogHighlight>, and Webflow&apos;s help
+                            centre describes the form limit as {spec("webflow-starter-form-cap").value}: a total for the life of
+                            the site, not a monthly allowance.
                             That is a genuine free website. It is also not a business website, because the limit that
                             bites first is not bandwidth: it is that you cannot put your own domain on it.
                         </BlogText>
@@ -448,7 +454,7 @@ export default function WebsiteCostGuide() {
                         items={[
                             "Domain and DNS. Two registrars charge different prices for the same domain because the markup is the registrar's, not the registry's. Cloudflare Registrar states it adds no markup and passes through only the registry and ICANN fee. Compare renewal prices rather than promotional first-year ones, which is where the surprise usually lives.",
                             "TLS certificate, normally included free by modern hosts through Let's Encrypt.",
-                            "Business email, charged per person. Microsoft's published US list prices took effect on July 1, 2026 at $7 per user per month for Business Basic, $14 for Business Standard and $22 for Business Premium, with existing customers held at their current price until renewal. Checked August 1, 2026.",
+                            `Business email, charged per person. Microsoft's US plans page, read in ${asOf("microsoft-365-business-basic-price")}, lists Business Basic at ${spec("microsoft-365-business-basic-price").value} and now shows Business Standard and Business Premium as "with Copilot" plans at ${spec("microsoft-365-business-standard-copilot-price").value} and ${spec("microsoft-365-business-premium-copilot-price").value}, all paid yearly. Versions without Teams cost less.`,
                             "Website or commerce plan, hosting, compute, bandwidth, storage, image processing and build usage.",
                             "CMS seats, records, API usage, preview, localization and asset storage.",
                             "Apps, plugins, extensions, licenses, tax, shipping and messaging usage.",
@@ -460,13 +466,43 @@ export default function WebsiteCostGuide() {
                     <BlogText>
                         Save a dated vendor quote for the country, billing term, seats and expected usage. As one current
                         example, <a href="https://vercel.com/docs/plans/pro-plan" className={sourceLinkClass}>Vercel&apos;s Pro documentation</a>,
-                        checked October 8, 2026, lists a $20 monthly platform fee including one deploying seat and $20
-                        in usage credit. Additional deploying seats cost $20 each; read-only viewers are free. Three
+                        read in {asOf("vercel-pro-price")}, lists a platform fee of {spec("vercel-pro-price").value}, including{" "}
+                        {spec("vercel-pro-included").value}. Additional deploying seats cost {spec("vercel-pro-additional-seat").value}. Three
                         deploying seats therefore cost $60 a month before extras. One deploying seat and two viewers
                         cost $20 before extras. Usage and add-ons can increase either bill. We have written separately on{" "}
                         <Link href="/blog/nextjs-hosting-zero-cost" className={sourceLinkClass}>what Next.js hosting actually costs</Link>{" "}
                         and on how{" "}
                         <Link href="/blog/shopify-app-costs-real-monthly-bill" className={sourceLinkClass}>store app subscriptions stack up on a monthly bill</Link>.
+                    </BlogText>
+                    {/* 20 Oct 2026: an illustrative first-year budget built from our published Starter
+                        price and the vendor prices above, so a reader sees build and running costs side
+                        by side. The inputs are invented and labelled; the prices come from the registry. */}
+                    <BlogHeader id="first-year-budget">A worked example: a small business site&apos;s first year</BlogHeader>
+                    <InsightBox variant="info" label="Illustrative, not a real client">
+                        An invented five-page business site on our Starter tier, hosted on Vercel Pro in the owner&apos;s
+                        own account, with two staff on Microsoft 365 Business Basic for email. No apps, no store, no
+                        paid add-ons, and usage inside Vercel&apos;s included credit. The domain is left out because
+                        its price depends on the registrar and the extension.
+                    </InsightBox>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
+                        <table className="w-full min-w-[620px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Cost</th><th className="p-4">How it is worked out</th><th className="p-4">Year one</th><th className="p-4">Each year after</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4 font-bold">Build</td><td className="p-4">Starter tier, one-time, from our published price</td><td className="p-4">{usd(BUDGET.build)}</td><td className="p-4">{usd(0)}</td></tr>
+                                <tr><td className="p-4 font-bold">Hosting</td><td className="p-4">Vercel Pro platform fee, {spec("vercel-pro-price").value}, twelve months</td><td className="p-4">{usd(BUDGET.hosting)}</td><td className="p-4">{usd(BUDGET.hosting)}</td></tr>
+                                <tr><td className="p-4 font-bold">Email</td><td className="p-4">Microsoft 365 Business Basic, {spec("microsoft-365-business-basic-price").value}, two people, twelve months</td><td className="p-4">{usd(BUDGET.email)}</td><td className="p-4">{usd(BUDGET.email)}</td></tr>
+                                <tr className="bg-stone-50 font-bold text-charcoal"><td className="p-4">Total</td><td className="p-4">Before the domain, tax and any change requests</td><td className="p-4">{usd(BUDGET.build + BUDGET.hosting + BUDGET.email)}</td><td className="p-4">{usd(BUDGET.hosting + BUDGET.email)}</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        The build is the large number once; the running costs are the numbers that repeat. Year one
+                        here is {usd(BUDGET.build + BUDGET.hosting + BUDGET.email)} and every year after is{" "}
+                        {usd(BUDGET.hosting + BUDGET.email)}, before the domain. Add staff and the email line grows by
+                        the per-person price; add a store, a CMS plan or paid apps and each brings its own monthly
+                        line. When you compare quotes, ask each one to show both columns.
                     </BlogText>
 
                     <BlogHeader>DIY, managed platform and custom code</BlogHeader>
