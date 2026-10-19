@@ -41,10 +41,21 @@ USAGE
   python scripts/stamp_freshness.py --today 2027-01-01
   python scripts/stamp_freshness.py --json
   python scripts/stamp_freshness.py --strict      # exit 1 on any old stamp
+  python scripts/stamp_freshness.py --ratchet     # exit 1 on stamps beyond the baseline
+  python scripts/stamp_freshness.py --write-baseline
+
+THE RATCHET (added 19 Oct 2026, run by guard:all)
+  scripts/stamp_baseline.json records how many hand-typed stamps each file had
+  on 19 Oct 2026. --ratchet fails when a file not in the baseline has any, or a
+  file has more than its baseline count. New articles therefore put every
+  changeable fact in spec-facts.json and render it with spec() and asOf(), and
+  old articles can lose stamps but never gain them. After removing stamps, run
+  --write-baseline to lock in the lower counts. This needs no git history, so it
+  works on CI's shallow checkout.
 
 EXIT CODES
-  0 ran (warnings still print) - 1 only with --strict and an old stamp -
-  2 could not run
+  0 ran (warnings still print) - 1 with --strict and an old stamp, or with
+  --ratchet and a stamp beyond the baseline - 2 could not run
 """
 
 from __future__ import annotations
@@ -58,6 +69,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 TARGETS = ["src/app/**/page.tsx", "src/data/blog.ts"]
 DEFAULT_DAYS = 90
+BASELINE = ROOT / "scripts" / "stamp_baseline.json"
 TOP = 10
 
 MONTHS = {name.lower(): i for i, name in enumerate(calendar.month_name) if name}
@@ -183,7 +195,32 @@ def main() -> int:
             print(f"  NOTE {u['file']}:{u['line']} looks like a stamp but the date "
                   f"did not parse: \"{u['text']}\"")
 
-    return 1 if (strict and old) else 0
+    counts: dict[str, int] = {}
+    for s in stamps + unparsed:
+        counts[s["file"]] = counts.get(s["file"], 0) + 1
+
+    if "--write-baseline" in sys.argv:
+        BASELINE.write_text(json.dumps(dict(sorted(counts.items())), indent=2) + chr(10), encoding="utf-8")
+        print(f"  wrote {BASELINE.relative_to(ROOT).as_posix()}: {sum(counts.values())} stamps in {len(counts)} files")
+        return 0
+
+    over = []
+    if "--ratchet" in sys.argv:
+        try:
+            baseline = json.loads(BASELINE.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as exc:
+            print(f"stamp_freshness: cannot read {BASELINE.name} ({exc})", file=sys.stderr)
+            return 2
+        over = [(f, n, baseline.get(f, 0)) for f, n in sorted(counts.items()) if n > baseline.get(f, 0)]
+        if over:
+            print("  FAIL - hand-typed date stamps beyond the 19 Oct 2026 baseline. Put the fact in")
+            print("  src/data/spec-facts.json and render it with spec() and asOf() instead:")
+            for f, n, b in over:
+                print(f"    {f}: {n} stamps (baseline {b})")
+        else:
+            print(f"  OK - no file has more hand-typed stamps than the baseline ({sum(baseline.values())} allowed)")
+
+    return 1 if (strict and old) or over else 0
 
 
 if __name__ == "__main__":
