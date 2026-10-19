@@ -10,6 +10,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { spec, asOf } from "@/data/spec-facts";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-31",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/saas-price-increases-2026-tracker")],
@@ -78,7 +79,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/saas-price-increases-2026-tracker"),
             description,
             datePublished: "2026-05-31",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-20",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -121,7 +122,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-31",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-20",
             inLanguage: "en-US",
         },
         {
@@ -254,6 +255,9 @@ export default function SaasPriceIncreases2026TrackerPage() {
                         Premium remains listed at $22. Existing customers remain on their current price until the
                         applicable renewal, and country, currency, channel and product configuration can change the
                         result.
+                    </BlogText>
+                    <BlogText>
+                        Microsoft&apos;s current US plans page, read in {asOf("microsoft-365-business-basic-price")}, shows something different from that change list. It lists Business Basic at {spec("microsoft-365-business-basic-price").value}, and sells Business Standard and Business Premium only as &ldquo;with Copilot&rdquo; plans, at {spec("microsoft-365-business-standard-copilot-price").value} and {spec("microsoft-365-business-premium-copilot-price").value}, all paid yearly. Those bundles include Copilot, so $14 to {spec("microsoft-365-business-standard-copilot-price").value.split(" ")[0]} isn&apos;t the same plan getting dearer. Compare your renewal quote with the plan you actually hold.
                     </BlogText>
                     <BlogText>
                         The renewal condition is the part that matters most once the date has passed. Because existing

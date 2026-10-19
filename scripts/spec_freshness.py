@@ -135,6 +135,33 @@ def review_days(fact_id: str, fact: dict, default: int) -> tuple[int, str | None
     return raw, None
 
 
+def amount_spellings(n: float) -> set[str]:
+    """The ways a number can be written in a value: $20, $20.00, $29.99, 1.49%, 19¢,
+    1,000,000, 1 million."""
+    out = {f"${n:,.2f}", f"{n:g}%", f"{n:,g}"}
+    if n == int(n):
+        out.add(f"${int(n):,}")
+        if n >= 1_000_000 and n % 1_000_000 == 0:
+            out.add(f"{int(n // 1_000_000)} million")
+    if 0 < n < 1:
+        out.add(f"{round(n * 100)}¢")
+    return out
+
+
+def amount_mismatches(fact_id: str, fact: dict) -> list[str]:
+    """Each number in "amounts" feeds a calculation on a page, so it must still appear
+    in the value a reader sees. Change the value and forget the amount, and this fails
+    instead of a worked example quietly adding up the old price."""
+    errors = []
+    for key, n in (fact.get("amounts") or {}).items():
+        if isinstance(n, bool) or not isinstance(n, (int, float)):
+            errors.append(f'"{fact_id}" amount "{key}" is {n!r}; it must be a number.')
+        elif not any(s in fact.get("value", "") for s in amount_spellings(float(n))):
+            errors.append(f'"{fact_id}" amount "{key}" is {n}, but the value doesn\'t show that '
+                          f'number. Update the amount and the value together.')
+    return errors
+
+
 def unreferenced(ids: list[str]) -> list[str]:
     """Ids that no source file under src/ mentions in quotes."""
     texts = []
@@ -173,6 +200,8 @@ def main() -> int:
                 failures.append({"id": fact_id, "kind": kind, "age": None, "fix": err})
                 continue
             fail_days = warn_days * FAIL_MULTIPLIER
+            for msg in amount_mismatches(fact_id, s):
+                failures.append({"id": fact_id, "kind": kind, "age": None, "fix": msg})
             tiers.setdefault((kind, warn_days), 0)
             tiers[(kind, warn_days)] += 1
 

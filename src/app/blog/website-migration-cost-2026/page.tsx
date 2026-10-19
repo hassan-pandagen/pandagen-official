@@ -236,7 +236,7 @@ export default function WebsiteMigrationCostPage() {
                                 <tr><td className="p-4 font-bold">WooCommerce</td><td className="p-4">Products CSV plus orders, customers and extension-specific data</td><td className="p-4">Checkout, tax, fraud, inventory, fulfillment, accounts and subscriptions</td><td className="p-4">Financial and order-flow reconciliation</td><td className="p-4">Starter, from $1,500, for a small catalogue; subscriptions or a large catalogue mean Scale, from $5,000</td><td className="p-4"><Link href="/blog/woocommerce-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WooCommerce migration cost</Link></td></tr>
                                 <tr><td className="p-4 font-bold">Webflow</td><td className="p-4">Code ZIP plus separate CMS or ecommerce CSV exports</td><td className="p-4">CMS, forms, search, localization, ecommerce, users and code components</td><td className="p-4">Feature gaps beyond exported HTML, CSS, JavaScript and assets</td><td className="p-4">Starter, from $1,500</td><td className="p-4"><Link href="/blog/webflow-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Webflow migration cost</Link></td></tr>
                                 <tr><td className="p-4 font-bold">Wix</td><td className="p-4">CMS exports and other feature-specific exports or APIs where available</td><td className="p-4">Pages, media, blog, forms, bookings, members, apps and commerce</td><td className="p-4">Complete feature and content inventory before extraction</td><td className="p-4">Starter, from $1,500</td><td className="p-4"><Link href="/blog/wix-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Wix migration cost</Link></td></tr>
-                                <tr><td className="p-4 font-bold">Squarespace</td><td className="p-4">Partial WordPress XML plus manual or separate system work</td><td className="p-4">Excluded layouts, store, portfolio, products, media, forms and styles</td><td className="p-4">Export exclusions and design recreation</td><td className="p-4">Starter, from $1,500</td><td className="p-4"><Link href="/blog/squarespace-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Squarespace migration cost</Link></td></tr>
+                                <tr><td className="p-4 font-bold">Squarespace</td><td className="p-4">Partial WordPress XML, a separate product .csv, plus manual work</td><td className="p-4">Excluded layouts, store pages, portfolio, product images, media, forms and styles</td><td className="p-4">Export exclusions and design recreation</td><td className="p-4">Starter, from $1,500</td><td className="p-4"><Link href="/blog/squarespace-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Squarespace migration cost</Link></td></tr>
                                 <tr><td className="p-4 font-bold">Shopify</td><td className="p-4">Product and other admin exports plus APIs</td><td className="p-4">Storefront, checkout boundary, accounts, search, apps, analytics and consent</td><td className="p-4">Commerce continuity and app compatibility</td><td className="p-4">Headless builds start at Scale, from $5,000</td><td className="p-4"><Link href="/blog/shopify-headless" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Headless Shopify cost</Link></td></tr>
                                 <tr><td className="p-4 font-bold">GoHighLevel</td><td className="p-4">Documented APIs, exports and controlled recreation</td><td className="p-4">Keep CRM or replace it; forms, funnels, calendars, automation and attribution</td><td className="p-4">Lead capture and workflow continuity</td><td className="p-4">Starter, from $1,500, for a site that keeps the CRM</td><td className="p-4"><Link href="/blog/gohighlevel-keep-crm-replace-website" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Keeping GoHighLevel, replacing the site</Link></td></tr>
                             </tbody>
@@ -260,9 +260,10 @@ export default function WebsiteMigrationCostPage() {
                     <BlogList
                         items={[
                             "Comes across in the export: the blog posts and the basic text of standard pages. They still need checking and reformatting once they land in the new editor.",
-                            "Has to be rebuilt by hand: the portfolio page and the store, because Squarespace's guide lists portfolio and store pages among the content that doesn't export, plus the eight products, the layouts and the form.",
+                            "Has to be rebuilt by hand: the portfolio page and the store pages, because Squarespace's export guide lists portfolio and store pages among the content that doesn't export, plus the layouts and the form.",
+                            `Can come across separately: the eight product records. Squarespace's product export guide, read in ${asOf("squarespace-product-csv-export")}, covers ${spec("squarespace-product-csv-export").value}. The images, alt text and reviews are moved by hand.`,
                             "Has to be planned whatever the platform: a redirect for every old URL, especially the 40 blog posts, and a check that each page keeps its title and description.",
-                            "Where it lands with us: 12 pages and a content model for the blog put it in Growth, from $3,500, which covers 8 to 20 pages and a full migration with a redirect map. The small store stays inside that scope; a large catalogue or subscriptions would move it to Scale.",
+                            "Where it lands with us: 12 pages and a content model for the blog put it in Growth, from $3,500, which covers 8 to 20 pages and a full migration with a redirect map. Eight products don't settle the store's scope on their own: checkout, shipping, tax and any connected services are scoped on the call, and a large catalogue, subscriptions or custom commerce logic would move it to Scale.",
                         ]}
                     />
                     <InsightBox variant="info" label="Why we publish our tiers and not a market range">
@@ -288,16 +289,22 @@ export default function WebsiteMigrationCostPage() {
 
                     <div data-speakable="true">
                         <BlogText>
-                            These are two different jobs and only one of them is worth paying an agency for. Moving a
-                            WordPress site from one host to another host keeps the same software, the same theme, the
-                            same plugins and the same database. Nothing is rebuilt. Most hosting companies will do that
-                            transfer for you when you buy a plan, and that is the first place to ask. Read in{" "}
+                            These are two different jobs. Moving a WordPress site from one host to another keeps the
+                            same software, the same theme, the same plugins and the same database. Nothing is rebuilt.
+                            Many hosting companies will do that transfer for you when you buy a plan, so check what
+                            your new host includes first. Read in{" "}
                             {asOf("hostinger-website-migration")},{" "}
                             <a href={spec("hostinger-website-migration").source} target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4">Hostinger</a>{" "}
                             advertised migration as {spec("hostinger-website-migration").value}, and{" "}
                             <a href={spec("kinsta-wordpress-migration").source} target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4">Kinsta</a>{" "}
-                            as {spec("kinsta-wordpress-migration").value}. <strong>If all you need is a host change, do not
-                            pay migration prices for it, and do not hire us to do it.</strong>
+                            as {spec("kinsta-wordpress-migration").value}. <strong>If the host&apos;s included move covers
+                            your site, use it, and don&apos;t pay platform-migration prices for a host change.</strong>
+                        </BlogText>
+                        <BlogText>
+                            When the included move doesn&apos;t cover it, or the site runs a store, business email or
+                            connected services, we quote a host move separately from any rebuild. That work is the
+                            backups, a compatibility check on the new host, DNS and email coordination, checks at
+                            cutover, and a rollback plan if something breaks.
                         </BlogText>
                     </div>
 

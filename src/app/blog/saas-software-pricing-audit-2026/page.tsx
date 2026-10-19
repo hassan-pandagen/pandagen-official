@@ -10,6 +10,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { spec, asOf } from "@/data/spec-facts";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-31",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/saas-software-pricing-audit-2026")],
@@ -83,7 +84,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/saas-software-pricing-audit-2026"),
             description,
             datePublished: "2026-05-31",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-20",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -126,7 +127,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-31",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-20",
             inLanguage: "en-US",
         },
         {
@@ -236,7 +237,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr>
                                     <td className="p-4 font-bold">Microsoft 365</td>
-                                    <td className="p-4">Per user/month: Business Basic $6 to $7; Business Standard $12.50 to $14; E3 $36 to $39; E5 $57 to $60; F1 $2.25 to $3; F3 $8 to $10. Business Premium is unchanged at $22, so check your own SKU before assuming a rise. Microsoft states existing customers remain on current pricing until renewal, and that tenants get at least 30 days notice in Message Center before packaging changes become available. Figures from Microsoft&apos;s licensing news page, checked October 8, 2026.</td>
+                                    <td className="p-4">Per user/month: Business Basic $6 to $7; Business Standard $12.50 to $14; E3 $36 to $39; E5 $57 to $60; F1 $2.25 to $3; F3 $8 to $10. Business Premium is unchanged at $22, so check your own SKU before assuming a rise. Microsoft states existing customers remain on current pricing until renewal, and that tenants get at least 30 days notice in Message Center before packaging changes become available. Figures from Microsoft&apos;s licensing news page, checked October 8, 2026. Microsoft&apos;s current US plans page, read in {asOf("microsoft-365-business-basic-price")}, shows something different from those figures. It lists Business Basic at {spec("microsoft-365-business-basic-price").value}, and sells Business Standard and Business Premium only as &ldquo;with Copilot&rdquo; plans, at {spec("microsoft-365-business-standard-copilot-price").value} and {spec("microsoft-365-business-premium-copilot-price").value}, all paid yearly. Those bundles include Copilot, so $14 to {spec("microsoft-365-business-standard-copilot-price").value.split(" ")[0]} isn&apos;t the same plan getting dearer. Compare your renewal quote with the plan you actually hold.</td>
                                     <td className="p-4">July 1, 2026</td>
                                 </tr>
                                 <tr>

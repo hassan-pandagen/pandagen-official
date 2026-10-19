@@ -10,7 +10,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import { spec, asOf } from "@/data/spec-facts";
+import { spec, asOf, amount } from "@/data/spec-facts";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
@@ -134,8 +134,13 @@ const articleSchema = {
 const sourceLinkClass = "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
 
 // First-year budget example (illustrative, not a client). Build is our published Starter
-// price; hosting and email are 12 months of the matching spec-facts.json prices.
-const BUDGET = { build: 1500, hosting: 20 * 12, email: 7 * 2 * 12 };
+// price; hosting and email are 12 months of the spec-facts.json "amounts", for two staff.
+const STAFF = 2;
+const BUDGET = {
+    build: 1500,
+    hosting: amount("vercel-pro-price", "monthly") * 12,
+    email: amount("microsoft-365-business-basic-price", "monthly") * STAFF * 12,
+};
 const usd = (n: number) => `$${n.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 2 })}`;
 
 export default function WebsiteCostGuide() {

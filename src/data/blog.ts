@@ -584,7 +584,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "saas",
-      lastModified: "2026-10-08",
+      lastModified: "2026-10-20",
       faqs: [
         { question: "Which SaaS changes are verified in this watchlist?", answer: "The page covers Microsoft's July 1, 2026 commercial Microsoft 365 changes, Webflow's phased May 2026 Site-plan restructure, and Klaviyo's February 2025 active-profile billing policy because it can still affect 2026 invoices. Each row links to a primary vendor source." },
         { question: "How much did SaaS prices increase in 2026?", answer: "There is no universal percentage. The result depends on vendor, SKU, region, channel, contract, renewal, billed units, usage and discounts. Calculate each change from the account's current invoice and dated renewal quote." },
@@ -630,7 +630,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "saas",
-      lastModified: "2026-10-08",
+      lastModified: "2026-10-20",
       faqs: [
         { question: "How much is the average business spending on SaaS in 2026?", answer: "A general benchmark does not establish your stack cost. Reconcile at least twelve months of card, bank, accounts-payable and app-marketplace charges, then map each item to the exact account, SKU, owner, usage, contract and renewal." },
         { question: "What is the 2026 SaaS inflation rate?", answer: "This audit does not apply one market-wide rate to every contract. Vendor, SKU, region, billing channel, renewal, discount and billed quantity differ. Use the official change notice and the account's renewal quote and invoice." },
@@ -1661,7 +1661,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-10-19",
+    lastModified: "2026-10-20",
     faqs: [
       { question: "How much does Shopify take from a $100 sale?", answer: "It depends far more on whether you use Shopify Payments than on your plan. With Shopify Payments you pay the published card rate for your country and plan and no additional transaction fee. With any other gateway, Shopify charges a third-party payment provider fee on top of whatever that gateway takes: read from Shopify's own pricing page on August 2, 2026, that is 2% on Basic, 1% on Grow, 0.6% on Advanced and 0.2% on Plus, so $2.00, $1.00, $0.60 or $0.20 on a $100 sale before your gateway takes anything. Card rates are quoted per country and shopify.com/pricing geo-redirects, so read the rate on your own market's pricing page or in the Payments section of your admin, not in an article." },
       { question: "How much do Shopify apps cost per month?", answer: "Individual app prices published on August 2, 2026, and rechecked on October 4, 2026, range from free to a few hundred dollars a month per app. Common entry tiers: Gorgias Starter $10, Judge.me Awesome $15, Smile Essential $15, Okendo reviews $19 up to 200 orders, PageFly Builder from $24, Vitals All-in-One $29.99, Loox Convert $49.99, and Recharge Starter $99 plus 1.49% and 19 cents per transaction. Some apps, such as Attentive, don't publish a price at all. There's no reliable universal total, because volume-metered pricing means the bill tracks your list size, order count or message volume. Export your Shopify bills, card statements and vendor invoices, then separate subscription, usage, transaction, one-time, tax and external charges. Public list prices might not match your legacy, annual, promotional or negotiated terms." },

@@ -270,13 +270,71 @@ $20), the three-year row "From $720 base" ($20 x 36), and the 100 GB sizing para
 changed page was rendered and read back for missing values ("undefined", "NaN"), matching
 JSON-LD dates, and no horizontal overflow at 390px.
 
+## Round 2: fixes after the outside review (20 Oct 2026)
+
+The reviewer's four findings were each checked against the code and the sources before
+anything changed. All four held.
+
+1. **Example totals used prices typed into the code.** Fixed. Registry entries can now carry
+   `amounts`, the numbers a calculation needs (for example Recharge Starter: 99, 1.49, 0.19).
+   The Shopify, website-budget and Vercel examples now calculate from those. Only the
+   invented inputs (store sales, staff count, traffic) stay in the page code.
+   `spec_freshness.py` now fails if an amount no longer appears in its entry's displayed
+   value (it accepts $20, $7.00, 1.49%, 19¢, 1,000,000 and "1 million"), so the price and
+   the total can't drift apart. Tested with a matching and two mismatched values.
+2. **Squarespace example.** Fixed. Squarespace's product export guide (read 20 Oct 2026)
+   covers physical and service products, up to 10,000, to a .csv file, without featured
+   images, variant images, image alt text, customer reviews or additional product
+   information. The example now says the product records can move separately, and only
+   those parts and the store pages are rebuilt by hand. The scope line now says eight
+   products don't settle the store's scope on their own: checkout, shipping, tax and
+   connected services are scoped on the call. New registry entry
+   `squarespace-product-csv-export`. The export matrix row now mentions the product .csv.
+3. **Vercel wording.** Fixed. 30 requests a page is now called a round number for the
+   example, not a measured average. The text says files already cached in a visitor's
+   browser aren't requested again, while files served from Vercel's own cache still count.
+   The $80 is now "from the start of the following cycle".
+4. **Shopify wording.** Fixed. "Pays nothing extra to Shopify" is now "Shopify charges it no
+   additional third-party transaction fee. Card processing fees still apply either way."
+   (Shopify's US pricing FAQ says it "charges a small fee to allow you to accept major credit
+   cards".) Gorgias Starter's 50 included tickets a month (read from its Shopify App Store
+   listing on 20 Oct 2026) are now in the registry value and the example row. The "2% of
+   $12,000" line now reads its rate from the registry.
+
+**Owner decisions applied:**
+
+- **Migration article:** the "do not hire us to do it" line and the opening claim that only
+  one of the two jobs is worth paying an agency for are gone. The page now says to check
+  what the new host includes first, and to use it if it covers the site. When it doesn't, or
+  the site runs a store, business email or connected services, we quote a host move
+  separately: backups, a compatibility check on the new host, DNS and email coordination,
+  cutover checks and a rollback plan. This matches the studio's published host-migration
+  service.
+- **Microsoft:** both SaaS pricing articles keep the July 2026 change list and add a note
+  that Microsoft's current US page lists Business Basic at $7.00 and sells Standard and
+  Premium only "with Copilot" at $23.50 and $32.00 per user per month, paid yearly. The note
+  says $14 to $23.50 isn't the same plan getting dearer, because the bundles include
+  Copilot. The figures render from the registry.
+
+**Not accepted without our own read:** the reviewer reported reading the Shopify fee rates on
+20 Oct. From our connection, shopify.com/pricing now loads the US page, but the FAQ that
+holds the rates never displays, and its template placeholders (`{{basicThirdParty}}`) were
+never filled. Shopify's help centre returned 403. The fee keeps its 2 Aug 2026 date until the
+owner confirms it with a screenshot.
+
+**Dates:** the Shopify article and both SaaS articles moved to 2026-10-20 (all three date
+fields each). `npm run check`, type check, stamp ratchet (127, unchanged), `check_dates.py`
+and `spec_freshness.py` pass; the site built; every changed section was read back on the
+built site, and none overflow at 390px.
+
 ## Open items
 
-1. **Shopify third-party payment fee:** needs a read of shopify.com/pricing from a US
-   connection before 30 Nov 2026, or the build fails.
-2. **"Do not hire us to do it"** in the migration article: the owner decides.
-3. **Microsoft "with Copilot" pricing** in two SaaS pricing articles: later batch.
-4. Okendo and Tidio monthly prices: retry with a browser that can render their pricing.
+1. **Shopify third-party payment fee:** still dated 2 Aug 2026. The reviewer reported reading
+   2% / 1% / 0.6% / 0.2% on 20 Oct, but we couldn't confirm it ourselves (see round 2), so
+   the owner is checking it by screenshot. The build fails on 30 Nov 2026 if it stays.
+2. Okendo and Tidio monthly prices: retry with a browser that can render their pricing.
+3. The Microsoft FAQ answer in `blog.ts` ("Is Microsoft 365 going up in price in 2026?")
+   still gives only the July change list. It is accurate as history; not changed in round 2.
 
 ## Questions for the reviewer
 
@@ -287,58 +345,59 @@ JSON-LD dates, and no horizontal overflow at 390px.
 
 ## Every fact touched in this batch (generated from the registry)
 
-| id | value | qualifier | verifiedAt | source |
-|---|---|---|---|---|
-| `vercel-hobby-price` | $0 | for eligible personal, non-commercial projects | 2026-10-20 | https://vercel.com/pricing |
-| `vercel-hobby-fast-data-transfer` | the first 100 GB a month | listed under Hobby Included Usage; Hobby can't buy more, and going over a limit pauses that feature, in most cases for 30 days | 2026-10-20 | https://vercel.com/docs/plans/hobby |
-| `vercel-hobby-fast-origin-transfer` | the first 10 GB a month | listed under Hobby Included Usage | 2026-10-20 | https://vercel.com/docs/plans/hobby |
-| `vercel-hobby-cdn-requests` | the first 1,000,000 a month | listed under Hobby Included Usage; Vercel previously called these Edge Requests | 2026-10-20 | https://vercel.com/docs/plans/hobby |
-| `vercel-hobby-deployments` | up to 100 a day |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
-| `vercel-hobby-blob-included` | 1 GB of storage, 10,000 simple operations, 2,000 advanced operations and 10 GB of Blob Data Transfer a month | Hobby can't buy more; going over removes Blob access until 30 days have passed | 2026-10-20 | https://vercel.com/docs/vercel-blob/usage-and-pricing |
-| `vercel-pro-price` | $20 a month | platform fee including one deploying seat and $20 a month of usage credit; added seats and usage beyond the credit are extra | 2026-10-20 | https://vercel.com/docs/plans/pro-plan |
-| `vercel-pro-cdn-capacity` | 1 million CDN requests and 1 TB of data transfer a month | the lowest Flat Rate CDN capacity tier, included with Pro at no extra cost | 2026-10-20 | https://vercel.com/docs/plans/pro-plan |
-| `vercel-flat-rate-cdn-next-tier` | $20 a month for 10 million CDN requests and 50 TB of data transfer | a billing cycle over capacity moves the team up a tier at the start of the next cycle; a one-day spike doesn't | 2026-10-20 | https://vercel.com/docs/pricing/flat-rate-cdn |
-| `vercel-flat-rate-cdn-ga-date` | 8 September 2026 | the changelog entry says new Pro teams have Flat Rate CDN on by default and existing teams can switch over in Billing settings | 2026-10-20 | https://vercel.com/changelog/flat-rate-cdn-is-now-ga-for-pro-teams |
-| `vercel-pro-spend-notification-default` | $200 per billing cycle | Vercel enables spend management notifications at this amount by default for new customers | 2026-10-20 | https://vercel.com/docs/plans/pro-plan |
-| `vercel-fast-data-transfer-on-demand` | $0.15 to $0.35 per GB by region | applies to Pro CDN usage billed on demand, not to usage covered by a Flat Rate CDN tier | 2026-10-20 | https://vercel.com/docs/pricing/regional-pricing |
-| `vercel-cdn-requests-on-demand` | $2.00 to $3.20 per million by region | applies to Pro CDN usage billed on demand, not to usage covered by a Flat Rate CDN tier | 2026-10-20 | https://vercel.com/docs/pricing/regional-pricing |
-| `vercel-fast-origin-transfer-on-demand` | $0.06 to $0.43 per GB by region | usage-based on Pro; Flat Rate CDN doesn't cover it | 2026-10-20 | https://vercel.com/docs/pricing/regional-pricing |
-| `shopify-app-price-klaviyo` | Free to 250 email contacts and 150 SMS/MMS credits; Email from $20/mo at 251 to 500 contacts; SMS from $15/mo for 1,250 credits, carrier fees included | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-19 | https://apps.shopify.com/klaviyo-email-marketing |
-| `shopify-app-price-postscript` | Starter free to install with a $49/mo minimum spend, then $0.009/SMS; Growth $100/mo; Professional $500/mo, plus carrier fees | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-19 | https://apps.shopify.com/postscript-sms-marketing |
-| `shopify-app-price-attentive` | Free to install, no published price. The listing states charges may be billed by Attentive separately from your Shopify invoice | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-19 | https://apps.shopify.com/attentive |
-| `shopify-app-price-judgeme` | Forever Free $0, including Google rich snippets and Shop app sync; Awesome $15/mo | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-19 | https://apps.shopify.com/judgeme |
-| `shopify-app-price-loox` | Beginner free; Convert $49.99/mo including 300 orders, then $50 per additional 300; Unlimited $299.99/mo | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-19 | https://apps.shopify.com/loox |
-| `shopify-app-price-yotpo` | Free to 50 monthly orders; Starter $15/mo; Pro $119/mo, varying with order volume. The listing notes charges may be billed separately from your Shopify invoice | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-19 | https://apps.shopify.com/yotpo-social-reviews |
-| `shopify-app-price-okendo` | Reviews, by monthly orders: free to 50 on the App Store listing; $19/mo to 200; $119/mo to 1,500; $299/mo to 3,500; $499/mo to 10,000; custom above that. Loyalty, quizzes, referrals and surveys are priced separately | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-04 | https://www.okendo.io/pricing/ |
-| `shopify-app-price-recharge` | Starter $99/mo plus 1.49% and 19¢ per transaction; Plus $499/mo plus 1.34% and 19¢; Custom volume-based. The App Store listing also shows a $25/mo plan with no transaction fees for the first 50 subscribers | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-19 | https://getrecharge.com/pricing/ |
-| `shopify-app-price-bold-subscriptions` | Launch $24.99/mo plus 2%; Grow $49.99/mo plus 1%; Scale $74.99/mo plus 0.9% | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-19 | https://apps.shopify.com/bold-subscriptions |
-| `shopify-app-price-gorgias` | Starter $10/mo with $0.40 per additional ticket; Basic $60/mo; Pro $360/mo; Advanced $900/mo | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-19 | https://apps.shopify.com/helpdesk |
-| `shopify-app-price-tidio` | Free $0; Starter $24.17/mo and Growth from $49.17/mo when billed annually ($29 and from $59 billed monthly); Plus from $300/mo plus usage | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-04 | https://www.tidio.com/pricing/ |
-| `shopify-app-price-smile` | Free to 200 monthly orders; Essential $15/mo to 500; Standard $79/mo to 1,000; Growth $199/mo including 2,500, then $20 per additional 100 | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-19 | https://smile.io/pricing |
-| `shopify-app-price-pagefly` | Free $0; Builder from $24/mo; Optimize from $39/mo; Accelerate $99/mo; Power $199/mo. Builder and Optimize rise with the slots and credits you choose | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-19 | https://pagefly.io/pages/pricing |
-| `shopify-app-price-shogun` | Draft Mode $0; Build $39/mo; Grow $199/mo; Advanced $499/mo | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-19 | https://getshogun.com/pricing |
-| `shopify-app-price-vitals` | All-in-One $29.99/mo. The listing states usage fees start after roughly $1,000/mo in Vitals-attributed sales, from $10/mo, and for Visitor Recordings volume | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | 2026-10-19 | https://apps.shopify.com/vitals |
-| `shopify-third-party-payment-fee` | 2% on Basic, 1% on Grow, 0.6% on Advanced and 0.2% on Plus | US pricing page. shopify.com/pricing redirects by country, and a 19 Oct 2026 check from Pakistan showed local pricing without these rates, so this value still dates from 2 Aug 2026 | 2026-08-02 | https://www.shopify.com/pricing |
-| `webflow-starter-limits` | a webflow.io subdomain, two static pages, 1 GB bandwidth and 50 form submissions | Free Site plan; no custom domain | 2026-10-20 | https://webflow.com/pricing |
-| `webflow-starter-form-cap` | 50 lifetime form submissions | A total for the life of the site, not a monthly allowance; other Site plans are unlimited | 2026-10-20 | https://help.webflow.com/hc/en-us/articles/33961344521235-Form-submissions |
-| `microsoft-365-business-basic-price` | $7.00 per user per month | Paid yearly; a version without Teams is listed at $5.40 | 2026-10-20 | https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing |
-| `microsoft-365-business-standard-copilot-price` | $23.50 per user per month | Paid yearly; usage-based billing for some AI features; without Teams $20.30 | 2026-10-20 | https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing |
-| `microsoft-365-business-premium-copilot-price` | $32.00 per user per month | Paid yearly; usage-based billing for some AI features; without Teams $28.80 | 2026-10-20 | https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing |
-| `vercel-pro-included` | one deploying seat and $20 in monthly usage credit, with unlimited free read-only viewer seats |  | 2026-10-20 | https://vercel.com/docs/plans/pro-plan |
-| `vercel-pro-additional-seat` | $20 a month each |  | 2026-10-20 | https://vercel.com/docs/plans/pro-plan |
-| `hostinger-website-migration` | free, for an unlimited number of websites |  | 2026-10-20 | https://www.hostinger.com/website-migration |
-| `kinsta-wordpress-migration` | free and unlimited |  | 2026-10-20 | https://kinsta.com/wordpress-hosting/migration/ |
-| `squarespace-export-scope` | a WordPress-format export that leaves out some content, including album, cover, index, portfolio and store pages | Squarespace states that many features rely on its own JavaScript and CSS, so some content doesn't export | 2026-10-20 | https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content |
-| `webflow-code-export-scope` | a ZIP of pages, styles, scripts and images, without CMS, User Accounts or Ecommerce content and functionality | CMS Collections, Ecommerce Collections and User Accounts can be exported separately as CSV | 2026-10-20 | https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code |
-| `vercel-hobby-compute` | 4 CPU-hours of Active CPU, 360 GB-hours of Provisioned Memory and 1,000,000 function invocations a month |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
-| `vercel-hobby-image-optimization` | 5,000 transformations, 300,000 cache reads and 100,000 cache writes a month |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
-| `vercel-hobby-build-resources` | 2 build vCPUs, 8 GB of build memory and a 32 GB build disk |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
-| `vercel-hobby-projects` | 200 |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
-| `vercel-pro-deployments` | 6,000 |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
-| `vercel-blob-file-size` | up to 5 TB, but files above 512 MB are never cached |  | 2026-10-20 | https://vercel.com/docs/vercel-blob/usage-and-pricing |
-| `vercel-pro-credit-notification` | 75% of the monthly credit |  | 2026-10-20 | https://vercel.com/docs/plans/pro-plan |
-| `vercel-hobby-commercial-use` | Personal, non-commercial use only | All commercial use requires Pro or Enterprise | 2026-10-20 | https://vercel.com/docs/limits/fair-use-guidelines |
-| `vercel-terms-model-training` | content on Hobby or a trial Pro plan may be used for model training, with an opt-out in team settings; on paid Pro it is off by default | Terms last updated June 1, 2026 | 2026-10-20 | https://vercel.com/legal/terms |
-| `netlify-pro-price` | $20 a month with unlimited members | Starts at 3,000 credits a month | 2026-10-20 | https://www.netlify.com/pricing/ |
-| `netlify-pro-credits` | 3,000 credits a month |  | 2026-10-20 | https://www.netlify.com/pricing/ |
-| `netlify-credit-pack` | 1,500 credits for $10 | Bought as packs or by auto recharge | 2026-10-20 | https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans/ |
+| id | value | qualifier | amounts | verifiedAt | source |
+|---|---|---|---|---|---|
+| `vercel-hobby-price` | $0 | for eligible personal, non-commercial projects |  | 2026-10-20 | https://vercel.com/pricing |
+| `vercel-hobby-fast-data-transfer` | the first 100 GB a month | listed under Hobby Included Usage; Hobby can't buy more, and going over a limit pauses that feature, in most cases for 30 days |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
+| `vercel-hobby-fast-origin-transfer` | the first 10 GB a month | listed under Hobby Included Usage |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
+| `vercel-hobby-cdn-requests` | the first 1,000,000 a month | listed under Hobby Included Usage; Vercel previously called these Edge Requests |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
+| `vercel-hobby-deployments` | up to 100 a day |  |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
+| `vercel-hobby-blob-included` | 1 GB of storage, 10,000 simple operations, 2,000 advanced operations and 10 GB of Blob Data Transfer a month | Hobby can't buy more; going over removes Blob access until 30 days have passed |  | 2026-10-20 | https://vercel.com/docs/vercel-blob/usage-and-pricing |
+| `vercel-pro-price` | $20 a month | platform fee including one deploying seat and $20 a month of usage credit; added seats and usage beyond the credit are extra | monthly=20 | 2026-10-20 | https://vercel.com/docs/plans/pro-plan |
+| `vercel-pro-cdn-capacity` | 1 million CDN requests and 1 TB of data transfer a month | the lowest Flat Rate CDN capacity tier, included with Pro at no extra cost | requests=1000000 | 2026-10-20 | https://vercel.com/docs/plans/pro-plan |
+| `vercel-flat-rate-cdn-next-tier` | $20 a month for 10 million CDN requests and 50 TB of data transfer | a billing cycle over capacity moves the team up a tier at the start of the next cycle; a one-day spike doesn't | monthly=20 | 2026-10-20 | https://vercel.com/docs/pricing/flat-rate-cdn |
+| `vercel-flat-rate-cdn-ga-date` | 8 September 2026 | the changelog entry says new Pro teams have Flat Rate CDN on by default and existing teams can switch over in Billing settings |  | 2026-10-20 | https://vercel.com/changelog/flat-rate-cdn-is-now-ga-for-pro-teams |
+| `vercel-pro-spend-notification-default` | $200 per billing cycle | Vercel enables spend management notifications at this amount by default for new customers |  | 2026-10-20 | https://vercel.com/docs/plans/pro-plan |
+| `vercel-fast-data-transfer-on-demand` | $0.15 to $0.35 per GB by region | applies to Pro CDN usage billed on demand, not to usage covered by a Flat Rate CDN tier |  | 2026-10-20 | https://vercel.com/docs/pricing/regional-pricing |
+| `vercel-cdn-requests-on-demand` | $2.00 to $3.20 per million by region | applies to Pro CDN usage billed on demand, not to usage covered by a Flat Rate CDN tier |  | 2026-10-20 | https://vercel.com/docs/pricing/regional-pricing |
+| `vercel-fast-origin-transfer-on-demand` | $0.06 to $0.43 per GB by region | usage-based on Pro; Flat Rate CDN doesn't cover it |  | 2026-10-20 | https://vercel.com/docs/pricing/regional-pricing |
+| `shopify-app-price-klaviyo` | Free to 250 email contacts and 150 SMS/MMS credits; Email from $20/mo at 251 to 500 contacts; SMS from $15/mo for 1,250 credits, carrier fees included | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | emailFrom=20 | 2026-10-19 | https://apps.shopify.com/klaviyo-email-marketing |
+| `shopify-app-price-postscript` | Starter free to install with a $49/mo minimum spend, then $0.009/SMS; Growth $100/mo; Professional $500/mo, plus carrier fees | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated |  | 2026-10-19 | https://apps.shopify.com/postscript-sms-marketing |
+| `shopify-app-price-attentive` | Free to install, no published price. The listing states charges may be billed by Attentive separately from your Shopify invoice | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated |  | 2026-10-19 | https://apps.shopify.com/attentive |
+| `shopify-app-price-judgeme` | Forever Free $0, including Google rich snippets and Shop app sync; Awesome $15/mo | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | awesome=15 | 2026-10-19 | https://apps.shopify.com/judgeme |
+| `shopify-app-price-loox` | Beginner free; Convert $49.99/mo including 300 orders, then $50 per additional 300; Unlimited $299.99/mo | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated |  | 2026-10-19 | https://apps.shopify.com/loox |
+| `shopify-app-price-yotpo` | Free to 50 monthly orders; Starter $15/mo; Pro $119/mo, varying with order volume. The listing notes charges may be billed separately from your Shopify invoice | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated |  | 2026-10-19 | https://apps.shopify.com/yotpo-social-reviews |
+| `shopify-app-price-okendo` | Reviews, by monthly orders: free to 50 on the App Store listing; $19/mo to 200; $119/mo to 1,500; $299/mo to 3,500; $499/mo to 10,000; custom above that. Loyalty, quizzes, referrals and surveys are priced separately | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated |  | 2026-10-04 | https://www.okendo.io/pricing/ |
+| `shopify-app-price-recharge` | Starter $99/mo plus 1.49% and 19¢ per transaction; Plus $499/mo plus 1.34% and 19¢; Custom volume-based. The App Store listing also shows a $25/mo plan with no transaction fees for the first 50 subscribers | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | starter=99, starterPercent=1.49, starterPerTransaction=0.19 | 2026-10-19 | https://getrecharge.com/pricing/ |
+| `shopify-app-price-bold-subscriptions` | Launch $24.99/mo plus 2%; Grow $49.99/mo plus 1%; Scale $74.99/mo plus 0.9% | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated |  | 2026-10-19 | https://apps.shopify.com/bold-subscriptions |
+| `shopify-app-price-gorgias` | Starter $10/mo with 50 tickets a month included, then $0.40 per additional ticket; Basic $60/mo; Pro $360/mo; Advanced $900/mo | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | starter=10, starterTickets=50 | 2026-10-20 | https://apps.shopify.com/helpdesk |
+| `shopify-app-price-tidio` | Free $0; Starter $24.17/mo and Growth from $49.17/mo when billed annually ($29 and from $59 billed monthly); Plus from $300/mo plus usage | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated |  | 2026-10-04 | https://www.tidio.com/pricing/ |
+| `shopify-app-price-smile` | Free to 200 monthly orders; Essential $15/mo to 500; Standard $79/mo to 1,000; Growth $199/mo including 2,500, then $20 per additional 100 | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | essential=15 | 2026-10-19 | https://smile.io/pricing |
+| `shopify-app-price-pagefly` | Free $0; Builder from $24/mo; Optimize from $39/mo; Accelerate $99/mo; Power $199/mo. Builder and Optimize rise with the slots and credits you choose | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated |  | 2026-10-19 | https://pagefly.io/pages/pricing |
+| `shopify-app-price-shogun` | Draft Mode $0; Build $39/mo; Grow $199/mo; Advanced $499/mo | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated |  | 2026-10-19 | https://getshogun.com/pricing |
+| `shopify-app-price-vitals` | All-in-One $29.99/mo. The listing states usage fees start after roughly $1,000/mo in Vitals-attributed sales, from $10/mo, and for Visitor Recordings volume | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | allInOne=29.99 | 2026-10-19 | https://apps.shopify.com/vitals |
+| `shopify-third-party-payment-fee` | 2% on Basic, 1% on Grow, 0.6% on Advanced and 0.2% on Plus | US pricing page. shopify.com/pricing redirects by country, and a 19 Oct 2026 check from Pakistan showed local pricing without these rates, so this value still dates from 2 Aug 2026 | basicPercent=2 | 2026-08-02 | https://www.shopify.com/pricing |
+| `webflow-starter-limits` | a webflow.io subdomain, two static pages, 1 GB bandwidth and 50 form submissions | Free Site plan; no custom domain |  | 2026-10-20 | https://webflow.com/pricing |
+| `webflow-starter-form-cap` | 50 lifetime form submissions | A total for the life of the site, not a monthly allowance; other Site plans are unlimited |  | 2026-10-20 | https://help.webflow.com/hc/en-us/articles/33961344521235-Form-submissions |
+| `microsoft-365-business-basic-price` | $7.00 per user per month | Paid yearly; a version without Teams is listed at $5.40 | monthly=7 | 2026-10-20 | https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing |
+| `microsoft-365-business-standard-copilot-price` | $23.50 per user per month | Paid yearly; usage-based billing for some AI features; without Teams $20.30 |  | 2026-10-20 | https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing |
+| `microsoft-365-business-premium-copilot-price` | $32.00 per user per month | Paid yearly; usage-based billing for some AI features; without Teams $28.80 |  | 2026-10-20 | https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing |
+| `vercel-pro-included` | one deploying seat and $20 in monthly usage credit, with unlimited free read-only viewer seats |  |  | 2026-10-20 | https://vercel.com/docs/plans/pro-plan |
+| `vercel-pro-additional-seat` | $20 a month each |  | monthly=20 | 2026-10-20 | https://vercel.com/docs/plans/pro-plan |
+| `hostinger-website-migration` | free, for an unlimited number of websites |  |  | 2026-10-20 | https://www.hostinger.com/website-migration |
+| `kinsta-wordpress-migration` | free and unlimited |  |  | 2026-10-20 | https://kinsta.com/wordpress-hosting/migration/ |
+| `squarespace-export-scope` | a WordPress-format export that leaves out some content, including album, cover, index, portfolio and store pages | Squarespace states that many features rely on its own JavaScript and CSS, so some content doesn't export |  | 2026-10-20 | https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content |
+| `webflow-code-export-scope` | a ZIP of pages, styles, scripts and images, without CMS, User Accounts or Ecommerce content and functionality | CMS Collections, Ecommerce Collections and User Accounts can be exported separately as CSV |  | 2026-10-20 | https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code |
+| `vercel-hobby-compute` | 4 CPU-hours of Active CPU, 360 GB-hours of Provisioned Memory and 1,000,000 function invocations a month |  |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
+| `vercel-hobby-image-optimization` | 5,000 transformations, 300,000 cache reads and 100,000 cache writes a month |  |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
+| `vercel-hobby-build-resources` | 2 build vCPUs, 8 GB of build memory and a 32 GB build disk |  |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
+| `vercel-hobby-projects` | 200 |  |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
+| `vercel-pro-deployments` | 6,000 |  |  | 2026-10-20 | https://vercel.com/docs/plans/hobby |
+| `vercel-blob-file-size` | up to 5 TB, but files above 512 MB are never cached |  |  | 2026-10-20 | https://vercel.com/docs/vercel-blob/usage-and-pricing |
+| `vercel-pro-credit-notification` | 75% of the monthly credit |  |  | 2026-10-20 | https://vercel.com/docs/plans/pro-plan |
+| `vercel-hobby-commercial-use` | Personal, non-commercial use only | All commercial use requires Pro or Enterprise |  | 2026-10-20 | https://vercel.com/docs/limits/fair-use-guidelines |
+| `vercel-terms-model-training` | content on Hobby or a trial Pro plan may be used for model training, with an opt-out in team settings; on paid Pro it is off by default | Terms last updated June 1, 2026 |  | 2026-10-20 | https://vercel.com/legal/terms |
+| `netlify-pro-price` | $20 a month with unlimited members | Starts at 3,000 credits a month |  | 2026-10-20 | https://www.netlify.com/pricing/ |
+| `netlify-pro-credits` | 3,000 credits a month |  |  | 2026-10-20 | https://www.netlify.com/pricing/ |
+| `netlify-credit-pack` | 1,500 credits for $10 | Bought as packs or by auto recharge |  | 2026-10-20 | https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans/ |
+| `squarespace-product-csv-export` | physical and service products, up to 10,000, to a .csv file, without featured images, variant images, image alt text, customer reviews or additional product information |  |  | 2026-10-20 | https://support.squarespace.com/hc/en-us/articles/360000694948-Export-products-to-a-csv |

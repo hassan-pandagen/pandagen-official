@@ -10,7 +10,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import { spec, asOf } from "@/data/spec-facts";
+import { spec, asOf, amount } from "@/data/spec-facts";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-19",
-        modifiedTime: "2026-10-19T00:00:00-05:00",
+        modifiedTime: "2026-10-20T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-app-costs-real-monthly-bill")],
@@ -93,7 +93,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-19",
-            dateModified: "2026-10-19T00:00:00-05:00",
+            dateModified: "2026-10-20T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -139,7 +139,7 @@ const articleSchema = {
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             datePublished: "2026-03-19",
-            dateModified: "2026-10-19T00:00:00-05:00",
+            dateModified: "2026-10-20T00:00:00-05:00",
             inLanguage: "en-US",
         },
         {
@@ -157,18 +157,30 @@ const articleSchema = {
 const sourceLinkClass =
     "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
 
-// Worked example (illustrative store, not a customer). Prices are the published ones in
-// the matching spec-facts.json entries; keep these in step with them.
-const RECHARGE_FIXED = 99;
-const RECHARGE_VARIABLE = 3000 * 0.0149 + 90 * 0.19;
+// Worked example (illustrative store, not a customer). The store's numbers are invented and
+// live here; every price comes from the "amounts" of its spec-facts.json entry, so a price
+// change there moves the totals too.
+const STORE = { sales: 12000, renewals: 3000, renewalOrders: 90 };
+const RECHARGE = "shopify-app-price-recharge";
+const RECHARGE_FIXED = amount(RECHARGE, "starter");
+const RECHARGE_PERCENT_PART = STORE.renewals * amount(RECHARGE, "starterPercent") / 100;
+const RECHARGE_PER_ORDER_PART = STORE.renewalOrders * amount(RECHARGE, "starterPerTransaction");
+const RECHARGE_VARIABLE = RECHARGE_PERCENT_PART + RECHARGE_PER_ORDER_PART;
 const RECHARGE_TOTAL = RECHARGE_FIXED + RECHARGE_VARIABLE;
+const GORGIAS_TICKETS = amount("shopify-app-price-gorgias", "starterTickets");
+const THIRD_PARTY_FEE_BASIC = amount("shopify-third-party-payment-fee", "basicPercent");
+const money = (n: number) => `$${n.toLocaleString("en-US", { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 })}`;
 const APP_BILL_EXAMPLE = [
-    { app: "Klaviyo Email", how: "Email plan for 251 to 500 contacts; the store has 450", monthly: 20 },
-    { app: "Judge.me Awesome", how: "Flat monthly plan", monthly: 15 },
-    { app: "Smile Essential", how: "Loyalty plan for up to 500 monthly orders; the store has 300", monthly: 15 },
-    { app: "Gorgias Starter", how: "Flat fee, assuming tickets stay within the plan's allowance", monthly: 10 },
-    { app: "Vitals All-in-One", how: "Flat fee, assuming Vitals-attributed sales stay under the usage threshold", monthly: 29.99 },
-    { app: "Recharge Starter", how: "$99 plus 1.49% of $3,000 in renewals ($44.70) plus 19¢ on 90 renewals ($17.10)", monthly: RECHARGE_TOTAL },
+    { app: "Klaviyo Email", how: "Email plan for 251 to 500 contacts; the store has 450", monthly: amount("shopify-app-price-klaviyo", "emailFrom") },
+    { app: "Judge.me Awesome", how: "Flat monthly plan", monthly: amount("shopify-app-price-judgeme", "awesome") },
+    { app: "Smile Essential", how: "Loyalty plan for up to 500 monthly orders; the store has 300", monthly: amount("shopify-app-price-smile", "essential") },
+    { app: "Gorgias Starter", how: `Flat fee with ${GORGIAS_TICKETS} tickets a month included; assumes the store stays under that`, monthly: amount("shopify-app-price-gorgias", "starter") },
+    { app: "Vitals All-in-One", how: "Flat fee, assuming Vitals-attributed sales stay under the usage threshold", monthly: amount("shopify-app-price-vitals", "allInOne") },
+    {
+        app: "Recharge Starter",
+        how: `${money(RECHARGE_FIXED)} plus ${amount(RECHARGE, "starterPercent")}% of ${money(STORE.renewals)} in renewals (${money(RECHARGE_PERCENT_PART)}) plus ${Math.round(amount(RECHARGE, "starterPerTransaction") * 100)}¢ on ${STORE.renewalOrders} renewals (${money(RECHARGE_PER_ORDER_PART)})`,
+        monthly: RECHARGE_TOTAL,
+    },
 ];
 const APP_BILL_MONTHLY = APP_BILL_EXAMPLE.reduce((sum, row) => sum + row.monthly, 0);
 const usd = (n: number) => `$${n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
@@ -434,11 +446,12 @@ export default function ShopifyAppCostsPage() {
                     {/* 19 Oct 2026: an illustrative bill built from the published prices above, so a
                         reader can see how fixed fees, percentages and per-transaction charges add up.
                         The inputs are invented and labelled as such; the prices are the table's. If a
-                        price in the table changes, update APP_BILL_EXAMPLE to match. */}
+                        price changes, update its value and its "amounts" together; spec_freshness fails
+                        if they disagree. */}
                     <BlogHeader id="worked-example">A worked example: one small store&apos;s monthly app bill</BlogHeader>
                     <InsightBox variant="info" label="Illustrative, not a real store">
-                        An invented store doing $12,000 a month in sales across 300 orders, with 450 email
-                        subscribers and $3,000 of that in subscription renewals across 90 orders. It uses
+                        An invented store doing {money(STORE.sales)} a month in sales across 300 orders, with 450 email
+                        subscribers and {money(STORE.renewals)} of that in subscription renewals across {STORE.renewalOrders} orders. It uses
                         Shopify Payments, stays inside each plan&apos;s included allowance, and stays under the
                         Vitals usage threshold. Prices are the published ones in the table above, checked{" "}
                         {asOf("shopify-app-price-recharge")}.
@@ -458,11 +471,12 @@ export default function ShopifyAppCostsPage() {
                     </div>
                     <BlogText>
                         Three things stand out. First, the subscription app is the largest line, and much of it is
-                        the percentage: {usd(RECHARGE_VARIABLE)} of Recharge&apos;s {usd(RECHARGE_TOTAL)} comes from the 1.49% and
-                        19&cent; per renewal, so that line grows every time subscription sales do while the others
-                        stay flat. Second, this store pays nothing extra to Shopify because it uses Shopify
-                        Payments. Run the same store on a third-party gateway on the Basic plan and Shopify adds 2%
-                        of $12,000, another {usd(12000 * 0.02)} a month, before the gateway&apos;s own fee. Third, check
+                        the percentage: {usd(RECHARGE_VARIABLE)} of Recharge&apos;s {usd(RECHARGE_TOTAL)} comes from the{" "}
+                        {amount(RECHARGE, "starterPercent")}% and {Math.round(amount(RECHARGE, "starterPerTransaction") * 100)}&cent; per renewal, so that line grows every time subscription sales do while the others
+                        stay flat. Second, because this store uses Shopify Payments, Shopify charges it no additional
+                        third-party transaction fee. Card processing fees still apply either way. Run the same store on a
+                        third-party gateway on the Basic plan and Shopify adds {THIRD_PARTY_FEE_BASIC}% of{" "}
+                        {money(STORE.sales)}, another {usd(STORE.sales * THIRD_PARTY_FEE_BASIC / 100)} a month, before the gateway&apos;s own fee. Third, check
                         for overlap: if a theme feature or another app already does a job one of these apps is paid
                         for, you are paying for it twice.
                     </BlogText>

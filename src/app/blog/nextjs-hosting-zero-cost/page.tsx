@@ -9,7 +9,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import { asOf, spec } from "@/data/spec-facts";
+import { asOf, spec, amount } from "@/data/spec-facts";
 import type { Metadata } from "next";
 
 const hostingFAQs = blogPosts.find(p => p.id === 'nextjs-hosting-zero-cost')?.faqs ?? [];
@@ -130,9 +130,15 @@ const articleSchema = {
     ]
 };
 
-// Worked monthly bill (illustrative, not a client). Prices mirror spec-facts.json:
-// vercel-pro-price, vercel-pro-additional-seat and vercel-flat-rate-cdn-next-tier.
-const BILL = { views: 25_000, pageMb: 1.5, requestsPerView: 30, platform: 20, extraSeats: 2, seatPrice: 20, nextTier: 20 };
+// Worked monthly bill (illustrative, not a client). Traffic and team size are invented;
+// prices and the included requests come from the spec-facts.json "amounts".
+const BILL = {
+    views: 25_000, pageMb: 1.5, requestsPerView: 30, extraSeats: 2,
+    platform: amount("vercel-pro-price", "monthly"),
+    seatPrice: amount("vercel-pro-additional-seat", "monthly"),
+    nextTier: amount("vercel-flat-rate-cdn-next-tier", "monthly"),
+    includedRequests: amount("vercel-pro-cdn-capacity", "requests"),
+};
 
 export default function NextjsHostingZeroCostPage() {
     return (
@@ -582,9 +588,12 @@ export default function NextjsHostingZeroCostPage() {
                         <BlogHeader id="worked-bill">A worked example: a three-person team&apos;s monthly Vercel bill</BlogHeader>
                         <InsightBox variant="info" label="Illustrative, not a real client">
                             An invented business site on Vercel Pro: three people who deploy, {BILL.views.toLocaleString("en-US")} page
-                            views a month, pages that weigh about {BILL.pageMb} MB, and about {BILL.requestsPerView} files
-                            (HTML, scripts, styles, images, fonts) fetched per page view. The only server code is a
-                            contact form, and we assume its function usage stays inside the {spec("vercel-pro-price").value} usage credit.
+                            views a month and pages that weigh about {BILL.pageMb} MB. We assume {BILL.requestsPerView} files
+                            (HTML, scripts, styles, images, fonts) are requested from Vercel per page view; that&apos;s a
+                            round number for the example, not a measured average. Files a visitor&apos;s browser already
+                            has cached aren&apos;t requested again and don&apos;t count, but files served from Vercel&apos;s own
+                            cache do. The only server code is a contact form, and we assume its function usage stays
+                            inside the {spec("vercel-pro-price").value} usage credit.
                         </InsightBox>
                         <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full min-w-[620px] border-collapse text-left text-sm">
@@ -601,11 +610,11 @@ export default function NextjsHostingZeroCostPage() {
                         </div>
                         <BlogText>
                             The seats cost more than the traffic here. Requests are the number to watch next: at about{" "}
-                            {BILL.requestsPerView} files a page, the included 1,000,000 requests cover roughly{" "}
-                            {Math.floor(1_000_000 / BILL.requestsPerView).toLocaleString("en-US")} page views, long before the 1 TB of data transfer runs
+                            {BILL.requestsPerView} files a page, the included {BILL.includedRequests.toLocaleString("en-US")} requests cover roughly{" "}
+                            {Math.floor(BILL.includedRequests / BILL.requestsPerView).toLocaleString("en-US")} page views, long before the 1 TB of data transfer runs
                             out. If this site doubled its traffic and stayed over that for a full billing cycle, Vercel
                             would move it to the next Flat Rate CDN tier, {spec("vercel-flat-rate-cdn-next-tier").value},
-                            and the bill would become ${BILL.platform + BILL.extraSeats * BILL.seatPrice + BILL.nextTier}. The same team on Netlify Pro would
+                            at the start of the following cycle. From then the bill would be ${BILL.platform + BILL.extraSeats * BILL.seatPrice + BILL.nextTier} a month. The same team on Netlify Pro would
                             pay one $20 fee for all three people, and the question there becomes how many of its{" "}
                             {spec("netlify-pro-credits").value} that traffic uses.
                         </BlogText>

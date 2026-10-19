@@ -67,7 +67,10 @@
       "qualifier": "platform fee including one deploying seat and $20 a month of usage credit; added seats and usage beyond the credit are extra",
       "verifiedAt": "2026-10-20",
       "reviewDays": 30,
-      "source": "https://vercel.com/docs/plans/pro-plan"
+      "source": "https://vercel.com/docs/plans/pro-plan",
+      "amounts": {
+        "monthly": 20
+      }
     },
     "vercel-pro-cdn-capacity": {
       "vendor": "Vercel",
@@ -77,7 +80,10 @@
       "qualifier": "the lowest Flat Rate CDN capacity tier, included with Pro at no extra cost",
       "verifiedAt": "2026-10-20",
       "reviewDays": 30,
-      "source": "https://vercel.com/docs/plans/pro-plan"
+      "source": "https://vercel.com/docs/plans/pro-plan",
+      "amounts": {
+        "requests": 1000000
+      }
     },
     "vercel-flat-rate-cdn-next-tier": {
       "vendor": "Vercel",
@@ -87,7 +93,10 @@
       "qualifier": "a billing cycle over capacity moves the team up a tier at the start of the next cycle; a one-day spike doesn't",
       "verifiedAt": "2026-10-20",
       "reviewDays": 30,
-      "source": "https://vercel.com/docs/pricing/flat-rate-cdn"
+      "source": "https://vercel.com/docs/pricing/flat-rate-cdn",
+      "amounts": {
+        "monthly": 20
+      }
     },
     "vercel-flat-rate-cdn-ga-date": {
       "vendor": "Vercel",
@@ -961,7 +970,10 @@
       "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
       "verifiedAt": "2026-10-19",
       "reviewDays": 60,
-      "source": "https://apps.shopify.com/klaviyo-email-marketing"
+      "source": "https://apps.shopify.com/klaviyo-email-marketing",
+      "amounts": {
+        "emailFrom": 20
+      }
     },
     "shopify-app-price-postscript": {
       "vendor": "Postscript",
@@ -988,7 +1000,10 @@
       "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
       "verifiedAt": "2026-10-19",
       "reviewDays": 60,
-      "source": "https://apps.shopify.com/judgeme"
+      "source": "https://apps.shopify.com/judgeme",
+      "amounts": {
+        "awesome": 15
+      }
     },
     "shopify-app-price-loox": {
       "vendor": "Loox",
@@ -1024,7 +1039,12 @@
       "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
       "verifiedAt": "2026-10-19",
       "reviewDays": 60,
-      "source": "https://getrecharge.com/pricing/"
+      "source": "https://getrecharge.com/pricing/",
+      "amounts": {
+        "starter": 99,
+        "starterPercent": 1.49,
+        "starterPerTransaction": 0.19
+      }
     },
     "shopify-app-price-bold-subscriptions": {
       "vendor": "Bold Subscriptions",
@@ -1038,11 +1058,15 @@
     "shopify-app-price-gorgias": {
       "vendor": "Gorgias",
       "label": "Published price on Shopify",
-      "value": "Starter $10/mo with $0.40 per additional ticket; Basic $60/mo; Pro $360/mo; Advanced $900/mo",
+      "value": "Starter $10/mo with 50 tickets a month included, then $0.40 per additional ticket; Basic $60/mo; Pro $360/mo; Advanced $900/mo",
       "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
-      "verifiedAt": "2026-10-19",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 60,
-      "source": "https://apps.shopify.com/helpdesk"
+      "source": "https://apps.shopify.com/helpdesk",
+      "amounts": {
+        "starter": 10,
+        "starterTickets": 50
+      }
     },
     "shopify-app-price-tidio": {
       "vendor": "Tidio",
@@ -1060,7 +1084,10 @@
       "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
       "verifiedAt": "2026-10-19",
       "reviewDays": 60,
-      "source": "https://smile.io/pricing"
+      "source": "https://smile.io/pricing",
+      "amounts": {
+        "essential": 15
+      }
     },
     "shopify-app-price-pagefly": {
       "vendor": "PageFly",
@@ -1087,7 +1114,10 @@
       "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
       "verifiedAt": "2026-10-19",
       "reviewDays": 60,
-      "source": "https://apps.shopify.com/vitals"
+      "source": "https://apps.shopify.com/vitals",
+      "amounts": {
+        "allInOne": 29.99
+      }
     },
     "shopify-third-party-payment-fee": {
       "vendor": "Shopify",
@@ -1096,7 +1126,10 @@
       "qualifier": "US pricing page. shopify.com/pricing redirects by country, and a 19 Oct 2026 check from Pakistan showed local pricing without these rates, so this value still dates from 2 Aug 2026",
       "verifiedAt": "2026-08-02",
       "reviewDays": 60,
-      "source": "https://www.shopify.com/pricing"
+      "source": "https://www.shopify.com/pricing",
+      "amounts": {
+        "basicPercent": 2
+      }
     },
     "webflow-starter-limits": {
       "vendor": "Webflow",
@@ -1124,7 +1157,10 @@
       "qualifier": "Paid yearly; a version without Teams is listed at $5.40",
       "verifiedAt": "2026-10-20",
       "reviewDays": 60,
-      "source": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing"
+      "source": "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing",
+      "amounts": {
+        "monthly": 7
+      }
     },
     "microsoft-365-business-standard-copilot-price": {
       "vendor": "Microsoft",
@@ -1162,7 +1198,10 @@
       "value": "$20 a month each",
       "verifiedAt": "2026-10-20",
       "reviewDays": 30,
-      "source": "https://vercel.com/docs/plans/pro-plan"
+      "source": "https://vercel.com/docs/plans/pro-plan",
+      "amounts": {
+        "monthly": 20
+      }
     },
     "hostinger-website-migration": {
       "vendor": "Hostinger",
@@ -1307,6 +1346,14 @@
       "verifiedAt": "2026-10-20",
       "reviewDays": 60,
       "source": "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans/"
+    },
+    "squarespace-product-csv-export": {
+      "vendor": "Squarespace",
+      "label": "Product export",
+      "value": "physical and service products, up to 10,000, to a .csv file, without featured images, variant images, image alt text, customer reviews or additional product information",
+      "verifiedAt": "2026-10-20",
+      "reviewDays": 180,
+      "source": "https://support.squarespace.com/hc/en-us/articles/360000694948-Export-products-to-a-csv"
     }
   }
 }

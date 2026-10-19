@@ -56,6 +56,11 @@ export interface SpecFact {
     reviewDays?: number;
     /** The vendor URL it was read from. */
     source: string;
+    /**
+     * Numbers from the value that a worked example calculates with, e.g. { "starter": 99 }.
+     * scripts/spec_freshness.py fails if one stops appearing in the value.
+     */
+    amounts?: Record<string, number>;
 }
 
 const SPECS = raw.specs as unknown as Record<string, SpecFact>;
@@ -69,6 +74,15 @@ export function spec(id: string): SpecFact {
         );
     }
     return found;
+}
+
+/** A number a worked example calculates with, read from the same entry the reader sees. */
+export function amount(id: string, key: string): number {
+    const n = spec(id).amounts?.[key];
+    if (typeof n !== 'number') {
+        throw new Error(`Spec fact "${id}" has no amount "${key}". Add it to "amounts" in spec-facts.json.`);
+    }
+    return n;
 }
 
 const MONTHS = [

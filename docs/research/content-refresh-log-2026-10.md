@@ -156,3 +156,22 @@ and its "not legible" note was removed.
 **Left as written:** "a five-developer team pays $20 against $100" (arithmetic from the
 verified prices), the "From $720 base" three-year row ($20 x 36), and the 100 GB sizing
 paragraph (arithmetic from the verified allowance).
+
+## 20 Oct 2026: fixes after the outside review
+
+Full detail in `content-refresh-audit-2026-10-20.md`, "Round 2". In short:
+
+- Worked-example totals now calculate from registry `amounts`; `spec_freshness.py` fails if
+  an amount stops appearing in its value.
+- Squarespace example: product records can move by .csv (new
+  `squarespace-product-csv-export`); store scope depends on checkout, shipping and tax.
+- Vercel example: 30 requests a page labelled as an assumption; browser-cache note; $80
+  from the following cycle.
+- Shopify example: "no additional third-party transaction fee", card fees still apply;
+  Gorgias's 50 included tickets added (re-dated 20 Oct).
+- Migration article: "do not hire us" replaced, per the owner, with "check the host's
+  included move first", then our separately quoted host-move service.
+- Microsoft "with Copilot" note added to `saas-price-increases-2026-tracker` and
+  `saas-software-pricing-audit-2026`, per the owner. Both re-dated to 2026-10-20, as is the
+  Shopify article.
+- Shopify third-party fee: still 2 Aug 2026; awaiting the owner's screenshot.
