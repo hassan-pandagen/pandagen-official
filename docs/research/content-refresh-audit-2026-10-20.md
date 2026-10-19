@@ -327,11 +327,34 @@ fields each). `npm run check`, type check, stamp ratchet (127, unchanged), `chec
 and `spec_freshness.py` pass; the site built; every changed section was read back on the
 built site, and none overflow at 390px.
 
+## Round 3: fixes after the second review (20 Oct 2026)
+
+1. **The amount check matched substrings.** The reviewer showed that a stored 20 passed
+   against "$200" and against "$25 platform fee with $20 usage credit". Fixed by removing
+   the matching altogether: a registry value now shows its numbers through placeholders,
+   for example `Starter {starter:$}/mo plus {starterPercent:%} and {starterPerTransaction:¢}`,
+   and `spec()` in `src/data/spec-facts.ts` fills them from `amounts`. The page text and the
+   worked-example sums now read the same stored number. `spec_freshness.py` fails if a
+   placeholder has no amount, uses an unknown format, if an amount is never shown, or if a
+   stray brace is left. Both of the reviewer's cases now fail the check. The 12 converted
+   values were each verified to render to exactly their previous text, and a scan of all
+   162 built pages found no unfilled placeholder.
+2. **Microsoft wording.** Both SaaS articles now say Microsoft's "US comparison page ...
+   lists" the "with Copilot" plans, instead of "sells ... only".
+3. **Vercel wording.** Now: "Files served entirely from the visitor's browser cache, without
+   a network request, don't count. Files served from Vercel's own cache do, and so do the
+   requests a browser makes to check whether a cached file is still current."
+4. **Shopify fee.** The reviewer located the rates in the plan comparison table
+   (Accepting payments, Third-party transaction fees), not the FAQ. From our connection the
+   page now shows US dollar plan prices, but that table row still did not appear after
+   opening the comparison sections. The fee stays dated 2 Aug 2026 until the owner sends a
+   screenshot of that row.
+
 ## Open items
 
 1. **Shopify third-party payment fee:** still dated 2 Aug 2026. The reviewer reported reading
    2% / 1% / 0.6% / 0.2% on 20 Oct, but we couldn't confirm it ourselves (see round 2), so
-   the owner is checking it by screenshot. The build fails on 30 Nov 2026 if it stays.
+   the owner is checking it by screenshot of the plan comparison table's "Third-party transaction fees" row. The build fails on 30 Nov 2026 if it stays.
 2. Okendo and Tidio monthly prices: retry with a browser that can render their pricing.
 3. The Microsoft FAQ answer in `blog.ts` ("Is Microsoft 365 going up in price in 2026?")
    still gives only the July change list. It is accurate as history; not changed in round 2.
@@ -344,6 +367,8 @@ built site, and none overflow at 390px.
 4. Are the "could not verify" items handled correctly (old date kept, not hidden)?
 
 ## Every fact touched in this batch (generated from the registry)
+
+Values are shown as a reader sees them (placeholders filled in).
 
 | id | value | qualifier | amounts | verifiedAt | source |
 |---|---|---|---|---|---|

@@ -57,13 +57,41 @@ export interface SpecFact {
     /** The vendor URL it was read from. */
     source: string;
     /**
-     * Numbers from the value that a worked example calculates with, e.g. { "starter": 99 }.
-     * scripts/spec_freshness.py fails if one stops appearing in the value.
+     * Numbers a worked example calculates with, e.g. { "starter": 99 }. The value shows each
+     * one through a placeholder, "{starter:$}/mo", so the page and the sum read the same
+     * number. Formats: $ ($20, $29.99), $.2 ($7.00), % (1.49%), ¢ (19¢), million (1 million),
+     * none (1,000,000). scripts/spec_freshness.py fails on an unused amount or a bad placeholder.
      */
     amounts?: Record<string, number>;
 }
 
-const SPECS = raw.specs as unknown as Record<string, SpecFact>;
+const PLACEHOLDER = /\{(\w+)(?::([^}]+))?\}/g;
+
+function formatAmount(n: number, format: string | undefined): string {
+    switch (format) {
+        case undefined: return n.toLocaleString('en-US');
+        case '$': return Number.isInteger(n) ? `$${n.toLocaleString('en-US')}` : `$${n.toFixed(2)}`;
+        case '$.2': return `$${n.toFixed(2)}`;
+        case '%': return `${n}%`;
+        case '¢': return `${Math.round(n * 100)}¢`;
+        case 'million': return `${n / 1_000_000} million`;
+        default: throw new Error(`Unknown amount format "${format}" in spec-facts.json.`);
+    }
+}
+
+function render(id: string, fact: SpecFact): SpecFact {
+    if (!fact.amounts) return fact;
+    const value = fact.value.replace(PLACEHOLDER, (_, key: string, format?: string) => {
+        const n = fact.amounts?.[key];
+        if (typeof n !== 'number') throw new Error(`Spec fact "${id}" shows {${key}} but has no amount "${key}".`);
+        return formatAmount(n, format);
+    });
+    return { ...fact, value };
+}
+
+const SPECS: Record<string, SpecFact> = Object.fromEntries(
+    Object.entries(raw.specs as unknown as Record<string, SpecFact>).map(([id, fact]) => [id, render(id, fact)]),
+);
 
 export function spec(id: string): SpecFact {
     const found = SPECS[id];

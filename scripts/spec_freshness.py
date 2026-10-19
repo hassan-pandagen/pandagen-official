@@ -103,6 +103,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import pathlib
+import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -135,30 +136,57 @@ def review_days(fact_id: str, fact: dict, default: int) -> tuple[int, str | None
     return raw, None
 
 
-def amount_spellings(n: float) -> set[str]:
-    """The ways a number can be written in a value: $20, $20.00, $29.99, 1.49%, 19¢,
-    1,000,000, 1 million."""
-    out = {f"${n:,.2f}", f"{n:g}%", f"{n:,g}"}
-    if n == int(n):
-        out.add(f"${int(n):,}")
-        if n >= 1_000_000 and n % 1_000_000 == 0:
-            out.add(f"{int(n // 1_000_000)} million")
-    if 0 < n < 1:
-        out.add(f"{round(n * 100)}¢")
-    return out
+# A value shows its "amounts" through placeholders such as "{starter:$}/mo", which
+# src/data/spec-facts.ts fills in. The page and the worked example then read the same
+# number, so there is nothing to keep in step. Formats must match formatAmount() there.
+PLACEHOLDER = re.compile(r"\{(\w+)(?::([^}]+))?\}")
+FORMATS = {None, "$", "$.2", "%", "¢", "million"}
+
+
+def format_amount(n: float, fmt: str | None) -> str:
+    if fmt is None:
+        return f"{n:,g}"
+    if fmt == "$":
+        return f"${int(n):,}" if n == int(n) else f"${n:,.2f}"
+    if fmt == "$.2":
+        return f"${n:,.2f}"
+    if fmt == "%":
+        return f"{n:g}%"
+    if fmt == "¢":
+        return f"{round(n * 100)}¢"
+    return f"{n / 1_000_000:g} million"
+
+
+def render(fact: dict) -> str:
+    """The value as a reader sees it, with placeholders filled from "amounts"."""
+    amounts = fact.get("amounts") or {}
+    return PLACEHOLDER.sub(
+        lambda m: format_amount(amounts[m.group(1)], m.group(2)) if m.group(1) in amounts else m.group(0),
+        fact.get("value", ""))
 
 
 def amount_mismatches(fact_id: str, fact: dict) -> list[str]:
-    """Each number in "amounts" feeds a calculation on a page, so it must still appear
-    in the value a reader sees. Change the value and forget the amount, and this fails
-    instead of a worked example quietly adding up the old price."""
+    """Every placeholder needs a numeric amount and a known format, every amount must be
+    shown by a placeholder, and no stray braces may reach a reader."""
     errors = []
-    for key, n in (fact.get("amounts") or {}).items():
+    amounts = fact.get("amounts") or {}
+    value = fact.get("value", "")
+    used = set()
+    for m in PLACEHOLDER.finditer(value):
+        key, fmt = m.group(1), m.group(2)
+        used.add(key)
+        if key not in amounts:
+            errors.append(f'"{fact_id}" shows {m.group(0)} but has no amount "{key}".')
+        if fmt not in FORMATS:
+            errors.append(f'"{fact_id}" uses unknown format "{fmt}" in {m.group(0)}.')
+    for key, n in amounts.items():
         if isinstance(n, bool) or not isinstance(n, (int, float)):
             errors.append(f'"{fact_id}" amount "{key}" is {n!r}; it must be a number.')
-        elif not any(s in fact.get("value", "") for s in amount_spellings(float(n))):
-            errors.append(f'"{fact_id}" amount "{key}" is {n}, but the value doesn\'t show that '
-                          f'number. Update the amount and the value together.')
+        elif key not in used:
+            errors.append(f'"{fact_id}" amount "{key}" is never shown in the value. Show it with '
+                          f'{{{key}:$}} (or another format) instead of typing the number.')
+    if "{" in PLACEHOLDER.sub("", value) or "}" in PLACEHOLDER.sub("", value):
+        errors.append(f'"{fact_id}" has a brace that isn\'t a valid placeholder.')
     return errors
 
 
@@ -218,8 +246,8 @@ def main() -> int:
                 entry = {
                     "id": fact_id, "kind": kind, "age": age,
                     "warnDays": warn_days, "failDays": fail_days,
-                    "value": s["value"], "source": s["source"],
-                    "fix": f'"{describe(kind, s)}" = {s["value"]}, last verified '
+                    "value": render(s), "source": s["source"],
+                    "fix": f'"{describe(kind, s)}" = {render(s)}, last verified '
                            f'{s["verifiedAt"]} ({age} days ago; this entry warns at '
                            f'{warn_days}d and fails at {fail_days}d). Re-read {s["source"]}, '
                            f'then update BOTH value and verifiedAt.',

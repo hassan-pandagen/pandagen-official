@@ -590,9 +590,9 @@ export default function NextjsHostingZeroCostPage() {
                             An invented business site on Vercel Pro: three people who deploy, {BILL.views.toLocaleString("en-US")} page
                             views a month and pages that weigh about {BILL.pageMb} MB. We assume {BILL.requestsPerView} files
                             (HTML, scripts, styles, images, fonts) are requested from Vercel per page view; that&apos;s a
-                            round number for the example, not a measured average. Files a visitor&apos;s browser already
-                            has cached aren&apos;t requested again and don&apos;t count, but files served from Vercel&apos;s own
-                            cache do. The only server code is a contact form, and we assume its function usage stays
+                            round number for the example, not a measured average. Files served entirely from the visitor&apos;s browser cache, without a network request, don&apos;t
+                            count. Files served from Vercel&apos;s own cache do, and so do the requests a browser makes to
+                            check whether a cached file is still current. The only server code is a contact form, and we assume its function usage stays
                             inside the {spec("vercel-pro-price").value} usage credit.
                         </InsightBox>
                         <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">

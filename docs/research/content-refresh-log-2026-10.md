@@ -175,3 +175,12 @@ Full detail in `content-refresh-audit-2026-10-20.md`, "Round 2". In short:
   `saas-software-pricing-audit-2026`, per the owner. Both re-dated to 2026-10-20, as is the
   Shopify article.
 - Shopify third-party fee: still 2 Aug 2026; awaiting the owner's screenshot.
+
+## 20 Oct 2026: fixes after the second review
+
+- Registry values now show their `amounts` through placeholders (`{starter:$}`), filled
+  by `spec()`, so a displayed price and a calculated total can't disagree. The old
+  substring check, which the reviewer showed passing "$200" for 20, is gone.
+- Microsoft note: "US comparison page lists", not "sells only".
+- Vercel: browser-cache wording made precise (no network request vs revalidation).
+- Shopify fee: still 2 Aug 2026; the owner will screenshot the comparison table row.

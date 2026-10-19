@@ -257,7 +257,7 @@ export default function SaasPriceIncreases2026TrackerPage() {
                         result.
                     </BlogText>
                     <BlogText>
-                        Microsoft&apos;s current US plans page, read in {asOf("microsoft-365-business-basic-price")}, shows something different from that change list. It lists Business Basic at {spec("microsoft-365-business-basic-price").value}, and sells Business Standard and Business Premium only as &ldquo;with Copilot&rdquo; plans, at {spec("microsoft-365-business-standard-copilot-price").value} and {spec("microsoft-365-business-premium-copilot-price").value}, all paid yearly. Those bundles include Copilot, so $14 to {spec("microsoft-365-business-standard-copilot-price").value.split(" ")[0]} isn&apos;t the same plan getting dearer. Compare your renewal quote with the plan you actually hold.
+                        Microsoft&apos;s current US comparison page, read in {asOf("microsoft-365-business-basic-price")}, shows something different from that change list. It lists Business Basic at {spec("microsoft-365-business-basic-price").value}, and lists Business Standard and Business Premium as &ldquo;with Copilot&rdquo; plans, at {spec("microsoft-365-business-standard-copilot-price").value} and {spec("microsoft-365-business-premium-copilot-price").value}, all paid yearly. Those bundles include Copilot, so $14 to {spec("microsoft-365-business-standard-copilot-price").value.split(" ")[0]} isn&apos;t the same plan getting dearer. Compare your renewal quote with the plan you actually hold.
                     </BlogText>
                     <BlogText>
                         The renewal condition is the part that matters most once the date has passed. Because existing
