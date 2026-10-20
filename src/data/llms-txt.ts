@@ -102,7 +102,7 @@ const PRIMARY_PAGES = `## Primary pages
 const PEOPLE_AND_POLICIES = `## People
 
 - [Hassan Jamal, Co-founder and Lead Engineer](${BASE}/about/hassan). Public code: https://github.com/hassan-pandagen
-- Press: Hassan Jamal was quoted in Woman's World on 29 May 2026, in an article about remote AI-training work: https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay . This is the company's only press placement to date, and the article's subject is unrelated to the migration and engineering work PandaCodeGen sells.
+- Press: CIO Grid quoted Hassan Jamal on 20 October 2026, in an expert Q&A on how IT leaders decide when to modernize aging systems, with the Panda Patches rebuild as his example (Panda Patches is founder-affiliated): https://ciogrid.com/qa/how-it-leaders-decide-when-to-modernize-aging-systems/ . Woman's World quoted him on 29 May 2026, in an article about remote AI-training work, a subject unrelated to the work PandaCodeGen sells: https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay .
 - [Imran Raza Ladhani, Co-founder and Head of Marketing](${BASE}/about/imran)
 
 ## Policies

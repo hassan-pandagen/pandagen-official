@@ -210,6 +210,18 @@ export default function ProofSection() {
             </p>
             <p className="mt-3 text-[17px] leading-[1.6]" style={{ color: T.body }}>
               <a
+                href="https://ciogrid.com/qa/how-it-leaders-decide-when-to-modernize-aging-systems/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "1.35rem" }}
+              >
+                CIO Grid
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>{" "}
+              quoted co-founder Hassan Jamal on when to modernize aging systems.
+            </p>
+            <p className="mt-3 text-[17px] leading-[1.6]" style={{ color: T.body }}>
+              <a
                 href="https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay"
                 target="_blank"
                 rel="noopener noreferrer"

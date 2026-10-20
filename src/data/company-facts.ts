@@ -243,7 +243,10 @@ export const FOUNDING_DATE = '2026-08-12';
 
 /** Governance, disclosure and how claims are handled. */
 export const GOVERNANCE: readonly Fact[] = [
-    { label: 'Press', value: "Co-founder and Lead Engineer Hassan Jamal was quoted in Woman's World on 29 May 2026, in an article about remote AI-training work. It is the company's only press placement to date." },
+    // 20 Oct 2026: CIO Grid added (read the page: published 2026-10-20, expert Q&A, Hassan's entry
+    // "Consolidate Operations Onto One Platform", followed link to the homepage, not sponsored). We
+    // describe what he was quoted on; the outcome figures in his quote are not restated as our claims.
+    { label: 'Press', value: "Co-founder and Lead Engineer Hassan Jamal has two press placements. CIO Grid quoted him on 20 October 2026, in an expert Q&A on how IT leaders decide when to modernize aging systems, using the Panda Patches rebuild as his example (Panda Patches is owned by co-founder Imran Raza Ladhani). Woman's World quoted him on 29 May 2026, in an article about remote AI-training work." },
     { label: 'Evidence policy', value: 'Project results are published with the relationship, date, measurement method and stated limitations. Founder-affiliated projects are labelled as such and are not presented as independent client proof.' },
     // ADDED 19 Aug 2026 after a vendor emailed asking what our placement fees are
     // for /blog/which-website-builders-can-go-headless. Stating the policy once,
