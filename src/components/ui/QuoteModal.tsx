@@ -9,6 +9,7 @@ import { trackFBEvent } from "@/components/FacebookPixel";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
 import { takeQuotePrefill } from "@/lib/quotePrefill";
+import { PHONE } from "@/data/company-facts";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -22,7 +23,7 @@ async function responseMessage(response: Response): Promise<string> {
   } catch {
     // A generic message is safer when an upstream proxy returns non-JSON.
   }
-  return "We could not send your request. Please email info@pandacodegen.com.";
+  return `We could not send your request. Please email info@pandacodegen.com or call ${PHONE.display}.`;
 }
 
 export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {

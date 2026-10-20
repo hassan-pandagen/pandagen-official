@@ -10,6 +10,7 @@ import type { Dictionary } from "./types";
 import { reviewQuote } from "@/data/reviews";
 
 // Owner-confirmed hosting terms, 8 October 2026; shared by every French surface.
+import { PHONE } from "@/data/company-facts";
 const HOSTING_POLICY = "Avec une formule de maintenance ou de référencement, l'hébergement sur notre compte Vercel est inclus si vous le souhaitez. En dehors d'une formule, le compte d'hébergement et les éventuels frais sont convenus pour chaque client et inscrits dans le devis. L'hébergement est transféré sur un compte à votre nom sur demande ou à la fin de la collaboration.";
 
 const fr: Dictionary = {
@@ -671,6 +672,7 @@ const fr: Dictionary = {
       "Les contraintes connues : conformité, langues, parties prenantes, dates de renouvellement de contrat",
     ],
     emailLabel: "E-mail",
+    phoneLabel: "Téléphone",
     addressLabel: "Adresse",
     formNote:
       "Le formulaire détaillé est en anglais. Vous pouvez aussi écrire directement en français à l'adresse ci-dessus : nous lisons et répondons aux messages en français avec l'aide d'outils de traduction. Les appels et les documents de projet se déroulent en anglais.",
@@ -777,7 +779,7 @@ const fr: Dictionary = {
     directBody:
       "Écrivez-nous ou réservez un appel. Les deux arrivent directement aux fondateurs, pas à un service commercial.",
     bookLabel: "Réserver un appel de découverte",
-    errorFallback: "Nous n'avons pas pu envoyer votre demande. Écrivez-nous à info@pandacodegen.com.",
+    errorFallback: `Nous n'avons pas pu envoyer votre demande. Écrivez-nous à info@pandacodegen.com ou appelez le ${PHONE.display}.`,
     honeypotLabel: "Laissez ce champ vide",
     replyNote:
       "Écrivez-nous en français : nous répondons aux messages écrits en français, avec l'aide d'outils de traduction. Les appels et les documents contractuels sont en anglais.",

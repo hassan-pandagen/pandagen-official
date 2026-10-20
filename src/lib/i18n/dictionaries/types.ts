@@ -183,6 +183,7 @@ export interface ContactContent extends PageContent {
   checklistHeading: string;
   checklist: string[];
   emailLabel: string;
+  phoneLabel: string;
   addressLabel: string;
   formNote: string;
   formLinkLabel: string;

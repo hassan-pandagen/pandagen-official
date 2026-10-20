@@ -3,7 +3,8 @@
 import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 
 
-import { ArrowDown, ArrowUpRight, CheckCircle2, ChevronDown, Mail, Send } from "lucide-react";
+import { ArrowDown, ArrowUpRight, CheckCircle2, ChevronDown, Mail, Phone, Send } from "lucide-react";
+import { PHONE } from "@/data/company-facts";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
@@ -44,6 +45,7 @@ const contactSchema = {
       name: "PandaCodeGen",
       url: "https://www.pandacodegen.com/",
       email: "info@pandacodegen.com",
+      telephone: PHONE.e164,
       address: {
         "@type": "PostalAddress",
         streetAddress: "12250 S Kirkwood Rd, Apt 1128",
@@ -70,7 +72,7 @@ async function responseMessage(response: Response): Promise<string> {
   } catch {
     // A generic message is used for non-JSON proxy errors.
   }
-  return "We could not send your request. Please email info@pandacodegen.com.";
+  return `We could not send your request. Please email info@pandacodegen.com or call ${PHONE.display}.`;
 }
 
 export default function ContactPageClient() {
@@ -188,6 +190,13 @@ export default function ContactPageClient() {
               <div>
                 <p style={{ color: T.onDarkQuiet }}>Prefer email?</p>
                 <a href="mailto:info@pandacodegen.com" className="mt-1 inline-block break-all font-semibold underline-offset-4 hover:underline">info@pandacodegen.com</a>
+              </div>
+            </div>
+            <div className="mt-4 flex items-start gap-3 text-sm">
+              <Phone className="mt-0.5 h-5 w-5 shrink-0" style={{ color: T.onDarkAccent }} aria-hidden="true" />
+              <div>
+                <p style={{ color: T.onDarkQuiet }}>Prefer to call?</p>
+                <a href={`tel:${PHONE.e164}`} className="mt-1 inline-block font-semibold underline-offset-4 hover:underline">{PHONE.display}</a>
               </div>
             </div>
           </div>

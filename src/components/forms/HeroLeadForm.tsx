@@ -5,6 +5,7 @@ import { getAttribution } from "@/lib/analytics/trafficSource";
 import { useRef, useState } from "react";
 import { CheckCircle2, Send } from "lucide-react";
 import CalModalButton from "@/components/ui/CalModalButton";
+import { PHONE } from "@/data/company-facts";
 import { trackFBEvent } from "@/components/FacebookPixel";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
@@ -29,7 +30,7 @@ const englishCopy: LeadFormCopy = {
   directHeading: "Prefer a call or email?",
   directBody: "Both reach the founders directly.",
   bookLabel: "Book a discovery call",
-  errorFallback: "We could not send your request. Please email info@pandacodegen.com.",
+  errorFallback: `We could not send your request. Please email info@pandacodegen.com or call ${PHONE.display}.`,
   honeypotLabel: "Leave this field empty",
   replyNote:
     "A founder replies, usually within one business day. Every message gets an answer, whether or not it turns into a quote.",
@@ -261,6 +262,15 @@ export default function HeroLeadForm({
             className="text-sm font-bold text-cognac underline-offset-4 hover:text-charcoal hover:underline"
           >
             {CONTACT_EMAIL}
+          </a>
+          <a
+            href={`tel:${PHONE.e164}`}
+            onClick={() => {
+              trackGAEvent("cta_click", { cta: "call_founders", location: "hero_lead_form" });
+            }}
+            className="text-sm font-bold text-cognac underline-offset-4 hover:text-charcoal hover:underline"
+          >
+            {PHONE.display}
           </a>
           <CalModalButton
             fallbackHref="https://cal.com/pandagen/discovery"

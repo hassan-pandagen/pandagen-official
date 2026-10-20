@@ -10,6 +10,7 @@ import type { Dictionary } from "./types";
 import { reviewQuote } from "@/data/reviews";
 
 // Owner-confirmed hosting terms, 8 October 2026; shared by every German surface.
+import { PHONE } from "@/data/company-facts";
 const HOSTING_POLICY = "Bei einem Wartungs- oder SEO-Paket ist das Hosting auf unserem Vercel-Konto enthalten, wenn Sie es wünschen. Ohne Paket werden das Hosting-Konto und mögliche Gebühren pro Kunde vereinbart und im Angebot festgehalten. Auf Wunsch oder zum Ende der Zusammenarbeit wird das Hosting auf ein Konto in Ihrem Namen übertragen.";
 
 const de: Dictionary = {
@@ -671,6 +672,7 @@ const de: Dictionary = {
       "Bekannte Einschränkungen: Compliance, Sprachen, Beteiligte, Vertragsverlängerungen",
     ],
     emailLabel: "E-Mail",
+    phoneLabel: "Telefon",
     addressLabel: "Anschrift",
     formNote:
       "Das ausführliche Formular ist auf Englisch. Sie können uns auch direkt auf Deutsch an die oben genannte Adresse schreiben: wir lesen und beantworten Nachrichten auf Deutsch mit Hilfe von Übersetzungswerkzeugen. Gespräche und Projektunterlagen laufen auf Englisch.",
@@ -777,7 +779,7 @@ const de: Dictionary = {
     directBody:
       "Schreiben Sie uns oder buchen Sie einen Termin. Beides erreicht die Gründer direkt, nicht ein Vertriebsteam.",
     bookLabel: "Kennenlerngespräch buchen",
-    errorFallback: "Wir konnten Ihre Anfrage nicht senden. Bitte schreiben Sie an info@pandacodegen.com.",
+    errorFallback: `Wir konnten Ihre Anfrage nicht senden. Bitte schreiben Sie an info@pandacodegen.com oder rufen Sie ${PHONE.display} an.`,
     honeypotLabel: "Dieses Feld bitte leer lassen",
     replyNote:
       "Schreiben Sie uns auf Deutsch: wir beantworten schriftliche Nachrichten auf Deutsch, mit Hilfe von Übersetzungswerkzeugen. Gespräche und Vertragsunterlagen sind auf Englisch.",

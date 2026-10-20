@@ -288,6 +288,19 @@ export default function LocalePage({
                 </div>
                 <div>
                   <dt className="text-xs font-bold uppercase tracking-widest text-stone-600">
+                    {contact.phoneLabel}
+                  </dt>
+                  <dd className="mt-1">
+                    <a
+                      href={`tel:${PHONE.e164}`}
+                      className="font-bold text-charcoal underline underline-offset-2 hover:text-cognac"
+                    >
+                      {PHONE.display}
+                    </a>
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-bold uppercase tracking-widest text-stone-600">
                     {contact.addressLabel}
                   </dt>
                   <dd className="mt-1">

@@ -9,6 +9,7 @@ import { ArrowUp, ArrowUpRight, X } from "lucide-react";
 import { setQuotePrefill } from "@/lib/quotePrefill";
 import { T } from "@/components/redesign/tokens";
 import CalModalButton from "@/components/ui/CalModalButton";
+import { PHONE } from "@/data/company-facts";
 import { getAttribution } from "@/lib/analytics/trafficSource";
 import { trackFBEvent } from "@/components/FacebookPixel";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
@@ -81,7 +82,7 @@ const LEAD_STORE = "pcg-chat-lead-v1";
 const LEAD_THANKS =
   "Thanks, I've passed this to Hassan, our lead engineer. He usually gets back within one business day, by email or a call, whichever you left. If it's urgent, just tell me here and I'll flag it to him.";
 const LEAD_FAILED =
-  "Sorry, I couldn't send that just now. Please use the form below, or email info@pandacodegen.com.";
+  `Sorry, I couldn't send that just now. Please use the form below, email info@pandacodegen.com or call ${PHONE.display}.`;
 const URGENT_NOTE = "Done, I've flagged it to Hassan as urgent.";
 
 const EMAIL_IN_TEXT = /[^\s@<>()"',;]+@[^\s@<>()"',;]+\.[a-z]{2,}/i;
@@ -411,7 +412,7 @@ export default function AskAssistant() {
         ...next,
         {
           role: "assistant",
-          content: data.answer || "Sorry, something went wrong. You can reach Hassan and Imran at info@pandacodegen.com.",
+          content: data.answer || `Sorry, something went wrong. You can reach Hassan and Imran at info@pandacodegen.com or ${PHONE.display}.`,
           sources: data.sources ?? [],
           handoff: Boolean(data.handoff),
         },
@@ -422,7 +423,7 @@ export default function AskAssistant() {
         ...next,
         {
           role: "assistant",
-          content: "Sorry, something went wrong. You can reach Hassan and Imran at info@pandacodegen.com.",
+          content: `Sorry, something went wrong. You can reach Hassan and Imran at info@pandacodegen.com or ${PHONE.display}.`,
           handoff: true,
         },
       ]);
