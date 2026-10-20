@@ -19,6 +19,7 @@ const sanityFree = spec("sanity-free-plan");
 const sanityGrowth = spec("sanity-growth-price");
 const supabaseFree = spec("supabase-free-plan");
 const supabasePro = spec("supabase-pro-price");
+const supabaseHipaa = spec("supabase-hipaa-baa");
 const vercelPro = spec("vercel-pro-price");
 const vercelHobby = spec("vercel-hobby-price");
 const sgIntro = spec("siteground-startup-intro");
@@ -29,25 +30,34 @@ const bhRenewal = spec("bluehost-starter-renewal");
 export const stackGuidePosts: StackGuidePost[] = [
   {
     ...byline, id: "sanity-vs-wordpress", title: "Sanity vs WordPress: Which Editor Fits Your Website?",
-    date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-08", eyebrow: "CMS / Sanity vs WordPress",
+    date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-20", eyebrow: "CMS / Sanity vs WordPress",
     excerpt: "WordPress is free software you host and keep updated, and your theme and plugins decide what its editor looks like. Sanity is a hosted editor set up around your content, paired with a custom website. How to choose, with a real client editor and five tasks to test.",
     category: "CMS", readTime: "7 min", illustrationType: "code", cardStat: "5 tasks", cardStatLabel: "Try the editor before choosing the CMS",
     faqs: [
       { question: "Is Sanity better than WordPress?", answer: "Neither is better for every site. WordPress suits a team whose current theme, blocks and plugins already do the job. Sanity suits a rebuild where you want an editor with exactly your content's fields, paired with a custom website. Test the same five editing tasks in both before you decide." },
       { question: "Is Sanity free?", answer: `Sanity's Free plan is ${sanityFree.value} as of ${asOf("sanity-free-plan")}, with ${sanityFree.qualifier}. The Growth plan is ${sanityGrowth.value}. Most small business websites fit on the Free plan.` },
+      // 20 Oct 2026: three answers for the follow-up questions Search Console shows people asking
+      // after naming a tool ("is it still free", "how do they make money", "can you set it up").
+      { question: "Is Sanity still free in 2026?", answer: `Yes. As of ${asOf("sanity-free-plan")}, Sanity's pricing page lists the Free plan at ${sanityFree.value}, marked "forever", not a trial. It includes ${sanityFree.qualifier}. Teams that need more editors, private datasets or longer draft history move to Growth at ${sanityGrowth.value}.` },
+      { question: "How does Sanity make money if the Free plan costs nothing?", answer: `From paid plans and add-ons. As of ${asOf("sanity-growth-price")}, Growth is ${sanityGrowth.value}, Enterprise is priced on request, and extra usage, datasets and support are sold as monthly add-ons.` },
+      { question: "Can you set up Sanity for my website?", answer: "Yes. Our Sanity development service builds the website and its editor together, with the content types and fields set up for your team. Every build that uses Sanity includes training on Sanity Studio and written documentation. Most small business websites fit on Sanity's Free plan, so the editor doesn't add to the monthly bill." },
       { question: "Can I edit a Next.js website without coding?", answer: "Yes, once a CMS such as Sanity is connected. Your team edits the text, images and other fields that were set up for them, then publishes. A new page layout, content type or integration is still a developer job." },
       { question: "Will moving to Sanity improve my rankings?", answer: "Not on its own. Rankings follow your content, page speed, links and whether the move kept your URLs. Keep useful URLs, redirect the ones that change, and compare the new pages with the old ones before launch." },
     ],
   },
   {
     ...byline, id: "sanity-vs-supabase", title: "Sanity vs Supabase: CMS, Backend or Both?",
-    date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-10", eyebrow: "Architecture / Sanity vs Supabase",
+    date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-20", eyebrow: "Architecture / Sanity vs Supabase",
     excerpt: "Sanity is a content editor for your website. Supabase is a backend: a Postgres database with sign-in, file storage and server functions. They don't compete, and many projects use both. Which one your project needs, with current prices.",
     category: "Architecture", readTime: "7 min", illustrationType: "saas", cardStat: "2 jobs", cardStatLabel: "Editing the website and running the business data",
     faqs: [
       { question: "Is Sanity an alternative to Supabase?", answer: "No. Sanity is a CMS your team uses to edit website content. Supabase is a backend: a Postgres database with sign-in, file storage and server functions for apps and portals. Many projects use both, Sanity for the public website and Supabase for the private data." },
       { question: "Do I need Supabase for a business website?", answer: "Usually not. A business website with pages, articles and a contact form needs a CMS and a form that emails you. You need a backend like Supabase when people sign in, or when you store records such as bookings, orders, students or payments." },
       { question: "How much does Supabase cost?", answer: `Supabase's Free plan is ${supabaseFree.value} and Pro is ${supabasePro.value}, as of ${asOf("supabase-pro-price")}. We build on the Free plan and move the project to Pro when it goes live, because free projects are paused after a week of inactivity and have no backups.` },
+      // 20 Oct 2026: follow-up questions, as above.
+      { question: "Is Supabase still free in 2026?", answer: `Yes. As of ${asOf("supabase-free-plan")}, Supabase's Free plan is ${supabaseFree.value}, with ${supabaseFree.qualifier}. That suits building and testing. A live app needs Pro, ${supabasePro.value}, which isn't paused for inactivity and includes daily backups.` },
+      { question: "Is Supabase safe for customer data?", answer: `It can be, but the setup decides it. Supabase tells you who someone is; row-level security rules on each table decide which records they can see, and every table the browser can reach needs them. Admin keys stay on the server. Pro keeps daily backups for 7 days. For health data, ${supabaseHipaa.value}; Supabase's pricing page lists HIPAA as a paid add-on on the Team plan, as of ${asOf("supabase-pro-price")}. Test permissions before launch by signing in as one customer and trying to open another customer's record.` },
+      { question: "Can you build a Supabase backend or CRM for my business?", answer: "Yes. Our backend development service builds the database, the sign-in and permission rules, and a custom admin screen or CRM on top, in the same build. We build on Supabase's Free plan and move the project to Pro when it goes live, and the project can run on a Supabase account in your name." },
       { question: "Do you only build on Supabase?", answer: "No. It's our usual choice because it's quick to set up and it's Postgres underneath, so your data isn't tied to one vendor. We also build on MongoDB or another database, or around an API your business already runs." },
       { question: "Does Vercel replace a backend?", answer: "No. Vercel hosts your website and runs its server code. Your data still needs a database, and someone still has to decide who can sign in and what each person can see." },
     ],

@@ -403,6 +403,39 @@ earlier in the article; and that nothing implies a breach of Rank Math's custome
 5. **Fact table regenerated.** It showed the Shopify fee's old 2 Aug date and qualifier,
    because it was generated before the re-date. It now matches the registry.
 
+## Round 6: follow-up questions answered on the Sanity, Supabase and Vercel articles (20 Oct 2026)
+
+**Why:** Search Console (3 months, regex for "it / they / this / these" queries) shows
+conversational follow-ups reaching the site, such as "is it free?" in many spellings, "how do
+they make money", "can you get this for me", "is it still the case in 2026" and "i mean is it
+safe". These read like second turns of an AI Mode conversation. We answered them where the
+tools are discussed, as FAQs (rendered on the page and in FAQPage markup). We could not pull
+page and date data for these queries (the Search Console connection failed), so which page each
+one reached is not confirmed.
+
+**Prices re-read 20 Oct 2026 (unchanged):** sanity.io/pricing: Free $0 "forever", 20 seats,
+2 public datasets, 10K documents, 1M API CDN requests, 100 GB bandwidth, drafts 3 days; Growth
+$15 per seat a month, 50 seats, 25K documents, drafts 90 days. supabase.com/pricing: Free $0, 500 MB
+database, 1 GB storage, 50,000 MAU, 2 active projects, paused after 1 week of inactivity; Pro from
+$25 a month with daily backups kept 7 days; HIPAA a paid add-on on Team. `sanity-free-plan`,
+`sanity-growth-price`, `supabase-free-plan`, `supabase-pro-price` re-dated.
+
+**New FAQs:**
+
+- /blog/sanity-vs-wordpress: "Is Sanity still free in 2026?", "How does Sanity make money if the
+  Free plan costs nothing?", "Can you set up Sanity for my website?" (the training and
+  documentation claim is from company-facts.ts: "Every build that uses Sanity includes training
+  on Sanity Studio for your team and written documentation for it").
+- /blog/sanity-vs-supabase: "Is Supabase still free in 2026?", "Is Supabase safe for customer
+  data?" (it depends on row-level security; backups; BAA), "Can you build a Supabase backend or
+  CRM for my business?".
+- /blog/nextjs-hosting-zero-cost: "How does Vercel make money if Hobby is free?", "Can you set up
+  Vercel hosting for my business website?" (same wording as the article's own hosting section).
+
+**Please check:** that no answer claims more than its source; that "Is Supabase safe" doesn't
+read as a guarantee; and that the service answers match what the article and company facts
+already say.
+
 ## Open items
 
 1. **Shopify third-party payment fee: resolved 20 Oct 2026.** The owner screenshotted
