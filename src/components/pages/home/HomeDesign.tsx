@@ -6,7 +6,6 @@ import PreviewShell from "@/components/redesign/PreviewShell";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import CalModalButton from "@/components/ui/CalModalButton";
 import { aiRevenue, window_ } from "@/data/ai-referral-facts";
-import AssistantPrompt from "@/components/assistant/AssistantPrompt";
 import PaperShader from "@/components/visual/PaperShader";
 import WorkIndex from "@/components/redesign/WorkIndex";
 import WorkCard from "@/components/redesign/WorkCard";
@@ -29,7 +28,7 @@ import { T } from "@/components/redesign/tokens";
 //
 // The H1 words and separate custom-build/WordPress price line are preserved.
 // The owner approved the shorter explanation below on 10 October 2026. The
-// opening pairs founder/work actions with the inline assistant.
+// opening pairs founder/work actions with a larger project preview.
 
 
 const INK = T.ink;
@@ -95,7 +94,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
             Websites built for the way you do <HeadingEmphasis text="business." phrase="business" />
           </h1>
 
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(250px,.72fr)_minmax(0,1.2fr)] lg:gap-6 xl:gap-8">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,.85fr)_minmax(0,1.15fr)] lg:gap-12 xl:gap-16">
             <div className="min-w-0">
               <p className="max-w-[34rem] text-[18px] leading-[1.55] md:text-[20px]" style={{ color: BODY }}>
                 Work with Hassan and Imran on a business website or online store your team can edit.
@@ -143,10 +142,6 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
                   How we measured it
                 </Link>
               </p>
-            </div>
-
-            <div className="min-w-0">
-              <AssistantPrompt />
             </div>
 
             <div className="min-w-0">
