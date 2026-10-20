@@ -185,18 +185,21 @@ export default function ContactPageClient() {
                 </Link>
               ))}
             </div>
-            <div className="mt-6 flex items-start gap-3 text-sm">
-              <Mail className="mt-0.5 h-5 w-5 shrink-0" style={{ color: T.onDarkAccent }} aria-hidden="true" />
-              <div>
-                <p style={{ color: T.onDarkQuiet }}>Prefer email?</p>
-                <a href="mailto:info@pandacodegen.com" className="mt-1 inline-block break-all font-semibold underline-offset-4 hover:underline">info@pandacodegen.com</a>
+            {/* 20 Oct 2026, owner: email and phone side by side, one size smaller. */}
+            <div className="mt-6 grid gap-4 text-[13px] sm:grid-cols-2">
+              <div className="flex items-start gap-2.5">
+                <Mail className="mt-0.5 h-4 w-4 shrink-0" style={{ color: T.onDarkAccent }} aria-hidden="true" />
+                <div>
+                  <p style={{ color: T.onDarkQuiet }}>Prefer email?</p>
+                  <a href="mailto:info@pandacodegen.com" className="mt-0.5 inline-block break-all font-semibold underline-offset-4 transition-colors hover:text-[#E8763A]">info@pandacodegen.com</a>
+                </div>
               </div>
-            </div>
-            <div className="mt-4 flex items-start gap-3 text-sm">
-              <Phone className="mt-0.5 h-5 w-5 shrink-0" style={{ color: T.onDarkAccent }} aria-hidden="true" />
-              <div>
-                <p style={{ color: T.onDarkQuiet }}>Prefer to call?</p>
-                <a href={`tel:${PHONE.e164}`} className="mt-1 inline-block font-semibold underline-offset-4 hover:underline">{PHONE.display}</a>
+              <div className="flex items-start gap-2.5">
+                <Phone className="mt-0.5 h-4 w-4 shrink-0" style={{ color: T.onDarkAccent }} aria-hidden="true" />
+                <div>
+                  <p style={{ color: T.onDarkQuiet }}>Prefer to call?</p>
+                  <a href={`tel:${PHONE.e164}`} className="mt-0.5 inline-block font-semibold underline-offset-4 transition-colors hover:text-[#E8763A]">{PHONE.display}</a>
+                </div>
               </div>
             </div>
           </div>

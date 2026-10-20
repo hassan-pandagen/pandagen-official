@@ -123,17 +123,17 @@ export default function SiteFooter({ compactTop = false, linksOnly = false }: { 
             </p>
             <ul className="mt-6 space-y-2 text-[15px]">
               <li>
-                <a href="mailto:info@pandacodegen.com" style={{ color: T.onDark }}>
+                <a href="mailto:info@pandacodegen.com" className="text-[#EBE9E4] transition-colors hover:text-[#E8763A]">
                   info@pandacodegen.com
                 </a>
               </li>
               <li>
-                <a href={`tel:${PHONE.e164}`} style={{ color: T.onDark }}>
+                <a href={`tel:${PHONE.e164}`} className="text-[#EBE9E4] transition-colors hover:text-[#E8763A]">
                   {PHONE.display}
                 </a>
               </li>
               <li>
-                <Link href="/contact" style={{ color: T.onDark }}>
+                <Link href="/contact" className="text-[#EBE9E4] transition-colors hover:text-[#E8763A]">
                   Contact form
                 </Link>
               </li>
