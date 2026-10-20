@@ -435,9 +435,10 @@ export default function WordPressPluginSecurity2026Page() {
                         for it on 19 October, scored CVSS 9.8, and describes it as a supply-chain compromise.
                     </BlogText>
                     <BlogText>
-                        This turns the summer cases around. There, the sites that got hurt were the ones that hadn&apos;t
-                        updated. Here, the update was the attack, and the sites at risk were the ones that updated
-                        promptly during an eleven-hour window. Version 3.0.123 had been out since 7 October, so the
+                        This is a different failure from the summer cases. There, the risk was a published fix that
+                        hadn&apos;t been applied. Here, the risk was in the package being delivered: copies obtained during
+                        an eleven-hour window carried the malware. Updating promptly is still the right default; this
+                        case is about knowing what you installed and when. Version 3.0.123 had been out since 7 October, so the
                         files appear to have been swapped after release. Rank Math hasn&apos;t said how that happened, or
                         how many sites received them beyond &ldquo;a limited number of users&rdquo;. Its{" "}
                         <a href="https://rankmath.com/changelog/" target="_blank" rel="noopener noreferrer" className={sourceLink}>changelog</a>{" "}
@@ -446,23 +447,25 @@ export default function WordPressPluginSecurity2026Page() {
                     </BlogText>
                     <BlogText>
                         The version number alone doesn&apos;t tell you whether a site was hit; the CVE record says so
-                        directly. What matters is what you did with the file during that window:
+                        directly. What matters is whether you obtained a copy during that window, and whether it was
+                        ever activated. Below is a summary. For the complete steps, follow{" "}
+                        <a href="https://rankmath.com/kb/pro-3-0-123-security-incident/" target="_blank" rel="noopener noreferrer" className={sourceLink}>Rank Math&apos;s full procedure</a>{" "}
+                        or ask your host for help.
                     </BlogText>
                     <BlogList
                         items={[
-                            "Installed and activated 3.0.123 during the window: Rank Math says to treat the site as compromised. Its recommended fix is to restore the files and database from a backup made before 15 October at 20:02 UTC, change every password, database credential, API key and set of WordPress salts the site could reach, then install 3.0.124 from your Rank Math account.",
+                            "Obtained an affected copy during the download window and activated it at any time, then or later: Rank Math says to treat the site as compromised. Updating to 3.0.124 alone doesn't complete recovery. Its recommended route is to restore the files and database from a backup made before 15 October at 20:02 UTC, run a security scan, change every password, database credential, API key and set of WordPress salts the site could reach, then install 3.0.124 from your Rank Math account.",
                             "Installed but never activated: delete the plugin folder, install 3.0.124 from your Rank Math account and run a security scan.",
                             "Downloaded but never installed: Rank Math says there is no sign of compromise from this incident alone.",
-                            "Cleaning by hand instead of restoring: the order matters, because the malware rebuilds its backdoor when someone visits the site. Rank Math says to delete the whole rank-math-pro folder and remove three malicious wp_options entries before looking for anything else.",
+                            "Cleaning by hand instead of restoring: the order matters, because the malware rebuilds its backdoor when someone visits the site. Rank Math says to delete the whole rank-math-pro folder, remove any wp_options entries matching the malicious keys it lists, and block outgoing connections to rank1cdn.com where your host or firewall allows, before looking for anything else. Its procedure then covers other files, accounts, cron jobs and the server, credential changes, and checks that the site stays clean.",
                             "Signs Rank Math lists: administrator accounts named wpsupport_ followed by random characters or using @wp-mail.net addresses, a fake core file at wp-includes/class-wp-cache-util.php, .htaccess rules that run .cache files as PHP, a system cron entry tagged #ms6v46, and connections to rank1cdn.com.",
-                            "Rank Math says it never sends login or download links by email. Get 3.0.124 by going to rankmath.com yourself, and treat a password-reset or download email about this incident as suspect.",
+                            "Rank Math says it never sends login or download links by email. Get 3.0.124 by going to rankmath.com yourself, and treat any unsolicited password-reset or download email about this incident as suspect.",
                         ]}
                     />
                     <BlogText>
-                        None of the four questions earlier would have caught this one. The advisory named the right
-                        version, the fix shipped within hours, and updating promptly was what exposed a site. What
-                        decided the outcome was whether the owner knew which sites updated during those eleven hours,
-                        and had a backup from before them.
+                        The four questions earlier don&apos;t cover this kind of case. The advisory named the affected
+                        version, and the clean release is dated 16 October. Update records and clean backups are
+                        important here, for working out which sites were exposed and for recovering them.
                     </BlogText>
 
                     <BlogHeader id="ask-provider">What to ask a provider about their patch process</BlogHeader>

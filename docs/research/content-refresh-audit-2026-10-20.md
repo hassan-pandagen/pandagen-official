@@ -377,12 +377,31 @@ didn't load for us.
 
 **Our inferences, stated as such on the page:** "the files appear to have been swapped after
 release" (3.0.123 dated 7 Oct, bad copies served from 15 Oct); "eleven-hour window" (20:02 to
-07:12 is 11 h 10 min); "the fix shipped within hours" (clean 3.0.124 on 16 Oct, the day the
-window closed).
+07:12 is 11 h 10 min). "The fix shipped within hours" was removed in round 5.
 
 **Please check:** that every recovery step and indicator matches the advisory; that "this turns
 the summer cases around" fairly contrasts it with the Super Forms and Elementor Pro section
 earlier in the article; and that nothing implies a breach of Rank Math's customer data.
+
+## Round 5: corrections to the Rank Math section after review (20 Oct 2026)
+
+1. **Activation timing.** The first case now reads "Obtained an affected copy during the
+   download window and activated it at any time, then or later", and adds "Updating to 3.0.124
+   alone doesn't complete recovery."
+2. **Recovery summary marked incomplete.** The list is introduced as a summary that links Rank
+   Math's full procedure ("or ask your host"). The restore route now includes the security
+   scan. Manual cleanup says "remove any wp_options entries matching the malicious keys it
+   lists", adds blocking outgoing connections to rank1cdn.com where supported, and notes that
+   the procedure goes on to cover other files, accounts, cron jobs, the server, credentials and
+   follow-up checks. The email warning says "any unsolicited" email.
+3. **Conclusion.** "The fix shipped within hours" is now "the clean release is dated 16
+   October". "What decided the outcome..." is now "Update records and clean backups are
+   important here, for working out which sites were exposed and for recovering them."
+4. **Framing.** The contrast with the summer cases is now "a different failure", and the page
+   says "Updating promptly is still the right default; this case is about knowing what you
+   installed and when."
+5. **Fact table regenerated.** It showed the Shopify fee's old 2 Aug date and qualifier,
+   because it was generated before the re-date. It now matches the registry.
 
 ## Open items
 
@@ -407,7 +426,7 @@ earlier in the article; and that nothing implies a breach of Rank Math's custome
 
 ## Every fact touched in this batch (generated from the registry)
 
-Values are shown as a reader sees them (placeholders filled in).
+Values are shown as a reader sees them (placeholders filled in). Regenerated after round 5.
 
 | id | value | qualifier | amounts | verifiedAt | source |
 |---|---|---|---|---|---|
@@ -440,7 +459,7 @@ Values are shown as a reader sees them (placeholders filled in).
 | `shopify-app-price-pagefly` | Free $0; Builder from $24/mo; Optimize from $39/mo; Accelerate $99/mo; Power $199/mo. Builder and Optimize rise with the slots and credits you choose | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated |  | 2026-10-19 | https://pagefly.io/pages/pricing |
 | `shopify-app-price-shogun` | Draft Mode $0; Build $39/mo; Grow $199/mo; Advanced $499/mo | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated |  | 2026-10-19 | https://getshogun.com/pricing |
 | `shopify-app-price-vitals` | All-in-One $29.99/mo. The listing states usage fees start after roughly $1,000/mo in Vitals-attributed sales, from $10/mo, and for Visitor Recordings volume | Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated | allInOne=29.99 | 2026-10-19 | https://apps.shopify.com/vitals |
-| `shopify-third-party-payment-fee` | 2% on Basic, 1% on Grow, 0.6% on Advanced and 0.2% on Plus | US pricing page. shopify.com/pricing redirects by country, and a 19 Oct 2026 check from Pakistan showed local pricing without these rates, so this value still dates from 2 Aug 2026 | basicPercent=2 | 2026-08-02 | https://www.shopify.com/pricing |
+| `shopify-third-party-payment-fee` | 2% on Basic, 1% on Grow, 0.6% on Advanced and 0.2% on Plus | Read 20 Oct 2026 from the plan comparison table (Accepting payments, Third-party transaction fees) on shopify.com/pricing with no country path and prices in USD; screenshot in docs/research/evidence. The same page listed MB WAY and Bizum rates, so the viewer's region may not have been the US. An outside reviewer read the same four rates the same day. | basicPercent=2 | 2026-10-20 | https://www.shopify.com/pricing |
 | `webflow-starter-limits` | a webflow.io subdomain, two static pages, 1 GB bandwidth and 50 form submissions | Free Site plan; no custom domain |  | 2026-10-20 | https://webflow.com/pricing |
 | `webflow-starter-form-cap` | 50 lifetime form submissions | A total for the life of the site, not a monthly allowance; other Site plans are unlimited |  | 2026-10-20 | https://help.webflow.com/hc/en-us/articles/33961344521235-Form-submissions |
 | `microsoft-365-business-basic-price` | $7.00 per user per month | Paid yearly; a version without Teams is listed at $5.40 | monthly=7 | 2026-10-20 | https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing |
