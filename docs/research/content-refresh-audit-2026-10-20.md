@@ -456,9 +456,8 @@ NOT_A_FIT); no new claim about the studio was added.
 | /blog/website-migration-cost-2026 | "Can you do the website migration for me?", "How do I get a migration price for my own site?" | Starter/Growth/Scale facts; free 15-minute call; free review of up to three pages |
 | /blog/website-redesign-cost | "Is it cheaper to redesign or rebuild a website?", "Can you redesign my website?" | Tiers; "fixed once the scope is agreed"; the article's own redesign/migration/rebuild definitions |
 
-The AI SEO answer leads with what the client is guaranteed (the monthly work, report and review,
-and refund protection for the signed scope), then says why nobody can honestly guarantee a
-citation or ranking.
+The AI SEO answer leads with what the client is committed (the monthly work, report and
+review), then states the refund condition and its limit (see round 9).
 
 **Please check:** that "Usually a redesign" is fairly qualified (it's reasoning, not a measured
 figure); that the AI SEO answer doesn't promise outcomes; and that each answer matches the
@@ -485,6 +484,24 @@ company facts it cites.
    on demand or through Flat Rate CDN capacity tiers", paid add-ons and Enterprise.
 5. **This report.** Round 6 no longer calls the queries AI follow-ups or explains their zero
    clicks, and says FAQ markup earns no search feature since Google retired FAQ rich results.
+
+## Round 9: corrections to round 7 after review (20 Oct 2026)
+
+Note: the second review read commit bb86b591 and reported the round 6 issues as still present.
+They were fixed in 925c7806 (round 8); a search of `src/` finds none of the old wording.
+
+1. **AI SEO refund answer** now matches the published terms (COMMERCIAL "Refunds": protection is
+   tied to failure to deliver the signed scope, with conditions documented before work begins):
+   "We commit to the research, agreed improvement, report and review listed in your monthly
+   scope. If we fail to deliver those commitments, refund protection follows the conditions in
+   your signed agreement. Missing a ranking or citation target alone does not trigger a refund.
+   Search and AI platforms control those outcomes." The criticism of other agencies is gone.
+2. **Template answer:** "a template site elsewhere will cost less" is now "A template-based
+   approach may cost less when it meets your requirements. We'll explain where it fits before
+   recommending a custom build."
+3. **Redesign vs rebuild:** "Usually a redesign" is now "A focused redesign can cost less when
+   the existing platform, content system and integrations remain suitable. Extensive changes to
+   an unsuitable system can cost more than rebuilding, so compare both scopes."
 
 ## Open items
 
