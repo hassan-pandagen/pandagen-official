@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-30",
-        modifiedTime: "2026-10-09",
+        modifiedTime: "2026-10-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-redesign-cost")],
@@ -65,7 +65,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-04-30",
-            dateModified: "2026-10-09",
+            dateModified: "2026-10-20",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -109,7 +109,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-04-30",
-            dateModified: "2026-10-09",
+            dateModified: "2026-10-20",
             inLanguage: "en-US",
         },
         {

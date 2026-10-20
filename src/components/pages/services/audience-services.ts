@@ -131,6 +131,8 @@ export const audienceServiceFaqs: Record<string, [string, string][]> = {
     ["Can I edit the website myself?", "Yes. We agree which text, images and business details you will change, set up the editor for those tasks and show you in a live walkthrough. You also get written instructions."],
     ["Do I own my website?", "You buy your domain in your own name. At handover you receive the files we create, written instructions and control of the production accounts, as set out in your proposal."],
     ["What happens after launch?", POST_LAUNCH_SUPPORT_SUMMARY],
+    // 20 Oct 2026: for "i need a new website built properly, not just a template" (Search Console).
+    ["Is it a template, or built for my business?", `Our custom builds are designed and built for your pages, content and editing needs, starting at ${startingPrice("Starter")}. We also build on WordPress when its themes and plugins fit the site you need, and that is quoted to its own scope. If the lowest possible price is the goal, a template site elsewhere will cost less, and we'll say so on the first call.`],
   ],
   "medical-website-design": [
     ["How much does a medical website cost?", `Custom medical websites start at ${startingPrice("Starter")} (Starter), ${startingPrice("Growth")} (Growth) and ${startingPrice("Scale")} (Scale). A portal with logins, classes or payments is priced after we review the workflow. The written proposal sets the price before work starts.`],

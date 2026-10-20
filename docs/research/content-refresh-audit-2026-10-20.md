@@ -436,6 +436,31 @@ $25 a month with daily backups kept 7 days; HIPAA a paid add-on on Team. `sanity
 read as a guarantee; and that the service answers match what the article and company facts
 already say.
 
+## Round 7: follow-up answers on service, migration and redesign pages (20 Oct 2026)
+
+Same reasoning as round 6, for the questions buyers ask once they've named a service: "can you
+get this for me", "how much would it cost", "is there an agency that guarantees ai citations or
+refunds", "i need a new website built properly, not just a template". Every price, timeline and
+policy below comes from `src/data/company-facts.ts` (COMMERCIAL, WORDPRESS_HOST_MIGRATION,
+NOT_A_FIT); no new claim about the studio was added.
+
+| Page | New or changed FAQ | Source for the answer |
+|---|---|---|
+| /services/ai-seo | "Can you guarantee AI citations or rankings, or refund us if they don't happen?" (replaces the bare "No" answer) | The $500 scope FAQ on the same page; COMMERCIAL "Refunds": refund protection is tied to failure to deliver the signed scope |
+| /services/ai-seo | "How long before AI SEO shows results?" | Same page: "In the first month we establish the baseline" |
+| /services/wordpress-migration | "Can you move my WordPress site to a new host instead?" | WORDPRESS_HOST_MIGRATION, plus the round 2 wording from the migration article |
+| /services/small-business-website-design | "Is it a template, or built for my business?" | Starter price; WordPress quoted to its own scope; NOT_A_FIT "template sites elsewhere cost less" |
+| /blog/website-migration-cost-2026 | "Can you do the website migration for me?", "How do I get a migration price for my own site?" | Starter/Growth/Scale facts; free 15-minute call; free review of up to three pages |
+| /blog/website-redesign-cost | "Is it cheaper to redesign or rebuild a website?", "Can you redesign my website?" | Tiers; "fixed once the scope is agreed"; the article's own redesign/migration/rebuild definitions |
+
+The AI SEO answer leads with what the client is guaranteed (the monthly work, report and review,
+and refund protection for the signed scope), then says why nobody can honestly guarantee a
+citation or ranking.
+
+**Please check:** that "Usually a redesign" is fairly qualified (it's reasoning, not a measured
+figure); that the AI SEO answer doesn't promise outcomes; and that each answer matches the
+company facts it cites.
+
 ## Open items
 
 1. **Shopify third-party payment fee: resolved 20 Oct 2026.** The owner screenshotted

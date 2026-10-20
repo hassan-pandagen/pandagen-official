@@ -878,7 +878,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-10-09",
+    lastModified: "2026-10-20",
     faqs: [
       { question: "How long does a website redesign take from start to launch?", answer: "A redesign is usually faster than a migration because the platform, the data and most of the URLs stay put. What sets the schedule is the number of distinct templates and the number of people who have to approve them. Two approvers and four templates is a different project from six approvers and fourteen templates, at the same page count." },
       { question: "How often should a business redesign its website?", answer: "There is no universal redesign cycle. Act when evidence shows the experience, accessibility, content system or brand no longer meets current requirements and a redesign is the smallest sufficient intervention. Site age alone is not a business case." },
@@ -886,7 +886,10 @@ export const blogPosts: BlogPost[] = [
       { question: "Can I redesign my website without switching platforms?", answer: "Yes. A same-platform redesign changes the experience and visual system while retaining the current foundation. If the platform, hosting, CMS or core architecture also changes, price the migration or rebuild work explicitly." },
       { question: "What are PandaCodeGen's payment terms for a redesign?", answer: "A common payment option is 30 percent at onboarding and 70 percent on delivery, and another written schedule may be agreed. Final deliverables, acceptance, change handling, refund conditions, ownership and support are defined in the signed scope." },
       { question: "What is PandaCodeGen's starting redesign price?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale. These are our planning anchors, not market averages. Final price depends on the accepted routes, templates, design system, content, implementation, testing and rollout." },
-      { question: "What is the difference between a redesign, a migration, and a rebuild?", answer: "A redesign changes the experience on the current platform. A migration changes platform or infrastructure while preserving much of the approved site. A rebuild changes the platform and materially reworks the structure, experience or content system. Compare quotes only after those scopes are separated." }
+      { question: "What is the difference between a redesign, a migration, and a rebuild?", answer: "A redesign changes the experience on the current platform. A migration changes platform or infrastructure while preserving much of the approved site. A rebuild changes the platform and materially reworks the structure, experience or content system. Compare quotes only after those scopes are separated." },
+      // 20 Oct 2026: follow-up questions, as above.
+      { question: "Is it cheaper to redesign or rebuild a website?", answer: "Usually a redesign, because the platform, content system and data stay where they are; a rebuild also pays for moving them. A redesign is the wrong saving when the current platform is what limits you, such as slow pages you can't fix, an editor your team can't use or a store that can't do what you sell. Get both scopes priced separately before deciding." },
+      { question: "Can you redesign my website?", answer: "Yes. We redesign on your current platform when it can do what you need, or rebuild when it can't, and the written quote says which and why. Published starting points are $1,500 Starter, $3,500 Growth and $5,000 Scale, fixed once the scope is agreed, with a free 15-minute call with a founder first." },
     ]
   },
   {
@@ -973,6 +976,9 @@ export const blogPosts: BlogPost[] = [
       { question: "What is the typical Shopify to headless cost?", answer: "There is no defensible universal price without a dated, comparable dataset. Price the storefront, commerce capabilities, content, search, accounts, checkout, integrations, data, analytics, consent, QA and operations. PandaCodeGen's published tiers are planning anchors only." },
       { question: "Is migrating a website worth it in 2026?", answer: "It is worth considering when measured requirements remain blocked after realistic repairs and the benefits justify build, migration, operational and search risk. Compare repair, optimize and migrate options over the same time horizon." },
       { question: "Is it hard to move a website to another hosting provider?", answer: "Changing hosts is a different and much smaller job than changing platforms. A host-to-host move keeps the same software, theme, plugins and database, so nothing is rebuilt, and most hosting companies will perform the transfer when you buy a plan, frequently free or for a small fixed fee. Ask the destination host first and do not pay platform-migration prices for it. A platform migration is the harder job: content comes out of one system and is rebuilt in another that works differently, with templates, forms, search, checkout and URL mapping reproduced rather than transferred. Published cost ranges that mix the two jobs are why migration quotes look wildly inconsistent." },
+      // 20 Oct 2026: "can you get this for me" / "how much would it cost" follow-ups (Search Console).
+      { question: "Can you do the website migration for me?", answer: "Yes. We migrate websites between platforms at a fixed price agreed before work starts: Starter from $1,500 (up to 7 pages), Growth from $3,500 (8 to 20 pages, full migration with a redirect map) and Scale from $5,000. We also move WordPress sites between hosts as a separately quoted job when the new host's free migration doesn't cover the site." },
+      { question: "How do I get a migration price for my own site?", answer: "Send us the site's address. We review the pages, content, URLs, forms and connected tools, then send a written quote that names what moves, what is rebuilt and the fixed price. The first 15-minute call with a founder is free, and so is a review of up to three pages." },
     ]
   },
   {
