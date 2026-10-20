@@ -352,9 +352,14 @@ built site, and none overflow at 390px.
 
 ## Open items
 
-1. **Shopify third-party payment fee:** still dated 2 Aug 2026. The reviewer reported reading
-   2% / 1% / 0.6% / 0.2% on 20 Oct, but we couldn't confirm it ourselves (see round 2), so
-   the owner is checking it by screenshot of the plan comparison table's "Third-party transaction fees" row. The build fails on 30 Nov 2026 if it stays.
+1. **Shopify third-party payment fee: resolved 20 Oct 2026.** The owner screenshotted
+   shopify.com/pricing (no country path, plan prices in USD: Basic $39 monthly / $29 yearly)
+   from a remote machine. The plan comparison table, Accepting payments, Third-party
+   transaction fees, reads 2% / 1% / 0.6% / 0.2%, matching the stored value and the
+   reviewer's read. The same section listed MB WAY and Bizum rates, so that machine's region
+   may not be the US; the qualifier says so. Screenshots:
+   `docs/research/evidence/shopify-third-party-fee-2026-10-20.png` and
+   `shopify-pricing-usd-2026-10-20.png`. `spec_freshness.py` now reports no warnings.
 2. Okendo and Tidio monthly prices: retry with a browser that can render their pricing.
 3. The Microsoft FAQ answer in `blog.ts` ("Is Microsoft 365 going up in price in 2026?")
    still gives only the July change list. It is accurate as history; not changed in round 2.

@@ -1123,8 +1123,8 @@
       "vendor": "Shopify",
       "label": "Third-party payment provider fee (not using Shopify Payments)",
       "value": "{basicPercent:%} on Basic, 1% on Grow, 0.6% on Advanced and 0.2% on Plus",
-      "qualifier": "US pricing page. shopify.com/pricing redirects by country, and a 19 Oct 2026 check from Pakistan showed local pricing without these rates, so this value still dates from 2 Aug 2026",
-      "verifiedAt": "2026-08-02",
+      "qualifier": "Read 20 Oct 2026 from the plan comparison table (Accepting payments, Third-party transaction fees) on shopify.com/pricing with no country path and prices in USD; screenshot in docs/research/evidence. The same page listed MB WAY and Bizum rates, so the viewer's region may not have been the US. An outside reviewer read the same four rates the same day.",
+      "verifiedAt": "2026-10-20",
       "reviewDays": 60,
       "source": "https://www.shopify.com/pricing",
       "amounts": {

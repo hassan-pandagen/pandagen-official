@@ -184,3 +184,11 @@ Full detail in `content-refresh-audit-2026-10-20.md`, "Round 2". In short:
 - Microsoft note: "US comparison page lists", not "sells only".
 - Vercel: browser-cache wording made precise (no network request vs revalidation).
 - Shopify fee: still 2 Aug 2026; the owner will screenshot the comparison table row.
+
+## 20 Oct 2026: Shopify third-party fee re-verified
+
+Owner screenshot of shopify.com/pricing (USD prices, no country path), plan comparison
+table, Accepting payments: Third-party transaction fees 2% / 1% / 0.6% / 0.2%, unchanged.
+`shopify-third-party-payment-fee` re-dated from 2 Aug to 20 Oct 2026. The page also listed
+MB WAY and Bizum, so the viewer's region may not have been the US; noted in the qualifier.
+Evidence in `docs/research/evidence/`. The 30 Nov build failure no longer applies.
