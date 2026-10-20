@@ -15,7 +15,7 @@ const details = MIGRATION_PROJECT_DETAILS.aStepAboveMedical;
 
 // Shared with the page's FAQ schema. Every answer is in the initial HTML.
 export const aStepAboveMedicalFaqs: CaseStudyFaq[] = [
-  { question: "Is the A Step Above Medical build finished?", answer: "The website and operations portal are built and undergoing pre-launch testing, as confirmed on 10 October 2026. The screenshots show the replacement build. We are not claiming that it has launched or reporting live-site results." },
+  { question: "Is A Step Above Medical live?", answer: "Yes. The project is live, as confirmed by the owner on 20 October 2026. The screenshots were captured before launch and illustrate the website and operations portal; they are not live-site performance or business results." },
   { question: "What did you build for A Step Above Medical?", answer: "We rebuilt its medical training website from WordPress with Next.js and a Sanity content editor, and built a separate operations portal using Supabase. The website presents courses, locations and upcoming classes; the portal brings class schedules, student records, payments and certificates into the team's workspace." },
   { question: "Can the team update courses and locations themselves?", answer: "Yes. The Sanity editor has separate course and location entries with descriptions, durations, photographs and location availability controls. The team can change the content within those fields. New features or changes to how the website works are scoped separately." },
   { question: "Can staff export the portal's records?", answer: "The portal includes CSV downloads for students, classes, registrations, attendance, payments, certificates and accepted terms. These files open in spreadsheet tools. Uploaded documents are stored separately, and the export screen says each download is recorded in the activity log." },
@@ -35,15 +35,15 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
         </p>
         <p className="mt-6 max-w-[44rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>{details.summary}</p>
         <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-[14px] font-semibold" style={{ color: T.accentText }}>
+          <a href={details.websiteUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Visit live website ↗</a>
           <a href="#a-step-above-medical-walkthrough" className="underline underline-offset-4">Explore the website and portal ↓</a>
           <Link href="/services/custom-engineering" className="underline underline-offset-4">Custom portal development →</Link>
           <Link href="/services/medical-website-design" className="underline underline-offset-4">Medical website design →</Link>
         </div>
-        <WorkCasePreview src="/work/a-step-above-medical-preview-homepage.png" alt="New A Step Above Medical course website with location navigation and an upcoming IV therapy class" width={1912} height={914} caption="Replacement website / Independent client / Pre-launch testing" />
+        <WorkCasePreview src="/work/a-step-above-medical-preview-homepage.png" alt="New A Step Above Medical course website with location navigation and an upcoming IV therapy class" width={1912} height={914} caption="Live client project / Screenshot captured before launch" />
         <WorkCaseFacts items={[
-          { label: "Status", value: "Built · In testing" },
-          { label: "Planned launch", value: <time dateTime={details.plannedLaunchOn}>October 19, 2026</time> },
-          { label: "Owner confirmation", value: <>{details.progress}, as of <time dateTime={details.confirmedOn}>October 10, 2026</time>.</> },
+          { label: "Status", value: details.status },
+          { label: "Owner confirmation", value: <>{details.progress}, as of <time dateTime={details.confirmedOn}>October 20, 2026</time>.</> },
         ]} />
         <aside data-relationship-disclosure className="mb-0 mt-6 border-t pt-5 md:my-8" style={{ borderColor: T.rule }}>
           <WorkCaseLabel className="mb-3">Relationship and release status</WorkCaseLabel>

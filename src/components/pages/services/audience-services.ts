@@ -7,8 +7,8 @@ import { asOf, spec } from "@/data/spec-facts";
 // "small business website design" (about 3,600 US searches a month, owner-supplied seodata
 // estimate) and "medical website design" (about 1,300) had no page aimed at them. Both show
 // the Next.js + Sanity + Supabase stack, with A Step Above Medical as the medical example.
-// ASAM is a medical TRAINING provider, built and in pre-launch testing: never describe it as
-// patient-care software, a live site or a source of results. Its website does not handle patient
+// ASAM is a medical TRAINING provider, confirmed live on 20 Oct 2026: never describe it as
+// patient-care software or a source of measured results. Its website does not handle patient
 // health information and was not built as a HIPAA project. Owner, 12 Oct 2026: we take on HIPAA
 // projects and sign a BAA when a client needs it; provider BAA facts are in spec-facts.json.
 // Prices, delivery times and support come from company-facts, not typed copy.
@@ -84,7 +84,7 @@ export const audienceServices: ServicePreview[] = [
     slug: "medical-website-design", name: "Medical websites", category: "Medical website design & development",
     title: "Medical website design.", accent: "For practices and medical training providers.",
     lead: "Medical website design and development for practices, clinics and medical training providers. We build on Next.js with a Sanity editor your staff can update, and add a Supabase database and logins when you need classes, students or bookings managed behind the site. The pages, editing and price are agreed in writing first.",
-    image: "/work/a-step-above-medical-preview-homepage.png", imageAlt: "A Step Above Medical course website, shown before launch", imageCaption: `Client build / A Step Above Medical / ${asam.status}`,
+    image: "/work/a-step-above-medical-preview-homepage.png", imageAlt: "A Step Above Medical course website, captured before launch", imageCaption: `Client build / A Step Above Medical / ${asam.status}`,
     problemTitle: "What should your website do for patients and staff?", problemIntro: "Start with the decisions a visitor makes: which treatment or course fits, how to book or enquire, and who they will see. Then decide what your staff update themselves.",
     checks: [
       ["Services and treatments", "Plan a clear page for each treatment, service or course, with the questions people ask before they book."],
@@ -100,7 +100,7 @@ export const audienceServices: ServicePreview[] = [
       ["Moving from WordPress", "Existing pages, posts and images are inventoried, moved and redirected so their addresses keep working. A Step Above Medical's website was rebuilt from WordPress."],
     ],
     workTitle: "A medical training system on this stack.", workIntro: "A Step Above Medical teaches medical courses. We rebuilt their WordPress website with Next.js and Sanity, and built a team portal on Supabase for classes, students, payments and certificates.",
-    workName: "A Step Above Medical", workImage: "/work/a-step-above-medical-preview-homepage.png", workAlt: "A Step Above Medical website, shown before launch", workHref: "/work/a-step-above-medical",
+    workName: "A Step Above Medical", workImage: "/work/a-step-above-medical-preview-homepage.png", workAlt: "A Step Above Medical website, captured before launch", workHref: "/work/a-step-above-medical",
     workDescription: asam.summary, workCaveat: asam.disclosure,
     secondWork: { name: "Medical practice demo", image: "/work/medical-template-hero.png", alt: "Medical practice website demo homepage with treatment navigation", href: "/work/medical-template", description: "A practice website demo with treatment pages, care steps and a consultation journey.", caveat: "Portfolio demo. Every name, treatment and detail is invented; it is not a real practice." },
     pathTitle: "Improve your site or build a new one.",

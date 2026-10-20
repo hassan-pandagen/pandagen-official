@@ -67,8 +67,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/work/sleek-jackets', changeFrequency: 'yearly', priority: 0.4 },
     // Added 30 Sep 2026 with the redesign switch: both are new live pages.
     { path: '/work/northdeck-group', changeFrequency: 'yearly', priority: 0.6 },
-    // Built and in pre-launch testing, confirmed by the owner on 10 Oct 2026.
-    { path: '/work/a-step-above-medical', changeFrequency: 'monthly', priority: 0.5, lastModified: '2026-10-11' },
+    // Confirmed live by the owner on 20 Oct 2026.
+    { path: '/work/a-step-above-medical', changeFrequency: 'monthly', priority: 0.5, lastModified: '2026-10-20' },
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/about/hassan', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },
     { path: '/about/imran', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },

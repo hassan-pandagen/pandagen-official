@@ -171,8 +171,8 @@ const staticPages: Record<string, StaticOgContent> = {
   },
   "/work/a-step-above-medical": {
     title: "Medical Website & Training Management System",
-    label: "A Step Above Medical / In Testing",
-    description: "A course website, content editor and team portal for classes, students, payments and certificates. Built and in pre-launch testing.",
+    label: "A Step Above Medical / Live",
+    description: "A course website, content editor and team portal for classes, students, payments and certificates. Live client project.",
   },
   "/work/medical-template": {
     title: "Medical Website Design: Practice Demo",

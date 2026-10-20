@@ -60,6 +60,27 @@ export default function FeaturesTrio() {
           ))}
         </ol>
 
+        <div className="mt-8 grid gap-6 border-t pt-6 md:grid-cols-2" style={{ borderColor: T.rule }}>
+          <div>
+            <p className="text-[14px] font-semibold" style={{ color: T.accentText }}>Panda Patches / Founder-affiliated</p>
+            <p className="mt-2 text-[16px] leading-[1.65]" style={{ color: T.body }}>
+              Wholesale orders become invoices and payment links. The connected CRM tracks production, payments and delivery follow-up.
+            </p>
+            <Link href="/work/enterprise-ops" className="mt-3 inline-flex min-h-11 items-center gap-2 text-[15px] font-semibold underline underline-offset-4" style={{ color: T.accentText }}>
+              See these workflows in Panda Patches <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+          <div>
+            <p className="text-[14px] font-semibold" style={{ color: T.accentText }}>A Step Above Medical / Live client project</p>
+            <p className="mt-2 text-[16px] leading-[1.65]" style={{ color: T.body }}>
+              A course website connects to a team portal for class schedules, students, payments and certificates.
+            </p>
+            <Link href="/work/a-step-above-medical" className="mt-3 inline-flex min-h-11 items-center gap-2 text-[15px] font-semibold underline underline-offset-4" style={{ color: T.accentText }}>
+              Explore the medical training system <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+
         <div data-feature-costs className="mt-6 grid gap-6 md:mt-12 md:grid-cols-12 md:gap-8 md:pt-8">
           <p className="max-w-[46rem] text-[16px] leading-[1.7] md:col-span-8" style={{ color: T.body }}>
             {businessFeatureCopy.costs}

@@ -7,7 +7,7 @@ import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 // 12 Oct 2026: added for "medical website design" after the Search Console check found
 // only a demo work page aimed at it. Content lives in audience-services.ts. A Step Above
-// Medical is a medical training provider in pre-launch testing; no HIPAA claim is made.
+// Medical is a live medical training project; no HIPAA claim is made.
 
 const path = "/services/medical-website-design";
 const name = "Medical Website Design & Development";

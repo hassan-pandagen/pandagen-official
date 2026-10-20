@@ -9,16 +9,16 @@ import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import styles from "./WorkIndexDesign.module.css";
 
 const clientWork: ReelProject[] = [
+  { name: "A Step Above Medical", label: "Medical website and training management system", relationship: "Independent client", status: MIGRATION_PROJECT_DETAILS.aStepAboveMedical.status, href: "/work/a-step-above-medical", image: "/work/a-step-above-medical-preview-homepage.png" },
   { name: "NorthDeck Group", label: "Security systems", relationship: "Independent client", href: "/work/northdeck-group", image: "/work/northdeck-group.png" },
   { name: caseStudy("emblematic-studio").name, label: "Product catalogue", relationship: caseStudy("emblematic-studio").relationship, href: "/work/emblematic-studio", image: "/work/emblematic-studio.png" },
   { name: caseStudy("mycustompatches").name, label: "WordPress migration", relationship: caseStudy("mycustompatches").relationship, href: "/work/mycustompatches", image: "/work/mycustompatches.png" },
   { name: caseStudy("ladies-4-jesus").name, label: "Community and publishing", relationship: caseStudy("ladies-4-jesus").relationship, href: "/work/ladies-4-jesus", image: "/work/ladies-4-jesus-hero.png" },
   { name: "Saforne", label: "Leather goods store", relationship: "Independent client", status: "Preview build, not yet selling", href: "/work/saforne", image: "/work/saforne.png" },
-  { name: "A Step Above Medical", label: "Medical website and training management system", relationship: "Independent client", status: MIGRATION_PROJECT_DETAILS.aStepAboveMedical.status, href: "/work/a-step-above-medical", image: "/work/a-step-above-medical-preview-homepage.png" },
 ];
 
 const founderAffiliated: ReelProject[] = [
-  { name: caseStudy("panda-patches").name, label: "Custom commerce", relationship: caseStudy("panda-patches").relationship, href: "/work/panda-patches", image: "/work/panda-patches.png", thumbnailImage: "/work/panda-patches-calculator-configure.png", thumbnailLabel: "Panda Patches / configurator" },
+  { name: caseStudy("panda-patches").name, label: "Online store, customer tools and order management", relationship: caseStudy("panda-patches").relationship, href: "/work/panda-patches", image: "/work/panda-patches.png", thumbnailImage: "/work/panda-patches-calculator-configure.png", thumbnailLabel: "Panda Patches / configurator" },
   { name: caseStudy("enterprise-ops").name, label: "Custom CRM & workflow automation", relationship: caseStudy("enterprise-ops").relationship, href: "/work/enterprise-ops", image: "/work/enterprise-ops.png" },
 ];
 

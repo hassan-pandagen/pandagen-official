@@ -77,7 +77,7 @@ export function MedicalTemplateCaseStudyPreview({ faqs = medicalTemplateFaqs }: 
           <p className="mt-4 max-w-[48rem] text-[16px] leading-[1.65]" style={{ color: T.body }}>
             For a real client build, explore <Link href="/work/a-step-above-medical" className="underline underline-offset-4" style={{ color: T.accentText }}>A Step Above Medical</Link>.
             Its medical training management system combines a course website, content editor and team portal
-            for classes, students, payments and certificates. The build is complete and in pre-launch testing.
+            for classes, students, payments and certificates. The project is now live.
           </p>
         </div>
       </section>

@@ -12,7 +12,7 @@ const chapters: WalkthroughChapter[] = [
       key: "homepage", src: "/work/a-step-above-medical-preview-homepage.png", width: 1912, height: 914,
       alt: "A Step Above Medical replacement homepage with course and location navigation, an upcoming IV therapy class and reserve-a-seat actions",
       label: "From finding a course to reserving a seat",
-      body: "The new homepage gives students a way to explore courses and find classes by location. The website is in pre-launch testing.",
+      body: "The new homepage gives students a way to explore courses and find classes by location. The website is now live.",
     }],
   },
   {
@@ -39,7 +39,7 @@ const chapters: WalkthroughChapter[] = [
     id: "portal", label: "Team operations portal", title: "Bring the class schedule and its paperwork together.",
     description: "The separate portal gives the team a class schedule with enrolment, instructor assignments and readiness status. Navigation groups student records, certificates, payments-related reporting, emails and account administration in one workspace.",
     detail: "The exports screen offers spreadsheet downloads for students, classes, registrations, attendance, payments, certificates and accepted terms. Uploaded documents are stored separately from those spreadsheet records.",
-    note: "These are pre-launch interface captures. The counts and balances shown are not presented as production results; the portal is undergoing testing.",
+    note: "These interface captures were taken before launch. The counts and balances shown are not presented as production results.",
     shots: [
       {
         key: "classes", src: "/work/a-step-above-medical-portal-classes.png", width: 1912, height: 914,
@@ -63,9 +63,9 @@ export default function AStepAboveMedicalWalkthrough() {
     projectName="A Step Above Medical"
     eyebrow="Inside the medical training management system"
     heading={<>A website for students.<br />A workspace for the team.</>}
-    lead="One system connects the public course website, editable course and location content, and the team's class operations portal. Explore the screens below; the completed build is in pre-launch testing."
+    lead="One system connects the public course website, editable course and location content, and the team's class operations portal. The project is now live. Explore the screens below, captured before launch."
     navAriaLabel="Explore the medical training website and portal"
     chapters={chapters}
-    handoff="The website uses Next.js and Sanity; the operations portal uses Supabase on the client's own account. Build completion and launch are separate stages: this project is built, with testing underway before release."
+    handoff="The website uses Next.js and Sanity; the operations portal uses Supabase on the client's own account. The owner confirmed the project is live on 20 October 2026."
   />;
 }
