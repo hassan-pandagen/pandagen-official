@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PHONE } from "@/data/company-facts";
 import { ArrowRight, ArrowUpRight, Building2, Check, Quote, ShieldCheck } from "lucide-react";
 import {
   SITE_URL,
@@ -839,6 +840,11 @@ function LocaleFooter({
             <li>
               <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-charcoal">
                 {CONTACT_EMAIL}
+              </a>
+            </li>
+            <li>
+              <a href={`tel:${PHONE.e164}`} className="hover:text-charcoal">
+                {PHONE.display}
               </a>
             </li>
             <li>

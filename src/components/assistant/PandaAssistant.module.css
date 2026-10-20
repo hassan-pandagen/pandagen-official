@@ -58,13 +58,23 @@
 .privacy[open] { max-height: 130px; overflow-y: auto; }
 .panel:focus { outline: none; }
 @keyframes arrive { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+/* 20 Oct 2026, owner: a small hop so the launcher catches the eye. Starts after 4s, repeats every
+   12s, five times, and stops for good once the visitor has opened the assistant (see AskAssistant). */
+@keyframes nudge {
+  0%, 8%, 100% { transform: none; }
+  2% { transform: translateY(-7px) rotate(-2deg); }
+  4% { transform: translateY(0) rotate(2deg); }
+  6% { transform: translateY(-3px) rotate(-1deg); }
+}
+.nudge { animation: nudge 12s ease-in-out 4s 5; }
+.nudge:hover { animation-play-state: paused; }
 @media (max-width: 600px) {
   .launcher { right: 14px; bottom: max(14px, env(safe-area-inset-bottom), var(--cookie-banner-clearance, 0px)); padding: 6px; width: 52px; height: 52px; justify-content: center; }
   .launcherLabel { display: none; }
   .panel { right: 8px; top: calc(var(--assistant-viewport-top, 0px) + 8px); bottom: auto; width: calc(100vw - 16px); height: calc(var(--assistant-viewport-height, 100dvh) - 16px - env(safe-area-inset-bottom)); }
   .messages { padding: 20px; } .header { padding: 12px; } .composer { padding: 10px 14px 14px; } .welcome h3 { font-size: 36px; } .suggestions { margin-top: 18px; }
 }
-@media (prefers-reduced-motion: reduce) { .panel { animation: none; } .launcher, .suggestions button { transition: none; } .launcher:hover { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .panel, .nudge { animation: none; } .launcher, .suggestions button { transition: none; } .launcher:hover { transform: none; } }
 
 /* Intent-based starting points: a greeting, concrete tasks and a human route. */
 .welcome h3 span { display: block; margin-top: 2px; font-family: var(--font-body, "PT Serif"), Georgia, serif; font-size: 1.3em; font-style: italic; font-weight: 400; letter-spacing: -.045em; }

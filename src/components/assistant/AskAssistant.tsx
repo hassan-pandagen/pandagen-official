@@ -179,6 +179,8 @@ export default function AskAssistant() {
   const listRef = useRef<HTMLDivElement>(null);
   const returnFocus = useRef<HTMLElement | null>(null);
   const launcherRef = useRef<HTMLButtonElement>(null);
+  // The launcher nudges until the visitor opens the assistant once.
+  const [launcherSeen, setLauncherSeen] = useState(false);
   const [leadOpen, setLeadOpen] = useState(false);
   const [leadState, setLeadState] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [leadError, setLeadError] = useState("");
@@ -709,9 +711,10 @@ export default function AskAssistant() {
         onClick={(event) => {
           // Safari does not focus buttons on a pointer click; use the actual opener.
           returnFocus.current = event.currentTarget;
+          setLauncherSeen(true);
           setOpen(true);
         }}
-        className={ui.launcher}
+        className={`${ui.launcher} ${launcherSeen || open ? "" : ui.nudge}`}
         style={{ display: open ? "none" : undefined }}
         aria-controls="panda-assistant-panel"
       >

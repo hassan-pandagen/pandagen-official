@@ -6,6 +6,7 @@ import LocaleSwitcher from "@/components/i18n/LocaleSwitcher";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import CookieSettingsButton from "@/components/consent/CookieSettingsButton";
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
+import { PHONE } from "@/data/company-facts";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Closing block and footer. Redesign candidate, 24 Sep 2026.
@@ -124,6 +125,11 @@ export default function SiteFooter({ compactTop = false, linksOnly = false }: { 
               <li>
                 <a href="mailto:info@pandacodegen.com" style={{ color: T.onDark }}>
                   info@pandacodegen.com
+                </a>
+              </li>
+              <li>
+                <a href={`tel:${PHONE.e164}`} style={{ color: T.onDark }}>
+                  {PHONE.display}
                 </a>
               </li>
               <li>
