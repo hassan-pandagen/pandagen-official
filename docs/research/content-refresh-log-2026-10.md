@@ -192,3 +192,10 @@ table, Accepting payments: Third-party transaction fees 2% / 1% / 0.6% / 0.2%, u
 `shopify-third-party-payment-fee` re-dated from 2 Aug to 20 Oct 2026. The page also listed
 MB WAY and Bizum, so the viewer's region may not have been the US; noted in the qualifier.
 Evidence in `docs/research/evidence/`. The 30 Nov build failure no longer applies.
+
+## 20 Oct 2026: /blog/wordpress-plugin-security-2026, Rank Math PRO section
+
+New section on the Rank Math PRO 3.0.123 supply-chain incident (CVE-2026-111862), from Rank
+Math's advisory, its changelog and the CVE record. No infection counts or "exploited in the
+wild" claim (secondary source only). Dates moved to 2026-10-20; title, description and URL
+unchanged. Detail in the audit pack, round 4.

@@ -350,6 +350,40 @@ built site, and none overflow at 390px.
    opening the comparison sections. The fee stays dated 2 Aug 2026 until the owner sends a
    screenshot of that row.
 
+## Round 4: Rank Math PRO incident added to /blog/wordpress-plugin-security-2026 (20 Oct 2026)
+
+A new section, "What happened with Rank Math PRO in October 2026?", placed after the SSO
+plugin's "What should you do" list and before "What to ask a provider". Title, description and
+URL unchanged; dates moved to 2026-10-20.
+
+**Sources, all read 20 Oct 2026:**
+
+- Rank Math advisory: https://rankmath.com/kb/pro-3-0-123-security-incident/ (shows no
+  publish date). Window 15 Oct 2026 20:02 UTC to 16 Oct 07:12 UTC; clean version 3.0.124;
+  "a limited number of users"; free WordPress.org plugin not affected; the
+  activated / installed-not-activated / downloaded-only split; recovery steps; indicators;
+  "we will never send login or download links by email".
+- CVE record: https://cveawg.mitre.org/api/cve/CVE-2026-111862 (published 19 Oct 2026,
+  assigner Wordfence). "Supply-chain compromise", CVSS 3.1 9.8, affected 3.0.123 only, and
+  "version 3.0.123 alone is not sufficient to establish compromise".
+- Changelog: https://rankmath.com/changelog/ lists 3.0.123 (7 Oct) and 3.0.124 (16 Oct) with
+  the same two fixes and no security note.
+
+**What the section deliberately does not say:** how the files were replaced, how many sites
+received them, or that the flaw was exploited in the wild. A secondary news site
+(securityonline.info) says "actively exploited", but neither Rank Math nor the CVE record
+does, and no attack numbers have been published. Wordfence's own advisory page and Patchstack
+didn't load for us.
+
+**Our inferences, stated as such on the page:** "the files appear to have been swapped after
+release" (3.0.123 dated 7 Oct, bad copies served from 15 Oct); "eleven-hour window" (20:02 to
+07:12 is 11 h 10 min); "the fix shipped within hours" (clean 3.0.124 on 16 Oct, the day the
+window closed).
+
+**Please check:** that every recovery step and indicator matches the advisory; that "this turns
+the summer cases around" fairly contrasts it with the Super Forms and Elementor Pro section
+earlier in the article; and that nothing implies a breach of Rank Math's customer data.
+
 ## Open items
 
 1. **Shopify third-party payment fee: resolved 20 Oct 2026.** The owner screenshotted

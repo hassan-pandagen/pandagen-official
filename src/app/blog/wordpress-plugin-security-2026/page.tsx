@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-27",
-        modifiedTime: "2026-10-09",
+        modifiedTime: "2026-10-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath(`/blog/${postId}`)],
@@ -64,7 +64,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath(`/blog/${postId}`),
             datePublished: "2026-08-27T00:00:00-05:00",
-            dateModified: "2026-10-09T00:00:00-05:00",
+            dateModified: "2026-10-20T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -419,6 +419,51 @@ export default function WordPressPluginSecurity2026Page() {
                             "Check the separate OAuth plugin too. CVE-2026-57807 is a CVSS 9.8 authentication bypass affecting that plugin through 38.5.8, disclosed in July.",
                         ]}
                     />
+
+                    {/* 20 Oct 2026: Rank Math PRO supply-chain incident. Read from Rank Math's advisory,
+                        its changelog and the CVE record (published by Wordfence 19 Oct 2026). Rank Math has
+                        not said how the files were replaced or how many sites received them; don't add either. */}
+                    <BlogHeader id="rank-math-pro">What happened with Rank Math PRO in October 2026?</BlogHeader>
+                    <BlogText>
+                        Some copies of Rank Math PRO 3.0.123, the paid edition of the Rank Math SEO plugin, contained
+                        malware. According to{" "}
+                        <a href="https://rankmath.com/kb/pro-3-0-123-security-incident/" target="_blank" rel="noopener noreferrer" className={sourceLink}>Rank Math&apos;s security advisory</a>,
+                        the affected files reached users who downloaded or updated between 15 October 2026 at 20:02 UTC
+                        and 16 October at 07:12 UTC. Rank Math removed them and released a clean version, 3.0.124. The
+                        free Rank Math SEO plugin on WordPress.org was not affected. Wordfence published{" "}
+                        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111862" target="_blank" rel="noopener noreferrer" className={sourceLink}>CVE-2026-111862</a>{" "}
+                        for it on 19 October, scored CVSS 9.8, and describes it as a supply-chain compromise.
+                    </BlogText>
+                    <BlogText>
+                        This turns the summer cases around. There, the sites that got hurt were the ones that hadn&apos;t
+                        updated. Here, the update was the attack, and the sites at risk were the ones that updated
+                        promptly during an eleven-hour window. Version 3.0.123 had been out since 7 October, so the
+                        files appear to have been swapped after release. Rank Math hasn&apos;t said how that happened, or
+                        how many sites received them beyond &ldquo;a limited number of users&rdquo;. Its{" "}
+                        <a href="https://rankmath.com/changelog/" target="_blank" rel="noopener noreferrer" className={sourceLink}>changelog</a>{" "}
+                        lists the same two fixes for 3.0.123 and 3.0.124 and doesn&apos;t mention security, so the
+                        advisory is the place to read about it.
+                    </BlogText>
+                    <BlogText>
+                        The version number alone doesn&apos;t tell you whether a site was hit; the CVE record says so
+                        directly. What matters is what you did with the file during that window:
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Installed and activated 3.0.123 during the window: Rank Math says to treat the site as compromised. Its recommended fix is to restore the files and database from a backup made before 15 October at 20:02 UTC, change every password, database credential, API key and set of WordPress salts the site could reach, then install 3.0.124 from your Rank Math account.",
+                            "Installed but never activated: delete the plugin folder, install 3.0.124 from your Rank Math account and run a security scan.",
+                            "Downloaded but never installed: Rank Math says there is no sign of compromise from this incident alone.",
+                            "Cleaning by hand instead of restoring: the order matters, because the malware rebuilds its backdoor when someone visits the site. Rank Math says to delete the whole rank-math-pro folder and remove three malicious wp_options entries before looking for anything else.",
+                            "Signs Rank Math lists: administrator accounts named wpsupport_ followed by random characters or using @wp-mail.net addresses, a fake core file at wp-includes/class-wp-cache-util.php, .htaccess rules that run .cache files as PHP, a system cron entry tagged #ms6v46, and connections to rank1cdn.com.",
+                            "Rank Math says it never sends login or download links by email. Get 3.0.124 by going to rankmath.com yourself, and treat a password-reset or download email about this incident as suspect.",
+                        ]}
+                    />
+                    <BlogText>
+                        None of the four questions earlier would have caught this one. The advisory named the right
+                        version, the fix shipped within hours, and updating promptly was what exposed a site. What
+                        decided the outcome was whether the owner knew which sites updated during those eleven hours,
+                        and had a backup from before them.
+                    </BlogText>
 
                     <BlogHeader id="ask-provider">What to ask a provider about their patch process</BlogHeader>
                     <BlogText>
