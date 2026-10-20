@@ -709,7 +709,7 @@ export default function NextjsHostingZeroCostPage() {
                         <BlogHeader id="how-we-set-up-client-hosting">How We Set Up Vercel Hosting on a Client Build</BlogHeader>
 
                         <BlogText>
-                            Every commercial site we build runs on Vercel Pro. On our maintenance or SEO package, hosting
+                            For custom Next.js business websites, we set up Vercel Pro. On our maintenance or SEO package, hosting
                             on our Vercel account is included if you want it. Without a package, or whenever you ask, the
                             site runs in a Vercel team in your own name, on your own payment method. Either way the
                             domain, repository and billing contacts are written down at handover, so you&apos;re never

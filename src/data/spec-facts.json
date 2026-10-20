@@ -799,7 +799,7 @@
       "plan": "Free",
       "label": "Free plan",
       "value": "$0 a month",
-      "qualifier": "500 MB database, 1 GB file storage, 50,000 monthly active users, 2 active projects; free projects are paused after 1 week of inactivity and have no backups",
+      "qualifier": "500 MB database, 1 GB file storage, 50,000 monthly active users, 2 active projects; free projects are paused after 1 week of inactivity and have no included automatic backups",
       "verifiedAt": "2026-10-20",
       "reviewDays": 60,
       "source": "https://supabase.com/pricing"
@@ -828,7 +828,7 @@
       "plan": "Free",
       "label": "Free plan",
       "value": "$0 a month",
-      "qualifier": "up to 20 user seats, 2 public datasets, 10,000 documents, 1 million API CDN requests and 100 GB bandwidth a month; drafts kept 3 days",
+      "qualifier": "up to 20 user seats, 2 public datasets, 10,000 documents, 1 million API CDN requests and 100 GB bandwidth a month; 3 days of draft change history and 2 permission roles",
       "verifiedAt": "2026-10-20",
       "reviewDays": 60,
       "source": "https://www.sanity.io/pricing"
@@ -838,7 +838,7 @@
       "plan": "Growth",
       "label": "Growth plan price",
       "value": "$15 per seat a month",
-      "qualifier": "up to 50 user seats, 25,000 documents, private datasets and 90 days of draft history",
+      "qualifier": "up to 50 user seats, 25,000 documents, private datasets and 90 days of draft change history and 5 permission roles",
       "verifiedAt": "2026-10-20",
       "reviewDays": 60,
       "source": "https://www.sanity.io/pricing"

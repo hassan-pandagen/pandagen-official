@@ -408,8 +408,11 @@ earlier in the article; and that nothing implies a breach of Rank Math's custome
 **Why:** Search Console (3 months, regex for "it / they / this / these" queries) shows
 conversational follow-ups reaching the site, such as "is it free?" in many spellings, "how do
 they make money", "can you get this for me", "is it still the case in 2026" and "i mean is it
-safe". These read like second turns of an AI Mode conversation. We answered them where the
-tools are discussed, as FAQs (rendered on the page and in FAQPage markup). We could not pull
+safe". These are conversational queries worth testing; they are not confirmed AI follow-ups,
+and their zero clicks don't prove an AI answered them. We answered them where the tools are
+discussed, as visible FAQs. The page also carries FAQPage markup, but Google retired FAQ rich
+results in May 2026, so the markup earns no special search feature; the value is the visible
+answer. We could not pull
 page and date data for these queries (the Search Console connection failed), so which page each
 one reached is not confirmed.
 
@@ -460,6 +463,28 @@ citation or ranking.
 **Please check:** that "Usually a redesign" is fairly qualified (it's reasoning, not a measured
 figure); that the AI SEO answer doesn't promise outcomes; and that each answer matches the
 company facts it cites.
+
+## Round 8: corrections to round 6 after review (20 Oct 2026)
+
+1. **Sanity.** "Drafts kept 3 days" was draft change history, not deletion. Registry qualifiers
+   now read "3 days of draft change history and 2 permission roles" (Free) and "90 days of draft
+   change history and 5 permission roles" (Growth), both from sanity.io/pricing on 20 Oct.
+   "Most small business websites fit on the Free plan" (in the new FAQ, the older "Is Sanity
+   free?" FAQ and the sanity-vs-wordpress body) is now "Your site may fit on the Free plan,
+   depending on its usage and how many permission roles your team needs." "Is Sanity free?" and
+   "Is Sanity still free in 2026?" are merged into one answer, "Is Sanity free in 2026?".
+2. **Supabase.** "A live app needs Pro" (new FAQ and the sanity-vs-supabase body) is now "For
+   client production apps we use Pro". "No backups" (registry qualifier and three FAQs) is now
+   "no included automatic backups". The safety answer adds that daily database backups don't
+   include files uploaded to Supabase Storage (Supabase backups docs: "Database backups do not
+   include objects you store via the Storage API").
+3. **Vercel hosting promise.** "Every commercial site we build runs on Vercel Pro" (new FAQ and
+   the article's hosting section) is now "For custom Next.js business websites, we can configure /
+   we set up Vercel Pro", since we also build on WordPress.
+4. **Vercel revenue answer.** Now names paid plans, extra seats, usage beyond the credit "either
+   on demand or through Flat Rate CDN capacity tiers", paid add-ons and Enterprise.
+5. **This report.** Round 6 no longer calls the queries AI follow-ups or explains their zero
+   clicks, and says FAQ markup earns no search feature since Google retired FAQ rich results.
 
 ## Open items
 
