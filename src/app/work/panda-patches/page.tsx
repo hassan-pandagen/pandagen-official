@@ -49,6 +49,11 @@ const pageFaqs: { question: string; answer: string }[] = [
         question: "How long did it take to build the Panda Patches platform?",
         answer: `The initial storefront rebuild launched within 8 weeks. ${MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory} The current storefront includes custom pricing, Sanity CMS, an AI patch generator, a customer portal and server-side conversion tracking; the current feature set should not be read as the original launch scope. The connected staff CRM is a separate application sharing the same Supabase backend.`,
     },
+    // 20 Oct 2026: CIO Grid expert Q&A, published that day (company-facts GOVERNANCE "Press").
+    {
+        question: "Has the Panda Patches rebuild been covered in the press?",
+        answer: "Yes. Hassan Jamal used it as his example in a CIO Grid expert Q&A, \"How IT Leaders Decide When to Modernize Aging Systems\", published on 20 October 2026. His point: the sign it was time to rebuild was that quotes, order updates and customer messages had moved outside the site into email and spreadsheets. While the fixes still live inside the system, keep maintaining it; once they live outside it, start planning. Panda Patches is owned by co-founder Imran Raza Ladhani, so it is founder-affiliated, not an independent client engagement.",
+    },
 ];
 
 const caseStudySchema = {

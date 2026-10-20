@@ -14,6 +14,8 @@ export function migrationFaqs(): { q: string; a: string }[] {
   return [
     ...serviceBuyerQuestions("wordpress-migration"),
     { q: "Will every old address keep working?", a: "The inventory identifies addresses in scope. We preserve them where possible and map changed addresses to relevant destinations. Redirects reduce avoidable loss; search engines still control indexing and rankings." },
+    // 20 Oct 2026: Hassan's rule of thumb as quoted by CIO Grid that day (company-facts "Press").
+    { q: "How do I know it's time to move off WordPress?", a: "Look at where the work happens. If quotes, orders and customer messages are handled outside the site, in email, spreadsheets or another tool, it's probably costing your team time, and adding more plugins rarely fixes that. While the fixes still fit inside the system, keep maintaining it; once they live outside it, start planning a move. Hassan gave that rule of thumb to CIO Grid in October 2026, using the Panda Patches rebuild as his example." },
     { q: "Should we repair WordPress or migrate?", a: "We review what is making the current site hard to run. If a focused fix meets your needs, we can scope that work. If publishing, checkout or connected tools need a different structure, we plan a migration. You see the recommendation and cost before deciding." },
     // 20 Oct 2026: answers the "can you do it for me" follow-up for a host-only move.
     { q: "Can you move my WordPress site to a new host instead?", a: `Yes. First check whether your new host includes free migration; if it covers your site, use it. If it doesn't, or the site runs a store, business email or connected services: ${WORDPRESS_HOST_MIGRATION}` },
