@@ -4,7 +4,7 @@ import { getAttribution } from "@/lib/analytics/trafficSource";
 import { appendLeadTracking } from "@/lib/analytics/leadTracking";
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { CheckCircle2, ChevronDown, Send, X } from "lucide-react";
+import { CheckCircle2, Send, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { trackFBEvent } from "@/components/FacebookPixel";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
@@ -341,39 +341,46 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                           id="quote-details"
                           name="details"
                           maxLength={5000}
-                          rows={details ? 5 : 3}
+                          rows={2}
                           value={details}
                           onChange={(event) => setDetails(event.target.value)}
                           autoComplete="off"
                           placeholder="What would you like to build, change or ask? A sentence is plenty."
-                          className="w-full resize-y rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
+                          className="max-h-40 min-h-[74px] w-full resize-y rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors [field-sizing:content] focus:border-cognac focus:ring-1 focus:ring-cognac"
                         />
                       </Field>
 
-                      <Field label="Your website" id="quote-website" hint="optional">
-                        <input
-                          type="text"
-                          inputMode="url"
-                          id="quote-website"
-                          name="currentUrl"
-                          maxLength={2048}
-                          autoComplete="url"
-                          placeholder="example.com"
-                          className="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
-                        />
-                      </Field>
+                      {/* 22 Oct 2026, owner: the phone number was a bare "Add a phone number" line that
+                          did not look like a field and sat below the fold on a phone. It is now a normal
+                          optional field beside the website field (stacked on a phone). The message box
+                          starts two lines tall and grows with the text where the browser supports it. */}
+                      <div className="grid gap-4 md:grid-cols-2">
+                        <Field label="Your website" id="quote-website" hint="optional">
+                          <input
+                            type="text"
+                            inputMode="url"
+                            id="quote-website"
+                            name="currentUrl"
+                            maxLength={2048}
+                            autoComplete="url"
+                            placeholder="example.com"
+                            className="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
+                          />
+                        </Field>
 
-                      <details className="group border-y border-stone-200 py-2">
-                        <summary className="flex cursor-pointer list-none items-center justify-between gap-3 py-1 text-sm font-medium text-stone-600 transition-colors hover:text-charcoal [&::-webkit-details-marker]:hidden">
-                          Add a phone number <span className="sr-only">(optional)</span>
-                          <ChevronDown aria-hidden="true" className="h-4 w-4 transition-transform group-open:rotate-180" />
-                        </summary>
-                        <div className="pb-1 pt-4">
-                          <Field label="Phone" id="quote-phone" hint="optional">
-                            <input type="tel" id="quote-phone" name="phone" maxLength={50} autoComplete="tel" className="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac" />
-                          </Field>
-                        </div>
-                      </details>
+                        <Field label="Phone" id="quote-phone" hint="optional">
+                          <input
+                            type="tel"
+                            inputMode="tel"
+                            id="quote-phone"
+                            name="phone"
+                            maxLength={50}
+                            autoComplete="tel"
+                            placeholder="+1 555 123 4567"
+                            className="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
+                          />
+                        </Field>
+                      </div>
 
                       <div className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
                         <label htmlFor="quote-website-confirm">Leave this field empty</label>
