@@ -107,6 +107,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": `${canonicalUrl}#webpage`,
             url: canonicalUrl,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

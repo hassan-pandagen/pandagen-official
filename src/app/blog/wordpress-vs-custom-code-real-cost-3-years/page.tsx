@@ -102,6 +102,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#webpage",
             url: "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

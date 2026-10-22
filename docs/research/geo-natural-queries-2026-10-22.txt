@@ -1,0 +1,44 @@
+NATURAL-LANGUAGE QUERY RETEST ? 22 October 2026
+Two fresh agents with no inherited conversation, five questions each; target company not supplied. Exact natural-language question used as initial web search, followups allowed. One response per question; context shared within five-question batches. This is a Sol web-assisted benchmark, not consumer ChatGPT UI or a ranking/penalty test. Recorded search URLs are not necessarily exhaustive.
+
+PandaCodeGen named or cited in answers: 0/10.
+
+1. My website is slow. Do I need a new one?
+Not necessarily. Start with a performance diagnosis before buying a rebuild. Google's PageSpeed Insights shows mobile and desktop performance, real-user data where available, and suggested improvements. Ask a developer to identify the biggest bottlenecks—often images, scripts, server response or caching—and quote for fixing them. Compare performance before and after. A new site makes sense when the underlying platform prevents effective repairs, or you also need major changes to content, editing or functionality. Speed alone is not enough evidence to justify replacing everything.
+Sources: https://developers.google.com/speed/docs/insights/v5/about | https://developers.cloudflare.com/speed/troubleshooting/slow-website/
+
+2. How much should I pay someone to redo my website?
+For a basic small-business website, roughly US$1,000–$5,000 is a useful starting budget, based on Fiverr's published guide—not a universal price. Complex ecommerce, integrations, content creation and migration can cost substantially more. Get three quotes against the same written scope: page count, copy and images, mobile design, forms, SEO migration, accessibility, ownership, revisions, training and post-launch support. Ask for recurring hosting, maintenance and software fees separately. Pay against agreed milestones and compare relevant completed work rather than choosing on headline price alone.
+Sources: https://www.fiverr.com/resources/guides/business/web-designer-costs
+
+3. I’m tired of paying for WordPress plugins.
+Start by listing every plugin, annual renewal and feature you actually use. Remove redundant functionality and compare maintained free alternatives in the WordPress.org directory; some free listings also sell upgrades, so check the features you need. Test replacements on a staging copy with a backup. For anything business-critical, compare the licence cost with the cost of support and maintenance. Moving platforms may simplify your bills, but compare total costs—including hosting, integrations and migration—before committing. A simpler WordPress setup may solve the problem without a rebuild.
+Sources: https://wordpress.org/plugins/
+
+4. Can someone move my website without messing up Google?
+Yes—look for a developer or SEO migration specialist who can show a written migration plan and relevant examples. Keep existing URLs where possible. If they change, map each old page to its corresponding new page and use permanent server redirects. Preserve valuable content, update internal links and sitemaps, test the new site, and monitor Search Console after launch. Google advises changing major things separately and retaining redirects for at least a year. Nobody should promise zero ranking movement: temporary fluctuations can occur even with a careful migration.
+Sources: https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes
+
+5. We take course bookings by email. Is there an easier way?
+Yes. An online course-booking page can let customers choose a course, reserve places and receive confirmation without email exchanges. Shortlist WeTeachMe for class bookings and automated communications, or Wix Bookings if your website already uses Wix; its course tools manage participants, payments and attendance. Test your real workflow before buying: multi-session courses, capacity, waiting lists, group bookings, payment or invoices, cancellations and reminders. Pilot one course first, and compare subscription and transaction fees alongside the time saved.
+Sources: https://help.weteachme.com/hc/weteachme-dashboard/en/categories/bookings-attendees | https://support.wix.com/en/article/managing-a-course-participant-list-in-wix-bookings
+
+6. I need a website where people can book and pay.
+Start with a hosted booking page or embed one in your website. Compare Setmore and SumUp Bookings: both describe online booking with payment collection. [Setmore](https://www.setmore.com/features/payments/us) supports payment integrations; [SumUp](https://www.sumup.com/en-us/bookings/) offers a service website and prepaid bookings. Before choosing, check payment availability in your country, processing fees, deposits, cancellations, staff calendars and whether you need appointments, classes or rentals. Test a complete mobile booking and refund before launch.
+Sources: https://www.setmore.com/features/payments/us | https://www.sumup.com/en-us/bookings/
+
+7. Our orders are all in spreadsheets and it’s getting messy.
+Move toward one shared order system with structured entry: unique order IDs, consistent product names, quantities, customer details, status and an assigned owner. First clean duplicates and reconcile totals; then pilot a form-based workflow with a small batch before migrating everything. [Clappia](https://www.clappia.com/blog/why-spreadsheets-fail-for-daily-order-management) is one option for structured order-entry forms when spreadsheets allow inconsistent prices and data. Choose based on whether you also need inventory, invoicing, shipping and accounting integration. Keep an export and verify imported totals before switching.
+Sources: https://www.clappia.com/blog/why-spreadsheets-fail-for-daily-order-management
+
+8. Can my website send reminders automatically?
+Yes. Your booking or event system can schedule reminders by email or text. For example, [GoDaddy Websites + Marketing](https://www.godaddy.com/en-au/help/enable-sms-appointment-confirmations-and-reminders-42406) supports appointment reminders from 15 minutes to two weeks beforehand, and [NationBuilder](https://support.nationbuilder.com/en/articles/14817485-set-up-automatic-event-reminders) supports scheduled event reminders. Start by checking your existing platform. Decide what triggers each message, when it sends and what happens if someone cancels or reschedules. Check SMS availability, message costs and customer preferences, then test with a real booking.
+Sources: https://www.godaddy.com/en-au/help/enable-sms-appointment-confirmations-and-reminders-42406 | https://support.nationbuilder.com/en/articles/14817485-set-up-automatic-event-reminders
+
+9. Should I hire a freelancer or a web agency?
+Choose a freelancer when the job is clearly defined, fits one person's skills and you can coordinate decisions directly. Consider an agency when you need design, development, testing and ongoing support together, especially when continuity matters. An agency's larger team can provide cover, but ask who will actually do the work. These trade-offs are described in [this commissioning guide](https://mdse.org.uk/wp-content/uploads/2024/07/SHARE-Museums-East-Guide-to-working-with-freelancers-compressed.pdf) and [Meritbyte's comparison](https://www.meritbyte.com/blog/freelancer-vs-web-development-agency). Compare specific people, relevant work, scope, ownership and support terms before comparing quotes. Neither category guarantees quality.
+Sources: https://mdse.org.uk/wp-content/uploads/2024/07/SHARE-Museums-East-Guide-to-working-with-freelancers-compressed.pdf | https://www.meritbyte.com/blog/freelancer-vs-web-development-agency
+
+10. How do I find a reliable web developer?
+Write a short brief covering what the site must do, budget, deadline and ongoing support. Ask trusted business owners for referrals, then shortlist developers with live examples similar to your project. Review their role in each project, speak to previous clients and ask how they handle delays and updates. [Upwork's hiring guide](https://www.upwork.com/resources/tips-for-hiring-a-custom-web-developer) recommends checking relevant experience, communication and client feedback. Consider a small paid discovery task first. Agree milestones, acceptance criteria, maintenance and access to your domain, hosting and website accounts in writing; [Fiverr's guide](https://www.fiverr.com/resources/guides/programming-tech/find-web-developer) highlights ownership risks.
+Sources: https://www.upwork.com/resources/tips-for-hiring-a-custom-web-developer | https://www.fiverr.com/resources/guides/programming-tech/find-web-developer

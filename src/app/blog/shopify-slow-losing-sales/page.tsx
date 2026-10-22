@@ -115,6 +115,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#webpage",
             url: "https://www.pandacodegen.com/blog/shopify-slow-losing-sales",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

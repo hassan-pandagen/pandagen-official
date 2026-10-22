@@ -106,6 +106,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/top-custom-web-development-agencies-usa-2026#webpage",
             url: "https://www.pandacodegen.com/blog/top-custom-web-development-agencies-usa-2026",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

@@ -126,6 +126,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#webpage",
             url: "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

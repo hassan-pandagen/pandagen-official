@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import { ArrowRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import WorkCaseTitle from "@/components/redesign/case-study/WorkCaseTitle";
@@ -104,6 +105,7 @@ export function EnterpriseOpsCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyF
         </p>
 
         <WorkCaseTitle>Custom CRM development for Panda Patches</WorkCaseTitle>
+        <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={MIGRATION_PROJECT_DETAILS.pandaPatches.contentUpdatedOn}>October 22, 2026</time></p>
         <p className="mt-3 max-w-[38rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
           One place for our team to manage the working day.
         </p>

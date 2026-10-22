@@ -105,6 +105,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you#webpage",
             url: "https://www.pandacodegen.com/blog/why-competitor-outranks-you",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

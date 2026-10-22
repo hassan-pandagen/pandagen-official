@@ -1,5 +1,5 @@
 import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION } from "@/data/company-facts";
-import { requiredMetric } from "@/data/case-study-facts";
+import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import { EnterpriseOpsCaseStudyPreview as RedesignEnterpriseOpsCaseStudy } from "@/components/pages/work/enterprise-ops/Design";
@@ -8,7 +8,6 @@ import { EnterpriseOpsCaseStudyPreview as RedesignEnterpriseOpsCaseStudy } from 
 // this file in six places and went stale when the CRM grew to 36 and 191, and
 // a "3 roles" line contradicted the page's own 7. The figure tiles below
 // already read the registry; the prose now reads it too.
-const EDGE_FUNCTIONS = requiredMetric("enterprise-ops", "edge-functions");
 const PAGE_TITLE = "Custom CRM Development: Panda Patches Case Study";
 const PAGE_DESCRIPTION = "A custom CRM built for our Panda Patches team to manage customers, orders, production, payments and reports, with workflow automation and role-based access.";
 
@@ -53,7 +52,7 @@ const pageFaqs: { question: string; answer: string }[] = [
     },
     {
         question: "How long did it take to build the Panda Patches CRM?",
-        answer: "The full platform, a Supabase schema with Row-Level Security, a 17-status order pipeline, 12 reporting modules, RBAC with RLS policies, payments via Square, attendance with PKT timezone, automated profit calculations, and " + EDGE_FUNCTIONS + " Supabase Edge Functions, has been in continuous development since November 2025 and is still being added to. A code review was commissioned by us in 2026, but its scores are withdrawn from this site: the review document, its rubric and the reviewer could not be located during a source audit on 15 September 2026.",
+        answer: "The platform has been in continuous development since November 2025 and is still being added to. It includes a Supabase schema with Row-Level Security, an order pipeline, reporting, role-based access, Square payments, attendance and automated profit calculations. " + MIGRATION_PROJECT_DETAILS.pandaPatches.edgeFunctionsRecord + " A code review was commissioned by us in 2026, but its scores are withdrawn from this site: the review document, its rubric and the reviewer could not be located during a source audit on 15 September 2026.",
     },
     {
         question: "Can a custom dashboard work offline?",
@@ -71,7 +70,7 @@ const caseStudySchema = {
             "description": PAGE_DESCRIPTION,
             "image": ogImageUrlForPath("/work/enterprise-ops"),
             "datePublished": "2026-03-04T00:00:00Z",
-            "dateModified": "2026-10-10T00:00:00Z",
+            "dateModified": MIGRATION_PROJECT_DETAILS.pandaPatches.contentUpdatedOn,
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

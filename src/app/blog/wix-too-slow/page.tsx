@@ -100,6 +100,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/wix-too-slow#webpage",
             url: "https://www.pandacodegen.com/blog/wix-too-slow",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

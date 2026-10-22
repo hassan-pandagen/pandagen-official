@@ -109,6 +109,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs#webpage",
             url: "https://www.pandacodegen.com/blog/wordpress-vs-nextjs",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

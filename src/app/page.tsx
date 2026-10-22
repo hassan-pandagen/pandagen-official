@@ -139,7 +139,7 @@ export default function Home() {
         "@type": "WebSite",
         "@id": "https://www.pandacodegen.com/#website",
         "url": "https://www.pandacodegen.com",
-        "name": "PandaCodeGen - Website Design and Development",
+        "name": "PandaCodeGen",
         "description": ORGANIZATION_DESCRIPTION,
         "publisher": {
           "@id": "https://www.pandacodegen.com/#organization"

@@ -113,6 +113,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/squarespace-too-slow#webpage",
             url: "https://www.pandacodegen.com/blog/squarespace-too-slow",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

@@ -1,0 +1,189 @@
+PANDACODEGEN GEO AUDIT AND BLIND SOL QUERY BASELINE
+22 October 2026
+
+Scope: 92 articles, 11 topic hubs, blog index, 14 English service detail pages, English service index, French and German service indexes: 121 production URLs.
+All 121 production URLs returned HTTP 200. Tool scores ranged from 72 to 87 out of 100.
+Scores are heuristic checks, not Google rankings, penalties or citation probabilities.
+No canonical/index/snippet eligibility blocker was reported. All 92 articles passed the scored Google-readiness checks. This does not prove actual indexing.
+
+IMPLEMENTED LOCALLY
+- Added existing article titles as WebPage names in 28 article schema nodes. This improves clarity; their absence did not prove a ranking penalty.
+- Reused the existing organization profile list in global Organization markup, including all service and blog pages.
+- Aligned the two homepage WebSite declarations to the same PandaCodeGen name.
+- Added visible editorial update dates to Panda Patches, its CRM case study and A Step Above Medical.
+- Centralized those editorial dates for page schema and sitemap; kept ASAM launch confirmation separate.
+- Preserved prior owner-authorized Supabase/Edge Functions updates and unrelated .gitignore changes.
+- Did not mass-rewrite articles, change publication dates, or alter commercial promises.
+
+RECOMMENDATIONS REVIEWED AND NOT AUTOMATICALLY APPLIED
+- Hidden text: sampled detection evidence is closed navigation and its descendants, legitimate toggled UI.
+- Four critical instruction flags match ordinary prose: semantic triples, contact creation, and business impact scenarios. No instruction payload was identified in those samples.
+- Thirteen service UGC warnings have no LLM instruction samples; they combine a review region with the generic hidden-menu finding.
+- Keyword density warnings count the subjects of articles (WordPress, Sanity, Shopify, etc.). Frequency alone is insufficient evidence of stuffing.
+- Blank alt warnings include decorative blog-cover artwork, linked thumbnails and repeated avatars. Informative case-study screenshots already have descriptions. No keyword-filled alt text added.
+- Date warnings apply to service/index/topic pages, not the 92 articles. No artificial article dates added.
+- FAQ, citations, author and form-label suggestions require page context. Existing article sources/FAQ content and real accessible labels should not be replaced by generic boilerplate.
+- ai.txt, summary/FAQ/service JSON endpoints, WebMCP and additional Wikipedia/Wikidata profiles are not prerequisites for Google AI eligibility. No invented profiles or unsupported endpoint claims added.
+- RSS is a reasonable optional reader feature, not a demonstrated citation blocker. SearchAction should describe a real supported site search, not fabricated behavior.
+- The tool mentions a Search Console generative-AI control. This audit did not verify that setting; it is not treated as a finding.
+
+VALIDATION
+- npm run check passed (typecheck, lint, tests, public claims and dates checks).
+- npm run build passed. Existing Edge Runtime deprecation warning remains; no runtime migration was necessary for this markup work.
+- 125 locally served production pages passed HTTP, canonical, one-H1, indexing metadata, organization profiles and WebPage-name checks. This includes all 121 audited routes, homepage and three case studies.
+- Case-study schema/visible dates and homepage WebSite-name consistency passed.
+- Desktop and 390px mobile browser checks of ASAM passed, with no horizontal page overflow; screenshot reviewed.
+
+30 UNBRANDED SOL QUERIES
+gpt-6.1-sol, three fresh agents with no inherited conversation and ten unbranded questions each. No target brand supplied. Broad web searches per question; no seeding companies from earlier answers. Shared context within each ten-question batch is a limitation. These are Codex Sol web-assisted responses, not consumer ChatGPT UI observations. One run per question, no statistical inference. Local changes were unpublished, so this is a production baseline, not an improvement measurement.
+PandaCodeGen appeared in search results for 4/30 queries and in cited answer recommendations for 2/30.
+Cited/recommended: medical training website and booking portal; Squarespace migration.
+Search results only: Sanity versus Supabase; keeping GoHighLevel CRM while replacing the website.
+Question 1 used a search excerpt labeled crawled last week saying ASAM was in testing. The current production service page and local build say live and contain no testing wording. Agent confirmed it did not open the page before answering. Original benchmark answer preserved.
+
+WHAT TO DO NEXT
+The valid audit fixes are ready locally. Nothing was committed, pushed or deployed by this audit.
+After deployment, request recrawling of the medical service/case study pages if the recent live-status change has not been picked up. Avoid repeatedly rewriting correct copy because an excerpt is old.
+Repeat this same query set after indexing has had time to catch up. For an actual ChatGPT consumer benchmark, run the questions in separate temporary chats with search and record citations. Do not compare different methods as a single trend.
+Prioritize documented client work and useful independent references. This one run does not justify new near-duplicate landing pages for every query.
+
+SOURCES AND EVIDENCE
+https://github.com/Auriti-Labs/geo-optimizer-skill/blob/main/SKILL.md
+https://developers.google.com/search/docs/appearance/ai-features
+Machine-readable results and all 30 original answers: docs/research/geo-audit-2026-10-22.json
+Complete raw engine reports and screenshots: .tmp/geo-audit-2026-10-22/
+
+QUERY OUTCOMES
+01. Who can build a custom website and booking portal for a medical training company?
+    In search: True; cited: True; named: True
+02. Which agencies build Supabase backends and custom CRMs for small businesses?
+    In search: False; cited: False; named: False
+03. Who can migrate a WordPress business website to Next.js without losing existing URLs?
+    In search: False; cited: False; named: False
+04. Recommend developers for a Sanity website that my staff can edit themselves.
+    In search: False; cited: False; named: False
+05. Who builds custom ecommerce stores with order management and production tracking?
+    In search: False; cited: False; named: False
+06. How much does a small business website cost in 2026?
+    In search: False; cited: False; named: False
+07. Is Vercel free for a business website?
+    In search: False; cited: False; named: False
+08. Is Sanity still free in 2026?
+    In search: False; cited: False; named: False
+09. Should I use Sanity or Supabase for my business website?
+    In search: True; cited: False; named: False
+10. What does a WordPress to Next.js migration cost?
+    In search: False; cited: False; named: False
+11. Who can replace my spreadsheets with a custom business portal?
+    In search: False; cited: False; named: False
+12. Recommend a developer for a course booking website with Stripe payments and certificates.
+    In search: False; cited: False; named: False
+13. Who can improve a slow WooCommerce store or rebuild it with custom code?
+    In search: False; cited: False; named: False
+14. Which web agencies offer founder-led development for small businesses in Texas?
+    In search: False; cited: False; named: False
+15. Who can build a website with Sanity CMS and a Supabase backend?
+    In search: False; cited: False; named: False
+16. How much do Shopify apps really add to the monthly bill?
+    In search: False; cited: False; named: False
+17. Is it cheaper to redesign or rebuild a business website?
+    In search: False; cited: False; named: False
+18. Can I keep GoHighLevel as my CRM and replace its website?
+    In search: True; cited: False; named: False
+19. What should a website migration quote include?
+    In search: False; cited: False; named: False
+20. How do I make my business website appear in AI answers?
+    In search: False; cited: False; named: False
+21. Who can automate booking confirmations, reminder emails and PDF invoices for a small business?
+    In search: False; cited: False; named: False
+22. Recommend agencies that build custom portals for manufacturing and shipping teams.
+    In search: False; cited: False; named: False
+23. Who offers WordPress migration with training and documentation for the client?
+    In search: False; cited: False; named: False
+24. Who can build a product catalogue website without an online checkout?
+    In search: False; cited: False; named: False
+25. Who can migrate my Squarespace website to a custom website?
+    In search: True; cited: True; named: True
+26. Is Supabase safe for customer data in a small business CRM?
+    In search: False; cited: False; named: False
+27. How much does hosting a Next.js website cost?
+    In search: False; cited: False; named: False
+28. Can an agency guarantee that ChatGPT will cite my business?
+    In search: False; cited: False; named: False
+29. What are the ongoing costs of a custom website compared with WordPress?
+    In search: False; cited: False; named: False
+30. Can I move away from Wix without losing search traffic?
+    In search: False; cited: False; named: False
+
+RAW RECOMMENDATION FREQUENCIES (NOT ALL ARE VALID FINDINGS)
+121: Create /.well-known/ai.txt to define AI crawler permissions
+121: Create /ai/summary.json with site name and description for AI engines
+121: Create /ai/faq.json with structured FAQ for AI search visibility
+121: Create /ai/service.json to describe service capabilities for AI
+121: Add RSS/Atom feed and link it in <head> with <link rel="alternate" type="application/rss+xml"> for AI discovery
+121: Consider adding WebMCP toolname/tooldescription attributes to interactive elements for Chrome AI agent support
+120: Use consistent brand name across title, og:title, H1, and schema Organization
+120: Add potentialAction (SearchAction) to WebSite schema for AI agent discoverability
+120: Add descriptive labels to forms (label, aria-label) to make them usable by AI agents
+119: Hidden text detected (display:none/visibility:hidden with content) — AI crawlers can read it and may penalize this cloaking pattern
+119: Add sameAs links in Organization schema to Wikipedia, Wikidata, LinkedIn, or Crunchbase for Knowledge Graph disambiguation
+80: 3 of 3 images lack descriptive alt text — multimodal AI engines (Gemini, GPT-4o) read images through their alt text
+29: [G-DATES] No valid publication or update date found — https://developers.google.com/search/docs/appearance/publication-dates
+28: Incomplete WebPage schema: add required fields name (see schema.org/WebPage for the full spec)
+23: Cite authoritative sources with external links (increase AI credibility)
+13: Add FAQPage schema with site FAQs
+13: Injection pattern found on a page that also exposes user-generated content ('review' region) — the payload may be a third-party comment/review, not your own markup. Moderate the UGC area, mark links inside it rel="ugc", and consider excluding unmoderated UGC from AI crawlers.
+12: 2 of 2 images lack descriptive alt text — multimodal AI engines (Gemini, GPT-4o) read images through their alt text
+8: 2 of 4 images lack descriptive alt text — multimodal AI engines (Gemini, GPT-4o) read images through their alt text
+7: 2 of 5 images lack descriptive alt text — multimodal AI engines (Gemini, GPT-4o) read images through their alt text
+4: ⚠️ CRITICAL: LLM prompt instructions detected in page content — this is a manipulation pattern that AI engines actively penalize
+4: 3 of 4 images lack descriptive alt text — multimodal AI engines (Gemini, GPT-4o) read images through their alt text
+3: 2 of 3 images lack descriptive alt text — multimodal AI engines (Gemini, GPT-4o) read images through their alt text
+2: 3 of 5 images lack descriptive alt text — multimodal AI engines (Gemini, GPT-4o) read images through their alt text
+2: Keyword stuffing detected: 'squarespace' at 3.1% density — diversify vocabulary
+2: Keyword stuffing detected: 'migration' at 3.4% density — diversify vocabulary
+2: Keyword stuffing detected: 'webflow' at 3.0% density — diversify vocabulary
+2: Add H2/H3 subheadings to structure content for AI extraction
+1: Add more sameAs links to Knowledge Graph pillars (currently 1/4: Wikipedia, Wikidata, LinkedIn, Crunchbase)
+1: Keyword stuffing detected: 'emdash' at 2.7% density — diversify vocabulary
+1: Keyword stuffing detected: 'divi' at 3.1% density — diversify vocabulary
+1: Keyword stuffing detected: 'highlevel' at 5.2% density — diversify vocabulary
+1: Keyword stuffing detected: 'update' at 3.3% density — diversify vocabulary
+1: Add more sameAs links to Knowledge Graph pillars (currently 2/4: Wikipedia, Wikidata, LinkedIn, Crunchbase)
+1: Keyword stuffing detected: 'webflow' at 2.7% density — diversify vocabulary
+1: Keyword stuffing detected: 'vercel' at 2.9% density — diversify vocabulary
+1: Keyword stuffing detected: 'product' at 2.7% density — diversify vocabulary
+1: Keyword stuffing detected: 'supabase' at 3.1% density — diversify vocabulary
+1: Keyword stuffing detected: 'sanity' at 2.8% density — diversify vocabulary
+1: Keyword stuffing detected: 'shopify' at 3.6% density — diversify vocabulary
+1: Keyword stuffing detected: 'theme' at 2.7% density — diversify vocabulary
+1: Keyword stuffing detected: 'shopify' at 3.2% density — diversify vocabulary
+1: Keyword stuffing detected: 'shopify' at 2.7% density — diversify vocabulary
+1: Keyword stuffing detected: 'shopify' at 3.3% density — diversify vocabulary
+1: Keyword stuffing detected: 'shopify' at 2.8% density — diversify vocabulary
+1: Keyword stuffing detected: 'squarespace' at 2.6% density — diversify vocabulary
+1: Keyword stuffing detected: 'squarespace' at 2.8% density — diversify vocabulary
+1: Keyword stuffing detected: 'website' at 2.6% density — diversify vocabulary
+1: Keyword stuffing detected: 'shopify' at 2.9% density — diversify vocabulary
+1: Keyword stuffing detected: 'migration' at 3.3% density — diversify vocabulary
+1: Keyword stuffing detected: 'wordpress' at 4.0% density — diversify vocabulary
+1: Keyword stuffing detected: 'webflow' at 2.8% density — diversify vocabulary
+1: Keyword stuffing detected: 'webflow' at 3.5% density — diversify vocabulary
+1: Keyword stuffing detected: 'month' at 2.8% density — diversify vocabulary
+1: 10 of 10 images lack descriptive alt text — multimodal AI engines (Gemini, GPT-4o) read images through their alt text
+1: Keyword stuffing detected: 'llms' at 3.1% density — diversify vocabulary
+1: Keyword stuffing detected: 'wordpress' at 2.6% density — diversify vocabulary
+1: Keyword stuffing detected: 'woocommerce' at 2.8% density — diversify vocabulary
+1: Keyword stuffing detected: 'wordpress' at 2.7% density — diversify vocabulary
+1: Keyword stuffing detected: 'guide' at 4.4% density — diversify vocabulary
+1: 101 of 101 images lack descriptive alt text — multimodal AI engines (Gemini, GPT-4o) read images through their alt text
+1: Keyword stuffing detected: 'content' at 3.1% density — diversify vocabulary
+1: Keyword stuffing detected: 'shopify' at 3.1% density — diversify vocabulary
+1: Keyword stuffing detected: 'gohighlevel' at 3.4% density — diversify vocabulary
+1: Keyword stuffing detected: 'squarespace' at 3.9% density — diversify vocabulary
+1: Keyword stuffing detected: 'webflow' at 4.0% density — diversify vocabulary
+1: Keyword stuffing detected: 'woocommerce' at 3.6% density — diversify vocabulary
+1: Keyword stuffing detected: 'wordpress' at 4.1% density — diversify vocabulary
+1: 2 of 6 images lack descriptive alt text — multimodal AI engines (Gemini, GPT-4o) read images through their alt text
+1: Keyword stuffing detected: 'wordpress' at 4.9% density — diversify vocabulary
+1: Keyword stuffing detected: 'development' at 2.7% density — diversify vocabulary

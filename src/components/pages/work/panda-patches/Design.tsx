@@ -86,7 +86,7 @@ const REVENUE = requiredMetric("panda-patches", "monthly-revenue");
 const techStack = [
   { name: "Next.js 16 + React 19", role: "Frontend and API routes" },
   { name: "Sanity CMS", role: "Structured content models, the team edits content without a developer" },
-  { name: "Supabase", role: "Database, auth and storage, shared with the operations platform" },
+  { name: "Supabase", role: "Database, authentication, storage buckets and Edge Functions, shared with the operations platform" },
   { name: "Square", role: "Checkout, Apple/Google Pay, Cash App, Afterpay" },
   { name: "fal.ai (FLUX.1 [schnell])", role: "AI patch mockup generator" },
   { name: "Meta CAPI, GA4/GTM, Google Ads", role: "Server-side conversion tracking" },
@@ -136,6 +136,7 @@ export function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
           </p>
 
           <WorkCaseTitle>Panda Patches</WorkCaseTitle>
+          <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={MIGRATION_PROJECT_DETAILS.pandaPatches.contentUpdatedOn}>October 22, 2026</time></p>
           <p className="mt-3 max-w-[38rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
             A custom-patch storefront connected to the team&apos;s order-management system.
           </p>
@@ -222,6 +223,15 @@ export function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
                   <span className="text-[13px] md:col-span-8" style={{ color: T.quiet }}>{t.role}</span>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-8 max-w-[48rem]">
+              <h3 className="text-[20px] font-semibold" style={{ color: T.ink }}>The Supabase backend behind the storefront.</h3>
+              <p className="mt-3 text-[16px] leading-[1.65]" style={{ color: T.body }}>{MIGRATION_PROJECT_DETAILS.pandaPatches.supabaseScope}</p>
+              <p className="mt-3 text-[14px] leading-[1.6]" style={{ color: T.quiet }}>{MIGRATION_PROJECT_DETAILS.pandaPatches.edgeFunctionsRecord}</p>
+              <Link href="/work/enterprise-ops" className="mt-4 inline-flex items-center gap-2 text-[14px] font-medium underline underline-offset-4" style={{ color: T.accent }}>
+                Explore the Panda Patches CRM <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
             </div>
 
             <details className="mt-5">

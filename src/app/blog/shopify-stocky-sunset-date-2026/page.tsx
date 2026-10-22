@@ -109,6 +109,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/shopify-stocky-sunset-date-2026#webpage",
             url: "https://www.pandacodegen.com/blog/shopify-stocky-sunset-date-2026",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

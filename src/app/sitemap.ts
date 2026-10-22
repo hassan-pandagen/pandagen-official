@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { blogPosts } from '@/data/blog'
+import { MIGRATION_PROJECT_DETAILS } from '@/data/migration-projects'
 import { hubs, hubPostIds } from '@/data/hubs'
 import { localizedPages, routes as localeRoutes, type LocalizedPage } from '@/lib/i18n/config'
 
@@ -54,8 +55,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 4. Dynamic Content
     { path: '/work', changeFrequency: 'monthly', priority: 0.8, lastModified: '2026-10-08' },
     { path: '/work/mycustompatches', changeFrequency: 'yearly', priority: 0.7 },
-    { path: '/work/panda-patches', changeFrequency: 'yearly', priority: 0.6 },
-    { path: '/work/enterprise-ops', changeFrequency: 'yearly', priority: 0.6, lastModified: '2026-10-10' },
+    { path: '/work/panda-patches', changeFrequency: 'yearly', priority: 0.6, lastModified: MIGRATION_PROJECT_DETAILS.pandaPatches.contentUpdatedOn },
+    { path: '/work/enterprise-ops', changeFrequency: 'yearly', priority: 0.6, lastModified: MIGRATION_PROJECT_DETAILS.pandaPatches.contentUpdatedOn },
     // Added 28 Aug 2026. Both pages were live, linked from /work and declaring
     // index:true, but had been missed here when they shipped, so the sitemap
     // contradicted their own robots directive. seo-audit.mjs flagged both.
@@ -68,7 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Added 30 Sep 2026 with the redesign switch: both are new live pages.
     { path: '/work/northdeck-group', changeFrequency: 'yearly', priority: 0.6 },
     // Confirmed live by the owner on 20 Oct 2026.
-    { path: '/work/a-step-above-medical', changeFrequency: 'monthly', priority: 0.5, lastModified: '2026-10-20' },
+    { path: '/work/a-step-above-medical', changeFrequency: 'monthly', priority: 0.5, lastModified: MIGRATION_PROJECT_DETAILS.aStepAboveMedical.contentUpdatedOn },
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/about/hassan', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },
     { path: '/about/imran', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },

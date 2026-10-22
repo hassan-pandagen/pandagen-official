@@ -92,6 +92,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development#webpage",
             url: "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

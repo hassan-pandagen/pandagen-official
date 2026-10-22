@@ -41,7 +41,7 @@ const schema = {
       breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
       about: { "@id": `${canonicalUrl}#project` },
       publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-      dateModified: details.confirmedOn,
+      dateModified: details.contentUpdatedOn,
     },
     {
       "@type": "CreativeWork",

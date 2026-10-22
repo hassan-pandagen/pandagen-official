@@ -26,6 +26,10 @@ export const metadata: Metadata = {
 
 const pageFaqs: { question: string; answer: string }[] = [
     {
+        question: "How does Panda Patches use Supabase?",
+        answer: `${MIGRATION_PROJECT_DETAILS.pandaPatches.supabaseScope} ${MIGRATION_PROJECT_DETAILS.pandaPatches.edgeFunctionsRecord} Panda Patches is founder-affiliated, not an independent client engagement.`,
+    },
+    {
         question: "Did the Panda Patches WordPress migration preserve Google search rankings?",
         answer: "We migrated the 3-year-old WordPress site to Next.js and recorded no ranking losses in Google Search Console during the 30-day post-launch monitoring window. We exported every indexed URL before migration, built 301 redirects for each one in Next.js middleware, preserved existing meta titles and descriptions, upgraded schema markup without changing entity signals, and submitted a fresh sitemap to Google the day of launch. Rankings held through that 30-day window. Movement after that point reflects many factors outside our control and is not attributed to the rebuild. No provider controls search rankings.",
     },
@@ -66,7 +70,7 @@ const caseStudySchema = {
             "description": description,
             "image": ogImageUrlForPath("/work/panda-patches"),
             "datePublished": "2026-03-04T00:00:00Z",
-            "dateModified": "2026-09-29T00:00:00Z",
+            "dateModified": MIGRATION_PROJECT_DETAILS.pandaPatches.contentUpdatedOn,
             "articleSection": "Case Study",
             "inLanguage": "en-US",
             "wordCount": 2100,

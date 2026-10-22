@@ -11,7 +11,7 @@ import { ConsentProvider } from "@/components/consent/ConsentProvider";
 import ConsentManagedServices from "@/components/consent/ConsentManagedServices";
 import CookieConsent from "@/components/consent/CookieConsent";
 import AskAssistant from "@/components/assistant/AskAssistant";
-import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, PHONE } from "@/data/company-facts";
+import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, ORGANIZATION_PROFILES, PHONE } from "@/data/company-facts";
 
 // Inter serves interface text; PT Serif serves paragraphs and italic accents.
 // Preload their Latin regular faces to avoid reflow above the fold. Other
@@ -118,6 +118,7 @@ const siteGraph = {
       telephone: PHONE.e164,
       contactPoint: { "@type": "ContactPoint", contactType: "Customer Service", email: "info@pandacodegen.com", telephone: PHONE.e164 },
       description: ORGANIZATION_DESCRIPTION,
+      sameAs: [...ORGANIZATION_PROFILES],
       areaServed: "Worldwide",
       // The LLC formation date from the Articles, not the brand start date.
       // PandaCodeGen has traded since February 2026; the company was formed

@@ -95,6 +95,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#webpage",
             url: "https://www.pandacodegen.com/blog/elementor-kills-seo",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

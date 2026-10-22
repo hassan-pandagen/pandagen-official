@@ -135,6 +135,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow#webpage",
             url: "https://www.pandacodegen.com/blog/shopify-plus-still-slow",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

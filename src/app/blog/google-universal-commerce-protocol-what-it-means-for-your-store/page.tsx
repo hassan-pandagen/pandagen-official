@@ -107,6 +107,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store#webpage",
             url: "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

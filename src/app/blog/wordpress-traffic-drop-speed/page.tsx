@@ -97,6 +97,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#webpage",
             url: "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

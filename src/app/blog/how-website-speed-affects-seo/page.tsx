@@ -97,6 +97,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#webpage",
             url: "https://www.pandacodegen.com/blog/how-website-speed-affects-seo",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

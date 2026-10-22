@@ -46,6 +46,7 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <Link href="/work" style={{ color: T.quiet }}>Work</Link> / A Step Above Medical / {details.status}
         </p>
         <WorkCaseTitle>A Step Above Medical</WorkCaseTitle>
+        <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={details.contentUpdatedOn}>October 21, 2026</time></p>
         <p className="mt-3 max-w-[42rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
           A complete medical training management system.
         </p>

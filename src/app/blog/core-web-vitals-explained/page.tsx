@@ -103,6 +103,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/core-web-vitals-explained#webpage",
             url: "https://www.pandacodegen.com/blog/core-web-vitals-explained",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

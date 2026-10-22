@@ -11,6 +11,7 @@
  */
 export const MIGRATION_PROJECT_DETAILS = {
   pandaPatches: {
+    contentUpdatedOn: "2026-10-22",
     status: "Live",
     summary: "We rebuilt our own WordPress and WooCommerce store with Next.js, a Sanity content editor, custom product pricing and checkout. A custom Supabase backend connects the storefront to a separate operations system for orders, production, payments and reporting.",
     paymentHistory: "Panda Patches started with Stripe. We later moved its payments to Square, which is the current provider.",
@@ -20,6 +21,9 @@ export const MIGRATION_PROJECT_DETAILS = {
     tools: "The store also runs six free tools we built: a thread colour chart of 719 thread codes that matches the colours in an uploaded logo on the visitor's own device, DST and PES embroidery file viewers, a DST and PES converter that works in both directions, a stitch count calculator that prices the estimate from the live pricing engine, and an AI patch generator that uses the FLUX.1 [schnell] model through fal.ai.",
     aiGeneratorCost: "fal.ai billed $0.12 for the AI patch generator from 1 to 13 October 2026: 39 megapixels of images at $0.003 per megapixel.",
     toolsCheckedOn: "2026-10-13",
+    supabaseScope: "The storefront and operations portal share a Supabase backend for the database, authentication, storage buckets and Edge Functions. Customer accounts connect to order history and tracking, while role-based access supports digitizing, reseller, shipping and production workflows. Edge Functions handle server-side business logic and integrations.",
+    // Owner supplied a repository folder count on 22 Oct 2026, not a live deployment audit.
+    edgeFunctionsRecord: "The owner reported 47 Edge Function implementations in the CRM repository on 22 October 2026, excluding the _shared helper folder. This is a source-code count, not a verified count of functions deployed live.",
   },
   ladies4Jesus: {
     status: "Live",
@@ -27,6 +31,8 @@ export const MIGRATION_PROJECT_DETAILS = {
     confirmedOn: "2026-09-18",
   },
   aStepAboveMedical: {
+    // Editorial revision; separate from the owner's launch confirmation.
+    contentUpdatedOn: "2026-10-21",
     name: "A Step Above Medical",
     status: "Live",
     websiteUrl: "https://astepabovemed.com/",

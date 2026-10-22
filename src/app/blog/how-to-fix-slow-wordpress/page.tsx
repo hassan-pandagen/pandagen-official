@@ -100,6 +100,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#webpage",
             url: "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },

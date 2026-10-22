@@ -126,6 +126,7 @@ const articleSchema = {
         },
         {
             "@type": "WebPage",
+            name: title,
             "@id": "https://www.pandacodegen.com/blog/squarespace-migration-cost#webpage",
             url: "https://www.pandacodegen.com/blog/squarespace-migration-cost",
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
