@@ -4,7 +4,7 @@ import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
   title: { absolute: "Privacy Policy | PandaCodeGen" },
-  description: "How PandaCodeGen collects, uses, and protects your data. Last updated October 7, 2026.",
+  description: "How PandaCodeGen collects, uses, and protects your data. Last updated October 22, 2026.",
   alternates: { canonical: "/privacy" },
   openGraph: {
     title: "Privacy Policy | PandaCodeGen",
@@ -56,7 +56,7 @@ export default function PrivacyPage() {
 
           <div className="mb-16 animate-fade-in-up">
             <h1 className="text-5xl font-bold text-charcoal mb-4">Privacy Policy</h1>
-            <p className="text-stone-600">Last updated: October 7, 2026</p>
+            <p className="text-stone-600">Last updated: October 22, 2026</p>
           </div>
 
           <div className="space-y-8 text-stone-600 leading-relaxed">
@@ -143,6 +143,7 @@ export default function PrivacyPage() {
               <ul className="list-disc list-inside space-y-2 text-stone-600 mt-4">
                 <li><strong>Service Providers:</strong> Vendors that help us host the site, count page views without cookies (Vercel Web Analytics), process email and payments, answer website-assistant questions through Vercel AI Gateway, deliver live-chat messages to our team through Slack, and deliver requested services.</li>
                 <li><strong>Optional Website Providers:</strong> When a provider is configured for the deployment and you allow its category, Google Analytics and Microsoft Clarity may provide analytics; Meta Pixel may provide advertising measurement; and Cal.com may provide scheduling.</li>
+                <li><strong>Advertising Measurement:</strong> When you send an enquiry through a form or the website assistant, our customer system may send Meta and Google a record that an enquiry happened. It includes coded (hashed) versions of your email address, phone number and name, your country and state, your IP address and browser details, the advertising click identifiers captured if you arrived from an ad, and, if you later become a client, the value of the project. Your message is not included. We do not send this for visitors in the EU, EEA, UK or Switzerland unless they have allowed marketing, or for anyone who has Global Privacy Control turned on or has used our <a href="/privacy/do-not-share" className="text-cognac hover:underline">opt-out form</a>.</li>
                 <li><strong>Legal Requirements:</strong> When required by law, court order, or government request.</li>
                 <li><strong>Business Transfers:</strong> In case of merger, acquisition, or sale of assets.</li>
                 <li><strong>With Your Consent:</strong> We will share information only with your explicit permission.</li>
@@ -163,6 +164,7 @@ export default function PrivacyPage() {
                 <li><strong>Correction:</strong> You can request that we update or correct inaccurate information.</li>
                 <li><strong>Deletion:</strong> You can request deletion of your data (subject to legal obligations).</li>
                 <li><strong>Opt-Out:</strong> You can unsubscribe from marketing emails at any time.</li>
+                <li><strong>Opt Out of Sharing:</strong> You can ask us not to share information linked to your email address with advertising platforms, using our <a href="/privacy/do-not-share" className="text-cognac hover:underline">opt-out form</a>.</li>
                 <li><strong>Data Portability:</strong> You can request your data in a portable format.</li>
               </ul>
               <p className="mt-4">
@@ -181,7 +183,7 @@ export default function PrivacyPage() {
               <ul className="list-disc list-inside space-y-2 text-stone-600 mt-2">
                 <li><strong>Necessary:</strong> Local storage that records and applies your privacy choice.</li>
                 <li><strong>Analytics:</strong> Google Analytics and Microsoft Clarity.</li>
-                <li><strong>Advertising:</strong> Meta Pixel.</li>
+                <li><strong>Advertising:</strong> Meta Pixel in your browser, only when you allow marketing. Enquiry measurement from our customer system is separate and is described in section 4.</li>
                 <li><strong>Functional:</strong> Cal.com scheduling.</li>
               </ul>
               <p className="mt-4">
@@ -274,7 +276,7 @@ export default function PrivacyPage() {
               <ul className="list-disc list-inside space-y-2 text-stone-600 mt-4">
                 <li><strong>Right to Know:</strong> Request information about the categories and specific pieces of personal data we have collected, used, disclosed, or sold in the past 12 months.</li>
                 <li><strong>Right to Delete:</strong> Request deletion of personal data we have collected from you, subject to certain exceptions (e.g., completing transactions, legal obligations).</li>
-                <li><strong>Right to Opt Out of Sale or Sharing:</strong> We do not sell personal information. Optional marketing measurement remains off unless you allow marketing cookies, and you can withdraw that choice through Cookie settings. We also honor a browser&apos;s enabled Global Privacy Control signal by keeping marketing disabled.</li>
+                <li><strong>Right to Opt Out of Sale or Sharing:</strong> We do not sell personal information. Sending enquiry information to advertising platforms, described in section 4, can count as &quot;sharing&quot; for cross-context behavioral advertising under California law, so you can opt out at any time with our <a href="/privacy/do-not-share" className="text-cognac hover:underline">opt-out form</a>. The marketing cookies and Meta Pixel in your browser stay off unless you allow marketing, and you can withdraw that choice through Cookie settings. We honor a browser&apos;s enabled Global Privacy Control signal, both for those cookies and for sharing from our customer system.</li>
                 <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any CCPA rights, including by denying services or charging different prices.</li>
                 <li><strong>Right to Correct:</strong> Request correction of inaccurate personal information we maintain about you.</li>
                 <li><strong>Right to Limit Sensitive Information:</strong> We do not collect sensitive personal information beyond what is necessary for service delivery.</li>

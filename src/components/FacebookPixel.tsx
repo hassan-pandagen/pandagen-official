@@ -77,9 +77,15 @@ export default function FacebookPixel() {
   return null;
 }
 
-// Export helper function for tracking custom events
-export const trackFBEvent = (eventName: string, params?: any) => {
+// Export helper function for tracking custom events. `eventId` is the id the form sent to the
+// server with the lead: the CRM's server-side Lead carries the same one, which is how Meta
+// counts the pair once. Without it the event is sent as before.
+export const trackFBEvent = (eventName: string, params?: any, eventId?: string) => {
   if (typeof window !== 'undefined' && hasConsent('marketing') && (window as any).fbq) {
-    (window as any).fbq('track', eventName, params);
+    if (eventId) {
+      (window as any).fbq('track', eventName, params, { eventID: eventId });
+    } else {
+      (window as any).fbq('track', eventName, params);
+    }
   }
 };

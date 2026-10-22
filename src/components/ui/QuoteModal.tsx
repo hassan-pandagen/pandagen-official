@@ -1,6 +1,7 @@
 "use client";
 
 import { getAttribution } from "@/lib/analytics/trafficSource";
+import { appendLeadTracking } from "@/lib/analytics/leadTracking";
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { CheckCircle2, ChevronDown, Send, X } from "lucide-react";
@@ -200,6 +201,8 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
       if (attribution.landingPage) formData.append("landingPage", attribution.landingPage);
       formData.append("submittedFrom", window.location.pathname);
       if (attribution.firstVisit) formData.append("firstVisit", attribution.firstVisit);
+      // The same id goes to the server with the lead and to the Pixel below, so Meta counts it once.
+      const { eventId } = appendLeadTracking(formData, "quote_modal");
 
       const response = await fetch("/api/submit-quote", { method: "POST", body: formData, signal: controller.signal });
       if (controller.signal.aborted || requestSession !== sessionRef.current) return;
@@ -211,7 +214,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
         content_category: "Contact Form",
         value: 0,
         currency: "USD",
-      });
+      }, eventId);
       trackGAEvent("quote_submit", {
         form: "quote_modal",
       });

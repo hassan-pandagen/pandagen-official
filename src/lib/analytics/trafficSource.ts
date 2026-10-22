@@ -19,6 +19,8 @@
  * be quoted as a complete figure -- treat a labelled AI source as a floor.
  */
 
+import { captureClickIds } from '@/lib/analytics/clickIds';
+
 export interface TrafficSource {
   source: string;
   medium: string;
@@ -134,6 +136,8 @@ const STORAGE_KEY = 'pcg_first_touch_source';
 
 export function captureFirstTouch(): void {
   if (typeof window === 'undefined') return;
+  // Ad click IDs and UTM tags are kept separately and the newest wins; see clickIds.ts.
+  captureClickIds();
   try {
     if (window.sessionStorage.getItem(STORAGE_KEY)) return;
     const record: Attribution = {

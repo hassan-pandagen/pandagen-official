@@ -16,6 +16,28 @@ interface RequestLike {
   body: ReadableStream<Uint8Array> | null;
 }
 
+/**
+ * Sent with every form so the CRM can report the lead to Meta and Google (see
+ * src/lib/crm/forwardLead.ts). Added 22 Oct 2026. These are read leniently: a malformed or
+ * oversized value is dropped, because a tracking problem must never cost an enquiry.
+ */
+export interface QuoteTracking {
+  leadSource: string;
+  eventId: string;
+  fbp: string;
+  fbc: string;
+  fbclid: string;
+  gclid: string;
+  gbraid: string;
+  wbraid: string;
+  utmSource: string;
+  utmMedium: string;
+  utmCampaign: string;
+  utmTerm: string;
+  utmContent: string;
+  marketingConsent: boolean;
+}
+
 export interface QuoteScalarFields {
   name: string;
   email: string;
@@ -37,6 +59,8 @@ export interface QuoteScalarFields {
   landingPage: string;
   submittedFrom: string;
   firstVisit: string;
+  /** Conversion-tracking values. Never required, never a reason to refuse a lead. */
+  tracking: QuoteTracking;
   honeypot: string;
   formLoadedAt: number | null;
 }
@@ -61,6 +85,20 @@ const ALLOWED_FIELDS = new Set([
   "landingPage",
   "submittedFrom",
   "firstVisit",
+  "leadSource",
+  "eventId",
+  "fbp",
+  "fbc",
+  "fbclid",
+  "gclid",
+  "gbraid",
+  "wbraid",
+  "utmSource",
+  "utmMedium",
+  "utmCampaign",
+  "utmTerm",
+  "utmContent",
+  "marketingConsent",
   "website_url_confirm",
   "_t",
 ]);
@@ -301,6 +339,38 @@ export function isQuoteFilledTooFast(formLoadedAt: number | null, now: number = 
   return elapsed < MIN_QUOTE_FILL_MS;
 }
 
+const TRACKING_SOURCES = new Set(["quote_modal", "contact_page", "hero_form", "assistant"]);
+const EVENT_ID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+/** First value of a tracking field, trimmed; blank when missing, repeated, too long or odd. */
+function trackingValue(formData: FormData, name: string, maxLength: number): string {
+  const entries = formData.getAll(name);
+  if (entries.length !== 1 || typeof entries[0] !== "string") return "";
+  const value = entries[0].trim();
+  return value.length > maxLength || /[\u0000-\u001F\u007F]/.test(value) ? "" : value;
+}
+
+export function readQuoteTracking(formData: FormData): QuoteTracking {
+  const leadSource = trackingValue(formData, "leadSource", 40);
+  const eventId = trackingValue(formData, "eventId", 36);
+  return {
+    leadSource: TRACKING_SOURCES.has(leadSource) ? leadSource : "",
+    eventId: EVENT_ID_PATTERN.test(eventId) ? eventId.toLowerCase() : "",
+    fbp: trackingValue(formData, "fbp", 300),
+    fbc: trackingValue(formData, "fbc", 300),
+    fbclid: trackingValue(formData, "fbclid", 500),
+    gclid: trackingValue(formData, "gclid", 500),
+    gbraid: trackingValue(formData, "gbraid", 500),
+    wbraid: trackingValue(formData, "wbraid", 500),
+    utmSource: trackingValue(formData, "utmSource", 200),
+    utmMedium: trackingValue(formData, "utmMedium", 200),
+    utmCampaign: trackingValue(formData, "utmCampaign", 200),
+    utmTerm: trackingValue(formData, "utmTerm", 200),
+    utmContent: trackingValue(formData, "utmContent", 200),
+    marketingConsent: trackingValue(formData, "marketingConsent", 1) === "1",
+  };
+}
+
 export function validateQuoteScalarFields(formData: FormData): QuoteScalarFields {
   for (const [key, value] of formData.entries()) {
     if (typeof value !== "string") throw new QuoteRequestError(400, "File uploads are not accepted by this form.");
@@ -369,6 +439,7 @@ export function validateQuoteScalarFields(formData: FormData): QuoteScalarFields
     landingPage,
     submittedFrom,
     firstVisit,
+    tracking: readQuoteTracking(formData),
     honeypot: readQuoteHoneypot(formData),
     formLoadedAt: readQuoteFormLoadedAt(formData),
   };

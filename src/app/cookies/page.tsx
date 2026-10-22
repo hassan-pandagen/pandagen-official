@@ -5,11 +5,11 @@ import CookieSettingsButton from "@/components/consent/CookieSettingsButton";
 
 export const metadata: Metadata = {
   title: { absolute: "Cookie Policy | PandaCodeGen" },
-  description: "How PandaCodeGen uses cookies and similar technologies. Last updated October 7, 2026.",
+  description: "How PandaCodeGen uses cookies and similar technologies. Last updated October 22, 2026.",
   alternates: { canonical: "/cookies" },
   openGraph: {
     title: "Cookie Policy | PandaCodeGen",
-    description: "How PandaCodeGen uses cookies and similar technologies. Last updated October 7, 2026.",
+    description: "How PandaCodeGen uses cookies and similar technologies. Last updated October 22, 2026.",
     url: "https://www.pandacodegen.com/cookies",
     siteName: "PandaCodeGen",
     type: "website",
@@ -115,7 +115,7 @@ export default function CookiesPage() {
         <div className="container mx-auto max-w-4xl">
           <div className="mb-16 animate-fade-in-up">
             <h1 className="text-5xl font-bold text-charcoal mb-4">Cookie Policy</h1>
-            <p className="text-stone-600">Last updated: October 7, 2026</p>
+            <p className="text-stone-600">Last updated: October 22, 2026</p>
             <CookieSettingsButton className="mt-6 inline-flex min-h-11 items-center rounded-full bg-charcoal px-6 text-sm font-semibold text-white transition-colors hover:bg-cognac" />
           </div>
 
@@ -206,6 +206,10 @@ export default function CookiesPage() {
               <p>
                 Meta Pixel measures advertising activity and conversions. It loads only after you
                 allow marketing. We do not load a fallback tracking pixel when marketing is denied.
+                Separately, when you send an enquiry our customer system may pass coded details to
+                Meta and Google to measure which advertising led to it. That sets no cookie on your
+                device. It is described in the Privacy Policy, and you can stop it with the
+                <a href="/privacy/do-not-share" className="text-cognac hover:underline">opt-out form</a>.
               </p>
 
               <h3 className="text-lg font-semibold text-charcoal mb-2 mt-6">Functional</h3>

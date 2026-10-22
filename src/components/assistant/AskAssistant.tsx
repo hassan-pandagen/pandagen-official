@@ -11,6 +11,7 @@ import { T } from "@/components/redesign/tokens";
 import CalModalButton from "@/components/ui/CalModalButton";
 import { PHONE } from "@/data/company-facts";
 import { getAttribution } from "@/lib/analytics/trafficSource";
+import { appendLeadTracking } from "@/lib/analytics/leadTracking";
 import { trackFBEvent } from "@/components/FacebookPixel";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
 
@@ -563,11 +564,12 @@ export default function AskAssistant() {
     if (attribution.landingPage) formData.append("landingPage", attribution.landingPage);
     formData.append("submittedFrom", window.location.pathname);
     if (attribution.firstVisit) formData.append("firstVisit", attribution.firstVisit);
+    const { eventId } = appendLeadTracking(formData, "assistant");
     let reply = LEAD_THANKS;
     try {
       const res = await fetch("/api/submit-quote", { method: "POST", body: formData });
       if (!res.ok) throw new Error(String(res.status));
-      trackFBEvent("Lead", { content_name: "Quote Request", content_category: "Assistant Chat", value: 0, currency: "USD" });
+      trackFBEvent("Lead", { content_name: "Quote Request", content_category: "Assistant Chat", value: 0, currency: "USD" }, eventId);
       trackGAEvent("quote_submit", { form: "assistant_chat_message" });
       setLeadSent(true);
       try {

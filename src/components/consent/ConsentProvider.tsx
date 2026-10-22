@@ -1,6 +1,7 @@
 "use client";
 
 import { captureFirstTouch } from "@/lib/analytics/trafficSource";
+import { CLICK_IDS_KEY } from "@/lib/analytics/clickIds";
 
 import {
   createContext,
@@ -212,6 +213,17 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
       marketing: preferences?.marketing ?? false,
       functional: preferences?.functional ?? false,
     });
+
+    // Ad click IDs (see clickIds.ts) are kept while the visitor has not chosen yet, because the
+    // banner is still open and they may accept. They go once marketing is denied by choice, or by
+    // Global Privacy Control, which readStoredConsent turns into a denial.
+    if (preferences && !preferences.marketing) {
+      try {
+        window.sessionStorage.removeItem(CLICK_IDS_KEY);
+      } catch {
+        // Storage can be blocked; there is then nothing stored to remove.
+      }
+    }
   }, [preferences]);
 
   useEffect(() => {

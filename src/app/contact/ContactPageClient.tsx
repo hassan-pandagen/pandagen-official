@@ -10,6 +10,8 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
 import { getAttribution } from "@/lib/analytics/trafficSource";
+import { appendLeadTracking } from "@/lib/analytics/leadTracking";
+import { trackFBEvent } from "@/components/FacebookPixel";
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 const platforms = [
@@ -121,10 +123,20 @@ export default function ContactPageClient() {
       if (attribution.landingPage) formData.append("landingPage", attribution.landingPage);
       formData.append("submittedFrom", window.location.pathname);
       if (attribution.firstVisit) formData.append("firstVisit", attribution.firstVisit);
+      // The same id goes to the server with the lead and to the Pixel below, so Meta counts it once.
+      const { eventId } = appendLeadTracking(formData, "contact_page");
 
       const response = await fetch("/api/submit-quote", { method: "POST", body: formData });
       if (!response.ok) throw new Error(await responseMessage(response));
       formFunnel.markSubmitted();
+      // 22 Oct 2026: this form never fired the browser Lead, so Meta only ever saw leads from the
+      // modal, the homepage form and the assistant. Same shape as theirs.
+      trackFBEvent("Lead", {
+        content_name: "Contact Page Enquiry",
+        content_category: "Contact Form",
+        value: 0,
+        currency: "USD",
+      }, eventId);
       form.reset();
       setFieldErrors({});
       setIsSuccess(true);

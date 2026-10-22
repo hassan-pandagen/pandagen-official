@@ -52,6 +52,7 @@ const resources = [
   { href: "/editorial-policy", title: "Editorial Policy", desc: "Sources, evidence, freshness, and corrections." },
   { href: "/privacy", title: "Privacy", desc: "Data use and visitor choices." },
   { href: "/cookies", title: "Cookie Choices", desc: "Optional services and consent." },
+  { href: "/privacy/do-not-share", title: "Do Not Sell or Share", desc: "Opt out of advertising measurement." },
   { href: "/terms", title: "Website Terms", desc: "Use of the site and inquiries." },
 ];
 

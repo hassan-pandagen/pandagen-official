@@ -1,6 +1,7 @@
 "use client";
 
 import { getAttribution } from "@/lib/analytics/trafficSource";
+import { appendLeadTracking } from "@/lib/analytics/leadTracking";
 
 import { useRef, useState } from "react";
 import { CheckCircle2, Send } from "lucide-react";
@@ -109,6 +110,8 @@ export default function HeroLeadForm({
       // Tells the inbox which language to reply in. See ALLOWED_LOCALES.
       formData.append("locale", locale);
       if (attribution.firstVisit) formData.append("firstVisit", attribution.firstVisit);
+      // The same id goes to the server with the lead and to the Pixel below, so Meta counts it once.
+      const { eventId } = appendLeadTracking(formData, "hero_form");
 
       const response = await fetch("/api/submit-quote", { method: "POST", body: formData });
       if (!response.ok) throw new Error(await responseMessage(response, copy.errorFallback));
@@ -119,7 +122,7 @@ export default function HeroLeadForm({
         content_category: "Contact Form",
         value: 0,
         currency: "USD",
-      });
+      }, eventId);
       trackGAEvent("quote_submit", { form: "hero_inline", locale });
       setIsSubmitted(true);
     } catch (submissionError) {

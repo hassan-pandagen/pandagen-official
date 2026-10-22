@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { NextRequest, NextResponse } from "next/server";
+import { after, NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import {
   AuditRateLimitConfigurationError,
@@ -17,6 +17,7 @@ import {
   readQuoteHoneypot,
   validateQuoteScalarFields,
 } from "@/lib/forms/quoteRequest";
+import { forwardLeadToCrm } from "@/lib/crm/forwardLead";
 
 class QuoteEmailNotConfiguredError extends Error {
   constructor() {
@@ -198,6 +199,29 @@ export async function POST(request: NextRequest) {
     }
 
     emailSent = true;
+
+    // 22 Oct 2026: hand the lead to the CRM after the response, so the visitor never waits and
+    // a CRM problem cannot touch the enquiry that has just been emailed. It does nothing until
+    // CRM_INGEST_URL and CRM_INGEST_SECRET are set. Spam, too-fast and duplicate submissions
+    // returned earlier in this function and never reach this point.
+    try {
+      const crmInput = {
+        fields,
+        tracking: fields.tracking,
+        context: {
+          origin: request.nextUrl.origin,
+          clientIp: (request.headers.get("x-forwarded-for") ?? "").split(",")[0].trim(),
+          userAgent: request.headers.get("user-agent") ?? "",
+          country: request.headers.get("x-vercel-ip-country") ?? "",
+          region: request.headers.get("x-vercel-ip-country-region") ?? "",
+          gpc: request.headers.get("sec-gpc") === "1",
+        },
+      };
+      after(() => forwardLeadToCrm(crmInput));
+    } catch (forwardError) {
+      console.error("Could not schedule the CRM hand-off:", forwardError instanceof Error ? forwardError.name : "unknown");
+    }
+
     return NextResponse.json(
       { success: true, message: "Quote request sent successfully" },
       { status: 200, headers: { "Cache-Control": "no-store" } }
