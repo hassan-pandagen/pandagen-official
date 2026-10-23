@@ -20,5 +20,5 @@ export const SOCIAL_LINKS: readonly SocialLink[] = [
   { id: "linkedin", label: "PandaCodeGen on LinkedIn", href: "https://www.linkedin.com/company/pandacodegen" },
   { id: "x", label: "PandaCodeGen on X", href: "https://x.com/PandaCodeGen" },
   { id: "instagram", label: "PandaCodeGen on Instagram", href: "https://www.instagram.com/pandacodegen_/" },
-  { id: "facebook", label: "PandaCodeGen on Facebook", href: "https://www.facebook.com/profile.php?id=61587111848962" },
+  { id: "facebook", label: "PandaCodeGen on Facebook", href: "https://www.facebook.com/PandaCodeGen" },
 ];

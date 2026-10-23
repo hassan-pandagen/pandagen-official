@@ -383,7 +383,7 @@ export const ORGANIZATION_PROFILES: readonly string[] = [
     'https://www.linkedin.com/company/pandacodegen',
     'https://x.com/PandaCodeGen',
     'https://www.instagram.com/pandacodegen_/',
-    'https://www.facebook.com/profile.php?id=61587111848962',
+    'https://www.facebook.com/PandaCodeGen',
     'https://clutch.co/profile/panda-code-gen',
     'https://www.goodfirms.co/company/panda-code-gen',
     'https://www.trustpilot.com/review/pandacodegen.com',
