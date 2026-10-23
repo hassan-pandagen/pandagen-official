@@ -46,7 +46,7 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <Link href="/work" style={{ color: T.quiet }}>Work</Link> / A Step Above Medical / {details.status}
         </p>
         <WorkCaseTitle>A Step Above Medical</WorkCaseTitle>
-        <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={details.contentUpdatedOn}>October 21, 2026</time></p>
+        <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={details.contentUpdatedOn}>October 23, 2026</time></p>
         <p className="mt-3 max-w-[42rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
           A complete medical training management system.
         </p>
@@ -95,6 +95,19 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+      <section aria-labelledby="asam-similar-systems" className="px-6 py-10 md:px-10 md:py-16">
+        <div className="mx-auto max-w-[1100px]">
+          <WorkCaseLabel className="mb-3">For your business</WorkCaseLabel>
+          <h2 id="asam-similar-systems" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.5rem)", lineHeight: 1.05, color: T.ink }}>Could a similar system work for your practice?</h2>
+          <p className="mt-4 max-w-[44rem] text-[16px] leading-[1.65]" style={{ color: T.body }}>
+            We can build websites and booking and administration systems for med spas, aesthetic and skin clinics, independent medical centres, dental practices, physiotherapy clinics and optometry practices. Depending on your workflow, the scope can include service pages your team can edit, appointment requests or bookings, payments, reminders and a staff portal, with connections to the tools you already use.
+          </p>
+          <p className="mt-4 max-w-[44rem] text-[16px] leading-[1.65]" style={{ color: T.body }}>
+            A Step Above Medical demonstrates our work for a training provider. For a practice, we scope the records, staff permissions, integrations and privacy requirements around its own services and country. Patient records and clinical workflows require a separate assessment before we agree the build.
+          </p>
+          <Link href="/services/medical-website-design" className="mt-5 inline-flex items-center gap-2 text-[15px] font-semibold underline underline-offset-4" style={{ color: T.accentText }}>Explore websites and systems for your practice <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
         </div>
       </section>
       <CaseStudyFaqs faqs={faqs} />
