@@ -5,6 +5,7 @@ import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 
 import { ArrowDown, ArrowUpRight, CheckCircle2, ChevronDown, Mail, Phone, Send } from "lucide-react";
 import { PHONE } from "@/data/company-facts";
+import SocialLinks from "@/components/ui/SocialLinks";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
@@ -214,6 +215,7 @@ export default function ContactPageClient() {
                 </div>
               </div>
             </div>
+            <SocialLinks tone="dark" className="mt-5" />
           </div>
 
           <div className="self-start rounded-3xl border border-stone-200 bg-white p-5 shadow-[0_20px_55px_-25px_rgba(0,0,0,0.5)] sm:p-8" style={{ color: T.ink }}>

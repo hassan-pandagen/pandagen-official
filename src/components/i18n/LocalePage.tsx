@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PHONE } from "@/data/company-facts";
+import SocialLinks from "@/components/ui/SocialLinks";
 import { ArrowRight, ArrowUpRight, Building2, Check, Quote, ShieldCheck } from "lucide-react";
 import {
   SITE_URL,
@@ -868,6 +869,7 @@ function LocaleFooter({
               </address>
             </li>
           </ul>
+          <SocialLinks tone="light" className="mt-5" />
         </div>
 
         <div>

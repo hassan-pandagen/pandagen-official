@@ -7,6 +7,7 @@ import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import CookieSettingsButton from "@/components/consent/CookieSettingsButton";
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 import { PHONE } from "@/data/company-facts";
+import SocialLinks from "@/components/ui/SocialLinks";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Closing block and footer. Redesign candidate, 24 Sep 2026.
@@ -146,6 +147,8 @@ export default function SiteFooter({ compactTop = false, linksOnly = false }: { 
                 </address>
               </li>
             </ul>
+            {/* 23 Oct 2026, owner: social links as icons. The list lives in src/data/social-links.ts. */}
+            <SocialLinks tone="dark" className="mt-6" />
             {/* Keep fallbackToHome: it links the locale roots from every page. */}
             <div className="foot-lang mt-8 text-[14px]">
               <LocaleSwitcher label="Language" className="normal-case tracking-normal" fallbackToHome />
