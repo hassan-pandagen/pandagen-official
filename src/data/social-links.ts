@@ -3,7 +3,7 @@
  *
  * Only list an account here once it is live and secured. A link to a hacked or abandoned
  * account is worse than none: the old Instagram account was compromised on 22 Oct 2026, so it
- * is deliberately not listed. Add the new one as { id: "instagram", ... } when it exists.
+ * is deliberately not listed. The replacement account (@pandacodegen_) was added on 23 Oct 2026.
  *
  * LinkedIn, X and Facebook come from ORGANIZATION_PROFILES in company-facts.ts, which is what search
  * engines are told about the company, so the icons and the hidden profile list agree.
@@ -19,6 +19,6 @@ export interface SocialLink {
 export const SOCIAL_LINKS: readonly SocialLink[] = [
   { id: "linkedin", label: "PandaCodeGen on LinkedIn", href: "https://www.linkedin.com/company/pandacodegen" },
   { id: "x", label: "PandaCodeGen on X", href: "https://x.com/PandaCodeGen" },
-  // { id: "instagram", label: "PandaCodeGen on Instagram", href: "https://www.instagram.com/<new-handle>/" },
+  { id: "instagram", label: "PandaCodeGen on Instagram", href: "https://www.instagram.com/pandacodegen_/" },
   { id: "facebook", label: "PandaCodeGen on Facebook", href: "https://www.facebook.com/profile.php?id=61587111848962" },
 ];

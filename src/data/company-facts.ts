@@ -382,6 +382,7 @@ export const REFERENCE_LINKS: readonly { href: string; title: string; body: stri
 export const ORGANIZATION_PROFILES: readonly string[] = [
     'https://www.linkedin.com/company/pandacodegen',
     'https://x.com/PandaCodeGen',
+    'https://www.instagram.com/pandacodegen_/',
     'https://www.facebook.com/profile.php?id=61587111848962',
     'https://clutch.co/profile/panda-code-gen',
     'https://www.goodfirms.co/company/panda-code-gen',
