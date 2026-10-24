@@ -1354,6 +1354,50 @@
       "verifiedAt": "2026-10-20",
       "reviewDays": 180,
       "source": "https://support.squarespace.com/hc/en-us/articles/360000694948-Export-products-to-a-csv"
+    },
+    "competitor-webvello-migration": {
+      "vendor": "Webvello",
+      "label": "Platform-to-Next.js migration",
+      "value": "lists WordPress, Wix, Squarespace, Webflow, Shopify, HubSpot CMS and Drupal as source platforms, publishes no price on its migration page, and gives a dated plan after an inventory",
+      "qualifier": "Roseville, California address on the page",
+      "verifiedAt": "2026-10-24",
+      "reviewDays": 60,
+      "source": "https://webvello.com/migrate"
+    },
+    "competitor-eseospace-migration": {
+      "vendor": "eSEOspace",
+      "label": "Platform-to-Next.js migration",
+      "value": "says custom projects typically start at $3,000, a small brochure site takes two to four weeks and a larger site six to ten",
+      "qualifier": "Lists Squarespace, WordPress, Shopify, Wix, Webflow, Drupal and HubSpot CMS as source platforms",
+      "verifiedAt": "2026-10-24",
+      "reviewDays": 60,
+      "source": "https://eseospace.com/migration/squarespace-to-nextjs/"
+    },
+    "competitor-socialanimal-migration": {
+      "vendor": "Social Animal",
+      "label": "WordPress to Next.js migration",
+      "value": "charges a fixed fee starting at $15,000 for a standard WordPress to Next.js migration and $25,000 for e-commerce, with 6 to 8 weeks for a standard build",
+      "qualifier": "Includes an SEO audit, one-to-one 301 redirects and monitoring after launch",
+      "verifiedAt": "2026-10-24",
+      "reviewDays": 60,
+      "source": "https://socialanimal.dev/migrate/wordpress-to-nextjs/"
+    },
+    "competitor-insync-migration": {
+      "vendor": "INSYNC",
+      "label": "WordPress relaunch",
+      "value": "says relaunch packages start at €8,000 net, with Astro as its default framework and Next.js when a site needs logins or per-request data",
+      "qualifier": "German agency; price in euros, net of tax",
+      "verifiedAt": "2026-10-24",
+      "reviewDays": 60,
+      "source": "https://in-sync.io/en/knowledge/migrate-wordpress-to-nextjs"
+    },
+    "competitor-luckymedia-migration": {
+      "vendor": "Lucky Media",
+      "label": "WordPress to headless migration",
+      "value": "offers WordPress to headless CMS migration with a Next.js or Astro frontend, is based in Dallas, Texas, and publishes no price on the page",
+      "verifiedAt": "2026-10-24",
+      "reviewDays": 60,
+      "source": "https://luckymedia.dev/wordpress-to-headless-cms-migration"
     }
   }
 }

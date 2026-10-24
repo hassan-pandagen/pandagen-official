@@ -246,7 +246,7 @@ export const clusters: Cluster[] = [
     relatedClusterIds: ['woocommerce', 'custom', 'migration', 'performance'],
     postIds: [
       'wordpress-april-2026-evidence', 'divi-theme-slow', 'cloudflare-emdash-wordpress-replacement',
-      'wordpress-migration-cost', 'how-to-migrate-wordpress-to-nextjs', 'wordpress-vs-nextjs',
+      'wordpress-migration-cost', 'how-to-migrate-wordpress-to-nextjs', 'wordpress-to-nextjs-migration-agencies', 'wordpress-vs-nextjs',
       'why-we-chose-nextjs-over-wordpress-2026', 'nextjs-sanity-stack', 'wordpress-vs-custom-code-real-cost-3-years',
       'wordpress-ai-security-risk-2026', 'wordpress-plugin-security-2026', 'elementor-kills-seo',
       'wordpress-plugins-destroy-speed', 'wordpress-traffic-drop-speed', 'how-to-fix-slow-wordpress',

@@ -87,4 +87,17 @@ export const stackGuidePosts: StackGuidePost[] = [
       { question: "What happens to the hosting if I stop working with you?", answer: "On a maintenance or SEO package, hosting on our Vercel account is included if you want it. If you stop working with us, we move the site to a Vercel account in your name. We've done this for a client whose contract ended." },
     ],
   },
+  {
+    ...byline, id: "wordpress-to-nextjs-migration-agencies", title: "WordPress to Next.js Migration Agencies Compared (2026)",
+    date: "Oct 24", published: "2026-10-24", lastModified: "2026-10-24", eyebrow: "Agencies / WordPress to Next.js",
+    excerpt: "Who migrates WordPress sites to Next.js, what each says it costs and who each one fits, taken from their own pages. We're one of them, and we say so.",
+    category: "Agency", readTime: "6 min", illustrationType: "cost", cardStat: "5 agencies", cardStatLabel: "Compared from their own pages",
+    faqs: [
+      { question: "Which agencies migrate WordPress sites to Next.js?", answer: `Webvello, eSEOspace, Lucky Media, INSYNC and Social Animal each describe a WordPress to Next.js or headless migration on their own sites, and so does PandaCodeGen. As of ${asOf("competitor-socialanimal-migration")}, three publish a starting price: eSEOspace from $3,000, INSYNC from €8,000 net and Social Animal from $15,000. Ours starts at $1,500.` },
+      { question: "How much does a WordPress to Next.js migration cost?", answer: "It depends on pages, templates, redirects, integrations and what follows launch. Published starting prices among the agencies we checked run from $3,000 to $15,000, and PandaCodeGen's start at $1,500 for up to 7 pages, $3,500 for 8 to 20 pages and $5,000 for larger sites. Compare what each price includes, not just the total." },
+      { question: "Can a small business afford a WordPress to Next.js migration?", answer: "Yes, if the site is small. A site of up to 7 pages starts at $1,500 with PandaCodeGen, fixed once the written scope is agreed. A large store or a site with hundreds of pages costs more with any agency." },
+      { question: "How long does a WordPress to Next.js migration take?", answer: "The agencies we checked state a few weeks for a small site and up to ten or twelve for a large one. PandaCodeGen plans 1 to 2 weeks for Starter, 2 to 4 for Growth and 3 to 6 for Scale, and your written proposal gives the dates for your project." },
+      { question: "Do I need Next.js to leave WordPress?", answer: "Not always. If a site is mostly content with few interactive features, a simpler framework can be enough, and one agency we checked defaults to Astro for that reason. Next.js suits sites that need logins, dashboards or per-request data. Ask any agency why it recommends the tool it does." },
+    ],
+  },
 ];
