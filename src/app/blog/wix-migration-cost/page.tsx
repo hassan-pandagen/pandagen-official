@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-07-03",
-        modifiedTime: "2026-10-09",
+        modifiedTime: "2026-10-24",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wix-migration-cost")],
@@ -72,7 +72,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/wix-migration-cost"),
             datePublished: "2026-07-03",
-            dateModified: "2026-10-09",
+            dateModified: "2026-10-24",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -114,7 +114,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-07-03",
-            dateModified: "2026-10-09",
+            dateModified: "2026-10-24",
             inLanguage: "en-US",
         },
         {
