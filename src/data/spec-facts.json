@@ -1402,11 +1402,19 @@
     "wix-domain-transfer-rules": {
       "vendor": "Wix",
       "label": "Transferring a domain away from Wix",
-      "value": "says the domain must be unlocked first, that Wix emails a transfer authorization code to the registrant contact (UK domains use an IPS tag instead), that a domain can't be transferred within 60 days of purchase, of a registrant contact change or of a previous transfer, that the Wix site is disconnected once it moves, and that MX records must be added again at the new host for business email to keep working",
-      "qualifier": "Wix's help centre article; it lists no transfer fee, and renewals follow the new registrar's prices",
+      "value": "says the domain must be unlocked first, that Wix emails a transfer authorization code to the registrant contact (.co.uk and .uk domains use an IPS tag instead), that a domain can't be transferred within 60 days of purchase, of a registrant contact change or of a previous transfer, that the Wix site is disconnected once it moves, and that MX records must be added again at the new host for business email to keep working",
+      "qualifier": "Wix's help centre article. It does not state a transfer fee, so check the new registrar's fee; renewals follow the new registrar's prices",
       "verifiedAt": "2026-10-24",
       "reviewDays": 90,
       "source": "https://support.wix.com/en/article/transferring-your-wix-domain-away-from-wix-2477749"
+    },
+    "wix-workspace-transfer": {
+      "vendor": "Wix",
+      "label": "Moving Google Workspace from Wix to Google",
+      "value": "says you can transfer a Google Workspace business email from Wix to Google by contacting Wix Customer Care, that the transfer disconnects it from your Wix account, that it is irreversible, and that you can't buy that business email through Wix again afterwards",
+      "verifiedAt": "2026-10-24",
+      "reviewDays": 90,
+      "source": "https://support.wix.com/en/article/google-workspace-faqs"
     }
   }
 }
