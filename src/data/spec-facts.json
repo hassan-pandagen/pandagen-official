@@ -1415,6 +1415,30 @@
       "verifiedAt": "2026-10-24",
       "reviewDays": 90,
       "source": "https://support.wix.com/en/article/google-workspace-faqs"
+    },
+    "booking-calcom-free": {
+      "vendor": "Cal.com",
+      "label": "Cal.com free plan and Teams price",
+      "value": "lists a free plan for one user with unlimited event types that can accept Stripe and PayPal payments, and a Teams plan at $12 per user per month on yearly billing",
+      "verifiedAt": "2026-10-25",
+      "reviewDays": 60,
+      "source": "https://cal.com/pricing"
+    },
+    "booking-calendly-payments": {
+      "vendor": "Calendly",
+      "label": "Calendly payments by plan",
+      "value": "shows payments as unavailable on its Free plan and lists Stripe and PayPal connections from the Standard plan",
+      "verifiedAt": "2026-10-25",
+      "reviewDays": 60,
+      "source": "https://calendly.com/pricing"
+    },
+    "booking-wix-payments": {
+      "vendor": "Wix",
+      "label": "Wix Bookings online payments",
+      "value": "says you can add Wix Bookings for free but must upgrade your site to a Premium plan to accept online payments",
+      "verifiedAt": "2026-10-25",
+      "reviewDays": 90,
+      "source": "https://support.wix.com/en/article/wix-bookings-about-wix-bookings"
     }
   }
 }

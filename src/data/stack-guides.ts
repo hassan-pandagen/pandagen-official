@@ -100,4 +100,16 @@ export const stackGuidePosts: StackGuidePost[] = [
       { question: "Do I need Next.js to leave WordPress?", answer: "Not always. If a site is mostly content with few interactive features, a simpler framework can be enough, and one agency we checked defaults to Astro for that reason. Next.js suits sites that need logins, dashboards or per-request data. Ask any agency why it recommends the tool it does." },
     ],
   },
+  {
+    ...byline, id: "online-booking-small-business-website", title: "Adding Online Booking to a Small Business Website: Plugin, Builder or Custom",
+    date: "Oct 25", published: "2026-10-25", lastModified: "2026-10-25", eyebrow: "Booking / Small business websites",
+    excerpt: "When a scheduling tool is enough, when your website builder's booking app is, and when a booking system has to be custom. With the real before and after from a training business we rebuilt.",
+    category: "Guide", readTime: "6 min", illustrationType: "cost", cardStat: "3 routes", cardStatLabel: "Tool, builder or custom",
+    faqs: [
+      { question: "What is the easiest way to add online booking to a website?", answer: "Use a scheduling tool such as Cal.com or Calendly and embed or link it from your site. It works for one-to-one appointments and calls, and it takes an afternoon rather than a project." },
+      { question: "Can I take payment when someone books?", answer: `Yes, on most routes, but the plan matters. As of ${asOf("booking-calendly-payments")}, Calendly ${spec("booking-calendly-payments").value}, and Wix ${spec("booking-wix-payments").value}. Cal.com ${spec("booking-calcom-free").value}.` },
+      { question: "When do I need a custom booking system?", answer: "When booking is only the first step: class seats, fees that depend on the course or location, confirmation emails with dates and venue, certificates, or staff records that must match what was booked. A scheduling tool books a time slot and does not know about any of that." },
+      { question: "Is a booking plugin or app safe for a business that takes card payments?", answer: "Payments should go through a processor such as Stripe, so card numbers never touch your website. Whichever route you choose, check that the booking tool hands payment to the processor and does not store card details itself." },
+    ],
+  },
 ];

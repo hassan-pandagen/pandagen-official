@@ -14,6 +14,7 @@ const covers = {
   "product-catalog-website-without-cart": ["public/work/emblematic-studio-library.png", "top"],
   "website-monthly-running-cost": ["assets/blog-photo-sources/server-cables.webp", "attention"],
   "wordpress-to-nextjs-migration-agencies": ["public/work/emblematic-studio.png", "top"],
+  "online-booking-small-business-website": ["public/work/a-step-above-medical-preview-homepage.png", "top"],
 };
 for (const [id, [source, position, region]] of Object.entries(covers)) {
   // region: crop to the useful part of a wide screenshot first, so cards show the content.
