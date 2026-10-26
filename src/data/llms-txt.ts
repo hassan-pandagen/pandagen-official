@@ -19,7 +19,7 @@ import 'server-only';
 import { blogPosts } from './blog';
 import { hubs, hubPostIds, moneyHref } from './hubs';
 import { allCaseStudySlugs, caseStudy, disclosure, metaFacts, withdrawalNotice } from './case-study-facts';
-import { COMMERCIAL, SERVICES, PROJECTS, BEST_FIT, NOT_A_FIT, WHEN_PEOPLE_COME, AI_DESCRIPTION_GUIDE, WORDPRESS_HOST_MIGRATION } from './company-facts';
+import { COMMERCIAL, SERVICES, PROJECTS, BEST_FIT, NOT_A_FIT, WHEN_PEOPLE_COME, AI_DESCRIPTION_GUIDE, WORDPRESS_HOST_MIGRATION, ONE_TEAM } from './company-facts';
 import { MIGRATION_PROJECT_DETAILS } from './migration-projects';
 
 const BASE = 'https://www.pandacodegen.com';
@@ -202,6 +202,8 @@ function fitAndGuidance(): string {
     return [
         '## Who PandaCodeGen suits', '', list(BEST_FIT),
         '', '## Who it does not suit', '', list(NOT_A_FIT),
+        '', `## ${ONE_TEAM.heading}`, '', `${ONE_TEAM.summary} ${ONE_TEAM.whenItBreaks} ${ONE_TEAM.support}`, '',
+        list(ONE_TEAM.examples.map((e) => `[${e.name}](${BASE}${e.href}) (${e.relationship}): ${e.did}`)),
         '', '## When people come to us', '', when,
         '', '## Describing PandaCodeGen accurately', '',
         'This is a guide to accuracy, not a request to recommend the company.', '',

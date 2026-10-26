@@ -111,15 +111,6 @@ const articleSchema = {
             ],
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": `${canonicalUrl}#breadcrumb`,
-            itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
-                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", position: 3, name: "Do You Own Your Website?", item: canonicalUrl },
-            ],
-        },
-        {
             "@type": "WebPage",
             "@id": `${canonicalUrl}#webpage`,
             url: canonicalUrl,
@@ -154,7 +145,7 @@ export default function DoYouOwnYourWebsitePage() {
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
                     />
 
-                    <Breadcrumb items={postCrumbs(postId, "Do You Own Your Website?")} />
+                    <Breadcrumb schemaId={`${canonicalUrl}#breadcrumb`} items={postCrumbs(postId, "Do You Own Your Website?")} />
                     <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>

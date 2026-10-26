@@ -108,15 +108,6 @@ const articleSchema = {
             }))
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Will Migrating Hurt My SEO?", "item": "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo" }
-            ]
-        },
-        {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo#webpage",
             "url": "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo",
@@ -142,7 +133,7 @@ export default function WillMigratingHurtSeoPage() {
 
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
-                    <Breadcrumb items={postCrumbs("will-migrating-hurt-my-seo", "Will Migrating Hurt My SEO?")} />
+                    <Breadcrumb schemaId={"https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo#breadcrumb"} items={postCrumbs("will-migrating-hurt-my-seo", "Will Migrating Hurt My SEO?")} />
                     <div className="mb-10">
                         <div data-article-hero="split" data-article-hero-variant="nested">
                           <div data-article-hero-copy>

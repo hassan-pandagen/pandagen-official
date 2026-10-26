@@ -110,15 +110,6 @@ const articleSchema = {
       breadcrumb: { "@id": "https://www.pandacodegen.com/blog/cheap-web-developer#breadcrumb" },
       inLanguage: "en-US",
     },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.pandacodegen.com/blog/cheap-web-developer#breadcrumb",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
-        { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
-        { "@type": "ListItem", position: 3, name: "Cheap Web Developer", item: "https://www.pandacodegen.com/blog/cheap-web-developer" },
-      ],
-    },
   ],
 };
 
@@ -129,7 +120,7 @@ export default function CheapWebDeveloperPage() {
 
       <section className="relative pt-24 md:pt-40 pb-10 px-6">
         <div className="max-w-3xl mx-auto">
-          <Breadcrumb items={postCrumbs("cheap-web-developer", "Cheap Web Developer")} />
+          <Breadcrumb schemaId={"https://www.pandacodegen.com/blog/cheap-web-developer#breadcrumb"} items={postCrumbs("cheap-web-developer", "Cheap Web Developer")} />
           <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Blog
           </Link>

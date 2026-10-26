@@ -75,7 +75,7 @@ export default function Home() {
         "founder": [
           {
             "@type": "Person",
-            "@id": "https://www.pandacodegen.com/about/hassan#person",
+            "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
             "name": "Hassan Jamal",
             "jobTitle": "Co-founder and Lead Engineer",
             "url": "https://www.pandacodegen.com/about/hassan",
@@ -88,7 +88,7 @@ export default function Home() {
           },
           {
             "@type": "Person",
-            "@id": "https://www.pandacodegen.com/about/imran#person",
+            "@id": "https://www.pandacodegen.com/#/schema/person/imran",
             "name": "Imran Raza Ladhani",
             "jobTitle": "Co-founder and Head of Marketing",
             "url": "https://www.pandacodegen.com/about/imran",
@@ -107,15 +107,6 @@ export default function Home() {
           "contactType": "customer service",
           "availableLanguage": "English"
         },
-        "serviceType": [
-          "WordPress Website Design and Development",
-          "Custom Web Development",
-          "WordPress Migration",
-          "Shopify Headless Commerce",
-          "E-Commerce Development",
-          "Web Performance Optimization",
-          "Answer Engine Optimization (AEO)"
-        ],
         "knowsAbout": [
           "Next.js development",
           "WordPress migration",

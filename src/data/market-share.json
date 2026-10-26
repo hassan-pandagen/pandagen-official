@@ -3,8 +3,10 @@
     "publisher": "W3Techs",
     "study": "Market share yearly trends for content management systems",
     "url": "https://w3techs.com/technologies/history_overview/content_management/ms/y",
-    "method": "Share of the top 10 million websites, among sites whose content management system is identified. Surveyed by W3Techs; readings are taken 1 January of each year, plus a current reading.",
-    "limitation": "Identification is by detectable signature, so sites that hide or strip their CMS fingerprint are absent. Share of existing sites is not share of new builds, and the top 10 million skews toward established sites.",
+    "method": "Percentage of websites in W3Techs' survey whose content management system is identified. The series combines January readings and later dated snapshots. W3Techs currently describes its sample as relevant websites with meaningful content or functionality, excluding duplicates and redirected domains. Historical readings reflect the survey coverage at the time.",
+    "methodologyUrl": "https://w3techs.com/technologies",
+    "methodologyCheckedAt": "2026-10-26",
+    "limitation": "Identification relies on detectable technology signals, so unidentified CMS usage is excluded from this denominator. Share of existing sites is not share of new builds. Survey coverage and detection can change over time, so the series is not a fixed cohort of websites.",
     "currency": "W3Techs updates continuously, so the 2026-10 column is a dated reading and not a live figure. It holds the figures W3Techs showed for 7 October 2026, read on 8 October 2026: WordPress at 58.6% of known-CMS sites and 40.1% of all websites. Re-read before quoting the current number.",
     "verifiedAt": "2026-10-08",
     "spotCheckedAt": "2026-10-08"

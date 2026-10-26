@@ -179,20 +179,6 @@ const articleSchema = {
             ],
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "Cloudflare EmDash vs WordPress",
-                    "item": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement",
-                },
-            ],
-        },
-        {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#webpage",
             "url": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement",
@@ -229,7 +215,7 @@ export default function CloudflareEmDashPage() {
                 <article className="mx-auto max-w-3xl rounded-2xl border border-stone-200 bg-white px-6 py-10 shadow-xs sm:px-8 md:px-14">
                     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
-                    <Breadcrumb items={postCrumbs("cloudflare-emdash-wordpress-replacement", "Cloudflare EmDash vs WordPress")} />
+                    <Breadcrumb schemaId={"https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#breadcrumb"} items={postCrumbs("cloudflare-emdash-wordpress-replacement", "Cloudflare EmDash vs WordPress")} />
 
                     <Link href="/blog" className="mb-8 inline-flex items-center gap-2 text-charcoal transition-colors hover:text-cognac">
                         <ArrowLeft className="h-4 w-4" />

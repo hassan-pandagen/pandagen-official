@@ -34,15 +34,6 @@ const schema = {
       inLanguage: "en-US",
       breadcrumb: { "@id": canonicalUrl + "#breadcrumb" },
     },
-    {
-      "@type": "BreadcrumbList",
-      "@id": canonicalUrl + "#breadcrumb",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
-        { "@type": "ListItem", position: 2, name: "Company reference", item: "https://www.pandacodegen.com/ai-info" },
-        { "@type": "ListItem", position: 3, name: "Pricing and Guarantees", item: canonicalUrl },
-      ],
-    },
   ],
 };
 
@@ -52,7 +43,7 @@ export default function Page() {
       <main className="min-h-screen bg-white pb-24 pt-28">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <article className="mx-auto max-w-4xl px-5 sm:px-8">
-          <Breadcrumb
+          <Breadcrumb schemaId={canonicalUrl + "#breadcrumb"}
             items={[
               { label: "Home", href: "/" },
               { label: "Company reference", href: "/ai-info" },

@@ -38,7 +38,7 @@ export default function AboutPreview() {
     </div></section>
 
     <section id="founders" className={styles.foundersSection} aria-labelledby="founders-title"><div className={styles.wrap}>
-      <div className={styles.sectionHead}><p className={styles.kicker}>02 / The founders</p><h2 id="founders-title">Two people. Clear responsibilities.</h2><p>Open a profile to see the person behind each part of the work.</p></div>
+      <div className={styles.sectionHead}><p className={styles.kicker}>02 / The founders</p><h2 id="founders-title">Two people. Clear responsibilities.</h2><div><p>Open a profile to see the person behind each part of the work.</p><Link href="/ai-info/team-and-company" className={styles.inlineLink} style={{ marginTop: "1rem", fontSize: ".95rem" }}>Company formation, mailing address and contracting details</Link></div></div>
       <div className={styles.founderGrid}>{founders.map((founder, index) => <article className={styles.founderCard} key={founder.name}><div className={styles.founderImage}><Image src={founder.image} alt={founder.name} fill sizes="(max-width: 700px) 100vw, 50vw" className={styles.image} /></div><div className={styles.founderInfo}><div className={styles.founderMeta}><span>0{index + 1} / Founder</span><span>{founder.role}</span></div><h3>{founder.name}</h3><p>{founder.body}</p><div className={styles.founderLinks}><Link href={founder.href}>Meet {founder.name.split(" ")[0]} <span aria-hidden="true">↗</span></Link><Link href={founder.linkHref}>{founder.link} <span aria-hidden="true">↗</span></Link></div></div></article>)}</div>
     </div></section>
 

@@ -142,15 +142,6 @@ const articleSchema = {
             "license": "https://creativecommons.org/licenses/by/4.0/",
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/google-algorithm-updates#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Google Algorithm Updates", "item": "https://www.pandacodegen.com/blog/google-algorithm-updates" },
-            ],
-        },
-        {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/google-algorithm-updates#webpage",
             "url": "https://www.pandacodegen.com/blog/google-algorithm-updates",
@@ -183,7 +174,7 @@ export default function GoogleAlgorithmUpdatesPage() {
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
                     />
 
-                    <Breadcrumb items={postCrumbs("google-algorithm-updates", "Google Algorithm Updates")} />
+                    <Breadcrumb schemaId={"https://www.pandacodegen.com/blog/google-algorithm-updates#breadcrumb"} items={postCrumbs("google-algorithm-updates", "Google Algorithm Updates")} />
 
                     <div className="mb-10">
                         <div data-article-hero="split" data-article-hero-variant="nested">

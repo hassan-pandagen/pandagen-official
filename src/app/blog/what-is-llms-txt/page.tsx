@@ -106,15 +106,6 @@ const articleSchema = {
             }))
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": `${CANONICAL}#breadcrumb`,
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "What is llms.txt", "item": CANONICAL }
-            ]
-        },
-        {
             "@type": "WebPage",
             "@id": `${CANONICAL}#webpage`,
             "url": CANONICAL,
@@ -138,7 +129,7 @@ export default function WhatIsLlmsTxtPage() {
 
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
-                    <Breadcrumb items={postCrumbs("what-is-llms-txt", "What is llms.txt")} />
+                    <Breadcrumb schemaId={`${CANONICAL}#breadcrumb`} items={postCrumbs("what-is-llms-txt", "What is llms.txt")} />
                     <div className="mb-10">
                         <div data-article-hero="split" data-article-hero-variant="nested">
                           <div data-article-hero-copy>

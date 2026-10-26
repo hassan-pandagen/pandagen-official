@@ -93,15 +93,6 @@ const articleSchema = {
             "mainEntity": postFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Build vs Buy Software 2026", "item": "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison" }
-            ]
-        },
-        {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison#webpage",
             "url": "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison",
@@ -122,7 +113,7 @@ export default function BuildVsBuySoftware2026Page() {
 
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
-                    <Breadcrumb items={postCrumbs("build-vs-buy-software-2026-cost-comparison", "Build vs Buy Software 2026")} />
+                    <Breadcrumb schemaId={"https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison#breadcrumb"} items={postCrumbs("build-vs-buy-software-2026-cost-comparison", "Build vs Buy Software 2026")} />
                     <div className="mb-10">
                         <div data-article-hero="split" data-article-hero-variant="nested">
                           <div data-article-hero-copy>

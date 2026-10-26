@@ -27,8 +27,8 @@ import raw from './market-share.json';
  * the publisher's side than real adoption, and we will not narrate a taxonomy
  * change as a market movement.
  *
- * WHAT THIS MEASURES. Share of the top 10 million websites, of sites whose CMS
- * is known. It is not share of new builds, not share of revenue, and not share
+ * WHAT THIS MEASURES. Share of W3Techs' surveyed websites whose CMS is known.
+ * Survey coverage can change. It is not share of new builds, revenue, or share
  * of the market you sell into. A platform can lose share while growing.
  *
  * THE SERIES STARTS 2015 because that is where the source's yearly report
@@ -63,6 +63,8 @@ export interface SeriesSource {
     study: string;
     url: string;
     method: string;
+    methodologyUrl: string;
+    methodologyCheckedAt: string;
     limitation: string;
     /** Why the newest column is a dated reading rather than a live figure, plus the latest spot-check. */
     currency: string;

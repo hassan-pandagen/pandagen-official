@@ -108,15 +108,6 @@ const articleSchema = {
             ],
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/shopify-store-speed-optimization#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Shopify Store Speed Optimization", "item": "https://www.pandacodegen.com/blog/shopify-store-speed-optimization" },
-            ],
-        },
-        {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/shopify-store-speed-optimization#webpage",
             "url": "https://www.pandacodegen.com/blog/shopify-store-speed-optimization",
@@ -149,7 +140,7 @@ export default function ShopifySpeedOptimizationPage() {
             <article className="pt-28 md:pt-32 pb-12 md:pb-24">
                 <div className="container mx-auto px-6">
                     <div className="max-w-3xl mx-auto">
-                        <Breadcrumb items={postCrumbs("shopify-store-speed-optimization", "Shopify Store Speed Optimization")} />
+                        <Breadcrumb schemaId={"https://www.pandacodegen.com/blog/shopify-store-speed-optimization#breadcrumb"} items={postCrumbs("shopify-store-speed-optimization", "Shopify Store Speed Optimization")} />
                         <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-charcoal hover:text-cognac transition mt-4 mb-8">
                             <ArrowLeft className="w-4 h-4" /> Back to Blog
                         </Link>

@@ -96,15 +96,6 @@ const articleSchema = {
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": `${canonicalUrl}#breadcrumb`,
-            itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
-                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", position: 3, name: "Speed up your website", item: canonicalUrl },
-            ],
-        },
-        {
             "@type": "WebPage",
             "@id": `${canonicalUrl}#webpage`,
             url: canonicalUrl,
@@ -136,7 +127,7 @@ function WebsiteSpeedGuideContent({ preview = false }: { preview?: boolean }) {
             <Container className={preview ? "article-preview-main" : "min-h-screen bg-white pb-24 pt-28"}>
                 {!preview && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />}
                 <article className={preview ? "article-preview-content" : "mx-auto max-w-4xl px-5 sm:px-8"}>
-                    {!preview && <Breadcrumb items={postCrumbs(postId, "Speed up your website")} />}
+                    {!preview && <Breadcrumb schemaId={`${canonicalUrl}#breadcrumb`} items={postCrumbs(postId, "Speed up your website")} />}
                     <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
                         <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Website performance</p>

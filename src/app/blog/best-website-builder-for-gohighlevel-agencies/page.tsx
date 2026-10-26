@@ -118,15 +118,6 @@ const articleSchema = {
             }))
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/best-website-builder-for-gohighlevel-agencies#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Best Website Builder for GHL Agencies", "item": "https://www.pandacodegen.com/blog/best-website-builder-for-gohighlevel-agencies" }
-            ]
-        },
-        {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/best-website-builder-for-gohighlevel-agencies#webpage",
             "url": "https://www.pandacodegen.com/blog/best-website-builder-for-gohighlevel-agencies",
@@ -153,7 +144,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
             <article>
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
-                    <Breadcrumb items={postCrumbs("best-website-builder-for-gohighlevel-agencies", "Best Website Builder for GHL Agencies")} />
+                    <Breadcrumb schemaId={"https://www.pandacodegen.com/blog/best-website-builder-for-gohighlevel-agencies#breadcrumb"} items={postCrumbs("best-website-builder-for-gohighlevel-agencies", "Best Website Builder for GHL Agencies")} />
                     <div className="mb-10">
                         <div data-article-hero="split" data-article-hero-variant="nested">
                           <div data-article-hero-copy>

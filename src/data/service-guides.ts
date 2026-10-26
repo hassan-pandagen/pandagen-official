@@ -32,6 +32,8 @@ export const serviceGuides: Record<string, { title: string; href: string }[]> = 
     { title: "What a website and database cost each month", href: "/blog/website-monthly-running-cost" },
     { title: "Checks for an AI-built application", href: "/blog/ai-built-website-checklist" },
     { title: "Build or buy software", href: "/blog/build-vs-buy-software-2026-cost-comparison" },
+    // 26 Oct 2026: contextual link for a buyer weighing a custom backend against SaaS seats.
+    { title: "Audit what your SaaS subscriptions cost", href: "/blog/saas-software-pricing-audit-2026" },
   ],
   wordpress: [
     { title: "Why a Divi site is slow, and how to fix it", href: "/blog/divi-theme-slow" },

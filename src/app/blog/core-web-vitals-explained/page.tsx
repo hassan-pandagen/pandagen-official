@@ -111,15 +111,6 @@ const articleSchema = {
             inLanguage: "en-US",
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": `${canonicalUrl}#breadcrumb`,
-            itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
-                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", position: 3, name: "Core Web Vitals Explained", item: canonicalUrl },
-            ],
-        },
-        {
             "@type": "FAQPage",
             "@id": `${canonicalUrl}#faq`,
             mainEntity: postFAQs.map((faq) => ({
@@ -144,7 +135,7 @@ export default function CoreWebVitalsExplainedPage() {
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
                     />
 
-                    <Breadcrumb items={postCrumbs(postId, "Core Web Vitals Explained")} />
+                    <Breadcrumb schemaId={`${canonicalUrl}#breadcrumb`} items={postCrumbs(postId, "Core Web Vitals Explained")} />
 
                     <Link
                         href="/blog"

@@ -10,6 +10,7 @@ const HOMEPAGE_FAQS = [
   "If the site is custom code, do I need a developer every time I want to change something?",
   "If the features are built in, is every future feature included too?",
   "Do I need your monthly plan to keep a custom feature working?",
+  "Who do I contact when something on my site breaks?",
   "Do you have a minimum project size?",
   "Will I lose SEO rankings when migrating from WordPress?",
 ];

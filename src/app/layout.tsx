@@ -106,8 +106,8 @@ const siteGraph = {
         addressCountry: "US",
       },
       founder: [
-        { "@type": "Person", name: "Hassan Jamal" },
-        { "@type": "Person", name: "Imran Raza Ladhani" },
+        { "@type": "Person", "@id": "https://www.pandacodegen.com/#/schema/person/hassan", name: "Hassan Jamal" },
+        { "@type": "Person", "@id": "https://www.pandacodegen.com/#/schema/person/imran", name: "Imran Raza Ladhani" },
       ],
       url: "https://www.pandacodegen.com",
       logo: { "@type": "ImageObject", url: "https://www.pandacodegen.com/logo.png", width: 655, height: 113 },

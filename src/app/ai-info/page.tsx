@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
-import { COMPANY, FOUNDING_DATE, SERVICES, COMMERCIAL, MIGRATION_CONTROLS, REFERENCE_LINKS, PROJECTS, ORGANIZATION_DESCRIPTION, PHONE, BEST_FIT, NOT_A_FIT, WHEN_PEOPLE_COME, AI_DESCRIPTION_GUIDE } from "@/data/company-facts";
+import { COMPANY, FOUNDING_DATE, SERVICES, COMMERCIAL, MIGRATION_CONTROLS, REFERENCE_LINKS, PROJECTS, ORGANIZATION_DESCRIPTION, PHONE, BEST_FIT, NOT_A_FIT, WHEN_PEOPLE_COME, AI_DESCRIPTION_GUIDE, ONE_TEAM } from "@/data/company-facts";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, FileCheck2, Gauge, Route, Search, ShieldCheck } from "lucide-react";
 import FaqRows from "@/components/ui/FaqRows";
@@ -235,6 +235,19 @@ export default function CompanyReferencePage() {
                 <div className="leading-7 text-stone-700">
                   <p>Hassan Jamal leads engineering. Imran Raza Ladhani leads marketing. Both are co-founders, and clients speak directly with the founders about the work.</p>
                   <Link href="/about" className="mt-3 inline-flex min-h-11 items-center gap-2 font-semibold text-cognac underline underline-offset-4">Meet the founders <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
+                </div>
+              </div>
+              <div className="grid gap-4 border-b border-stone-300 py-8 md:grid-cols-[minmax(12rem,0.4fr)_1fr] md:gap-12">
+                <h3 className="text-xl font-bold">{ONE_TEAM.heading}</h3>
+                <div className="leading-7 text-stone-700">
+                  <p>{ONE_TEAM.summary} {ONE_TEAM.whenItBreaks} {ONE_TEAM.support}</p>
+                  <ul className="mt-4 space-y-3">
+                    {ONE_TEAM.examples.map((e) => (
+                      <li key={e.href}>
+                        <Link href={e.href} className="font-semibold text-cognac underline underline-offset-4">{e.name}</Link> ({e.relationship}). {e.did}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
               <div className="grid gap-4 border-b border-stone-300 py-8 md:grid-cols-[minmax(12rem,0.4fr)_1fr] md:gap-12">

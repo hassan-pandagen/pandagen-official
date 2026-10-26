@@ -116,15 +116,6 @@ const articleSchema = {
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/squarespace-migration-cost#breadcrumb",
-            itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
-                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", position: 3, name: "Squarespace migration cost", item: "https://www.pandacodegen.com/blog/squarespace-migration-cost" },
-            ],
-        },
-        {
             "@type": "WebPage",
             name: title,
             "@id": "https://www.pandacodegen.com/blog/squarespace-migration-cost#webpage",
@@ -157,7 +148,7 @@ export default function SquarespaceMigrationCostPage() {
             <main className="min-h-screen bg-white pb-24 pt-28">
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
                 <article className="mx-auto max-w-4xl px-5 sm:px-8">
-                    <Breadcrumb items={postCrumbs(postId, "Squarespace migration cost")} />
+                    <Breadcrumb schemaId={"https://www.pandacodegen.com/blog/squarespace-migration-cost#breadcrumb"} items={postCrumbs(postId, "Squarespace migration cost")} />
                     <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>

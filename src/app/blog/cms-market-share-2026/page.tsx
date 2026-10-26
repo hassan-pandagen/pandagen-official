@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-15",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-26",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/cms-market-share-2026")],
@@ -79,7 +79,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/cms-market-share-2026"),
             datePublished: "2026-08-15T00:00:00-05:00",
-            dateModified: "2026-10-08T00:00:00-05:00",
+            dateModified: "2026-10-26T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -108,12 +108,13 @@ const articleSchema = {
             "@id": `${canonicalUrl}#dataset`,
             name: "CMS market share by year, 2015 to 2026",
             description: source.method,
-            license: "https://creativecommons.org/licenses/by/4.0/",
+            // W3Techs has its own terms; do not assert a Creative Commons grant.
+            url: canonicalUrl,
             creator: { "@type": "Organization", name: source.publisher, url: "https://w3techs.com" },
             isBasedOn: source.url,
             temporalCoverage: `${periods[0]}/${periods[periods.length - 1]}`,
-            variableMeasured: "Share of the top 10 million websites, among sites with an identified CMS",
-            dateModified: source.verifiedAt,
+            variableMeasured: "Percentage of surveyed websites with an identified CMS",
+            dateModified: source.methodologyCheckedAt,
         },
         {
             "@type": "WebPage",
@@ -124,15 +125,6 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
-        },
-        {
-            "@type": "BreadcrumbList",
-            "@id": `${canonicalUrl}#breadcrumb`,
-            itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
-                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", position: 3, name: "CMS Market Share 2015 to 2026", item: canonicalUrl },
-            ],
         },
         {
             "@type": "FAQPage",
@@ -159,7 +151,7 @@ export default function CmsMarketShare2026Page() {
                 <article className="mx-auto max-w-3xl rounded-2xl border border-stone-200 bg-white px-8 py-10 shadow-xs md:px-14">
                     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
-                    <Breadcrumb items={postCrumbs(postId, "CMS market share")} />
+                    <Breadcrumb schemaId={`${canonicalUrl}#breadcrumb`} items={postCrumbs(postId, "CMS market share")} />
 
                     <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 transition-colors hover:text-charcoal">
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
@@ -205,7 +197,7 @@ export default function CmsMarketShare2026Page() {
                         <table className="w-full text-left text-sm">
                             <caption className="sr-only">
                                 Content management system market share by year, 2015 to 2026, as a percentage of the
-                                top ten million websites with an identified CMS.
+                                surveyed websites with an identified CMS.
                             </caption>
                             <thead className="border-b border-stone-200 bg-stone-50">
                                 <tr>
@@ -295,9 +287,9 @@ export default function CmsMarketShare2026Page() {
                     </BlogText>
                     <BlogText>
                         Two honest readings of a flat line: the platform has found its ceiling in this measure, or the
-                        measure is missing where its growth is happening. Webflow skews toward newer, design-led and
-                        often smaller sites, and the source samples the top ten million. Both can be true. We are not
-                        going to pretend the data resolves it.
+                        measure is missing where its growth is happening. The survey measures detectable CMS usage
+                        across existing websites, not new projects or customer segments. We cannot distinguish
+                        those explanations from this series alone.
                     </BlogText>
 
                     <BlogHeader>Shopify is the outlier</BlogHeader>
@@ -397,6 +389,8 @@ export default function CmsMarketShare2026Page() {
                             {source.study}
                         </a>{" "}
                         by {source.publisher}, read on {source.verifiedAt}. {source.method}
+                        {" "}The <a href={source.methodologyUrl} target="_blank" rel="noopener noreferrer" className="font-medium text-cognac underline underline-offset-4 hover:text-charcoal">survey methodology</a>
+                        {" "}was checked separately on {source.methodologyCheckedAt}; the historical figures have not been refreshed.
                     </BlogText>
                     <BlogText>
                         We parsed the source&apos;s table cells rather than its page text, because the flattened text

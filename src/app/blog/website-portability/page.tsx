@@ -286,15 +286,6 @@ const articleSchema = {
             citation: SOURCES.map((url) => ({ "@type": "CreativeWork", url })),
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": `${canonicalUrl}#breadcrumb`,
-            itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
-                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", position: 3, name: "Can You Export Your Website?", item: canonicalUrl },
-            ],
-        },
-        {
             "@type": "WebPage",
             "@id": `${canonicalUrl}#webpage`,
             url: canonicalUrl,
@@ -396,7 +387,7 @@ export default function WebsitePortabilityPage() {
                 <article className="mx-auto max-w-3xl rounded-2xl border border-stone-200 bg-white px-5 py-10 shadow-xs sm:px-8 md:px-14">
                     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
-                    <Breadcrumb items={postCrumbs(postId, "Can You Export Your Website?")} />
+                    <Breadcrumb schemaId={`${canonicalUrl}#breadcrumb`} items={postCrumbs(postId, "Can You Export Your Website?")} />
                     <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>

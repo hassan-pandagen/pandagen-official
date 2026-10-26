@@ -120,15 +120,6 @@ const articleSchema = {
             ],
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": `${canonicalUrl}#breadcrumb`,
-            itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
-                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", position: 3, name: "Divi Theme Slow", item: canonicalUrl },
-            ],
-        },
-        {
             "@type": "WebPage",
             "@id": `${canonicalUrl}#webpage`,
             url: canonicalUrl,
@@ -165,7 +156,7 @@ export default function DiviThemeSlowPage() {
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
                     />
 
-                    <Breadcrumb items={postCrumbs(postId, "Divi Theme Slow")} />
+                    <Breadcrumb schemaId={`${canonicalUrl}#breadcrumb`} items={postCrumbs(postId, "Divi Theme Slow")} />
 
                     <Link
                         href="/blog"

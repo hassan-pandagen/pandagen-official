@@ -230,15 +230,6 @@ const articleSchema = {
       }))
     },
     {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.pandacodegen.com/blog/aeo-web-performance-glossary#breadcrumb",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-        { "@type": "ListItem", "position": 3, "name": "AEO & Web Performance Glossary", "item": "https://www.pandacodegen.com/blog/aeo-web-performance-glossary" }
-      ]
-    },
-    {
       "@type": "WebPage",
       "@id": "https://www.pandacodegen.com/blog/aeo-web-performance-glossary#webpage",
       "url": "https://www.pandacodegen.com/blog/aeo-web-performance-glossary",
@@ -260,7 +251,7 @@ export default function GlossaryPage() {
       <article>
       <section className="relative pt-24 md:pt-40 pb-10 px-6">
         <div className="max-w-3xl mx-auto">
-          <Breadcrumb items={postCrumbs("aeo-web-performance-glossary", "AEO & Web Performance Glossary")} />
+          <Breadcrumb schemaId={"https://www.pandacodegen.com/blog/aeo-web-performance-glossary#breadcrumb"} items={postCrumbs("aeo-web-performance-glossary", "AEO & Web Performance Glossary")} />
           <div className="mb-8">
             <div data-article-hero="split" data-article-hero-variant="nested">
               <div data-article-hero-copy>

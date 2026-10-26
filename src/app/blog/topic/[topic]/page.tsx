@@ -135,15 +135,6 @@ export default async function TopicHubPage({ params }: Params) {
                 publisher: { "@id": `${BASE}/#organization` },
             },
             {
-                "@type": "BreadcrumbList",
-                "@id": `${url}#breadcrumb`,
-                itemListElement: [
-                    { "@type": "ListItem", position: 1, name: "Home", item: BASE },
-                    { "@type": "ListItem", position: 2, name: "Blog", item: `${BASE}/blog` },
-                    { "@type": "ListItem", position: 3, name: hub.shortLabel, item: url },
-                ],
-            },
-            {
                 "@type": "ItemList",
                 "@id": `${url}#itemlist`,
                 name: hub.h1,
@@ -163,7 +154,7 @@ export default async function TopicHubPage({ params }: Params) {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             <main className="min-h-screen bg-paper">
                 <div className="container mx-auto max-w-4xl px-6 pt-28 pb-16 md:pt-36">
-                    <Breadcrumb items={hubCrumbs(hub)} />
+                    <Breadcrumb schemaId={`${url}#breadcrumb`} items={hubCrumbs(hub)} />
 
                     <p className="mb-4 text-xs font-bold uppercase tracking-widest text-cognac">
                         {posts.length} guide{posts.length === 1 ? "" : "s"}

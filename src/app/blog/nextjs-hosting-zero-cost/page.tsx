@@ -101,15 +101,6 @@ const articleSchema = {
             ]
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Is Vercel Free? 2026 Hobby Limits and Business Pricing", "item": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost" }
-            ]
-        },
-        {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#webpage",
             "url": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
@@ -158,7 +149,7 @@ export default function NextjsHostingZeroCostPage() {
                     />
 
                     {/* Breadcrumb Navigation */}
-                    <Breadcrumb items={postCrumbs("nextjs-hosting-zero-cost", "Is Vercel Free? 2026 Hobby Limits and Business Pricing")} />
+                    <Breadcrumb schemaId={"https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#breadcrumb"} items={postCrumbs("nextjs-hosting-zero-cost", "Is Vercel Free? 2026 Hobby Limits and Business Pricing")} />
 
                     {/* Back Button */}
                     {/* Title & Meta */}

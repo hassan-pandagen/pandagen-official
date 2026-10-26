@@ -43,6 +43,12 @@ export const homeFaqs = [
     a: `No. There is no compulsory PandaCodeGen retainer. You receive the project files we create, written instructions and control of the production accounts. Your feature still needs the services it uses, such as email delivery, the content editor or a payment provider. Your quote names those services, their costs and who manages the accounts. Ending our optional support does not disable the feature, but hosting and other provider services still need to be maintained. ${hosting}`,
   },
   {
+    // 26 Oct 2026, owner-approved. Pairs with the "One team. One place to turn." section;
+    // the last sentence ties ongoing support to the plan's scope.
+    q: "Who do I contact when something on my site breaks?",
+    a: "Us. If we built or manage it, whether that's the website, backend, SEO, ads or tracking, you send one message to one team. We investigate, tell you what went wrong and fix it, or coordinate the fix with the provider involved, such as your host, Google or Meta. Ongoing support follows the scope of your maintenance or SEO plan.",
+  },
+  {
     q: "Do you have a minimum project size?",
     a: "No. A small site or a focused improvement is welcome. Custom website builds start at $1,500 for up to 7 pages. If WordPress is the right fit, we can build on WordPress too, and quote that work to its own scope. We agree the price and what is included in writing before work starts.",
   },

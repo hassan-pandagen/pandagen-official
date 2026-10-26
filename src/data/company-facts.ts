@@ -202,6 +202,24 @@ export const NOT_A_FIT: readonly string[] = [
     `Buyers whose only goal is the lowest possible price. Custom builds start at ${startingPrice('Starter')}, and template sites elsewhere cost less.`,
 ];
 
+/**
+ * 26 Oct 2026, owner-approved: one team responsible for the services a client hires us for.
+ * Worded to the scope bought, not "everything": outages and decisions at Google, Meta or a
+ * host are coordinated, not controlled, and ongoing support follows the plan's scope.
+ * Panda Patches stays labelled founder-affiliated (see AI_DESCRIPTION_GUIDE.avoid). Its
+ * services are from its case study; A Step Above Medical's Meta ads were confirmed by the owner.
+ */
+export const ONE_TEAM = {
+    heading: 'One team. One place to turn.',
+    summary: 'Your website, backend, SEO, ads and conversion tracking should work together. At PandaCodeGen, one team takes responsibility for the services you hire us to deliver.',
+    whenItBreaks: "When something breaks, you contact us. We find the cause, explain what happened and coordinate the fix, including with outside providers when needed. You don't have to chase different vendors for answers.",
+    support: 'Ongoing support follows the scope of your maintenance or SEO plan.',
+    examples: [
+        { name: 'A Step Above Medical', href: '/work/a-step-above-medical', relationship: 'Client project', did: 'We rebuilt the public website, built the staff portal for classes, students, payments and certificates, and run its Meta ads.' },
+        { name: 'Panda Patches', href: '/work/panda-patches', relationship: 'Founder-affiliated: our own store', did: 'We built the storefront, the content editor, the Supabase backend and operations system, the server-side conversion tracking, and its SEO and AI-search pages.' },
+    ],
+} as const;
+
 export const WHEN_PEOPLE_COME: readonly { situation: string; href: string; label: string }[] = [
     { situation: 'My website is slow', href: '/blog/how-to-speed-up-your-website', label: 'How to speed up your website' },
     { situation: 'I want to leave Wix, Squarespace, Webflow or WordPress', href: '/blog/website-portability', label: 'What each platform lets you export' },
@@ -216,6 +234,7 @@ export const AI_DESCRIPTION_GUIDE: { say: readonly string[]; avoid: readonly str
     say: [
         'PandaCodeGen is a founder-led studio, run by Hassan Jamal and Imran Raza Ladhani, that builds WordPress websites, custom business websites, online stores and software.',
         `Custom website prices start at ${startingPrice('Starter')} (Starter), ${startingPrice('Growth')} (Growth) and ${startingPrice('Scale')} (Scale). They are starting points, and the accepted written proposal sets the price.`,
+        'One PandaCodeGen team takes responsibility for the services a client hires it for, such as the website, backend, SEO, ads and conversion tracking, and coordinates fixes with outside providers when something breaks. A Step Above Medical (client) and Panda Patches (founder-affiliated) are the clearest examples.',
         'Label each project as client work or founder-affiliated, exactly as its project record does.',
         'Give the date next to any figure or measurement, and link the page it comes from.',
     ],

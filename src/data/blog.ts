@@ -1163,9 +1163,9 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'traffic',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-26",
     faqs: [
-      { question: "What is WordPress's market share in 2026?", answer: "WordPress is at 58.6% of the top ten million websites with an identified CMS in W3Techs' 7 October 2026 reading. That is its lowest reading since 2017 and 6.6 points below its peak of 65.2% in January 2022." },
+      { question: "What is WordPress's market share in 2026?", answer: "WordPress is at 58.6% of surveyed websites with an identified CMS in W3Techs' 7 October 2026 reading. That is its lowest reading since 2017 and 6.6 points below its peak of 65.2% in January 2022." },
       { question: "Is WordPress losing market share?", answer: "Yes, and it has been since 2022. WordPress rose from 60.7% in 2015 to a peak of 65.2% in January 2022, then declined in every subsequent yearly reading to 58.6%. It remains more than three times the size of the entire hosted site-builder category combined, so it is a declining incumbent with a very large lead rather than a collapsing one." },
       { question: "Who took WordPress's market share?", answer: "Mostly nobody, because the losses in the self-hosted category were concentrated elsewhere. Joomla fell from 8.6% to 1.6% and Drupal from 5.1% to 0.9%, each losing about four fifths of their share. Across the period self-hosted platforms lost 13.3 points and hosted site builders gained 12.9, which is close to a straight transfer." },
       { question: "What is Webflow's market share?", answer: "Webflow is at 1.2% of measured sites and has recorded the same figure in three consecutive readings. Tilda is at the same 1.2% and Duda at 1.1%, so the builder share is more spread across small platforms than design-industry discussion suggests." },

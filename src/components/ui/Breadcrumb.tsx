@@ -8,18 +8,22 @@ interface BreadcrumbItem {
 
 interface BreadcrumbProps {
   items: BreadcrumbItem[];
+  /** Preserve references from the page graph while owning the only trail. */
+  schemaId?: string;
 }
 
-export default function Breadcrumb({ items }: BreadcrumbProps) {
+export default function Breadcrumb({ items, schemaId }: BreadcrumbProps) {
   // Generate Schema.org BreadcrumbList markup
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    ...(schemaId ? { "@id": schemaId } : {}),
+    "name": items.map(item => item.label).join(" > "),
     "itemListElement": items.map((item, index) => ({
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": item.href ? `https://www.pandacodegen.com${item.href}` : undefined
+      "item": item.href ? new URL(item.href, "https://www.pandacodegen.com").href : undefined
     }))
   };
 
@@ -28,7 +32,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       {/* Schema.org Markup */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c") }}
       />
 
       {/* Visual Breadcrumb */}

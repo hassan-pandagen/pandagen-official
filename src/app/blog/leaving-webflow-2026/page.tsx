@@ -158,15 +158,6 @@ const articleSchema = {
             ],
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Leaving Webflow in 2026", "item": "https://www.pandacodegen.com/blog/leaving-webflow-2026" },
-            ],
-        },
-        {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#webpage",
             "url": "https://www.pandacodegen.com/blog/leaving-webflow-2026",
@@ -226,7 +217,7 @@ export default function LeavingWebflow2026Page() {
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
                     />
 
-                    <Breadcrumb items={postCrumbs("leaving-webflow-2026", "Leaving Webflow in 2026")} />
+                    <Breadcrumb schemaId={"https://www.pandacodegen.com/blog/leaving-webflow-2026#breadcrumb"} items={postCrumbs("leaving-webflow-2026", "Leaving Webflow in 2026")} />
 
                     <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" />

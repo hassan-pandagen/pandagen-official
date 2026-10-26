@@ -91,15 +91,6 @@ const articleSchema = {
             ]
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "How to Migrate WordPress to Next.js", "item": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs" }
-            ]
-        },
-        {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#webpage",
             "url": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs",
@@ -150,7 +141,7 @@ export default function MigrateWordPressToNextJSPage() {
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
                     />
 
-                    <Breadcrumb items={postCrumbs("how-to-migrate-wordpress-to-nextjs", "How to Migrate WordPress to Next.js")} />
+                    <Breadcrumb schemaId={"https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#breadcrumb"} items={postCrumbs("how-to-migrate-wordpress-to-nextjs", "How to Migrate WordPress to Next.js")} />
 
                     {/* Title & Meta */}
                     <div className="mb-10">

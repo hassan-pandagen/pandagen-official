@@ -29,9 +29,10 @@
     "check": "npm run typecheck && npm run lint && npm test && npm run claims:check && npm run dates:check",
     "smoke:release": "node release-smoke.mjs",
     "seo:check": "node seo-audit.mjs",
+    "schema:check": "node --test scripts/audit-structured-data.test.mjs && node scripts/audit-structured-data.mjs",
     "audit:dependencies": "node scripts/audit-dependencies.mjs",
     "indexnow": "node indexnow-ping.mjs",
-    "verify": "npm run check && npm run build && npm run guard:all",
+    "verify": "npm run check && npm run build && npm run schema:check && npm run guard:all",
     "assistant:questions": "node scripts/assistant-questions.mjs",
     "test:catalog": "node --test public/resources/product-catalog-example/catalog.test.mjs"
   },

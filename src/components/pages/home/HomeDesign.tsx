@@ -21,6 +21,7 @@ import FoundersDark from "@/components/redesign/FoundersDark";
 import FaqOpen from "@/components/redesign/FaqOpen";
 import GuidesList from "@/components/redesign/GuidesList";
 import { T } from "@/components/redesign/tokens";
+import { ONE_TEAM } from "@/data/company-facts";
 
 // The homepage design; src/app/page.tsx renders it. Built 23 Sep 2026 as the
 // /preview/hero draft beside the old homepage, and moved here on 8 Oct 2026 when
@@ -84,7 +85,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
         />
 
       <section className="relative">
-        <div className="relative mx-auto flex min-h-[calc(88svh-88px)] max-w-[1600px] flex-col justify-between gap-12 px-6 pb-16 pt-6 md:px-10 lg:pt-6">
+        <div className="relative mx-auto flex min-h-[calc(88svh-88px)] max-w-[1600px] flex-col justify-start gap-10 px-6 pb-16 pt-6 md:px-10 lg:pt-6">
           {/* The headline carries the page, as on grigoletti.ch: full width, huge.
               Words unchanged from the live hero (positioning decision, 15 Sep). */}
           <h1
@@ -94,14 +95,14 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
             Websites built for the way you do <HeadingEmphasis text="business." phrase="business" />
           </h1>
 
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,.85fr)_minmax(0,1.15fr)] lg:gap-12 xl:gap-16">
+          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,.85fr)_minmax(0,1.15fr)] lg:gap-12 xl:gap-16">
             <div className="min-w-0">
               <p className="max-w-[34rem] text-[18px] leading-[1.55] md:text-[20px]" style={{ color: BODY }}>
                 Work with Hassan and Imran on a business website or online store your team can edit.
                 We can build on WordPress, create a custom site or improve what you already have.
                 You get an agreed price, written instructions and a live editing walkthrough.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <QuoteModalButton
                   cta="preview_hero_talk"
                   className="cta-solid inline-flex items-center justify-center gap-3 bg-[#1C1917] px-6 py-4 text-[16px] font-medium text-white"
@@ -120,13 +121,13 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
                   See the work
                 </Link>
               </div>
-              <p className="mt-5 text-[14px]" style={{ color: QUIET }}>
+              <p className="mt-6 text-[14px]" style={{ color: QUIET }}>
                 Custom builds from <PriceAmount value="$1,500" />. WordPress quoted to scope. Price agreed before work starts.
               </p>
               {/* 13 Oct 2026, owner: a direct booking option beside the email form, and the
                   AI-referral figure as proof. The figure is read from the same data file as
                   the measurement post, rounded to whole dollars, with its window. */}
-              <p className="mt-2 text-[14px]" style={{ color: QUIET }}>
+              <p className="mt-3 text-[14px]" style={{ color: QUIET }}>
                 Prefer to talk first?{" "}
                 <CalModalButton
                   fallbackHref="https://cal.com/pandagen/discovery"
@@ -135,7 +136,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
                   <span style={{ color: ACCENT }}>Book a free 15-minute call</span>
                 </CalModalButton>
               </p>
-              <p className="mt-4 max-w-[34rem] text-[14px] leading-[1.55]" style={{ color: BODY }}>
+              <p className="mt-7 max-w-[34rem] text-[14px] leading-[1.6]" style={{ color: BODY }}>
                 Our own store, Panda Patches, recorded {usdWhole(aiRevenue)} in orders attributed to ChatGPT, Claude,
                 Perplexity and other AI assistants from {window_.label}.{" "}
                 <Link href="/blog/ai-referral-revenue-2026" className="underline underline-offset-4" style={{ color: ACCENT }}>
@@ -177,6 +178,25 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
           , we plan how your content, URLs and integrations carry across. You get a content editor, training and
           code you own.
         </p>
+      </section>
+      {/* 26 Oct 2026, owner-approved wording. "Services you hire us to deliver" keeps the
+          promise to the scope bought: it doesn't say every plan covers every service. */}
+      <section data-home-one-team className="relative px-6 pb-8 md:px-10 md:pb-16" style={{ backgroundColor: T.paper }}>
+        <div className="mx-auto max-w-[44rem] text-[18px] leading-[1.65]" style={{ color: BODY }}>
+          <h2 className="mb-3 text-[24px] font-semibold leading-tight md:text-[28px]" style={{ color: INK }}>
+            {ONE_TEAM.heading}
+          </h2>
+          <p className="mb-4">{ONE_TEAM.summary}</p>
+          <p className="mb-4">{ONE_TEAM.whenItBreaks}</p>
+          <ul className="space-y-2 text-[16px] leading-[1.6]">
+            {ONE_TEAM.examples.map((e) => (
+              <li key={e.href}>
+                <Link href={e.href} className="font-medium underline underline-offset-4" style={{ color: ACCENT }}>{e.name}</Link>
+                {" "}({e.relationship}). {e.did}
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
       <ServicesStack />
       <ProofSection />

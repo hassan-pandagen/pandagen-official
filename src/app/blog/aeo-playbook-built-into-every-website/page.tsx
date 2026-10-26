@@ -112,15 +112,6 @@ const articleSchema = {
             }))
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "AEO Playbook", "item": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website" }
-            ]
-        },
-        {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website#webpage",
             "url": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website",
@@ -161,7 +152,7 @@ export default function AEOPlaybookPage() {
             <article>
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
-                    <Breadcrumb items={postCrumbs("aeo-playbook-built-into-every-website", "AEO Playbook")} />
+                    <Breadcrumb schemaId={"https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website#breadcrumb"} items={postCrumbs("aeo-playbook-built-into-every-website", "AEO Playbook")} />
                     <div className="mb-10">
                         <div data-article-hero="split" data-article-hero-variant="nested">
                           <div data-article-hero-copy>

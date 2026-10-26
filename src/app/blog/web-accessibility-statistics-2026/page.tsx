@@ -115,15 +115,6 @@ const articleSchema = {
             inLanguage: "en-US",
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": `${canonicalUrl}#breadcrumb`,
-            itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
-                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", position: 3, name: "Web Accessibility Statistics 2026", item: canonicalUrl },
-            ],
-        },
-        {
             "@type": "FAQPage",
             "@id": `${canonicalUrl}#faq`,
             mainEntity: postFAQs.map((faq) => ({
@@ -145,7 +136,7 @@ export default function WebAccessibilityStatistics2026Page() {
                 <article className="mx-auto max-w-3xl rounded-2xl border border-stone-200 bg-white px-8 py-10 shadow-xs md:px-14">
                     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
-                    <Breadcrumb items={postCrumbs(postId, "Web accessibility statistics")} />
+                    <Breadcrumb schemaId={`${canonicalUrl}#breadcrumb`} items={postCrumbs(postId, "Web accessibility statistics")} />
 
                     <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 transition-colors hover:text-charcoal">
                         <ArrowLeft className="h-4 w-4" /> Back to Insights

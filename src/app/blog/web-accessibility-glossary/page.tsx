@@ -317,15 +317,6 @@ const articleSchema = {
             })),
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": `${canonicalUrl}#breadcrumb`,
-            itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
-                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", position: 3, name: "Web Accessibility Glossary", item: canonicalUrl },
-            ],
-        },
-        {
             "@type": "WebPage",
             "@id": `${canonicalUrl}#webpage`,
             url: canonicalUrl,
@@ -350,7 +341,7 @@ export default function WebAccessibilityGlossaryPage() {
             <article>
                 <section className="relative px-6 pb-10 pt-24 md:pt-40">
                     <div className="mx-auto max-w-3xl">
-                        <Breadcrumb items={postCrumbs(postId, "Web Accessibility Glossary")} />
+                        <Breadcrumb schemaId={`${canonicalUrl}#breadcrumb`} items={postCrumbs(postId, "Web Accessibility Glossary")} />
                         <div className="mb-8">
                             <div data-article-hero="split" data-article-hero-variant="nested">
                               <div data-article-hero-copy>

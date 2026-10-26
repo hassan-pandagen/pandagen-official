@@ -116,15 +116,6 @@ const articleSchema = {
             }))
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Lighthouse agentic browsing checks", "item": "https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score" }
-            ]
-        },
-        {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score#webpage",
             "url": "https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score",
@@ -145,7 +136,7 @@ export default function AgenticBrowsingPage() {
 
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
-                    <Breadcrumb items={postCrumbs("agentic-browsing-pagespeed-score", "Lighthouse agentic browsing checks")} />
+                    <Breadcrumb schemaId={"https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score#breadcrumb"} items={postCrumbs("agentic-browsing-pagespeed-score", "Lighthouse agentic browsing checks")} />
                     <div className="mb-10">
                         <div data-article-hero="split" data-article-hero-variant="nested">
                           <div data-article-hero-copy>

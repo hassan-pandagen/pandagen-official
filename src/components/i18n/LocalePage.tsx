@@ -948,17 +948,14 @@ function buildSchema(
         about: { "@id": `${SITE_URL}/#organization` },
         inLanguage: localeTags[locale],
       },
-      {
+      ...(page !== "home" ? [{
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumb`,
-        itemListElement:
-          page === "home"
-            ? [{ "@type": "ListItem", position: 1, name: "PandaCodeGen", item: url }]
-            : [
+        itemListElement: [
                 { "@type": "ListItem", position: 1, name: "PandaCodeGen", item: urlFor("home", locale) },
                 { "@type": "ListItem", position: 2, name: meta.title, item: url },
               ],
-      },
+      }] : []),
       {
         "@type": "FAQPage",
         "@id": `${url}#faq`,
