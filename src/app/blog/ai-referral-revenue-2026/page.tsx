@@ -25,8 +25,10 @@ const canonicalUrl = "https://www.pandacodegen.com/blog/ai-referral-revenue-2026
 
 const title = `ChatGPT Out-Earned Our Google Ads by ${chatgptVsGoogleAds}x: Six Months of AI Referral Revenue`;
 const description =
-    `First-party data from a founder-affiliated store: ${totalOrders} orders and ${usd(totalRevenue)} ` +
-    `attributed to ChatGPT, Claude, Perplexity, Gemini and Google AI Overview.`;
+    // 27 Oct 2026: an earlier rewrite attributed every recorded order to AI assistants. The AI share
+    // is aiRevenue; totalRevenue is every recorded channel. Keep the two distinct in this sentence.
+    `${usd(aiRevenue)} of ${usd(totalRevenue)} in recorded revenue at a founder-affiliated store ` +
+    `was attributed to AI assistants from ${window_.label}.`;
 
 export const dynamic = "force-static";
 

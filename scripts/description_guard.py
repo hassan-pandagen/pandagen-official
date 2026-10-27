@@ -1,9 +1,17 @@
-"""Fail the build if a page's meta description is shorter than 25 or longer than 160 characters.
+"""Fail the build if a page's meta description is outside our 25-160 character publishing range.
 
 WHY
-  Bing Webmaster Tools reports "Meta Description too long or too short" as an
-  error outside 25-160 characters, and Google cuts the snippet off at about the
-  same length. On 27 Oct 2026 83 of the 162 sitemap pages were over 160 (median
+  25-160 is OUR chosen range, not a search-engine rule. Bing Webmaster Tools
+  reports descriptions outside it as an error. Google sets no length limit: it
+  truncates to fit the display and may write its own snippet from the page.
+  Short, complete descriptions still read better wherever they're shown.
+
+LIMITS
+  It reads prerendered HTML only, so request-rendered routes (such as /blog)
+  are not covered, and pages with no description are skipped (the SEO crawler,
+  seo:check, reports those).
+
+HISTORY On 27 Oct 2026 83 of the 162 sitemap pages were over 160 (median
   161, longest 264), so searchers on both engines saw sentences that stopped
   mid-way. All 83 were rewritten the same day; this keeps them there.
 
