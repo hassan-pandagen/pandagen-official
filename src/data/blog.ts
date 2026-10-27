@@ -1131,7 +1131,7 @@ export const blogPosts: BlogPost[] = [
     id: "ai-referral-revenue-2026",
     cardStat: "6.7x",
     cardStatLabel: "ChatGPT revenue vs Google Ads, same six months",
-    title: "ChatGPT Out-Earned Our Google Ads by 6.7x: Six Months of AI Referral Revenue",
+    title: "ChatGPT Out-Earned Our Google Ads by 6.7x, March to August 2026",
     excerpt: "First-party data from a founder-affiliated store. 760 orders, $271,620.61, and recorded revenue attributed to ChatGPT, Claude, Perplexity, Gemini and Google AI Overview.",
     category: "Research",
     readTime: "11 min",

@@ -130,8 +130,9 @@ export const trueZeroes = rows.filter((r) => r.orders === 0).map((r) => r.source
  * they were first read: the study window re-pulls at repullOfStudyWindow, and
  * August 2026 read $11,186.59 on 4 Sep 2026 against $9,267.84 on recordedOn.
  * The owner knows of no refunds or edits behind it. Pages show both figures
- * with their dates rather than replacing one; the monthly average uses the
- * later, lower reading.
+ * with their dates rather than replacing one. The monthly average uses the
+ * calendar-month figures recorded on recordedOn; neither reading is assumed
+ * to be the more accurate one.
  *
  * Google AI impressions: Search Console shows "78.9k", so the figure is an
  * approximation and is always rendered as "about". It covers a different and

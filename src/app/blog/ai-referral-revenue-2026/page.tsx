@@ -24,7 +24,9 @@ const postId = "ai-referral-revenue-2026";
 const postFAQs = blogPosts.find((p) => p.id === postId)?.faqs ?? [];
 const canonicalUrl = "https://www.pandacodegen.com/blog/ai-referral-revenue-2026";
 
-const title = `ChatGPT Out-Earned Our Google Ads by ${chatgptVsGoogleAds}x: Six Months of AI Referral Revenue`;
+// 27 Oct 2026: the period is in the headline itself, because the ratio is specific to that window
+// (Google Ads barely ran before August). A date further down the page is easy to miss.
+const title = `ChatGPT Out-Earned Our Google Ads by ${chatgptVsGoogleAds}x, March to August 2026`;
 const description =
     // 27 Oct 2026: an earlier rewrite attributed every recorded order to AI assistants. The AI share
     // is aiRevenue; totalRevenue is every recorded channel. Keep the two distinct in this sentence.
@@ -131,7 +133,7 @@ export default function AiReferralRevenuePage() {
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Research</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             ChatGPT out-earned our Google Ads by{" "}
-                            <span className="italic text-cognac">{chatgptVsGoogleAds}x</span>
+                            <span className="italic text-cognac">{chatgptVsGoogleAds}x</span>, March to August 2026
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Over {window_.label}, a store we operate took {totalOrders} orders worth{" "}
@@ -326,8 +328,9 @@ export default function AiReferralRevenuePage() {
                         time, with the same source classification as the study. Read on that date, the portal shows{" "}
                         {usd(monthly.repullOfStudyWindow.aiRevenueUsd)} in AI-attributed revenue for{" "}
                         {monthly.repullOfStudyWindow.window}, against the {usd(aiRevenue)} read on {studyReadOnLabel} and
-                        used above. The same orders now carry lower recorded values; we haven&apos;t identified why. We show
-                        both readings with their dates, and the monthly average uses the later, lower one.
+                        used above. The same orders now carry lower recorded values; we haven&apos;t identified why, and we
+                        show both readings with their dates. The monthly average uses the calendar-month figures recorded
+                        on {monthly.recordedOnLabel}.
                     </BlogText>
                     <BlogText>
                         Separately, {monthly.googleAiImpressions.instrument.split(",")[0]} recorded about{" "}
