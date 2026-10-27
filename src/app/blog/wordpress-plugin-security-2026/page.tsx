@@ -502,6 +502,22 @@ export default function WordPressPluginSecurity2026Page() {
                         and the Next.js flaw described above needed patching too. Whatever the stack, someone has to be
                         watching for advisories like this one and acting on them.
                     </BlogText>
+                    {/* 27 Oct 2026. Checked against PHP's 26 Oct notice and Node's 21 Oct advisory. Neither
+                        reports attacks, so this paragraph doesn't mention exploitation. */}
+                    <BlogText>
+                        A second fix followed on 26 October, for a different flaw. CVE-2026-111497 is in Brotli, a
+                        compression library bundled with PHP&apos;s official Windows packages and with Node.js.{" "}
+                        <a href="https://www.php.net/archive/2026.php#2026-10-26-1" target="_blank" rel="noopener noreferrer" className={sourceLink}>PHP rebuilt its Windows packages</a>{" "}
+                        as 8.5.12-1, 8.4.27-1, 8.3.36-1 and 8.2.35-1. The version number PHP reports doesn&apos;t change,
+                        so the -1 in the package name is how you tell them apart. PHP says the flaw is reachable on
+                        Windows when cURL decompresses responses automatically, which is off by default but can be
+                        switched on by applications and libraries.{" "}
+                        <a href="https://nodejs.org/en/blog/vulnerability/october-2026-security-releases" target="_blank" rel="noopener noreferrer" className={sourceLink}>Node.js fixed the same flaw</a>{" "}
+                        on 21 October in versions 22.23.4, 24.22.1 and 26.12.1, and said malicious Brotli data could
+                        crash a process, expose its memory or let an attacker run code. Moving from PHP to Node.js
+                        wouldn&apos;t have avoided this one, because the flaw was in a library both of them bundle, not
+                        in the website&apos;s own code.
+                    </BlogText>
 
                     <BlogHeader id="ask-provider">What to ask a provider about their patch process</BlogHeader>
                     <BlogText>
