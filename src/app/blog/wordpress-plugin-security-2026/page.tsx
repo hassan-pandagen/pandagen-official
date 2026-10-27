@@ -477,12 +477,13 @@ export default function WordPressPluginSecurity2026Page() {
                         <a href="https://www.nsw.gov.au/ministerial-releases/update-on-php-response" target="_blank" rel="noopener noreferrer" className={sourceLink}>NSW Government said</a>{" "}
                         on 22 October that it had temporarily taken some of its websites offline while patches were
                         applied, and that no agency had reported an information breach. Exploitation attempts have been
-                        seen.{" "}
-                        <a href="https://www.bankinfosecurity.com/waiting-for-php2shell-onslaught-as-pocs-proliferate-a-33190" target="_blank" rel="noopener noreferrer" className={sourceLink}>Sophos described the attempts it saw</a>{" "}
-                        as unsuccessful so far, and Canada&apos;s{" "}
-                        <a href="https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619" target="_blank" rel="noopener noreferrer" className={sourceLink}>Cyber Centre</a>{" "}
-                        reported a public proof of concept but no active exploitation when it issued its alert. We
-                        haven&apos;t seen a confirmed count of compromised sites, so we don&apos;t give one.
+                        seen. On 22 October,{" "}
+                        <a href="https://www.bankinfosecurity.com/waiting-for-php2shell-onslaught-as-pocs-proliferate-a-33190" target="_blank" rel="noopener noreferrer" className={sourceLink}>Sophos reported</a>{" "}
+                        that the attempts it had observed were unsuccessful. Canada&apos;s{" "}
+                        <a href="https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619" target="_blank" rel="noopener noreferrer" className={sourceLink}>Cyber Centre alert</a>{" "}
+                        of 21 October, updated on 23 October, reported a public proof of concept and no active
+                        exploitation identified at that time. Neither observation rules out successful attacks
+                        elsewhere, and we haven&apos;t verified a worldwide count of compromised websites.
                     </BlogText>
                     <BlogList
                         items={[
