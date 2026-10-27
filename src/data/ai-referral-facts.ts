@@ -1,4 +1,5 @@
 import raw from './ai-referral-data.json';
+import monthlyRaw from './ai-monthly-revenue.json';
 
 /*
  * Notes on ai-referral-data.json, moved here from its "$comment" key on 30 Sep 2026.
@@ -116,3 +117,66 @@ export const chatgptVsGoogleAds =
 
 /** Sources that recorded a genuine zero. Published as zeroes on purpose. */
 export const trueZeroes = rows.filter((r) => r.orders === 0).map((r) => r.source);
+
+/*
+ * MONTHLY FIGURES AFTER THE STUDY WINDOW (added 27 Oct 2026).
+ *
+ * The study above is a snapshot read on its verifiedAt date. The monthly rows in
+ * ai-monthly-revenue.json were read later, one calendar month per portal view,
+ * on recordedOn. They use the same source classification and the same exclusion
+ * of Web Checkout as the study (June's total matches the portal's own total).
+ *
+ * The portal reports lower revenue for some earlier orders than it did when
+ * they were first read: the study window re-pulls at repullOfStudyWindow, and
+ * August 2026 read $11,186.59 on 4 Sep 2026 against $9,267.84 on recordedOn.
+ * The owner knows of no refunds or edits behind it. Pages show both figures
+ * with their dates rather than replacing one; the monthly average uses the
+ * later, lower reading.
+ *
+ * Google AI impressions: Search Console shows "78.9k", so the figure is an
+ * approximation and is always rendered as "about". It covers a different and
+ * later window than corroboration above, and the two are never combined.
+ */
+
+export interface MonthRow {
+    month: string;
+    label: string;
+    aiOrders: number;
+    aiRevenueUsd: number;
+    totalOrders: number;
+    totalRevenueUsd: number;
+}
+
+export const monthly = monthlyRaw as unknown as {
+    recordedOn: string;
+    recordedOnLabel: string;
+    system: string;
+    averageFrom: string;
+    averageTo: string;
+    averageLabel: string;
+    months: MonthRow[];
+    repullOfStudyWindow: { window: string; aiRevenueUsd: number };
+    googleAiImpressions: { instrument: string; from: string; to: string; label: string; impressionsApprox: number };
+};
+
+const averaged = monthly.months.filter((m) => m.month >= monthly.averageFrom && m.month <= monthly.averageTo);
+if (averaged.length === 0) throw new Error('ai-monthly-revenue.json: no months inside the average range.');
+for (const m of monthly.months) {
+    if (m.aiRevenueUsd > m.totalRevenueUsd || m.aiOrders > m.totalOrders) {
+        throw new Error(`ai-monthly-revenue.json: ${m.label} has more AI revenue or orders than its total.`);
+    }
+}
+
+/** Mean monthly AI-attributed revenue across the stated average range. */
+export const monthlyAiAverage = averaged.reduce((n, m) => n + m.aiRevenueUsd, 0) / averaged.length;
+export const monthlyAiAverageMonths = averaged.length;
+export const monthlyAiRange = {
+    low: Math.min(...averaged.map((m) => m.aiRevenueUsd)),
+    high: Math.max(...averaged.map((m) => m.aiRevenueUsd)),
+};
+export const monthShare = (m: MonthRow) => pct(m.aiRevenueUsd, m.totalRevenueUsd);
+
+/** The study's read date as "18 August 2026", to sit beside recordedOnLabel. */
+export const studyReadOnLabel = new Date(`${window_.verifiedAt}T12:00:00Z`).toLocaleDateString('en-GB', {
+    day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
+});

@@ -1,0 +1,28 @@
+{
+  "recordedOn": "2026-10-27",
+  "recordedOnLabel": "27 October 2026",
+  "system": "portal.pandapatches.com, Reports, Performance by Source, one calendar month per view",
+  "averageFrom": "2026-06",
+  "averageTo": "2026-09",
+  "averageLabel": "June to September 2026",
+  "months": [
+    { "month": "2026-03", "label": "March 2026", "aiOrders": 1, "aiRevenueUsd": 170.00, "totalOrders": 134, "totalRevenueUsd": 34681.94 },
+    { "month": "2026-04", "label": "April 2026", "aiOrders": 1, "aiRevenueUsd": 180.00, "totalOrders": 128, "totalRevenueUsd": 60008.90 },
+    { "month": "2026-05", "label": "May 2026", "aiOrders": 10, "aiRevenueUsd": 2223.98, "totalOrders": 104, "totalRevenueUsd": 27333.98 },
+    { "month": "2026-06", "label": "June 2026", "aiOrders": 17, "aiRevenueUsd": 5075.20, "totalOrders": 155, "totalRevenueUsd": 58626.62 },
+    { "month": "2026-07", "label": "July 2026", "aiOrders": 14, "aiRevenueUsd": 3510.00, "totalOrders": 132, "totalRevenueUsd": 45874.04 },
+    { "month": "2026-08", "label": "August 2026", "aiOrders": 36, "aiRevenueUsd": 9267.84, "totalOrders": 204, "totalRevenueUsd": 72690.76 },
+    { "month": "2026-09", "label": "September 2026", "aiOrders": 13, "aiRevenueUsd": 5122.78, "totalOrders": 226, "totalRevenueUsd": 82378.31 }
+  ],
+  "repullOfStudyWindow": {
+    "window": "1 March to 18 August 2026",
+    "aiRevenueUsd": 15213.76
+  },
+  "googleAiImpressions": {
+    "instrument": "Google Search Console, Performance, Generative AI features, Search type: Web",
+    "from": "2026-07-26",
+    "to": "2026-10-25",
+    "label": "26 July to 25 October 2026",
+    "impressionsApprox": 78900
+  }
+}

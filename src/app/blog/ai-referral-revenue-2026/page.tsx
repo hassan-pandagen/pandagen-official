@@ -14,6 +14,7 @@ import {
     rows, aiRows, aiOrders, aiRevenue, totalOrders, totalRevenue, aiShareOfAll,
     siteAov, aov, row, usd, pct, chatgptVsGoogleAds,
     trueZeroes, provenance, window_, corroboration, outlier,
+    monthly, monthlyAiAverage, monthlyAiRange, monthShare, studyReadOnLabel,
 } from "@/data/ai-referral-facts";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title, description, type: "article",
-        publishedTime: "2026-08-18", modifiedTime: "2026-10-09",
+        publishedTime: "2026-08-18", modifiedTime: "2026-10-27",
         authors: ["Hassan Jamal"], url: canonicalUrl,
         images: [ogImageForPath("/blog/ai-referral-revenue-2026")],
     },
@@ -64,7 +65,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/ai-referral-revenue-2026"),
             datePublished: "2026-08-18T00:00:00-05:00",
-            dateModified: "2026-10-09T00:00:00-05:00",
+            dateModified: "2026-10-27T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -282,6 +283,57 @@ export default function AiReferralRevenuePage() {
                         Google&apos;s report describes appearances in its own AI search features. These are separate
                         measurements: the impressions do not verify ChatGPT order attribution, the revenue ratio or
                         the effect of any particular website change. {corroboration.limitation}
+                    </BlogText>
+
+                    <BlogHeader>Month by month since the study</BlogHeader>
+                    <BlogText>
+                        <BlogHighlight>
+                            From {monthly.averageLabel}, {provenance.business} averaged {usd(monthlyAiAverage)} a month in
+                            revenue attributed to AI assistants.
+                        </BlogHighlight>{" "}
+                        Individual months ranged from {usd(monthlyAiRange.low)} to {usd(monthlyAiRange.high)}. There was no
+                        advertising spend on those AI referrals; the website, content and maintenance work behind them still
+                        took investment. Attribution works the same way as in the study above: captured referral signals plus
+                        customers&apos; answers to &ldquo;How did you find us?&rdquo;.
+                    </BlogText>
+                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200">
+                        <table className="w-full min-w-[34rem] border-collapse text-left text-sm">
+                            <caption className="sr-only">
+                                Revenue attributed to AI assistants by month, as recorded on {monthly.recordedOnLabel}
+                            </caption>
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr>
+                                    <th scope="col" className="px-4 py-3 font-bold">Month</th>
+                                    <th scope="col" className="px-4 py-3 text-right font-bold">AI orders</th>
+                                    <th scope="col" className="px-4 py-3 text-right font-bold">AI revenue</th>
+                                    <th scope="col" className="px-4 py-3 text-right font-bold">Share of all revenue</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {monthly.months.map((m) => (
+                                    <tr key={m.month} className="border-t border-stone-200">
+                                        <th scope="row" className="px-4 py-2.5 font-medium text-charcoal">{m.label}</th>
+                                        <td className="px-4 py-2.5 text-right tabular-nums text-stone-600">{m.aiOrders}</td>
+                                        <td className="px-4 py-2.5 text-right tabular-nums text-stone-600">{usd(m.aiRevenueUsd)}</td>
+                                        <td className="px-4 py-2.5 text-right tabular-nums text-stone-500">{monthShare(m)}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        These rows were read from the store&apos;s portal on {monthly.recordedOnLabel}, one calendar month at a
+                        time, with the same source classification as the study. Read on that date, the portal shows{" "}
+                        {usd(monthly.repullOfStudyWindow.aiRevenueUsd)} in AI-attributed revenue for{" "}
+                        {monthly.repullOfStudyWindow.window}, against the {usd(aiRevenue)} read on {studyReadOnLabel} and
+                        used above. The same orders now carry lower recorded values; we haven&apos;t identified why. We show
+                        both readings with their dates, and the monthly average uses the later, lower one.
+                    </BlogText>
+                    <BlogText>
+                        Separately, {monthly.googleAiImpressions.instrument.split(",")[0]} recorded about{" "}
+                        {monthly.googleAiImpressions.impressionsApprox.toLocaleString("en-US")} impressions in Google&apos;s
+                        AI Overviews and AI Mode from {monthly.googleAiImpressions.label}. An impression is a link shown in
+                        an AI answer, not a visit or an order, and this window is later than the one reported above.
                     </BlogText>
 
                     <BlogHeader>What a customer actually typed</BlogHeader>

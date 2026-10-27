@@ -5,7 +5,7 @@ import Link from "next/link";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import CalModalButton from "@/components/ui/CalModalButton";
-import { aiRevenue, window_ } from "@/data/ai-referral-facts";
+import { monthly, monthlyAiAverage } from "@/data/ai-referral-facts";
 import PaperShader from "@/components/visual/PaperShader";
 import WorkIndex from "@/components/redesign/WorkIndex";
 import WorkCard from "@/components/redesign/WorkCard";
@@ -137,8 +137,11 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
                 </CalModalButton>
               </p>
               <p className="mt-7 max-w-[34rem] text-[14px] leading-[1.6]" style={{ color: BODY }}>
-                Our own store, Panda Patches, recorded {usdWhole(aiRevenue)} in orders attributed to ChatGPT, Claude,
-                Perplexity and other AI assistants from {window_.label}.{" "}
+                {/* 27 Oct 2026: the monthly average replaces the March to August total here, as the
+                    current figure. Both are in ai-referral-facts.ts and the article shows both. */}
+                Our own store, Panda Patches, averaged {usdWhole(monthlyAiAverage)} a month in revenue attributed to
+                ChatGPT, Claude, Perplexity and other AI assistants from {monthly.averageLabel}, with no ad spend on
+                those referrals.{" "}
                 <Link href="/blog/ai-referral-revenue-2026" className="underline underline-offset-4" style={{ color: ACCENT }}>
                   How we measured it
                 </Link>

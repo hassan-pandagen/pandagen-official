@@ -23,6 +23,7 @@
 
 import { MIGRATION_PROJECT_DETAILS } from './migration-projects';
 import { caseStudy } from './case-study-facts';
+import { aiOrders, aiRevenue, aiShareOfAll, corroboration, monthly, monthlyAiAverage, row, studyReadOnLabel, totalOrders, totalRevenue, usd, window_ } from './ai-referral-facts';
 
 export interface Fact {
     label: string;
@@ -317,7 +318,7 @@ export const PROJECTS: readonly { name: string; relationship: string; href: stri
     // recorded here rather than living only in the post's prose: we have measured
     // AI-assistant revenue in a live store instead of describing AI search from
     // the outside. Founder-affiliation is inside the fact, not appended to it.
-    { name: 'Panda Patches AI referral measurement', relationship: 'Founder-affiliated. Owned and operated by a PandaCodeGen co-founder.', href: '/blog/ai-referral-revenue-2026', fact: 'Across 1 March to 18 August 2026 this store recorded 760 orders worth $271,620.61, of which 63 orders and $16,783.76 were attributed to AI assistants, 6.2% of revenue. ChatGPT produced $11,614.78 against Google Ads $1,733.35. Attribution combines referrer capture with a self-reported source question at the point of enquiry, because referrer alone undercounts AI referrals; Google Search Console’s Generative AI report for the same property independently recorded 48,900 impressions over three months. Lead-to-order conversion rates are deliberately not published because the lead and order records do not share a window.' },
+    { name: 'Panda Patches AI referral measurement', relationship: 'Founder-affiliated. Owned and operated by a PandaCodeGen co-founder.', href: '/blog/ai-referral-revenue-2026', fact: `Across ${window_.label} (read on ${studyReadOnLabel}) this store recorded ${totalOrders} orders worth ${usd(totalRevenue)}, of which ${aiOrders} orders and ${usd(aiRevenue)} were attributed to AI assistants, ${aiShareOfAll} of revenue. ChatGPT produced ${usd(row('ChatGPT').revenueUsd)} against Google Ads ${usd(row('Google Ad').revenueUsd)} in that window. From ${monthly.averageLabel} the store averaged ${usd(monthlyAiAverage)} a month in revenue attributed to AI assistants, read on ${monthly.recordedOnLabel}, with no advertising spend on those referrals; read on that date, the portal shows ${usd(monthly.repullOfStudyWindow.aiRevenueUsd)} for the earlier window, and the article publishes both readings. Attribution combines referrer capture with a self-reported source question at the point of enquiry, because referrer alone undercounts AI referrals. Google Search Console’s Generative AI report for the same property separately recorded ${Number(corroboration.totalImpressions).toLocaleString('en-US')} impressions over ${corroboration.window}, and about ${monthly.googleAiImpressions.impressionsApprox.toLocaleString('en-US')} from ${monthly.googleAiImpressions.label}. Lead-to-order conversion rates are deliberately not published because the lead and order records do not share a window.` },
     // The 22-day delivery figure is separately owner-approved and is safe to state.
     // The PERFORMANCE figures (load time, PageSpeed, hosting cost) are withdrawn
     // pending reconciliation as of 4 Aug 2026 and must not be restated here until
