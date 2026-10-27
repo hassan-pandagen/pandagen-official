@@ -152,3 +152,4 @@ docs/research/seo-aeo-prelaunch-audit-2026-10-07/*-pages.json
 
 .vercel
 .env*
+.indexnow-state/

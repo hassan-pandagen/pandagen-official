@@ -1,0 +1,44 @@
+name: IndexNow
+
+# Added 27 Oct 2026: tell Bing (and the assistants that rely on it) which pages
+# changed after each production deploy. See scripts/indexnow-changed.mjs.
+on:
+  deployment_status:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit-changed:
+    # Vercel posts a GitHub deployment status for every deploy; act only on a
+    # successful production one. Manual runs are always allowed.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == 'Production')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      # Each run saves a new cache entry; restore-keys picks up the newest one.
+      - name: Restore previous page fingerprints
+        uses: actions/cache@v4
+        with:
+          path: .indexnow-state
+          key: indexnow-state-${{ github.run_id }}
+          restore-keys: indexnow-state-
+
+      - name: Submit changed pages
+        run: node scripts/indexnow-changed.mjs
