@@ -214,6 +214,10 @@ export const ONE_TEAM = {
     heading: 'One team. One place to turn.',
     summary: 'Your website, backend, SEO, ads and conversion tracking should work together. At PandaCodeGen, one team takes responsibility for the services you hire us to deliver.',
     whenItBreaks: "When something breaks, you contact us. We find the cause, explain what happened and coordinate the fix, including with outside providers when needed. You don't have to chase different vendors for answers.",
+    // Owner-confirmed 27 Oct 2026: maintenance and SEO plans include watching for security advisories,
+    // applying the updates and coordinating with the host. Prompted by PHP2Shell (21 Oct 2026); the
+    // promise is deliberately stack-neutral, because every stack needs patching, ours included.
+    security: "When a security issue hits, you know who owns the response. Under your maintenance or SEO plan, we check whether your website is affected, apply the relevant security updates and coordinate with your hosting provider when needed. Then we test what the update touched and explain what changed.",
     support: 'Ongoing support follows the scope of your maintenance or SEO plan.',
     examples: [
         { name: 'A Step Above Medical', href: '/work/a-step-above-medical', relationship: 'Client project', did: 'We rebuilt the public website, built the staff portal for classes, students, payments and certificates, and run its Meta ads.' },

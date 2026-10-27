@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-27",
-        modifiedTime: "2026-10-20",
+        modifiedTime: "2026-10-27",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath(`/blog/${postId}`)],
@@ -64,7 +64,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath(`/blog/${postId}`),
             datePublished: "2026-08-27T00:00:00-05:00",
-            dateModified: "2026-10-20T00:00:00-05:00",
+            dateModified: "2026-10-27T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -457,6 +457,49 @@ export default function WordPressPluginSecurity2026Page() {
                         The four questions earlier don&apos;t cover this kind of case. The advisory named the affected
                         version, and the clean release is dated 16 October. Update records and clean backups are
                         important here, for working out which sites were exposed and for recovering them.
+                    </BlogText>
+
+                    {/* 27 Oct 2026. Exploitation wording checked against Sophos, the Canadian Cyber Centre and
+                        the NSW statement: attempts observed, no confirmed compromise count. Don't write "hacked". */}
+                    <BlogHeader id="php2shell">What is PHP2Shell, and does it affect WordPress sites?</BlogHeader>
+                    <BlogText>
+                        PHP2Shell is the name given to two critical flaws in PHP itself, the language WordPress and its
+                        plugins run on. PHP disclosed them on 21 October 2026 as CVE-2026-109618 and CVE-2026-109619 and
+                        released fixed versions the same day: PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35. According to{" "}
+                        <a href="https://www.php.net/archive/2026.php" target="_blank" rel="noopener noreferrer" className={sourceLink}>PHP&apos;s announcement</a>,
+                        together they can let an attacker run code on a server without logging in, and both are rated
+                        9.2 (Critical). Because the flaws are in PHP and not in a plugin, they apply to any site whose
+                        server runs an unpatched version, WordPress or not. PHP names Apache&apos;s mod_php setup as the
+                        highest-risk configuration.
+                    </BlogText>
+                    <BlogText>
+                        The{" "}
+                        <a href="https://www.nsw.gov.au/ministerial-releases/update-on-php-response" target="_blank" rel="noopener noreferrer" className={sourceLink}>NSW Government said</a>{" "}
+                        on 22 October that it had temporarily taken some of its websites offline while patches were
+                        applied, and that no agency had reported an information breach. Exploitation attempts have been
+                        seen.{" "}
+                        <a href="https://www.bankinfosecurity.com/waiting-for-php2shell-onslaught-as-pocs-proliferate-a-33190" target="_blank" rel="noopener noreferrer" className={sourceLink}>Sophos described the attempts it saw</a>{" "}
+                        as unsuccessful so far, and Canada&apos;s{" "}
+                        <a href="https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619" target="_blank" rel="noopener noreferrer" className={sourceLink}>Cyber Centre</a>{" "}
+                        reported a public proof of concept but no active exploitation when it issued its alert. We
+                        haven&apos;t seen a confirmed count of compromised sites, so we don&apos;t give one.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Find out which PHP version your server runs. Your host's control panel shows it, and so does Tools, Site Health, Info in WordPress.",
+                            "If it's below the fixed release for its branch, ask your host to update it, or update it yourself if you run the server.",
+                            "On PHP 8.1 or older, the PHP project no longer ships updates. PHP says some distributions provide backported fixes; otherwise, move to a supported version.",
+                            "A firewall rule from your host or CDN reduces exposure while you wait, but it doesn't replace the update. Vercel's bulletin says the same about its own rules.",
+                        ]}
+                    />
+                    <BlogText>
+                        A site that doesn&apos;t run PHP, such as a Next.js site on Vercel, isn&apos;t exposed to these two
+                        flaws.{" "}
+                        <a href="https://vercel.com/kb/bulletin/php2shell-security-bulletin" target="_blank" rel="noopener noreferrer" className={sourceLink}>Vercel&apos;s bulletin</a>{" "}
+                        limits its PHP2Shell guidance to PHP functions and PHP backends behind Vercel. That isn&apos;t the
+                        same as being safe. A headless setup that keeps WordPress as its backend still runs PHP there,
+                        and the Next.js flaw described above needed patching too. Whatever the stack, someone has to be
+                        watching for advisories like this one and acting on them.
                     </BlogText>
 
                     <BlogHeader id="ask-provider">What to ask a provider about their patch process</BlogHeader>

@@ -240,7 +240,7 @@ export default function CompanyReferencePage() {
               <div className="grid gap-4 border-b border-stone-300 py-8 md:grid-cols-[minmax(12rem,0.4fr)_1fr] md:gap-12">
                 <h3 className="text-xl font-bold">{ONE_TEAM.heading}</h3>
                 <div className="leading-7 text-stone-700">
-                  <p>{ONE_TEAM.summary} {ONE_TEAM.whenItBreaks} {ONE_TEAM.support}</p>
+                  <p>{ONE_TEAM.summary} {ONE_TEAM.whenItBreaks} {ONE_TEAM.security} {ONE_TEAM.support}</p>
                   <ul className="mt-4 space-y-3">
                     {ONE_TEAM.examples.map((e) => (
                       <li key={e.href}>

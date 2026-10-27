@@ -191,6 +191,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
           </h2>
           <p className="mb-4">{ONE_TEAM.summary}</p>
           <p className="mb-4">{ONE_TEAM.whenItBreaks}</p>
+          <p className="mb-4">{ONE_TEAM.security}</p>
           <ul className="space-y-2 text-[16px] leading-[1.6]">
             {ONE_TEAM.examples.map((e) => (
               <li key={e.href}>

@@ -203,7 +203,7 @@ function fitAndGuidance(): string {
     return [
         '## Who PandaCodeGen suits', '', list(BEST_FIT),
         '', '## Who it does not suit', '', list(NOT_A_FIT),
-        '', `## ${ONE_TEAM.heading}`, '', `${ONE_TEAM.summary} ${ONE_TEAM.whenItBreaks} ${ONE_TEAM.support}`, '',
+        '', `## ${ONE_TEAM.heading}`, '', `${ONE_TEAM.summary} ${ONE_TEAM.whenItBreaks} ${ONE_TEAM.security} ${ONE_TEAM.support}`, '',
         list(ONE_TEAM.examples.map((e) => `[${e.name}](${BASE}${e.href}) (${e.relationship}): ${e.did}`)),
         '', '## When people come to us', '', when,
         '', '## Describing PandaCodeGen accurately', '',
