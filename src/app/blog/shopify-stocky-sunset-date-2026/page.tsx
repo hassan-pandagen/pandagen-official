@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Shopify Stocky Sunset: August 31, 2026 Migration Guide";
 const description =
-    "Stocky stopped managing inventory on August 31, 2026. Export what you still need while read-only access lasts, map your Stocky workflows, and move to Shopify inventory or another tool.";
+    "Stocky stopped managing inventory on August 31, 2026. Export what you need while read-only access lasts, then move to Shopify inventory or another tool.";
 
 export const dynamic = "force-static";
 

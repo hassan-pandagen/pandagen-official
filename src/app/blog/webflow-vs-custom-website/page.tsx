@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Webflow vs Custom Website in 2026: A Four-Factor Decision";
 const description =
-    "Choose between Webflow and a custom website using editing, requirements, ownership and lifecycle responsibility, with current export, pricing, SEO and performance limits.";
+    "Webflow or a custom website? Decide on editing, requirements, ownership and upkeep, with Webflow's current export, pricing, SEO and performance limits.";
 
 export const dynamic = "force-static";
 

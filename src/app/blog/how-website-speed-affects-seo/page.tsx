@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "How Website Speed Affects SEO: Evidence and Limits in 2026";
 const description =
-    "How Core Web Vitals fit Google's page-experience systems, why Lighthouse is not a ranking cutoff, and how to test search and business effects without assuming causation.";
+    "How Core Web Vitals fit Google's page experience systems, why Lighthouse isn't a ranking cutoff, and how to test search and business effects properly.";
 
 export const dynamic = "force-static";
 

@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = "https://www.pandacodegen.com/blog/gohighlevel-keep-crm-replace-website";
 const title = "Keep GoHighLevel CRM, Replace the Website: 2026 Architecture";
 const description =
-    "A practical hybrid architecture for keeping HighLevel contacts, workflows and calendars while replacing the public website, with migration, privacy and acceptance controls.";
+    "Keep HighLevel contacts, workflows and calendars while replacing the public website: a practical hybrid setup with migration, privacy and acceptance checks.";
 
 export const dynamic = "force-static";
 

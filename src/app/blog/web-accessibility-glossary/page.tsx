@@ -220,7 +220,7 @@ function Term({
 
 const title = `Web Accessibility Glossary: ${TERMS.length} Terms Defined (2026)`;
 const description =
-    "Plain-English definitions of the accessibility terms that appear in audits, quotes and procurement forms, with what each one does not prove and what to ask the person selling it to you.";
+    "Plain-English definitions of the accessibility terms in audits, quotes and procurement forms, what each one doesn't prove, and what to ask the seller.";
 
 export const metadata: Metadata = {
     title,

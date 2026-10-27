@@ -21,7 +21,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Shopify Dawn Theme Slow? Diagnose the Store, Not the Name";
 const description =
-    "Use Shopify field data, controlled theme previews and route-level traces to find whether media, apps, third-party code, customization or theme code is slowing a Dawn store.";
+    "Use field data, theme previews and page traces to find whether media, apps, third-party code, customization or theme code is slowing your Dawn store.";
 
 export const dynamic = "force-static";
 

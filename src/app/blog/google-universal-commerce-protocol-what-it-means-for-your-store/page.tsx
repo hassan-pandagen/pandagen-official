@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Google Universal Commerce Protocol: Store Readiness in 2026";
 const description =
-    "What UCP is, what Google currently documents for direct buying, what remains access-dependent, and how merchants can prepare without promising agentic-commerce revenue.";
+    "What Google's Universal Commerce Protocol is, what Google documents for direct buying, what still depends on access, and how merchants can prepare.";
 
 export const dynamic = "force-static";
 

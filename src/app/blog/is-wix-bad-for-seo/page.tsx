@@ -21,7 +21,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Is Wix Bad for SEO? What Wix Controls in 2026";
 const description =
-    "Wix renders pages on the server and lets you edit titles, slugs, canonicals, robots.txt, redirects and JSON-LD. Here are its real SEO limits, from Wix's own docs.";
+    "Wix renders pages on the server and lets you edit titles, slugs, canonicals, robots.txt, redirects and JSON-LD. Its real SEO limits, from Wix's own docs.";
 
 const almanac = finding("almanac-2025-cms-cwv");
 const techReport = finding("cwv-tech-report-2026-08-wix");

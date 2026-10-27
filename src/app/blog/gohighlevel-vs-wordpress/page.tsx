@@ -21,7 +21,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "GoHighLevel vs WordPress for Your Website (2026)";
 const description =
-    "HighLevel's builder or WordPress connected to the HighLevel CRM? Forms, calendars, tracking, speed, SEO control, cost and upkeep compared from both vendors' docs.";
+    "HighLevel's builder or WordPress connected to the HighLevel CRM? Forms, calendars, tracking, speed, SEO, cost and upkeep compared from both vendors' docs.";
 
 const ghlStarter = spec("gohighlevel-starter-price");
 const ghlUnlimited = spec("gohighlevel-unlimited-price");

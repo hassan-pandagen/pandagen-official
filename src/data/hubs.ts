@@ -72,7 +72,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         h1: 'WordPress Migration Guides',
         title: 'WordPress Migration Guides: Moving Off WordPress to Custom Code',
         description:
-            'Guides on migrating WordPress to a custom Next.js build: what it costs, how long it takes, what breaks, and how to decide whether the migration is worth doing at all.',
+            'Guides to moving WordPress to a custom Next.js build: what it costs, how long it takes, what breaks, and whether the move is worth it at all.',
         moneyAnchor: 'our WordPress migration service',
         intro: [
             'WordPress runs a large share of the web, and most of the time it runs fine. The guides collected here are about the cases where it stopped running fine: a site carrying dozens of plugins nobody dares remove, a page builder that ships a heavy DOM before the first paragraph of text, a maintenance bill that grows every year while the site gets slower.',
@@ -88,7 +88,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         h1: 'Shopify Speed and Migration Guides',
         title: 'Shopify Speed and Migration Guides: Themes, Apps and Headless',
         description:
-            'Guides on Shopify store performance: what the app stack actually costs, why themes get slow, when headless is justified, and when staying on a standard theme is the better decision.',
+            'Guides to Shopify store performance: what your app stack costs, why themes slow down, when headless is justified and when a standard theme is better.',
         moneyAnchor: 'our commerce engineering service',
         intro: [
             'Shopify handles the parts of commerce that are genuinely hard to build: checkout, payments, fraud, tax, compliance. The guides here are about the layer above that, which is where most store performance problems actually live.',
@@ -120,7 +120,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         h1: 'Squarespace Migration Guides',
         title: 'Squarespace Migration Guides: SEO Limits, Speed and Moving Off',
         description:
-            'Guides on Squarespace constraints: what you can and cannot control in markup and schema, why templates hit a ceiling, and what migrating to a custom build involves.',
+            'Guides to Squarespace limits: what you can control in markup and schema, why templates hit a ceiling, and what moving to a custom build involves.',
         moneyAnchor: 'our Squarespace migration service',
         intro: [
             'Squarespace is built around a promise that the platform makes the technical decisions for you. That is genuinely useful until the day one of those decisions is the thing standing between you and something you need.',
@@ -136,7 +136,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         h1: 'Custom Website Development Guides',
         title: 'Custom Website Development Guides: Scope, Timelines and Ownership',
         description:
-            'Guides on commissioning custom web development: what a given budget includes, how long a build takes, what build-versus-buy actually compares, and who owns the result.',
+            'Guides to commissioning custom web development: what a budget includes, how long a build takes, build versus buy, and who owns the result.',
         moneyAnchor: 'our custom engineering service',
         intro: [
             'Start with the work: publishing content, running a store or operating a private application. The Sanity and WordPress comparison helps you choose an editor; Sanity vs Supabase separates publishing from backend requirements. The product catalog example shows one implementation pattern you can download and inspect.',
@@ -186,7 +186,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         h1: 'Website Cost and SaaS Spend Guides',
         title: 'Website Cost and SaaS Spend Guides: What Builds and Software Cost',
         description:
-            'Guides on what websites and software actually cost: build and redesign pricing, three-year operating cost, SaaS price increases, and how to audit a subscription stack.',
+            'Guides to what websites and software cost: build and redesign pricing, three-year running cost, SaaS price increases and auditing a subscription stack.',
         moneyAnchor: 'our published pricing tiers',
         intro: [
             'Web development pricing is opaque in both directions. Buyers cannot tell whether a quote is high, and the same brief genuinely does produce very different numbers depending on what is included. The guides here try to make the components visible enough to compare.',
@@ -203,7 +203,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         h1: 'Website Migration Guides',
         title: 'Website Migration Guides: Cost, SEO Risk and Platform Moves',
         description:
-            'Cross-platform website migration guides: what a migration costs across seven platforms, how to protect search visibility, and what has to be inventoried before cutover.',
+            'Website migration guides: what moving off seven platforms costs, how to protect search visibility, and what to inventory before cutover.',
         // Names the destination. The cluster deliberately shares the WordPress
         // service as its pillar, but a cross-platform reader clicking a generic
         // "our migration service" landed on a WordPress page without warning.
@@ -223,7 +223,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         h1: 'SEO and AI Search Guides',
         title: 'SEO and AI Search Guides: Answer Engines, Schema and Indexing',
         description:
-            'Guides on search and AI answer engines: what structured data and llms.txt do and do not do, why competitors outrank you, and why a site may not be indexed at all.',
+            'Guides to search and AI answer engines: what structured data and llms.txt really do, why competitors outrank you, and why a site may not be indexed.',
         moneyAnchor: 'our AI SEO services',
         // Repointed 15 Sep 2026 with the cluster's money page. [[money]] used to
         // resolve to /editorial-policy, so the closing sentence could say the policy
@@ -247,7 +247,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         h1: 'Ecommerce Strategy and Ad Tracking Guides',
         title: 'Ecommerce Strategy and Ad Tracking Guides: Headless, Speed, Attribution',
         description:
-            'Guides on ecommerce architecture and measurement: what headless commerce is, how storefront speed relates to conversion, and why ad platforms and analytics disagree.',
+            'Guides to ecommerce architecture and measurement: what headless commerce is, how store speed relates to conversion, and why ad platforms and analytics disagree.',
         moneyAnchor: 'our commerce engineering service',
         intro: [
             'This hub covers two things that are usually treated as separate departments and are almost always the same person\'s problem: how the storefront is built, and whether you can trust what it reports.',

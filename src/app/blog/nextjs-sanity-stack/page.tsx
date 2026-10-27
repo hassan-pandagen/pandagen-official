@@ -21,7 +21,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Next.js and Sanity in 2026: Fit, Cost and Tradeoffs";
 const description =
-    "A current, source-led guide to Next.js with Sanity: rendering and content roles, editorial workflows, localization, pricing, security boundaries and when to use a simpler stack.";
+    "A source-led guide to Next.js with Sanity: rendering, editorial workflow, localization, pricing, security, and when a simpler stack is the better choice.";
 
 export const dynamic = "force-static";
 

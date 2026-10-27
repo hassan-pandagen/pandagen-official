@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "WordPress AI Plugin Security in 2026: AI Engine Advisory Guide";
 const description =
-    "A dated, evidence-led guide to AI Engine and WordPress MCP security advisories, affected configurations, patching, token rotation, permissions and incident response.";
+    "A dated guide to the AI Engine and WordPress MCP security advisories: affected setups, patching, token rotation, permissions and incident response.";
 
 export const dynamic = "force-static";
 

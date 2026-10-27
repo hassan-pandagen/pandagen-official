@@ -22,7 +22,7 @@ export function localeMetadata(locale: TranslatedLocale, page: LocalizedPage): M
   const description = page === "services"
     ? locale === "fr"
       ? "Sites WordPress, boutiques en ligne, logiciels sur mesure et migrations. Comparez les options selon votre projet, avec un devis écrit avant les travaux."
-      : "WordPress-Websites, Onlineshops, individuelle Software und Migrationen. Vergleichen Sie die passende Lösung und erhalten Sie vor Beginn ein schriftliches Angebot."
+      : "WordPress-Websites, Onlineshops, individuelle Software und Migrationen. Finden Sie die passende Lösung, mit schriftlichem Angebot vor Projektbeginn."
     : meta.description;
 
   return {

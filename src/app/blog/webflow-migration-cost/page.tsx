@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Webflow Migration Cost 2026: What Leaving Webflow Costs";
 const description =
-    "What it costs to move OFF Webflow, not onto it. Price the migration from the actual pages, CMS, exports, forms, localization, integrations, SEO, acceptance and operating scope, including 50 to 100 page sites.";
+    "What it costs to move off Webflow: price it from your pages, CMS, exports, forms, localization, integrations and SEO, including 50 to 100 page sites.";
 
 export const dynamic = "force-static";
 

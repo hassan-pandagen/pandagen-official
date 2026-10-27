@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Spending More on Ads but Getting Fewer Orders? Audit Tracking";
 const description =
-    "Reconcile orders, browser and server events, platform diagnostics, consent and attribution before blaming tracking for rising ad cost or promising a Conversions API lift.";
+    "Reconcile orders, browser and server events, consent and attribution before you blame tracking for rising ad costs or expect a Conversions API lift.";
 
 export const dynamic = "force-static";
 

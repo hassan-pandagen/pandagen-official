@@ -38,8 +38,8 @@ const nowReading = readingName(wp.now.period);
 
 const title = `CMS Market Share 2015 to 2026: WordPress Peaked in ${year(wp.top.period)}`;
 const description =
-    `WordPress reached ${wp.top.value}% in ${year(wp.top.period)} and is at ${wp.now.value}% in the ${nowReading} reading. ` +
-    `Twelve years of measured CMS market share, what moved where, and what the numbers cannot tell you.`;
+    `WordPress reached ${wp.top.value}% in ${year(wp.top.period)} and reads ${wp.now.value}% in ${nowReading}. ` +
+    `Twelve years of measured CMS market share, what moved, and what the numbers can't show.`;
 
 export const dynamic = "force-static";
 

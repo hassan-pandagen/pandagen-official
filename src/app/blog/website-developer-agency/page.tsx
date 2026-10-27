@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Website Developer Agency: Services, Costs and Selection in 2026";
 const description =
-    "What a website development agency should deliver, how to compare agency, freelancer and internal models, and which scope, evidence, security, accessibility and ownership terms to verify.";
+    "What a website development agency should deliver, how agencies compare with freelancers and in-house teams, and which scope and ownership terms to check.";
 
 export const dynamic = "force-static";
 

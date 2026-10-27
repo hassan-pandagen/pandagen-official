@@ -25,8 +25,8 @@ const canonicalUrl = "https://www.pandacodegen.com/blog/ai-referral-revenue-2026
 
 const title = `ChatGPT Out-Earned Our Google Ads by ${chatgptVsGoogleAds}x: Six Months of AI Referral Revenue`;
 const description =
-    `First-party data from a founder-affiliated store. ${totalOrders} orders, ${usd(totalRevenue)}, ` +
-    `with recorded revenue attributed to ChatGPT, Claude, Perplexity, Gemini and Google AI Overview.`;
+    `First-party data from a founder-affiliated store: ${totalOrders} orders and ${usd(totalRevenue)} ` +
+    `attributed to ChatGPT, Claude, Perplexity, Gemini and Google AI Overview.`;
 
 export const dynamic = "force-static";
 

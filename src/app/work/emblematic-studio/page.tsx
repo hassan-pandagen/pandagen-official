@@ -5,7 +5,7 @@ import { EmblematicStudioCaseStudyPreview as RedesignEmblematicStudioCaseStudy }
 const canonicalUrl = "https://www.pandacodegen.com/work/emblematic-studio";
 const title = "Emblematic Studio Case Study: One Catalogue, 22 Products, One Server Route";
 const description =
-    "A material-led product catalogue and quote experience for a custom patch studio. 22 product types generated from a single typed registry, and exactly one runtime route on the entire site. Build record, no traffic claims.";
+    "A material-led product catalogue and quote experience for a custom patch studio: 22 product types from one typed registry. Build record, no traffic claims.";
 
 export const metadata: Metadata = {
     title: { absolute: `${title} | PandaCodeGen` },

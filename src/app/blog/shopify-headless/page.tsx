@@ -26,7 +26,7 @@ const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 // commerce" questions belong to /blog/what-is-headless-commerce.
 const title = "Headless Shopify Cost in 2026: Plans, Hosting and Build";
 const description =
-    "What headless Shopify costs in 2026, line by line: your Shopify plan, Hydrogen and Oxygen at no extra charge, the build, apps and the upkeep most quotes leave out.";
+    "What headless Shopify costs in 2026, line by line: your plan, Hydrogen and Oxygen at no extra charge, the build, apps and the upkeep most quotes leave out.";
 
 export const dynamic = "force-static";
 

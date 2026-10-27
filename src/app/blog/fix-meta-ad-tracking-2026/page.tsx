@@ -21,7 +21,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026";
 const title = "Meta Ad Tracking Not Working? A 2026 Diagnostic Guide";
 const description =
-    "Reconcile orders and Meta events, diagnose browser and server integrations, prevent duplicate events, and document privacy controls without promising recovered attribution.";
+    "Match orders to Meta events, check browser and server integrations, stop duplicate events and document privacy controls. No promise of recovered attribution.";
 
 export const dynamic = "force-static";
 

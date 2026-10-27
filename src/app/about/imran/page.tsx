@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   // absolute: this title already ends in "PandaCodeGen", so the root "%s | PandaCodeGen"
   // template would print the brand twice (SEO audit, 4 Oct 2026).
   title: { absolute: "Imran Raza Ladhani | Co-founder and Head of Marketing at PandaCodeGen" },
-  description: "Meet Imran Raza Ladhani, PandaCodeGen co-founder and Head of Marketing. He focuses on positioning, the customer journey, and how the agency explains and presents its work.",
+  description: "Imran Raza Ladhani is PandaCodeGen's co-founder and Head of Marketing. He leads positioning, the customer journey and how the agency presents its work.",
   alternates: { canonical: "/about/imran" },
   openGraph: {
     title: "Imran Raza Ladhani | Co-founder and Head of Marketing at PandaCodeGen",

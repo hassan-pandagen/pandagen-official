@@ -52,7 +52,7 @@ const years = Object.keys(updatesByYear).sort((a, b) => Number(b) - Number(a));
 
 export const metadata: Metadata = {
     title: "Google Algorithm Updates: Every Confirmed Update Since 2021",
-    description: `Google has confirmed ${UPDATE_STATS.total} ranking updates since ${REGISTER_START}, including ${UPDATE_STATS.coreCount} core updates. Full dated register from Google's own dashboard, plus how to tell whether an update actually hit your site.`,
+    description: `Google has confirmed ${UPDATE_STATS.total} ranking updates since ${REGISTER_START}, ${UPDATE_STATS.coreCount} of them core updates. A dated register from Google's dashboard, and how to tell if one hit you.`,
     alternates: {
         canonical: "/blog/google-algorithm-updates",
     },

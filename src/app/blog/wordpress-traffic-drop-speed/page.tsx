@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "WordPress Traffic Drop in 2026: Speed, SEO, Tracking or Demand?";
 const description =
-    "Diagnose a WordPress traffic drop across measurement, technical changes, search demand, Google updates, content, competition and page experience before choosing a fix.";
+    "Diagnose a WordPress traffic drop across tracking, technical changes, search demand, Google updates, content, competitors and page experience.";
 
 export const dynamic = "force-static";
 

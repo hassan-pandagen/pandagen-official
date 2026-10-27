@@ -11,7 +11,7 @@ import { NorthDeckGroupCaseStudyPreview as RedesignNorthDeckGroupCaseStudy } fro
 
 const title = "NorthDeck Group: a Website for Security Systems and Back-Office Services";
 const description =
-  "A motion-led website for a company that designs connected commercial security systems and runs a 12-service back-office practice. Independent client; no performance figures published.";
+  "A motion-led website for a firm that designs connected commercial security systems and runs a 12-service back office. Independent client; no speed figures.";
 
 export const metadata: Metadata = {
   title: { absolute: `${title} | PandaCodeGen` },

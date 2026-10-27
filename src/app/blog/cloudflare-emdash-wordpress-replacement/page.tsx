@@ -32,7 +32,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 const pageTitle = "Cloudflare EmDash vs WordPress in 2026: Readiness Guide";
-const pageDescription = "EmDash 1.0 shipped on 28 September 2026. What changed since Cloudflare's April launch, what the plugin sandbox and registry mean, whether it works with Next.js, and when a WordPress site should pilot it.";
+const pageDescription = "EmDash 1.0 shipped on 28 September 2026. What changed since Cloudflare's April launch, how the plugin sandbox works, Next.js support, and when to pilot it.";
 
 export const metadata: Metadata = {
     title: pageTitle,

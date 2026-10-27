@@ -21,7 +21,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "How Much Does a Website Cost in 2026? A Scope-First Guide";
 const description =
-    "Calculate website cost from a comparable scope, current vendor quotes, delivery, operations and exit, with PandaCodeGen's published starting tiers and payment terms.";
+    "Work out website cost from a comparable scope, vendor quotes, delivery, running costs and exit, with PandaCodeGen's published starting tiers and payment terms.";
 
 export const dynamic = "force-static";
 

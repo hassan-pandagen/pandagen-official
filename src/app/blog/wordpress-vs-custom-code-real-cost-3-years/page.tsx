@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "WordPress vs Custom Code: A 3-Year Cost Model for 2026";
 const description =
-    "Compare WordPress and custom code over three years with editable inputs for build, migration, providers, software, labor, maintenance, incidents, roadmap and exit.";
+    "Compare WordPress and custom code over three years with editable inputs for build, migration, hosting, software, labor, maintenance and exit.";
 
 export const dynamic = "force-static";
 

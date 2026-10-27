@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Top Custom Web Development Agencies USA (2026): A Disclosed Shortlist";
 const description =
-    "A non-ranked 2026 shortlist of US web development partners and specialist alternatives, compared from current first-party service evidence with buyer verification questions.";
+    "A non-ranked 2026 shortlist of US web development partners and specialist alternatives, compared from their own service pages, with questions to verify.";
 
 export const dynamic = "force-static";
 

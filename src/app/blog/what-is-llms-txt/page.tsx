@@ -19,7 +19,7 @@ const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 
 const TITLE = "What Is llms.txt? Here Is Ours, and Who Actually Reads It";
 const DESC =
-    "llms.txt explained with our real, live file: the format, who genuinely reads it in 2026, and the two vendor claims everyone repeats that turn out to be unsourced.";
+    "llms.txt explained with our real, live file: the format, who actually reads it in 2026, and the two vendor claims everyone repeats that have no source.";
 const URL_PATH = "/blog/what-is-llms-txt";
 const CANONICAL = `https://www.pandacodegen.com${URL_PATH}`;
 

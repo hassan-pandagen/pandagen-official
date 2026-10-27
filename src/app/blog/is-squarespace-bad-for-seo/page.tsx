@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Is Squarespace Bad for SEO? A 2026 Diagnostic";
 const description =
-    "Squarespace covers many SEO fundamentals. Audit crawlability, page controls, content, structured data and measured performance before deciding to optimize or migrate.";
+    "Squarespace covers many SEO basics. Audit crawlability, page controls, content, structured data and measured speed before you optimize or migrate.";
 
 export const dynamic = "force-static";
 

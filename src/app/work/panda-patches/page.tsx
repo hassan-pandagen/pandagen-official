@@ -4,7 +4,7 @@ import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, ORGANIZATION_PROFILES } from "
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import { PandaPatchesCaseStudyPreview as RedesignPandaPatchesCaseStudy } from "@/components/pages/work/panda-patches/Design";
 
-const description = `A founder-owned WordPress store rebuilt with Next.js, a Sanity editor and custom pricing. ${MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory}`;
+const description = "A founder-owned WordPress store rebuilt with Next.js, a Sanity editor and custom pricing. Payments moved from Stripe to Square, the current provider.";
 
 export const metadata: Metadata = {
     title: "Panda Patches: WordPress to Next.js Store Migration",

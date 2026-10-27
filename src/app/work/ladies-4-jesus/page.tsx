@@ -6,7 +6,7 @@ import { Ladies4JesusCaseStudyPreview as RedesignLadies4JesusCaseStudy } from "@
 const canonicalUrl = "https://www.pandacodegen.com/work/ladies-4-jesus";
 const title = "Ladies 4 Jesus Case Study: A Moderated Community an Owner Runs Alone";
 const description =
-    `${MIGRATION_PROJECT_DETAILS.ladies4Jesus.summary} Build record: no before-and-after performance comparison is claimed, because no baseline was captured.`;
+    MIGRATION_PROJECT_DETAILS.ladies4Jesus.summary;
 
 export const metadata: Metadata = {
     title: { absolute: `${title} | PandaCodeGen` },

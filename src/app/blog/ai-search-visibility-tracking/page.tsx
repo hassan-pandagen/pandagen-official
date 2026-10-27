@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((p) => p.id === postId)?.faqs ?? [];
 const canonicalUrl = "https://www.pandacodegen.com/blog/ai-search-visibility-tracking";
 const title = "AI Visibility Tracking: What 77 Pages and 6,700 AI Impressions Showed";
 const description =
-    "First-party Search Console data on how AI visibility is actually distributed across a corpus, what the Generative AI report can and cannot tell you, and why an impression is not the same as being mentioned.";
+    "First-party Search Console data on how AI visibility spreads across a site, what the Generative AI report can't tell you, and why an impression isn't a mention.";
 
 export const dynamic = "force-static";
 

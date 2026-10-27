@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Lovable Site Not Showing on Google? A 2026 Diagnostic";
 const description =
-    "Current Lovable apps support SSR or crawler pre-rendering. Diagnose publishing, indexing, canonicals, metadata, content and Search Console before proposing a rebuild.";
+    "Lovable apps now support SSR or crawler pre-rendering. Check publishing, indexing, canonicals, metadata, content and Search Console before any rebuild.";
 
 export const dynamic = "force-static";
 

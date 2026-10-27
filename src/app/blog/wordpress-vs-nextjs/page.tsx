@@ -21,7 +21,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "WordPress vs Next.js in 2026: Requirements, Cost and Migration";
 const description =
-    "Compare WordPress and Next.js across architecture, editing, performance, SEO, security, integrations, total cost, ownership and migration risk without universal score claims.";
+    "WordPress or Next.js? Compared on architecture, editing, speed, SEO, security, integrations, total cost, ownership and migration risk.";
 
 export const dynamic = "force-static";
 

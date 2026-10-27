@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Shopify vs Custom Website in 2026: A Decision Framework";
 const description =
-    "Compare a Shopify theme, headless Shopify and a custom commerce stack across requirements, total cost, performance, operations, integrations, ownership and migration risk.";
+    "Shopify theme, headless Shopify or a custom store? Compared on requirements, total cost, speed, operations, integrations, ownership and migration risk.";
 
 export const dynamic = "force-static";
 

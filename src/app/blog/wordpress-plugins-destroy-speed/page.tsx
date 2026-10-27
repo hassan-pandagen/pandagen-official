@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Do WordPress Plugins Slow Your Site? A 2026 Audit Guide";
 const description =
-    "Audit WordPress plugins by measured frontend, server, database, background and third-party impact. Fix the responsible work instead of treating plugin count as a speed score.";
+    "Audit WordPress plugins by their measured frontend, server, database and third-party impact. Fix the real cause instead of counting plugins.";
 
 export const dynamic = "force-static";
 

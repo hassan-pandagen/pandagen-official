@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "WooCommerce vs Custom Website in 2026: A Requirements Guide";
 const description =
-    "Compare WooCommerce, headless WooCommerce and a custom commerce website across features, editing, performance, security, SEO, data, ownership and operating cost.";
+    "WooCommerce, headless WooCommerce or a custom store, compared on features, editing, speed, security, SEO, data, ownership and running cost.";
 
 export const dynamic = "force-static";
 

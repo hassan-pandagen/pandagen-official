@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((p) => p.id === postId)?.faqs ?? [];
 const canonicalUrl = "https://www.pandacodegen.com/blog/woocommerce-low-conversion-rate";
 const title = "WooCommerce Low Conversion Rate: Diagnose It Before You Blame Speed";
 const description =
-    "A measured way to work out why a WooCommerce store converts badly: define the metric, find the stage that changed, and separate the causes WooCommerce creates from the ones every store has.";
+    "Why your WooCommerce store converts badly: define the metric, find the stage that changed, and separate WooCommerce causes from ones every store has.";
 
 export const dynamic = "force-static";
 

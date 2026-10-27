@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = "https://www.pandacodegen.com/blog/web-accessibility-statistics-2026";
 const title = "Web Accessibility Statistics 2026: What the Data Actually Shows";
 const description =
-    "95.9% of the top million home pages failed automated WCAG testing in 2026, reversing six years of improvement. What the measured data shows about failure types, platforms and legal exposure, and what it cannot tell you.";
+    "95.9% of the top million home pages failed automated WCAG tests in 2026, reversing six years of gains. What the data shows on failure types and legal risk.";
 
 export const dynamic = "force-static";
 

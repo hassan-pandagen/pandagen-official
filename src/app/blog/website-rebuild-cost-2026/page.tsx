@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Website Rebuild Cost in 2026: Scope, Tiers and Decision Guide";
 const description =
-    "Price a website rebuild from strategy, information architecture, design, content, platform, migration, integrations, acceptance and operation, and separate it from redesign or migration.";
+    "Price a website rebuild from strategy, structure, design, content, platform, migration, integrations and testing, and tell it apart from a redesign.";
 
 export const dynamic = "force-static";
 

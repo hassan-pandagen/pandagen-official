@@ -31,7 +31,7 @@ export const stackGuidePosts: StackGuidePost[] = [
   {
     ...byline, id: "sanity-vs-wordpress", title: "Sanity vs WordPress: Which Editor Fits Your Website?",
     date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-20", eyebrow: "CMS / Sanity vs WordPress",
-    excerpt: "WordPress is free software you host and keep updated, and your theme and plugins decide what its editor looks like. Sanity is a hosted editor set up around your content, paired with a custom website. How to choose, with a real client editor and five tasks to test.",
+    excerpt: "WordPress is free software you host and update. Sanity is a hosted editor built around your content. How to choose, with a real client editor and five tasks.",
     category: "CMS", readTime: "7 min", illustrationType: "code", cardStat: "5 tasks", cardStatLabel: "Try the editor before choosing the CMS",
     faqs: [
       { question: "Is Sanity better than WordPress?", answer: "Neither is better for every site. WordPress suits a team whose current theme, blocks and plugins already do the job. Sanity suits a rebuild where you want an editor with exactly your content's fields, paired with a custom website. Test the same five editing tasks in both before you decide." },
@@ -47,7 +47,7 @@ export const stackGuidePosts: StackGuidePost[] = [
   {
     ...byline, id: "sanity-vs-supabase", title: "Sanity vs Supabase: CMS, Backend or Both?",
     date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-20", eyebrow: "Architecture / Sanity vs Supabase",
-    excerpt: "Sanity is a content editor for your website. Supabase is a backend: a Postgres database with sign-in, file storage and server functions. They don't compete, and many projects use both. Which one your project needs, with current prices.",
+    excerpt: "Sanity is a content editor. Supabase is a backend: Postgres, sign-in, storage and functions. They don't compete. Which one your project needs, with prices.",
     category: "Architecture", readTime: "7 min", illustrationType: "saas", cardStat: "2 jobs", cardStatLabel: "Editing the website and running the business data",
     faqs: [
       { question: "Is Sanity an alternative to Supabase?", answer: "No. Sanity is a CMS your team uses to edit website content. Supabase is a backend: a Postgres database with sign-in, file storage and server functions for apps and portals. Many projects use both, Sanity for the public website and Supabase for the private data." },
@@ -64,7 +64,7 @@ export const stackGuidePosts: StackGuidePost[] = [
   {
     ...byline, id: "product-catalog-website-without-cart", title: "Product Catalog Website Without a Cart: Take Quote Requests",
     date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-08", eyebrow: "Custom websites / Quotes instead of checkout",
-    excerpt: "If you sell custom or made-to-order products, your website needs a catalog and a quote form, not a shopping cart. How we build one from a single product list, with a free example you can download.",
+    excerpt: "Selling custom or made-to-order products? You need a catalog and a quote form, not a cart. How we build one from a single product list, with a free example.",
     category: "Engineering", readTime: "6 min", illustrationType: "code", cardStat: "1 list", cardStatLabel: "Menus, quote form and sitemap from one product list",
     faqs: [
       { question: "Can I have a product catalog website without a shopping cart?", answer: "Yes. Each product page ends in a quote form instead of an add-to-cart button, and the enquiry reaches you by email with the product already filled in. It suits custom or made-to-order products where the price depends on the job." },
@@ -75,7 +75,7 @@ export const stackGuidePosts: StackGuidePost[] = [
   {
     ...byline, id: "website-monthly-running-cost", title: "How Much Does a Website Cost per Month? Our Stack Runs Under $50",
     date: "Oct 8", published: "2026-10-08", lastModified: "2026-10-11", eyebrow: "Pricing / Monthly running costs",
-    excerpt: `A custom website with a content editor costs about $20 a month to run on our usual stack. Add a database and sign-in and it's about $45. Every line of the bill with ${asOf("vercel-pro-price")} prices, and who owns which account.`,
+    excerpt: `A custom website with a content editor costs about $20 a month to run on our stack, or about $45 with a database and sign-in. Prices as of ${asOf("vercel-pro-price")}.`,
     category: "Pricing", readTime: "6 min", illustrationType: "hosting", cardStat: "$45", cardStatLabel: "A month for hosting, editor, email and database",
     faqs: [
       // The $20 and $45 totals are sums of the spec-facts values below. Re-add them if a price changes.
@@ -103,7 +103,7 @@ export const stackGuidePosts: StackGuidePost[] = [
   {
     ...byline, id: "online-booking-small-business-website", title: "Adding Online Booking to a Small Business Website: Plugin, Builder or Custom",
     date: "Oct 25", published: "2026-10-25", lastModified: "2026-10-25", eyebrow: "Booking / Small business websites",
-    excerpt: "When a scheduling tool is enough, when your website builder's booking app is, and when a booking system has to be custom. With the real before and after from a training business we rebuilt.",
+    excerpt: "When a scheduling tool is enough, when your builder's booking app is, and when booking must be custom. With the before and after from a training business.",
     category: "Guide", readTime: "6 min", illustrationType: "cost", cardStat: "3 routes", cardStatLabel: "Tool, builder or custom",
     faqs: [
       { question: "What is the easiest way to add online booking to a website?", answer: "Use a scheduling tool such as Cal.com or Calendly and embed or link it from your site. It works for one-to-one appointments and calls, and it takes an afternoon rather than a project." },

@@ -23,7 +23,7 @@ const title = "What Is Headless Commerce? A 2026 Store Owner Guide";
 // from a non-US regional pricing page, so the two articles competed for the same
 // cost searches. It now keeps the concept: what headless commerce is and when it fits.
 const description =
-    "What headless commerce is, how it differs from a traditional store, the Shopify and Medusa options, what changes for SEO and editing, and when a custom storefront is justified.";
+    "What headless commerce is, how it differs from a standard store, the Shopify and Medusa options, what changes for SEO and editing, and when it's worth it.";
 
 export const dynamic = "force-static";
 

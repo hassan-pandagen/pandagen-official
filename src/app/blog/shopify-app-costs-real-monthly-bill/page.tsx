@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Shopify App Costs 2026: Published Prices, Checked Oct 4";
 const description =
-    "Published entry prices for 15 common Shopify apps, rechecked October 4, 2026, plus Shopify's four app charge types and what uninstalling does and does not cancel.";
+    "Entry prices for 15 common Shopify apps, rechecked October 4, 2026, plus Shopify's four app charge types and what uninstalling does and doesn't cancel.";
 
 export const dynamic = "force-static";
 

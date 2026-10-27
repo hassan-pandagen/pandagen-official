@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = "https://www.pandacodegen.com/blog/do-you-own-your-website";
 const title = "Do You Own Your Website? A Contract and Control Checklist";
 const description =
-    "Website ownership is more than source code. Check copyright, licenses, domain, hosting, repository, business accounts, data, access, payment, and handover terms.";
+    "Owning your website means more than the code: check copyright, licenses, domain, hosting, repository, accounts, data, access and handover terms.";
 
 export const dynamic = "force-static";
 

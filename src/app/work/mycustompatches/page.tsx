@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     // if one reappears. Metadata is where the last drift survived longest,
     // because nobody re-reads a <title> after correcting the body.
     title: { absolute: "MyCustomPatches Case Study: Off WordPress in About 22 Days | PandaCodeGen" },
-    description: "A decade on WordPress, then a custom Next.js build delivered in about 22 days. The project record covers 13 templates and zero downtime at cutover. See the scope and client review.",
+    description: "A decade on WordPress, then a custom Next.js build delivered in about 22 days: 13 templates and zero downtime at cutover. See the scope and client review.",
     openGraph: {
         title: "MyCustomPatches: Off WordPress in About 22 Days",
         description: "A decade-old WordPress store rebuilt in custom Next.js. The project record covers about 22 days, 13 templates and zero downtime at cutover.",

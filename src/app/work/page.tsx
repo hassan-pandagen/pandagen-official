@@ -4,7 +4,7 @@ import { WorkPreview, workIndexItems } from "@/components/pages/work/WorkIndexDe
 
 export const metadata: Metadata = {
     title: "Website, Ecommerce & Software Projects",
-    description: "Explore PandaCodeGen websites, online stores, migrations and operations software. See finished projects, what we built, the relationship and the evidence limits.",
+    description: "PandaCodeGen websites, online stores, migrations and operations software: what we built, the client relationship and the limits of the evidence.",
     alternates: {
         canonical: "/work",
     },

@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "SaaS Price Changes in 2026: A Verified Watchlist";
 const description =
-    "A primary-source watchlist for Microsoft 365, Webflow and Klaviyo billing changes, with effective-date, renewal, unit and invoice checks for every SaaS contract.";
+    "A primary-source watchlist of Microsoft 365, Webflow and Klaviyo billing changes, with effective-date, renewal, unit and invoice checks for any SaaS contract.";
 
 export const dynamic = "force-static";
 

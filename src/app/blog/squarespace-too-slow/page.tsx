@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Squarespace Too Slow in 2026? Diagnose Before Migrating";
 const description =
-    "Measure Squarespace performance by route and device, reduce page weight, fonts, custom code and third parties, then decide whether optimization or migration fits the evidence.";
+    "Measure Squarespace speed by page and device, cut page weight, fonts, custom code and third parties, then decide whether to optimize or migrate.";
 
 export const dynamic = "force-static";
 

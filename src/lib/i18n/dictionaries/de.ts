@@ -38,7 +38,7 @@ const de: Dictionary = {
     meta: {
       title: "Webdesign und Onlineshop-Entwicklung | PandaCodeGen",
       description:
-        "WordPress-Websites, individuelle Websites und Onlineshops. Direkte Zusammenarbeit mit den Gründern, schriftliches Angebot und eine Live-Einführung in die Bearbeitung.",
+        "WordPress-Websites, individuelle Websites und Onlineshops. Direkt mit den Gründern, mit schriftlichem Angebot und einer Live-Einführung in die Bearbeitung.",
     },
     hero: {
       eyebrow: "Content-Editor · Einführung · Code, der Ihnen gehört",
@@ -412,7 +412,7 @@ const de: Dictionary = {
     meta: {
       title: "WordPress-Websites, Webentwicklung und Migration | PandaCodeGen",
       description:
-        "WordPress-Websites, individuelle Websites und Onlineshops. Direkte Zusammenarbeit mit den Gründern, schriftliches Angebot und eine Live-Einführung in die Bearbeitung.",
+        "WordPress-Websites, individuelle Websites und Onlineshops. Direkt mit den Gründern, mit schriftlichem Angebot und einer Live-Einführung in die Bearbeitung.",
     },
     hero: {
       eyebrow: "Was wir bauen",
@@ -705,7 +705,7 @@ const de: Dictionary = {
     meta: {
       title: "Über PandaCodeGen | Wie wir Projekte zuschneiden und liefern",
       description:
-        "Lernen Sie die Gründer von PandaCodeGen kennen und sehen Sie, wie das Unternehmen, seit Februar 2026 aktiv, neue Websites, Relaunches und Migrationen zuschneidet, mit schriftlich vereinbarten Abnahmekriterien und Übergabe.",
+        "Lernen Sie die Gründer von PandaCodeGen kennen. Seit Februar 2026 planen wir neue Websites, Relaunches und Migrationen mit schriftlichen Abnahmekriterien.",
     },
     hero: {
       eyebrow: "Die Anti-Agentur · Gegründet im Februar 2026 · Von den Mitgründern geführt",

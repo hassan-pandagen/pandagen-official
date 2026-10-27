@@ -27,7 +27,7 @@ const title = "Squarespace Migration Cost 2026: What Leaving Costs";
 // the ledger.
 const pilotTitle = "Squarespace Migration Cost in 2026: Our Prices, From $1,500";
 const description =
-    "What it costs to move OFF Squarespace, not onto it. Price the migration from a complete inventory of URLs, content, commerce, scheduling, members, forms, integrations, SEO controls, testing and operating needs.";
+    "What it costs to move off Squarespace: price it from a full inventory of URLs, content, commerce, scheduling, members, forms, integrations and SEO.";
 
 export const dynamic = "force-static";
 

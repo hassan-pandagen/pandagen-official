@@ -21,7 +21,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = "https://www.pandacodegen.com/blog/divi-theme-slow";
 const title = "Divi Theme Slow? A 2026 Diagnostic and Fix Guide";
 const description =
-    "Diagnose a slow Divi site, test Divi 5 and in-place fixes, and decide whether to optimize, rebuild in WordPress, or migrate without invented score or revenue claims.";
+    "Find what's slowing your Divi site, test Divi 5 and in-place fixes, then decide whether to optimize, rebuild in WordPress or migrate.";
 
 export const dynamic = "force-static";
 

@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Shopify Plus Speed Problems: An Enterprise Diagnostic";
 const description =
-    "Diagnose Shopify Plus performance by route, device, apps, third parties, media, theme code and release before deciding whether to optimize, re-theme or go headless.";
+    "Diagnose Shopify Plus speed by page, device, apps, third parties, media, theme code and release before you optimize, re-theme or go headless.";
 
 export const dynamic = "force-static";
 

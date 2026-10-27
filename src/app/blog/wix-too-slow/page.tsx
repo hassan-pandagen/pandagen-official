@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Why Is My Wix Site So Slow? A 2026 Measurement and Fix Guide";
 const description =
-    "Diagnose a slow Wix site with real-user and repeatable lab evidence, fix media, fonts, apps, scripts, layout and data work, then decide whether migration is justified.";
+    "Diagnose a slow Wix site with real-user and lab data, fix media, fonts, apps, scripts and layout, then decide whether moving off Wix is justified.";
 
 export const dynamic = "force-static";
 

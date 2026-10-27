@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Webflow User Accounts Sunset Date: January 29, 2026 (Confirmed)";
 const description =
-    "Webflow sunset User Accounts (originally Memberships) on January 29, 2026, as announced on December 11, 2024. What stopped, what Webflow says about data, gates and subscriptions, and how to scope a replacement.";
+    "Webflow sunset User Accounts on January 29, 2026. What stopped, what Webflow says about data, gated content and subscriptions, and how to scope a replacement.";
 
 export const dynamic = "force-static";
 

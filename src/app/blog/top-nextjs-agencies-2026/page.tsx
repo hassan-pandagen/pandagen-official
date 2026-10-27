@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Next.js Development Agencies in 2026: A Disclosed Shortlist";
 const description =
-    "Compare eight Next.js and software-engineering partners from current first-party evidence, with transparent inclusion rules and questions for validating scope, team and acceptance.";
+    "Eight Next.js and software engineering partners compared from their own published evidence, with clear inclusion rules and questions to check scope and team.";
 
 export const dynamic = "force-static";
 

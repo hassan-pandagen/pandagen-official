@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Website Redesign Cost in 2026: Scope, Tiers and Buyer Guide";
 const description =
-    "Price a same-platform website redesign by UX, templates, design system, content, implementation, testing and rollout, without relying on unsupported market averages.";
+    "Price a same-platform redesign by UX, templates, design system, content, build, testing and rollout, without relying on unsupported market averages.";
 
 export const dynamic = "force-static";
 

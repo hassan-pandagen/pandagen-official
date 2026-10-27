@@ -39,8 +39,8 @@ const checkedOn = asOf("squarespace-api-scope");
 
 const title = "Which Website Builders Can Actually Go Headless in 2026";
 const description =
-    "Checked against each platform's own API documentation. Shopify, WooCommerce and Wix genuinely " +
-    "support headless, Webflow runs the idea in reverse, and Squarespace does not mention it once.";
+    "Checked against each platform's API docs: Shopify, WooCommerce and Wix support headless, " +
+    "Webflow works the other way round, and Squarespace never mentions it.";
 
 export const dynamic = "force-static";
 

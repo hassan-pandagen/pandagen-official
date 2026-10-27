@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Wix Migration Cost 2026: What Leaving Wix Costs";
 const description =
-    "What it costs to move OFF Wix, not onto it. Price the migration from routes, templates, CMS, products, orders, contacts, media, apps, SEO controls, acceptance and cutover using current Wix export documentation.";
+    "What it costs to move off Wix: price it from pages, templates, CMS, products, orders, contacts, media, apps and SEO, using Wix's current export docs.";
 
 export const dynamic = "force-static";
 

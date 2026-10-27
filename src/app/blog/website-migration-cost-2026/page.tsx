@@ -22,7 +22,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Website Migration Cost in 2026: Prices, Scope and Timeline";
 const description =
-    "What it costs to move OFF WordPress, WooCommerce, Webflow, Wix, Squarespace, Shopify or GoHighLevel. Price the migration from current inventory, export limits, integrations, SEO, acceptance and operation.";
+    "What it costs to move off WordPress, WooCommerce, Webflow, Wix, Squarespace, Shopify or GoHighLevel, priced from inventory, export limits, integrations and SEO.";
 
 export const dynamic = "force-static";
 

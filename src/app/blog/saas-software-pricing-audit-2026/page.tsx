@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "2026 SaaS Pricing Audit: An Evidence-First Method";
 const description =
-    "Audit software cost with invoices, contracts, usage, billing units, renewal dates, security, integrations and exit requirements before deciding what to retain, right-size or replace.";
+    "Audit software costs from invoices, contracts, usage, billing units, renewals, security and exit terms before you keep, right-size or replace each tool.";
 
 export const dynamic = "force-static";
 

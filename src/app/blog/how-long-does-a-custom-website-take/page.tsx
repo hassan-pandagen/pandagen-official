@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "How Long Does a Custom Website Take? A 2026 Schedule Guide";
 const description =
-    "Build a defensible website schedule from inventory, content, design, integrations, review, QA and cutover instead of relying on an unsupported universal timeline.";
+    "Plan a realistic website schedule from inventory, content, design, integrations, review, QA and cutover, not a one-size-fits-all timeline.";
 
 export const dynamic = "force-static";
 

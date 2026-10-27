@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "How to Fix a Slow WordPress Site: 8 Evidence-Led Methods";
 const description =
-    "Profile slow WordPress routes, isolate server, cache, database, theme, plugin, media and third-party work, then decide whether optimization or migration is justified.";
+    "Profile slow WordPress pages, separate server, cache, database, theme, plugin, media and third-party causes, then decide whether to optimize or migrate.";
 
 export const dynamic = "force-static";
 

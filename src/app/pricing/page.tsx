@@ -5,7 +5,7 @@ import { alternatesFor } from "@/lib/i18n/config";
 
 export const metadata: Metadata = {
     title: { absolute: "Website & Online Store Pricing | PandaCodeGen" },
-    description: "Custom website and online store builds have published starting prices from $1,500. WordPress websites are quoted to scope. Final work and price are agreed in writing.",
+    description: "Custom websites and online stores start at $1,500. WordPress sites are quoted to scope. The final work and price are agreed in writing before we start.",
     alternates: alternatesFor("pricing", "en"),
     openGraph: {
         title: "Website & Online Store Pricing | PandaCodeGen",

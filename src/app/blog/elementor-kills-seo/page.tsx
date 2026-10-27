@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = "https://www.pandacodegen.com/blog/elementor-kills-seo";
 const title = "Does Elementor Hurt SEO? A 2026 Evidence Guide";
 const description =
-    "Elementor does not carry one SEO penalty or PageSpeed score. Learn how to test rendering, Core Web Vitals, DOM, assets, plugins, and search performance before optimizing or migrating.";
+    "Elementor carries no single SEO penalty or PageSpeed score. Test rendering, Core Web Vitals, DOM size, assets and plugins before you optimize or migrate.";
 
 export const dynamic = "force-static";
 

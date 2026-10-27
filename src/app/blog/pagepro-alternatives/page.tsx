@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Pagepro Alternatives in 2026: Compare Scope and Fit";
 const description =
-    "A commercially disclosed way to compare Pagepro, Naturaily, Blazity, PandaCodeGen and other Next.js partners using current services, written proposals and equivalent requirements.";
+    "Compare Pagepro, Naturaily, Blazity, PandaCodeGen and other Next.js partners on current services and written proposals. Our commercial interest is disclosed.";
 
 export const dynamic = "force-static";
 

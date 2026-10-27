@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "WooCommerce Migration Cost 2026: What Leaving Costs";
 const description =
-    "What it costs to move OFF WooCommerce, not onto it. Price the migration from products, orders, customers, payments, subscriptions, extensions, content, SEO, acceptance, cutover and operating responsibility.";
+    "What it costs to move off WooCommerce: price it from products, orders, customers, payments, subscriptions, extensions, content, SEO and cutover.";
 
 export const dynamic = "force-static";
 

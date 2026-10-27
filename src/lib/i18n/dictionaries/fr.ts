@@ -705,7 +705,7 @@ const fr: Dictionary = {
     meta: {
       title: "À propos de PandaCodeGen | Comment nous cadrons et livrons",
       description:
-        "Découvrez les cofondateurs de PandaCodeGen et la manière dont l'entreprise, active depuis février 2026, cadre les nouveaux sites, les refontes et les migrations, avec critères d'acceptation et transfert convenus par écrit.",
+        "Découvrez les cofondateurs de PandaCodeGen. Depuis février 2026, nous cadrons sites, refontes et migrations avec des critères d'acceptation écrits.",
     },
     hero: {
       eyebrow: "L'anti-agence · Fondée en février 2026 · Dirigée par ses cofondateurs",
