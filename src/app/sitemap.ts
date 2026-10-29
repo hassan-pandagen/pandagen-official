@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 1. Core Business Pages
     { path: '', changeFrequency: 'weekly', priority: 1.0 , lastModified: '2026-10-11' },
     { path: '/services', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-10-10' },
-    { path: '/pricing', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-08' },
+    { path: '/pricing', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-29' },
     { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/free-audit', changeFrequency: 'monthly', priority: 0.7 },
 
@@ -138,11 +138,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     about: 0.6,
   }
 
-  // Substantive offer/hosting corrections, 8 Oct 2026. Contact was unchanged.
+  // Home hosting policy and pricing/support refreshed in both locales, 29 Oct 2026.
   const localeContentDates: Partial<Record<LocalizedPage, string>> = {
-    home: '2026-10-08',
+    home: '2026-10-29',
     services: '2026-10-08',
-    pricing: '2026-10-08',
+    pricing: '2026-10-29',
     about: '2026-10-08',
   }
 

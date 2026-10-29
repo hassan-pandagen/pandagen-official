@@ -93,7 +93,7 @@ export const SERVICES: readonly Fact[] = [
 ];
 
 /** Commercial terms. Every figure here is a published starting point, not a quote. */
-const SUPPORT_CALENDAR_DAYS = { starter: 15, upgraded: 30 } as const;
+export const SUPPORT_CALENDAR_DAYS = { starter: 15, upgraded: 30 } as const;
 export const POST_LAUNCH_SUPPORT = `Starter builds from $1,500 include ${SUPPORT_CALENDAR_DAYS.starter} calendar days of free post-launch support. Growth, Scale and other upgraded projects include ${SUPPORT_CALENDAR_DAYS.upgraded} calendar days. We complete handover and obtain your acceptance before launch. The included support period starts on the day your website goes live. During included support, we fix issues in the work we delivered and help you use it. Any bug or glitch in the work we delivered, or anything missing from the agreed scope, is fixed at no extra charge, even after that period. We also help with small, straightforward requests at no charge when practical. New pages, features, integrations and larger changes are scoped and priced separately before work starts. Your written proposal records the launch date and coverage for your project. Ongoing maintenance is optional and quoted separately.`;
 /** Short presentation of the policy above for compact homepage rows. */
 export const POST_LAUNCH_SUPPORT_SUMMARY = `Starter: ${SUPPORT_CALENDAR_DAYS.starter} calendar days from launch; upgrades: ${SUPPORT_CALENDAR_DAYS.upgraded}. Bugs in delivered work stay covered afterward; new features quoted separately.`;

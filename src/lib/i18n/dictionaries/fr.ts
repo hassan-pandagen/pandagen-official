@@ -10,8 +10,8 @@ import type { Dictionary } from "./types";
 import { reviewQuote } from "@/data/reviews";
 
 // Owner-confirmed hosting terms, 8 October 2026; shared by every French surface.
-import { PHONE } from "@/data/company-facts";
-const HOSTING_POLICY = "Avec une formule de maintenance ou de référencement, l'hébergement sur notre compte Vercel est inclus si vous le souhaitez. En dehors d'une formule, le compte d'hébergement et les éventuels frais sont convenus pour chaque client et inscrits dans le devis. L'hébergement est transféré sur un compte à votre nom sur demande ou à la fin de la collaboration.";
+import { PHONE, SUPPORT_CALENDAR_DAYS } from "@/data/company-facts";
+const HOSTING_POLICY = "Avec une formule de maintenance ou de référencement, l'hébergement sur notre compte Vercel est inclus si vous le souhaitez. Sans formule, le site est hébergé sur un compte à votre nom et vous réglez directement le fournisseur. L'hébergement est transféré sur un compte à votre nom sur demande ou à la fin de la collaboration.";
 
 const fr: Dictionary = {
   nav: {
@@ -498,14 +498,14 @@ const fr: Dictionary = {
         "Choisissez le forfait de départ le plus proche, puis ajoutez ou retirez des pages et des fonctionnalités dans un devis écrit. Une structure de paiement courante est 30 % au démarrage et 70 % au jalon de livraison défini dans les conditions de projet acceptées ; un autre échéancier écrit peut être convenu pour un projet particulier.",
     },
     summary:
-      "Les créations sur mesure de PandaCodeGen démarrent à 1 500 $ (Starter), 3 500 $ (Growth) et à partir de 5 000 $ (Scale), pour des sites web comme pour des boutiques en ligne. Les sites WordPress et les améliorations ciblées font l'objet d'un devis adapté à leur périmètre. Tout projet plus important est chiffré après un appel. Le prix est fixé une fois le périmètre écrit accepté. Toute modification du périmètre et du prix nécessite votre accord écrit préalable. Il n'y a pas de taille de projet minimale. Une structure de paiement courante est 30 % au démarrage et 70 % au jalon de livraison ; les conditions acceptées fixent l'échéancier de votre projet. Le code, les fichiers de design et les comptes vous appartiennent à la fin. Les prestations mensuelles, comme le référencement IA ou le support continu, sont facultatives et chiffrées séparément. Le prix évolue avec le volume de contenu, les intégrations et ce qui doit être repris sans casser, et non avec le seul nombre de pages. Votre devis écrit indique le montant exact.",
+      "Un site sur mesure démarre à 1 500 USD pour Starter, 3 500 USD pour Growth ou 5 000 USD pour Scale. Le contenu, les fonctions et les intégrations déterminent le devis ; une petite boutique peut relever de Starter. Les sites WordPress et les améliorations ciblées sont chiffrés séparément. Nous fixons le prix et les livrables avant de commencer. Tout ajout nécessite votre accord écrit sur le travail et son prix. La maintenance et le référencement mensuels restent facultatifs.",
     tiersHeading: "Exemples de forfaits de départ",
     currencyNote:
       "Montants indiqués en dollars américains (USD). La devise, les taxes et les échéances figurent dans les conditions de projet acceptées.",
     tiers: [
       {
         name: "Starter",
-        price: "1 500 $",
+        price: "À partir de 1 500 $",
         priceNote: "Forfait de départ · périmètre exact dans la proposition",
         fit: "Sites de petite entreprise, jusqu'à 7 pages.",
         features: [
@@ -516,12 +516,12 @@ const fr: Dictionary = {
           "Trois passages enregistrés avant la livraison par page et profil convenus ; chaque passage doit atteindre l'objectif",
           "Conception pensée d'abord pour le mobile, puis élargie vers les grands écrans",
           "Options d'hébergement et de services tiers documentées avant validation",
-          "15 jours ouvrés de support inclus pour les livrables convenus ; point de départ et couverture précisés dans les conditions acceptées",
+          `${SUPPORT_CALENDAR_DAYS.starter} jours calendaires de support inclus à partir de la mise en ligne ; couverture précisée dans le devis`,
         ],
       },
       {
         name: "Growth",
-        price: "3 500 $",
+        price: "À partir de 3 500 $",
         priceNote: "Forfait de départ · périmètre exact dans la proposition",
         fit: "8 à 20 pages, CMS, migration complète.",
         features: [
@@ -530,7 +530,7 @@ const fr: Dictionary = {
           "Migration du blog avec inventaire des URL, plan de redirections, conservation des métadonnées et surveillance après mise en ligne",
           "Objectif de performance Lighthouse 90+ sur mobile et ordinateur, avec trois passages réussis par page et profil convenus",
           "Coûts d'hébergement et de services tiers listés avant validation",
-          "30 jours ouvrés de support inclus pour les livrables convenus ; point de départ et couverture précisés dans les conditions acceptées",
+          `${SUPPORT_CALENDAR_DAYS.upgraded} jours calendaires de support inclus à partir de la mise en ligne ; couverture précisée dans le devis`,
         ],
       },
       {
@@ -544,7 +544,7 @@ const fr: Dictionary = {
           "Intégrations examinées telles que Klaviyo, HubSpot, Salesforce, les abonnements Stripe ou une autre API documentée",
           "Objectif de performance Lighthouse 90+ sur mobile et ordinateur, avec trois passages réussis par page et profil convenus",
           "CMS Sanity et modèle de contenu conçu pour vos rédacteurs, pas des gabarits génériques",
-          "30 jours ouvrés de support inclus pour les livrables convenus ; point de départ et couverture précisés dans les conditions acceptées",
+          `${SUPPORT_CALENDAR_DAYS.upgraded} jours calendaires de support inclus à partir de la mise en ligne ; couverture précisée dans le devis`,
         ],
       },
     ],
@@ -570,9 +570,9 @@ const fr: Dictionary = {
       },
       {
         number: "04",
-        title: "Option de support",
+        title: "Support inclus après la mise en ligne",
         body:
-          "Les échanges sur un forfait peuvent démarrer avec 15 jours ouvrés pour Starter et 30 jours ouvrés pour Growth et Scale. Le support ne s'applique que lorsque les conditions acceptées précisent son point de départ, les défauts ou ajustements mineurs couverts, et tout aménagement particulier.",
+          `Starter comprend ${SUPPORT_CALENDAR_DAYS.starter} jours calendaires de support gratuit dès la mise en ligne ; Growth, Scale et les projets de niveau supérieur en comprennent ${SUPPORT_CALENDAR_DAYS.upgraded}. La remise et votre validation ont lieu avant le lancement. Pendant cette période, nous vous aidons à utiliser le site et corrigeons notre travail. Les bugs et les éléments manquants du périmètre convenu restent corrigés sans frais après cette période. Nous aidons aussi pour les petites demandes simples lorsque cela est possible. Les nouvelles pages, fonctions, intégrations et modifications importantes font l'objet d'un devis préalable. La maintenance continue est facultative.`,
       },
       {
         number: "05",
@@ -590,7 +590,7 @@ const fr: Dictionary = {
         number: "07",
         title: "À qui appartiennent ces comptes",
         body:
-          "Votre système de contenu, votre base de données et votre service d'e-mails transactionnels sont créés dès le départ sur vos propres comptes, et non transférés plus tard. Nous y conservons un accès administrateur afin que les tâches courantes puissent être faites sans vous bloquer. L'hébergement est traité séparément : la question de savoir qui détient le compte, et si cela entraîne des frais, est convenue avec vous et inscrite dans le devis.",
+          "Votre système de contenu, votre base de données et votre service d'e-mails transactionnels sont créés dès le départ sur vos propres comptes, et non transférés plus tard. Nous y conservons un accès administrateur afin que les tâches courantes puissent être faites sans vous bloquer. Sans formule de maintenance ou de référencement, l'hébergement est sur un compte à votre nom, payé directement au fournisseur. Avec une formule, notre compte Vercel peut être utilisé si vous le souhaitez. Le devis précise ces modalités.",
       },
       {
         number: "08",

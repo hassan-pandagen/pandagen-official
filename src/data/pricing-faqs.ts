@@ -9,6 +9,8 @@
  * should-not-migrate) were added 28 Aug 2026. They answer the standing sales
  * objections on the page rather than only on a call.
  */
+import { POST_LAUNCH_SUPPORT } from "./company-facts";
+
 export interface PricingFaq {
   q: string;
   a: string;
@@ -57,7 +59,7 @@ export const pricingFaqs: PricingFaq[] = [
   },
   {
     q: "What support is included?",
-    a: "Usually 15 working days after launch on Starter, and 30 on Growth and Scale, for fixing anything that is not working right and small tweaks. Your quote states the exact period and what it covers. New features, extra pages and changes to other people's tools are quoted separately.",
+    a: POST_LAUNCH_SUPPORT,
   },
   {
     q: "When does the 100% refund apply?",

@@ -10,8 +10,8 @@ import type { Dictionary } from "./types";
 import { reviewQuote } from "@/data/reviews";
 
 // Owner-confirmed hosting terms, 8 October 2026; shared by every German surface.
-import { PHONE } from "@/data/company-facts";
-const HOSTING_POLICY = "Bei einem Wartungs- oder SEO-Paket ist das Hosting auf unserem Vercel-Konto enthalten, wenn Sie es wünschen. Ohne Paket werden das Hosting-Konto und mögliche Gebühren pro Kunde vereinbart und im Angebot festgehalten. Auf Wunsch oder zum Ende der Zusammenarbeit wird das Hosting auf ein Konto in Ihrem Namen übertragen.";
+import { PHONE, SUPPORT_CALENDAR_DAYS } from "@/data/company-facts";
+const HOSTING_POLICY = "Bei einem Wartungs- oder SEO-Paket ist das Hosting auf unserem Vercel-Konto enthalten, wenn Sie es wünschen. Ohne Paket läuft die Website auf einem Hosting-Konto in Ihrem Namen; Sie bezahlen den Anbieter direkt. Auf Wunsch oder zum Ende der Zusammenarbeit wird das Hosting auf ein Konto in Ihrem Namen übertragen.";
 
 const de: Dictionary = {
   nav: {
@@ -51,13 +51,13 @@ const de: Dictionary = {
       "PandaCodeGen erstellt WordPress-Websites, wenn sie zum Vorhaben passen, sowie individuelle Websites und Software. Die Gründer begleiten neue Projekte, Verbesserungen und Migrationen. Seiten, Funktionen, Zugänge, laufende Kosten und Übergabe werden vor Arbeitsbeginn vereinbart.",
     sections: [
       {
-        title: "Wochen statt Monate",
+        title: "Ein Zeitplan für Ihr Projekt",
         body:
-          "Wir verbinden KI-gestützte Entwicklungswerkzeuge mit erfahrenen Ingenieuren und liefern Websites in Produktionsqualität nach dem Zeitplan, der in den angenommenen Projektbedingungen festgehalten ist. KI beschleunigt Bau und Tests; Architekturentscheidungen, QA und Umschaltung bleiben bei den beiden Mitgründern.",
+          "Für Starter planen wir 1 bis 2 Wochen, für Growth 2 bis 4 und für Scale 3 bis 6. Inhalte, Integrationen und Ihre Freigaben bestimmen die tatsächlichen Termine. Vor dem Start vereinbaren wir die Seiten, Funktionen und Prüfschritte. Hassan verantwortet die technische Umsetzung, Imran Positionierung und Kundenreise.",
         bullets: [
-          "Claude AI für die Architekturarbeit",
-          "Cursor für die Entwicklung",
-          "Automatisierte Testketten vor jedem Prüfpunkt",
+          "Schriftlicher Leistungsumfang und feste Ansprechpartner",
+          "Prüfbare Zwischenstände vor dem Livegang",
+          "Einführung in den Editor und schriftliche Dokumentation",
         ],
       },
       {
@@ -84,7 +84,7 @@ const de: Dictionary = {
     faq: [
       {
         q: "Was kostet eine Migration von WordPress zu Next.js?",
-        a: "Eine Migration von WordPress zu Next.js beginnt bei 1.500 $ für eine Unternehmenswebsite mit bis zu 7 Seiten (Starter), 3.500 $ für eine Website mit 8 bis 20 Seiten inklusive Blog-Migration, bei der jede alte Adresse auf ihre neue Seite weitergeleitet wird (Growth), sowie ab 5.000 $ für Headless-Commerce mit mehr als 20 Seiten und individuellen Integrationen (Scale). Alles Größere wird nach einem Gespräch kalkuliert. Der Preis ist fest für den Leistungsumfang, der in den angenommenen Projektbedingungen festgehalten ist.",
+        a: "Individuelle Websites beginnen bei 1.500 US-Dollar für bis zu 7 Seiten (Starter) und bei 3.500 US-Dollar für 8 bis 20 Seiten mit einem passenden Inhaltsmodell und Migrationsplan (Growth). Scale beginnt bei 5.000 US-Dollar für mehr als 20 Seiten, große Kataloge, Abonnements, individuelle Bestellabläufe oder mehrere Sprachen. Ein kleiner Shop fällt nicht automatisch unter Scale. Bei einer Migration bestimmen auch Inhalte, Datenübernahme und Integrationen den Aufwand. Wir vereinbaren den Leistungsumfang und den festen Preis vor dem Start.",
       },
       {
         q: "Verliere ich bei der Migration meine Rankings?",
@@ -96,16 +96,16 @@ const de: Dictionary = {
       },
       {
         q: "Warum nicht einfach schnelleres WordPress-Hosting oder ein Caching-Plugin?",
-        a: "Ja. Wir prüfen, was auf Ihrer Website Probleme verursacht: Bilder, Hosting, Theme, Plugins oder angebundene Dienste. Eine gezielte Verbesserung kann ausreichen. Eine Migration schlagen wir vor, wenn sie Ihre Anforderungen erfüllt; Kosten und Abwägungen erklären wir vor Ihrer Entscheidung.",
+        a: "Das kann die richtige Lösung sein. Wenn ein Bild, ein Plugin oder das Hosting die Ursache ist, empfehlen wir zuerst eine gezielte Verbesserung. Ein Umzug lohnt sich, wenn wichtige Abläufe oder Integrationen an der bestehenden Plattform scheitern. Wir vergleichen beide Wege anhand Ihrer Website und der laufenden Kosten, bevor Sie entscheiden.",
       },
     ],
 
     continuity: {
       eyebrow: "Der Migrationsstandard",
       title: "Der Neubau ist neu.",
-      titleAccent: "Die kritischen Pfade bleiben nachgehalten.",
+      titleAccent: "Die wichtigen Abläufe werden geprüft.",
       lead:
-        "Vor dem Umschalten dokumentieren wir, was den Umzug überstehen muss und wie jeder Punkt geprüft wird. Genau das meinen wir mit „Migration ohne SEO-Verluste“: Risikokontrollen, kein Ranking-Versprechen.",
+        "Vor dem Umschalten erfassen wir wichtige URLs, Formulare, Bestellabläufe und Messereignisse. Für jeden Bereich vereinbaren wir einen Test und eine verantwortliche Person. So prüfen Sie vor dem Livegang, ob die vereinbarten Abläufe funktionieren.",
       ledgerTitle: "Migrations-Kontinuitätsregister",
       ledgerNote: "Die Übergabesicht für Systeme, die während eines Neubaus nicht ausfallen dürfen.",
       badge: "Vor dem Livegang definiert",
@@ -142,8 +142,8 @@ const de: Dictionary = {
 
     build: {
       eyebrow: "Unsere Expertise",
-      title: "Migrationen, gebaut um das herum,",
-      titleAccent: "was brechen kann.",
+      title: "Websites und Software für",
+      titleAccent: "Ihre täglichen Aufgaben.",
       lead:
         "Drei Schwerpunkte, ein Ziel: Ihr Geschäft schneller, günstiger im Betrieb und schwerer zu übersehen zu machen. Wir inventarisieren Seiten, Inhalte, Analytics, Formulare und Integrationen, bevor die Bauarbeit beginnt, und prüfen die Umschaltung anschließend gegen schriftliche Abnahmekriterien.",
       pillars: [
@@ -152,8 +152,8 @@ const de: Dictionary = {
           body:
             "Ist Ihre WordPress-, Wix-, Squarespace- oder Webflow-Website langsam, fragil oder teuer im Unterhalt? Wir überführen sie in individuellen Code, mit URL-Inventur, Weiterleitungsplan und Prüfung vor dem Umschalten.",
           bullets: [
-            "Keine Plugin-Updates mehr zu überwachen",
-            "Kleinere Angriffsfläche: keine Schwachstellen aus Plugins",
+            "Bei einem vollständigen Wechsel entfällt der bisherige WordPress-Betrieb",
+            "Sicherheitsupdates für Next.js, Bibliotheken und angebundene Dienste werden weiter eingeplant",
             "Übernahme von Inhalten, Metadaten und Weiterleitungen inbegriffen",
           ],
         },
@@ -296,7 +296,7 @@ const de: Dictionary = {
       title: "Von den Gründern gebaut,",
       titleAccent: "nicht ausgelagert.",
       lead:
-        "Wenn Sie ein Gespräch buchen, antwortet Hassan. Er schreibt den Code. Imran verantwortet Marketing und Kundenreise. Verträge und Support aus den USA, mit direktem Zugang zu den Gründern in jedem Projekt: keine Kundenbetreuung dazwischen, kein White-Label-Outsourcing.",
+        "Wenn Sie ein Gespräch buchen, antwortet Hassan. Er schreibt den Code. Imran verantwortet Marketing und Kundenreise. Ihr Vertragspartner ist unsere US-Gesellschaft; die Gründer arbeiten aus Karachi, Pakistan. Sie sprechen direkt mit den Personen, die Ihr Projekt betreuen.",
       people: [
         {
           name: "Hassan Jamal",
@@ -328,9 +328,9 @@ const de: Dictionary = {
 
     antiAgency: {
       eyebrow: "Der Engineering-Standard",
-      title: "Wir sind keine „Digitalagentur“.",
+      title: "Ein Team, das Verantwortung übernimmt.",
       lead:
-        "Agenturen verkaufen Stunden. Wir liefern technische Ergebnisse. Wir haben die Zwischenschichten entfernt, an denen B2B-Projekte in Zeit und Budget scheitern.",
+        "Website, Backend, SEO und Tracking sollen zusammenarbeiten. Für die von uns umgesetzten oder betreuten Leistungen haben Sie ein Team als Ansprechpartner. Wir untersuchen Probleme, erklären die Ursache und koordinieren die Behebung mit beteiligten Anbietern. Laufende Betreuung wird im Wartungs- oder SEO-Paket vereinbart.",
       pillars: [
         {
           title: "Gründer statt Kundenbetreuung",
@@ -505,7 +505,7 @@ const de: Dictionary = {
     tiers: [
       {
         name: "Starter",
-        price: "1.500 $",
+        price: "Ab 1.500 $",
         priceNote: "Startpaket · exakter Umfang im Angebot",
         fit: "Websites kleiner Unternehmen, bis zu 7 Seiten.",
         features: [
@@ -516,12 +516,12 @@ const de: Dictionary = {
           "Drei aufgezeichnete Durchläufe vor der Übergabe je vereinbarter Seite und Profil; jeder Durchlauf muss das Ziel erreichen",
           "Mobile-First umgesetzt: zuerst für kleine Bildschirme entworfen, dann nach oben skaliert",
           "Hosting- und Drittanbieteroptionen vor der Freigabe dokumentiert",
-          "15 Arbeitstage inkludierter Support für die vereinbarten Leistungen; Startzeitpunkt und Umfang stehen in den angenommenen Bedingungen",
+          `${SUPPORT_CALENDAR_DAYS.starter} Kalendertage kostenloser Support ab dem Livegang; der Umfang steht im Angebot`,
         ],
       },
       {
         name: "Growth",
-        price: "3.500 $",
+        price: "Ab 3.500 $",
         priceNote: "Startpaket · exakter Umfang im Angebot",
         fit: "8 bis 20 Seiten, CMS, vollständige Migration.",
         features: [
@@ -530,7 +530,7 @@ const de: Dictionary = {
           "Blog-Migration mit URL-Inventur, Weiterleitungskarte, Erhalt der Metadaten und Überwachung nach dem Livegang",
           "Lighthouse-Zielwert 90+ auf Mobilgeräten und Desktop, mit drei bestandenen Durchläufen je vereinbarter Seite und Profil",
           "Hosting- und Drittanbieterkosten vor der Freigabe aufgeführt",
-          "30 Arbeitstage inkludierter Support für die vereinbarten Leistungen; Startzeitpunkt und Umfang stehen in den angenommenen Bedingungen",
+          `${SUPPORT_CALENDAR_DAYS.upgraded} Kalendertage kostenloser Support ab dem Livegang; der Umfang steht im Angebot`,
         ],
       },
       {
@@ -544,7 +544,7 @@ const de: Dictionary = {
           "Geprüfte Integrationen wie Klaviyo, HubSpot, Salesforce, Stripe-Abonnements oder eine andere dokumentierte API",
           "Lighthouse-Zielwert 90+ auf Mobilgeräten und Desktop, mit drei bestandenen Durchläufen je vereinbarter Seite und Profil",
           "Sanity CMS und ein Content-Modell, das für Ihre Redaktion entworfen wird, statt generischer Templates",
-          "30 Arbeitstage inkludierter Support für die vereinbarten Leistungen; Startzeitpunkt und Umfang stehen in den angenommenen Bedingungen",
+          `${SUPPORT_CALENDAR_DAYS.upgraded} Kalendertage kostenloser Support ab dem Livegang; der Umfang steht im Angebot`,
         ],
       },
     ],
@@ -570,9 +570,9 @@ const de: Dictionary = {
       },
       {
         number: "04",
-        title: "Support-Option",
+        title: "Support nach dem Livegang",
         body:
-          "Paketgespräche können mit 15 Arbeitstagen für Starter und 30 Arbeitstagen für Growth und Scale beginnen. Support gilt nur dann, wenn die angenommenen Bedingungen festhalten, wann er beginnt, welche Mängel oder kleineren Anpassungen er abdeckt und welche Sonderregelungen gelten.",
+          `Starter enthält ${SUPPORT_CALENDAR_DAYS.starter} Kalendertage kostenlosen Support ab dem Livegang, Growth, Scale und höher eingestufte Projekte ${SUPPORT_CALENDAR_DAYS.upgraded}. Übergabe und Ihre Abnahme erfolgen vor dem Livegang. Während dieser Zeit helfen wir bei der Nutzung und beheben Fehler in unserer Arbeit. Fehler und fehlende Teile des vereinbarten Umfangs beheben wir auch danach ohne Zusatzkosten. Bei kleinen, unkomplizierten Wünschen helfen wir, wenn es praktisch möglich ist. Neue Seiten, Funktionen, Integrationen und größere Änderungen werden vorab separat angeboten. Laufende Wartung ist optional.`,
       },
       {
         number: "05",
@@ -590,7 +590,7 @@ const de: Dictionary = {
         number: "07",
         title: "Wem diese Konten gehören",
         body:
-          "Ihr Content-System, Ihre Datenbank und Ihr Dienst für Transaktions-E-Mails werden von Anfang an auf Ihren eigenen Konten eingerichtet und nicht erst später übertragen. Wir behalten dort einen Administratorzugang, damit laufende Aufgaben erledigt werden können, ohne Sie zu blockieren. Das Hosting wird getrennt behandelt: wem das Konto gehört und ob dafür eine Gebühr anfällt, wird mit Ihnen vereinbart und im Angebot festgehalten.",
+          "Ihr Content-System, Ihre Datenbank und Ihr Dienst für Transaktions-E-Mails werden von Anfang an auf Ihren eigenen Konten eingerichtet und nicht erst später übertragen. Wir behalten dort einen Administratorzugang, damit laufende Aufgaben erledigt werden können, ohne Sie zu blockieren. Ohne Wartungs- oder SEO-Paket liegt das Hosting auf einem Konto in Ihrem Namen, das Sie direkt beim Anbieter bezahlen. Mit einem Paket können Sie auf Wunsch unser Vercel-Konto nutzen. Diese Vereinbarung steht im Angebot.",
       },
       {
         number: "08",
