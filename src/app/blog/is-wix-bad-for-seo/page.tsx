@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-10-04",
-        modifiedTime: "2026-10-04",
+        modifiedTime: "2026-10-29",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath(`/blog/${postId}`)],
@@ -91,7 +91,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-10-04",
-            dateModified: "2026-10-04",
+            dateModified: "2026-10-29",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -126,7 +126,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-10-04",
-            dateModified: "2026-10-04",
+            dateModified: "2026-10-29",
             inLanguage: "en-US",
         },
         {
@@ -146,7 +146,7 @@ const sourceLinkClass = "font-semibold text-cognac underline decoration-cognac/3
 const controlRows: [string, string, string][] = [
     ["Titles and meta descriptions", "Editable per page, and as patterns for whole page types in SEO Settings", "Up to 10 extra tags per page, <meta> and <link> only"],
     ["URL slugs", "Editable per page, with an automatic 301 when you change one", "Blog posts keep a prefix (\"post\" by default) you can rename but not remove"],
-    ["Redirects", "URL Redirect Manager, group redirects, CSV import and export", "5,000 per site, 500 per CSV file, custom domains only, no redirect from the homepage"],
+    ["Redirects", "URL Redirect Manager, group redirects, CSV import and export", "5,000 per site, 500 per CSV file, custom domains only; homepage redirects use a domain redirect rather than the URL Redirect Manager"],
     ["Canonical tags", "Self-referencing by default, editable per page", "A changed canonical can drop the page from the sitemap"],
     ["robots.txt", "Fully editable in the Robots.txt Editor", "Wix Customer Care won't help with your edits"],
     ["Sitemap", "Generated and updated automatically, with a sitemap index", "No direct editing. Pages leave it through noindex or a changed canonical"],
@@ -290,18 +290,20 @@ export default function IsWixBadForSEOPage() {
                         <BlogText>
                             In the blog, mainly. Wix blog posts live under a prefix, &ldquo;post&rdquo; by default. Wix says
                             you can rename it but &ldquo;It is not possible to remove the &lsquo;post&rsquo; prefix
-                            entirely,&rdquo; and the blog and post prefixes can&apos;t share a name, so
-                            www.sitename.com/blog/post-title isn&apos;t possible. Store product pages are more flexible: Wix
+                            entirely,&rdquo; and the blog-feed and post prefixes must be different. You cannot keep the
+                            feed at /blog and use that same prefix for /blog/post-title. This is a restriction on the pair
+                            of prefixes, not a universal ban on the word &ldquo;blog&rdquo; in a post URL. Store product pages are more flexible: Wix
                             says you can remove the &ldquo;product-page&rdquo; prefix in SEO Settings.
                         </BlogText>
                     </div>
                     <BlogText>
-                        You&apos;ll feel it when you move a site onto Wix or off it. A WordPress blog with posts at
-                        /blog/post-title can&apos;t keep those addresses on Wix, so every post needs a redirect. Wix&apos;s
+                        Before moving onto Wix or off it, check the actual feed and post prefixes against the old URLs.
+                        Redirect each address that changes; do not assume every post must move just because it used /blog/.
+                        Wix&apos;s
                         redirect tools handle that well up to a point: a CSV file imports up to 500 redirects at a time, a
                         site holds up to 5,000, and group redirects move pages that share a path. Three rules to know
-                        before you start: 301 redirects only work on a custom domain, you can&apos;t redirect from the
-                        homepage, and changing a blog post&apos;s slug doesn&apos;t create a redirect automatically the
+                        before you start: 301 redirects only work on a custom domain, the URL Redirect Manager cannot
+                        redirect the homepage (Wix documents domain-to-domain redirection for that), and changing a blog post&apos;s slug doesn&apos;t create a redirect automatically the
                         way it does for ordinary pages.
                     </BlogText>
                     <BlogText>
@@ -410,7 +412,7 @@ export default function IsWixBadForSEOPage() {
                     <div data-speakable="true">
                         <BlogText>
                             Leave when a specific Wix limit blocks something the business needs and you can name it. Good
-                            reasons include a blog that has to live at /blog/post-title, more than 5,000 redirects, structured
+                            reasons include a required feed-and-post URL structure that Wix cannot preserve, more than 5,000 redirects, structured
                             data beyond five markups a page, or custom features Velo can&apos;t deliver. &ldquo;Wix is bad
                             for SEO&rdquo; on its own isn&apos;t a reason, because the evidence above doesn&apos;t support it.
                         </BlogText>

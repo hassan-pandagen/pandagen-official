@@ -56,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/work', changeFrequency: 'monthly', priority: 0.8, lastModified: '2026-10-08' },
     { path: '/work/mycustompatches', changeFrequency: 'yearly', priority: 0.7 },
     { path: '/work/panda-patches', changeFrequency: 'yearly', priority: 0.6, lastModified: MIGRATION_PROJECT_DETAILS.pandaPatches.contentUpdatedOn },
-    { path: '/work/enterprise-ops', changeFrequency: 'yearly', priority: 0.6, lastModified: MIGRATION_PROJECT_DETAILS.pandaPatches.contentUpdatedOn },
+    { path: '/work/enterprise-ops', changeFrequency: 'yearly', priority: 0.6, lastModified: MIGRATION_PROJECT_DETAILS.enterpriseOps.contentUpdatedOn },
     // Added 28 Aug 2026. Both pages were live, linked from /work and declaring
     // index:true, but had been missed here when they shipped, so the sitemap
     // contradicted their own robots directive. seo-audit.mjs flagged both.
@@ -77,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/ai-info/pricing-and-guarantees', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-10-08' },
     { path: '/ai-info/migration-services', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-10-10' },
     { path: '/ai-info/case-studies', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-10-11' },
-    { path: '/ai-info/team-and-company', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-10-02' },
+    { path: '/ai-info/team-and-company', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-10-29' },
     { path: '/blog', changeFrequency: 'weekly', priority: 0.8, lastModified: '2026-09-19' },
     { path: '/manifesto', changeFrequency: 'monthly', priority: 0.8 },
 

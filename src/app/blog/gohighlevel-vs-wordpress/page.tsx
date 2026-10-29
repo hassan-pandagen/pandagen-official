@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-10-04",
-        modifiedTime: "2026-10-04",
+        modifiedTime: "2026-10-29",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath(`/blog/${postId}`)],
@@ -91,7 +91,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-10-04",
-            dateModified: "2026-10-04",
+            dateModified: "2026-10-29",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -126,7 +126,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-10-04",
-            dateModified: "2026-10-04",
+            dateModified: "2026-10-29",
             inLanguage: "en-US",
         },
         {
@@ -388,10 +388,17 @@ export default function GoHighLevelVsWordPressPage() {
                             "Sitemap: in HighLevel you choose pages for each domain and click Generate & Save. WordPress core has published a sitemap index at /wp-sitemap.xml since version 5.5, covering public post types, taxonomies, author archives and the homepage.",
                             "Blog: HighLevel reserves /b/ for the blog and /post/ for posts, doesn't support separate blog pages per category, and says forms and surveys can't be added to blog posts yet. WordPress has posts, categories and tags in core.",
                             "Canonical tags: HighLevel blog posts have a canonical field. On website and funnel pages, HighLevel's documented method is pasting a canonical tag into the custom meta tags area.",
-                            "robots.txt: we found no HighLevel help article on editing robots.txt for builder sites. WordPress core serves a robots.txt that points to its sitemap index.",
+                            "Crawl controls: inspect the live robots.txt, page indexing settings and sitemap on either platform. A missing help article is not evidence that a control is unavailable in your account.",
                             "Redirects: HighLevel handles domain and path redirects but asks you to leave out characters such as ?, %, &, = and # from the path. WordPress core only redirects a post's old slug, so a plugin or server rule handles the rest.",
                         ]}
                     />
+                    <BlogText>
+                        HighLevel also documents a per-domain <a href="https://help.gohighlevel.com/support/solutions/articles/155000008299-make-your-sites-ai-ready-with-llms-txt" className={sourceLinkClass}>llms.txt editor</a>,
+                        checked on 29 October 2026. It publishes a Markdown guide to your pages. Treat it as an optional
+                        description of your site: publishing the file does not establish that a particular assistant
+                        uses it or will cite you. Keep useful content and crawlable links on the actual pages, and verify
+                        indexing in Search Console separately.
+                    </BlogText>
                     <BlogText>
                         We ran one check of our own on October 4, 2026. HighLevel&apos;s own pricing page, whose scripts and
                         images load from HighLevel&apos;s leadconnectorhq.com and msgsndr.com domains, returned 1,447 words of

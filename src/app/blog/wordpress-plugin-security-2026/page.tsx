@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-27",
-        modifiedTime: "2026-10-27",
+        modifiedTime: "2026-10-29",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath(`/blog/${postId}`)],
@@ -64,7 +64,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath(`/blog/${postId}`),
             datePublished: "2026-08-27T00:00:00-05:00",
-            dateModified: "2026-10-27T00:00:00-05:00",
+            dateModified: "2026-10-29T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -80,6 +80,8 @@ const articleSchema = {
             articleSection: "WordPress",
             inLanguage: "en-US",
             citation: [
+                { "@type": "CreativeWork", name: "WordPress 7.1.4 security release", url: "https://wordpress.org/news/2026/10/wordpress-7-1-4/" },
+                { "@type": "CreativeWork", name: "WordPress 7.1.4 detailed release documentation", url: "https://wordpress.org/documentation/wordpress-version/version-7-1-4/" },
                 { "@type": "CreativeWork", name: "NVD: CVE-2026-15981", url: "https://nvd.nist.gov/vuln/detail/CVE-2026-15981" },
                 { "@type": "CreativeWork", name: "NVD: CVE-2026-61979", url: "https://nvd.nist.gov/vuln/detail/CVE-2026-61979" },
                 { "@type": "CreativeWork", name: "NVD: CVE-2026-15013", url: "https://nvd.nist.gov/vuln/detail/CVE-2026-15013" },
@@ -92,7 +94,6 @@ const articleSchema = {
                 { "@type": "CreativeWork", name: "Full Disclosure: SAML signature algorithm confusion", url: "https://seclists.org/fulldisclosure/2026/Aug/33" },
                 { "@type": "CreativeWork", name: "WordPress.org: SAML Single Sign On plugin", url: "https://wordpress.org/plugins/miniorange-saml-20-single-sign-on/" },
             ],
-            wordCount: 2762,
             timeRequired: "PT11M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             about: [
@@ -168,6 +169,31 @@ export default function WordPressPluginSecurity2026Page() {
                         role="Co-founder and Lead Engineer"
                         bio="Hassan rebuilds WordPress and Shopify stores as custom Next.js applications, and patches the dependencies underneath them."
                     />
+
+                    <BlogHeader id="wordpress-7-1-4">28 October update: WordPress core needs patching too</BlogHeader>
+                    <BlogText>
+                        WordPress released <a href="https://wordpress.org/news/2026/10/wordpress-7-1-4/" className={inlineLink}>7.1.4 on 28 October 2026</a>{" "}
+                        and recommends updating immediately. This release fixes multiple vulnerabilities in WordPress
+                        core, separate from the plugin incidents below. Keeping a short plugin list helps with upkeep;
+                        it does not replace core updates.
+                    </BlogText>
+                    <BlogText>
+                        The <a href="https://wordpress.org/documentation/wordpress-version/version-7-1-4/" className={inlineLink}>detailed release notes</a>{" "}
+                        describe an update-process race condition that could allow code execution, stored cross-site
+                        scripting, denial of service and access-control or information-disclosure issues. Several
+                        require a logged-in user with a particular role. The release announcement does not report
+                        exploitation in the wild; that is not evidence that no attacks have occurred.
+                    </BlogText>
+                    <BlogList items={[
+                        "Check the installed WordPress version and the current official update advice. For the 7.1 branch, this release is 7.1.4. Check older branches against their listed fixes and plan a move to the actively supported release.",
+                        "Confirm a recent backup of both database and site files, plus a usable restore route, with your host.",
+                        "Apply the security update promptly. Use an expedited staging check where available and agree who handles automatic updates so the fix does not wait for routine maintenance.",
+                        "Verify the installed version afterwards, then test login, editing, forms and checkout where applicable. Record the result and keep monitoring for errors."
+                    ]} />
+                    <BlogText>
+                        Our recommendation: put a named person in charge of checking, applying and verifying security
+                        updates. We use that same approach for our Next.js dependencies.
+                    </BlogText>
 
                     <BlogHeader id="short-answer">Is WordPress less secure than a custom-coded site?</BlogHeader>
                     <BlogText>

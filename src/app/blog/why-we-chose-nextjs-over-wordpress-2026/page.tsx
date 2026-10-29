@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-04",
-        modifiedTime: "2026-10-09",
+        modifiedTime: "2026-10-29",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/why-we-chose-nextjs-over-wordpress-2026")],
@@ -49,6 +49,7 @@ export const metadata: Metadata = {
 };
 
 const sources = [
+    { name: "WordPress 7.1.4 security release", url: "https://wordpress.org/news/2026/10/wordpress-7-1-4/" },
     { name: "Next.js rendering", url: "https://nextjs.org/docs/app/getting-started/server-and-client-components" },
     { name: "Next.js caching", url: "https://nextjs.org/docs/app/getting-started/caching" },
     { name: "WordPress hardening", url: "https://developer.wordpress.org/advanced-administration/security/hardening/" },
@@ -68,7 +69,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/why-we-chose-nextjs-over-wordpress-2026"),
             description,
             datePublished: "2026-03-04",
-            dateModified: "2026-10-09",
+            dateModified: "2026-10-29",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -88,7 +89,6 @@ const articleSchema = {
                 { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],
-            wordCount: 1757,
             timeRequired: "PT9M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
@@ -228,6 +228,14 @@ export default function WhyWeChooseNextJsPage() {
                     </BlogText>
 
                     <BlogHeader id="security">Plugins, packages and security</BlogHeader>
+                    <BlogText>
+                        A current example is{' '}
+                        <a href="https://wordpress.org/news/2026/10/wordpress-7-1-4/" className="text-cognac hover:underline">WordPress 7.1.4, released on 28 October 2026</a>:
+                        its security fixes concern core, not just plugins. Our Next.js and Sanity builds remove the
+                        WordPress runtime from that site, while framework packages, CMS integrations and access controls
+                        remain our maintenance responsibility. See the{' '}
+                        <Link href="/blog/wordpress-plugin-security-2026#wordpress-7-1-4" className="text-cognac hover:underline">dated update and patching checklist</Link>.
+                    </BlogText>
                     <BlogText>
                         Moving off WordPress relocated our dependency risk rather than removing it. Our{" "}
                         <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">review of WordPress AI plugin security</Link>{" "}

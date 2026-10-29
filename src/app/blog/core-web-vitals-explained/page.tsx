@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-06",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-29",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/core-web-vitals-explained")],
@@ -64,7 +64,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/core-web-vitals-explained"),
             datePublished: "2026-05-06",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-29",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -151,12 +151,12 @@ export default function CoreWebVitalsExplainedPage() {
                             Core Web Vitals Explained: A <span className="italic text-cognac">2026 Business Guide</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600">
-                            LCP, INP, and CLS measure real user experience. They do not provide a universal revenue
-                            calculator, a guaranteed ranking change, or a platform score ceiling. This guide separates
-                            what the metrics prove from what your own data still has to establish.
+                            Make the main content load promptly, controls respond quickly and the page stay still while
+                            people use it. LCP, INP and CLS measure those three jobs. Our recommendation: fix the
+                            problems real visitors encounter before chasing a perfect lab score.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed October 8, 2026 against current Google Search Central, Search Console, and web.dev guidance.
+                            Reviewed October 29, 2026 against current Google Search Central, Search Console, and web.dev guidance.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -198,7 +198,7 @@ export default function CoreWebVitalsExplainedPage() {
                                 "Interaction to Next Paint (INP) measures responsiveness across user interactions.",
                                 "Cumulative Layout Shift (CLS) measures unexpected visual movement.",
                                 "Google recommends good field values of LCP of 2.5 seconds or less, INP of 200 milliseconds or less, and CLS of 0.1 or less, each assessed at the 75th percentile of real page loads.",
-                                "Core Web Vitals feed into page experience. Passing does not guarantee you rankings, traffic, conversions or revenue.",
+                                "Our priority: fix slow loading, delayed interactions and layout shifts on the pages customers actually use.",
                                 "Use field data to understand real visitors and lab data to reproduce and debug specific problems.",
                             ]}
                         />
@@ -229,21 +229,21 @@ export default function CoreWebVitalsExplainedPage() {
                                     <td className="p-4 font-bold">LCP{" "}<br /><span className="font-normal text-stone-500">Largest Contentful Paint</span></td>
                                     <td className="p-4">How long until the largest element in the viewport renders. Usually your hero image or headline.</td>
                                     <td className="p-4">2.5s or less</td>
-                                    <td className="p-4">2.5s to 4.0s</td>
+                                    <td className="p-4">over 2.5s to 4.0s</td>
                                     <td className="p-4">over 4.0s</td>
                                 </tr>
                                 <tr>
                                     <td className="p-4 font-bold">INP{" "}<br /><span className="font-normal text-stone-500">Interaction to Next Paint</span></td>
                                     <td className="p-4">How long the page takes to visibly respond to a user interaction, across the whole visit.</td>
                                     <td className="p-4">200ms or less</td>
-                                    <td className="p-4">200ms to 500ms</td>
+                                    <td className="p-4">over 200ms to 500ms</td>
                                     <td className="p-4">over 500ms</td>
                                 </tr>
                                 <tr>
                                     <td className="p-4 font-bold">CLS{" "}<br /><span className="font-normal text-stone-500">Cumulative Layout Shift</span></td>
                                     <td className="p-4">The largest burst of unexpected layout shifts across the page&apos;s lifecycle, including after initial load.</td>
                                     <td className="p-4">0.1 or less</td>
-                                    <td className="p-4">0.1 to 0.25</td>
+                                    <td className="p-4">over 0.1 to 0.25</td>
                                     <td className="p-4">over 0.25</td>
                                 </tr>
                             </tbody>
@@ -252,8 +252,9 @@ export default function CoreWebVitalsExplainedPage() {
                     <BlogText>
                         Thresholds are Google&apos;s published values; see the primary sources at the end of this article.
                         You are assessed at the 75th percentile of real page loads, separately for mobile and desktop, so
-                        a page can pass in a lab test and still fail in the field. Passing all three is what counts as
-                        passing Core Web Vitals. Two out of three is a fail.
+                        a page can pass in a lab test and still fail in the field. When all three have enough data, each must be good to pass. PageSpeed Insights makes an
+                        exception when INP has too few samples: good LCP and CLS can still produce a pass.
+                        If LCP or CLS lacks enough data, it cannot make an assessment. Missing data is not a failure.
                     </BlogText>
 
                     <div className="my-8 grid gap-4">
@@ -350,26 +351,24 @@ export default function CoreWebVitalsExplainedPage() {
                         </BlogText>
                     </div>
                     <BlogText>
-                        The practical reading, which survives both the hype and the backlash:{" "}
-                        <strong>good scores rarely win you a position, and bad ones can cost you one.</strong> A page
-                        that answers the query better will outrank a faster page that answers it worse, so performance
-                        work does not substitute for the content being right. But when two pages are comparably
-                        relevant, the slower one has given away an advantage it did not need to.
+                        Our recommendation is to fix poor field results on important pages first. A slow checkout or
+                        a button that moves under someone's finger deserves attention. Once those pages perform well
+                        for real visitors, weigh the next speed improvement against better content, navigation and
+                        clearer buying information. Chasing a perfect lab score should earn its place in that queue.
                     </BlogText>
                     <BlogText>
                         Two things have genuinely changed since the metrics launched, and both argue for treating them
                         as live rather than settled. <strong>INP replaced First Input Delay in March 2024</strong>, so
-                        any guide still optimising for FID is measuring something Google no longer collects. And the
+                        a guide still using FID as the current Core Web Vital is out of date. And the
                         set is explicitly versioned: Google has changed the metrics before and has said it will again,
                         which is a reason to re-read the thresholds each year rather than to memorise them once.
                     </BlogText>
 
                     <BlogHeader>What Core Web Vitals mean for SEO</BlogHeader>
                     <BlogText>
-                        Google recommends good Core Web Vitals for Search success and user experience. Its current page
-                        experience guidance also says there is no single page-experience signal and that relevance
-                        remains important. A good score is therefore useful work, but it does not create a
-                        &quot;ranking boost&quot; you can price or a deterministic tiebreaker between two pages.
+                        Google uses Core Web Vitals in its ranking systems alongside other signals. Treat them as part
+                        of a useful, relevant page: the answer has to satisfy the search, and the page has to work well
+                        when someone arrives. A passing score alone does not secure a top position.
                     </BlogText>
                     <BlogText>
                         To evaluate a search effect, annotate releases and compare Search Console performance by page,
@@ -486,6 +485,7 @@ export default function CoreWebVitalsExplainedPage() {
                     <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
                         <li><a href="https://developers.google.com/search/docs/appearance/core-web-vitals" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Google Search Central: Core Web Vitals and search results</a></li>
                         <li><a href="https://developers.google.com/search/docs/appearance/page-experience" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Google Search Central: page experience guidance</a></li>
+                        <li><a href="https://developers.google.com/speed/docs/insights/v5/about" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Google: PageSpeed assessment, missing INP data and the 28-day window</a></li>
                         <li><a href="https://web.dev/articles/vitals" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>web.dev: Web Vitals definitions and measurement</a></li>
                         <li><a href="https://web.dev/articles/lab-and-field-data-differences" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>web.dev: why lab and field data differ</a></li>
                         <li><a href="https://support.google.com/webmasters/answer/9205520" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Google Search Console: Core Web Vitals report</a></li>

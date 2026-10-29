@@ -927,12 +927,12 @@
       "vendor": "Hostinger",
       "plan": "Premium",
       "label": "Premium first-term price",
-      "value": "$2.99/mo",
-      "qualifier": "on a 48-month term, $143.52 paid upfront",
-      "verifiedAt": "2026-10-11",
+      "value": "$2.49/mo",
+      "qualifier": "on a 48-month term, $119.52 paid upfront",
+      "verifiedAt": "2026-10-29",
       "reviewDays": 30,
       "source": "https://www.hostinger.com/web-hosting",
-      "note": "US price shown on the vendor's own pricing page, read with a live fetch on 11 October 2026. Promotional prices change often."
+      "note": "USD promotional offer read on the vendor pricing page on 29 October 2026. Promotions and regional offers vary; confirm the checkout total."
     },
     "hostinger-premium-renewal": {
       "vendor": "Hostinger",
@@ -940,10 +940,10 @@
       "label": "Premium renewal price",
       "value": "$10.99/mo",
       "qualifier": "the page says the plan renews at this rate",
-      "verifiedAt": "2026-10-11",
+      "verifiedAt": "2026-10-29",
       "reviewDays": 30,
       "source": "https://www.hostinger.com/web-hosting",
-      "note": "US price shown on the vendor's own pricing page, read with a live fetch on 11 October 2026. Promotional prices change often."
+      "note": "USD renewal offer read on the vendor pricing page on 29 October 2026, for the same 48-month term."
     },
     "vercel-hipaa-baa": {
       "vendor": "Vercel",

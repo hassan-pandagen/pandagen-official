@@ -30,8 +30,8 @@ const bhRenewal = spec("bluehost-starter-renewal");
 export const stackGuidePosts: StackGuidePost[] = [
   {
     ...byline, id: "sanity-vs-wordpress", title: "Sanity vs WordPress: Which Editor Fits Your Website?",
-    date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-20", eyebrow: "CMS / Sanity vs WordPress",
-    excerpt: "WordPress is free software you host and update. Sanity is a hosted editor built around your content. How to choose, with a real client editor and five tasks.",
+    date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-29", eyebrow: "CMS / Sanity vs WordPress",
+    excerpt: "WordPress is free software you host and update. Sanity combines a content editor with hosted storage. How to choose, with a real client editor and five tasks.",
     category: "CMS", readTime: "7 min", illustrationType: "code", cardStat: "5 tasks", cardStatLabel: "Try the editor before choosing the CMS",
     faqs: [
       { question: "Is Sanity better than WordPress?", answer: "Neither is better for every site. WordPress suits a team whose current theme, blocks and plugins already do the job. Sanity suits a rebuild where you want an editor with exactly your content's fields, paired with a custom website. Test the same five editing tasks in both before you decide." },
@@ -46,25 +46,25 @@ export const stackGuidePosts: StackGuidePost[] = [
   },
   {
     ...byline, id: "sanity-vs-supabase", title: "Sanity vs Supabase: CMS, Backend or Both?",
-    date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-20", eyebrow: "Architecture / Sanity vs Supabase",
-    excerpt: "Sanity is a content editor. Supabase is a backend: Postgres, sign-in, storage and functions. They don't compete. Which one your project needs, with prices.",
+    date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-29", eyebrow: "Architecture / Sanity vs Supabase",
+    excerpt: "Sanity manages content; Supabase provides Postgres, sign-in, storage and functions. Compare costs, permissions, backups and when one or both fit.",
     category: "Architecture", readTime: "7 min", illustrationType: "saas", cardStat: "2 jobs", cardStatLabel: "Editing the website and running the business data",
     faqs: [
-      { question: "Is Sanity an alternative to Supabase?", answer: "No. Sanity is a CMS your team uses to edit website content. Supabase is a backend: a Postgres database with sign-in, file storage and server functions for apps and portals. Many projects use both, Sanity for the public website and Supabase for the private data." },
+      { question: "Is Sanity an alternative to Supabase?", answer: "They serve different primary jobs. Sanity provides an editing workflow and hosted content storage; Supabase provides Postgres, sign-in, storage and functions. They can work together, but one backend with an appropriate editor can also cover both jobs. Choose around the workflow and permissions you need." },
       { question: "Do I need Supabase for a business website?", answer: "Usually not. A business website with pages, articles and a contact form needs a CMS and a form that emails you. You need a backend like Supabase when people sign in, or when you store records such as bookings, orders, students or payments." },
       { question: "How much does Supabase cost?", answer: `Supabase's Free plan is ${supabaseFree.value} and Pro is ${supabasePro.value}, as of ${asOf("supabase-pro-price")}. We build on the Free plan and move the project to Pro when it goes live, because free projects are paused after a week of inactivity and have no included automatic backups.` },
       // 20 Oct 2026: follow-up questions, as above.
       { question: "Is Supabase still free in 2026?", answer: `Yes. As of ${asOf("supabase-free-plan")}, Supabase's Free plan is ${supabaseFree.value}, with ${supabaseFree.qualifier}. That suits building, testing and simple sites. For client production apps we use Pro, ${supabasePro.value}, which isn't paused for inactivity and includes daily database backups.` },
       { question: "Is Supabase safe for customer data?", answer: `It can be, but the setup decides it. Supabase tells you who someone is; row-level security rules on each table decide which records they can see, and every table the browser can reach needs them. Admin keys stay on the server. Pro keeps daily database backups for 7 days; those backups don't include files uploaded to Supabase Storage, so plan for those separately. For health data, ${supabaseHipaa.value}; Supabase's pricing page lists HIPAA as a paid add-on on the Team plan, as of ${asOf("supabase-pro-price")}. Test permissions before launch by signing in as one customer and trying to open another customer's record.` },
       { question: "Can you build a Supabase backend or CRM for my business?", answer: "Yes. Our backend development service builds the database, the sign-in and permission rules, and a custom admin screen or CRM on top, in the same build. We build on Supabase's Free plan and move the project to Pro when it goes live, and the project can run on a Supabase account in your name." },
-      { question: "Do you only build on Supabase?", answer: "No. It's our usual choice because it's quick to set up and it's Postgres underneath, so your data isn't tied to one vendor. We also build on MongoDB or another database, or around an API your business already runs." },
-      { question: "Does Vercel replace a backend?", answer: "No. Vercel hosts your website and runs its server code. Your data still needs a database, and someone still has to decide who can sign in and what each person can see." },
+      { question: "Do you only build on Supabase?", answer: "No. Postgres helps with database portability, but moving a Supabase app also requires a plan for authentication, files, functions and configuration. We also build on MongoDB, other databases or an API your business already runs." },
+      { question: "Does Vercel replace a backend?", answer: "Vercel can run backend code and offers storage and database integrations. In our example Supabase holds application records. You still need to design persistent storage, access permissions, backups and the data passing through functions and logs." },
     ],
   },
   {
     ...byline, id: "product-catalog-website-without-cart", title: "Product Catalog Website Without a Cart: Take Quote Requests",
-    date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-08", eyebrow: "Custom websites / Quotes instead of checkout",
-    excerpt: "Selling custom or made-to-order products? You need a catalog and a quote form, not a cart. How we build one from a single product list, with a free example.",
+    date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-29", eyebrow: "Custom websites / Quotes instead of checkout",
+    excerpt: "Selling custom products that need a quote before checkout? Build a catalog and enquiry form from one product list, with our free working example.",
     category: "Engineering", readTime: "6 min", illustrationType: "code", cardStat: "1 list", cardStatLabel: "Menus, quote form and sitemap from one product list",
     faqs: [
       { question: "Can I have a product catalog website without a shopping cart?", answer: "Yes. Each product page ends in a quote form instead of an add-to-cart button, and the enquiry reaches you by email with the product already filled in. It suits custom or made-to-order products where the price depends on the job." },
@@ -74,15 +74,15 @@ export const stackGuidePosts: StackGuidePost[] = [
   },
   {
     ...byline, id: "website-monthly-running-cost", title: "How Much Does a Website Cost per Month? Our Stack Runs Under $50",
-    date: "Oct 8", published: "2026-10-08", lastModified: "2026-10-11", eyebrow: "Pricing / Monthly running costs",
+    date: "Oct 8", published: "2026-10-08", lastModified: "2026-10-29", eyebrow: "Pricing / Monthly running costs",
     excerpt: `A custom website with a content editor costs about $20 a month to run on our stack, or about $45 with a database and sign-in. Prices as of ${asOf("vercel-pro-price")}.`,
     category: "Pricing", readTime: "6 min", illustrationType: "hosting", cardStat: "$45", cardStatLabel: "A month for hosting, editor, email and database",
     faqs: [
       // The $20 and $45 totals are sums of the spec-facts values below. Re-add them if a price changes.
-      { question: "How much does it cost to run a website per month?", answer: `On our usual stack, about $20 a month for a custom website with a content editor: Vercel Pro hosting at ${vercelPro.value}, with Sanity and Resend on their free plans. Adding a Supabase database and sign-in, at ${supabasePro.value}, brings it to about $45. Prices as of ${asOf("vercel-pro-price")}. The domain is extra and paid yearly to your registrar.` },
+      { question: "How much does it cost to run a website per month?", answer: `On our usual stack, about $20 a month for a custom website with a content editor: Vercel Pro hosting at ${vercelPro.value}, with Sanity and Resend on their free plans. Adding a Supabase database and sign-in, at ${supabasePro.value}, brings it to about $45. Prices as of ${asOf("vercel-pro-price")}. This baseline assumes one deploying seat, one Micro database project and free CMS/email allowances. Domains, taxes, maintenance, file backups and excess usage are extra.` },
       { question: "Can I host a business website on Vercel for free?", answer: `No. Vercel's Hobby plan is ${vercelHobby.value}, but only ${vercelHobby.qualifier}. A business website is commercial, so it needs the Pro plan at ${vercelPro.value}.` },
       { question: "Do I have to pay for Supabase during the build?", answer: `No. We build on Supabase's Free plan and move the project to Pro, ${supabasePro.value}, when it goes live. Free projects are paused after a week of inactivity and have no included automatic backups, so we don't run client production apps on them.` },
-      { question: "Why did my hosting bill go up after the first year?", answer: `Shared hosts advertise first-term prices and renew at a higher rate. As of ${asOf("siteground-startup-renewal")}, SiteGround StartUp is ${sgIntro.value} ${sgIntro.qualifier} and renews at ${sgRenewal.value}, and Bluehost Starter is ${bhIntro.value} ${bhIntro.qualifier} and renews at ${bhRenewal.value}. Compare hosts by their renewal price and the length of the commitment.` },
+      { question: "Why did my hosting bill go up after the first year?", answer: `Shared hosts advertise first-term prices and renew at a higher rate. The SiteGround StartUp snapshot from ${asOf("siteground-startup-renewal")} shows ${sgIntro.value} ${sgIntro.qualifier}, renewing at ${sgRenewal.value}. The Bluehost Starter snapshot from ${asOf("bluehost-starter-intro")} shows ${bhIntro.value} ${bhIntro.qualifier}, renewing at ${bhRenewal.value}. These are dated offers; confirm current regional and checkout prices. Compare hosts by their renewal price and the length of the commitment.` },
       { question: "Who owns the domain?", answer: "You do. You buy it in your own name from a registrar. We've never bought a domain for a client, and most of our clients already owned theirs." },
       { question: "What happens to the hosting if I stop working with you?", answer: "On a maintenance or SEO package, hosting on our Vercel account is included if you want it. If you stop working with us, we move the site to a Vercel account in your name. We've done this for a client whose contract ended." },
     ],

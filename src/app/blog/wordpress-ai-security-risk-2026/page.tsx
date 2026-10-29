@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-23",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-29",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-ai-security-risk-2026")],
@@ -50,6 +50,7 @@ export const metadata: Metadata = {
 };
 
 const sources = [
+    { name: "WordPress 7.1.4 security release", url: "https://wordpress.org/news/2026/10/wordpress-7-1-4/" },
     {
         name: "AI Engine plugin listing and changelog",
         url: "https://wordpress.org/plugins/ai-engine/",
@@ -90,7 +91,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-ai-security-risk-2026"),
             description,
             datePublished: "2026-06-23",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-29",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -110,7 +111,6 @@ const articleSchema = {
                 { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],
-            wordCount: 2440,
             timeRequired: "PT12M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
@@ -238,6 +238,17 @@ export default function WordPressAiSecurityRiskPage() {
                             </div>
                         ))}
                     </div>
+
+                    <BlogHeader id="anthropic-core-reports">October update: Anthropic credited for core reports</BlogHeader>
+                    <BlogText>
+                        WordPress credits Anthropic for two reports in its{' '}
+                        <a href="https://wordpress.org/news/2026/10/wordpress-7-1-4/" className="text-cognac hover:underline">28 October 2026 security release</a>.
+                        These concern core privacy-removal requests and user logins, rather than the AI Engine plugin.
+                        The announcement names the reporter but does not describe the tools used or the time taken
+                        to find the issues. Our{' '}
+                        <Link href="/blog/wordpress-plugin-security-2026#wordpress-7-1-4" className="text-cognac hover:underline">core security update and checklist</Link>{' '}
+                        explains the maintenance action for site owners.
+                    </BlogText>
 
                     <BlogHeader id="what-changed">What AI and MCP change in WordPress</BlogHeader>
                     <BlogText>

@@ -1,0 +1,181 @@
+{
+  "reviewedOn": "2026-10-29",
+  "scope": "Editorial and factual review of the eight URLs individually reported as crawled but not indexed. This is separate from the nine discovered URLs reviewed earlier.",
+  "publicationStatus": "Local changes only. No commit, deployment or indexing request made by this review.",
+  "validation": {
+    "productionBuild": "Passed",
+    "typecheck": "Passed",
+    "eslint": "Passed with existing tmp directory excluded",
+    "publicClaims": "Passed",
+    "dates": "Passed; historical measurement dates preserved",
+    "structuredData": "Passed: 11 tests, 165 pages audited, no failures",
+    "metaDescriptions": "Passed: 164 prerendered descriptions within repository range",
+    "diffWhitespace": "Passed with CRLF-aware whitespace configuration"
+  },
+  "method": "Read repository page content, shared FAQs and evidence registries; compare volatile vendor and technical claims against official web documentation. Preserve historical measurement dates and distinguish corrections from newly launched features.",
+  "pages": [
+    {
+      "path": "/blog/core-web-vitals-explained",
+      "action": "Updated",
+      "changes": [
+        "Corrected overlapping threshold ranges.",
+        "Explained PageSpeed's insufficient-INP exception and the distinction between unavailable data and failure.",
+        "Removed unsupported ranking-frequency and deterministic tiebreaker language.",
+        "Clarified that INP replaced FID as a Core Web Vital, without claiming Google no longer collects FID anywhere."
+      ],
+      "sources": [
+        "https://developers.google.com/speed/docs/insights/v5/about",
+        "https://web.dev/articles/vitals",
+        "https://developers.google.com/search/docs/appearance/core-web-vitals",
+        "https://developers.google.com/search/docs/appearance/page-experience",
+        "https://support.google.com/webmasters/answer/9205520"
+      ],
+      "limits": "Historical Reddit anecdotes and their original engagement counts were not remeasured; they are not evidence for metric thresholds or ranking outcomes."
+    },
+    {
+      "path": "/blog/google-universal-commerce-protocol-what-it-means-for-your-store",
+      "action": "Updated",
+      "changes": [
+        "Distinguished checkout eligibility in US/Canada/Australia from the separate US rollout of the Merchant Center integration hub.",
+        "Added the documented direct API route for merchants without hub access.",
+        "Updated request-verification discussion to include mTLS without claiming it is mandatory for every route.",
+        "Added direct merchant, FAQ and authentication references to visible sources and Article citations."
+      ],
+      "sources": [
+        "https://support.google.com/merchants/answer/16837055",
+        "https://developers.google.com/merchant/ucp/guides/merchant-center/overview",
+        "https://developers.google.com/merchant/ucp/guides/overview",
+        "https://developers.google.com/merchant/ucp/faq",
+        "https://developers.google.com/merchant/ucp/guides/overview/authentication",
+        "https://github.com/Universal-Commerce-Protocol/ucp",
+        "https://blog.google/company-news/inside-google/message-ceo/nrf-2026-remarks/"
+      ],
+      "limits": "No merchant account eligibility tested. Merchant API updates endpoint was unavailable; the refreshed summary relies on accessible merchant guides rather than claiming to have reread that endpoint."
+    },
+    {
+      "path": "/blog/build-vs-buy-software-2026-cost-comparison",
+      "action": "Updated",
+      "changes": [
+        "Compared cumulative full costs on both sides, rather than full build cost against license-only cost.",
+        "Labelled adverse-scenario assumptions as illustrative rather than benchmarks.",
+        "Removed unsupported prevalence claims about failed purchases and software-stack concentration.",
+        "Qualified ownership and removed the implication that the founder-affiliated CRM demonstrates measured cost savings."
+      ],
+      "sources": [
+        "https://www.hubspot.com/pricing/marketing",
+        "https://www.salesforce.com/sales/pricing/"
+      ],
+      "limits": "A decision framework, not a vendor quote or financial forecast. No private invoices or CRM payback records audited."
+    },
+    {
+      "path": "/blog/saas-software-pricing-audit-2026",
+      "action": "Updated",
+      "changes": [
+        "Added Webflow's November 16 transition phase and renewal/billable-change conditions.",
+        "Specified US Microsoft 365 suites with Teams, avoiding ambiguity with Office 365 and no-Teams SKUs.",
+        "Explained Klaviyo active-profile eligibility, suppression and why a smaller count does not itself lower the bill.",
+        "Removed blanket assertion that vendors have no notice obligations."
+      ],
+      "sources": [
+        "https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates",
+        "https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-plans-and-pricing",
+        "https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026",
+        "https://help.klaviyo.com/hc/en-us/articles/33136281415451",
+        "https://help.shopify.com/en/manual/apps/uninstalling-apps",
+        "https://vercel.com/pricing",
+        "https://www.sanity.io/pricing"
+      ],
+      "limits": "Public offers and notices are not customer-specific renewal quotes. Existing dated registry snapshots remain labelled."
+    },
+    {
+      "path": "/blog/spending-more-on-ads-fewer-orders-tracking",
+      "action": "Updated",
+      "changes": [
+        "Replaced binary tracking-fault diagnosis with matching time zones, attribution windows, event definitions, channel scope and conversion-date reporting.",
+        "Clarified that real order declines and measurement faults can coexist.",
+        "Kept verified Shopify sunset dates but removed unverified assertions about every store's lost events and match-quality decline.",
+        "Acknowledged that custom and managed integrations both depend on outside platforms."
+      ],
+      "sources": [
+        "https://support.google.com/google-ads/answer/6270625",
+        "https://support.google.com/google-ads/answer/15712870",
+        "https://developers.google.com/tag-platform/security/guides/consent",
+        "https://shopify.dev/docs/storefronts/themes/architecture/layouts"
+      ],
+      "limits": "Meta announcement redirected to login and developer documentation returned HTTP 429. Existing April announcement attribution and historical first-party screenshots were retained, not described as independently reverified. A visible review note states this limitation. No advertising account tested."
+    },
+    {
+      "path": "/blog/cheap-web-developer",
+      "action": "Updated",
+      "changes": [
+        "Marked price buckets as illustrative rather than a market survey.",
+        "Removed categorical claims about remote/local rates and builders lacking accountability.",
+        "Acknowledged generator publishing and integration capabilities while retaining acceptance checks.",
+        "Rechecked WordPress.com annual display prices, removed renewal amounts not reliably exposed by the current page, and distinguished Squarespace XML export limitations.",
+        "Added official sources used by FAQs."
+      ],
+      "sources": [
+        "https://wordpress.com/pricing/",
+        "https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content",
+        "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes",
+        "https://developers.google.com/search/blog/2023/02/google-search-and-ai-content",
+        "https://www.w3.org/TR/WCAG22/",
+        "https://asvs.owasp.org/"
+      ],
+      "limits": "WordPress.com page returned unresolved renewal placeholders. No checkout completed. Company contract terms and historical project figures remain based on existing first-party records."
+    },
+    {
+      "path": "/work/enterprise-ops",
+      "action": "Updated",
+      "changes": [
+        "Qualified RLS coverage: ordinary user requests are subject to policies; privileged roles can bypass them.",
+        "Replaced an unsupported case-specific offline-sync assertion with scoped feasibility and an explicit evidence limitation.",
+        "Preserved dated project counts and founder-affiliated disclosure; added a visible Supabase reference."
+      ],
+      "sources": [
+        "https://supabase.com/docs/guides/database/postgres/row-level-security",
+        "src/data/case-study-facts.json",
+        "src/data/migration-projects.ts"
+      ],
+      "limits": "Private CRM repository and production database were not re-audited. No dated offline-sync test found in the local evidence registry. Historical project counts are not fresh production measurements."
+    },
+    {
+      "path": "/ai-info/team-and-company",
+      "action": "Updated",
+      "changes": [
+        "Removed the inference that absence from CrUX proves total traffic is below a threshold.",
+        "Explained sample and eligibility requirements, preserving the original observation dates.",
+        "Applied the same correction to shared company facts and llms.txt; checked crawler-policy copy against src/app/robots.ts."
+      ],
+      "sources": [
+        "https://developer.chrome.com/docs/crux/methodology",
+        "src/data/company-facts.ts",
+        "src/data/first-party-measurements.json",
+        "src/app/robots.ts"
+      ],
+      "limits": "No new CrUX, corporate-registry, testimonial or private formation-document verification. Historical statements remain dated, not certified afresh."
+    }
+  ],
+  "editorialFollowup": {
+    "date": "2026-10-29",
+    "changes": [
+      "Restored explicit recommendations on DIY delivery, build-versus-buy renewals and Core Web Vitals priorities without asserting unmeasured prevalence or ranking effects.",
+      "Restored the recorded-orders distinction and a one-sitting first-pass reconciliation; retained attribution and event-tracing checks.",
+      "Moved Meta re-verification process note out of the article header; original dated attribution remains in the body and limitations remain in this audit.",
+      "Removed SiteGround research-process note from the running-cost page; per-host snapshot dates, promotion qualifications and checkout guidance remain visible.",
+      "Split Enterprise Ops editorial date from the storefront record; visible date, schema and sitemap use the shared CRM date.",
+      "Ignored root tmp directory; no files deleted."
+    ],
+    "siteGroundResearchNote": "On 29 October 2026, separate SiteGround checks returned different promotional prices. The page retains its labelled 11 October snapshot. Hostinger Premium was rechecked on 29 October.",
+    "offlineSync": "Owner requested removal on 29 October 2026. Removed the entire offline-work FAQ from the shared array used by visible content and FAQ schema. No production test performed or offline-sync capability claimed.",
+    "validation": {
+      "productionBuildAndTypeScript": "Passed",
+      "lint": "Passed; tmp now excluded in ESLint configuration",
+      "publicClaimsAndDates": "Passed; existing historical date warnings remain",
+      "structuredData": "11 tests passed; 165 pages audited with no failures",
+      "metaDescriptions": "164 descriptions passed",
+      "renderedContent": "CRM and storefront dates checked separately; one-sitting checklist present; research-process notes absent",
+      "diffWhitespace": "Passed with CRLF-aware configuration"
+    }
+  }
+}

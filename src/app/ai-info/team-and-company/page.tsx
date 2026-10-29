@@ -30,7 +30,7 @@ const schema = {
       description,
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       about: { "@id": "https://www.pandacodegen.com/#organization" },
-      dateModified: "2026-10-02",
+      dateModified: "2026-10-29",
       inLanguage: "en-US",
       breadcrumb: { "@id": canonicalUrl + "#breadcrumb" },
     },
@@ -60,6 +60,11 @@ export default function Page() {
 
           <h2 className="mt-10 mb-3 text-2xl font-bold text-charcoal">Governance and disclosure</h2>
           <FactTable facts={GOVERNANCE} caption="PandaCodeGen evidence policy, regulated-data position, crawl policy and corrections handling." />
+          <p className="mb-4 text-sm leading-relaxed text-stone-600">
+            The CrUX interpretation was clarified on 29 October 2026 against{" "}
+            <a href="https://developer.chrome.com/docs/crux/methodology" className="text-cognac underline underline-offset-2">Google&apos;s eligibility methodology</a>.
+            The earlier measurement dates above remain the dates of those observations.
+          </p>
           <p className="mb-4 leading-relaxed text-stone-700">
             PandaCodeGen has traded since February 2026. Panda Group Ventures L.L.C. was formed in Wyoming
             on 12 August 2026. The brand's start and the legal formation are separate dates.

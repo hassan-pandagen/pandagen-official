@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-21",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-29",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/google-universal-commerce-protocol-what-it-means-for-your-store")],
@@ -50,6 +50,11 @@ export const metadata: Metadata = {
 };
 
 const sources = [
+    { name: "Google: UCP checkout eligibility and participating markets", url: "https://support.google.com/merchants/answer/16837055" },
+    { name: "Google: Merchant Center UCP integration hub rollout", url: "https://developers.google.com/merchant/ucp/guides/merchant-center/overview" },
+    { name: "Google: direct API integration", url: "https://developers.google.com/merchant/ucp/guides/overview" },
+    { name: "Google: UCP FAQ", url: "https://developers.google.com/merchant/ucp/faq" },
+    { name: "Google: request authentication and mTLS", url: "https://developers.google.com/merchant/ucp/guides/overview/authentication" },
     {
         name: "Universal Commerce Protocol specification and releases",
         url: "https://github.com/Universal-Commerce-Protocol/ucp",
@@ -70,7 +75,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/google-universal-commerce-protocol-what-it-means-for-your-store"),
             description,
             datePublished: "2026-02-21",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-29",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -144,13 +149,10 @@ export default function UniversalCommerceProtocolGuide() {
                         </p>
                         {/* 8 Oct 2026: this note said Universal Cart "launched in May 2026" across Search, Gemini, YouTube and Gmail, and that checkout was limited to US merchants with expansion undated. Google's 19 May 2026 post announced Universal Cart rolling out on Search and the Gemini app in the US first, with YouTube and Gmail to follow. Google's Merchant Center help (answer 16837055) now covers products in the US, Canada and Australia, still for select merchants, and Google's 19 May post names the UK as later. */}
                         <p className="mt-4 text-xs text-stone-500">
-                            Availability reviewed July 24, 2026 against Google&apos;s current merchant guide, FAQ,
-                            Merchant API updates, and the open UCP repository, and re-checked on October 8, 2026.
-                            Two things had moved and neither changes the answer above: Google announced Universal Cart
-                            in May 2026, with cross-retailer support rolling out on Search and the Gemini app in the US
-                            first and YouTube and Gmail to follow, and UCP-powered checkout now covers the US, Canada and
-                            Australia but is still limited to select merchants through an early access programme, with
-                            the UK described as coming later.
+                            Reviewed October 29, 2026. Google&apos;s checkout eligibility page covers participating products
+                            in the US, Canada and Australia. Its separate Merchant Center integration hub is rolling out
+                            in the US, with Australia and Canada to follow. These are different rollout scopes;
+                            check the integration path available in your own account.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -167,18 +169,18 @@ export default function UniversalCommerceProtocolGuide() {
                     />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
-                        <h2 className="mb-4 text-2xl font-bold text-charcoal">Status as of October 8, 2026</h2>
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">Status as of October 29, 2026</h2>
                         <p className="mb-4 leading-relaxed text-stone-700">
-                            The protocol is real and published; your access to it probably is not yet. Those two facts
+                            The protocol is published; access to Google&apos;s checkout experience still requires eligibility. Those two facts
                             get collapsed in most coverage, and the difference is what decides whether any of this is
                             actionable for your store this quarter. Five points, read from the open UCP repository and
-                            from Google&apos;s merchant guide, FAQ and Merchant API updates, first on July 24, 2026 and again on October 8, 2026.
+                            from Google&apos;s merchant guide, FAQ and integration hub documentation, checked October 29, 2026.
                         </p>
                         <BlogList
                             items={[
                                 "UCP is an open-source protocol. The specification is published, there are working examples, and it ships in versioned releases.",
                                 "Google says UCP adoption can enable agentic actions on AI Mode in Search and Gemini, starting with direct buying.",
-                                "Google's merchant page still directs merchants to join a waitlist; access and approval are not universal.",
+                                "Google limits checkout to select merchants and offers an interest form. Merchants without the integration hub are directed to the direct API path; approval is still required.",
                                 // 8 Oct 2026: said embedded checkout was for "specific approved merchants". Google's embedded checkout guide now presents it as the path for products whose checkout logic the native API can't support; approval applies to every integration (guides/overview).
                                 "Google documents native checkout, plus an embedded path for products whose checkout logic the native API can't handle. Every integration still needs Google's approval before it goes live.",
                                 "You can still be blocked by any one of these: the state of your Merchant Center data, whether your payment provider supports it, whether you are eligible, which country you sell from, and what you sell.",
@@ -265,14 +267,14 @@ export default function UniversalCommerceProtocolGuide() {
                         which of the four they mean and what they are delivering in each.
                     </BlogText>
 
-                    <BlogHeader>What Google documents, as read on October 8, 2026</BlogHeader>
+                    <BlogHeader>What Google documents, as read on October 29, 2026</BlogHeader>
                     <BlogText>
-                        Google has published a merchant guide, an FAQ and a set of Merchant API updates covering UCP,
+                        Google has published merchant guides, an FAQ and an integration hub covering UCP,
                         and five things in them decide whether this is relevant to you. The most consequential is the
                         liability one: in the integration model Google describes, you stay Merchant of Record. The rest
                         set out which surfaces are in scope, which checkout paths exist, what Merchant Center has to
                         contain, and which capabilities are gated behind approval. Every item below was read from those
-                        documents on July 24, 2026 and re-read on October 8, 2026, and the access position in particular can change without notice.
+                        documents during the October 29, 2026 review, and the access position in particular can change without notice.
                     </BlogText>
                     <BlogList
                         items={[
@@ -281,7 +283,7 @@ export default function UniversalCommerceProtocolGuide() {
                             // 8 Oct 2026: said native was "the default" and embedded was for "specific approved merchants". Google's current guides list native and embedded as integration paths and describe embedded as the route for products needing logic (customizations, for example) the native API can't support.
                             "Google describes a native checkout integration and an embedded checkout option for products whose checkout needs logic, such as customizations, that the native API can't support.",
                             "The FAQ says Merchant Center remains central and product feeds, brand assets, return policies and business contact information must be complete and current.",
-                            "Google's Merchant API updates include UCP checkout eligibility reporting contexts and some capabilities that are allowlisted or require a Google representative.",
+                            "The Merchant Center hub lets participating merchants configure and test integrations. Product checkout eligibility and access still need to be confirmed for the specific account.",
                         ]}
                     />
                     <InsightBox variant="warning" label="Availability is not universal">
@@ -386,12 +388,12 @@ export default function UniversalCommerceProtocolGuide() {
 
                     <BlogHeader>Discovery and request verification</BlogHeader>
                     <BlogText>
-                        The open standard uses a well-known profile to declare capabilities. Google&apos;s FAQ, read
-                        July 24, 2026 and again on October 8, 2026, also
-                        describes signals for identifying UCP traffic and recommends authenticating requests using the
-                        provided OAuth bearer token or other secure signatures instead of relying only on geographic IP
-                        blocking. Use the current implementation guide, validate issuer and audience where applicable,
-                        rotate credentials, and reject unexpected capabilities and payloads.
+                        The open standard uses a well-known profile to declare capabilities. Google&apos;s current
+                        authentication guide describes mutual TLS (mTLS) and request verification. Its FAQ also
+                        references OAuth bearer tokens or secure signatures supplied for machine-to-machine authentication.
+                        Follow the requirements for your integration path. A User-Agent string alone does not authenticate
+                        a caller, and Google says its requests cannot be restricted to a single origin country.
+                        Validate credentials, rotate secrets and reject unexpected capabilities and payloads.
                     </BlogText>
 
                     <BlogHeader>Measure business impact without inventing it</BlogHeader>

@@ -25,6 +25,10 @@ export const MIGRATION_PROJECT_DETAILS = {
     // Owner supplied a repository folder count on 22 Oct 2026, not a live deployment audit.
     edgeFunctionsRecord: "The owner reported 47 Edge Function implementations in the CRM repository on 22 October 2026, excluding the _shared helper folder. This is a source-code count, not a verified count of functions deployed live.",
   },
+  // CRM case-study editorial date, independent of the storefront and measured project facts.
+  enterpriseOps: {
+    contentUpdatedOn: "2026-10-29",
+  },
   ladies4Jesus: {
     status: "Live",
     summary: "A WordPress community website rebuilt with Next.js and Sanity, so the owner can publish content and moderate visitor submissions without a developer.",

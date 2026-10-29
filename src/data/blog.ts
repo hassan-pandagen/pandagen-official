@@ -62,14 +62,14 @@ export const blogPosts: BlogPost[] = [
       role: "Co-founder, Lead Engineer",
       featured: false,
       illustrationType: "ranking",
-      lastModified: "2026-10-04",
+      lastModified: "2026-10-29",
       faqs: [
         { question: "Is Wix bad for SEO?", answer: "No. Wix renders pages on the server, so search engines and AI crawlers get the content in the HTML, and it lets you edit titles, meta descriptions, slugs, canonical tags, robots.txt, 301 redirects and JSON-LD structured data. Its limits are specific: blog posts keep a prefix you can rename but not remove, a site holds up to 5,000 redirects, and each page takes up to five structured data markups. Check those against what you publish before blaming the platform." },
         { question: "Does Google rank Wix sites lower than other websites?", answer: "No. In a 2022 Google Search Central video, Google's John Mueller said Google's systems don't look for any particular content management system to treat it differently, and focus on the final page rather than how it was made. He named Wix among the platforms that can create pages that work well in search." },
-        { question: "Can you remove /post/ from Wix blog URLs?", answer: "No. Wix's Help Center says the post prefix can be renamed but not removed entirely, and the blog and post prefixes can't share a name, so an address like /blog/post-title isn't possible. Store product pages are different: Wix says you can remove the product-page prefix in SEO Settings." },
+        { question: "Can you remove /post/ from Wix blog URLs?", answer: "You can rename the post prefix, but cannot remove it entirely. The blog-feed and post prefixes must be different, so keeping the feed at /blog and posts under that same prefix is not supported. Check both prefixes before mapping a migration; this does not mean every URL containing /blog/ must change." },
         { question: "Do Wix sites pass Core Web Vitals?", answer: `On average, more often than WordPress sites. ${finding("almanac-2025-cms-cwv").statement} (HTTP Archive, Web Almanac 2025). Platform averages don't predict any one site, so check your own pages in Wix's Site Speed dashboard and in Google Search Console.` },
-        { question: "How many redirects can a Wix site have?", answer: "Up to 5,000 per site, according to Wix's Help Center, imported up to 500 at a time from a CSV file. 301 redirects only work on a custom domain, you can't redirect from the homepage, and changing a blog post's slug doesn't create a redirect automatically the way it does for ordinary pages." },
-        { question: "Should I move off Wix to improve my SEO?", answer: "Only if a specific Wix limit blocks something you need, such as a blog at /blog/post-title, more than 5,000 redirects, or structured data beyond five markups a page. Run the seven checks in this guide first. Each one either finds a setting you can fix inside Wix or rules that cause out." },
+        { question: "How many redirects can a Wix site have?", answer: "Up to 5,000 per site, according to Wix's Help Center, imported up to 500 at a time from a CSV file. 301 redirects only work on a custom domain. The URL Redirect Manager cannot redirect the homepage, but Wix documents domain-to-domain redirection for that case. Blog slug changes need manual redirects." },
+        { question: "Should I move off Wix to improve my SEO?", answer: "Only if a specific Wix limit blocks something you need, such as a required feed-and-post URL structure Wix cannot preserve, more than 5,000 redirects, or structured data beyond five markups a page. Run the seven checks in this guide first. Each one either finds a setting you can fix inside Wix or rules that cause out." },
       ],
     },
     {
@@ -85,13 +85,13 @@ export const blogPosts: BlogPost[] = [
       role: "Co-founder, Lead Engineer",
       featured: false,
       illustrationType: "code",
-      lastModified: "2026-10-04",
+      lastModified: "2026-10-29",
       faqs: [
         { question: "Is GoHighLevel or WordPress better for a business website?", answer: "For funnels and landing pages for paid traffic, HighLevel's builder is the simpler choice: it's included in every HighLevel plan, and its forms, calendars and attribution need no connector. For a content-led site that has to rank, WordPress connected to HighLevel gives more control over URLs, the blog and the sitemap, at the cost of hosting and updates someone has to own. HighLevel stays the CRM either way." },
         { question: "Can I use WordPress with GoHighLevel?", answer: "Yes. HighLevel publishes a free LeadConnector plugin on WordPress.org that adds HighLevel forms, surveys, calendars, chat and review widgets to WordPress pages, and can import funnel steps as pages. You can also paste a form or calendar embed code into a Custom HTML block, or track your existing WordPress forms with HighLevel's External Tracking script." },
         { question: "Does GoHighLevel include WordPress hosting?", answer: `No. HighLevel sells WordPress hosting as an optional add-on, starting at ${spec("gohighlevel-wordpress-hosting-price").value} as of ${asOf("gohighlevel-wordpress-hosting-price")}, and its help center says all WordPress hosting plans are in addition to a HighLevel plan. You can also host WordPress anywhere else and connect it to HighLevel the same way.` },
         { question: "Will my HighLevel workflows still run if my website is on WordPress?", answer: "Yes, as long as leads still reach HighLevel: through a HighLevel form, calendar or survey embedded in WordPress, or through a form HighLevel's External Tracking script supports, such as Gravity Forms, WPForms or Contact Form 7. HighLevel says External Tracking doesn't support forms embedded through iframes or third-party widgets. Submit a test lead and check the workflow fires before launch." },
-        { question: "Is GoHighLevel or WordPress better for SEO?", answer: "WordPress gives you more control. Its core publishes a sitemap automatically and lets you choose your permalink structure, and its plugins cover most other SEO needs. HighLevel covers titles, meta descriptions, a schema generator and 301 redirects, but its sitemap is generated by hand, its blog uses fixed /b/ and /post/ paths, and we found no HighLevel help article on editing robots.txt for builder sites." },
+        { question: "Is GoHighLevel or WordPress better for SEO?", answer: "WordPress gives you more control. Its core publishes a sitemap automatically and lets you choose your permalink structure, and its plugins cover most other SEO needs. HighLevel documents page-level SEO tools, a sitemap generation workflow, blog URL constraints and an llms.txt editor. Check the live robots.txt, sitemap and indexing settings on your own domain; neither platform guarantees rankings or AI citations." },
         { question: "Which is faster, GoHighLevel or WordPress?", answer: "Neither has a fixed speed. HighLevel says a well-optimized HighLevel page typically scores above 80 on mobile and above 95 on desktop in PageSpeed tests. A WordPress site's speed depends on its host, theme and plugins. Measure the same page under the same test on whichever platform you are considering." },
       ],
     },
@@ -419,7 +419,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "conversion",
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-29",
     faqs: [
       {
         question: "Why are my ad costs going up but my orders staying flat?",
@@ -610,7 +610,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "code",
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-29",
     faqs: [
       { question: "Should I build or buy software in 2026?", answer: "Buy is usually the stronger baseline when the workflow is common, the current product meets the requirements, time-to-value matters, and vendor limits are acceptable. Build becomes defensible when a stable, differentiated workflow, integration, control, portability, or cost requirement cannot be met responsibly by current products. Compare both options from one requirements list, operating model, risk register, and time horizon." },
       { question: "Is it cheaper to build a custom CRM than pay for HubSpot or Salesforce?", answer: "That depends on the workflow, and the comparison is usually set up wrong before the numbers are even gathered. You are weighing a licence fee against a build cost, when the real comparison is against building plus running it forever: the support, the integrations, the person who fixes it when it breaks at month thirty. There is no common outcome to quote you; run the comparison per workflow rather than against the whole bill." },
@@ -633,7 +633,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "saas",
-      lastModified: "2026-10-20",
+      lastModified: "2026-10-29",
       faqs: [
         { question: "How much is the average business spending on SaaS in 2026?", answer: "A general benchmark does not establish your stack cost. Reconcile at least twelve months of card, bank, accounts-payable and app-marketplace charges, then map each item to the exact account, SKU, owner, usage, contract and renewal." },
         { question: "What is the 2026 SaaS inflation rate?", answer: "This audit does not apply one market-wide rate to every contract. Vendor, SKU, region, billing channel, renewal, discount and billed quantity differ. Use the official change notice and the account's renewal quote and invoice." },
@@ -908,12 +908,12 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-10-09",
+    lastModified: "2026-10-29",
     faqs: [
       { question: "Is hiring a cheap web developer safe for my business website?", answer: "It can be, and the price is not what tells you. What tells you is whether you can point at a deliverable when each payment falls due, whether the contract says who owns the code and the accounts, and whether the developer can show you finished work rather than a capability list. Cheap and careful exist together; cheap and undefined do not." },
             {
                 question: "Should I use an AI website builder instead of hiring a cheap web developer?",
-                answer: "It depends on what has to be true after launch day. An AI generator reaches a draft quickly and leaves you the content, the forms, the analytics, the redirects from your old addresses and the question of whether search engines can read the output, which is where the time actually goes. Hire someone when existing search traffic has to survive, when money changes hands, or when data has to reach a system you already run. If none of those apply, a generator or a website builder is very likely enough and hiring anybody is the expensive option.",
+                answer: "Use a builder when its supported features meet your requirements and your team can operate it. AI tools may assist with content, code, integrations and publishing, but test the result rather than assuming those jobs are finished. Hire help for the parts you cannot reliably deliver, including migration, accessibility, integrations or ongoing support. Include subscription and hosting costs in either comparison.",
             },
       { question: "Can I get a custom-coded website on a small budget?", answer: "Possibly, when the page and feature inventory is small and content, integrations, migration, data, security, compliance, and review needs are controlled. PandaCodeGen's $1,500, $3,500, and $5,000 tiers are planning anchors only. The accepted proposal or SOW defines the actual deliverables, exclusions, tests, vendor costs, support, ownership, and remedy." },
       { question: "How long does a cheap web developer take to build a complete website?", answer: "Ask for a schedule with named dependencies rather than a duration. A quote that says six weeks without saying what it needs from you and by when is not a schedule, it is a hope. The useful version names when content is due, who approves what, and what happens to the date when a dependency slips." },
@@ -922,7 +922,7 @@ export const blogPosts: BlogPost[] = [
       { question: "Should I hire a cheap web developer overseas or locally?", answer: "Location alone does not determine quality, cost, or communication. Compare legal counterparty, time-zone overlap, language, response expectations, security practices, payment method, insurance where needed, data location, dispute terms, portfolio evidence, and the named people doing the work. Use the same due-diligence standard for local and remote vendors." },
       { question: "What is the difference between a cheap web developer and a website builder?", answer: "A developer sells scoped labor and deliverables; a website builder licenses a managed platform and editor. Either path may still involve templates, subscriptions, custom code, hosting, support, and vendor limits. Compare the actual output, accounts, export path, ownership and licenses, security duties, performance evidence, accessibility, maintenance, and total cost." },
       { question: "Can ChatGPT build me a website?", answer: "An AI assistant can produce markup, styling and component code, and that code still has to be hosted, connected to a domain, tested, secured and maintained by somebody. Decide who holds the hosting, domain, repository and analytics accounts, who is accountable when a form stops delivering, and what the acceptance test is, because those questions are identical whether a person or a model wrote the code. On the content side, Google's own guidance states that using automation including AI generation is not itself a violation, but producing content primarily to manipulate search rankings is a spam-policy violation, and it recommends disclosure where a reader would reasonably ask how the page was made." },
-      { question: "Who is the cheapest website builder?", answer: "The cheapest headline plan and the cheapest outcome are rarely the same plan, so read each vendor's own pricing page rather than a comparison article, then price the exit as well as the entry. WordPress.com, for example, publishes a free tier that does not include a custom domain, with its Personal plan at $4 per month billed annually, renewing at $5, and its Business plan at $25 per month billed annually, renewing at $28, checked October 8, 2026. On the exit side, Squarespace's own export documentation lists content that does not export, including index, portfolio and store pages, custom CSS and style settings. A builder that is cheap to enter and expensive to leave is not cheap." },
+      { question: "Who is the cheapest website builder?", answer: "Compare the required features, billing term, renewal and exit costs. Checked October 29, 2026, WordPress.com displays Personal at US$4 per month and Business at US$25 per month with annual billing. Confirm the renewal total, taxes and domain renewal at checkout; the public page did not expose a reliable renewal figure in this review. Squarespace's WordPress XML export omits several page types, including store and portfolio pages, plus style settings and custom CSS. Check separate product-export options before treating that as a complete exit inventory." },
     ]
   },
   {
@@ -1232,12 +1232,12 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'speed',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-29",
     faqs: [
       { question: "What are Core Web Vitals in plain English?", answer: "Core Web Vitals are three field metrics for real-user loading performance, responsiveness, and visual stability: LCP, INP, and CLS. They help identify experience problems but do not calculate a guaranteed ranking, conversion, or revenue outcome." },
       { question: "Why do Core Web Vitals matter for my business?", answer: "They measure parts of the experience visitors receive and contribute to Google's broader page-experience systems. Their commercial importance depends on the affected routes, audience, funnel, and first-party data. A pass does not guarantee rankings or revenue." },
       { question: "How do I check my Core Web Vitals scores?", answer: "Use PageSpeed Insights and the Search Console Core Web Vitals report for available CrUX field data. Use Lighthouse and browser performance tools to reproduce and debug issues. Record URL, device, network, consent, page state, tool version, and test date so results are comparable." },
-      { question: "What are good Core Web Vitals scores?", answer: "Google's good field thresholds are LCP within 2.5 seconds, INP of 200 milliseconds or less, and CLS of 0.1 or less, evaluated at the 75th percentile separately for mobile and desktop. Passing supports page experience but does not reveal a fixed ranking, traffic, conversion, or revenue outcome." },
+      { question: "What are good Core Web Vitals scores?", answer: "Google's good field thresholds are LCP within 2.5 seconds, INP of 200 milliseconds or less, and CLS of 0.1 or less, evaluated at the 75th percentile separately for mobile and desktop. When all three have enough data, each must be good to pass. PageSpeed can pass on good LCP and CLS alone if INP has insufficient samples; missing LCP or CLS prevents assessment. A pass does not guarantee rankings or revenue." },
       { question: "Why is my website failing Core Web Vitals even after optimization?", answer: "Field data reflects a rolling population rather than one new lab run. Older visits, untested templates, mobile devices, third-party scripts, consent states, apps, plugins, or insufficient URL-level data may explain the difference. Verify the evidence source and reproduce the affected route before choosing the next fix." },
       { question: "How much can improving Core Web Vitals increase revenue?", answer: "There is no universal percentage. Measure the site's dated funnel, traffic quality, device mix, conversion definition, value, margins, releases, and concurrent changes. Published case studies can inform a hypothesis, but they are not a forecast for another property." }
     ]
@@ -1862,7 +1862,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'code',
-    lastModified: "2026-10-09",
+    lastModified: "2026-10-29",
     faqs: [
       { question: "Why does PandaCodeGen choose Next.js for some migrations?", answer: "It can provide deliberate rendering, routing, data and deployment control when those capabilities match the brief. The decision follows measurable requirements and operating ownership. It is not based on a claim that every Next.js site is fast or every WordPress site is slow." },
       { question: "When is WordPress the better choice?", answer: "WordPress can be the better fit when its editing workflow, ecosystem and maintained extensions serve the required capabilities and the team can operate updates, security and performance. Repairing a suitable implementation may be lower risk than migrating." },
@@ -1908,7 +1908,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'aicommerce',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-29",
     faqs: [
       {
         question: "What is Google's Universal Commerce Protocol (UCP)?",
@@ -1961,7 +1961,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'security',
-    lastModified: "2026-10-27",
+    lastModified: "2026-10-29",
     faqs: [
       { question: "What is CVE-2026-32475 in Elementor Pro?", answer: "An unauthenticated arbitrary file upload in Elementor Pro, scored 9.0 on its CVE record and 9.8 by Wordfence, affecting versions up to and including 4.2.1 and fixed in 4.2.2. A site is reachable only if it has a published Form widget with at least one File Upload field not marked as required, which is the default. The submission is sent as an array where the first element is empty and the second carries a PHP payload, which bypasses validation; the file lands in /wp-content/uploads/elementor/forms/ under a random name with the attacker-supplied .php extension and can then be requested directly. Patchstack and Wordfence published it on 19 August 2026, the day Elementor released 4.2.2, and exploitation began the same day. By 2 September Wordfence had blocked more than 190,000 attempts, most of them between 19 and 23 August. Wordfence puts Elementor Pro at more than six million installations. Checked 8 October 2026." },
       { question: "What is CVE-2026-14894 in Super Forms?", answer: "An unauthenticated arbitrary file upload in the Super Forms drag and drop form builder, scored CVSS 9.8, affecting versions up to and including 6.3.313 and fixed in 6.3.314. A public AJAX endpoint performed neither file-type validation nor a capability check, so an unauthenticated attacker could write an executable PHP file and reach remote code execution. Super Forms 6.3.314 shipped on 8 July 2026 and Wordfence published the advisory on 9 July. Attacks began on 14 July and were heaviest between 18 and 25 August, peaking above 40,000 requests in a single day, with more than 250,000 attempts blocked. Checked 8 October 2026." },
@@ -1987,7 +1987,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'security',
-    lastModified: "2026-10-08",
+    lastModified: "2026-10-29",
     faqs: [
       {
         question: "What are WordPress Abilities and the MCP Adapter?",

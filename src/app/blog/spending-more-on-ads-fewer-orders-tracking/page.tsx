@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-04",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-10-29",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/spending-more-on-ads-fewer-orders-tracking")],
@@ -54,6 +54,8 @@ export const metadata: Metadata = {
 };
 
 const sources = [
+    { name: "Google Ads: conversion columns, attribution and conversion-time reporting", url: "https://support.google.com/google-ads/answer/6270625" },
+    { name: "Google: default and updated consent states", url: "https://developers.google.com/tag-platform/security/guides/consent" },
     // 8 Oct 2026: the old link pointed at the Messenger Help Center copy of this article. Same
     // article id on the Business Help Center, titled "Set up and install the Meta Pixel".
     {
@@ -96,7 +98,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/spending-more-on-ads-fewer-orders-tracking"),
             description,
             datePublished: "2026-06-04",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-29",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -130,7 +132,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-04",
-            dateModified: "2026-10-08",
+            dateModified: "2026-10-29",
             inLanguage: "en-US",
         },
         {
@@ -166,12 +168,12 @@ export default function SpendingMoreOnAdsTrackingPage() {
                             Spending More on Ads but Getting Fewer Orders? <span className="italic text-cognac">Audit Tracking</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Tracking can be incomplete, duplicated or misattributed, but it is not the automatic cause
-                            of higher acquisition cost. Reconcile business outcomes with event delivery, consent and
-                            platform reporting before changing campaigns or promising that server events will fix them.
+                            Are you getting fewer orders, or fewer recorded orders in the ad dashboard? Start with your
+                            store and payment records. Our recommendation: reconcile the sales you actually made
+                            before spending more on ads or paying someone to rebuild the tracking.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed October 8, 2026 against current Meta and Google guidance.
+                            Updated October 29, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -210,7 +212,7 @@ export default function SpendingMoreOnAdsTrackingPage() {
 
                     <BlogHeader>1. Diagnose the business result before the tracking stack</BlogHeader>
                     <BlogText>
-                        A lower platform-reported conversion count can reflect fewer orders, a measurement gap, an attribution change, or more than one at once. Do not treat the ad dashboard as the system of record for fulfilled commerce. Two things in particular are worth ruling out before anyone quotes you for tracking work: the auction moved, and the creative fatigued. Either can raise your cost per order while your account, your site and your measurement all sit unchanged.
+                        Fewer recorded orders is a different problem from fewer orders. Your store tells you what customers bought; the ad platform tells you which conversions it attributes to advertising. Start by comparing the two on matching terms. That gives you a useful direction for the investigation before you touch the campaign.
                     </BlogText>
                     <BlogList
                         items={[
@@ -222,25 +224,21 @@ export default function SpendingMoreOnAdsTrackingPage() {
                         ]}
                     />
                     <InsightBox variant="info">
-                        <strong>The test that splits this in one sitting.</strong> Count the orders in your own system
-                        of record (the store admin, the ERP, the payment processor) for an exact date range, then
-                        compare that count against what the ad platform reports as conversions for the same range and
-                        the same campaigns. If real orders held steady while platform-reported conversions fell,{" "}
-                        <strong>you have fewer recorded orders, not fewer orders</strong>, and the problem is
-                        measurement. If real orders genuinely fell, the tracking stack is not your first problem and
-                        nothing on the rest of this page will fix it. Run this before paying anyone to touch your
-                        pixel, because the two answers send you to completely different work.
+                        <strong>A first-pass check you can do in one sitting.</strong> Open your store or payment report
+                        beside the ad dashboard. Choose two equal, completed periods with enough time for reporting to settle,
+                        align time zones and compare paid orders and revenue after refunds. In the ad report, check
+                        conversion-date reporting, the attribution window and counting settings. Keep total store orders
+                        separate from ad-attributed orders. If sales hold steady while reported conversions fall, investigate
+                        attribution, channel mix and event delivery. If sales fall too, inspect the buying journey and campaign
+                        performance alongside tracking. This check tells you where to investigate; trace individual events
+                        next to confirm a delivery fault.
                     </InsightBox>
 
                     <BlogText>
-                        That distinction is missing from most advice on this symptom. The usual explanations{" "}
-                        (<strong>audience saturation</strong>, creative fatigue, broad or colder{" "}
-                        <strong>targeting</strong> as budget rises, and disrupting the{" "}
-                        <strong>learning phase</strong> by scaling too fast) are all real, all common, and all
-                        assume the orders genuinely are not happening. They are the right answers to a demand problem.
-                        None of them can explain a case where the orders arrived, the money cleared, and the platform
-                        simply never heard about it. That case looks identical from the ad dashboard, and it is the
-                        one this page is about.
+                        Google Ads documents separate conversion-time columns for comparisons with your own records.
+                        Its standard conversion reporting can use the date of the ad interaction, while your store records
+                        the purchase date. Align those views before treating a difference as missing events. Then trace
+                        individual eligible events through delivery, receipt and attribution.
                     </BlogText>
 
                     <BlogText>
@@ -254,9 +252,8 @@ export default function SpendingMoreOnAdsTrackingPage() {
                         neither is fixed by better measurement.
                     </BlogText>
                     <BlogText>
-                        A lower platform-reported conversion count can reflect fewer orders, a measurement gap, an
-                        attribution change or more than one at once. Do not treat the ad dashboard as the system of
-                        record for fulfilled commerce. For the event-path side of the same investigation, work through{" "}
+                        Once you have reconciled the reports, follow a known purchase from the store through event
+                        delivery and platform receipt. For that part of the investigation, work through{" "}
                         <Link href="/blog/fix-meta-ad-tracking-2026" className="text-cognac hover:underline font-medium">diagnosing a Meta tracking data path</Link>.
                     </BlogText>
 
@@ -436,29 +433,21 @@ export default function SpendingMoreOnAdsTrackingPage() {
 
                     <BlogHeader>Why bolt-on tracking keeps breaking</BlogHeader>
                     <BlogText>
-                        There is a pattern worth recognizing, because it decides whether you are buying a fix or renting
-                        one. When tracking lives in an app or a tag layered on top of a platform you do not control, a
-                        change to that platform can take your measurement with it. Shopify&apos;s removal of
-                        checkout.liquid is the clearest recent example: stores that had been passing customer details to
-                        their tracking scripts from those pages stopped passing them, match quality fell, and nobody at
-                        those businesses had touched anything. Shopify&apos;s own documentation states it plainly:
-                        &ldquo;Script tags were sunset on those pages on August 28, 2025 for Plus stores, and are sunset
-                        for non-Plus stores on August 26, 2026.&rdquo;
+                        Shopify documents the sunset of script tags on Thank you and Order status pages: August 28,
+                        2025 for Plus stores and August 26, 2026 for non-Plus stores. An integration that depended
+                        on those tags needs a supported replacement. The deadline alone does not establish that a
+                        particular store lost events or that its match quality fell.
                     </BlogText>
                     <InsightBox variant="warning" label="This sunset happened on 26 August 2026">
-                        That non-Plus date was <strong>26 August 2026</strong> and it has passed. If any of your Meta,
-                        Google or analytics measurement still ran through a script tag on the Thank you or Order status
-                        pages, it has already stopped, and nothing at your business will have changed to explain it.
-                        That makes this the first thing to rule out if your numbers moved in September: open Shopify
-                        admin, check what is still installed on those pages, and move it now rather than spending the
-                        week diagnosing a platform change as a campaign problem.
+                        That non-Plus deadline has passed. Check whether your store previously depended on these tags
+                        and whether its integration was migrated. Test a permitted purchase through the replacement
+                        and check delivery, value and deduplication. Supported integrations may already have handled
+                        the change; do not infer a fault from the platform name or deadline alone.
                     </InsightBox>
                     <BlogText>
-                        This is not an argument that tracking apps are bad. Most of them do what they say. It is an
-                        argument about where the thing sits. An app treats the symptom perfectly well while the
-                        underlying condition, that you do not control the layer your measurement depends on, stays
-                        exactly as it was. That is worth knowing before you choose between renting the fix and owning it,
-                        and it is a different question from whether your tracking is currently broken.
+                        Both managed and custom integrations depend on external APIs and platform changes. Compare
+                        supported events, release monitoring and who maintains the connection. Owning the integration
+                        code gives you control over that code, not control over Shopify, Meta or Google.
                     </BlogText>
 
                     <BlogHeader>10. Require acceptance evidence</BlogHeader>

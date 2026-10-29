@@ -6,6 +6,7 @@ const config = [
       ".next/**",
       ".next-audit/**",
       ".tmp/**",
+      "tmp/**",
       "out/**",
       "next-env.d.ts",
     ],

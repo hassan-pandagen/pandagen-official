@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: "Compare low-cost web proposals by evidence, scope, security, accessibility, SEO controls, ownership, support, and total cost.",
     type: "article",
     publishedTime: "2026-04-30T00:00:00-05:00",
-    modifiedTime: "2026-10-09T00:00:00-05:00",
+    modifiedTime: "2026-10-29T00:00:00-05:00",
     authors: ["Hassan Jamal"],
     url: "https://www.pandacodegen.com/blog/cheap-web-developer",
     images: [ogImageForPath("/blog/cheap-web-developer")],
@@ -59,7 +59,7 @@ const articleSchema = {
       description: "A due-diligence guide for comparing affordable web-development proposals without assuming price determines quality.",
       image: ogImageUrlForPath("/blog/cheap-web-developer"),
       datePublished: "2026-04-30T00:00:00-05:00",
-      dateModified: "2026-10-09T00:00:00-05:00",
+      dateModified: "2026-10-29T00:00:00-05:00",
       author: {
         "@type": "Person",
         "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -106,7 +106,7 @@ const articleSchema = {
       description: "A due-diligence guide for comparing affordable web-development proposals without assuming price determines quality.",
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       datePublished: "2026-04-30T00:00:00-05:00",
-      dateModified: "2026-10-09T00:00:00-05:00",
+      dateModified: "2026-10-29T00:00:00-05:00",
       breadcrumb: { "@id": "https://www.pandacodegen.com/blog/cheap-web-developer#breadcrumb" },
       inLanguage: "en-US",
     },
@@ -173,7 +173,7 @@ export default function CheapWebDeveloperPage() {
             The search phrase covers freelance web developers on marketplaces, individual contractors, template specialists, fixed-price studios, agencies, website builders, and AI-assisted services. Their prices are not directly comparable until the scope is normalized. Marketplace listings are also mutable and self-selected, so a search-result price is not a market benchmark.
           </BlogText>
           <BlogText>
-            Hiring a web developer generally lands between a few hundred dollars for a narrow repair and five figures for a migration with commerce or a portal, and the spread is caused by scope rather than by rate. Use price buckets only to organize quotes, not to infer deliverables. Under $500 may be appropriate for a narrow repair or template task. A $500 to $1,500 quote may fit a landing page or small scoped site. PandaCodeGen publishes a $1,500 Starter planning anchor, $3,500 Growth anchor, and $5,000 Scale anchor. In every bucket, the accepted scope controls what is included. The{" "}
+            The amounts below are illustrative planning buckets, not a survey of market prices. Scope, provider rates and operating responsibilities all affect a quote. Use price buckets only to organize quotes, not to infer deliverables. Under $500 may be appropriate for a narrow repair or template task. A $500 to $1,500 quote may fit a landing page or small scoped site. PandaCodeGen publishes a $1,500 Starter planning anchor, $3,500 Growth anchor, and $5,000 Scale anchor. In every bucket, the accepted scope controls what is included. The{" "}
             <Link href="/pricing" className="text-cognac hover:underline">pricing page</Link>{" "}
             lists those anchors, and our{" "}
             <Link href="/blog/how-much-does-a-website-cost" className="text-cognac hover:underline">website cost guide</Link>{" "}
@@ -217,8 +217,8 @@ export default function CheapWebDeveloperPage() {
               "Vetted talent networks. Screening is done for you and priced accordingly. Usually more than a marketing site needs, and a reasonable fit for application work where the screening is the point.",
               "Platform-specialist marketplaces. Developers who work only inside one website platform. Useful for changes within a platform you intend to keep, and the wrong starting point if you are considering leaving it.",
               "Fixed-price studios. A defined scope, a defined number, and a named team. Ask what falls outside the fixed price and how it gets priced.",
-              "Offshore development shops. Rates are lower and written specifications matter more, because ambiguity gets resolved without you in the room. Check working-hours overlap before you check price.",
-              "Local independents. Easier real-time communication and simpler contracting, usually at a higher rate. Often the right answer where communication speed matters more than cost.",
+              "Remote development shops. Compare the named team, written scope, working-hours overlap and actual rates. Location alone does not establish price or quality.",
+              "Local independents. Nearby availability may help when in-person work matters. Verify response times, contracting terms and the actual quote rather than assuming a local provider costs more.",
             ]}
           />
 
@@ -248,18 +248,14 @@ export default function CheapWebDeveloperPage() {
           </div>
           <BlogList
             items={[
-              "A website builder fits a genuinely standard site where you would rather pay monthly than once. The cost recurs, the work stays yours, and the platform decides what is possible. What you are not buying is accountability.",
-              "An AI site generator is the quickest route to a first draft and does nothing for the part that takes the time: real content, forms that deliver, analytics, redirects from whatever you had before, and whether search engines can read what it produced.",
+              "A website builder can fit a standard site with managed hosting and editing. Check the plan, support terms, integrations and export options. The platform supports its service; agree who owns your content, configuration and ongoing site work.",
+              "An AI site generator can help create pages and integrations, and some services include publishing. Verify the actual output: content, working forms, analytics, redirects, accessibility and search-readable pages still need acceptance checks.",
               "A developer earns the fee when something has to be true after launch day. Existing URLs survive. A form reaches your CRM. A checkout takes money. Somebody is contractually answerable when one of those fails.",
               "The three are not exclusive. Generating a draft and paying someone to make it production-ready is a legitimate route, as long as the quote prices the rework rather than treating the draft as a head start.",
             ]}
           />
           <BlogText>
-            Ask it in the other direction if you are undecided. If nothing on your list has to keep working
-            after launch and no existing search traffic is at stake, a builder or a generator is very likely
-            enough, and hiring anybody is the expensive option. The moment the answer involves traffic you
-            already have, money changing hands, or data going somewhere, you have stopped buying pages and
-            started buying accountability. Where a generated site is already live and missing from search,{" "}
+            Choose a builder when its supported features meet your requirements and your team can manage them. Paid implementation help can be useful for migration, testing or integrations on a builder as well as on a custom site. Assign responsibility for the result in either case. Where a generated site is already live and missing from search,{" "}
             <Link href="/blog/lovable-site-not-showing-on-google" className="text-cognac hover:underline">why an AI-built site may not appear in Google</Link>{" "}
             covers what to check before paying anyone to rebuild it. Agencies that already resell
             GoHighLevel face the same builder-or-developer choice for every client site, which{" "}
@@ -283,18 +279,14 @@ export default function CheapWebDeveloperPage() {
           </BlogText>
           <BlogList
             items={[
-              "Hosting, a domain and a deploy pipeline. Generated code is a repository, not a live website, and nothing in the chat transcript pays a hosting bill.",
-              "Whether search engines can read it. This is the failure we see most often on generated sites, and it is why the Lovable case above exists as its own article.",
+              "Hosting, a domain and publishing. Some generators include deployment; exported code needs a host. Confirm account ownership, recurring fees, usage limits and how to move away.",
+              "Whether search engines can read it. Test rendered content, indexability, canonical URLs and internal links instead of inferring quality from how the code was created.",
               "Redirects from whatever you had before. A model does not know your old URLs, so if you already have search traffic, nothing preserves it unless somebody maps it deliberately.",
               "Forms, payments and data. A form that renders is not a form that delivers, and the difference only shows up after a customer has used it.",
             ]}
           />
           <BlogText>
-            The honest recommendation is a split rather than a verdict. <strong>If nothing has to keep
-            working after launch day and no existing traffic is at stake, generating the site yourself is a
-            sensible way to spend nothing.</strong> If money, data or existing rankings are involved,
-            generate the draft by all means, then price the work of making it production-ready, and price
-            it as rework, not as a discount for having a head start.
+            Our recommendation: generate it yourself for a simple brochure site you can check and maintain, where a failure would cost little. Once customer money, private data or existing search traffic depends on the site, pay for accountable implementation, testing and support unless you can own that work yourself. That can mean improving a generated site rather than rebuilding it. Buy responsibility for the working result, not just the first draft.
           </BlogText>
 
           <BlogHeader>How to Verify a Cheap Web Developer’s Portfolio</BlogHeader>
@@ -474,9 +466,12 @@ export default function CheapWebDeveloperPage() {
           <section className="my-10 rounded-2xl border border-stone-200 bg-stone-50 p-6">
             <div className="flex items-center gap-2 mb-3">
               <ShieldCheck className="w-5 h-5 text-cognac" />
-              <h2 className="text-xl font-bold text-charcoal">Primary references checked October 8, 2026</h2>
+              <h2 className="text-xl font-bold text-charcoal">Primary references checked October 29, 2026</h2>
             </div>
             <ul className="space-y-2 text-sm">
+              <li><a className="text-cognac underline underline-offset-4" href="https://wordpress.com/pricing/" target="_blank" rel="noreferrer">WordPress.com: plans, billing periods and included support</a></li>
+              <li><a className="text-cognac underline underline-offset-4" href="https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content" target="_blank" rel="noreferrer">Squarespace: content export limits</a></li>
+              <li><a className="text-cognac underline underline-offset-4" href="https://developers.google.com/search/blog/2023/02/google-search-and-ai-content" target="_blank" rel="noreferrer">Google: guidance on AI-generated content</a></li>
               <li><a className="text-cognac underline underline-offset-4" href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" target="_blank" rel="noreferrer">Google: site moves with URL changes</a></li>
               <li><a className="text-cognac underline underline-offset-4" href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noreferrer">W3C: WCAG 2.2</a></li>
               <li><a className="text-cognac underline underline-offset-4" href="https://owasp.org/www-project-application-security-verification-standard/" target="_blank" rel="noreferrer">OWASP: Application Security Verification Standard</a></li>

@@ -1,0 +1,28 @@
+{
+  "checkedOn": "2026-10-29",
+  "releaseDate": "2026-10-28",
+  "release": "WordPress 7.1.4",
+  "sources": [
+    "https://wordpress.org/news/2026/10/wordpress-7-1-4/",
+    "https://wordpress.org/documentation/wordpress-version/version-7-1-4/"
+  ],
+  "wordingDecisions": [
+    "Use multiple core vulnerabilities rather than counting grouped announcement bullets as 12 individual issues. Detailed documentation refers to 22 vulnerabilities across the fixes.",
+    "The announcement recommends immediate updating and does not report active exploitation. Silence does not prove absence of attacks.",
+    "Anthropic is credited for two reports; the announcement does not establish its research tools or discovery speed.",
+    "Existing Wordfence counts remain unchanged: Elementor Pro 190,000-plus blocked attempts; Super Forms 250,000-plus. No claim about numbers of compromised sites.",
+    "Next.js and CMS dependencies still require updates. No maintenance-free or vulnerability-free claim.",
+    "Routine staging checks and expedited urgent patches are distinguished; automatic-update responsibility is agreed with the host."
+  ],
+  "sitePages": [
+    "/blog/wordpress-plugin-security-2026",
+    "/blog/wordpress-ai-security-risk-2026",
+    "/blog/why-we-chose-nextjs-over-wordpress-2026"
+  ],
+  "proposalDraftsUpdated": [
+    "C:/Projects/proposals/WRC/WRC-proposal-draft.md",
+    "C:/Projects/proposals/FarmAdvisors/FarmAdvisors-proposal-draft.md"
+  ],
+  "publicationStatus": "Local site changes and saved proposal drafts. No commit, deployment, proposal submission or indexing request.",
+  "validation": "Production build including TypeScript, lint, public-claims and date checks passed. Schema audit: 11 tests passed, 165 pages, no failures. Description guard: 164 descriptions passed. Rendered release links, update dates, section anchor and offline-FAQ removal verified. Saved proposal files matched their prepared revisions."
+}

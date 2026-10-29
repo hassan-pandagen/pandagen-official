@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-31",
-        modifiedTime: "2026-10-20",
+        modifiedTime: "2026-10-29",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/saas-software-pricing-audit-2026")],
@@ -84,7 +84,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/saas-software-pricing-audit-2026"),
             description,
             datePublished: "2026-05-31",
-            dateModified: "2026-10-20",
+            dateModified: "2026-10-29",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -118,7 +118,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-31",
-            dateModified: "2026-10-20",
+            dateModified: "2026-10-29",
             inLanguage: "en-US",
         },
         {
@@ -159,7 +159,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                             consolidate, replace or investigate without promising a universal savings rate.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed October 8, 2026 against current primary vendor sources.
+                            Reviewed October 29, 2026 against current primary vendor sources.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -206,9 +206,8 @@ export default function SaasSoftwarePricingAudit2026Page() {
                         equivalent, and each of those arrived on a different date in a different email.
                     </BlogText>
                     <BlogText>
-                        That is why an audit built on remembered prices does not work. Nobody remembers four small
-                        changes across two years, and the vendor is under no obligation to summarize them for you. The
-                        invoice does. Everything below starts there.
+                        That is why an audit built on remembered prices does not work. An invoice may not explain every plan change. Read it alongside renewal notices and the
+                        contract, including any notice obligations. Everything below starts there.
                     </BlogText>
 
                     <BlogHeader id="what-changed">What actually changed in 2026</BlogHeader>
@@ -228,17 +227,17 @@ export default function SaasSoftwarePricingAudit2026Page() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr>
                                     <td className="p-4 font-bold">Microsoft 365</td>
-                                    <td className="p-4">Per user/month: Business Basic $6 to $7; Business Standard $12.50 to $14; E3 $36 to $39; E5 $57 to $60; F1 $2.25 to $3; F3 $8 to $10. Business Premium is unchanged at $22, so check your own SKU before assuming a rise. Microsoft states existing customers remain on current pricing until renewal, and that tenants get at least 30 days notice in Message Center before packaging changes become available. Figures from Microsoft&apos;s licensing news page, checked October 8, 2026. Microsoft&apos;s current US comparison page, read in {asOf("microsoft-365-business-basic-price")}, shows something different from those figures. It lists Business Basic at {spec("microsoft-365-business-basic-price").value}, and lists Business Standard and Business Premium as &ldquo;with Copilot&rdquo; plans, at {spec("microsoft-365-business-standard-copilot-price").value} and {spec("microsoft-365-business-premium-copilot-price").value}, all paid yearly. Those bundles include Copilot, so $14 to {spec("microsoft-365-business-standard-copilot-price").value.split(" ")[0]} isn&apos;t the same plan getting dearer. Compare your renewal quote with the plan you actually hold.</td>
+                                    <td className="p-4">US list prices for Microsoft 365 suites with Teams, per user/month: Business Basic $6 to $7; Business Standard $12.50 to $14; Microsoft 365 E3 $36 to $39; Microsoft 365 E5 $57 to $60; F1 $2.25 to $3; F3 $8 to $10. Business Premium is unchanged at $22, so check your own SKU before assuming a rise. Microsoft states existing customers remain on current pricing until renewal, and that tenants get at least 30 days notice in Message Center before packaging changes become available. Figures from Microsoft&apos;s licensing news page, checked October 29, 2026. Microsoft&apos;s current US comparison page, read in {asOf("microsoft-365-business-basic-price")}, shows something different from those figures. It lists Business Basic at {spec("microsoft-365-business-basic-price").value}, and lists Business Standard and Business Premium as &ldquo;with Copilot&rdquo; plans, at {spec("microsoft-365-business-standard-copilot-price").value} and {spec("microsoft-365-business-premium-copilot-price").value}, all paid yearly. Those bundles include Copilot, so $14 to {spec("microsoft-365-business-standard-copilot-price").value.split(" ")[0]} isn&apos;t the same plan getting dearer. Compare your renewal quote with the plan you actually hold.</td>
                                     <td className="p-4">July 1, 2026</td>
                                 </tr>
                                 <tr>
                                     <td className="p-4 font-bold">Webflow</td>
-                                    <td className="p-4">Plans restructured and simplified. Because plan boundaries moved rather than a single price, check which new plan your current site maps to rather than comparing the headline number.</td>
-                                    <td className="p-4">May 2026</td>
+                                    <td className="p-4">CMS and Business become Premium. New purchases changed on May 13; most existing sites began transitioning on June 29. For sites in Freelancer or Agency Workspaces and qualifying legacy pricing, the transition starts November 16, 2026, at renewal or a billable change. Check your account notice and renewal before budgeting.</td>
+                                    <td className="p-4">May, June and November 2026 phases</td>
                                 </tr>
                                 <tr>
                                     <td className="p-4 font-bold">Klaviyo</td>
-                                    <td className="p-4">{/* 8 Oct 2026: this said the change affected "how contacts and sends are counted". Klaviyo's FAQ describes a plan-compliance rule plus two optional billing preferences, not a new counting method. */}Credit-card customers must be on an email plan that matches or exceeds their active-profile count, with optional flexible sending and auto-downgrade settings. This is an earlier policy change rather than a 2026 price rise, and it can still be the reason a 2026 invoice looks different. The practical effect varies by list size and sending pattern, so read your own invoice rather than a published percentage.</td>
+                                    <td className="p-4">{/* 8 Oct 2026: this said the change affected "how contacts and sends are counted". Klaviyo's FAQ describes a plan-compliance rule plus two optional billing preferences, not a new counting method. */}Credit-card customers must be on an email plan that matches or exceeds their active-profile count, with optional flexible sending and auto-downgrade settings. This is an earlier policy change rather than a 2026 price rise, and it can still be the reason a 2026 invoice looks different. Active means able to receive email, not recently engaged. Suppressed profiles do not count toward that limit. Reducing the count does not automatically lower the bill unless you choose a lower plan or enable profiles auto-downgrade.</td>
                                     <td className="p-4">February 18, 2025</td>
                                 </tr>
                             </tbody>
@@ -360,7 +359,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                     <BlogHeader id="cancellation-mistakes">5. Avoid cancellation mistakes</BlogHeader>
                     <BlogText>
                         Confirm the current vendor procedure before changing access. Shopify&apos;s help page on
-                        uninstalling apps, checked October 4, 2026, says uninstalling a paid app cancels future recurring
+                        uninstalling apps, checked October 29, 2026, says uninstalling a paid app cancels future recurring
                         charges but you might still be billed for the current billing cycle, and that uninstalling
                         doesn&apos;t cancel charges an app bills outside Shopify. It also says to contact the developer
                         before uninstalling if you want a refund, that some apps leave code in your theme, and that some
@@ -469,7 +468,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                     <div data-speakable="true">
                         <BlogText>
                             {/* 8 Oct 2026: said "Seven pages"; the list below has six. */}
-                            Six pages, all vendor-owned rather than third-party summaries, checked on the dates given above. Vendors revise these without notice, so treat the list as where to verify rather than as a substitute for verifying. Where a figure here disagrees with your own invoice, your invoice is the authority.
+                            These vendor-owned references were reviewed on October 29, 2026; earlier dated price snapshots are labelled separately. Vendors revise these without notice, so treat the list as where to verify rather than as a substitute for verifying. Where a figure here disagrees with your own invoice, your invoice is the authority.
                         </BlogText>
                     </div>
                     <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">

@@ -15,6 +15,7 @@ export const serviceGuides: Record<string, { title: string; href: string }[]> = 
     { title: "How much a website costs, line by line", href: "/blog/how-much-does-a-website-cost" },
     { title: "What a website costs to run each month", href: "/blog/website-monthly-running-cost" },
     { title: "How to check you own your website", href: "/blog/do-you-own-your-website" },
+    { title: "Compare developer quotes before paying a deposit", href: "/blog/cheap-web-developer" },
   ],
   "medical-website-design": [
     { title: "Next.js and Sanity: fit, cost and tradeoffs", href: "/blog/nextjs-sanity-stack" },
@@ -59,6 +60,8 @@ export const serviceGuides: Record<string, { title: string; href: string }[]> = 
     { title: "Shopify or a custom website", href: "/blog/shopify-vs-custom-website" },
     { title: "Is a slow Shopify store losing sales?", href: "/blog/shopify-slow-losing-sales" },
     { title: "Low Shopify conversion rate and speed", href: "/blog/shopify-conversion-rate-speed-fix" },
+    { title: "Check ad tracking against actual orders", href: "/blog/spending-more-on-ads-fewer-orders-tracking" },
+    { title: "What Google's Universal Commerce Protocol means for your store", href: "/blog/google-universal-commerce-protocol-what-it-means-for-your-store" },
   ],
   woocommerce: [
     { title: "Why WooCommerce is slow, and how to fix it", href: "/blog/woocommerce-too-slow" },
@@ -70,6 +73,7 @@ export const serviceGuides: Record<string, { title: string; href: string }[]> = 
   wix: [
     { title: "A custom website with a Sanity editor", href: "/blog/nextjs-sanity-stack" },
     { title: "Why a Wix website is slow", href: "/blog/wix-too-slow" },
+    { title: "What Wix lets you control for SEO", href: "/blog/is-wix-bad-for-seo" },
     { title: "What affects a Wix migration quote", href: "/blog/wix-migration-cost" },
     { title: "Wix or a custom website", href: "/blog/wix-vs-custom-website" },
   ],
@@ -91,6 +95,7 @@ export const serviceGuides: Record<string, { title: string; href: string }[]> = 
     { title: "Why a GoHighLevel site is slow, and how to fix it", href: "/blog/gohighlevel-website-speed" },
     { title: "The best website builder for GoHighLevel agencies", href: "/blog/best-website-builder-for-gohighlevel-agencies" },
     { title: "Keep GoHighLevel while replacing the website", href: "/blog/gohighlevel-keep-crm-replace-website" },
+    { title: "GoHighLevel or WordPress for your website", href: "/blog/gohighlevel-vs-wordpress" },
     { title: "Core Web Vitals explained for business owners", href: "/blog/core-web-vitals-explained" },
   ],
   "ai-seo": [

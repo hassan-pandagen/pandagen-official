@@ -299,7 +299,7 @@ export const GOVERNANCE: readonly Fact[] = [
     // the first is worth stating. A fact sheet that published the score and omitted
     // the traffic result would be selecting evidence, which is the behaviour the
     // policy two entries above forbids.
-    { label: 'Agentic browsing', value: 'As checked on 4 September 2026, pandacodegen.com and pandapatches.com each score 3 of 3 in the Agentic Browsing category of Google PageSpeed Insights, with a Lighthouse SEO score of 100. pandapatches.com appears in the Chrome UX Report and pandacodegen.com does not, meaning pandacodegen.com sits below Google’s undisclosed traffic threshold for real-user reporting. Passing those checks is a statement about machine readability and not a claim about traffic, rankings or revenue.' },
+    { label: 'Agentic browsing', value: 'As checked on 4 September 2026, pandacodegen.com and pandapatches.com each score 3 of 3 in the Agentic Browsing category of Google PageSpeed Insights, with a Lighthouse SEO score of 100. In that dated check, pandapatches.com appeared in the Chrome UX Report and pandacodegen.com did not. Missing CrUX data alone does not establish total traffic: inclusion depends on eligible user samples and page or origin eligibility. Passing those checks is a statement about machine readability and not a claim about traffic, rankings or revenue.' },
 
     { label: 'Crawl policy', value: 'All crawlers, including AI crawlers, may access the site. Only /api/ and /_next/data/ are excluded. The machine-readable version is at /robots.txt.' },
     { label: 'Corrections', value: 'Mutable facts carry the date they were checked. Where a published figure is later found wrong it is corrected rather than quietly removed, and the editorial policy states how.' },

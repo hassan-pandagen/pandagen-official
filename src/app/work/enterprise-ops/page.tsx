@@ -48,15 +48,11 @@ const pageFaqs: { question: string; answer: string }[] = [
     },
     {
         question: "What is role-based access control (RBAC) and why does a small business need it?",
-        answer: "RBAC means each user only sees the data their role requires. In this platform: ADMIN sees full financials and all agents; SALES sees their own pipeline only; PRODUCTION sees pending orders with no financial data. We enforce this at two layers, application logic AND Supabase Row-Level Security policies at the database level, so even direct API access is blocked.",
+        answer: "RBAC means each user only sees the data their role requires. In this platform: ADMIN sees full financials and all agents; SALES sees their own pipeline only; PRODUCTION sees pending orders with no financial data. We enforce this at two layers, application logic AND Supabase Row-Level Security policies at the database level, so ordinary API requests are evaluated against the applicable user policies. Privileged service-role or database access can bypass RLS and must be protected separately.",
     },
     {
         question: "How long did it take to build the Panda Patches CRM?",
         answer: "The platform has been in continuous development since November 2025 and is still being added to. It includes a Supabase schema with Row-Level Security, an order pipeline, reporting, role-based access, Square payments, attendance and automated profit calculations. " + MIGRATION_PROJECT_DETAILS.pandaPatches.edgeFunctionsRecord + " A code review was commissioned by us in 2026, but its scores are withdrawn from this site: the review document, its rubric and the reviewer could not be located during a source audit on 15 September 2026.",
-    },
-    {
-        question: "Can a custom dashboard work offline?",
-        answer: "Yes. We implemented a Service Worker that caches the critical UI and data. Team members in Pakistan with intermittent internet connectivity can still access order data and make updates, which sync automatically when the connection is restored.",
     },
 ];
 
@@ -70,7 +66,7 @@ const caseStudySchema = {
             "description": PAGE_DESCRIPTION,
             "image": ogImageUrlForPath("/work/enterprise-ops"),
             "datePublished": "2026-03-04T00:00:00Z",
-            "dateModified": MIGRATION_PROJECT_DETAILS.pandaPatches.contentUpdatedOn,
+            "dateModified": MIGRATION_PROJECT_DETAILS.enterpriseOps.contentUpdatedOn,
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -86,6 +82,7 @@ const caseStudySchema = {
                 "@type": "WebPage",
                 "@id": "https://www.pandacodegen.com/work/enterprise-ops"
             },
+                        "citation": [{ "@type": "CreativeWork", "name": "Supabase Row Level Security and privileged access", "url": "https://supabase.com/docs/guides/database/postgres/row-level-security" }],
             "keywords": [
                 "custom business dashboard",
                 "custom CRM development",

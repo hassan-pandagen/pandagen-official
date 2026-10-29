@@ -105,7 +105,7 @@ export function EnterpriseOpsCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyF
         </p>
 
         <WorkCaseTitle>Custom CRM development for Panda Patches</WorkCaseTitle>
-        <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={MIGRATION_PROJECT_DETAILS.pandaPatches.contentUpdatedOn}>October 22, 2026</time></p>
+        <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={MIGRATION_PROJECT_DETAILS.enterpriseOps.contentUpdatedOn}>{new Date(`${MIGRATION_PROJECT_DETAILS.enterpriseOps.contentUpdatedOn}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}</time></p>
         <p className="mt-3 max-w-[38rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
           One place for our team to manage the working day.
         </p>
@@ -168,6 +168,10 @@ export function EnterpriseOpsCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyF
       </section>
 
       <CaseStudyFaqs faqs={faqs} />
+      <p className="mx-auto max-w-[1100px] px-6 pb-8 text-sm" style={{ color: T.body }}>
+        Technical reference: <a href="https://supabase.com/docs/guides/database/postgres/row-level-security" className="underline underline-offset-4">Supabase row-level security and privileged access</a>.
+        Project counts retain their original measurement dates; this editorial review did not rerun the production access tests.
+      </p>
 
       <section className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
         <div className="mx-auto max-w-[1100px]">
