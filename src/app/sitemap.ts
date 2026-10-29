@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/services/woocommerce', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-11' },
     { path: '/services/wix', changeFrequency: 'monthly', priority: 0.7 , lastModified: '2026-10-11' },
     { path: '/services/squarespace', changeFrequency: 'monthly', priority: 0.7 , lastModified: '2026-10-11' },
-    { path: '/services/webflow', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-11' },
+    { path: '/services/webflow', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-29' },
     { path: '/services/gohighlevel', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-11' },
 
     // Agency Partnerships
