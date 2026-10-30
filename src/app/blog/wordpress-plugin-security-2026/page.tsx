@@ -18,9 +18,9 @@ const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButto
 const postId = "wordpress-plugin-security-2026";
 const postFAQs = blogPosts.find((p) => p.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "WordPress Plugin Security in 2026: Checks, Patching & Recovery";
+const title = "WordPress Security 2026: PHP, Core & Plugin Vulnerabilities";
 const description =
-    "Compare WordPress plugin and Next.js security incidents: affected-version checks, timely updates, account protection and recovery planning for website owners.";
+    "Check WordPress core, plugin and PHP security issues, including PHP2Shell. Learn which versions are affected, what to update and how to recover.";
 
 export const dynamic = "force-static";
 
