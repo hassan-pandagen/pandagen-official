@@ -1,3 +1,4 @@
+import PortalWorkflow from "@/components/redesign/case-study/PortalWorkflow";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
@@ -136,7 +137,7 @@ export function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
           </p>
 
           <WorkCaseTitle>Panda Patches</WorkCaseTitle>
-          <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={MIGRATION_PROJECT_DETAILS.pandaPatches.contentUpdatedOn}>October 22, 2026</time></p>
+          <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={MIGRATION_PROJECT_DETAILS.pandaPatches.contentUpdatedOn}>October 30, 2026</time></p>
           <p className="mt-3 max-w-[38rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
             A custom-patch storefront connected to the team&apos;s order-management system.
           </p>
@@ -284,6 +285,7 @@ export function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
         </section>
       </div>
 
+      <PortalWorkflow project="patches" />
       <CaseStudyFaqs faqs={faqs} />
 
       {/* ── 7. Next step ────────────────────────────────────────────────── */}

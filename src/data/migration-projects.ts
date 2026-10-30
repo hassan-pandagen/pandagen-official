@@ -11,7 +11,7 @@
  */
 export const MIGRATION_PROJECT_DETAILS = {
   pandaPatches: {
-    contentUpdatedOn: "2026-10-22",
+    contentUpdatedOn: "2026-10-30",
     status: "Live",
     summary: "We rebuilt our own WordPress and WooCommerce store with Next.js, a Sanity content editor, custom product pricing and checkout. A custom Supabase backend connects the storefront to a separate operations system for orders, production, payments and reporting.",
     paymentHistory: "Panda Patches started with Stripe. We later moved its payments to Square, which is the current provider.",
@@ -27,7 +27,7 @@ export const MIGRATION_PROJECT_DETAILS = {
   },
   // CRM case-study editorial date, independent of the storefront and measured project facts.
   enterpriseOps: {
-    contentUpdatedOn: "2026-10-29",
+    contentUpdatedOn: "2026-10-30",
   },
   ladies4Jesus: {
     status: "Live",
@@ -36,7 +36,7 @@ export const MIGRATION_PROJECT_DETAILS = {
   },
   aStepAboveMedical: {
     // Editorial revision; separate from the owner's launch confirmation.
-    contentUpdatedOn: "2026-10-23",
+    contentUpdatedOn: "2026-10-30",
     name: "A Step Above Medical",
     status: "Live",
     websiteUrl: "https://astepabovemed.com/",

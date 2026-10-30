@@ -1,3 +1,4 @@
+import PortalWorkflow from "@/components/redesign/case-study/PortalWorkflow";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
@@ -46,7 +47,7 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <Link href="/work" style={{ color: T.quiet }}>Work</Link> / A Step Above Medical / {details.status}
         </p>
         <WorkCaseTitle>A Step Above Medical</WorkCaseTitle>
-        <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={details.contentUpdatedOn}>October 23, 2026</time></p>
+        <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={details.contentUpdatedOn}>October 30, 2026</time></p>
         <p className="mt-3 max-w-[42rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
           A complete medical training management system.
         </p>
@@ -68,6 +69,7 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
         </aside>
       </WorkCaseOpening>
       <AStepAboveMedicalWalkthrough />
+      <PortalWorkflow project="medical" />
       <section aria-labelledby="asam-before-after" className="px-6 py-10 md:px-10 md:py-16">
         <div className="mx-auto max-w-[1100px]">
           <WorkCaseLabel className="mb-3">Before and after</WorkCaseLabel>

@@ -1,3 +1,4 @@
+import PortalWorkflow from "@/components/redesign/case-study/PortalWorkflow";
 import Link from "next/link";
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import { ArrowRight } from "lucide-react";
@@ -167,6 +168,7 @@ export function EnterpriseOpsCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyF
         </div>
       </section>
 
+      <PortalWorkflow project="patches" />
       <CaseStudyFaqs faqs={faqs} />
       <p className="mx-auto max-w-[1100px] px-6 pb-8 text-sm" style={{ color: T.body }}>
         Technical reference: <a href="https://supabase.com/docs/guides/database/postgres/row-level-security" className="underline underline-offset-4">Supabase row-level security and privileged access</a>.
