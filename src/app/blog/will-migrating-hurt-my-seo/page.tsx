@@ -19,7 +19,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Will Migrating My Website Hurt My SEO? (2026)",
+    title: "Will Migrating Hurt My SEO? Website Migration Checklist",
     description: "A practical website-migration SEO checklist covering URL mapping, redirects, metadata, crawl checks, rollback planning, and post-launch monitoring.",
     alternates: {
         canonical: "/blog/will-migrating-hurt-my-seo",
@@ -38,18 +38,18 @@ export const metadata: Metadata = {
     ],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "Will Migrating My Website Hurt My SEO? (2026)",
+        title: "Will Migrating Hurt My SEO? Website Migration Checklist",
         description: "How to reduce avoidable migration risk with URL mapping, redirects, metadata, crawl checks, rollback planning, and post-launch monitoring.",
         type: "article",
         publishedTime: "2026-06-03",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-11-01",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo",
         images: [ogImageForPath("/blog/will-migrating-hurt-my-seo")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Will Migrating My Website Hurt My SEO? (2026)",
+        title: "Will Migrating Hurt My SEO? Website Migration Checklist",
         description: "A controlled website-migration SEO process, the risks it can reduce, and the search outcomes no agency can guarantee.",
     },
 };
@@ -64,7 +64,7 @@ const articleSchema = {
             "description": "A website-migration SEO guide covering URL inventories, page-level redirects, metadata and canonical checks, crawl validation, rollback planning, and post-launch Search Console monitoring.",
             "image": ogImageUrlForPath("/blog/will-migrating-hurt-my-seo"),
             "datePublished": "2026-06-03T00:00:00-05:00",
-            "dateModified": "2026-10-08",
+            "dateModified": "2026-11-01",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -80,8 +80,7 @@ const articleSchema = {
             "articleSection": "Guide",
             "keywords": ["will migrating my website hurt my seo", "website migration seo", "301 redirects migration", "preserve seo during migration", "traffic drop after redesign", "website migration without losing rankings"],
             "inLanguage": "en-US",
-            "wordCount": 1691,
-            "timeRequired": "PT8M",
+            "timeRequired": "PT12M",
             "about": [
                 { "@type": "Thing", "name": "Website migration SEO" },
                 { "@type": "Thing", "name": "301 redirects" },
@@ -115,7 +114,7 @@ const articleSchema = {
             "description": "The controls that reduce avoidable website-migration SEO risk, plus the outcomes and timelines no agency can guarantee.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-06-03T00:00:00-05:00",
-            "dateModified": "2026-10-08",
+            "dateModified": "2026-11-01",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -153,7 +152,7 @@ export default function WillMigratingHurtSeoPage() {
                         </p>
                         <BlogAuthor
                             postId="will-migrating-hurt-my-seo" published="2026-06-03"
-                            readTime="8 min read"
+                            readTime="12 min read"
                             bio="Hassan plans SEO-conscious migrations using URL inventories, page-level redirect maps, rendered-output checks, and post-launch monitoring. Search outcomes remain controlled by search engines."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -251,6 +250,80 @@ export default function WillMigratingHurtSeoPage() {
                         </div>
                     </div>
 
+                    <BlogHeader id="corporate-replatforming">How to retain SEO during corporate website replatforming</BlogHeader>
+                    <BlogText>
+                        Our recommendation: agree what must survive before approving the new design. A corporate
+                        replatform involves marketing, IT, content owners and sometimes several regional teams.
+                        Give one person authority over the URL map and one person authority to approve launch.
+                        Separate essential migration work from optional content rewrites so that a late design
+                        decision does not quietly remove a page that brings qualified enquiries.
+                    </BlogText>
+                    <BlogList items={[
+                        "Record the baseline by landing page: organic clicks, enquiries or purchases, important queries and valuable referring links. Keep the date range and tracking definitions with the export.",
+                        "List the pages and journeys that must survive: service pages, regional content, campaign destinations, downloads and enquiry forms. Assign an owner to approve each group.",
+                        "Use a launch gate: no unresolved blockers on priority URLs, forms, crawl access or analytics. Record who can stop the release and how the previous version would be restored.",
+                        "Name the post-launch owner and review dates in the scope. Compare the same page groups and conversion definitions after launch, including seasonal differences."
+                    ]} />
+
+                    <BlogHeader id="large-content-library">Migrating a large content library to a new CMS</BlogHeader>
+                    <BlogText>
+                        Start with a content manifest, not a count of exported posts. For each item, record its
+                        source ID, old URL, destination URL, content type, publication status, owner and migration
+                        decision. Keep, merge, retire or review are useful decisions; an unexamined bulk delete is not.
+                        Include documents and images people link to, as well as HTML pages.
+                    </BlogText>
+                    <BlogText>
+                        Map the fields before importing: headings, body content, authors, original publication dates,
+                        categories, image descriptions, download links and SEO fields. Import a representative batch
+                        first, including long articles, embedded media and unusual layouts. Check item counts and
+                        relationships automatically, then have editors review the rendered pages. Reconcile content
+                        changed since the export before the final cutover.
+                    </BlogText>
+                    <BlogHighlight>
+                        Ask a migration supplier to show one complete example: the original page, its CMS record,
+                        the new rendered page and the tested old URL. A successful import count alone does not
+                        show that readers can still find and use the content.
+                    </BlogHighlight>
+
+                    <BlogHeader id="recruitment-migration">Recruitment website migration: protect job pages and applications</BlogHeader>
+                    <BlogText>
+                        Recruitment sites need an extra inventory of active vacancies, expired vacancies,
+                        location pages and application destinations. Keep stable URLs for active jobs where possible,
+                        preserve their details and test the full application journey, including any external applicant
+                        tracking system. Treat recruitment-specific checks as part of discovery and scope them before quoting.
+                    </BlogText>
+                    <BlogText>
+                        Expired vacancies need an explicit policy. Google allows an expired validThrough date,
+                        removal of JobPosting markup, or removal of the page with a 404 or 410 response. Check that
+                        archived vacancies are clearly closed and that active jobs still have a working way to apply.
+                        Follow <a href="https://developers.google.com/search/docs/appearance/structured-data/job-posting" className="text-cognac underline">Google&apos;s job posting guidance</a>.
+                        Avoid a blanket redirect of every expired job to the homepage; choose a relevant successor
+                        only when one exists.
+                    </BlogText>
+
+                    <BlogHeader id="choose-migration-partner">What to ask before hiring a website migration partner</BlogHeader>
+                    <BlogText>
+                        A useful proposal names the deliverables you will receive: a content inventory, URL map,
+                        import validation, launch checklist, tracking checks, rollback procedure and a defined
+                        monitoring period. Ask who handles each item and whether document migration, content cleanup,
+                        third-party integrations and post-launch corrections are included in the price.
+                        Compare those commitments before comparing headline fees.
+                    </BlogText>
+                    <BlogText>
+                        Our relevant work includes <Link href="/work/ladies-4-jesus" className="text-cognac underline">Ladies 4 Jesus</Link>,
+                        moved from WordPress to Next.js and Sanity with owner-managed publishing and moderation,
+                        and <Link href="/work/a-step-above-medical" className="text-cognac underline">A Step Above Medical</Link>,
+                        rebuilt from WordPress with staff-managed classes and a separate operations portal.
+                        These projects show the editorial and operational work behind a migration. For your site,
+                        we start by identifying which content and business journeys must keep working.
+                    </BlogText>
+                    <BlogText>
+                        <Link href="/contact" className="text-cognac underline font-semibold">Discuss your migration with Hassan and Imran</Link>.
+                        Send the current website, the platform you want to leave, your target launch window and the
+                        integrations you depend on. We can use that to define the discovery work and a proposal
+                        with explicit migration responsibilities. Our <Link href="/blog/website-migration-cost-2026" className="text-cognac underline">migration cost guide</Link> explains the main scope decisions.
+                    </BlogText>
+
                     <BlogHeader id="recovery-timeline">The Honest Recovery Timeline</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
@@ -299,13 +372,13 @@ export default function WillMigratingHurtSeoPage() {
                         What you are watching for is the shape, not the dip. Some movement while search engines reprocess
                         a moved site is ordinary and it is not evidence that anything is broken. A decline that keeps
                         going, week after week, with nobody investigating it, is a different thing entirely and it is
-                        usually a redirect, canonical or indexing fault that is still live. The useful question after
-                        launch is never &ldquo;has traffic dropped&rdquo;, because the answer is often yes, and briefly.
-                        It is whether the line has stopped falling and started to turn.
+                        a reason to inspect redirects, canonicals, indexing, changed content and tracking alongside
+                        demand and competition. Use page-level evidence to identify the cause; the shape of a
+                        traffic chart alone cannot diagnose it.
                     </BlogText>
                     <BlogQuote>
-                        A brief dip you were warned about is a healthy migration. A slow, silent decline nobody is
-                        watching is a broken one. The difference is whether anyone is still looking after launch.
+                        Launch is a handover point, not the end of responsibility. Agree who investigates a decline
+                        and what evidence they will check before you sign the migration proposal.
                     </BlogQuote>
 
                     <div className="my-8 p-6 bg-amber-50 border border-amber-200 rounded-2xl">

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         description: "Step-by-step WordPress to Next.js migration: content export, 301 redirect mapping, SEO preservation, staged QA, controlled cutover, rollback, and monitoring.",
         type: "article",
         publishedTime: "2026-03-11",
-        modifiedTime: "2026-10-09T00:00:00-05:00",
+        modifiedTime: "2026-11-01T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs",
         images: [ogImageForPath("/blog/how-to-migrate-wordpress-to-nextjs")],
@@ -55,7 +55,7 @@ const articleSchema = {
             "description": "Step-by-step WordPress to Next.js migration: content export, 301 redirect mapping, SEO preservation, staged QA, controlled cutover, rollback, and monitoring.",
             "image": ogImageUrlForPath("/blog/how-to-migrate-wordpress-to-nextjs"),
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-10-09T00:00:00-05:00",
+            "dateModified": "2026-11-01T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -99,7 +99,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/how-to-migrate-wordpress-to-nextjs") },
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-10-09T00:00:00-05:00",
+            "dateModified": "2026-11-01T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -465,6 +465,13 @@ export default function MigrateWordPressToNextJSPage() {
                     {/* DIY vs Pro */}
                     <section className="mb-10">
                         <h2 className="text-3xl font-bold mb-4">DIY Migration vs Professional Migration: The Honest Comparison</h2>
+                        <BlogText>
+                            When comparing migration proposals, ask for the URL inventory, a representative content
+                            import, tested redirects and a named post-launch owner. For a corporate site or a large
+                            archive, also agree who approves content changes and how edits made during the build
+                            reach the new CMS. Our <Link href="/blog/will-migrating-hurt-my-seo#choose-migration-partner" className="text-cognac underline font-semibold">migration SEO buyer checklist</Link> covers
+                            those acceptance questions, with separate checks for content libraries and recruitment sites.
+                        </BlogText>
                         <BlogText>
                             This guide gives you the full process. But it is worth being direct about what DIY migration actually involves if you are not an experienced Next.js developer.
                         </BlogText>

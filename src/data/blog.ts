@@ -451,20 +451,20 @@ export const blogPosts: BlogPost[] = [
     id: "will-migrating-hurt-my-seo",
     cardStat: "Risk-led",
     cardStatLabel: "URL mapping, rendered checks and monitoring",
-    title: "Will Migrating My Website Hurt SEO? A 2026 Risk Guide",
+    title: "Will Migrating Hurt My SEO? Website Migration Checklist",
     excerpt: "A site migration can change crawling, indexing and ranking signals. Reduce avoidable risk with a URL inventory, relevant redirects, rendered checks, cutover controls and Search Console monitoring.",
     category: "Guide",
-    readTime: "8 min",
+    readTime: "12 min",
     date: "Jun 3",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "ranking",
-    lastModified: "2026-10-08",
+    lastModified: "2026-11-01",
     faqs: [
       {
         question: "Will I lose my Google rankings if I migrate my website?",
-        answer: "It can, and no one can promise you a standard dip-then-recovery curve, because search engines control indexing and timing. What is in your control is the avoidable part: unmapped URLs, content that got thinner in the rebuild, and pages that render differently to a crawler than to you. Those three cause most real losses. Read the shape of your own curve afterwards rather than the first week's number."
+        answer: "It can, and no one can promise you a standard dip-then-recovery curve, because search engines control indexing and timing. What is in your control is the avoidable part: unmapped URLs, content that got thinner in the rebuild, and pages that render differently to a crawler than to you. They are concrete implementation risks to test."
       },
       {
         question: "What URL mistake can create migration risk?",
@@ -472,7 +472,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: "How long does it take for traffic to recover after a migration?",
-        answer: "Nobody can give you a number, because search engines control reprocessing and timing, and anyone quoting you a fixed recovery window is guessing. What you can do is read the shape rather than wait on a date. A dip that bottoms out and starts climbing is reprocessing. A slow decline that never bottoms out is a defect, usually an unmapped URL, a redirect chain, a canonical pointing somewhere unintended, or a template that dropped content nobody noticed. Compare like-for-like date ranges in Search Console by page and query rather than sitewide totals, because the two patterns look identical for the first fortnight."
+        answer: "There is no fixed recovery date. Compare landing pages and queries against a dated baseline, check redirects, canonicals, rendered content and tracking, and account for seasonality and changes in demand. A traffic curve alone cannot distinguish reprocessing from a technical fault. Agree a monitoring owner and investigation process before launch."
       },
       {
         question: "Besides redirects, what else can hurt SEO during a migration?",
@@ -1751,7 +1751,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'performance',
-    lastModified: "2026-10-09",
+    lastModified: "2026-11-01",
     faqs: [
       { question: "How long does it take to migrate WordPress to Next.js?", answer: "Weeks, and the schedule is set by how many distinct templates your theme actually renders rather than by post count. Content moves in bulk through the REST API or an export; templates are rebuilt one at a time. Plugin-provided functionality is the wildcard, because each one has to be replaced or deliberately dropped." },
       { question: "Will I lose my Google rankings when migrating from WordPress to Next.js?", answer: "WordPress permalinks can usually be reproduced exactly in Next.js, so this migration can be near-neutral on addresses if you decide to keep them. Most losses come from the rendering change instead: check that every template ships its content in the initial HTML rather than assembling it client-side, and compare a representative page's rendered output on both sides." },
