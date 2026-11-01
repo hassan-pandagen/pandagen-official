@@ -85,6 +85,7 @@ const shots = [
 const dropdowns: Record<string, { name: string; href: string; note?: string }[]> = {
   Work: [
     { name: "All work", href: "/work" },
+    { name: "A Step Above Medical", href: "/work/a-step-above-medical" },
     { name: "Panda Patches", href: "/work/panda-patches", note: "Founder-affiliated business" },
     { name: "NorthDeck Group", href: "/work/northdeck-group" },
     { name: "Emblematic Studio", href: "/work/emblematic-studio" },
