@@ -1,7 +1,55 @@
-import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { SOCIAL_LINKS, type SocialId } from "@/data/social-links";
 
-/** The X logo. lucide-react's Twitter icon is the old bird, so X is drawn here. */
+/**
+ * lucide-react 1.x dropped its brand icons, so these three keep the exact outline
+ * shapes from lucide-react 0.468 (ISC licence), drawn the way lucide draws them.
+ */
+function OutlineIcon({ className, children }: { className?: string; children: React.ReactNode }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={className}
+    >
+      {children}
+    </svg>
+  );
+}
+
+function LinkedinLogo({ className }: { className?: string }) {
+  return (
+    <OutlineIcon className={className}>
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect width="4" height="12" x="2" y="9" />
+      <circle cx="4" cy="4" r="2" />
+    </OutlineIcon>
+  );
+}
+
+function InstagramLogo({ className }: { className?: string }) {
+  return (
+    <OutlineIcon className={className}>
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </OutlineIcon>
+  );
+}
+
+function FacebookLogo({ className }: { className?: string }) {
+  return (
+    <OutlineIcon className={className}>
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </OutlineIcon>
+  );
+}
+
+/** The X logo. lucide-react's Twitter icon was the old bird, so X is drawn here. */
 function XLogo({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
@@ -11,10 +59,10 @@ function XLogo({ className }: { className?: string }) {
 }
 
 const ICONS: Record<SocialId, (props: { className?: string }) => React.ReactElement> = {
-  linkedin: ({ className }) => <Linkedin aria-hidden="true" className={className} />,
+  linkedin: LinkedinLogo,
   x: XLogo,
-  instagram: ({ className }) => <Instagram aria-hidden="true" className={className} />,
-  facebook: ({ className }) => <Facebook aria-hidden="true" className={className} />,
+  instagram: InstagramLogo,
+  facebook: FacebookLogo,
 };
 
 /**
