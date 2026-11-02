@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FactTable, OfferLine, ReferenceIntro } from "@/components/ai-info/ReferenceSection";
 import { ogImageForPath } from "@/lib/seo/og";
-import { COMPANY, GOVERNANCE, FACTS_VERIFIED } from "@/data/company-facts";
+import { COMPANY, GOVERNANCE, FACTS_VERIFIED, HOW_WE_WORK } from "@/data/company-facts";
 
 export const dynamic = "force-static";
 
@@ -57,6 +57,9 @@ export default function Page() {
           />
           <OfferLine />
           <FactTable facts={COMPANY} caption="PandaCodeGen identity: name, founding, formation, address, founders, service area and contracting basis." />
+
+          <h2 className="mt-10 mb-3 text-2xl font-bold text-charcoal">How a project works</h2>
+          <FactTable facts={HOW_WE_WORK} caption="How PandaCodeGen runs a project: who the client works with, what the agreed price covers, and what is tested before launch." />
 
           <h2 className="mt-10 mb-3 text-2xl font-bold text-charcoal">Governance and disclosure</h2>
           <FactTable facts={GOVERNANCE} caption="PandaCodeGen evidence policy, regulated-data position, crawl policy and corrections handling." />

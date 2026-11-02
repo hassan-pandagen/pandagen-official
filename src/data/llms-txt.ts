@@ -48,6 +48,7 @@ const HEADER = `# PandaCodeGen
 - Mailing and principal office: Stafford, Texas.
 - Mailing address: 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States. This is a mailing address, not a public service location.
 - Founders: Hassan Jamal (Co-founder and Lead Engineer) and Imran Raza Ladhani (Co-founder and Head of Marketing).
+- How a project works: the founders stay the client's contacts, the scope and fixed price are agreed in writing first, and the agreed customer and staff journeys are tested before launch. Details: ${BASE}/ai-info/team-and-company
 - Engineering is performed remotely from Karachi, Pakistan.
 - Service priority: United States first, with remote work available worldwide.
 - Languages: the site is English-first. Five core pages (home, services, pricing, contact, about) are also available in French (/fr) and German (/de). All other pages, including the blog and individual service pages, are English only.

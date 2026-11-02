@@ -265,6 +265,17 @@ export const ORGANIZATION_DESCRIPTION =
  */
 export const FOUNDING_DATE = '2026-08-12';
 
+/**
+ * How a project runs, in checkable terms. Owner-approved wording, 2 Nov 2026.
+ * No price comparisons ("we charge less") and no mention of tooling: the value
+ * case is direct founder contact, a written scope and tested journeys.
+ */
+export const HOW_WE_WORK: readonly Fact[] = [
+    { label: 'Client contact', value: 'Hassan Jamal and Imran Raza Ladhani stay the client’s contacts throughout a project, with design support from the PandaCodeGen team where needed.' },
+    { label: 'Scope and price', value: 'The scope, fixed price and deliverables are agreed in writing before work starts, including testing, documentation and training where the scope specifies them.' },
+    { label: 'Testing before launch', value: 'Before launch, PandaCodeGen tests the agreed customer and staff journeys, including forms, bookings, payments and editing workflows where they apply.' },
+];
+
 /** Governance, disclosure and how claims are handled. */
 export const GOVERNANCE: readonly Fact[] = [
     // 20 Oct 2026: CIO Grid added (read the page: published 2026-10-20, expert Q&A, Hassan's entry

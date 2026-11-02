@@ -1,6 +1,6 @@
 import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import { POST_LAUNCH_SUPPORT_SUMMARY } from "@/data/company-facts";
-import { FileCheck2, Gauge, KeyRound, LifeBuoy, PencilLine, UserRound } from "lucide-react";
+import { FileCheck2, Gauge, KeyRound, LifeBuoy, PencilLine, Route, UserRound } from "lucide-react";
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -16,6 +16,9 @@ import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 //                       "the pages named in your scope" and "before handover",
 //                       which are the conditions that make it true
 //   Support after launch: owner-confirmed policy in company-facts.ts.
+//   Tested journeys     company-facts HOW_WE_WORK "Testing before launch",
+//                       owner-approved 2 Nov 2026; "where they apply" keeps it true
+//                       for sites without bookings or payments
 // Do not add a row without a source. Dimmed text is #8C877F on charcoal
 // (4.9:1), so the resting state still passes AA; on touch screens nothing dims.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -25,6 +28,7 @@ const rows = [
   { label: "Fixed scope.", Icon: FileCheck2, text: "Scope and price agreed before work starts. The written terms control the final price." },
   { label: "Code you own.", Icon: KeyRound, text: "Source code, design files, CMS models and production accounts end up under your control." },
   { label: "Content editor.", Icon: PencilLine, text: "Every package includes an editor built into your own site." },
+  { label: "Tested journeys.", Icon: Route, text: "Before launch, we test the agreed customer and staff journeys: forms, bookings, payments and editing, where they apply." },
   { label: "Measured at handover.", Icon: Gauge, text: "A 90+ Lighthouse target on mobile and desktop for the pages named in your scope, checked before handover." },
   { label: "Support after launch.", Icon: LifeBuoy, text: POST_LAUNCH_SUPPORT_SUMMARY },
 ];
