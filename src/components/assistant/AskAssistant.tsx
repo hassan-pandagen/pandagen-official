@@ -203,6 +203,7 @@ export default function AskAssistant() {
   const panelOpenedAt = useRef(0);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- browser storage can only be read after hydration
     setMessages(load());
     const stored = loadLive();
     const watched = loadWatch();
@@ -231,11 +232,13 @@ export default function AskAssistant() {
   }, [watch, restored]);
   useEffect(() => {
     openRef.current = open;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- opening the panel clears the unread dot
     if (open) setUnread(false);
     if (open && !panelOpenedAt.current) panelOpenedAt.current = Date.now();
   }, [open]);
   useEffect(() => {
     try {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- browser storage can only be read after hydration
       setLeadSent(sessionStorage.getItem(LEAD_STORE) === "1");
     } catch {
       /* storage unavailable */
