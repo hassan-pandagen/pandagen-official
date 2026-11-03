@@ -1,0 +1,30 @@
+{
+  "source": "Google Search Console, domain property sc-domain:pandacodegen.com, Links > Top linking sites (owner-supplied screenshots)",
+  "captured": "2026-11-03",
+  "total_external_links": 546,
+  "linking_sites_total": 32,
+  "rows_captured": "1-15 and 26-32; rows 16-25 not supplied",
+  "rows": [
+    {"site": "astepabovemed.com", "linking_pages": 188, "target_pages": 1},
+    {"site": "pandapatches.com", "linking_pages": 187, "target_pages": 1},
+    {"site": "goodfirms.co", "linking_pages": 60, "target_pages": 1},
+    {"site": "designrush.com", "linking_pages": 37, "target_pages": 1},
+    {"site": "ladies4jesus.com", "linking_pages": 18, "target_pages": 1},
+    {"site": "trustpilot.com", "linking_pages": 11, "target_pages": 1},
+    {"site": "emblematicstudio.com", "linking_pages": 8, "target_pages": 1},
+    {"site": "vercel.com", "linking_pages": 4, "target_pages": 2},
+    {"site": "crunchbase.com", "linking_pages": 3, "target_pages": 1},
+    {"site": "dardo.studio", "linking_pages": 3, "target_pages": 1},
+    {"site": "g2.com", "linking_pages": 2, "target_pages": 1},
+    {"site": "indiehackers.com", "linking_pages": 2, "target_pages": 1},
+    {"site": "msn.com", "linking_pages": 2, "target_pages": 1},
+    {"site": "startdigitalnomad.com", "linking_pages": 2, "target_pages": 1},
+    {"site": "sanity.io", "linking_pages": 1, "target_pages": 1},
+    {"site": "sceptermarketing.com", "linking_pages": 1, "target_pages": 1},
+    {"site": "storeownertips.com", "linking_pages": 1, "target_pages": 1},
+    {"site": "tracxn.com", "linking_pages": 1, "target_pages": 1},
+    {"site": "vai.me", "linking_pages": 1, "target_pages": 1},
+    {"site": "womansworld.com", "linking_pages": 1, "target_pages": 1},
+    {"site": "yahoo.com", "linking_pages": 1, "target_pages": 1}
+  ]
+}

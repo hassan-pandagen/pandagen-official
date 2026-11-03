@@ -18,6 +18,22 @@ The displayed target-page table consequently contains **no clean independent dee
 | Developer and community surfaces | `vercel.com` (3), `dev.to` (2 across 2 targets), `indiehackers.com` (1), `reddit.com` (1), `sanity.io` (1), `twitter.com` (1) | Existing technical/community footprint. The article-level DEV link is owner-authored/canonical distribution, not independent editorial validation. Vercel and Sanity partner listings remain separate opportunities, but the domains themselves are not new referring domains. |
 | Other observed domains | `seznam.cz` (2), `mnplasticsurgery.com` (1), `storeownertips.com` (1), `wordpress-website-design-agency-in-united-states.com` (1) | The Store Owner Tips deep link is an inaccurate numerical attribution and is queued for correction. Inspect the remaining exact linking pages and anchors before assigning value. |
 
+## GSC update, 3 November 2026
+
+The owner supplied a new **Top linking sites** view: **32 linking sites and 546 total external links**, against 22 sites and 249 links on 17 September. Rows 16 to 25 were not in the screenshots, so a domain missing from the list below may simply sit in those rows. [Raw transcription](captures/gsc-top-linking-sites-owner-supplied-2026-11-03.json)
+
+Most of the extra 297 links come from two site-wide links: `astepabovemed.com` (188 pages, new) and `pandapatches.com` (187, up from 171). Each is one site vouching, not hundreds of endorsements. The real change is breadth.
+
+| Change since 17 Sep | Sites |
+| --- | --- |
+| New delivered-work sites | `astepabovemed.com` (188), `emblematicstudio.com` (8). `ladies4jesus.com` grew from 6 to 18 |
+| New directories and company databases | `g2.com` (2), `tracxn.com` (1). `goodfirms.co` grew from 11 to 60, `designrush.com` from 27 to 37, `trustpilot.com` from 8 to 11 |
+| New, not yet inspected | `dardo.studio` (3), `startdigitalnomad.com` (2), `sceptermarketing.com` (1), `vai.me` (1), `yahoo.com` (1). Check the exact linking page and anchor before assigning value; Yahoo, like MSN, may be syndication |
+| Unchanged or small moves | `vercel.com` 3 to 4 (now 2 target pages), `msn.com` 3 to 2, `crunchbase.com` 4 to 3, `indiehackers.com`, `sanity.io`, `storeownertips.com` (the deep link still needs its correction), `womansworld.com` |
+| Not in the captured rows | `aol.com`, `connectively.us`, `qwoted.com`, `reddit.com`, `twitter.com`, `dev.to`, `f6s.com`, `seznam.cz`, `mnplasticsurgery.com`, `wordpress-website-design-agency-in-united-states.com`. Possibly in rows 16 to 25; confirm before treating any as lost |
+
+Not yet visible: the CIO Grid quotation (live since 20 Oct) and the TechBullion answer selected through Connectively on 20 Oct, whose article Google had not indexed on 3 Nov. Bing Webmaster Tools separately listed 20 linking domains on 1 Nov, including MSN (4), Vercel (4), Forem (2), CB Insights and NewsBreak.
+
 The strategic gap is therefore narrower than “get directory links.” PandaCodeGen already has profile, review, press, syndication and developer-community domains. The higher-value next work is earning **independent, relevant pages about the actual services and implementations**, pointing to the matching case study, technical resource or service page rather than adding more repeated homepage links.
 
 ## Existing footprint
