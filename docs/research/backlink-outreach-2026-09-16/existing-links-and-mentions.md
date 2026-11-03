@@ -32,7 +32,7 @@ Most of the extra 297 links come from two site-wide links: `astepabovemed.com` (
 | Unchanged or small moves | `vercel.com` 3 to 4 (now 2 target pages), `msn.com` 3 to 2, `crunchbase.com` 4 to 3, `indiehackers.com`, `sanity.io`, `storeownertips.com` (the deep link still needs its correction), `womansworld.com` |
 | Not in the captured rows | `aol.com`, `connectively.us`, `qwoted.com`, `reddit.com`, `twitter.com`, `dev.to`, `f6s.com`, `seznam.cz`, `mnplasticsurgery.com`, `wordpress-website-design-agency-in-united-states.com`. Possibly in rows 16 to 25; confirm before treating any as lost |
 
-Not yet visible: the CIO Grid quotation (live since 20 Oct) and the TechBullion answer selected through Connectively on 20 Oct, whose article Google had not indexed on 3 Nov. Bing Webmaster Tools separately listed 20 linking domains on 1 Nov, including MSN (4), Vercel (4), Forem (2), CB Insights and NewsBreak.
+The owner confirmed on 3 Nov that `ciogrid.com` (the 20 Oct expert quotation) now appears in GSC, in rows not captured here. Not yet visible: the TechBullion answer selected through Connectively on 20 Oct, whose article Google had not indexed on 3 Nov. Bing Webmaster Tools separately listed 20 linking domains on 1 Nov, including MSN (4), Vercel (4), Forem (2), CB Insights and NewsBreak.
 
 The strategic gap is therefore narrower than “get directory links.” PandaCodeGen already has profile, review, press, syndication and developer-community domains. The higher-value next work is earning **independent, relevant pages about the actual services and implementations**, pointing to the matching case study, technical resource or service page rather than adding more repeated homepage links.
 
