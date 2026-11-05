@@ -17,9 +17,9 @@ const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalB
 const postId = "top-nextjs-agencies-2026";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "Next.js Development Agencies in 2026: A Disclosed Shortlist";
+const title = "Top Next.js Development Agencies in 2026: 8 Compared";
 const description =
-    "Eight Next.js and software engineering partners compared from their own published evidence, with clear inclusion rules and questions to check scope and team.";
+    "Compare eight Next.js agencies by services, project fit and migration capabilities. Learn what to ask about pricing, ownership, support and the delivery team.";
 
 export const dynamic = "force-static";
 
@@ -201,7 +201,7 @@ export default function TopNextjsAgenciesPage() {
                       <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Agency selection</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Next.js Development Agencies: <span className="italic text-cognac">A Disclosed 2026 Shortlist</span>
+                            Top Next.js Development Agencies in 2026: <span className="italic text-cognac">8 Compared</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Eight firms worth looking at, described from what each one currently says on its own service
