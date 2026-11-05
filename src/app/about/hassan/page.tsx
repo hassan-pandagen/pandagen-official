@@ -102,7 +102,7 @@ export default function HassanProfilePage() {
               <ArrowLeft className="h-4 w-4" aria-hidden="true" /> Back to PandaCodeGen
             </Link>
             <a href="#hassan-press" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-cognac underline underline-offset-4 hover:text-charcoal">
-              Quoted in Woman&rsquo;s World <span aria-hidden="true">↓</span>
+              Press contributions <span aria-hidden="true">↓</span>
             </a>
           </div>
           <div className="mt-6 grid gap-7 sm:mt-8 sm:gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">

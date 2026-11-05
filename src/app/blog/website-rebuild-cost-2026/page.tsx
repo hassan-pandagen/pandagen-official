@@ -205,6 +205,13 @@ export default function WebsiteRebuildCostPage() {
                         constraints or a business change the current system cannot support. A news event or platform
                         critique does not make every site an urgent rebuild.
                     </BlogText>
+                    <BlogText>
+                        For Panda Patches, the practical signal was that quotes, order updates and customer messages
+                        were being handled in email and spreadsheets outside the website. Hassan discussed that
+                        decision in his{" "}
+                        <a href="https://ciogrid.com/qa/how-it-leaders-decide-when-to-modernize-aging-systems/" className={linkClass}>CIO Grid contribution on modernizing aging systems</a>.
+                        {" "}Panda Patches is owned by co-founder Imran Raza Ladhani.
+                    </BlogText>
 
                     <BlogQuote>
                         A rebuild is not a redesign with new colours. It changes the platform and reworks the structure underneath it.

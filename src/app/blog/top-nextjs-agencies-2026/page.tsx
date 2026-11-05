@@ -385,6 +385,13 @@ export default function TopNextjsAgenciesPage() {
                         <Link href="/work" className={sourceLinkClass}>case study section</Link>. Apply the same
                         evidence test to every provider on this page.
                     </BlogText>
+                    <BlogText>
+                        For a concrete example, see the{" "}
+                        <Link href="/work/a-step-above-medical" className={sourceLinkClass}>A Step Above Medical website and training portal</Link>.
+                        {" "}Hassan explained how we checked existing service allowances before recommending additional
+                        subscriptions in his{" "}
+                        <a href="https://techbullion.com/16-keys-to-successful-resource-allocation-in-software-projects/" className={sourceLinkClass}>TechBullion contribution on software project budgeting</a>.
+                    </BlogText>
 
                     <BlogHeader>Do not hire a framework label</BlogHeader>
                     <BlogText>
