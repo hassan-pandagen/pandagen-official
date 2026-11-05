@@ -210,6 +210,7 @@ export default function ProofSection() {
             </p>
             <div className="mt-4 grid gap-3">
               {[
+                { name: "TechBullion", href: "https://techbullion.com/16-keys-to-successful-resource-allocation-in-software-projects/", topic: "resource allocation in software projects" },
                 { name: "CIO Grid", href: "https://ciogrid.com/qa/how-it-leaders-decide-when-to-modernize-aging-systems/", topic: "when to modernize aging systems" },
                 { name: "Woman\u2019s World", href: "https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay", topic: "how remote AI-training work operates" },
               ].map((publication) => (

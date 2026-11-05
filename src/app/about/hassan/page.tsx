@@ -148,8 +148,22 @@ export default function HassanProfilePage() {
               careful paragraph directly beneath it, which says only that he was
               quoted on how that work operates. An H2 on an entity page is a strong
               signal about what this company IS, and "AI expert" is not it. */}
-          <h2 id="hassan-press" className="mt-3 scroll-mt-28 text-3xl font-bold md:text-4xl">Quoted in CIO Grid and Woman&rsquo;s World</h2>
+          <h2 id="hassan-press" className="mt-3 scroll-mt-28 text-3xl font-bold md:text-4xl">Quoted in TechBullion, CIO Grid and Woman&rsquo;s World</h2>
           <div className="mt-8 space-y-5 border-y border-stone-400 py-6 md:py-8">
+            {/* 5 Nov 2026: TechBullion article, published that day. Describe the topic only. */}
+            <p className="max-w-4xl text-lg leading-8 text-stone-700">
+              <a
+                href="https://techbullion.com/16-keys-to-successful-resource-allocation-in-software-projects/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-serif text-xl italic text-cognac underline decoration-cognac/40 underline-offset-4 transition-colors hover:decoration-cognac"
+              >
+                TechBullion
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>{" "}
+              quoted Hassan on resource allocation in software projects, using the A Step Above Medical website and
+              training system as his example. November 2026.
+            </p>
             {/* 20 Oct 2026: CIO Grid expert Q&A, published that day. Describe the topic only. */}
             <p className="max-w-4xl text-lg leading-8 text-stone-700">
               <a
