@@ -1,6 +1,7 @@
 import Link from "next/link";
 import StackGuide, { GuideTable, stackGuideMetadata } from "@/components/blog/StackGuide";
 import { asOf, spec } from "@/data/spec-facts";
+import { BlogList } from "@/components/ui/BlogStyles";
 
 const id = "website-monthly-running-cost";
 export const metadata = stackGuideMetadata(id);
@@ -40,6 +41,18 @@ export default function Page() {
   const hoRenewal = spec("hostinger-premium-renewal");
   return <StackGuide id={id}>
     <p><strong>A custom website with a content editor costs about $20 a month to run on our usual stack: Vercel Pro hosting at {vercelPro.value}, with Sanity&apos;s editor and Resend&apos;s email on their free plans. If the project also needs a database and sign-in, Supabase Pro adds {supabasePro.value}, for about $45 a month in total.</strong> Your domain is extra, paid yearly to whichever registrar you bought it from. Prices as of {asOf("vercel-pro-price")}.</p>
+    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+      <h2 className="mb-4 text-2xl font-bold text-charcoal">Key takeaways</h2>
+      <BlogList
+        items={[
+          `A custom website with a content editor costs about $20 a month to run: Vercel Pro hosting at ${vercelPro.value}, with Sanity's editor and Resend's email on their free plans.`,
+          `If the project also needs a database and sign-in, Supabase Pro adds ${supabasePro.value}, for about $45 a month in total.`,
+          "Your domain is extra, bought in your own name and paid yearly to whichever registrar you bought it from.",
+          "A business website is commercial, so it goes on Vercel Pro rather than Vercel's Hobby plan.",
+          `Shared WordPress hosts advertise first-term rates, and the SiteGround StartUp snapshot renews at about ${times(sgIntro.value, sgRenewal.value)} its first-term rate.`,
+        ]}
+      />
+    </section>
     <h2>The monthly bill, line by line</h2>
     <GuideTable caption={`Monthly running costs as of ${asOf("vercel-pro-price")}`} headers={["Job", "Service and plan", "Monthly cost", "What the plan includes"]} rows={[
       ["Hosting", "Vercel Pro", vercelPro.value, vercelPro.qualifier],

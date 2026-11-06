@@ -158,6 +158,18 @@ export default function WordPressMigrationCostPage() {
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wordpress-migration-cost" published="2026-03-22" readTime="8 min read" />
 
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">Key takeaways</h2>
+                        <BlogList
+                            items={[
+                                "Moving the same WordPress site to a new host is a different job and usually free, so don't pay platform-migration prices for a host change.",
+                                "Templates, data and integrations move a quote between tiers, and URL count rarely does.",
+                                "A cheap quote usually leaves out forwarding every old URL, content reconciliation, rebuilding page-builder layouts and form handling end to end.",
+                                "If the measured bottleneck is specific and repairable, fix it on WordPress and re-test before concluding the platform is the constraint.",
+                            ]}
+                        />
+                    </section>
+
                     
                     {/* 8 Oct 2026: removed quotation whose full source could not be independently rechecked. */}
                     {/* 8 Oct 2026: removed quotation whose full source could not be independently rechecked. */}

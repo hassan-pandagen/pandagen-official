@@ -258,6 +258,19 @@ export default function CloudflareEmDashPage() {
                         ))}
                     </section>
 
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">Key takeaways</h2>
+                        <BlogList
+                            items={[
+                                `EmDash 1.0 shipped on ${v("emdash-1-0-release-date")} and Cloudflare calls it "ready to power a production website", but its ecosystem is six months old, so pilot it before trusting it in production.`,
+                                "EmDash runs only inside Astro, on Cloudflare or Node.js, so it isn't an option for a Next.js site.",
+                                "EmDash plugins run sandboxed on Cloudflare and, since May 2026, on Node.js, but the CPU and subrequest limits are only enforced on Cloudflare.",
+                                `The official EmDash plugin registry showed ${v("emdash-registry-plugin-count")} entries on 4 October 2026, a long way from WordPress's plugin directory.`,
+                                "EmDash has no drag-and-drop page builder and no theme switcher, so changing the design means a developer.",
+                            ]}
+                        />
+                    </section>
+
                     <div className="space-y-8">
                         <BlogHeader>What Cloudflare actually launched</BlogHeader>
 

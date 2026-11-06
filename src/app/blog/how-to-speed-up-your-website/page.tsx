@@ -152,6 +152,18 @@ function WebsiteSpeedGuideContent({ preview = false }: { preview?: boolean }) {
                     </header>
 
                     {preview ? <div data-article-byline className="flex items-center gap-3"><Image src="/team/hassan.png" alt="Hassan Jamal" width={56} height={56} className="h-14 w-14 object-cover" /><p><Link href="/about/hassan" className="font-semibold underline underline-offset-4">Hassan Jamal</Link><span className="block text-sm">Co-founder and Lead Engineer · April 30, 2026 · 14 min read</span></p></div> : <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="how-to-speed-up-your-website" published="2026-04-30" readTime="14 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />}
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">Key takeaways</h2>
+                        <BlogList
+                            items={[
+                                "Pick one page that feels slow, find where the wait happens, make one useful change, then test that same page again.",
+                                "When PageSpeed Insights field data and the lab score disagree, start with the field data, because it describes what real visitors experienced.",
+                                "Google's good thresholds are Largest Contentful Paint at or under 2.5 seconds, Interaction to Next Paint at or under 200 milliseconds and Cumulative Layout Shift at or under 0.1, judged at the 75th percentile of visits.",
+                                "A Lighthouse performance score is a weighted summary of lab metrics, not a fourth vital and not a ranking cutoff.",
+                                "Measure time to first byte before blaming hosting: on this page an 81 ms first byte against a 1,952 ms DOMContentLoaded pointed to work after the server responded.",
+                            ]}
+                        />
+                    </section>
                     <BlogHeader id="where-to-start">Start with the page that feels slow</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
