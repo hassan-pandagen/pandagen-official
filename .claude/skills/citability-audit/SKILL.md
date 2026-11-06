@@ -70,6 +70,12 @@ is hard to answer has already lost.
 
 **Fix:** move the answer to the front of the paragraph. Keep the caveat, put it second.
 
+Also check for a **summary box near the top** ("The short answer" or "Key takeaways",
+3–6 bullets, directly after the author line). Kevin Indig's study found that 44.2% of
+ChatGPT citations come from the first 30% of a page. Bullets restate claims already
+on the page; never add a new one. (Added 6 Nov 2026, see
+`docs/research/aeo-structure-audit-2026-11-06.md`.)
+
 ### 3. Chunk independence
 
 Read each section as if it were the only thing on the page.
@@ -108,6 +114,14 @@ measure instead — that is itself a citable position.
 - One idea per paragraph; split anything carrying two.
 - Headings **describe what the section answers**, and are addressed to the reader.
   A heading written to a writer ("Do not publish a universal speed ceiling") is a defect.
+- **Question-style headings** where the section answers a question a reader would type
+  ("Which page should you test first?" rather than "Start with the page that feels slow").
+  Same facts, new wording only.
+
+Optional measurement: Nectiv's `analyze.py` (github.com/Nectiv-Digital/nectiv-claude-skills)
+scores definitive language, question headings, entity density, tables and freshness.
+Treat its numbers as hints. On 6 Nov 2026 our second most-cited post scored worst on
+most of them. Never firm up a claim or add a statistic to move a score.
 
 ## Output format
 
