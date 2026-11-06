@@ -21,7 +21,7 @@ import FoundersDark from "@/components/redesign/FoundersDark";
 import FaqOpen from "@/components/redesign/FaqOpen";
 import GuidesList from "@/components/redesign/GuidesList";
 import { T } from "@/components/redesign/tokens";
-import { ONE_TEAM } from "@/data/company-facts";
+import OneTeam from "@/components/redesign/OneTeam";
 
 // The homepage design; src/app/page.tsx renders it. Built 23 Sep 2026 as the
 // /preview/hero draft beside the old homepage, and moved here on 8 Oct 2026 when
@@ -184,24 +184,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
       </section>
       {/* 26 Oct 2026, owner-approved wording. "Services you hire us to deliver" keeps the
           promise to the scope bought: it doesn't say every plan covers every service. */}
-      <section data-home-one-team className="relative px-6 pb-8 md:px-10 md:pb-16" style={{ backgroundColor: T.paper }}>
-        <div className="mx-auto max-w-[44rem] text-[18px] leading-[1.65]" style={{ color: BODY }}>
-          <h2 className="mb-3 text-[24px] font-semibold leading-tight md:text-[28px]" style={{ color: INK }}>
-            {ONE_TEAM.heading}
-          </h2>
-          <p className="mb-4">{ONE_TEAM.summary}</p>
-          <p className="mb-4">{ONE_TEAM.whenItBreaks}</p>
-          <p className="mb-4">{ONE_TEAM.security}</p>
-          <ul className="space-y-2 text-[16px] leading-[1.6]">
-            {ONE_TEAM.examples.map((e) => (
-              <li key={e.href}>
-                <Link href={e.href} className="font-medium underline underline-offset-4" style={{ color: ACCENT }}>{e.name}</Link>
-                {" "}({e.relationship}). {e.did}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <OneTeam />
       <ServicesStack />
       <ProofSection />
       <HowWeWork />
