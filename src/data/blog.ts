@@ -659,7 +659,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "code",
-    lastModified: "2026-10-09",
+    lastModified: "2026-11-10",
     faqs: [
       { question: "Who are the top Next.js development agencies in 2026?", answer: "This disclosed shortlist includes Bejamas, Blazity, Brainhub, FocusReactive, Naturaily, Netguru, Pagepro and PandaCodeGen. It is not an objective ranking. Compare each provider's current first-party evidence, assigned team, relevant references, scope, acceptance, ownership, support and current quote." },
       { question: "Which Next.js agency has the lowest published minimum project size?", answer: "PandaCodeGen publishes starting tiers of $1,500 Starter, $3,500 Growth and $5,000 Scale. The article does not claim that other providers' changing minimums or quotes are lower or higher. Obtain current like-for-like proposals before comparing price." },
