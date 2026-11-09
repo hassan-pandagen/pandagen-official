@@ -369,7 +369,7 @@ export default function WooCommerceMigrationCostPage() {
 
                     <BlogHeader id="cutover">How to migrate a live store</BlogHeader>
                     <BlogText>
-                        The old store can usually remain available during build and test, but no provider should promise universal zero interruption. Agree in advance how long you can stop writing to the store, what checkout does during that window, and who signs the cutover off. Seven steps, and the reconciliation either side of the switch is what proves nothing was lost.
+                        Keep the old store open while the replacement is built and tested. Before switching, agree whether orders or staff changes need to pause, how long that pause can last and who approves launch. Compare order, customer and product records before and after the switch to catch missing or duplicate entries.
                     </BlogText>
                     <BlogList
                         items={[
@@ -383,9 +383,7 @@ export default function WooCommerceMigrationCostPage() {
                         ]}
                     />
                     <BlogText>
-                        The old store can usually remain available during build and test, but no provider should promise
-                        universal zero interruption. Agree in advance how long you can stop writing to the store, what checkout does during that
-                        window, and who signs the cutover window off in the accepted plan.
+                        Keep selling on the old store during the build. If launch needs a short pause in checkout or staff changes, agree that window and the person who approves it beforehand.
                     </BlogText>
 
                     <BlogHeader id="ownership">Ownership and accounts</BlogHeader>
@@ -419,8 +417,7 @@ export default function WooCommerceMigrationCostPage() {
                         maintenance, security, support, your own team's hours, and what it costs to leave later. Only claim a business benefit if your own data shows
                         it. Nothing here automatically produces a ranking, a conversion lift or a payback date. If speed is the trigger, start with{" "}
                         <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline">diagnosing a slow WooCommerce store</Link>{" "}
-                        before assuming a rebuild. If the question is architectural, compare the two operating models
-                        in{" "}
+                        before assuming a rebuild. To compare how your store would be built and managed, read{" "}
                         <Link href="/blog/woocommerce-vs-custom-website" className="text-cognac hover:underline">WooCommerce versus a custom website</Link>. Work
                         that goes beyond a storefront belongs under{" "}
                         <Link href="/services/custom-engineering" className="text-cognac hover:underline">custom engineering</Link>.
@@ -434,7 +431,7 @@ export default function WooCommerceMigrationCostPage() {
                     <BlogList
                         items={[
                             "Design and build scope stated template by template, not as a theme reskin.",
-                            "Catalog, content and media migration with a documented URL disposition and redirect map.",
+                            "Move products, content and images, with a list of addresses to keep or redirect.",
                             "Metadata, canonicals, structured data and URL structure listed as things you are owed, with evidence you can check them against.",
                             "Test coverage across devices, browsers, checkout and every named integration.",
                             "Launch support, a monitoring window and a written rollback plan with named owners.",
@@ -487,8 +484,7 @@ export default function WooCommerceMigrationCostPage() {
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Get a store-data inventory before a price</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
-                            We will map the catalog, customer, order, payment and extension scope before recommending a
-                            target or cutover plan.
+                            We will check your products, customers, orders, payment setup and extensions before recommending a replacement and planning the switch.
                         </p>
                         <QuoteModalButton cta="woocommerce_migration_cost_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
                             Ask us about your store <ArrowRight className="h-4 w-4" />

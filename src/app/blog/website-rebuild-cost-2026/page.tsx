@@ -347,7 +347,7 @@ export default function WebsiteRebuildCostPage() {
 
                     <BlogHeader id="red-flags">Proposal red flags without accusing a quote of padding</BlogHeader>
                     <BlogText>
-                        A high quote may simply include more work or more risk. Six things in a proposal signal a scope problem rather than a pricing one, and the correct response to all six is the same: call the quotes non-comparable until the statements of work are normalized. Do not claim a provider padded it without evidence.
+                        A higher quote may include more work, testing or support. These six signs help you find differences in what is included. Ask each provider to price the same list of work before deciding which offers better value.
                     </BlogText>
                     <BlogList
                         items={[
@@ -361,7 +361,7 @@ export default function WebsiteRebuildCostPage() {
                     />
                     <BlogText>
                         A high quote may include more work or risk. Call it non-comparable until the statements of work
-                        are normalized; do not claim the provider padded it without evidence.
+                        cover the same work; a higher price may include services the other quote leaves out.
                     </BlogText>
                     <BlogText>
                         Because a rebuild bundles strategy and design work on top of the technical work, the gaps show
@@ -393,9 +393,7 @@ export default function WebsiteRebuildCostPage() {
 
                     <BlogHeader id="roi-math">How do you calculate rebuild ROI?</BlogHeader>
                     <BlogText>
-                        Define the one-time and ongoing cost, then identify measurable cash flow, internal time, risk or
-                        capability changes attributable to the rebuild. Use low, central and high scenarios and report
-                        uncertainty. A faster site or new design does not establish incremental revenue by itself. Our{" "}
+                        Add the build price and ongoing bills. Then estimate what the rebuild could save in staff time or subscriptions, and which customer tasks it would improve. Compare a cautious, expected and optimistic outcome. Treat extra sales as an estimate until your results show them. Our{" "}
                         <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className={linkClass}>three-year cost comparison of WordPress and custom code</Link>{" "}
                         shows one way to lay the ongoing side of that calculation out.
                     </BlogText>
@@ -444,7 +442,7 @@ export default function WebsiteRebuildCostPage() {
                         items={[
                             "The platform fits and a targeted repair addresses the measured problem.",
                             "Content, positioning or operations are unresolved and will stall any build.",
-                            "The business cannot own the target operating model.",
+                            "There is no budget or named team to maintain the new website and its connected tools.",
                             "Expected value does not justify cost and migration risk.",
                             "A redesign or isolated integration change meets the requirement.",
                             "You are heading into your busiest trading period. Launch risk is concentrated in the first days after a cutover, and that is the worst week to spend on it.",
@@ -466,7 +464,7 @@ export default function WebsiteRebuildCostPage() {
                         Any result a provider shows you should carry four things: the date it was measured, the site it
                         came from, the method used to measure it, and the client&apos;s permission to publish it. Ask for
                         all four, from us and from anyone else you are comparing. Where we cannot show all four, we
-                        describe the work and the acceptance criteria instead, and you hold us to the signed scope
+                        describe the work and the checks before you approve it instead, and you hold us to the signed scope
                         rather than to a headline. Our <Link href="/work" className={linkClass}>published project work</Link>{" "}
                         is where we apply that same standard to ourselves.
                     </InsightBox>

@@ -131,9 +131,7 @@ export default function WebflowVsCustomWebsitePage() {
                             Webflow vs Custom Website: <span className="italic text-cognac">A Four-Factor Decision</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Webflow combines visual design, CMS and managed hosting. Custom code gives an organization
-                            more implementation control and more operating responsibility. Choose from the actual
-                            editing, feature, ownership and lifecycle requirements, not a platform score.
+                            Webflow gives your team a visual editor and hosting in one service. A custom website lets us build the pages, bookings and business connections around your needs. Compare what staff can update, what customers need to do, what you own and who will maintain it.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed August 3, 2026 against current Webflow and Google documentation.
@@ -176,7 +174,7 @@ export default function WebflowVsCustomWebsitePage() {
                     <BlogHeader>Four things that decide Webflow or custom</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Four factors decide this, and none of them is speed or design quality. Editing asks who ships a page change. Requirements ask whether the platform can express what you need. Control asks who holds the code and the accounts. Lifecycle asks who can afford to run it. Answer all four before you compare anything else.
+                            Start with four practical questions. Can your staff update the site? Can customers complete the tasks you need? Who owns the code and accounts? What will hosting, support and future changes cost? Then compare the design and speed of the finished websites.
                         </BlogText>
                     </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
@@ -188,7 +186,7 @@ export default function WebflowVsCustomWebsitePage() {
                                 <tr><td className="p-4 font-bold">Editing</td><td className="p-4">Do visual design and current editor roles fit the team?</td><td className="p-4">Which CMS and preview workflow will replace them?</td></tr>
                                 <tr><td className="p-4 font-bold">Requirements</td><td className="p-4">Can native features, code components or supported apps deliver the need?</td><td className="p-4">Does the requirement justify custom product work?</td></tr>
                                 <tr><td className="p-4 font-bold">Control</td><td className="p-4">Are platform access, export and provider boundaries acceptable?</td><td className="p-4">Who owns code, data, accounts, security and release?</td></tr>
-                                <tr><td className="p-4 font-bold">Lifecycle</td><td className="p-4">Do current plans, add-ons and managed operation fit?</td><td className="p-4">Can the organization fund and maintain the providers and code?</td></tr>
+                                <tr><td className="p-4 font-bold">Running costs and support</td><td className="p-4">Do the plan, extra services and included support meet your needs?</td><td className="p-4">Who pays for hosting and services, and who keeps the code updated?</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -328,9 +326,9 @@ export default function WebflowVsCustomWebsitePage() {
                         including what has to be true of the scope for it to be honest at that number.
                     </BlogText>
                     <BlogText>
-                        Two lifecycle details are worth pricing explicitly. First, editor seats: count the people who
+                        Check two ongoing costs before choosing. First, editor seats: count the people who
                         need to log in and check how each option bills them, because a platform that charges per seat
-                        and a self-operated CMS that does not will diverge as the team grows. Second, plan ceilings:
+                        and an editor your developer hosts and maintains that does not will diverge as the team grows. Second, plan ceilings:
                         managed plans commonly cap CMS items, form submissions and bandwidth, and a custom build does
                         not remove those limits so much as move them to the hosting and service contracts you choose.
                         Neither option is unlimited. Know which ceiling you are buying and what happens when you reach
@@ -354,7 +352,7 @@ export default function WebflowVsCustomWebsitePage() {
                         items={[
                             "Architecture designed around the accepted experience and data requirements.",
                             "Choice of CMS, deployment, providers and release process.",
-                            "Repository and account control under the agreed operating model.",
+                            "Who owns the project code and accounts, and how another developer can take over.",
                             "A documented path to replace individual vendors or another development team.",
                             "Custom integrations, workflows and measurement when the business case supports them.",
                         ]}
@@ -437,7 +435,7 @@ export default function WebflowVsCustomWebsitePage() {
                     <BlogHeader>If you leave Webflow, what happens next?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Six steps, and the fourth is the one that protects you: build and migrate in parallel while the current site stays live, so the decision stays reversible until cutover. Nothing here is specific to Webflow. It is the same sequence any platform move needs if search traffic is at stake.
+                            Six steps, and the fourth is the one that protects you: build and migrate in parallel while the current site stays live, so the decision stays reversible until launch. Nothing here is specific to Webflow. It is the same sequence any platform move needs if search traffic is at stake.
                         </BlogText>
                     </div>
                     <ol className="my-6 list-decimal space-y-3 pl-6 leading-relaxed text-stone-700">
@@ -469,9 +467,7 @@ export default function WebflowVsCustomWebsitePage() {
 
                     <BlogHeader>Webflow or custom: the decision that actually matters</BlogHeader>
                     <BlogText>
-                        Choose the least complex operating model that meets the verified requirements. That may be
-                        Webflow, an in-platform repair, a hybrid or a custom build. Revisit the decision when the
-                        workflows, costs or constraints change.
+                        Keep Webflow if your staff like the editor and it handles the work. Choose a custom build when you need features or connections that are difficult to deliver there, and the benefits justify the build and support costs. Agree those features and costs before starting.
                     </BlogText>
 
                     {postFAQs.length > 0 && (

@@ -130,11 +130,7 @@ export default function WordPressVsCustomCostPage() {
                             WordPress vs Custom Code: <span className="italic text-cognac">Model Both Honestly</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            There is no single three-year total for either option, because the answer is built from
-                            your invoices, your internal hours and the service level you actually need. WordPress can
-                            cost less, more, or about the same as custom code depending on those inputs. What this
-                            page gives you instead is the arithmetic: the same capabilities, demand and labor on both
-                            sides, with every term visible so the result can be checked rather than taken on trust.
+                            Compare what you actually pay and the time your staff spend running the site. Include hosting, subscriptions, support and repeated manual work, then compare a custom build that covers the same jobs. The worksheet below helps you calculate both options over three years.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Platform and commercial references checked October 8, 2026.</p>
                       </div>
@@ -154,7 +150,7 @@ export default function WordPressVsCustomCostPage() {
                         </p>
                         <BlogList
                             items={[
-                                "WordPress can cost less, more or about the same as custom code depending on the requirements and operating model.",
+                                "Compare the same features, provider bills and staff tasks on both sides.",
                                 "Custom code still costs you hosting, software, dependencies, maintenance, security and support.",
                                 "WordPress plugin and maintenance cost must come from the site's current invoices and work records.",
                                 "Payback and lost-revenue claims require approved inputs and first-party evidence.",
@@ -173,7 +169,7 @@ export default function WordPressVsCustomCostPage() {
                         {[
                             { icon: FileSpreadsheet, title: "Inputs", body: "Invoices, quotes, labor, demand and roadmap." },
                             { icon: Workflow, title: "Capability", body: "Same journeys, data and operational outcomes." },
-                            { icon: Braces, title: "Lifecycle", body: "Dependencies, providers, releases and ownership." },
+                            { icon: Braces, title: "Ongoing care", body: "Software updates, service bills, support and ownership." },
                             { icon: Calculator, title: "Scenarios", body: "Low, expected and high with visible formulas." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
                             <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
@@ -546,10 +542,7 @@ export default function WordPressVsCustomCostPage() {
 
                     <BlogHeader id="choose-custom">When custom may win</BlogHeader>
                     <BlogText>
-                        Custom may fit when differentiated workflows or integration control matter, repeated platform
-                        constraints create verified operating cost, and the organization can own a software product
-                        lifecycle. Include migration, documentation, providers and long-term engineering rather than
-                        comparing only the launch build. The transition line item is broken down in{" "}
+                        A custom build can make sense when staff keep copying information between systems, plugins cannot follow your business rules, or recurring workarounds cost more than fixing the underlying problem. Include moving your content, training, hosting and ongoing maintenance in the comparison. The transition line item is broken down in{" "}
                         <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost</Link>{" "}
                         and{" "}
                         <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline">what drives migration cost</Link>, and
@@ -591,8 +584,7 @@ export default function WordPressVsCustomCostPage() {
                         <Scale className="mb-4 h-7 w-7 text-cognac" />
                         <h2 className="mb-3 font-serif text-3xl">Compare both options from the same brief</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
-                            We will scope the custom option against your actual WordPress capability, invoices and
-                            operating model, with no automatic payback claim.
+                            Show us what your WordPress site does, what it costs and which tasks still take staff time. We will explain what a custom build could replace and give you a written price to compare.
                         </p>
                         <QuoteModalButton cta="wordpress_custom_tco_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
                             Ask us about your site <ArrowRight className="h-4 w-4" />

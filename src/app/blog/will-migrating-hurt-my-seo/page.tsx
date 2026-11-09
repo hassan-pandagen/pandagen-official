@@ -206,7 +206,7 @@ export default function WillMigratingHurtSeoPage() {
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen handles <Link href="/services/wordpress-migration" className="text-cognac hover:underline font-medium">website migrations</Link> with URL inventories, page-level redirect mapping, metadata and rendered-content checks, staged cutovers, and post-launch monitoring. The technical step-by-step is in our <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline font-medium">WordPress to Next.js migration guide</Link>. 
+                            PandaCodeGen handles <Link href="/services/wordpress-migration" className="text-cognac hover:underline font-medium">website migrations</Link> by listing existing pages, redirecting addresses that change, checking search settings and page content, testing before launch and monitoring afterward. The technical step-by-step is in our <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline font-medium">WordPress to Next.js migration guide</Link>.
                         </p>
                     </div>
 
@@ -219,7 +219,7 @@ export default function WillMigratingHurtSeoPage() {
                         When a valuable page address changes, use a server-side permanent redirect to its closest relevant successor and update internal links, canonicals, and sitemaps to the final URL. Do not redirect unrelated pages to the home page. Redirects help search engines process a move, but they do not guarantee that every signal, position, or visit will transfer unchanged.
                     </BlogText>
                     <InsightBox variant="danger">
-                        Missing, chained, looping, or irrelevant redirects create avoidable crawl and user problems. Test the complete URL disposition map before and after launch.
+                        Missing, chained, looping, or irrelevant redirects create avoidable crawl and user problems. Test every address you plan to keep, redirect or remove, both before and after launch.
                     </InsightBox>
 
                     <BlogHighlight>
@@ -276,8 +276,7 @@ export default function WillMigratingHurtSeoPage() {
                         Map the fields before importing: headings, body content, authors, original publication dates,
                         categories, image descriptions, download links and SEO fields. Import a representative batch
                         first, including long articles, embedded media and unusual layouts. Check item counts and
-                        relationships automatically, then have editors review the rendered pages. Reconcile content
-                        changed since the export before the final cutover.
+                        relationships automatically, then have editors review the rendered pages. Before launch, copy across any content that staff changed after the original export.
                     </BlogText>
                     <BlogHighlight>
                         Ask a migration supplier to show one complete example: the original page, its CMS record,
@@ -388,7 +387,7 @@ export default function WillMigratingHurtSeoPage() {
                     <div className="my-8 p-6 bg-amber-50 border border-amber-200 rounded-2xl">
                         <p className="text-xs font-bold text-amber-800 uppercase tracking-wide mb-2 flex items-center gap-2"><TrendingUp className="w-4 h-4" /> How we label our own evidence</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            Panda Patches is owned by a PandaCodeGen co-founder, so it is not independent client proof. Its migration informed our URL-inventory, redirect, metadata, and monitoring process, but any dated search or performance result must be shown with the exact reporting period, comparable baseline, measurement source, and limitations. See the current evidence boundary on our <Link href="/work" className="text-cognac hover:underline font-medium">work page</Link>.
+                            Panda Patches is owned by a PandaCodeGen co-founder, so it is not independent client proof. Its migration informed our URL-inventory, redirect, metadata, and monitoring process, but any dated search or performance result must be shown with the exact reporting period, comparable baseline, measurement source, and limitations. See the published results and their limits on our <Link href="/work" className="text-cognac hover:underline font-medium">work page</Link>.
                         </p>
                     </div>
 

@@ -177,11 +177,7 @@ export default function WordPressMigrationCostPage() {
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">PandaCodeGen planning tiers</h2>
                         <p className="mb-4 leading-relaxed text-stone-700">
-                            A WordPress rebuild with us starts at $1,500 for a small bounded site, $3,500 for a
-                            broader marketing site, and $5,000 where templates, data or integrations
-                            multiply. Treat those as entry points for planning, not as quotes: the signed statement of
-                            work sets the final price, the deliverables, the acceptance criteria and the remedy, and it
-                            overrides anything on this page. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
+                            Our planning prices start at $1,500 for a small site, $3,500 for a larger marketing site and $5,000 when the project needs more page types, data or business connections. We agree a fixed price before starting. Your proposal lists exactly what is included, how we check the finished work, what happens if it falls short and how ownership is handed over. We have no minimum project size.
                         </p>
                         <BlogList
                             items={[
@@ -201,7 +197,7 @@ export default function WordPressMigrationCostPage() {
                         published averages you will find elsewhere mostly average a free host transfer together with a
                         full platform rebuild, which is why they land anywhere from $0 to five figures. Establish which
                         job you are buying first, then use our tiers as a starting point and let the accepted written
-                        terms set the final price, deliverables, acceptance criteria and remedy.
+                        terms set the final price, included work, sign-off checks and how we correct problems.
                     </InsightBox>
 
                     <div className="my-8 grid gap-4 sm:grid-cols-5">
@@ -395,10 +391,7 @@ export default function WordPressMigrationCostPage() {
 
                     <BlogHeader id="plugins">Price plugin capability, not plugin count</BlogHeader>
                     <BlogText>
-                        Inventory what each active component does, where it stores data and which customer or staff
-                        journey depends on it. Mark retain, replace, redesign or retire. A plugin that adds no frontend
-                        assets may still own critical workflow data, while a single page builder can affect most
-                        templates. Count alone does not establish effort or risk. On the performance side,{" "}
+                        List what each plugin does and which customer or staff tasks depend on it. Decide what to keep, replace, rebuild or remove. One plugin may hold your booking records; another may control the design of most pages. What those plugins do matters more than how many are installed. On the performance side,{" "}
                         <Link href="/blog/wordpress-plugins-destroy-speed" className={inlineLinkClass}>how plugins accumulate into a page-weight problem</Link>{" "}
                         explains what to look for while you inventory.
                     </BlogText>
@@ -564,7 +557,7 @@ export default function WordPressMigrationCostPage() {
                     <BlogHeader id="quote">How to compare migration quotes</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Two migration quotes only become comparable once you have normalized what each includes, and the gap between them is usually responsibility rather than price. Six checks line them up. The last one matters most in practice: a higher quote that names its acceptance evidence and its cutover plan is often the cheaper project by the end.
+                            Put two quotes side by side and check that they cover the same work. These six checks help you spot what is missing. Pay particular attention to testing and launch: the quote should say who checks the site, who approves it and what happens if the switch goes wrong.
                         </BlogText>
                     </div>
                     <BlogList
@@ -620,8 +613,7 @@ export default function WordPressMigrationCostPage() {
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Get an inventory before a fixed price</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
-                            We will map routes, templates, content, data, plugins and acceptance criteria, then confirm
-                            whether the migration fits a published tier or custom scope.
+                            We will list your pages, content, plugins and business tools, agree how to test the replacement, then confirm a price for that work.
                         </p>
                         <QuoteModalButton cta="wordpress_migration_cost_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
                             Ask us about your site <ArrowRight className="h-4 w-4" />

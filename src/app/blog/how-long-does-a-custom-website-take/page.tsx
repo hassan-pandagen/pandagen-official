@@ -435,8 +435,7 @@ export default function WebsiteTimelineGuide() {
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
                         <h2 className="mb-3 font-serif text-3xl">Get your migration schedule</h2>
                         <p className="mb-6 leading-relaxed text-stone-300">
-                            We will inventory the work, dependencies, approvals, test plan, cutover and handoff, then
-                            attach a real schedule to a project-specific scope.
+                            We will agree the work, what we need from you, review dates, testing, launch and handover, then give you a schedule for your project.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-semibold text-white hover:bg-cognac/90">
                             Book a 15-min call <ArrowRight className="h-4 w-4" />

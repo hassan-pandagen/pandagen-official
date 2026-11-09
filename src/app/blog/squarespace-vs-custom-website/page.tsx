@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Squarespace vs Custom Website in 2026: How to Choose";
 const description =
-    "Compare Squarespace with a custom website across editing, features, performance, export, SEO, commerce fees, ownership, lifecycle cost and migration risk.";
+    "Compare Squarespace with a custom website across editing, features, performance, export, SEO, commerce fees, ownership, running costs and moving your site.";
 
 export const dynamic = "force-static";
 
@@ -148,9 +148,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                             Squarespace vs Custom Website: <span className="italic text-cognac">How to Choose in 2026</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Squarespace offers a managed visual platform. A custom website offers implementation
-                            control and additional responsibility. Choose from required workflows, editing, data,
-                            performance, ownership and total cost, not a fixed PageSpeed or payback claim.
+                            Squarespace brings the editor, website and hosting together. A custom build gives you more freedom to shape the design, connect business tools and automate staff tasks. The right choice depends on what you need the website to do, how your team will edit it and what it will cost to maintain.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed October 8, 2026 against current Squarespace and Google documentation.
@@ -196,7 +194,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                             { icon: LayoutTemplate, title: "Managed", body: "Editor, hosting, templates and platform support." },
                             { icon: Wrench, title: "Custom", body: "Designed architecture, code and release system." },
                             { icon: FileArchive, title: "Portable", body: "Content, data, assets, accounts and exit path." },
-                            { icon: Calculator, title: "Comparable", body: "Current invoices plus full lifecycle cost." },
+                            { icon: Calculator, title: "Comparable", body: "Today's bills, plus the cost to build, run and maintain the replacement." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
                             <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
                                 <Icon className="mb-3 h-5 w-5 text-cognac" />
@@ -374,8 +372,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                     </BlogText>
                     <BlogText>
                         Treat the domain and mailboxes as a separate work item from the site. Confirm who holds the
-                        registrar account, where DNS is served and which records carry email before any cutover date is
-                        agreed. Squarespace supports moving a domain to another registrar, and the practical risk is not
+                        registrar account, where DNS is served and which records carry email before agreeing a launch date. Squarespace supports moving a domain to another registrar, and the practical risk is not
                         the transfer itself but mail and subdomains breaking while records propagate. Write the record
                         set down, change it deliberately, and keep the old site reachable until the new one is verified.
                     </BlogText>
@@ -431,14 +428,14 @@ export default function SquarespaceVsCustomWebsitePage() {
 
                     <BlogHeader>9. Evaluate custom when</BlogHeader>
                     <BlogText>
-                        Evaluate, not choose. Custom earns a costing exercise when a required interaction, content structure or integration is impractical on the current platform, or when a measured performance constraint cannot be resolved acceptably where you are. The last two conditions fail quietly: the team has to fund the extra lifecycle, and the business case has to survive conservative assumptions.
+                        Ask for a custom-build quote when Squarespace makes an important customer task difficult, cannot connect the tools you need, or still loads too slowly after practical fixes. Compare the build and ongoing support costs with the work it would save your team. Use cautious estimates of future sales.
                     </BlogText>
                     <BlogList
                         items={[
                             "Required interaction, content structure or integration is impractical in the current platform.",
                             "The organization needs controlled release, data or multi-system behavior.",
                             "A measured performance constraint cannot be acceptably resolved in the current implementation.",
-                            "The team can fund and operate the additional lifecycle responsibility.",
+                            "There is a budget and a named team for hosting, updates, backups and future changes.",
                             "The full business case remains credible under conservative assumptions.",
                         ]}
                     />
@@ -463,8 +460,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                         <Calculator className="mb-4 h-7 w-7 text-amber-300" />
                         <h2 className="mb-3 text-3xl font-bold">Tell us what you have</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
-                            We will compare the current Squarespace system with a like-for-like custom scope, including
-                            export gaps, SEO controls, providers, acceptance and lifecycle responsibility.
+                            We will compare keeping Squarespace with a custom build that does the same jobs. You will see what content can move, how we protect search traffic, what the services cost and who handles testing and support.
                         </p>
                         <QuoteModalButton cta="squarespace_vs_custom_migration_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
                             Ask us about your site <ArrowRight className="h-4 w-4" />

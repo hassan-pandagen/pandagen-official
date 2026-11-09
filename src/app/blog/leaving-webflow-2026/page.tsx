@@ -547,7 +547,7 @@ export default function LeavingWebflow2026Page() {
                         <div className="space-y-4">
                             <div className="rounded-xl border border-stone-200 p-5">
                                 <p className="text-xs font-bold uppercase tracking-wide text-cognac">Stay</p>
-                                <h3 className="mt-1 text-xl font-bold text-charcoal">Webflow still matches the operating model</h3>
+                                <h3 className="mt-1 text-xl font-bold text-charcoal">Webflow still works for your team</h3>
                                 <p className="mt-2 leading-relaxed text-stone-700">Stay when non-technical teams need visual control, the current Site and Workspace plans fit the budget, CMS scale is comfortable, supported integrations cover the roadmap, and measured performance is acceptable. Migration cost and disruption would not produce a clear business benefit.</p>
                             </div>
                             <div className="rounded-xl border border-stone-200 p-5">
@@ -665,7 +665,7 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogText>
-                            A controlled cutover can reduce interruption because the Webflow site remains live while the replacement is tested. It cannot make DNS propagation, caches, third-party services, or launch defects disappear. The launch plan should name the change window, owner, test script, rollback trigger, monitoring period, and communication path.
+                            Keep the Webflow site live while testing the replacement. Agree who switches the domain, when the switch happens, which forms and pages to check, and how to restore the previous site if needed. Allow time for the new domain settings to reach visitors and check connected services after launch.
                         </BlogText>
 
                         <BlogHeader>Timeline and Migration Cost Depend on the Inventory</BlogHeader>
@@ -683,8 +683,8 @@ export default function LeavingWebflow2026Page() {
                             <ul className="mt-4 space-y-3 text-stone-700">
                                 {[
                                     "Included pages, collections, content, assets, locales, and integrations",
-                                    "URL dispositions, metadata, schema, analytics, consent, and Search Console tasks",
-                                    "Acceptance criteria by browser, device, workflow, and representative performance test",
+                                    "Page addresses and redirects, search titles, structured data, tracking, privacy choices and Search Console checks",
+                                    "Agreed checks for browsers, phones, customer and staff tasks, and page speed",
                                     "Client dependencies, exclusions, change control, approval dates, and launch responsibilities",
                                     "Repository, hosting, account, content, deliverable, and third-party license ownership",
                                     "Support period, defect definition, response process, and out-of-scope pricing",
@@ -718,7 +718,7 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogText>
-                            If the platform still fits, stay and optimize it. If one implementation issue is driving the conversation, fix and remeasure it. If several structural constraints overlap, plan a migration that accounts for content, logic, integrations, SEO, consent, accessibility, testing, cutover, ownership, and support. That approach opens the door to a better architecture without pretending the move is free, instant, or riskless.
+                            Keep Webflow when it still does the job and a focused fix can solve the problem. Consider moving when several limits get in the way of how customers buy or staff work. Plan the content, business connections, search settings, accessibility, privacy choices, testing and support together, with a clear price and handover.
                         </BlogText>
                     </div>
 

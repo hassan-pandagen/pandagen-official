@@ -379,14 +379,14 @@ export default function WixTooSlowPage() {
 
                     <BlogHeader id="migration-process">What does a controlled Wix migration include?</BlogHeader>
                     <BlogText>
-                        Six phases, and the first one decides the price of the other five. Inventory everything the site actually contains, validate what Wix will and will not export per data domain, then design the target, the URL dispositions and the acceptance criteria before anyone writes code. Cutover monitoring and rollback triggers belong in the scope, not in the launch-day conversation.
+                        Start by listing your pages, products, bookings and other records, then check which ones Wix can export. Agree what the new site will do, which page addresses stay the same and how to test it before building. The quote should also explain who watches the launch and when to restore the old site if something goes wrong.
                     </BlogText>
                     <BlogList
                         items={[
                             "Route, template, content, CMS, contact, product, order, app and integration inventory.",
-                            "Current Wix export and API validation for every data domain.",
+                            "Check how to export or retrieve each type of content and business record from Wix.",
                             "Target architecture, editorial workflow and provider-account ownership.",
-                            "URL disposition, rendered-output parity, analytics and search safeguards.",
+                            "Keep or redirect page addresses, check the visible content, and verify tracking and search settings.",
                             "Accessibility, privacy, security and performance acceptance.",
                             "Cutover monitoring, rollback triggers, handoff and support.",
                         ]}

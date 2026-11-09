@@ -332,7 +332,7 @@ export default function WebflowMigrationCostPage() {
                     <BlogText>
                         Enterprise work adds governance, not just pages: who someone is, what they are allowed to do, other languages,
                         security review, legal approval, design-system ownership, multiple repositories or sites,
-                        deployment environments, release management, observability, incident response and procurement.
+                        test and live hosting, publishing changes, monitoring errors, responding to outages and buying the required services.
                         These requirements should be priced as explicit workstreams with named acceptance evidence.
                         Where the target site is closer to an application than a brochure, that work sits under{" "}
                         <Link href="/services/custom-engineering" className={sourceLinkClass}>custom engineering</Link>{" "}
@@ -572,7 +572,7 @@ export default function WebflowMigrationCostPage() {
                     <BlogText>
                         If you are still deciding whether to move at all rather than how much it costs,{" "}
                         <Link href="/blog/webflow-vs-custom-website" className={sourceLinkClass}>Webflow versus a custom website</Link>{" "}
-                        compares the two operating models directly, and{" "}
+                        compares editing, features, ownership and running costs, and{" "}
                         <Link href="/blog/leaving-webflow-2026" className={sourceLinkClass}>why teams are leaving Webflow in 2026</Link>{" "}
                         covers the triggers that usually start the conversation.
                     </BlogText>

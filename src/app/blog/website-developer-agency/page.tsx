@@ -260,11 +260,7 @@ export default function WebsiteDeveloperAgencyPage() {
 
                     <BlogHeader>Platforms a modern agency may support</BlogHeader>
                     <BlogText>
-                        A platform is not automatically modern or legacy. An agency may deliver WordPress, Shopify,
-                        Webflow, headless CMS, Next.js or other application stacks. What decides it is how your team wants to edit, what the site
-                        has to do, what data is involved, what your people can actually run, security, speed, whether
-                        you can take it elsewhere, and
-                        operating model. Ask why the proposed platform fits and what would disqualify it.
+                        Ask the agency to explain its choice of WordPress, Shopify, Webflow or a custom build in business terms. What can your staff edit? How will bookings, payments and other tools connect? What will it cost to run, who keeps it updated, and can another developer take over? A useful recommendation answers those questions.
                     </BlogText>
                     <BlogText>
                         Our platform pages set out what a move to or from each stack involves:{" "}
@@ -305,7 +301,7 @@ export default function WebsiteDeveloperAgencyPage() {
                         items={[
                             "Account ownership, named individually. Domain registrar, DNS, hosting, repository, CMS, analytics, tag manager, payment gateway. Intellectual property clauses cover code and rarely mention accounts, and accounts are where lock-in actually happens. Ask whose email address each one is registered under, today.",
                             "The redirect map, if any URL changes. This is the single most commonly assumed line in a rebuild. It is real work, it protects existing search traffic, and if it is not itemized then nobody has priced it and nobody has been made responsible for it.",
-                            "Acceptance criteria with test conditions attached. Not \u201ca fast site\u201d but which pages, which device profiles, how many passing runs, measured how, and what happens if it fails. A performance number with no conditions is not a term, it is a slogan.",
+                            "Written checks for signing off the finished work. Not \u201ca fast site\u201d but which pages, which device profiles, how many passing runs, measured how, and what happens if it fails. A performance number with no conditions is not a term, it is a slogan.",
                             "What you receive if the project stops mid-way. Most contracts describe completion and cancellation and skip the state in between, which is the one you are most likely to be in if something goes wrong. Agree now whether partial work, designs and access transfer at that point.",
                         ]}
                     />

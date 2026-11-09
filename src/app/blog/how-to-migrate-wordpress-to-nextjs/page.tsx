@@ -429,7 +429,7 @@ export default function MigrateWordPressToNextJSPage() {
                         <p className="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-2">Scope, Test, Cut Over</p>
                         <h3 className="text-2xl font-bold mb-3">Want Us to Handle the Migration?</h3>
                         <p className="text-stone-300 mb-6 leading-relaxed">
-                            We handle the URL inventory, build, staged crawl QA, 301 redirect mapping and validation, DNS cutover, rollback plan, and post-launch Google Search Console monitoring. Support days, representative test pages, measurement conditions, and any 90+ PageSpeed acceptance target are written into the signed scope. A performance target is not a ranking guarantee.
+                            We list your existing pages, build the replacement and check it on a private preview. We redirect addresses that change, manage the launch and monitor Google Search Console afterward. Your proposal sets out launch support, the pages and conditions used for speed tests, and how we would restore the old site if needed. Speed targets are separate from search rankings.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 bg-white text-stone-900 font-semibold px-6 py-3 rounded-lg hover:bg-stone-100 transition-colors">
                                 Book Free Migration Assessment <ArrowRight className="w-4 h-4" />
@@ -440,7 +440,7 @@ export default function MigrateWordPressToNextJSPage() {
                     <section className="mb-10">
                         <h2 className="text-3xl font-bold mb-4">What to Expect After the Migration: The Real Timeline</h2>
                         <BlogText>
-                            A WordPress to Next.js migration is not an instant ranking boost. This sequence describes what the team should verify after cutover; it is an operating plan, not a promise about when Google will recrawl the site or how rankings will move.
+                            A WordPress to Next.js migration is not an instant ranking boost. Use this sequence to check the site after launch. Google decides when to revisit the pages, so monitor indexing and traffic as it processes the changes.
                         </BlogText>
 
                         <div className="space-y-4 my-6">
@@ -509,8 +509,7 @@ export default function MigrateWordPressToNextJSPage() {
                             <Link href="/services/wordpress-migration" className="text-stone-700 underline underline-offset-2 hover:text-black">
                                 WordPress to Next.js migration service
                             </Link>{" "}
-                            handles the same work: the URL inventory, the build, the redirects, the staged crawl and the
-                            cutover. If you go the professional route, compare providers on the same evidence:{" "}
+                            handles the same work: the URL inventory, the build, the redirects, the checks on a private preview and the launch. If you go the professional route, compare providers on the same evidence:{" "}
                             <Link href="/blog/top-nextjs-agencies-2026" className="text-stone-700 underline underline-offset-2 hover:text-black">
                                 our shortlist of Next.js development agencies
                             </Link>{" "}
@@ -543,7 +542,7 @@ export default function MigrateWordPressToNextJSPage() {
                             We will audit your WordPress site, scope the migration, map every redirect, and give you a fixed-price quote before you commit to anything.
                         </p>
                         <p className="text-stone-600 mb-6 leading-relaxed">
-                            The assessment puts fixing and speeding up your WordPress site side by side with rebuilding it in Next.js. Then it writes down every URL, what the migration would cost, where your PageSpeed scores start, how we would sign off the SEO side, who does what at cutover, and how we would reverse it. If the evidence does not justify moving, improving what you have is the better recommendation.
+                            The assessment puts fixing and speeding up your WordPress site side by side with rebuilding it in Next.js. Then it writes down every URL, what the migration would cost, where your PageSpeed scores start, which search settings we check, who handles launch and how we would restore the previous site. If the evidence does not justify moving, improving what you have is the better recommendation.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3">
                             <CalModalButton className="inline-flex items-center justify-center gap-2 bg-stone-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-stone-700 transition-colors">

@@ -232,14 +232,14 @@ export default function WordPressPluginPerformancePage() {
                                 <tr><td className="p-4 font-bold">Data</td><td className="p-4">What records, settings or files does it own?</td><td className="p-4">Defines backup, export and replacement work</td></tr>
                                 <tr><td className="p-4 font-bold">Reach</td><td className="p-4">Which routes, roles, APIs or jobs execute it?</td><td className="p-4">Targets the correct measurement</td></tr>
                                 <tr><td className="p-4 font-bold">Dependencies</td><td className="p-4">What requires it and what does it require?</td><td className="p-4">Avoids unsafe deactivation</td></tr>
-                                <tr><td className="p-4 font-bold">Lifecycle</td><td className="p-4">Who maintains, licenses and supports it?</td><td className="p-4">Exposes update and ownership risk</td></tr>
+                                <tr><td className="p-4 font-bold">Updates and support</td><td className="p-4">Who maintains, licenses and supports it?</td><td className="p-4">Exposes update and ownership risk</td></tr>
                                 <tr><td className="p-4 font-bold">Evidence</td><td className="p-4">What changes when it is isolated?</td><td className="p-4">Separates correlation from cause</td></tr>
                             </tbody>
                         </table>
                     </div>
 
                     <BlogText>
-                        The lifecycle row is your security exposure as well. A plugin nobody maintains is a patch that
+                        Check who still maintains each plugin, too. A plugin nobody maintains is a patch that
                         may never come, and{" "}
                         <Link href="/blog/wordpress-plugin-security-2026" className="text-cognac hover:underline">how one 2026 plugin vulnerability was exploited and patched</Link>{" "}
                         shows what that gap costs.
@@ -407,7 +407,7 @@ export default function WordPressPluginPerformancePage() {
                             "Consolidate overlapping capability when the replacement covers all required data and journeys.",
                             "Replace an unsuitable component with a measured alternative.",
                             "Custom-build only the differentiated capability that is worth owning.",
-                            "Consider platform migration when the aggregate operating model remains a material constraint.",
+                            "Consider a rebuild when several website problems keep slowing down customers or staff after practical fixes.",
                         ]}
                     />
 
@@ -464,20 +464,13 @@ export default function WordPressPluginPerformancePage() {
 
                     <BlogHeader id="custom">When a custom replacement is justified</BlogHeader>
                     <BlogText>
-                        Custom code is appropriate when a narrow, stable, differentiated requirement is valuable enough
-                        to own. Define its data model, permissions, tests, observability, update path and maintainer.
-                        Replacing a supported plugin with undocumented custom code can increase lifecycle risk even if
-                        it reduces frontend bytes. The ownership side of that choice is modeled in our{" "}
+                        Custom code can help when your business needs a specific feature that existing plugins do not handle well. Agree what information it stores, who can use it, how it is tested and who maintains it. Removing a plugin only helps if its replacement is documented, tested and supported. The ownership side of that choice is modeled in our{" "}
                         <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline">three-year cost comparison of WordPress and custom code</Link>.
                     </BlogText>
 
                     <BlogHeader id="migrate">When migration enters the decision</BlogHeader>
                     <BlogText>
-                        Consider a migration when measured plugin and platform constraints span multiple critical
-                        journeys and cannot be reasonably repaired, and when a target architecture can replace every
-                        required capability with acceptable data, editing, security and operating ownership. Migration
-                        is not the only permanent fix and does not eliminate dependencies. Compare the two operating
-                        models in{" "}
+                        Consider moving when plugins make several important tasks difficult and repairs do not solve the problem. The replacement must cover those tasks, preserve the records you need and give staff a usable editor, with security and support agreed. Compare the options in{" "}
                         <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress and Next.js side by side</Link>, then
                         read the{" "}
                         <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline">step-by-step migration sequence</Link>{" "}

@@ -374,7 +374,7 @@ export default function TopNextjsAgenciesPage() {
                             "15 calendar days of launch defect support on Starter; 30 calendar days on Growth and Scale.",
                             "Client content remains the client's, while custom-deliverable transfer follows full payment and the contract.",
                             "PandaCodeGen retains reusable tools and pre-existing code; third-party licenses continue to apply.",
-                            "The client can control domain, repository, hosting and business accounts when that operating model is agreed.",
+                            "Agree who owns the domain, project code, hosting and business-service accounts, and how access is handed over.",
                             "A 90-plus promise should name which pages, on phone and desktop, tested three times, and say what happens if it is missed.",
                         ]}
                     />
@@ -400,9 +400,7 @@ export default function TopNextjsAgenciesPage() {
                         documentation states that Incremental Static Regeneration is supported on a Node.js server and
                         in Docker, is not supported with a static export, and is platform-specific through adapters, so
                         the hosting decision constrains how content gets updated. A provider who proposes one without
-                        the other has not finished the design. That flexibility does not decide the correct CMS,
-                        caching, data ownership, security or operating model. Require an architecture decision record
-                        that connects each material choice to the signed requirements.
+                        the other has not finished the design. Ask the agency to explain why its chosen host and editor suit your site, how quickly published changes appear, who owns the accounts and what ongoing support costs. Get that explanation in writing alongside the agreed features.
                     </BlogText>
                     <BlogList
                         items={[

@@ -139,9 +139,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                             WooCommerce vs Custom Website: <span className="italic text-cognac">Choose by Requirements</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            WooCommerce, a separated WooCommerce storefront and a custom commerce platform solve
-                            different operating problems. The right choice follows capabilities, risk and ownership,
-                            not a universal winner.
+                            You can improve your existing WooCommerce store, keep its order-management tools behind a new storefront, or replace it with a custom system. Choose by how customers buy and how staff handle products, payments, orders and fulfilment.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed against current WooCommerce and Google documentation on November 9, 2026.
@@ -250,7 +248,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                                 <tr><td className="p-4 font-bold">Editing</td><td className="p-4">WordPress and Woo admin</td><td className="p-4">Woo admin plus preview integration</td><td className="p-4">Chosen CMS and operational interface</td></tr>
                                 <tr><td className="p-4 font-bold">Features</td><td className="p-4">Core plus extensions and custom code</td><td className="p-4">Same backend with frontend API work</td><td className="p-4">Explicitly designed or integrated</td></tr>
                                 <tr><td className="p-4 font-bold">Performance</td><td className="p-4">Depends on implementation and operations</td><td className="p-4">Frontend control with backend and API constraints</td><td className="p-4">Depends on architecture and implementation</td></tr>
-                                <tr><td className="p-4 font-bold">Updates</td><td className="p-4">Core, WordPress, theme and extensions</td><td className="p-4">Woo stack plus frontend dependencies</td><td className="p-4">Application, framework and provider lifecycle</td></tr>
+                                <tr><td className="p-4 font-bold">Updates</td><td className="p-4">Core, WordPress, theme and extensions</td><td className="p-4">Woo stack plus frontend dependencies</td><td className="p-4">Updates to the website, its software and connected services</td></tr>
                                 <tr><td className="p-4 font-bold">Ownership</td><td className="p-4">Code, data, licenses and accounts vary</td><td className="p-4">More repositories and deployment boundaries</td><td className="p-4">Defined by contract and provider terms</td></tr>
                                 <tr><td className="p-4 font-bold">Exit</td><td className="p-4">Products export; other data needs inventory</td><td className="p-4">Backend plus frontend and integration handoff</td><td className="p-4">Data, code, documentation and service portability</td></tr>
                             </tbody>
@@ -393,7 +391,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                             "The team values WordPress content and merchandising workflows.",
                             "The current store can meet measured performance and reliability requirements after repair.",
                             "The business has clear ownership for extension updates, security and operations.",
-                            "A rebuild would add cost and risk without solving a material constraint.",
+                            "A rebuild would cost more without solving an important customer or staff problem.",
                         ]}
                     />
                     <BlogText>
@@ -578,8 +576,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Choose the smallest architecture that meets the brief</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
-                            We will compare repair, headless WooCommerce and replacement against your capabilities,
-                            data, acceptance criteria and operating team.
+                            We will compare improving your store, replacing only the storefront and rebuilding the full system. The quote will explain what happens to products, customers, orders and payments, and how your staff will use the result.
                         </p>
                         <QuoteModalButton cta="woocommerce_vs_custom_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
                             Ask us about your store <ArrowRight className="h-4 w-4" />

@@ -214,7 +214,7 @@ export default function WebsiteCostGuide() {
 
                     <BlogHeader>Current PandaCodeGen pricing and payment split</BlogHeader>
                     <BlogText>
-                        These are planning anchors, not a promise that any page count, feature set or integration fits a tier. Every tier splits 30 percent at onboarding and 70 percent at delivery. The accepted proposal and statement of work control the final price, the deliverables, the exclusions, the schedule, the acceptance criteria and the remedy.
+                        Use these prices to plan your budget. We confirm the price after agreeing your pages, features and connections. Payment is 30 percent at onboarding and 70 percent at delivery. Your written proposal lists what is included, what costs extra, the schedule, the checks before sign-off and how we correct work that falls short.
                     </BlogText>
                     <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
@@ -386,7 +386,7 @@ export default function WebsiteCostGuide() {
                                 <tr>
                                     <td className="p-4 font-semibold">Change control</td>
                                     <td className="p-4">Open-ended revisions and undefined acceptance</td>
-                                    <td className="p-4">Defined revision rounds, written acceptance criteria and a change-order process</td>
+                                    <td className="p-4">Agreed revision rounds, sign-off checks and written approval for extra work</td>
                                 </tr>
                                 <tr>
                                     <td className="p-4 font-semibold">Schedule</td>
@@ -426,9 +426,7 @@ export default function WebsiteCostGuide() {
                     <div className="my-10 rounded-2xl border border-stone-200 bg-stone-50 p-6 text-center">
                         <p className="mb-2 font-bold text-charcoal">Want the number for your actual scope?</p>
                         <p className="mx-auto mb-5 max-w-xl text-sm leading-relaxed text-stone-600">
-                            Bring your current site URL and page list. We inventory templates, content, integrations,
-                            vendor costs and cutover work on the call, then come back with a written scope and a price
-                            you can compare against any other quote.
+                            Bring your website address and page list. We discuss the design, content, connected tools, running costs and launch work, then send a written list of deliverables and a price you can compare with other quotes.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-stone-800">
                             Book a scoping call <ArrowRight className="h-4 w-4" />
@@ -673,9 +671,7 @@ export default function WebsiteCostGuide() {
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
                         <h2 className="mb-3 font-serif text-3xl">Get a price for your actual scope</h2>
                         <p className="mb-6 leading-relaxed text-stone-300">
-                            New build or replacement, the process is the same. We inventory the pages, content,
-                            integrations, vendor costs, acceptance, cutover and handoff, then come back with a written
-                            scope and a number you can hold any other quote against.
+                            For a new site or a replacement, we agree the pages, features, content, connected tools, running costs, testing and handover. You receive a written proposal with a price for that work.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-semibold text-white hover:bg-cognac/90">
                             Get Your Written Scope and Price <ArrowRight className="h-4 w-4" />

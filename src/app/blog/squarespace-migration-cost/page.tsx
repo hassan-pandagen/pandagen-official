@@ -320,9 +320,7 @@ export default function SquarespaceMigrationCostPage() {
                     <BlogHeader>6. Include launch risk and continuity</BlogHeader>
                     <BlogText>
                         A parallel build can reduce disruption, but “zero downtime” is an outcome claim, not a planning
-                        step. Define DNS, cache, provider, form, payment and rollback procedures. Monitor synthetic
-                        availability, real errors, form delivery, checkout and analytics during the cutover.
-                        Where cutover sits in the wider schedule is covered in{" "}
+                        step. Plan the domain switch and how to restore the previous site if needed. During launch, check that pages open, forms reach your inbox, checkout works and tracking still records the agreed events. See where launch fits in the wider schedule in{" "}
                         <Link href="/blog/how-long-does-a-custom-website-take" className={inlineLinkClass}>how long a custom website takes to build</Link>.
                     </BlogText>
 

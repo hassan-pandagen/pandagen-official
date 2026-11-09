@@ -1,6 +1,6 @@
 import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
-import { ArrowLeft, ArrowRight, Blocks, Braces, FileText, Gauge, ShieldCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
 import type { Metadata } from "next";
@@ -10,7 +10,6 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import { finding } from "@/data/research-facts";
 import ArticleContents from "@/components/blog/ArticleContents";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
@@ -19,9 +18,9 @@ const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalB
 const postId = "wordpress-vs-nextjs";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "WordPress vs Next.js in 2026: Requirements, Cost and Migration";
+const title = "WordPress vs Next.js: Speed, Costs and Running Your Business";
 const description =
-    "WordPress or Next.js? Compared on architecture, editing, speed, SEO, security, integrations, total cost, ownership and migration risk.";
+    "Compare WordPress and Next.js for your business: website speed, staff editing, bookings, automation, security, backups, ongoing costs and ownership.";
 
 export const dynamic = "force-static";
 
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-15",
-        modifiedTime: "2026-11-09",
+        modifiedTime: "2026-11-10",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-vs-nextjs")],
@@ -60,7 +59,12 @@ const sources = [
     { name: "Next.js caching guide", url: "https://nextjs.org/docs/app/getting-started/caching" },
     { name: "Next.js production checklist", url: "https://nextjs.org/docs/app/guides/production-checklist" },
     { name: "Next.js data security guide", url: "https://nextjs.org/docs/app/guides/data-security" },
-    { name: "W3Techs: WordPress usage statistics", url: "https://w3techs.com/technologies/details/cm-wordpress" },
+    { name: "WordPress performance guide", url: "https://developer.wordpress.org/advanced-administration/performance/optimization/" },
+    { name: "WordPress backups", url: "https://developer.wordpress.org/advanced-administration/security/backup/" },
+    { name: "Supabase database backups and file-storage limitations", url: "https://supabase.com/docs/guides/platform/backups" },
+    { name: "Google site-move guidance", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
+    { name: "Patchstack EssentialPlugin investigation", url: "https://www.patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" },
+    { name: "GitHub supply-chain security report", url: "https://github.blog/security/supply-chain-security/strengthening-supply-chain-security-preparing-for-the-next-malware-campaign/" },
 ];
 
 const articleSchema = {
@@ -73,7 +77,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-vs-nextjs"),
             description,
             datePublished: "2026-03-15",
-            dateModified: "2026-11-09",
+            dateModified: "2026-11-10",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -93,8 +97,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],
-            wordCount: 3524,
-            timeRequired: "PT17M",
+            wordCount: 3822,
+            timeRequired: "PT19M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -134,18 +138,16 @@ export default function WordPressVsNextJsPage() {
                       <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Platform comparison</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            WordPress vs Next.js: <span className="italic text-cognac">Choose the Operating Model</span>
+                            WordPress vs Next.js: <span className="italic text-cognac">Which Fits Your Business?</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Choose WordPress when its publishing workflow fits and your team can operate the stack;
-                            choose Next.js when application-level rendering, data or interface control justifies
-                            assembling and maintaining a custom one. The decision is about operating capability, not
-                            about which platform is better. WordPress is an integrated publishing platform. Next.js is
-                            an application framework that must be paired with content, hosting and services, so compare
-                            finished builds rather than the two names.
+                            Your website should help customers find you, buy or book, and get the right information to
+                            your team. WordPress gives you ready-made publishing tools and plugins. With Next.js, we can
+                            build a lighter public website and connect it to the way your business works behind the scenes.
+                            Here is what that choice means for speed, everyday tasks, costs and support.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed against current WordPress, Next.js and Google documentation on November 9, 2026.
+                            Updated November 10, 2026. Written for business owners, with documentation and project examples linked below.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -153,411 +155,387 @@ export default function WordPressVsNextJsPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wordpress-vs-nextjs" published="2026-03-15" readTime="17 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wordpress-vs-nextjs" published="2026-03-15" readTime="19 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
-                        <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">Our recommendation</h2>
                         <p className="mb-4 leading-relaxed text-stone-700">
-                            Keep WordPress when publishing is the main job and the current site can be repaired.
-                            Choose Next.js when the customer experience or business integrations justify a custom
-                            application, with a CMS and ongoing engineering included. PandaCodeGen builds Next.js sites
-                            and sells WordPress migration services, so we have a commercial interest in this comparison.
+                            Choose a custom Next.js build when you need a fast website and connected business tools:
+                            bookings, payments, customer records, staff tasks and automatic follow-up. We can design
+                            those steps together, with an editor your team can use.
                         </p>
-                        <BlogList
-                            items={[
-                                "Choose WordPress when its publishing workflow and maintained ecosystem fit and the team can operate the stack.",
-                                "Choose Next.js when application-level rendering, data, integration or interface control justifies assembling and maintaining a custom stack.",
-                                "Neither platform has a universal PageSpeed score, SEO outcome, security level, hosting cost or payback period.",
-                                "A WordPress to Next.js migration should be driven by measurable constraints and a complete replacement plan.",
-                            ]}
-                        />
+                        <p className="leading-relaxed text-stone-700">
+                            If you mainly need pages and articles, or existing WordPress plugins already do the job well,
+                            improving WordPress may be the better use of your budget. We build Next.js websites and sell
+                            WordPress migration services, so we have a commercial interest in this comparison.
+                        </p>
                     </section>
 
-                    <InsightBox variant="info" label="What we have actually delivered">
-                        We moved <Link href="/work/ladies-4-jesus" className="text-cognac hover:underline">Ladies 4 Jesus from WordPress to Next.js and Sanity</Link>,
-                        with publishing and submission moderation for its owner. For <Link href="/work/a-step-above-medical" className="text-cognac hover:underline">A Step Above Medical</Link>,
-                        we replaced a Divi WordPress site and built a staff portal for classes, students, payments and
-                        certificates. These examples show the workflows we can deliver; they do not establish savings
-                        or performance improvements for another site.
+                    <InsightBox variant="info" label="A real example: A Step Above Medical">
+                        Previously, staff received class enquiries and emailed payment links by hand. We replaced the
+                        Divi WordPress site with a Next.js website, a Sanity content editor and a separate staff portal.
+                        Students now book and pay online; the system handles confirmations, class records and certificates.
+                        <Link href="/work/a-step-above-medical" className="text-cognac hover:underline"> See the website and class-management system</Link>.
                     </InsightBox>
-
-                    <div className="my-8 grid gap-4 sm:grid-cols-5">
-                        {[
-                            { icon: FileText, title: "WordPress", body: "Integrated content, themes, users and plugins." },
-                            { icon: Braces, title: "Next.js", body: "Application framework with chosen services." },
-                            { icon: Blocks, title: "Features", body: "Core, extensions, packages and custom work." },
-                            { icon: Gauge, title: "Quality", body: "Measured implementation, not platform label." },
-                            { icon: ShieldCheck, title: "Ownership", body: "Lifecycle, access, data and handoff." },
-                        ].map(({ icon: Icon, title: cardTitle, body }) => (
-                            <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
-                                <Icon className="mb-3 h-5 w-5 text-cognac" />
-                                <h3 className="mb-2 font-bold text-charcoal">{cardTitle}</h3>
-                                <p className="text-sm leading-relaxed text-stone-600">{body}</p>
-                            </div>
-                        ))}
-                    </div>
-                    <BlogText>
-                        There is a third option: keep WordPress as the CMS and use Next.js for the public site. WordPress's <a href="https://developer.wordpress.org/rest-api/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">REST API</a> lets a separate application consume its content. That can preserve the editor staff know, but previews, forms and plugin-generated output need explicit integration. The <a href="#headless" className="text-cognac hover:underline">headless section below</a> explains when that extra work earns its place.
-                    </BlogText>
 
                     <ArticleContents />
-                    <BlogHeader id="different">They are different product categories</BlogHeader>
+                    <BlogHeader id="different">What are you actually buying?</BlogHeader>
                     <BlogText>
-                        WordPress includes a content database, administration interface, themes, users, media and an
-                        extension system. Next.js provides routing, rendering and application capabilities, but the team
-                        chooses the CMS, database, identity, forms, search, email, analytics, hosting and operational
-                        tooling. A useful comparison names the complete Next.js stack and the complete WordPress stack.
+                        WordPress is a website system with an editor built in. A theme supplies the design, and plugins
+                        add features such as forms, bookings, shops or memberships. It can also be developed specifically
+                        for your business.
+                    </BlogText>
+                    <BlogText>
+                        Next.js is the foundation developers use to build a website or web application. It does not come
+                        with a staff editor. We connect one, such as Sanity or Payload, and build the pages and business
+                        features around it. You use a login and editing screens; you do not need to write code.
+                        The quote should cover that complete system, including training and documentation.
                     </BlogText>
 
-                    <BlogHeader id="is-wordpress-outdated">Is WordPress outdated in 2026?</BlogHeader>
-                    <div data-speakable="true">
-                        <BlogText>
-                        No. WordPress supports block-based publishing, custom development and a REST API for separate applications. An old theme or an overloaded installation is a reason to review that implementation. It is not evidence that every WordPress site needs replacing. Start with the editing tasks and customer journeys that need to change.
-                    </BlogText>
+                    <BlogHeader id="architecture">The differences that matter day to day</BlogHeader>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="WordPress and Next.js business comparison">
+                        <table className="w-full min-w-[680px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal"><tr><th scope="col" className="p-4">Your question</th><th scope="col" className="p-4">WordPress</th><th scope="col" className="p-4">Our Next.js approach</th></tr></thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><th scope="row" className="p-4 font-bold">Can staff update it?</th><td className="p-4">Built-in editor, with options depending on the theme and plugins.</td><td className="p-4">An editor arranged around your pages, services, products or classes.</td></tr>
+                                <tr><th scope="row" className="p-4 font-bold">What helps it load quickly?</th><td className="p-4">A suitable theme, optimized images, good hosting and caching.</td><td className="p-4">Purpose-built pages, prepared ahead where suitable, with browser code limited to the features needed.</td></tr>
+                                <tr><th scope="row" className="p-4 font-bold">How do bookings and staff work connect?</th><td className="p-4">Plugins and integrations, with custom work where their rules do not match yours.</td><td className="p-4">A connected journey designed around your rules and existing services.</td></tr>
+                                <tr><th scope="row" className="p-4 font-bold">Who handles updates?</th><td className="p-4">Your support team maintains WordPress, themes, plugins and hosting.</td><td className="p-4">Your support team maintains the application, editor, software packages and connected services.</td></tr>
+                                <tr><th scope="row" className="p-4 font-bold">What gets backed up?</th><td className="p-4">The database and website files, including uploads.</td><td className="p-4">Code, content and business records, plus a separate backup of uploaded files.</td></tr>
+                                <tr><th scope="row" className="p-4 font-bold">Can another developer take over?</th><td className="p-4">Yes, with accounts, files, database and licence details.</td><td className="p-4">Yes, with your accounts, project code, data and handover instructions.</td></tr>
+                            </tbody>
+                        </table>
                     </div>
 
+                    <BlogHeader id="performance">Will a Next.js website load faster?</BlogHeader>
+                    <BlogText>
+                        <strong>Speed is a practical reason we recommend Next.js for a custom rebuild.</strong> When
+                        replacing a heavy page-builder site, we can remove unused design features and plugin scripts,
+                        prepare public pages in advance and send the visitor less work to do on their phone. This can
+                        make the same content quicker to open and use.
+                    </BlogText>
+                    <BlogText>
+                        Compare the same pages, pictures and features. Having the same number of pages does not mean
+                        two websites do the same amount of work. A cached WordPress page can also be served quickly,
+                        while large videos or unnecessary tracking can slow either build down. We demonstrate the
+                        difference on representative pages before launch rather than assign a speed to the framework name.
+                    </BlogText>
+                    <BlogHeader id="rendering">How we build speed into Next.js</BlogHeader>
+                    <BlogList items={[
+                        "Prepare suitable public pages before a visitor arrives, instead of rebuilding every part on every visit.",
+                        "Keep work on the server where possible, so a visitor's phone downloads and runs less JavaScript.",
+                        "Size and compress images for the screen, and delay below-the-fold media until it is needed.",
+                        "Load booking tools, video players and marketing scripts where they belong, instead of putting everything on every page.",
+                        "Test important pages on mobile, including forms and checkout, and use real-visitor measurements when available.",
+                    ]} />
+                    <BlogText>
+                        Next.js documents the <a href="https://nextjs.org/docs/app/getting-started/server-and-client-components" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">server and browser controls</a> behind this approach.
+                        Our <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline">plain-English guide to Core Web Vitals</Link> explains how we measure loading, responsiveness and page movement.
+                    </BlogText>
+                    <BlogHeader id="wordpress-performance">Does WordPress need more plugins to be fast?</BlogHeader>
+                    <BlogText>
+                        Many WordPress sites use plugins for caching and image optimization. Some hosts provide these
+                        features themselves. WordPress does not require a plugin for every improvement: choosing a
+                        lighter theme, resizing images and removing unnecessary scripts can help too. Its
+                        <a href="https://developer.wordpress.org/advanced-administration/performance/optimization/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline"> performance guide</a> covers those options.
+                    </BlogText>
+                    <BlogText>
+                        Our Next.js approach puts those decisions into the build, without a WordPress caching plugin or
+                        page builder to configure. If the existing WordPress site is otherwise right for you, we can
+                        <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline"> investigate its slow pages first</Link>.
+                    </BlogText>
 
+                    <BlogHeader id="features">Can the website help run the business?</BlogHeader>
+                    <BlogText>
+                        This is where a custom build can earn its price. The website can start a process that continues
+                        through payments, staff work and customer updates. Your team should not have to copy the same
+                        details between a form, a spreadsheet, an email and an accounting system.
+                    </BlogText>
+                    <BlogText>
+                        WordPress can support these processes through plugins, integrations and custom development.
+                        That works well when their features fit. When several tools need workarounds to follow your rules,
+                        we can build a Next.js website and staff portal around the complete journey.
+                    </BlogText>
+                    <figure className="my-8 rounded-2xl border border-cognac/20 bg-cognac/5 p-6">
+                        <figcaption className="mb-5 font-bold text-charcoal">A connected customer journey we can build</figcaption>
+                        <ol className="grid gap-4 sm:grid-cols-5">
+                            {['Enquiry or booking', 'Payment and confirmation', 'Staff assignment', 'Delivery and updates', 'Records and follow-up'].map((step, index) => (
+                                <li key={step} className="border-l-2 border-cognac pl-3 text-sm font-semibold leading-relaxed text-charcoal"><span className="mb-2 block text-xs text-cognac">0{index + 1}</span>{step}</li>
+                            ))}
+                        </ol>
+                    </figure>
+                    <BlogList items={[
+                        "Enquiries: save the customer's details, send an acknowledgement and assign the request to the right person.",
+                        "Bookings: check availability, reserve places, collect payment and release unpaid holds after an agreed time.",
+                        "Payments: record successful payments and refunds against the right customer, with an accounting connection where required.",
+                        "Staff work: show tasks, deadlines and status in a shared workspace, with permissions for each role.",
+                        "Customer updates: send confirmations, reminders and progress messages when the relevant step is complete.",
+                        "Follow-up: issue documents or certificates, request missing information and show items that need human attention.",
+                    ]} />
+                    <BlogText>
+                        We agree which of these your business needs before pricing. We also plan what happens when a
+                        payment fails, someone cancels, an email cannot be delivered or a connected service is unavailable.
+                        Automation needs a visible way to spot and resolve exceptions, not just a successful demo.
+                    </BlogText>
+                    <InsightBox variant="info" label="What this looks like at A Step Above Medical">
+                        The delivered system connects class capacity, paid bookings, expiring unpaid holds and waitlists.
+                        It sends student confirmations and class details, gives instructors rosters, records attendance and
+                        emails certificates. Payments and refunds stay connected to student records and QuickBooks.
+                        Items needing a person appear in a Needs attention list. Read the
+                        <Link href="/work/a-step-above-medical#medical-daily-workflow" className="text-cognac hover:underline"> day-to-day workflow</Link> and
+                        <Link href="/work/a-step-above-medical#client-review" className="text-cognac hover:underline"> the client's review</Link>.
+                    </InsightBox>
+
+                    <BlogHeader id="editing">Can my staff still change pages themselves?</BlogHeader>
+                    <BlogText>
+                        Yes. Moving to Next.js does not mean asking a developer to change a photograph or class date.
+                        We provide a content editor with fields and reusable sections for the work your team does.
+                        A class might have a name, date, location, instructor and availability. A news story might have
+                        a headline, images, body text and publication date.
+                    </BlogText>
+                    <BlogText>
+                        WordPress gives you its editor and any page-builder tools installed on the site. Our custom
+                        approach can make editing more focused: staff see the fields they need, while shared design
+                        rules keep pages consistent. New features and substantial layout changes still need development.
+                    </BlogText>
+                    <BlogText>
+                        Before handover, we show staff how to edit and publish, practise the agreed tasks with them
+                        and provide documentation. For <Link href="/work/ladies-4-jesus" className="text-cognac hover:underline">Ladies 4 Jesus</Link>,
+                        we built publishing and submission moderation around the owner's work. ASAM's team manages course
+                        and location content in Sanity and class operations in its separate portal.
+                    </BlogText>
+
+                    <BlogHeader id="plugins">What replaces the WordPress plugins?</BlogHeader>
+                    <BlogText>
+                        We list what each plugin does for your business. Some jobs become part of the new website,
+                        some move into the editor or staff portal, and some stay with a specialist service. You should
+                        know where every important feature goes before the old site is switched off.
+                    </BlogText>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Plugins replaced in the A Step Above Medical project">
+                        <table className="w-full min-w-[600px] border-collapse text-left text-sm">
+                            <caption className="p-4 text-left font-semibold text-charcoal">Actual replacements in our ASAM project</caption>
+                            <thead className="bg-stone-100"><tr><th scope="col" className="p-4">Previous tool</th><th scope="col" className="p-4">What we built instead</th></tr></thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><th scope="row" className="p-4">Divi and Code Snippets</th><td className="p-4">Custom Next.js page templates, with code changes recorded in GitHub.</td></tr>
+                                <tr><th scope="row" className="p-4">The Events Calendar, its Pro add-on and Event Tickets</th><td className="p-4">Class scheduling, enrolment and payment tools in the portal.</td></tr>
+                                <tr><th scope="row" className="p-4">Ninja Forms</th><td className="p-4">Booking and contact forms connected to the new website.</td></tr>
+                                <tr><th scope="row" className="p-4">WP Mail Logging</th><td className="p-4">Email and activity records in the portal.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        A Next.js build still uses software packages and services. We choose, connect and maintain them
+                        as part of the application. Payments can stay with a payment provider; an existing donor system
+                        or customer database can stay where it is. We replace the parts that need changing and preserve
+                        the connections that already serve you well.
+                    </BlogText>
+
+                    <BlogHeader id="backups">What gets backed up, and how do we recover it?</BlogHeader>
+                    <BlogText>
+                        A backup must cover the information your business would need tomorrow. For WordPress, that
+                        means both the database and the files: pages, settings, uploads, themes and plugins. The host,
+                        a plugin or another managed service can provide this. WordPress's
+                        <a href="https://developer.wordpress.org/advanced-administration/security/backup/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline"> backup guide</a> explains why both parts matter.
+                    </BlogText>
+                    <BlogText>
+                        For our Next.js projects, we specify protection for three separate parts. The provider and
+                        schedule depend on the agreed project and care plan:
+                    </BlogText>
+                    <BlogList items={[
+                        "Website code: keep the project and its change history in GitHub, with instructions for deploying a working version.",
+                        "Content and business records: back up the CMS and database, including bookings, customer details or orders stored there.",
+                        "Photos and documents: back up uploaded files separately, using the chosen storage service and a separate copy where agreed.",
+                    ]} />
+                    <BlogText>
+                        A project using Supabase for records and Backblaze for files needs a plan covering both.
+                        <a href="https://supabase.com/docs/guides/platform/backups" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline"> Supabase's database backups do not include the uploaded files themselves</a>.
+                        Restoring the website code also does not restore yesterday's bookings.
+                    </BlogText>
+                    <BlogText>
+                        Our backup scope names how often copies run, how long they are kept, who receives failure alerts
+                        and how a restore is tested. Daily backups can leave a gap of up to a day; a busy booking system
+                        may need more frequent protection. Records held by outside payment or accounting services also
+                        need their own recovery and reconciliation arrangements.
+                    </BlogText>
+
+                    <BlogHeader id="security">Who keeps it secure?</BlogHeader>
+                    <BlogText>
+                        A Next.js rebuild removes the WordPress installation, theme and WordPress plugins from this
+                        website. That removes those particular things to patch. We can also keep public pages separate
+                        from private staff tools and limit what each staff account can access.
+                    </BlogText>
+                    <BlogText>
+                        There is still maintenance: Next.js, the editor, connected services and other software need
+                        updates. Under the agreed care plan, we review relevant alerts, apply fixes, test affected
+                        journeys and explain what changed. Your proposal should say who responds, during which hours
+                        and what is included.
+                    </BlogText>
+                    <BlogHeader id="plugin-buyouts">Can an update introduce a security problem?</BlogHeader>
+                    <BlogText>
+                        Yes. <a href="https://www.patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Patchstack's April 2026 EssentialPlugin investigation</a> documented
+                        malicious updates after a plugin business changed ownership. This is a reason to review the
+                        software and the people responsible for its updates.
+                    </BlogText>
+                    <BlogText>
+                        The same responsibility applies to custom development. GitHub's
+                        <a href="https://github.blog/security/supply-chain-security/strengthening-supply-chain-security-preparing-for-the-next-malware-campaign/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline"> report on the Shai-Hulud campaign</a> describes
+                        malicious JavaScript packages stealing credentials. Testing before publishing an update helps
+                        protect the live site, but a successful test alone does not prove software is safe.
+                    </BlogText>
+                    <BlogHeader id="security-recovery">What happens if something goes wrong?</BlogHeader>
+                    <BlogText>
+                        For a broken release, we investigate and restore a working version where appropriate. For a
+                        suspected break-in, we also check what was accessed, replace exposed passwords or access keys and
+                        repair the entry point. Those steps apply to either platform. A backup is part of recovery;
+                        it cannot undo information already stolen.
+                    </BlogText>
+
+                    <BlogHeader id="seo">What can Next.js do for SEO?</BlogHeader>
+                    <BlogText>
+                        Next.js lets us build search-friendly pages directly into the website: useful content in the
+                        page Google receives, editable titles and descriptions, clear internal links, structured data
+                        describing the content, and a sitemap that updates as pages are published. We can improve mobile
+                        loading and reuse those rules across your service, product or location pages.
+                    </BlogText>
+                    <BlogText>
+                        You do not need a WordPress SEO plugin for that setup. Your staff still get the agreed SEO fields
+                        in their editor. WordPress can provide these features too; the advantage of our custom build is
+                        control over how they work together with your design, content and business data.
+                    </BlogText>
+                    <BlogHeader id="migration">Will moving affect Google?</BlogHeader>
+                    <BlogText>
+                        <strong>You can move to Next.js while keeping your domain and existing page addresses.</strong>
+                        We preserve the content and links that matter, transfer search settings and redirect any addresses
+                        that genuinely need changing. Then we check the new pages and monitor Google Search Console.
+                    </BlogText>
+                    <BlogText>
+                        We cannot promise that rankings will never move. Google's
+                        <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline"> migration guidance</a> explains
+                        that changes can cause temporary fluctuations while pages are processed. Our job is to protect
+                        what already works and fix the technical weaknesses that justified the rebuild.
+                    </BlogText>
+                    <BlogList items={[
+                        "Record existing pages, search settings, links and important customer journeys.",
+                        "Keep useful addresses unchanged; map a relevant destination for each page that moves.",
+                        "Check content, titles, search visibility settings, structured data and sitemaps before launch.",
+                        "Test forms, bookings, payments, analytics and staff editing on a private preview.",
+                        "Launch with a recovery plan, then check indexing, errors and search performance.",
+                    ]} />
+                    <BlogText>
+                        Read our <Link href="/blog/will-migrating-hurt-my-seo" className="text-cognac hover:underline">website migration SEO checklist</Link> and
+                        <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline"> WordPress-to-Next.js migration guide</Link> for the detailed checks.
+                    </BlogText>
+
+                    <BlogHeader id="accessibility">Will customers find it easier to use?</BlogHeader>
+                    <BlogText>
+                        A redesign gives us the chance to make navigation, text, forms and checkout clearer. We test
+                        keyboard use, visible focus, readable contrast, form labels and error messages, alongside mobile
+                        layouts. These checks belong in the agreed build whether the site uses WordPress or Next.js.
+                        A framework name or an automated score is not an accessibility certificate.
+                    </BlogText>
+                    <BlogHeader id="cost">What will it cost to build and run?</BlogHeader>
+                    <BlogText>
+                        WordPress can be economical when a maintained theme and plugins meet your needs. A custom
+                        Next.js build takes more planning and development, but can replace repeated manual tasks and
+                        overlapping tools. Compare the complete cost over three years, including the staff time it takes
+                        to operate.
+                    </BlogText>
+                    <BlogList items={[
+                        "The initial build or repair, including content migration, testing and training.",
+                        "Hosting, database, file storage, email and any paid editing or business services.",
+                        "Plugin or service subscriptions that stay, and those the new build actually replaces.",
+                        "Security updates, backups, monitoring and support.",
+                        "Future changes, your team's administration time and any eventual provider handover.",
+                    ]} />
+                    <BlogText>
+                        We show ongoing charges separately and explain what a care plan covers. Free software does not
+                        mean every service is free. Compare actual invoices and like-for-like quotes using our
+                        <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline"> three-year cost worksheet</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="ownership">What happens if I change developers?</BlogHeader>
+                    <BlogText>
+                        <strong>Your website stays yours.</strong> For a project set up in your accounts, your domain,
+                        hosting, content services and project code remain under your control. Changing developers is a
+                        coordinated handover: give the new team access, share documentation and check that publishing,
+                        billing and backups keep working. It does not require rebuilding the site.
+                    </BlogText>
+                    <BlogText>
+                        We document account ownership and access in the proposal. You receive the code and design files
+                        we create for you, data exports and operating instructions. If you choose included hosting on our
+                        account under a care plan, we arrange its transfer to your account when requested or when the
+                        engagement ends. Third-party services and assets retain their own licence terms.
+                    </BlogText>
+                    <BlogText>
+                        The incoming developer needs experience with the chosen tools. Handover includes a walkthrough,
+                        a test of their access and removal of access no longer needed. Our
+                        <Link href="/blog/do-you-own-your-website" className="text-cognac hover:underline"> website ownership checklist</Link> lists what to keep.
+                    </BlogText>
+
+                    <BlogHeader id="is-wordpress-outdated">Is WordPress outdated?</BlogHeader>
+                    <BlogText>
+                        No. An old or complicated WordPress installation is a reason to examine that website, not to
+                        dismiss every WordPress build. Start with what your customers and staff need next and what it
+                        will take to deliver it.
+                    </BlogText>
+                    <BlogHeader id="why-people-leave">When does a rebuild become worthwhile?</BlogHeader>
+                    <BlogList items={[
+                        "Staff copy the same information between forms, emails, spreadsheets and business tools.",
+                        "Important workflows depend on workarounds between plugins that were not designed together.",
+                        "The current design makes it difficult to deliver the customer experience you need.",
+                        "Recurring repairs cost time without solving the underlying problem.",
+                    ]} />
                     <BlogQuote>
-                        Choose WordPress when the publishing workflow fits your team. Choose Next.js when the interface or the data needs more control than a theme gives you.
+                        The strongest reason to rebuild is what your business can do afterward: customers can complete
+                        the task, and your team can handle the work without joining the pieces by hand.
                     </BlogQuote>
-
-                    <BlogHeader id="why-people-leave">Why do people move away from WordPress?</BlogHeader>
+                    <BlogHeader id="choose-wordpress">When we recommend keeping WordPress</BlogHeader>
                     <BlogText>
-                        Four situations are worth investigating before commissioning a migration. Each is a diagnostic prompt, not a plugin-count or traffic threshold:
+                        Keep it when the editor suits your staff, maintained plugins meet the requirements and targeted
+                        improvements can solve the problems. A straightforward publishing site may gain more from better
+                        content, design and support than from a change of platform.
                     </BlogText>
-                    <BlogList
-                        items={[
-                            "Critical workflows depend on overlapping or unmaintained plugins. Map their responsibilities and recurring repair work before deciding whether to simplify or replace them.",
-                            "The editor no longer matches the work. Test whether structured templates or a simpler WordPress configuration solve it before changing CMS.",
-                            "Uncached or personalized routes miss the performance target. WordPress can serve cached pages, and Next.js can also perform request-time work. Profile the slow routes and their queries before choosing a rendering strategy.",
-                            "The organization needs clearer release and security controls. Compare documented access, dependency updates, testing and recovery on both proposed stacks.",
-                        ]}
-                    />
+                    <BlogHeader id="choose-next">When we recommend Next.js</BlogHeader>
                     <BlogText>
-                        If one of these describes your site, compare a scoped repair with a scoped replacement. Our recommendation is to <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">diagnose and price the WordPress repair first</Link>. A rebuild earns its place when it solves a remaining requirement, not simply because the current installation is frustrating.
+                        Choose it when you want a purpose-built website connected to bookings, payments, customer data
+                        or staff operations, and those needs justify custom development. Agree the editor, integrations,
+                        recurring costs and support before starting. That gives you a business system with a clear owner
+                        for each part.
                     </BlogText>
-
-                    <BlogHeader id="architecture">Architecture comparison</BlogHeader>
+                    <BlogHeader id="team">Who handles the technical work?</BlogHeader>
                     <BlogText>
-                        The six rows below all resolve to one thing: where the responsibility sits. WordPress ships content, rendering, features, updates, deploys and exit as one product; Next.js requires you to choose and assemble each of them. That is not better or worse, it is a different amount of ownership. The row most comparisons skip is the last one, because exit is where the difference actually costs money.
+                        You do not need an in-house development department to run the finished site. You do need a
+                        named team for updates and changes. With PandaCodeGen, Hassan and Imran remain your contacts,
+                        and your written scope defines the build, training, documentation and support arrangement.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
-                        <table className="w-full min-w-[1060px] border-collapse text-left text-sm">
-                            <thead className="bg-stone-100 text-charcoal">
-                                <tr><th className="p-4">Area</th><th className="p-4">WordPress</th><th className="p-4">Next.js implementation</th></tr>
-                            </thead>
-                            <tbody className="divide-y divide-stone-200 text-stone-700">
-                                <tr><td className="p-4 font-bold">Content</td><td className="p-4">Built-in admin, database, media and revisions</td><td className="p-4">Chosen CMS or data source and preview integration</td></tr>
-                                <tr><td className="p-4 font-bold">Rendering</td><td className="p-4">Theme and plugin implementation, with cache options</td><td className="p-4">Server, static and client patterns selected by route</td></tr>
-                                <tr><td className="p-4 font-bold">Features</td><td className="p-4">Core, maintained extensions and custom PHP or JavaScript</td><td className="p-4">Packages, APIs, providers and custom TypeScript or JavaScript</td></tr>
-                                <tr><td className="p-4 font-bold">Updates</td><td className="p-4">Core, runtime, theme and plugins</td><td className="p-4">Framework, packages, providers and application</td></tr>
-                                <tr><td className="p-4 font-bold">Deployments</td><td className="p-4">Host and update workflow</td><td className="p-4">Build, deployment, cache invalidation and rollback workflow</td></tr>
-                                <tr><td className="p-4 font-bold">Exit</td><td className="p-4">Content export plus theme and plugin-specific data</td><td className="p-4">Code, CMS data, providers, documentation and account handoff</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <BlogHeader id="editing">Editing and content operations</BlogHeader>
+                    <BlogHeader id="headless">Can we keep the WordPress editor?</BlogHeader>
                     <BlogText>
-                        WordPress offers an integrated editing experience and a mature ecosystem. A Next.js site can
-                        give non-developers a strong workflow when paired with a suitable CMS, but preview, visual
-                        editing, roles, scheduling, localization and media need deliberate integration. Test real
-                        editorial tasks before choosing.
+                        Yes. WordPress can remain the editor while Next.js runs the public website. This is called
+                        headless WordPress. It can suit a team that likes its existing editor but needs a different
+                        public experience. Forms, previews and plugin features need checking because they do not all
+                        carry across automatically. WordPress documents the
+                        <a href="https://developer.wordpress.org/rest-api/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline"> connection used to retrieve its content</a>.
                     </BlogText>
-                    <BlogList
-                        items={[
-                            "Create and edit each content type",
-                            "Preview draft content in the correct route and state",
-                            "Review, approve, schedule and roll back changes",
-                            "Reuse structured sections without breaking layout",
-                            "Manage localization, media and accessibility fields",
-                            "Understand what still requires a developer",
-                        ]}
-                    />
-
-                    <BlogHeader id="performance">Performance comparison</BlogHeader>
+                    <BlogHeader id="case">More of our migration work</BlogHeader>
                     <BlogText>
-                        <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">A well-implemented WordPress site can be fast</Link>, and a poorly implemented Next.js site can be
-                        slow. WordPress speed comes down to the theme, the plugins, the hosting, the database, caching, your media and third
-                        parties. Next.js performance depends on rendering choices, data fetching, caching, JavaScript,
-                        media, providers and third parties. Compare representative routes with the same content and
-                        features.
+                        Alongside ASAM and Ladies 4 Jesus, we moved
+                        <Link href="/work/mycustompatches" className="text-cognac hover:underline"> MyCustomPatches</Link> to Next.js.
+                        The client reports delivery in about 22 days for that agreed scope. Each example has its own
+                        requirements; we use them to show the work we delivered, not to promise the same schedule for
+                        a different website.
                     </BlogText>
-                    <InsightBox variant="info" label="Field and lab answer different questions">
-                        Use available Chrome UX Report data for <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline">real-user Core Web Vitals</Link> and controlled Lighthouse or
-                        DevTools runs for diagnosis. Record which page, which device, what connection, which region, what you consented to, and whether you were signed in. A
-                        score of 90 is a <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> band, not a Google ranking threshold.
-                    </InsightBox>
-
-                    <BlogHeader id="rendering">What Next.js rendering control can offer</BlogHeader>
+                    <BlogHeader id="offer">What we include in a proposal</BlogHeader>
                     <BlogText>
-                        Next.js documents Server and Client Components plus caching and revalidation patterns. A team
-                        can choose which code and data are needed for a route and where work runs. That control can be
-                        valuable, but incorrect boundaries can expose data, create stale content, ship unnecessary
-                        JavaScript or make invalidation difficult. Framework capability is not proof of a correct
-                        implementation.
-                    </BlogText>
-
-                    <BlogHeader id="wordpress-performance">What WordPress optimization can offer</BlogHeader>
-                    <BlogText>
-                        WordPress can use page, object, browser and CDN caching, optimized themes and media, maintained
-                        plugins and appropriate hosting. Profile server, database, frontend and background work before
-                        assuming PHP or a database is the limiting factor. Dynamic, authenticated and commerce journeys
-                        need their own tests.
-                    </BlogText>
-
-                    {/* Third-party measurement, added 13 Aug 2026. Both figures render from
-                        research-facts.json with their method and limitation attached, because a
-                        platform-vs-platform error average is the kind of number that gets stripped
-                        of its caveats the moment someone quotes it. */}
-                    <BlogHeader id="accessibility">Accessibility comparison</BlogHeader>
-                    <BlogText>
-                        {finding("cms-errors-2026").statement}. On the same sample,{" "}
-                        {finding("framework-errors-2026").statement.replace("By JavaScript framework, ", "")}.
-                        Both figures come from {finding("cms-errors-2026").study},{" "}
-                        {finding("cms-errors-2026").publisher.split(",")[0]}.
+                        Our <Link href="/pricing" className="text-cognac hover:underline">planning tiers</Link> start at
+                        $1,500 Starter, $3,500 Growth and $5,000 Scale, with more complex systems quoted separately.
+                        We set out pages, features, migration, testing, training, account ownership and ongoing costs
+                        before work starts. A common payment option is 30 percent at onboarding and 70 percent on
+                        delivery; your written agreement sets the schedule.
                     </BlogText>
                     <BlogText>
-                        Two things that comparison does not establish. It is an association rather than a
-                        cause: platform choice travels with site age, budget and the skill of whoever built
-                        it, and none of those were controlled for. And it describes sites neither of us
-                        built, so it is context for a platform decision, not evidence about any particular
-                        agency&apos;s work, including ours.
-                    </BlogText>
-                    <BlogText>
-                        The result that cuts against the usual pitch is worth stating plainly: Squarespace
-                        averaged 33.0 detected errors and Wix 33.3, both well below WordPress. The study does not establish why those averages differ or whether any individual site is accessible. {finding("cms-errors-2026").limitation}
-                    </BlogText>
-                    <BlogText>
-                        Hosted platforms also differ in the controls available to authors. <Link href="/blog/is-squarespace-bad-for-seo" className="text-cognac hover:underline">Our Squarespace SEO review</Link> separates settings you can fix from platform limitations that might justify a move.
-                    </BlogText>
-                    <BlogText>
-                        Method, so the numbers can be checked rather than taken:{" "}
-                        {finding("cms-errors-2026").method} Full report:{" "}
-                        <a
-                            href={finding("cms-errors-2026").source}
-                            target="_blank"
-                            rel="nofollow noopener noreferrer"
-                            className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac"
-                        >
-                            The WebAIM Million 2026
-                        </a>.
-                    </BlogText>
-
-                    <BlogHeader id="seo">SEO comparison</BlogHeader>
-                    <BlogText>
-                        Either platform can deliver crawlable rendered content, titles, descriptions, canonicals,
-                        internal links, structured data and sitemaps. WordPress often provides these through core,
-                        themes and plugins. Next.js provides application primitives and metadata support, while the
-                        implementation owns the output. Google does not rank a page simply because it uses either
-                        platform. Our guide to{" "}
-                        <Link href="/blog/how-website-speed-affects-seo" className="text-cognac hover:underline">how website speed affects SEO</Link>{" "}
-                        sets out where page experience fits alongside the rest of search.
-                    </BlogText>
-
-                    <BlogHeader id="security">Security comparison</BlogHeader>
-                    <BlogText>
-                        WordPress risk includes core, runtime, themes, plugins, hosting and privileged administration.
-                        Next.js risk includes framework and package dependencies, application code, build systems,
-                        hosting, CMS and other providers. Compare least privilege, update ownership, secret management,
-                        input validation, logs, backups, recovery and incident response. Static output can reduce some
-                        runtime exposure but does not create a zero-attack-surface site.
-                    </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
-                        <table className="w-full min-w-[720px] border-collapse text-left text-sm">
-                            <thead className="bg-stone-100 text-charcoal">
-                                <tr>
-                                    <th className="p-4">Attack surface</th>
-                                    <th className="p-4">WordPress</th>
-                                    <th className="p-4">Next.js</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-stone-200 text-stone-700">
-                                <tr><td className="p-4 font-bold">Third-party code on the server</td><td className="p-4">Plugins and themes execute PHP with database access</td><td className="p-4">Framework and third-party packages can execute during installation, builds, server requests and in browser bundles</td></tr>
-                                <tr><td className="p-4 font-bold">Public admin endpoint</td><td className="p-4">A login route is reachable by default unless you move or restrict it</td><td className="p-4">No built-in content administration; application and CMS authentication depend on the chosen services and deployment</td></tr>
-                                <tr><td className="p-4 font-bold">Writable directories</td><td className="p-4">Uploads and cache paths are writable at runtime</td><td className="p-4">Static artifacts can be read-only; runtime writes and upload permissions depend on hosting and storage design</td></tr>
-                                <tr><td className="p-4 font-bold">Dependency risk</td><td className="p-4">Core, theme and every plugin, each on its own release schedule</td><td className="p-4">Framework and the full transitive npm tree, pinned by lockfile</td></tr>
-                                <tr><td className="p-4 font-bold">Supply chain</td><td className="p-4">Compromised releases can reach sites through updates; staging and release controls can limit exposure</td><td className="p-4">Malicious dependencies can steal build credentials or ship into server and browser code</td></tr>
-                                <tr><td className="p-4 font-bold">Secrets</td><td className="p-4">Server configuration, database credentials and integration tokens</td><td className="p-4">Host environment variables and provider tokens</td></tr>
-                                <tr><td className="p-4 font-bold">Blast radius of one bad update</td><td className="p-4">Can affect the live site immediately</td><td className="p-4">A build-breaking change fails to deploy; a change that builds cleanly still ships</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <InsightBox variant="warning" label="What the comparison supports">
-                        A controlled deployment can keep an unreviewed dependency update away from production.
-                        A successful build does not detect every malicious change, and Next.js dependencies can
-                        execute at runtime too. WordPress can also use staged updates and restricted deployment
-                        permissions. The advantage comes from the architecture and release process you actually
-                        operate, with someone responsible for patches, monitoring and recovery.
-                    </InsightBox>
-                    <BlogHeader id="plugin-buyouts">Can buying a plugin put existing websites at risk?</BlogHeader>
-                    <BlogText>
-                        Yes, when the buyer gains control of its releases. In its April 2026{' '}
-                        <a href="https://www.patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">EssentialPlugin investigation</a>,
-                        Patchstack documented an acquisition followed by backdoored updates and later remote
-                        activation. An already-installed plugin can therefore become a delivery route for malware.
-                        Buying a plugin license alone does not grant permission to publish updates to everyone
-                        else; control of the publisher or release credentials is the critical distinction.
-                    </BlogText>
-                    <BlogText>
-                        npm also has documented malicious-package campaigns. GitHub&apos;s{' '}
-                        <a href="https://github.blog/security/supply-chain-security/strengthening-supply-chain-security-preparing-for-the-next-malware-campaign/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Shai-Hulud analysis</a>{' '}
-                        describes credential theft through package installation. A compromised developer machine
-                        or build runner can expose credentials before anything is deployed. These incident reports
-                        do not provide comparable rates per website or installation, so they cannot establish that
-                        npm attacks are rarer or less exploitable than WordPress attacks.
-                    </BlogText>
-                    <BlogHeader id="security-recovery">How does fixing a security issue compare?</BlogHeader>
-                    <BlogText>
-                        Separate a vulnerable version from a confirmed compromise. Our practical comparison below
-                        assumes that the team can access the application, hosting and relevant logs. The repair scope
-                        depends on what executed and what it could access, not just the framework name.
-                    </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Security repair comparison">
-                        <table className="w-full min-w-[720px] border-collapse text-left text-sm">
-                            <thead className="bg-stone-100"><tr><th className="p-4">Situation</th><th className="p-4">WordPress</th><th className="p-4">Next.js and npm</th></tr></thead>
-                            <tbody className="divide-y divide-stone-200">
-                                <tr><td className="p-4">Vulnerable version, no compromise established</td><td className="p-4">Identify the affected core, theme or plugin edition and version. Apply the trusted fix, test key flows and update every affected installation.</td><td className="p-4">Identify direct and transitive affected packages. Update the dependency and lockfile, test, rebuild and redeploy every affected environment.</td></tr>
-                                <tr><td className="p-4">Malware or unauthorized access found</td><td className="p-4">Contain access and preserve evidence. Check files, database content, privileged users, scheduled tasks and persistent backdoors; restore or rebuild from a known-clean state and rotate exposed credentials.</td><td className="p-4">Contain affected machines and runners and preserve evidence. Revoke exposed tokens, investigate repositories and provider accounts, rebuild in a clean environment from trusted dependencies and redeploy.</td></tr>
-                                <tr><td className="p-4">After recovery</td><td className="p-4">Verify the original entry point is closed, check for remaining persistence and monitor for reinfection or spam.</td><td className="p-4">Verify the entry point is closed, inspect affected services and artifacts, and monitor for credential reuse or reinfection.</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <BlogText>
-                        Patching closes a known vulnerability; it does not remove every backdoor or undo stolen data.
-                        Rolling back a deployment cannot revoke a leaked token. Neither platform has a universal
-                        repair time or cost. For a smaller public website, fewer privileged integrations and static
-                        delivery where suitable can reduce exposure, while authenticated features and APIs still
-                        need their own security work.
-                    </BlogText>
-
-                    <BlogHeader id="features">Plugin ecosystem versus assembled services</BlogHeader>
-                    <BlogText>
-                        <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">WordPress extensions</Link> can deliver deep functionality quickly, especially for niche publishing,
-                        membership, learning or commerce use cases. A Next.js team may integrate specialist services or
-                        build custom behavior. Inventory features, data, edge cases, vendor support, portability and
-                        long-term ownership. Replacing a plugin is not automatically simpler or cheaper.
-                    </BlogText>
-
-                    <BlogHeader id="cost">Three-year cost comparison</BlogHeader>
-                    <BlogText>
-                        Neither platform has a three-year cost until you fill in seven lines from your own invoices and from quotes covering the same work. A generous free tier today is not a price you are owed in year three, a WordPress maintenance retainer is not universal, and a custom build still needs somebody to maintain it. Fill the seven rows below with your own figures before you believe any saving or payback period, including ours.
-                    </BlogText>
-                    <BlogList
-                        items={[
-                            "Initial repair, rebuild or migration",
-                            "Hosting, CDN, storage, bandwidth and builds",
-                            "CMS, database, search, email, analytics and monitoring",
-                            "Theme, plugin, package and provider lifecycle",
-                            "Internal editing, releases, QA and vendor management",
-                            "Security, backup, recovery and support",
-                            "Roadmap changes and eventual exit",
-                        ]}
-                    />
-                    <BlogText>
-                        For a worked example and the line items to collect, use our{" "}
-                        <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline">three-year cost model for WordPress and custom code</Link>{" "}
-                        and the{" "}
-                        <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">scope and tiers behind a migration quote</Link>.
-                    </BlogText>
-
-                    <BlogHeader id="ownership">Ownership and portability</BlogHeader>
-                    <BlogText>
-                        Open-source software does not by itself answer who controls the domain, hosting, repository,
-                        content, data, accounts or custom deliverables. Review contracts and provider terms. WordPress
-                        has a documented content export, but themes and plugins may store data separately. A Next.js
-                        handoff should include code, data paths, environment configuration, provider accounts,
-                        documentation and licenses. Our{" "}
-                        <Link href="/blog/do-you-own-your-website" className="text-cognac hover:underline">contract and control checklist for website ownership</Link>{" "}
-                        lists the assets to confirm before signing.
-                    </BlogText>
-
-                    <BlogHeader id="team">Team and operating capability</BlogHeader>
-                    <BlogText>
-                        WordPress can suit teams that value integrated publishing and can manage hosting and extension
-                        updates. Next.js can suit teams or partners able to own application releases, packages, providers
-                        and observability. The technically possible option is not necessarily the operationally suitable
-                        one.
-                    </BlogText>
-
-                    <BlogHeader id="choose-wordpress">Choose WordPress when</BlogHeader>
-                    <BlogText>
-                        Stay on WordPress when its editor and content model fit the team, maintained plugins cover the capability economically, and a named person owns updates, security, backup and support. The condition people skip is the third one: a stack nobody owns degrades regardless of which platform it runs on.
-                    </BlogText>
-                    <BlogList
-                        items={[
-                            "Its editor and content model fit the team.",
-                            "Maintained plugins provide required capability economically.",
-                            "The site you have can do the job once it has actually been repaired.",
-                            "The organization has a clear update, security, backup and support owner.",
-                            "A custom migration would recreate mature functionality without material benefit.",
-                        ]}
-                    />
-
-                    <BlogHeader id="choose-next">Choose Next.js when</BlogHeader>
-                    <BlogText>
-                        Move to Next.js only when application-level control is genuinely required, the target CMS and editorial workflow have been selected and tested, and the team can own the build, deploy, dependency and provider lifecycle. All five conditions below are usually true together, and the migration and operating scope has to be funded, not assumed.
-                    </BlogText>
-                    <BlogList
-                        items={[
-                            "The required experience, rendering or data integration needs application-level control.",
-                            "The target CMS and editorial workflow are explicitly selected and tested.",
-                            "The team can own build, deployment, dependency and provider lifecycle.",
-                            "Measured WordPress constraints cannot be reasonably solved in place.",
-                            "The migration capability, data, SEO, acceptance and operating scope is funded.",
-                        ]}
-                    />
-
-                    <BlogHeader id="headless">Consider headless WordPress when</BlogHeader>
-                    <BlogText>
-                        Headless WordPress retains WordPress for content while Next.js delivers the frontend. It may fit
-                        when editors value WordPress and the frontend needs separate delivery. It also adds APIs,
-                        previews, cache invalidation, two deployments and distributed debugging. Prototype the hardest
-                        content, preview, search and revalidation paths before committing.
-                    </BlogText>
-
-                    <BlogHeader id="migration">WordPress to Next.js migration controls</BlogHeader>
-                    <BlogText>
-                        Seven steps, in this order, turn a migration into something managed rather than a gamble: list and sort every web address, write down what the site actually contains, choose the new CMS and workflow, keep valuable URLs stable and map the rest, validate the rendered output, test the journeys, then cut over with monitoring and a rollback path. They reduce avoidable technical risk. They do not guarantee ranking continuity, because processing depends on the site and on search systems.
-                    </BlogText>
-                    <BlogList
-                        items={[
-                            "Crawl and classify every current URL.",
-                            "Inventory templates, content types, plugins, data and integrations.",
-                            "Define the target CMS and staff workflows.",
-                            "Keep valuable URLs stable where practical and map relevant redirects.",
-                            "Validate rendered metadata, content, links, schema and sitemaps.",
-                            "Test accessibility, performance, forms, analytics and business journeys.",
-                            "Plan cutover, final data delta, monitoring and rollback.",
-                        ]}
-                    />
-                    <BlogText>
-                        The{" "}
-                        <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline">step-by-step WordPress to Next.js migration guide</Link>{" "}
-                        works through each control in order, and{" "}
-                        <Link href="/blog/will-migrating-hurt-my-seo" className="text-cognac hover:underline">what a migration does to existing search performance</Link>{" "}
-                        covers the risk side of the same decision.
-                    </BlogText>
-
-                    <BlogHeader id="case">What the MyCustomPatches migration shows</BlogHeader>
-                    <BlogText>
-                        <Link href="/work/mycustompatches" className="text-cognac hover:underline">MyCustomPatches</Link> is an independent client, not a PandaCodeGen property, and its figures are
-                        owner-confirmed and published with permission. The owner reports a delivery of about 22 days.
-                        Our central project record lists client-owner approval on July 21, 2026. Treat it as an owner statement for one
-                        accepted scope rather than an audited figure. We attach no speed or conversion figures to it,
-                        because one site&apos;s numbers depend on its own hosting, content, traffic and tracking setup,
-                        and they would not predict what your migration produces. Judge the example on what it is: one
-                        defined scope, delivered. The same scope structure is described on our{" "}
-                        <Link href="/services/wordpress-migration" className="text-cognac hover:underline">WordPress migration service page</Link>.
-                    </BlogText>
-
-                    <BlogHeader id="offer">PandaCodeGen terms</BlogHeader>
-                    <BlogText>
-                        <Link href="/pricing" className="text-cognac hover:underline">Planning tiers</Link> start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with custom
-                        scope where needed. A common payment option is 30 percent at onboarding and 70 percent on delivery, and another written schedule may be agreed.
-                        Package discussions may start with 15 calendar days of launch defect support on Starter and 30 on Growth and Scale; support applies only where the accepted project terms record it. A
-                        90-plus Lighthouse target applies only under the representative pages, profiles, environment,
-                        repeated runs, exclusions and remedy named in the signed scope.
+                        Our proposals specify included launch support and ongoing maintenance separately. Where a
+                        90-plus Lighthouse target is included, the agreement names the pages, mobile and desktop test
+                        conditions and remedy. That is a measurable build target, not a promise of Google rankings.
                     </BlogText>
 
                     <BlogHeader id="related">Related reading</BlogHeader>
@@ -586,10 +564,10 @@ export default function WordPressVsNextJsPage() {
                     </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
-                        <h2 className="mb-3 font-serif text-3xl">Compare a complete WordPress and Next.js stack</h2>
+                        <h2 className="mb-3 font-serif text-3xl">Show us where your website slows the business down</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
-                            We will map requirements, evidence and lifecycle ownership before recommending repair,
-                            headless WordPress or migration.
+                            Tell us what customers need to do and what your staff still handle manually. We will explain
+                            what to keep, what to connect and what a rebuild would cost.
                         </p>
                         <QuoteModalButton cta="wordpress_nextjs_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
                             Ask us about your site <ArrowRight className="h-4 w-4" />

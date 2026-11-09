@@ -134,10 +134,7 @@ export default function WixVsCustomWebsitePage() {
                             Wix vs Custom Website: <span className="italic text-cognac">Choose From Requirements</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Wix gives you the editor, the hosting and a set of business tools in one place. A custom site
-                            hands you control over how it looks, how it behaves and what it connects to, and hands you
-                            the engineering work that comes with that. Neither one is always faster, always cheaper,
-                            always safer, or always better for search. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
+                            Wix gives you the editor, hosting and business tools in one place. A custom build lets us shape the design and connect bookings, payments or customer records around your business. You will also need a developer to maintain it. Compare the features you need and the full running costs before choosing. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Reviewed against current primary documentation on October 8, 2026.</p>
                       </div>
@@ -181,7 +178,7 @@ export default function WixVsCustomWebsitePage() {
                             { icon: Pencil, title: "Editing", body: "Visual tools, roles, preview and publishing workflow." },
                             { icon: Boxes, title: "Capabilities", body: "Your content, the store, bookings, members, apps and data." },
                             { icon: Code2, title: "Control", body: "How pages render, what they connect to, and who ships changes." },
-                            { icon: Scale, title: "Lifecycle", body: "Build, providers, maintenance, support and exit." },
+                            { icon: Scale, title: "Running costs", body: "Build, hosting, services, updates, support and handover." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
                             <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
                                 <Icon className="mb-3 h-5 w-5 text-cognac" />
@@ -411,8 +408,7 @@ export default function WixVsCustomWebsitePage() {
                     </BlogText>
                     <BlogText>
                         Handle the domain and mailboxes as their own work item. Confirm who holds the registrar account,
-                        where DNS is served and which records carry email, then schedule the cutover so mail keeps
-                        flowing while records propagate. Validate every export against the live data rather than
+                        where DNS is served and which records carry email, then plan the website switch so your email keeps working while the new settings take effect. Validate every export against the live data rather than
                         assuming the file is complete, and keep the current site reachable until the replacement has
                         been checked.
                     </BlogText>
