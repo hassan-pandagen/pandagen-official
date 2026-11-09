@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-12",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-11-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/is-squarespace-bad-for-seo")],
@@ -53,6 +53,8 @@ export const metadata: Metadata = {
 };
 
 const sources = [
+    { name: "W3C: decorative images and empty alt attributes", url: "https://www.w3.org/WAI/tutorials/images/decorative/" },
+    { name: "Google: how search snippets are created", url: "https://developers.google.com/search/docs/appearance/snippet" },
     { name: "Squarespace: request that AI models exclude your site", url: "https://support.squarespace.com/hc/en-us/articles/360022347072-Request-that-AI-models-exclude-your-site" },
     { name: "Squarespace: optimize your site for AI-powered search engines", url: "https://support.squarespace.com/hc/en-us/articles/38299115788813-Optimize-your-site-for-AI-powered-search-engines" },
     { name: "Squarespace: hiding your site from search results", url: "https://support.squarespace.com/hc/en-us/articles/21829426828045-Hiding-your-site-from-search-results" },
@@ -84,7 +86,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-12",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-09",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -100,8 +102,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "SEO",
             inLanguage: "en-US",
-            wordCount: 2890,
-            timeRequired: "PT14M",
+            wordCount: 3311,
+            timeRequired: "PT16M",
             about: [
                 { "@type": "Thing", name: "Squarespace", sameAs: ["https://en.wikipedia.org/wiki/Squarespace"] },
                 { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
@@ -119,7 +121,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-12",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-09",
             inLanguage: "en-US",
         },
         {
@@ -155,14 +157,12 @@ export default function IsSquarespaceBadForSEOPage() {
                             Is Squarespace Bad for SEO? <span className="italic text-cognac">Run This Diagnostic</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Squarespace is not bad for SEO, and the platform handles the fundamentals properly. What it
-                            has is a ceiling, and whether that ceiling matters depends entirely on who you are competing
-                            against. Most sites that underperform have not reached it. They have pages where the controls
-                            Squarespace already gives them were never filled in. Check that first, then judge the
-                            platform on what is left. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
+                            Squarespace provides the basic controls a business site needs for SEO. Our recommendation:
+                            fix indexability, useful page content and the settings you already have before paying to
+                            migrate. Move when you can name a technical or publishing requirement the platform cannot meet.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed October 8, 2026 against current Squarespace and Google documentation.
+                            Reviewed November 9, 2026 against current Squarespace and Google documentation.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -170,10 +170,10 @@ export default function IsSquarespaceBadForSEOPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="is-squarespace-bad-for-seo" published="2026-05-12" readTime="14 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="is-squarespace-bad-for-seo" published="2026-05-12" readTime="16 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
-                        <h2 className="mb-4 text-2xl font-bold text-charcoal">The defensible answer</h2>
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">Our recommendation</h2>
                         <BlogList
                             items={[
                                 "Squarespace documents SEO descriptions, page titles, custom slugs, SSL, alt text, sitemaps and search-console connections.",
@@ -214,8 +214,7 @@ export default function IsSquarespaceBadForSEOPage() {
 
                     <BlogHeader id="on-page-checklist">The on-page checklist, page by page</BlogHeader>
                     <BlogText>
-                        Before assuming a platform ceiling, check whether the controls above were ever set. Underperforming sites usually have pages
-                        where the controls above were simply never set. Work through this list on your top templates before
+                        Before assuming a platform ceiling, check whether the controls above were configured. Work through this list on your top templates before
                         concluding Squarespace is the problem, and verify each item in the published HTML rather than in
                         the editor, because what the editor shows and what ships are not always the same thing. If the
                         complaint is load time rather than search, start from{" "}
@@ -231,11 +230,11 @@ export default function IsSquarespaceBadForSEOPage() {
                     <BlogList
                         items={[
                             "Page title: unique per page, front-loaded with the term the page is actually about. Check the rendered <title>, not just the editor field, because site title formats append text you may not expect.",
-                            "SEO description: written per page. Google may rewrite it, but an empty one guarantees you have no influence at all.",
+                            "SEO description: write a useful, page-specific summary. Google primarily creates snippets from page content and may use your description when it better matches the search.",
                             "URL slug: short, lowercase, hyphenated, and stable. Changing a slug on a page that already ranks needs a redirect, not a rename.",
                             "One H1 per page, describing the page rather than the brand, with H2s that follow the questions a reader would actually ask in order.",
-                            "Image alt text on anything that carries meaning, and no alt text on purely decorative images. Also confirm images are compressed before upload, since Squarespace will happily serve what you gave it.",
-                            "Canonical: confirm the published page self-references, and watch for duplicate reachable versions of the same content through tags, categories or archive routes.",
+                            "Image alt text: describe meaningful images. Purely decorative images need an empty alt attribute (alt=\"\"), rather than a missing attribute. Check the published output and compress oversized uploads.",
+                            "Canonical: the intended primary URL should identify itself; duplicate versions should identify the relevant primary URL. Inspect the rendered tag rather than assuming every reachable URL should self-reference.",
                             "Sitemap: Squarespace generates one at /sitemap.xml. Open it, confirm the pages you care about are in it and that the ones you do not want indexed are not.",
                             "Search Console and Bing Webmaster Tools: verified, sitemap submitted, and coverage reports actually read rather than just connected once.",
                             "Custom 404: configured, and returning a real 404 status rather than a soft 200.",
@@ -250,7 +249,7 @@ export default function IsSquarespaceBadForSEOPage() {
                     </InsightBox>
 
                     <BlogQuote>
-                        The platform is not the ceiling on Squarespace SEO. What you are competing against is.
+                        Fix the page before replacing the platform. A migration should solve a named limitation, not an unexplained ranking problem.
                     </BlogQuote>
 
                     <BlogHeader id="real-limits">The four limits that are actually structural</BlogHeader>
@@ -261,19 +260,16 @@ export default function IsSquarespaceBadForSEOPage() {
                     </BlogText>
                     <BlogList
                         items={[
-                            "You cannot edit robots.txt. Squarespace generates it and gives you two checkboxes under Settings, Crawlers: block search engine crawlers, and block AI crawlers. The generated file carries its own internal disallow rules. If you need per-bot rules, crawl-delay or disallow patterns for parameterized URLs, Squarespace has no way to express them.",
+                            "You cannot edit robots.txt. Squarespace generates it and gives you two checkboxes under Settings, Crawlers: block search engine crawlers, and block AI crawlers. The generated file carries its own internal disallow rules. If you need per-bot rules or disallow patterns for parameterized URLs, Squarespace has no way to express them.",
                             "Blog posts sit under a collection prefix. Check yours in Pages: you can rename it, so /blog/ can become /news/ or /journal/, but confirm in your own site whether a post can live at the root before you plan a URL structure around it. Anyone migrating from WordPress with root-level post URLs needs a redirect for every one of them.",
                             // 8 Oct 2026: the location used to read "Settings, Advanced, URL Redirects". Squarespace's
                             // URL mappings guide (updated 8 Sep 2026) puts the panel under Developer tools.
-                            "Redirects have no CSV import. They live in the Developer tools panel under URL mappings, in the format /old-url -> /new-url 301. You can paste many lines at once, so this is not the one-at-a-time job it is often described as, but there is no file import and no way to manage the list programmatically. On a large migration that is a real piece of manual work.",
+                            "Redirects use a text field rather than a native CSV import. In Developer tools, open URL mappings and use /old-url -> /new-url 301. Prepare the mapping lines in a spreadsheet and paste them in bulk. Squarespace documents a 400 KB field limit, approximately 2,500 redirect lines. Specific rules take priority when placed above broader rules; test the destinations and rule order before launch.",
                             "Multi-location businesses should test this before committing. Squarespace's Business Information settings take a single primary location and a Map block renders one pin per block, so check what genuinely separate location sites would require on your own plan, including how each would be billed. Location pages can still be built by hand; what you do not get is a location entity the platform understands.",
                         ]}
                     />
                     <BlogText>
-                        The AI-crawler checkbox is worth a second look while you are in there. It is a single blunt
-                        switch, on or off, for the whole site. That is a reasonable default for a business that wants
-                        nothing to do with answer engines, and a problem for one that wants to be cited but not
-                        scraped wholesale, because Squarespace gives you no way to draw that line. Squarespace is candid about what the switch buys you: its documentation says requesting that known AI crawlers exclude your site does not guarantee they will, and that ticking the box does not retroactively remove anything already scraped. Squarespace also publishes its own guide for AI-powered search, which tells you to leave that box unchecked if you want AI crawlers to scan the site, and recommends bullet points, numbered lists, tables and FAQ sections because AI search engines often reuse them verbatim.
+                        Squarespace offers a site-wide setting to request exclusion by known AI crawlers. Check the resulting robots.txt rules against the crawlers you intend to allow or block. This setting is not a promise that every AI service will comply, and it does not remove material already collected. For AI-search visibility, start with accessible, crawlable pages that answer the reader's question clearly.
                     </BlogText>
 
                     <BlogHeader id="wix-comparison">Squarespace or Wix: which gives you more SEO control?</BlogHeader>
@@ -319,12 +315,7 @@ export default function IsSquarespaceBadForSEOPage() {
                         </table>
                     </div>
                     <BlogText>
-                        Of the three, redirects are the row that actually costs people money, and it only costs it once.
-                        Moving a site with two thousand old URLs onto Squarespace means pasting two thousand lines by hand,
-                        which is an afternoon nobody planned for. The robots.txt row matters at scale or where parameterized URLs
-                        need excluding, and almost nowhere else. The structured data row matters when what you want to add
-                        conflicts with what Squarespace already emits, since yours sits alongside the automatic markup rather
-                        than replacing it.
+                        For a large migration, prepare the old-to-new URL map in a spreadsheet, generate the mapping lines and paste them together into Squarespace's URL mappings panel. The work is choosing correct destinations and testing them, not typing every line separately. Check current mapping limits before committing. Wix's CSV import is a different workflow, not evidence that bulk preparation is impossible on Squarespace.
                     </BlogText>
                     <BlogText>
                         Read the rows against your own plan and most readers find that none of them apply. If you are running
@@ -343,10 +334,7 @@ export default function IsSquarespaceBadForSEOPage() {
 
                     <BlogHeader>Why you will not find a Squarespace speed score here</BlogHeader>
                     <BlogText>
-                        Every article that gives you one is quoting a sample it did not describe. Templates, media,
-                        fonts, embeds, commerce features, consent tools, custom code and route content all move the
-                        number, and the same page scores differently depending on the device profile, network, page
-                        state and tool version used to test it.
+                        A platform-wide speed score cannot diagnose your site. Templates, media, fonts, embeds, commerce features, consent tools and custom code all affect the result. Test the pages customers actually use, then change the component responsible for the delay.
                     </BlogText>
                     <InsightBox variant="info" label="Measure your own routes instead">
                         We do not publish a load-time range or a mobile score ceiling for Squarespace as a platform.
@@ -435,11 +423,7 @@ export default function IsSquarespaceBadForSEOPage() {
                         of the nine systems in WebAIM&apos;s table, well below WordPress, and Wix was barely behind it.
                     </BlogText>
                     <BlogText>
-                        The likely reason is the thing this article otherwise treats as a limitation. A
-                        hosted builder decides your markup, and constrained markup is harder to break. The
-                        same boundary that stops you controlling schema output also stops a site owner
-                        shipping an unlabelled form or a contrast failure in a custom template. If you are
-                        not going to change anything structural, that limit is protecting you.
+                        These results do not show that a hosted builder prevents accessibility errors. Authors can still choose poor contrast, omit useful image descriptions or create confusing links. Test the finished site with a keyboard and screen reader as well as an automated checker; the platform average is context, not your acceptance test.
                     </BlogText>
                     <BlogText>
                         Read it carefully though: {finding("cms-errors-2026").limitation}{" "}
@@ -456,9 +440,7 @@ export default function IsSquarespaceBadForSEOPage() {
 
                     <BlogHeader id="when-squarespace-is-fine">When Squarespace is genuinely good enough</BlogHeader>
                     <BlogText>
-                        The platform ranks perfectly well when the competition is not trying especially hard, which
-                        covers a lot of real businesses. It is worth being honest about that before anyone sells you
-                        a rebuild you do not need.
+                        Our view: keep Squarespace when staff can publish useful pages, customers can complete their tasks and the audit finds repairable issues. A redesign or migration needs a stronger business case than a disappointing ranking on its own.
                     </BlogText>
                     <BlogList
                         items={[
@@ -483,8 +465,7 @@ export default function IsSquarespaceBadForSEOPage() {
                         </BlogText>
                     </div>
                     <BlogText>
-                        Three outcomes are legitimate, and the decision belongs to the evidence rather than the platform
-                        name. If the answer points at leaving, read{" "}
+                        If the audit points at leaving, read{" "}
                         <Link href="/blog/squarespace-vs-custom-website" className="text-cognac hover:underline">
                             Squarespace compared with a custom build
                         </Link>{" "}

@@ -310,12 +310,16 @@ export default function WillMigratingHurtSeoPage() {
                         Compare those commitments before comparing headline fees.
                     </BlogText>
                     <BlogText>
-                        Our relevant work includes <Link href="/work/ladies-4-jesus" className="text-cognac underline">Ladies 4 Jesus</Link>,
-                        moved from WordPress to Next.js and Sanity with owner-managed publishing and moderation,
-                        and <Link href="/work/a-step-above-medical" className="text-cognac underline">A Step Above Medical</Link>,
-                        rebuilt from WordPress with staff-managed classes and a separate operations portal.
-                        These projects show the editorial and operational work behind a migration. For your site,
-                        we start by identifying which content and business journeys must keep working.
+                        If your migration includes community submissions, look at our <Link href="/work/ladies-4-jesus" className="text-cognac underline">Ladies 4 Jesus migration case study</Link>.
+                        We moved the WordPress site to Next.js and Sanity so the owner can publish content and
+                        moderate visitor submissions without a developer. The editing and approval workflow belongs
+                        in the migration scope alongside the public pages.
+                    </BlogText>
+                    <BlogText>
+                        For a site connected to daily operations, our <Link href="/work/a-step-above-medical" className="text-cognac underline">A Step Above Medical case study</Link> shows
+                        a WordPress rebuild with a public course website, a content editor and a separate portal
+                        for classes, students, payments and certificates. Ask your migration partner to demonstrate
+                        those staff journeys as well as the visitor journey before approving launch.
                     </BlogText>
                     <BlogText>
                         <Link href="/contact" className="text-cognac underline font-semibold">Discuss your migration with Hassan and Imran</Link>.

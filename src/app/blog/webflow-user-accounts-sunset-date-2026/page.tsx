@@ -17,7 +17,7 @@ const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalB
 const postId = "webflow-user-accounts-sunset-date-2026";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "Webflow User Accounts Sunset Date: January 29, 2026 (Confirmed)";
+const title = "Webflow User Accounts Sunset: January 29, 2026 Recovery Guide";
 const description =
     "Webflow sunset User Accounts on January 29, 2026. What stopped, what Webflow says about data, gated content and subscriptions, and how to scope a replacement.";
 
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-22",
-        modifiedTime: "2026-10-09",
+        modifiedTime: "2026-11-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/webflow-user-accounts-sunset-date-2026")],
@@ -51,8 +51,7 @@ export const metadata: Metadata = {
 const sources = [
     { name: "Webflow User Accounts sunset", url: "https://help.webflow.com/hc/en-us/articles/36046006227731-User-Accounts-sunset" },
     { name: "Webflow deprecation announcement", url: "https://webflow.com/updates/deprecating-logic-and-user-accounts" },
-    { name: "Webflow import and export user accounts", url: "https://help.webflow.com/hc/en-us/articles/33961370848275-Import-export-user-accounts" },
-    { name: "Webflow legacy Editor deprecation FAQ", url: "https://help.webflow.com/hc/en-us/articles/48412420902675-Legacy-Editor-deprecation-FAQ" },
+    { name: "Historical Webflow user-account export instructions", url: "https://help.webflow.com/hc/en-us/articles/33961370848275-Import-export-user-accounts" },
     { name: "Webflow Logic sunset", url: "https://help.webflow.com/hc/en-us/articles/36045959707667-Logic-sunset" },
     { name: "Webflow code export limitations", url: "https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code" },
 ];
@@ -67,7 +66,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/webflow-user-accounts-sunset-date-2026"),
             description,
             datePublished: "2026-04-22",
-            dateModified: "2026-10-09",
+            dateModified: "2026-11-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -87,8 +86,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],
-            wordCount: 2662,
-            timeRequired: "PT13M",
+            wordCount: 3039,
+            timeRequired: "PT14M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -101,7 +100,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             datePublished: "2026-04-22",
-            dateModified: "2026-10-09",
+            dateModified: "2026-11-09",
             breadcrumb: { "@id": "https://www.pandacodegen.com/blog/webflow-user-accounts-sunset-date-2026#breadcrumb" },
             inLanguage: "en-US",
         },
@@ -138,14 +137,14 @@ export default function WebflowUserAccountsSunsetPage() {
                             Webflow User Accounts Sunset: <span className="italic text-cognac">Recovery After January 29, 2026</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Webflow User Accounts is gone. Webflow was specific about what that means: you lost access to
+                            Webflow User Accounts is gone. For sites that had not migrated, Webflow removed access to
                             your account data, account pages turned into static pages, anything you had behind a
-                            members-only gate became public, nobody can log in any more, and Stripe subscriptions that
+                            members-only gate became public, User Accounts sign-in stopped working, and Stripe subscriptions that
                             qualified kept running. Start by working out what you actually had, not by picking a
                             replacement.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 3, 2026 against Webflow&apos;s current help center, feature sunsets page and product updates. The January 29, 2026 date has not changed.
+                            Reviewed November 9, 2026 against Webflow&apos;s current help center, feature sunsets page and product updates. The January 29, 2026 date has not changed.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -153,7 +152,7 @@ export default function WebflowUserAccountsSunsetPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="webflow-user-accounts-sunset-date-2026" published="2026-04-22" readTime="8 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="webflow-user-accounts-sunset-date-2026" published="2026-04-22" readTime="14 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Verified status</h2>
@@ -165,18 +164,14 @@ export default function WebflowUserAccountsSunsetPage() {
                                 "User Accounts functionality, dedicated APIs and webhooks ended January 29, 2026.",
                                 "For sites still using it, Webflow says account data was not migrated to the CMS.",
                                 "Webflow recommended Outseta, Memberstack or another ecosystem provider, not one mandatory replacement.",
-                                "Webflow also removed the legacy Editor and its whitelabeling on August 4, 2026.",
                             ]}
                         />
                     </section>
 
-                    <InsightBox variant="warning" label="A second Webflow change, completed in August">
-                        This page covers a completed sunset. Webflow also removed the legacy Editor and legacy Editor
-                        whitelabeling on <strong>August 4, 2026</strong>, after moving users to client and limited seats
-                        from May 4, 2026 and giving migrated users the Content editor role (see Webflow&apos;s{" "}
-                        <a href="https://help.webflow.com/hc/en-us/articles/48412420902675-Legacy-Editor-deprecation-FAQ" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>legacy Editor deprecation FAQ</a>).
-                        If clients or colleagues used to publish through the legacy Editor, check they now have the seat
-                        and role they need.
+                    <InsightBox variant="warning" label="Check these three things first">
+                        On a site that still relied on Webflow User Accounts, test a member login, open formerly gated
+                        pages while logged out, and match active Stripe subscriptions to working access. Protect
+                        exposed content and contact affected paying members before treating this as a design project.
                     </InsightBox>
 
                     <div className="my-8 grid gap-4 sm:grid-cols-4">
@@ -233,13 +228,12 @@ export default function WebflowUserAccountsSunsetPage() {
                     </BlogText>
 
                     <BlogQuote>
-                        Sites that missed the deadline are usually running all three failure modes at once, not one in isolation.
+                        Check access, account records and billing separately. A working homepage does not prove that membership still works.
                     </BlogQuote>
 
                     <BlogHeader>The three failure modes, in practice</BlogHeader>
                     <BlogText>
-                        Sites that did not migrate before the deadline are usually running all three of these at once
-                        rather than one in isolation. Recognising which you have determines what you can still recover.
+                        An unmigrated site can have several failures together. Check each one instead of treating a repaired login screen as proof that records, content protection and billing are also correct.
                     </BlogText>
 
                     <h3 className="mt-6 text-xl font-bold text-charcoal">One: login stopped working</h3>
@@ -320,16 +314,7 @@ export default function WebflowUserAccountsSunsetPage() {
                         dependency updates and incident ownership.
                     </BlogText>
                     <BlogText>
-                        In practice that resolves to one of two shapes, and the question separating them is who
-                        stores the passwords. A hosted identity service, such as Clerk or Auth0, runs the user store,
-                        the sign-in screens and the recovery flows, and your application integrates against it; the
-                        trade is a per-user bill and another vendor roadmap to watch. A self-hosted library, such as
-                        Auth.js, keeps the user table in your own database, which removes the per-user cost and the
-                        external dependency and moves session security, account recovery and abuse handling onto your
-                        team. Neither is the safe default. Decide it from whether you want the user table inside your
-                        application or outside it, then check the exit path before you build against either. Our{" "}
-                        <Link href="/services/custom-engineering" className={sourceLinkClass}>custom engineering service</Link>{" "}
-                        covers how that work is scoped and handed over.
+                        A managed identity service can handle sign-in and account recovery, while your application controls which member can access which content. A self-hosted identity library gives your team more operating responsibility, including sessions, recovery and abuse prevention. Even where the library has no per-user license fee, database, email, hosting and maintenance costs remain. Choose by required flows, security capability and a tested export path, not just where a user table lives. Our <Link href="/services/custom-engineering" className={sourceLinkClass}>custom engineering service</Link> covers the application and handover work around identity.
                     </BlogText>
 
                     <BlogHeader>Is a managed replacement a fix or a deferral?</BlogHeader>
@@ -351,9 +336,9 @@ export default function WebflowUserAccountsSunsetPage() {
                     </BlogText>
                     <BlogList
                         items={[
-                            "If membership is a feature on your site, a managed provider is usually the right call. It is faster, cheaper to start, and the vendor carries the security and maintenance burden. Accept that you are renting, price it accordingly, and keep your data exportable.",
-                            "If membership is the business, moving from one vendor's roadmap to another vendor's roadmap relocates the risk rather than removing it. Owning the authentication and entitlement layer means the only party who can deprecate it is you.",
-                            "Either way, the second migration is harder than the first. By then you have member expectations, payment history and integrations to carry across, so the exit path matters more than the entry discount.",
+                            "If membership is a supporting feature, our default is to evaluate a managed provider first. Your team still owns configuration, access rules, integrations and testing. Keep member and entitlement exports usable.",
+                            "If membership is central to the business, consider owning the entitlement and billing logic while using a maintained identity component. Custom code gives control over that application, but its libraries and providers still change.",
+                            "For either choice, test the exit path before committing: member identifiers, entitlement records, payment references and account recovery need a documented transfer plan.",
                         ]}
                     />
                     <InsightBox variant="info" label="What to check before signing with any provider">
@@ -388,7 +373,7 @@ export default function WebflowUserAccountsSunsetPage() {
                     <div data-speakable="true">
                         <BlogText>
                             Two different things happened to User Accounts pages, and which one applies to you depends
-                            on whether you acted before the date. Webflow&apos;s <a href="https://help.webflow.com/hc/en-us/articles/36046006227731-User-Accounts-sunset" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">User Accounts sunset article</a>, read August 3, 2026, says
+                            on whether you acted before the date. Webflow&apos;s <a href="https://help.webflow.com/hc/en-us/articles/36046006227731-User-Accounts-sunset" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">User Accounts sunset article</a>, read November 9, 2026, says
                             that on a site which migrated off proactively, any User Systems utility pages are set to
                             draft on the next publish. On a site that still had User Accounts enabled on January 29,
                             2026, it says those pages were migrated to regular static pages instead, the content gates
@@ -465,11 +450,7 @@ export default function WebflowUserAccountsSunsetPage() {
 
                     <BlogHeader>The broader lesson</BlogHeader>
                     <BlogText>
-                        The sunsets did not stop with User Accounts. Webflow&apos;s feature sunsets page lists the
-                        legacy Editor and legacy Editor whitelabeling as unavailable from August 4, 2026, with
-                        migration to client and limited seats beginning May 4, 2026 and migrated users assigned the
-                        Content editor role. That is a third dated removal on the same page as Logic and User Accounts,
-                        and it is worth checking whether it touches how your clients edit content.
+                        The useful lesson is to separate website publishing, identity and paid access in your inventory. Know which service owns each record and what happens if it changes. A current export and a tested recovery procedure are more useful than an assurance that a chosen platform will never change.
                     </BlogText>
                     <BlogText>
                         Any managed feature or provider can change. Custom systems also change through libraries,

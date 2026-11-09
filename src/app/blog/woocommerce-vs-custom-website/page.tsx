@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-20",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-11-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/woocommerce-vs-custom-website")],
@@ -58,7 +58,7 @@ const sources = [
     { name: "WooCommerce REST API", url: "https://developer.woocommerce.com/docs/apis/rest-api/" },
     { name: "WooCommerce Store API", url: "https://developer.woocommerce.com/docs/apis/store-api/" },
     { name: "WooCommerce product CSV", url: "https://woocommerce.com/document/product-csv-importer-exporter/" },
-    { name: "WooCommerce HPOS", url: "https://developer.woocommerce.com/docs/features/high-performance-order-storage" },
+    { name: "WooCommerce HPOS", url: "https://developer.woocommerce.com/docs/features/orders/high-performance-order-storage/" },
     { name: "WooCommerce caching guidance", url: "https://developer.woocommerce.com/docs/best-practices/performance/configuring-caching-plugins" },
 ];
 
@@ -72,7 +72,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/woocommerce-vs-custom-website"),
             datePublished: "2026-05-20",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -87,8 +87,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Commerce platform strategy",
             inLanguage: "en-US",
-            wordCount: 3182,
-            timeRequired: "PT14M",
+            wordCount: 3375,
+            timeRequired: "PT16M",
             about: [
                 { "@type": "Thing", "name": "WooCommerce", "sameAs": ["https://woocommerce.com/", "https://en.wikipedia.org/wiki/WooCommerce"] },
                 { "@type": "Thing", name: "Custom Website" },
@@ -106,7 +106,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-20",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-09",
             inLanguage: "en-US",
         },
         {
@@ -144,7 +144,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                             not a universal winner.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed against current WooCommerce and Google documentation on October 8, 2026.
+                            Reviewed against current WooCommerce and Google documentation on November 9, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -152,7 +152,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="woocommerce-vs-custom-website" published="2026-05-20" readTime="14 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="woocommerce-vs-custom-website" published="2026-05-20" readTime="16 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <div className="my-10">
                         <PlatformComparisonAnimation />
@@ -165,7 +165,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                                 "Use WooCommerce when its catalog, content, extension and editing model fit the business and the team can operate it.",
                                 "Consider headless WooCommerce when the back office still fits but the customer experience needs a separately engineered frontend.",
                                 "Consider a custom platform when the core data model or workflows are the differentiator and packaged commerce creates repeated constraints.",
-                                "None of the three choices guarantees performance, security, SEO, conversion or lower total cost.",
+                                "Before choosing, test one complete order, refund, stock update and staff-editing journey on the proposed stack.",
                             ]}
                         />
                     </section>
@@ -187,9 +187,7 @@ export default function WooCommerceVsCustomWebsitePage() {
 
                     <BlogHeader id="framework">Four questions that decide this</BlogHeader>
                     <BlogText>
-                        Before comparing architectures in the abstract, score your own store against four things. These
-                        are rules of thumb rather than thresholds anyone can prove, but in our experience they predict
-                        the answer better than any feature comparison does.
+                        Start with the workflows your store must support. A large catalog or a long plugin list alone does not justify a rebuild. Find the task that fails, measure its business cost, and compare fixing it with replacing it.
                     </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[760px] border-collapse text-left text-sm">
@@ -199,12 +197,12 @@ export default function WooCommerceVsCustomWebsitePage() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr>
                                     <td className="p-4 font-bold">Catalog</td>
-                                    <td className="p-4">A small number of simple products that do not change often</td>
-                                    <td className="p-4">Hundreds of items, or a catalog that changes often enough that managing it through plugins is now a job</td>
+                                    <td className="p-4">Products, variants and bulk updates fit the existing tools</td>
+                                    <td className="p-4">Pricing, configuration or fulfillment rules require repeated manual work that a defined custom workflow would remove</td>
                                 </tr>
                                 <tr>
                                     <td className="p-4 font-bold">Extension load</td>
-                                    <td className="p-4">A modest plugin count, and nothing critical has broken on an update</td>
+                                    <td className="p-4">Maintained extensions cover the required workflows and updates pass staging checks</td>
                                     <td className="p-4">A long extension list, renewals adding up, and checkout has broken from an update before</td>
                                 </tr>
                                 <tr>
@@ -215,7 +213,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                                 <tr>
                                     <td className="p-4 font-bold">Who fixes it</td>
                                     <td className="p-4">No developer on call, and you rely on plugin support and forums</td>
-                                    <td className="p-4">You already have a developer relationship, or the build ships with a CMS you can run without one</td>
+                                    <td className="p-4">You can fund ongoing engineering as well as a CMS your staff can use</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -297,14 +295,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                         because a rebuild that fixes the wrong stage changes the number without explaining it.
                     </BlogText>
                     <BlogText>
-                        It helps to know what a request actually does. A WooCommerce page is assembled per request: PHP
-                        runs, the database is queried for products, pricing, sessions and cart state, the active theme
-                        loads, and every plugin hooked into that page executes before anything reaches the browser.
-                        Cart, checkout and account pages are customer-specific, so full page caching cannot cover them
-                        the way it covers a category page. Query weight tends to grow with the catalog, and stores
-                        accumulate transient records that are not always cleaned up. A pre-rendered frontend removes
-                        most of that per-request work for pages that can be pre-rendered, which is why the honest
-                        comparison is route by route rather than site against site.
+                        On an uncached WooCommerce request, PHP, database queries, theme code and relevant plugin hooks can contribute to response time. A cached public product or category page can avoid much of that work. Cart, checkout and account pages contain customer-specific state, so WooCommerce documents excluding them from full-page caches. Profile these routes separately. A pre-rendered storefront still needs live services for stock, pricing, payments and orders.
                     </BlogText>
                     <InsightBox variant="tip" label="Tune before you rebuild">
                         If hosting, object caching, database health and plugin count have never been reviewed, you do
@@ -351,8 +342,8 @@ export default function WooCommerceVsCustomWebsitePage() {
                     <BlogHeader id="cost">Compare total operating cost, not a headline build price</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            A build price covers one year of a decision you will live with for several, so compare the six lines that recur instead. On a packaged stack the recurring column grows roughly with the feature list, because each new capability tends to arrive as another paid extension. On a custom stack it tracks infrastructure and usage.
-                        </BlogText>
+                        Compare three years of the same commerce capability. WooCommerce can involve hosting, paid extensions and maintenance; custom commerce involves infrastructure, services and engineering. In either case, every integration needs an owner when the provider or your business process changes.
+                    </BlogText>
                     </div>
                     <BlogText>
                         There is no honest monthly figure for WooCommerce that is not your own. What it costs you is
@@ -371,15 +362,12 @@ export default function WooCommerceVsCustomWebsitePage() {
                             "Future changes, integration replacement and exit cost",
                         ]}
                     />
-                    <InsightBox variant="info" label="The mechanic worth understanding before you model anything">
-                        On a packaged stack, adding a capability usually means adding a paid extension, so the monthly
-                        bill grows roughly in step with the feature list. On a custom stack, a capability is work once
-                        and then it is part of the application, so the bill tracks infrastructure and usage instead. We
-                        see this on Panda Patches, which runs on a custom stack for tooling costs in the region of $55 a
-                        month across the whole store. Disclosure: Panda Patches is owned and operated by Imran Raza
-                        Ladhani, a PandaCodeGen co-founder, and PandaCodeGen built and maintains the platform, so treat
-                        it as our own operating experience rather than an independent reference. It is one store, and
-                        the figure is ours rather than a benchmark. The point is the shape of the curve, not the number.
+                    <InsightBox variant="info" label="What our own store demonstrates">
+                        On <Link href="/work/panda-patches" className="text-cognac hover:underline">Panda Patches</Link>,
+                        custom work connects orders, mockup approvals, payments and production tasks. That is the kind
+                        of operational requirement worth comparing with an extension-based solution. Panda Patches is
+                        owned by a PandaCodeGen co-founder, so this is our operating experience, not an independent
+                        client reference. The application still needs updates, testing and support after the build.
                     </InsightBox>
                     <BlogText>
                         Use the same period, capabilities, traffic assumptions, service levels and internal labor rates.
@@ -396,8 +384,8 @@ export default function WooCommerceVsCustomWebsitePage() {
                     <BlogHeader id="when-woo">When WooCommerce is likely the better fit</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            WooCommerce is the better fit whenever the constraint you found is an untidy installation rather than a platform limit, which describes most of the stores that arrive complaining about it. Five conditions point that way. If all five hold, a rebuild adds cost and risk without removing anything that was actually blocking you.
-                        </BlogText>
+                        Our recommendation: keep WooCommerce when a scoped repair can meet the store's requirements. Use these five checks to decide whether there is a real constraint left for a rebuild to solve.
+                    </BlogText>
                     </div>
                     <BlogList
                         items={[
@@ -409,11 +397,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                         ]}
                     />
                     <BlogText>
-                        Give WooCommerce credit for the thing it genuinely does well. It is open source, the store code
-                        and the store data are yours, the catalog is not subject to a vendor&apos;s plan limits, and
-                        the hosting relationship is yours to change. Most stories that begin &ldquo;WooCommerce is
-                        bad&rdquo; are really stories about an installation nobody maintained. You have reached a
-                        platform ceiling rather than an untidy installation when:
+                        WooCommerce offers an open-source store, an established extension ecosystem and a choice of hosts. Before replacing it, document the remaining constraint. The following are reasons to investigate a custom option, rather than proof that WooCommerce itself cannot do the job:
                     </BlogText>
                     <BlogList
                         items={[
@@ -446,8 +430,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                         Reviews, wishlists, loyalty, upsell prompts and chat tied to store data all have to be rebuilt,
                         replaced with a service or dropped. You also end up operating two deployments, two dependency
                         sets and two update schedules rather than one. That can be the right trade when the back office
-                        genuinely fits and the storefront genuinely does not. It is a poor trade when the only goal is a
-                        faster front end, because the same effort would buy a single system.
+                        genuinely fits and the storefront genuinely does not. If speed is the only goal, compare this extra integration work with tuning the existing storefront first.
                     </BlogText>
                     <BlogText>
                         <Link href="/blog/what-is-headless-commerce" className="text-cognac hover:underline font-medium">What headless commerce means</Link>{" "}

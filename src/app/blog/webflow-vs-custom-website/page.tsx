@@ -362,8 +362,16 @@ export default function WebflowVsCustomWebsitePage() {
                     <BlogText>
                         Those are potential controls, not automatic outcomes. A custom site can still be slow,
                         inaccessible, insecure, expensive or difficult to edit. Acceptance and operation must be
-                        designed and tested. For a sense of what we scope and hand over,{" "}
-                        <Link href="/work" className="text-cognac hover:underline">browse our project work</Link>.
+                        designed and tested.
+                    </BlogText>
+                    <BlogText>
+                        For a concrete example of a website connected to business operations, see our{" "}
+                        <Link href="/work/a-step-above-medical" className="text-cognac hover:underline">A Step Above Medical training platform case study</Link>.
+                        We rebuilt its WordPress website with Next.js and Sanity and built a separate Supabase
+                        portal for classes, students, payments and certificates. If those operational workflows
+                        are what your business needs, our{" "}
+                        <Link href="/services/backend-development" className="text-cognac hover:underline">backend development service</Link>{" "}
+                        covers the database, access rules, integrations and admin screens to scope alongside the website.
                     </BlogText>
 
                     <BlogHeader>Is Webflow slower than a custom site?</BlogHeader>

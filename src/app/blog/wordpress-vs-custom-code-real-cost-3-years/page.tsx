@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-20",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-11-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-vs-custom-code-real-cost-3-years")],
@@ -66,7 +66,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-vs-custom-code-real-cost-3-years"),
             description,
             datePublished: "2026-02-20",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -86,8 +86,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],
-            wordCount: 2415,
-            timeRequired: "PT11M",
+            wordCount: 3184,
+            timeRequired: "PT15M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -143,28 +143,14 @@ export default function WordPressVsCustomCostPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wordpress-vs-custom-code-real-cost-3-years" published="2026-02-20" readTime="11 min read" />
-
-                    <BlogText>
-                        Before the model, here are two practitioners describing their experience of WordPress. Their opinions are context, not measured cost inputs.
-                    </BlogText>
-                    {/* 8 Oct 2026: removed quotation whose full source could not be independently rechecked. */}
-                    <BlogQuote>
-                        Every time you load a page or post, WP wants to retrieve info from the database. While that may have made sense in the beginning, we are long since past the point where the content on pages (and posts for that matter) don&apos;t change enough to matter. WP architecture should really have switched over to treating the site cache as the primary site, with the database being treated as the backup.
-                    </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/user_number_666 · r/Wordpress · Apr 14, 2026 · 103 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/og5b5kc/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
-                    <BlogQuote>
-                        It&apos;s only when you check out some other CMS&apos;s out there (not even just the free ones) that you realise WordPress, even with its many flaws, is pretty well-rounded and user-friendly.
-                    </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/hetsteentje · r/Wordpress · Apr 15, 2026 · 9 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/ogay68t/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wordpress-vs-custom-code-real-cost-3-years" published="2026-02-20" readTime="15 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <p className="mb-4 leading-relaxed text-stone-700">
-                            Neither option wins in the abstract, and the total is whatever your own invoices and time
-                            records say it is. That is why this page publishes formulas rather than figures: the
-                            inputs are yours, and a headline three-year total that hides them cannot be checked
-                            against your situation. Five things settle it. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
+                            Compare keeping and repairing WordPress with a complete custom replacement over the same
+                            three years. Include the build, provider bills and the hours somebody spends running each.
+                            The worked example below shows where the totals overlap; your own quotes decide which wins.
                         </p>
                         <BlogList
                             items={[
@@ -177,13 +163,10 @@ export default function WordPressVsCustomCostPage() {
                         />
                     </section>
 
-                    <InsightBox variant="info" label="Why there are no headline totals or payback period">
-                        This comparison names no three-year total for WordPress, no matching total for custom code and
-                        no period over which one repays the other. Those numbers only mean something once both options
-                        are specified against the same capabilities, demand, service level and internal labor, and a
-                        scenario that prices one side generously while treating the other as free is an argument rather
-                        than a forecast. Put your own quotes, invoices and time records into both columns, show the
-                        formula, and let anyone reading the model challenge an input.
+                    <InsightBox variant="info" label="Our recommendation">
+                        Keep a working WordPress site unless the alternative removes a measured cost or enables work
+                        the business needs. If the case is financial, the saving must survive realistic maintenance
+                        and internal time on both sides. If the case is new capability, budget for that capability openly.
                     </InsightBox>
 
                     <div className="my-8 grid gap-4 sm:grid-cols-4">
@@ -242,8 +225,8 @@ export default function WordPressVsCustomCostPage() {
                     <BlogHeader id="model">The three-year model</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Three years is the horizon where these two options separate, because a build price lands once and everything else recurs. The model carries four columns for a reason: every input needs a WordPress source, a custom source, and one rule applied identically to both. Where a figure cannot be sourced, record the assumption instead of guessing.
-                        </BlogText>
+                        We use three years as a planning window so the upfront build and recurring work appear together. Use a longer or shorter window if that matches your contracts. Every input needs a source for each option and the same accounting rule; label estimates where no quote or invoice exists.
+                    </BlogText>
                     </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[1080px] border-collapse text-left text-sm">
@@ -285,8 +268,8 @@ export default function WordPressVsCustomCostPage() {
                     <BlogHeader id="wordpress-inputs">WordPress inputs</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Six inputs make up the WordPress column and only the first arrives as an invoice. Renewals, update review, release work and recovery readiness are the lines that get left out, and each one scales with the size of the plugin list. Take them from your own contracts and your own logged hours.
-                        </BlogText>
+                        The WordPress column contains both bills and staff time. Hosting and software renewals arrive as invoices; update reviews, release checks and recovery preparation may be done internally or by a paid provider. Record who does each task so labor is neither omitted nor counted twice.
+                    </BlogText>
                     </div>
                     <BlogList
                         items={[
@@ -375,14 +358,8 @@ export default function WordPressVsCustomCostPage() {
                             in-house spending a couple of hours a month on the site either way.
                         </BlogText>
                         <BlogText>
-                            One input in that table is not a range we get to choose. A business site cannot sit on a
-                            free developer-hosting tier: Vercel&apos;s Hobby plan is restricted to non-commercial
-                            personal use, so the commercial floor is Pro at $20 a month, which is $720 across three
-                            years before any usage. We priced that in full in{" "}
-                            <Link href="/blog/nextjs-hosting-zero-cost" className="text-cognac hover:underline">what Vercel actually costs</Link>.
-                            An earlier version of this table carried $0 at the low end, which contradicted our own
-                            page, so the custom column here starts at $720.
-                        </BlogText>
+                        This scenario uses Vercel Pro for the custom site, starting at $20 a month: $720 over 36 months before overages, additional paid seats or taxes. Vercel Hobby is restricted to personal, non-commercial use. That is a Vercel plan rule, not a minimum price for every custom website or hosting provider. See <a href="https://vercel.com/pricing" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Vercel pricing</a> and its <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Hobby terms</a>.
+                    </BlogText>
 
                         <div className="my-8 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full min-w-[34rem] border-collapse text-sm">
@@ -402,9 +379,9 @@ export default function WordPressVsCustomCostPage() {
                                         ["Build or setup", "$500 to $3,000", "$3,500 (our Growth package)"],
                                         ["Hosting, 3 years", "$300 to $900", "$720 to $1,500"],
                                         ["Plugins, themes, licences, 3 years", "$150 to $600", "$0"],
-                                        ["Outsourced maintenance, 3 years", "$0 self-managed, or $1,500 to $4,500", "$0 to $1,500"],
+                                        ["Outsourced maintenance, 3 years", "$0 self-managed, or $1,500 to $4,500", "$0 self-managed, or $1,500 to $4,500"],
                                         ["Internal time, 2 hrs/month at $50", "$3,600", "$3,600"],
-                                        ["Three-year total", "$4,550 to $12,600", "$7,820 to $10,100"],
+                                        ["Three-year total", "$4,550 to $12,600", "$7,820 to $13,100"],
                                     ].map(([line, wp, custom], idx, arr) => (
                                         <tr key={line} className={`border-t border-stone-200 align-top ${idx === arr.length - 1 ? "bg-stone-50 font-bold text-charcoal" : ""}`}>
                                             <td className="px-4 py-3">{line}</td>
@@ -424,20 +401,16 @@ export default function WordPressVsCustomCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            The second is that <strong>the largest single line on both sides is internal time</strong>,
-                            and it is the line almost every published comparison sets to zero. A three-year total that
-                            says WordPress costs nothing to maintain is really saying somebody in your business is doing
-                            the updates, the compatibility checks and the recovery when a plugin breaks, and that their
-                            hours are free. They are not free. Put the same fully loaded rate in both columns and the
-                            comparison changes shape, which is the point made at{" "}
-                            <a href="#labor" className="text-cognac hover:underline">internal labour belongs in both columns</a>.
-                        </BlogText>
+                        Internal time alone totals <strong>$3,600</strong>: 2 hours each month, at $50 an hour, for 36 months. That is more than the illustrative custom build fee. The upper external-maintenance allowance is $4,500 for either platform; replace it with actual quotes for the same tasks. Track the actual hours before comparing totals, and separate content work from technical maintenance so the same work appears once in each column.
+                    </BlogText>
 
-                        <InsightBox variant="info">
-                            The custom-build input uses our $3,500 Growth package; the WordPress figures are deliberately
-                            chosen scenario assumptions so the formula can be inspected. They do not establish a market
-                            average. Replace both columns with current quotes and invoices before using the result in a
-                            decision.
+                        <InsightBox variant="info" label="What this example assumes">
+                            These USD figures illustrate the calculation; they are not market averages or maintenance
+                            quotes. The custom build uses our $3,500 Growth starting price and assumes its CMS fits a
+                            free allowance, with no paid add-ons. The two internal hours cover content and routine
+                            administration. Technical maintenance must be assigned separately: a $0 external bill means
+                            someone owns that work internally and their time must be added if it exceeds this allowance.
+                            Taxes, new features and a later exit are outside these totals; add them where applicable.
                         </InsightBox>
 
                         <BlogText>

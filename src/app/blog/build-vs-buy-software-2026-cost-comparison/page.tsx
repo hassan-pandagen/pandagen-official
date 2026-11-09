@@ -6,7 +6,7 @@ import lazyLoad from "next/dynamic";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogHeader, BlogText, BlogList, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogQuote, BlogAuthor, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         description: "A scenario-based build-versus-buy framework with no universal spend or payback threshold.",
         type: "article",
         publishedTime: "2026-05-31T00:00:00-05:00",
-        modifiedTime: "2026-10-29T00:00:00-05:00",
+        modifiedTime: "2026-11-09T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison",
         images: [ogImageForPath("/blog/build-vs-buy-software-2026-cost-comparison")],
@@ -57,7 +57,7 @@ const articleSchema = {
             "description": "A scenario-based build-versus-buy framework using current quotes, migration, maintenance, security, adoption, and operating risk.",
             "image": ogImageUrlForPath("/blog/build-vs-buy-software-2026-cost-comparison"),
             "datePublished": "2026-05-31T00:00:00-05:00",
-            "dateModified": "2026-10-29T00:00:00-05:00",
+            "dateModified": "2026-11-09T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -73,8 +73,8 @@ const articleSchema = {
             "articleSection": "Pricing",
             "keywords": ["build vs buy software 2026", "custom software vs saas", "custom crm cost vs hubspot", "when to build custom software", "3 year cost of saas"],
             "inLanguage": "en-US",
-            "wordCount": 1636,
-            "timeRequired": "PT8M",
+            "wordCount": 2096,
+            "timeRequired": "PT10M",
             "about": [
                 { "@type": "Thing", "name": "Build vs Buy" },
                 { "@type": "Thing", "name": "Custom software", "sameAs": ["https://en.wikipedia.org/wiki/Custom_software"] },
@@ -100,7 +100,7 @@ const articleSchema = {
             "description": "A scenario-based framework with current quotes and no universal spend or payback threshold.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-31T00:00:00-05:00",
-            "dateModified": "2026-10-29T00:00:00-05:00",
+            "dateModified": "2026-11-09T00:00:00-05:00",
             "inLanguage": "en-US"
         },
     ]
@@ -129,7 +129,7 @@ export default function BuildVsBuySoftware2026Page() {
                         </p>
                         <BlogAuthor
                             postId="build-vs-buy-software-2026-cost-comparison" published="2026-05-31"
-                            readTime="8 min read"
+                            readTime="10 min read"
                             bio="Hassan scopes custom CRMs, dashboards and operations tools only after writing down how you work today, what it costs you, what could go wrong, and who ends up owning it."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -170,7 +170,7 @@ export default function BuildVsBuySoftware2026Page() {
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen&apos;s website tiers are planning anchors, not standard prices for a CRM or operations platform. A software replacement requires a separate accepted scope covering data, roles, integrations, security, migration, acceptance, ownership, licenses, support, and third-party costs. See the broader inputs in our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">software cost audit</Link>. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, with ownership, account handover and third-party licenses defined in the accepted agreement.
+                            PandaCodeGen&apos;s website tiers are planning anchors, not standard prices for a CRM or operations platform. A software replacement requires a separate accepted scope covering data, roles, integrations, security, migration, acceptance, ownership, licenses, support, and third-party costs. See the broader inputs in our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">software cost audit</Link>. Start with a workflow map, the data to move and a written acceptance test. Those define a software quote more usefully than a website package price.
                         </p>
                     </div>
 
@@ -214,7 +214,7 @@ export default function BuildVsBuySoftware2026Page() {
                     </div>
 
                     <BlogText>
-                        Model both paths over the same period, against the same assumptions about growth. A SaaS bill moves when your seats, contacts or usage change, when a discount ends, or when the contract renews. A custom build moves too: on vendor usage, support, maintenance and the changes you ask for later. Neither is a fixed number, so compare ranges rather than single figures. Custom software also changes with vendor usage, support, maintenance, security work, new requirements, staff, and incidents. Neither path has a flat or zero-incremental-cost future by default.
+                        Model both paths over the same period and growth assumptions. A SaaS bill changes with seats, contacts, usage, discounts and renewal terms. A custom system changes with provider usage, maintenance and new requirements. Keep the services you still need in both columns; replacing one workflow may not let you cancel the whole subscription.
                     </BlogText>
 
                     <BlogHeader id="scenarios">The three scenarios, and where they cross</BlogHeader>
@@ -228,13 +228,7 @@ export default function BuildVsBuySoftware2026Page() {
                         </BlogText>
                     </div>
                     <BlogText>
-                        One variable to test is whether your license is priced per seat. A per-seat license grows with
-                        headcount; a custom system can also add provider-seat, usage and support costs as the team grows.
-                        Model expected users and workload for both paths over the same period. A flat team does not
-                        establish that buying stays cheaper indefinitely, and hiring does not establish that building
-                        will pay back.
-                        Then fill the table with your own figures rather than anyone&apos;s published averages: your
-                        license quote, your developer cost and your own tolerance for the adverse column.
+                        Test seat growth alongside workload. More users can increase a SaaS license bill, while a custom system may add provider, support or usage costs. Use an expected headcount and a higher-growth scenario, then calculate both rather than assuming either stays flat.
                     </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[640px] border-collapse text-left text-sm">
@@ -250,6 +244,15 @@ export default function BuildVsBuySoftware2026Page() {
                             </tbody>
                         </table>
                     </div>
+
+                    <InsightBox variant="info" label="A worked example: when does building pay back?">
+                        Illustrative USD inputs: buying costs $600 a month, with no setup fee. Building costs $12,000
+                        upfront plus $200 a month to operate and maintain. Assume equivalent capabilities and equal
+                        internal staff time. At 36 months, buying costs $21,600 and building costs $19,200. The $400
+                        monthly difference repays the build in 30 months. If the build costs $18,000 instead, break-even
+                        moves to 45 months and building costs $25,200 over three years. That changes the cost decision.
+                        These are constructed figures, not quotes; add unequal training, migration and exit costs.
+                    </InsightBox>
 
                     <BlogHeader id="crm-example">How to price a CRM decision: what to collect before you compare</BlogHeader>
                     <BlogText>

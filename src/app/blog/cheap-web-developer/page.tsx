@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: "Compare low-cost web proposals by evidence, scope, security, accessibility, SEO controls, ownership, support, and total cost.",
     type: "article",
     publishedTime: "2026-04-30T00:00:00-05:00",
-    modifiedTime: "2026-10-29T00:00:00-05:00",
+    modifiedTime: "2026-11-09T00:00:00-05:00",
     authors: ["Hassan Jamal"],
     url: "https://www.pandacodegen.com/blog/cheap-web-developer",
     images: [ogImageForPath("/blog/cheap-web-developer")],
@@ -59,7 +59,7 @@ const articleSchema = {
       description: "A due-diligence guide for comparing affordable web-development proposals without assuming price determines quality.",
       image: ogImageUrlForPath("/blog/cheap-web-developer"),
       datePublished: "2026-04-30T00:00:00-05:00",
-      dateModified: "2026-10-29T00:00:00-05:00",
+      dateModified: "2026-11-09T00:00:00-05:00",
       author: {
         "@type": "Person",
         "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -74,8 +74,8 @@ const articleSchema = {
       mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/cheap-web-developer#webpage" },
       articleSection: "Pricing",
       inLanguage: "en-US",
-      wordCount: 3228,
-      timeRequired: "PT16M",
+      wordCount: 4086,
+      timeRequired: "PT19M",
       about: [
         { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
         { "@type": "Thing", name: "Outsourcing", sameAs: ["https://en.wikipedia.org/wiki/Outsourcing"] },
@@ -106,7 +106,7 @@ const articleSchema = {
       description: "A due-diligence guide for comparing affordable web-development proposals without assuming price determines quality.",
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       datePublished: "2026-04-30T00:00:00-05:00",
-      dateModified: "2026-10-29T00:00:00-05:00",
+      dateModified: "2026-11-09T00:00:00-05:00",
       breadcrumb: { "@id": "https://www.pandacodegen.com/blog/cheap-web-developer#breadcrumb" },
       inLanguage: "en-US",
     },
@@ -133,7 +133,7 @@ export default function CheapWebDeveloperPage() {
             <span className="font-serif italic text-cognac">How to Hire Without Getting Burned</span>
           </h1>
           <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-            Price on its own tells you nothing about quality. The better question is whether two quotes even
+            Price on its own does not tell you what is included. The better question is whether two quotes even
             cover the same work: the same pages, the same features, the same care over migration, the same
             security and accessibility checks, the same way of measuring performance, the same ownership at
             the end, the same support, and the same third-party costs. This guide gives you the questions to
@@ -141,7 +141,7 @@ export default function CheapWebDeveloperPage() {
           </p>
           <BlogAuthor
             postId="cheap-web-developer" published="2026-04-30"
-            readTime="16 min read"
+            readTime="19 min read"
             bio="Hassan scopes WordPress, Webflow and GoHighLevel migrations with your search traffic in mind, and writes down the acceptance conditions before anyone starts building."
             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
           />
@@ -207,9 +207,18 @@ export default function CheapWebDeveloperPage() {
           <BlogText>
             Low-cost quotes arrive through a handful of channels, and each one changes what due diligence has to cover rather than what the work is worth. Identify the channel before you read the number.
           </BlogText>
-          <InsightBox variant="info" label="Before you ask anyone for a price">
-            The first thing an experienced developer asks a stranger with a budget question is what kind of site it is and what the budget is. Send these six lines with the first message and you will get comparable numbers instead of a range: the current site URL and platform, or that there is no site yet; the page count, and how many are one-off layouts rather than repeats of a template; who writes and supplies the content; every form, booking, payment or CRM integration the site has to connect to; whether existing URLs and search traffic have to survive the move; and the budget band you are actually working inside. Withholding the budget does not get you a lower number, it gets you a scope nobody can price.
-          </InsightBox>
+          <div className="my-10 rounded-r-xl border-l-4 border-cognac bg-stone-50 p-6">
+            <h3 className="font-bold text-charcoal">Copy this six-line brief when requesting quotes</h3>
+            <BlogList items={[
+              "Current site: URL and platform, or a new site with no migration.",
+              "Pages: total count and the number of distinct layouts.",
+              "Content: who supplies copy, images and product or service information.",
+              "Connections: forms, bookings, payments, CRM and any data to transfer.",
+              "Launch: target date, URLs to preserve and journeys that must pass testing.",
+              "Budget: build budget, expected running costs and support needed after launch.",
+            ]} />
+            <p className="font-serif text-charcoal">Send the same brief to every candidate. Ask each to mark what is included, excluded or still unknown.</p>
+          </div>
           <BlogList
             items={[
               "Gig marketplaces. Fast to buy from and suited to narrow, well-defined tasks. Listings are self-authored, so verify live work and the seller's actual role rather than the profile copy.",
@@ -223,7 +232,7 @@ export default function CheapWebDeveloperPage() {
           />
 
           <BlogQuote>
-              Price on its own tells you nothing about quality. Two quotes at different prices might not even be pricing the same job.
+              Price on its own does not tell you what is included. Two quotes at different prices might not even be pricing the same job.
           </BlogQuote>
 
           <BlogHeader>Which Kind of Developer the Job Needs</BlogHeader>
@@ -304,22 +313,24 @@ export default function CheapWebDeveloperPage() {
           />
 
           <div className="my-8 rounded-2xl bg-charcoal text-white p-7">
-            <h2 className="text-2xl font-bold mb-3">How we label our own project evidence</h2>
+            <h2 className="text-2xl font-bold mb-3">What useful project evidence looks like</h2>
             <p className="text-stone-300 leading-relaxed mb-4">
-              MyCustomPatches is an independent client; its figures are owner-confirmed and published with permission. Panda Patches is owned and operated by PandaCodeGen co-founder <Link href="/about/imran" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Imran</Link> Raza Ladhani, so its figures are founder-affiliated rather than independent client proof. PandaCodeGen built its technical platform, and its co-founder holds a stake in both companies.
+              Ask to see the delivered workflow, not just a homepage screenshot. These two independent client
+              projects show different work a quote may need to cover: publishing and moderation, or paid bookings
+              and staff operations. Neither is a promise of the same scope at a starting package price.
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="rounded-xl border border-white/15 p-4">
                 <p className="font-bold text-cognac mb-1">
-                  <Link href="/work/mycustompatches" className="hover:underline">MyCustomPatches</Link>
+                  <Link href="/work/ladies-4-jesus" className="hover:underline">Ladies 4 Jesus</Link>
                 </p>
-                <p className="text-sm text-stone-300">An independent client. The owner reports a 22-day migration. We are not publishing before-and-after performance, hosting or commercial figures for this build, because we hold the owner&apos;s account of the timeline but not the dated test records those numbers would need to stand behind them.</p>
+                <p className="text-sm text-stone-300">We moved the site from WordPress to Next.js and Sanity so the owner can publish and moderate submissions. When assessing a similar quote, ask who will demonstrate those editing tasks and train the owner.</p>
               </div>
               <div className="rounded-xl border border-white/15 p-4">
                 <p className="font-bold text-cognac mb-1">
-                  <Link href="/work/panda-patches" className="hover:underline">Panda Patches</Link>
+                  <Link href="/work/a-step-above-medical" className="hover:underline">A Step Above Medical</Link>
                 </p>
-                <p className="text-sm text-stone-300">Owner-approved internal reporting recorded revenue of $55K+ per month as of 20 September 2026. It is not independently audited and is not attributed solely to the rebuild.</p>
+                <p className="text-sm text-stone-300">We replaced a Divi WordPress site and built a portal for classes, students, payments and certificates. A booking-site quote should name these journeys, who tests them and who handles failures after launch.</p>
               </div>
             </div>
           </div>
@@ -401,7 +412,7 @@ export default function CheapWebDeveloperPage() {
 
           <BlogHeader>The Costs That Arrive After the Invoice</BlogHeader>
           <BlogText>
-            The sticker price is the smallest number in the decision. Ask each provider to write down what the site will cost to keep running and what happens when it needs to change, because a quote can be low precisely because those things sit outside it.
+            The build price is only the first cost to compare. Ask each provider to write down what the site will cost to keep running and what happens when it needs to change, because a quote can be low precisely because those things sit outside it.
           </BlogText>
           <BlogList
             items={[

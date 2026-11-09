@@ -16,9 +16,11 @@ export default function DoNotSharePage() {
         <div className="container mx-auto max-w-2xl">
           <h1 className="mb-4 text-4xl font-bold text-charcoal md:text-5xl">Do Not Sell or Share My Personal Information</h1>
           <p className="leading-relaxed text-stone-600">
-            We do not sell personal information. When you send us an enquiry, our customer system can pass a coded
-            (hashed) version of your email address and phone number, with the enquiry itself, to Meta and Google so we
-            can measure which advertising leads to enquiries. This is the page to tell us not to.
+            We do not sell personal information. To measure which advertising leads to enquiries, our customer system
+            can send advertising platforms a record that an enquiry happened, along with measurement data such as
+            hashed contact details, advertising identifiers and browser information. Your message is not included.
+            Use this form to opt out of sharing information linked to your email address. Our Privacy Policy explains
+            the information involved and the choices available to you.
           </p>
           <p className="mt-4 leading-relaxed text-stone-600">
             Enter the email address you used and we will stop sharing information linked to it, including for any

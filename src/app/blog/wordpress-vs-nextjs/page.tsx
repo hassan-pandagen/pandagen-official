@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-15",
-        modifiedTime: "2026-10-09",
+        modifiedTime: "2026-11-09",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-vs-nextjs")],
@@ -73,7 +73,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-vs-nextjs"),
             description,
             datePublished: "2026-03-15",
-            dateModified: "2026-10-09",
+            dateModified: "2026-11-09",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -93,8 +93,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],
-            wordCount: 2965,
-            timeRequired: "PT15M",
+            wordCount: 3524,
+            timeRequired: "PT17M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -145,7 +145,7 @@ export default function WordPressVsNextJsPage() {
                             finished builds rather than the two names.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed against current WordPress, Next.js and Google documentation on October 8, 2026.
+                            Reviewed against current WordPress, Next.js and Google documentation on November 9, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -153,30 +153,15 @@ export default function WordPressVsNextJsPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wordpress-vs-nextjs" published="2026-03-15" readTime="15 min read" />
-
-                    <BlogText>
-                        Two developers describe their experience of WordPress below. Their attributed opinions give context; they are not comparative security measurements.
-                    </BlogText>
-                    {/* 8 Oct 2026: removed quotation whose full source could not be independently rechecked. */}
-                    <BlogQuote>
-                        Of course - CMS should just generate a static HTML + CSS - ONCE and then just let nginx serve it - instead of hammering the DB every-single-time (unless someone installed enough caching plugins to fix this)
-                    </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Myth_Thrazz · r/Wordpress · Apr 14, 2026 · 44 upvotes on 160-upvote thread · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/og5bmvs/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
-                    <BlogQuote>
-                        I&apos;d also add that it&apos;s basically Matt and Automattic that steer the direction. There&apos;s no community driven direction or voting on what should be added/improved/updated next. It&apos;s basically whatever Matt wants.
-                    </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/-skyrocketeer- (Designer/Developer) · r/Wordpress · Apr 14, 2026 · 21 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/og5qoca/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" postId="wordpress-vs-nextjs" published="2026-03-15" readTime="17 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <p className="mb-4 leading-relaxed text-stone-700">
-                            What decides this is your operating capability and the constraints you can document, not
-                            platform quality. Neither product is better in the abstract, and neither carries a score, a
-                            cost or a security level that travels with its name. Four tests, in the order they usually
-                            settle it. Disclosure worth having up front: PandaCodeGen builds custom Next.js sites and
-                            sells WordPress migrations, so we have a commercial interest in one side of this comparison.
-                            That is also why the sections below refuse to publish platform-level numbers. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
+                            Keep WordPress when publishing is the main job and the current site can be repaired.
+                            Choose Next.js when the customer experience or business integrations justify a custom
+                            application, with a CMS and ongoing engineering included. PandaCodeGen builds Next.js sites
+                            and sells WordPress migration services, so we have a commercial interest in this comparison.
                         </p>
                         <BlogList
                             items={[
@@ -188,13 +173,12 @@ export default function WordPressVsNextJsPage() {
                         />
                     </section>
 
-                    <InsightBox variant="info" label="Why this comparison avoids platform-level numbers">
-                        No PageSpeed score, hosting bill, maintenance band, security level or traffic figure belongs to
-                        WordPress or Next.js as a platform. Each of those is a property of one implementation: its
-                        hosting, code, media, integrations and the team operating it. This article also names no revenue
-                        level at which migration becomes the right call, because that decision follows from constraints
-                        you can document rather than from a turnover figure. Specify two complete stacks, then measure
-                        the one you actually run.
+                    <InsightBox variant="info" label="What we have actually delivered">
+                        We moved <Link href="/work/ladies-4-jesus" className="text-cognac hover:underline">Ladies 4 Jesus from WordPress to Next.js and Sanity</Link>,
+                        with publishing and submission moderation for its owner. For <Link href="/work/a-step-above-medical" className="text-cognac hover:underline">A Step Above Medical</Link>,
+                        we replaced a Divi WordPress site and built a staff portal for classes, students, payments and
+                        certificates. These examples show the workflows we can deliver; they do not establish savings
+                        or performance improvements for another site.
                     </InsightBox>
 
                     <div className="my-8 grid gap-4 sm:grid-cols-5">
@@ -213,17 +197,7 @@ export default function WordPressVsNextJsPage() {
                         ))}
                     </div>
                     <BlogText>
-                        Worth knowing before you treat this as a two-way choice: it is not the only alternative on the
-                        table in 2026. Cloudflare announced EmDash on April 1, 2026, describing it in{" "}
-                        <a href="https://blog.cloudflare.com/emdash-wordpress/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">its own launch post</a>{" "}
-                        as the spiritual successor to WordPress. Read from{" "}
-                        <a href="https://github.com/emdash-cms/emdash" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">the project repository</a>{" "}
-                        on October 8, 2026 it was at version 1.2.0, released on 6 October, after its first 1.0
-                        release on 28 September 2026. It runs only
-                        inside Astro, though, so it isn&apos;t a CMS you can put behind a Next.js site. Our{" "}
-                        <Link href="/blog/cloudflare-emdash-wordpress-replacement" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">full review of EmDash</Link>{" "}
-                        has the dated figures. A comparison written as WordPress against Next.js is already narrower
-                        than the field.
+                        There is a third option: keep WordPress as the CMS and use Next.js for the public site. WordPress's <a href="https://developer.wordpress.org/rest-api/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">REST API</a> lets a separate application consume its content. That can preserve the editor staff know, but previews, forms and plugin-generated output need explicit integration. The <a href="#headless" className="text-cognac hover:underline">headless section below</a> explains when that extra work earns its place.
                     </BlogText>
 
                     <ArticleContents />
@@ -238,25 +212,10 @@ export default function WordPressVsNextJsPage() {
                     <BlogHeader id="is-wordpress-outdated">Is WordPress outdated in 2026?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            No, and we build in Next.js, so take that as evidence rather than modesty.{" "}
-                            <a href="https://w3techs.com/technologies/details/cm-wordpress" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">W3Techs</a>{" "}
-                            reported on <strong>7 October 2026</strong> that WordPress is used by{" "}
-                            <strong>40.1% of all websites</strong>, and by <strong>58.6% of websites whose content
-                            management system is known</strong>. Both figures move: they read 40.3% and 58.8% on
-                            12 September 2026, so re-read them rather than quoting this sentence. A platform running two-fifths of the web is not
-                            obsolete, and any argument that starts by assuming it is has skipped the part where you
-                            check.
-                        </BlogText>
-                    </div>
-                    <BlogText>
-                        Those two percentages are the ones most often confused, including by summaries of this
-                        question. <strong>40.1% is the share of every site on the web. 58.6% is the share of sites
-                        where a CMS could be detected at all.</strong> Quoting the second as though it were the first
-                        overstates WordPress by half, and quoting a rounded &quot;43% of the web&quot;, as several
-                        widely-repeated answers currently do, is not the figure W3Techs publishes. If you cite a
-                        share number, name the measurer and the month, because these are detector estimates from a
-                        sample rather than a census.
+                        No. WordPress supports block-based publishing, custom development and a REST API for separate applications. An old theme or an overloaded installation is a reason to review that implementation. It is not evidence that every WordPress site needs replacing. Start with the editing tasks and customer journeys that need to change.
                     </BlogText>
+                    </div>
+
 
                     <BlogQuote>
                         Choose WordPress when the publishing workflow fits your team. Choose Next.js when the interface or the data needs more control than a theme gives you.
@@ -264,23 +223,18 @@ export default function WordPressVsNextJsPage() {
 
                     <BlogHeader id="why-people-leave">Why do people move away from WordPress?</BlogHeader>
                     <BlogText>
-                        Rarely because it stopped working. In the projects we are asked to quote, the trigger is
-                        almost always one of four specific situations rather than a general dissatisfaction:
+                        Four situations are worth investigating before commissioning a migration. Each is a diagnostic prompt, not a plugin-count or traffic threshold:
                     </BlogText>
                     <BlogList
                         items={[
-                            "The plugin stack became the architecture. What began as five plugins is now thirty, several are unmaintained, and no one can say what breaks if one is removed. The cost of that is paid in every future change, not in the monthly bill.",
-                            "Editing stopped being the constraint. When a marketing team no longer needs to restructure pages weekly, the visual builder that justified WordPress is buying less than the performance and maintenance overhead it costs.",
-                            "The site outgrew request-time rendering. A page assembled from database queries on every visit behaves differently under load than one pre-rendered at build time, and that difference becomes visible at a specific traffic level rather than gradually.",
-                            "Ownership and security responsibility moved. A team that must answer a security questionnaire, or evidence what runs in production, finds a large third-party plugin surface harder to attest to than a dependency list they control.",
+                            "Critical workflows depend on overlapping or unmaintained plugins. Map their responsibilities and recurring repair work before deciding whether to simplify or replace them.",
+                            "The editor no longer matches the work. Test whether structured templates or a simpler WordPress configuration solve it before changing CMS.",
+                            "Uncached or personalized routes miss the performance target. WordPress can serve cached pages, and Next.js can also perform request-time work. Profile the slow routes and their queries before choosing a rendering strategy.",
+                            "The organization needs clearer release and security controls. Compare documented access, dependency updates, testing and recovery on both proposed stacks.",
                         ]}
                     />
                     <BlogText>
-                        None of those is an argument that WordPress is bad, and three of the four are reasons a
-                        specific site outgrew a specific setup. The honest test is whether any of them describes your
-                        situation in particular. If none does, the platform is not your problem, and{" "}
-                        <Link href="/blog/how-to-fix-slow-wordpress" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">fixing a slow WordPress site</Link>{" "}
-                        is a far cheaper answer than replacing it.
+                        If one of these describes your site, compare a scoped repair with a scoped replacement. Our recommendation is to <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">diagnose and price the WordPress repair first</Link>. A rebuild earns its place when it solves a remaining requirement, not simply because the current installation is frustrating.
                     </BlogText>
 
                     <BlogHeader id="architecture">Architecture comparison</BlogHeader>
@@ -372,15 +326,10 @@ export default function WordPressVsNextJsPage() {
                     </BlogText>
                     <BlogText>
                         The result that cuts against the usual pitch is worth stating plainly: Squarespace
-                        averaged 33.0 detected errors and Wix 33.3, both well below WordPress. A hosted
-                        builder limits what a site owner can break, and that constraint shows up in this
-                        data. {finding("cms-errors-2026").limitation}
+                        averaged 33.0 detected errors and Wix 33.3, both well below WordPress. The study does not establish why those averages differ or whether any individual site is accessible. {finding("cms-errors-2026").limitation}
                     </BlogText>
                     <BlogText>
-                        The same constraint is the SEO trade-off on a hosted builder: fewer ways to break the markup
-                        and fewer ways to change it.{" "}
-                        <Link href="/blog/is-squarespace-bad-for-seo" className="text-cognac hover:underline">Our Squarespace SEO review</Link>{" "}
-                        shows where that line falls on one platform.
+                        Hosted platforms also differ in the controls available to authors. <Link href="/blog/is-squarespace-bad-for-seo" className="text-cognac hover:underline">Our Squarespace SEO review</Link> separates settings you can fix from platform limitations that might justify a move.
                     </BlogText>
                     <BlogText>
                         Method, so the numbers can be checked rather than taken:{" "}
@@ -506,10 +455,7 @@ export default function WordPressVsNextJsPage() {
                         ]}
                     />
                     <BlogText>
-                        Use your current invoices and quotes covering the same work. A free hosting allowance is not a permanent
-                        commercial-cost promise. A WordPress maintenance retainer is not universal. A custom build does
-                        not have zero maintenance. Do not publish savings or payback until the inputs and assumptions are
-                        visible and approved. For the line items to collect, work through our{" "}
+                        For a worked example and the line items to collect, use our{" "}
                         <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline">three-year cost model for WordPress and custom code</Link>{" "}
                         and the{" "}
                         <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">scope and tiers behind a migration quote</Link>.
@@ -586,8 +532,7 @@ export default function WordPressVsNextJsPage() {
                         ]}
                     />
                     <BlogText>
-                        Search rankings, traffic and recovery timing are not guaranteed. Google documents site-move
-                        controls, but processing depends on the site and search systems. The{" "}
+                        The{" "}
                         <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline">step-by-step WordPress to Next.js migration guide</Link>{" "}
                         works through each control in order, and{" "}
                         <Link href="/blog/will-migrating-hurt-my-seo" className="text-cognac hover:underline">what a migration does to existing search performance</Link>{" "}
