@@ -1,5 +1,6 @@
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
+import { reviewCitation } from "@/data/review-evidence";
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import { Ladies4JesusCaseStudyPreview as RedesignLadies4JesusCaseStudy } from "@/components/pages/work/ladies-4-jesus/Design";
 
@@ -95,6 +96,7 @@ const caseStudySchema = {
         },
         {
             "@type": "WebPage",
+            citation: reviewCitation("ladies-4-jesus"),
             "@id": `${canonicalUrl}#webpage`,
             url: canonicalUrl,
             name: title,

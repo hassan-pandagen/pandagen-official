@@ -36,7 +36,7 @@ export const MIGRATION_PROJECT_DETAILS = {
   },
   aStepAboveMedical: {
     // Editorial revision; separate from the owner's launch confirmation.
-    contentUpdatedOn: "2026-10-30",
+    contentUpdatedOn: "2026-11-09",
     name: "A Step Above Medical",
     status: "Live",
     websiteUrl: "https://astepabovemed.com/",

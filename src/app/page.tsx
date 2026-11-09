@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { alternatesFor } from "@/lib/i18n/config";
 import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, ORGANIZATION_PROFILES } from "@/data/company-facts";
 import { homepageFaqs } from "@/components/redesign/FaqOpen";
+import { reviewCitation } from "@/data/review-evidence";
 import HeroPreview from "@/components/pages/home/HomeDesign";
 
 // Tell Next.js to statically generate this page at build time
@@ -139,6 +140,7 @@ export default function Home() {
       },
       {
         "@type": "WebPage",
+        citation: ["a-step-above-medical", "emblematic-studio", "mycustompatches", "ladies-4-jesus"].map(reviewCitation),
         "@id": "https://www.pandacodegen.com/#webpage",
         "url": "https://www.pandacodegen.com",
         "name": "Custom Website Design & Development | PandaCodeGen",

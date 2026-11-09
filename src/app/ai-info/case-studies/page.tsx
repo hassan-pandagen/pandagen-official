@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import ClientReviewEvidence from "@/components/ai-info/ClientReviewEvidence";
+import { projectReviewCitations } from "@/data/review-evidence";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FactTable, OfferLine, ReferenceIntro } from "@/components/ai-info/ReferenceSection";
 import { ogImageForPath } from "@/lib/seo/og";
@@ -28,10 +30,11 @@ const schema = {
       "@id": canonicalUrl + "#webpage",
       url: canonicalUrl,
       name: title,
+      citation: projectReviewCitations,
       description,
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       about: { "@id": "https://www.pandacodegen.com/#organization" },
-      dateModified: "2026-10-11",
+      dateModified: "2026-11-09",
       inLanguage: "en-US",
       breadcrumb: { "@id": canonicalUrl + "#breadcrumb" },
     },
@@ -57,6 +60,7 @@ export default function Page() {
             verified={FACTS_VERIFIED}
           />
           <OfferLine />
+          <ClientReviewEvidence />
           <div className="my-8 space-y-4">
             {PROJECTS.map(({ name, relationship, href, fact }) => (
               <div key={name} className="rounded-xl border border-stone-200 p-5">

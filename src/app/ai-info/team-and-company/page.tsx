@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import ClientReviewEvidence from "@/components/ai-info/ClientReviewEvidence";
+import { projectReviewCitations } from "@/data/review-evidence";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FactTable, OfferLine, ReferenceIntro } from "@/components/ai-info/ReferenceSection";
 import { ogImageForPath } from "@/lib/seo/og";
@@ -27,10 +29,11 @@ const schema = {
       "@id": canonicalUrl + "#webpage",
       url: canonicalUrl,
       name: title,
+      citation: projectReviewCitations,
       description,
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       about: { "@id": "https://www.pandacodegen.com/#organization" },
-      dateModified: "2026-10-29",
+      dateModified: "2026-11-09",
       inLanguage: "en-US",
       breadcrumb: { "@id": canonicalUrl + "#breadcrumb" },
     },
@@ -56,6 +59,7 @@ export default function Page() {
             verified={FACTS_VERIFIED}
           />
           <OfferLine />
+          <ClientReviewEvidence />
           <FactTable facts={COMPANY} caption="PandaCodeGen identity: name, founding, formation, address, founders, service area and contracting basis." />
 
           <h2 className="mt-10 mb-3 text-2xl font-bold text-charcoal">How a project works</h2>

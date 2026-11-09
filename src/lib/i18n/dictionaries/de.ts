@@ -379,10 +379,10 @@ const de: Dictionary = {
           href: "https://clutch.co/profile/panda-code-gen#reviews",
         },
         {
-          quote: "Hassan was super helpful and communicative throughout the process.",
-          source: "Marshall James auf Trustpilot",
-          detail: "März 2026",
-          href: "https://www.trustpilot.com/review/pandacodegen.com",
+          quote: reviewQuote("a-step-above-medical"),
+          source: "Dillon Lynch, A Step Above Medical auf Clutch",
+          detail: "25. Oktober 2026",
+          href: "https://clutch.co/profile/panda-code-gen#reviews",
         },
         {
           quote: "They worked with me to make a website that I could afford.",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { reviewCitation } from "@/data/review-evidence";
 import { ogImageForPath } from "@/lib/seo/og";
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import { AStepAboveMedicalStatusPreview as RedesignAStepAboveMedical, aStepAboveMedicalFaqs } from "@/components/pages/work/a-step-above-medical/Design";
@@ -48,6 +49,7 @@ const schema = {
       "@id": `${canonicalUrl}#project`,
       name: "A Step Above Medical website and medical training management system",
       creativeWorkStatus: details.status,
+      citation: reviewCitation("a-step-above-medical"),
       url: details.websiteUrl,
       description: details.summary,
       dateModified: details.confirmedOn,

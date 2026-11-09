@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ProjectReview from "@/components/redesign/case-study/ProjectReview";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import WorkCaseTitle from "@/components/redesign/case-study/WorkCaseTitle";
@@ -118,6 +119,7 @@ export function MyCustomPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStud
         </div>
       </section>
 
+      <ProjectReview project="mycustompatches" />
       <CaseStudyFaqs faqs={faqs} />
 
       <section className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>

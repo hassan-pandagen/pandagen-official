@@ -1,6 +1,7 @@
 import { FOUNDING_DATE } from "@/data/company-facts";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
+import { reviewCitation } from "@/data/review-evidence";
 import { MyCustomPatchesCaseStudyPreview as RedesignMyCustomPatchesCaseStudy } from "@/components/pages/work/mycustompatches/Design";
 
 export const metadata: Metadata = {
@@ -103,6 +104,7 @@ const caseStudySchema = {
             },
             "mainEntityOfPage": {
                 "@type": "WebPage",
+            citation: reviewCitation("mycustompatches"),
                 "@id": "https://www.pandacodegen.com/work/mycustompatches"
             },
             "speakable": {

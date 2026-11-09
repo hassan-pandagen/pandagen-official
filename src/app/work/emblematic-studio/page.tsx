@@ -1,5 +1,6 @@
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
+import { reviewCitation } from "@/data/review-evidence";
 import { EmblematicStudioCaseStudyPreview as RedesignEmblematicStudioCaseStudy } from "@/components/pages/work/emblematic-studio/Design";
 
 const canonicalUrl = "https://www.pandacodegen.com/work/emblematic-studio";
@@ -113,6 +114,7 @@ const caseStudySchema = {
         },
         {
             "@type": "WebPage",
+            citation: reviewCitation("emblematic-studio"),
             "@id": `${canonicalUrl}#webpage`,
             url: canonicalUrl,
             name: title,

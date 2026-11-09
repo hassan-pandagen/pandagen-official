@@ -48,7 +48,7 @@ const companySnapshot = [
   { label: "Where we work", value: factValue(COMPANY, "Service priority") },
   { label: "Phone", value: factValue(COMPANY, "Phone") },
 ];
-const featuredProjects = ["Emblematic Studio", "MyCustomPatches", "Ladies 4 Jesus", "Panda Patches"].map((name) => {
+const featuredProjects = ["A Step Above Medical", "Emblematic Studio", "MyCustomPatches", "Ladies 4 Jesus", "Panda Patches"].map((name) => {
   const project = PROJECTS.find((item) => item.name === name);
   if (!project) throw new Error(`Missing company reference project: ${name}`);
   return project;

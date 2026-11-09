@@ -20,21 +20,22 @@ import { BODY, DISPLAY, MONO, T, UI } from "@/components/redesign/tokens";
 // ─────────────────────────────────────────────────────────────────────────────
 
 const FEATURED = "ladies-4-jesus";
-const GRID_ORDER = ["emblematic-studio", "mycustompatches", "ladies-4-jesus", "marshall-james"] as const;
+const GRID_ORDER = ["emblematic-studio", "mycustompatches", "ladies-4-jesus", "a-step-above-medical"] as const;
 
 // Website named beside a review, ONLY where reviews.ts sets `caseStudy`, i.e.
 // where the site already publishes that client relationship. Marshall James has
 // no case study, and a Trustpilot review alone is not permission to name one.
 const SITE_BY_CASE: Record<string, string> = {
+  "/work/a-step-above-medical": "A Step Above Medical",
   "/work/ladies-4-jesus": "Ladies 4 Jesus",
   "/work/emblematic-studio": "Emblematic Studio",
   "/work/mycustompatches": "MyCustomPatches",
 };
 
-// Same screenshots WorkIndex.tsx already uses. Only reviews with both a case
-// study and a screenshot on file get a hover preview below; Marshall's review
-// (no case study) keeps the plain dark-invert hover.
+// Same screenshots as the work index. Reviews with a published case study
+// and an approved screenshot get a linked project preview.
 const SITE_IMAGE_BY_CASE: Record<string, string> = {
+  "/work/a-step-above-medical": "/work/a-step-above-medical-preview-homepage.png",
   "/work/ladies-4-jesus": "/work/ladies-4-jesus.png",
   "/work/emblematic-studio": "/work/emblematic-studio.png",
   "/work/mycustompatches": "/work/mycustompatches.png",
@@ -91,7 +92,7 @@ export default function ProofSection() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               {[
-                { label: "Clutch review", href: "https://clutch.co/profile/panda-code-gen#reviews" },
+                { label: "Clutch reviews", href: "https://clutch.co/profile/panda-code-gen#reviews" },
                 { label: "Trustpilot reviews", href: "https://www.trustpilot.com/review/pandacodegen.com" },
               ].map((b) => (
                 <a
@@ -159,10 +160,10 @@ export default function ProofSection() {
                       <p className="proof-name" style={{ color: T.ink, fontWeight: 600 }}>{r.name}</p>
                       {r.caseStudy && SITE_BY_CASE[r.caseStudy] && (
                         <p className="mt-1">
-                          <Link href={r.caseStudy} className="proof-name proof-text-link inline-flex min-h-11 items-center gap-2" style={{ color: T.ink }}>
+                          <a href={r.websiteUrl ?? r.caseStudy} className="proof-name proof-text-link inline-flex min-h-11 items-center gap-2" style={{ color: T.ink }}>
                             Website: {SITE_BY_CASE[r.caseStudy]}
                             <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" />
-                          </Link>
+                          </a>
                         </p>
                       )}
                       <p className="mt-1">

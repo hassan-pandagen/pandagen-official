@@ -1,5 +1,6 @@
 import PortalWorkflow from "@/components/redesign/case-study/PortalWorkflow";
 import Link from "next/link";
+import ProjectReview from "@/components/redesign/case-study/ProjectReview";
 import { ArrowRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import WorkCaseTitle from "@/components/redesign/case-study/WorkCaseTitle";
@@ -49,7 +50,7 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <Link href="/work" style={{ color: T.quiet }}>Work</Link> / A Step Above Medical / {details.status}
         </p>
         <WorkCaseTitle>A Step Above Medical</WorkCaseTitle>
-        <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={details.contentUpdatedOn}>October 30, 2026</time></p>
+        <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={details.contentUpdatedOn}>November 9, 2026</time></p>
         <p className="mt-3 max-w-[42rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
           A complete medical training management system.
         </p>
@@ -114,6 +115,7 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <Link href="/services/medical-website-design" className="mt-5 inline-flex items-center gap-2 text-[15px] font-semibold underline underline-offset-4" style={{ color: T.accentText }}>Explore websites and systems for your practice <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
         </div>
       </section>
+      <ProjectReview project="a-step-above-medical" />
       <CaseStudyFaqs faqs={faqs} />
       <section className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
         <div className="mx-auto max-w-[1100px]">

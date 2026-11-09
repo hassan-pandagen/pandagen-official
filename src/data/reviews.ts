@@ -35,6 +35,11 @@ export interface ClientReview {
      * which is why a half-collected set still looks deliberate.
      */
     photo?: string;
+    websiteUrl?: string;
+    websiteName?: string;
+    /** Dated, attributed delivery evidence supplied with the review. */
+    outcomes?: string;
+    publishedOn?: string;
     /**
      * The case study for this reviewer's project, when one is published.
      *
@@ -77,6 +82,23 @@ export interface ClientReview {
 }
 
 export const CLIENT_REVIEWS: readonly ClientReview[] = [
+    {
+        // Owner supplied the published Clutch review text and dashboard screenshots
+        // on 9 Nov 2026. Use the public profile, not the private vendor dashboard.
+        // No verified badge inferred: the supplied screenshot does not show one.
+        id: 'a-step-above-medical',
+        caseStudy: '/work/a-step-above-medical',
+        websiteName: 'A Step Above Medical',
+        websiteUrl: 'https://astepabovemed.com/',
+        quote: 'They delivered on time everything that was requested.',
+        snippet: 'They delivered on time everything that was requested.',
+        name: 'Dillon Lynch, Founder, A Step Above Medical',
+        platform: 'Clutch',
+        date: 'October 25, 2026',
+        publishedOn: '2026-10-25',
+        href: 'https://clutch.co/profile/panda-code-gen#reviews',
+        outcomes: 'In his October 25, 2026 Clutch review, Dillon Lynch reported a launch on October 20, live card payments tested end to end, payment and refund sync to QuickBooks Online, five automated student emails, certificates for two courses, and more than 100 scheduled classes managed in one system.',
+    },
     {
         id: 'ladies-4-jesus',
         unprompted: true,
