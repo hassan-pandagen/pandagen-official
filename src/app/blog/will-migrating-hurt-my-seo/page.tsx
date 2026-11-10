@@ -253,7 +253,7 @@ export default function WillMigratingHurtSeoPage() {
                         "Remove temporary noindex tags and robots.txt blocks from pages intended for search. Keep intentional noindex rules on private or utility pages.",
                         "Turn on the redirects and test a sample of old URLs, including images and PDFs whose addresses changed.",
                         "Submit the new sitemap in Search Console.",
-                        "For a move to a new domain or subdomain, use Search Console's Change of Address tool. It doesn't apply to a CMS change at the same address.",
+                        "When moving to another domain or subdomain, use Search Console's Change of Address tool where applicable. It doesn't apply to a CMS change at the same address.",
                         "Check that Googlebot can reach the new site, using URL Inspection, and that a firewall or bot protection isn't blocking it.",
                         "Update links you control elsewhere: Google Business Profile, social profiles and ad landing pages.",
                     ]} />
