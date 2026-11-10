@@ -32,7 +32,7 @@ function fact(label: string) {
 const stages = [
   { title: "Find what needs to move", body: "We inventory the pages, posts, images, forms, search metadata, connected tools and important URLs. The list tells us what can move directly and what needs rebuilding." },
   { title: "Build while the current site stays live", body: "The replacement takes shape on staging. Your team reviews its content, editing workflow and key journeys before we change the public site." },
-  { title: "Test every agreed path", body: "We check the URL map, changed-address redirects, internal links, forms, analytics and representative pages against the accepted scope." },
+  { title: "Test every agreed path", body: "We check the URL map, changed-address redirects, HTTP and www redirects to one secure address, canonical tags, internal links, forms, analytics and representative pages against the accepted scope." },
   { title: "Switch over, then watch", body: "The launch plan assigns cutover, monitoring and rollback responsibilities. We inspect live behaviour and Search Console after the switch; search outcomes remain outside any agency's control." },
 ];
 

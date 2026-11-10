@@ -216,7 +216,7 @@ export default function WillMigratingHurtSeoPage() {
                         URLs change, and they are not the only thing that can move traffic afterwards.
                     </BlogText>
                     <BlogText>
-                        When a valuable page address changes, use a server-side permanent redirect to its closest relevant successor and update internal links, canonicals, and sitemaps to the final URL. Do not redirect unrelated pages to the home page. Redirects help search engines process a move, but they do not guarantee that every signal, position, or visit will transfer unchanged.
+                        When a valuable page address changes, use a server-side permanent redirect to its closest relevant successor and update internal links, canonicals, and sitemaps to the final URL. Make HTTP and www versions of every page redirect to one secure address, so search engines see a single canonical version. Do not redirect unrelated pages to the home page. Redirects help search engines process a move, but they do not guarantee that every signal, position, or visit will transfer unchanged.
                     </BlogText>
                     <InsightBox variant="danger">
                         Missing, chained, looping, or irrelevant redirects create avoidable crawl and user problems. Test every address you plan to keep, redirect or remove, both before and after launch.

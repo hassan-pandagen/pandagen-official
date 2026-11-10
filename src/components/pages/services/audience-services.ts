@@ -112,7 +112,7 @@ export const audienceServices: ServicePreview[] = [
       ["Talk to the founders", "Tell Hassan or Imran about your practice or courses, the pages you need and how people book today."],
       ["Agree pages, editing and price", "Confirm treatments or courses, staff editing, forms, any portal and running costs in a written quote."],
       ["Review a private preview", "Check the pages and editing tasks on a private link, with your team, before anything goes live."],
-      ["Launch with a walkthrough", "Check the agreed pages, forms and redirects, then get access, written instructions and a live demo."],
+      ["Launch with a walkthrough", "Check the agreed pages, forms and redirects, including HTTP and www versions to one secure address, plus canonical tags and internal links. Then get access, written instructions and a live demo."],
     ],
     priceTitle: "Medical website design cost.", price: `From ${startingPrice("Starter")}`,
     priceCopy: `Custom websites start at ${startingPrice("Starter")} (Starter), ${startingPrice("Growth")} (Growth) and ${startingPrice("Scale")} (Scale). A portal with logins, classes or payments is priced after the workflow is reviewed. The accepted written proposal sets the final price and dates.`,
