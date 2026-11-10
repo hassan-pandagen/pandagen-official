@@ -72,6 +72,7 @@ export function EmblematicStudioCaseStudyPreview({ faqs = [] }: { faqs?: CaseStu
         </div>
 
         <WorkCasePreview src="/work/emblematic-studio-home.png" alt="Emblematic Studio homepage with an embroidered mountain patch beside its vector drawing" width={1440} height={900} caption="Explore the catalogue and quote flow / Independent client" href="#emblematic-walkthrough" />
+        <ProjectReview project="emblematic-studio" inset />
         <WorkCaseFacts items={[
           { label: "Project", value: "Product catalogue" },
           { label: "Catalogue", value: "22 product types" },
@@ -105,7 +106,6 @@ export function EmblematicStudioCaseStudyPreview({ faqs = [] }: { faqs?: CaseStu
         </div>
       </section>
 
-      <ProjectReview project="emblematic-studio" />
       <CaseStudyFaqs faqs={faqs} />
 
       <section className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>

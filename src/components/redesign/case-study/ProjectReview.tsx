@@ -2,11 +2,11 @@ import { CLIENT_REVIEWS } from '@/data/reviews';
 import { BODY, DISPLAY, T } from '@/components/redesign/tokens';
 import WorkCaseLabel from './WorkCaseLabel';
 
-export default function ProjectReview({ project }: { project: string }) {
+export default function ProjectReview({ project, inset = false }: { project: string; inset?: boolean }) {
   const review = CLIENT_REVIEWS.find(entry => entry.id === project);
   if (!review?.caseStudy) return null;
   return (
-    <section id="client-review" aria-labelledby="client-review-heading" className="px-6 py-10 md:px-10 md:py-16" style={{ backgroundColor: T.paperHi }}>
+    <section id="client-review" aria-labelledby="client-review-heading" className={inset ? "mt-8 border px-6 py-8 md:px-10 md:py-10" : "px-6 py-10 md:px-10 md:py-16"} style={{ backgroundColor: T.paperHi, borderColor: T.rule }}>
       <div className="mx-auto max-w-[1100px]">
         <WorkCaseLabel className="mb-3">Client feedback</WorkCaseLabel>
         <h2 id="client-review-heading" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: 'clamp(1.8rem, 3.2vw, 2.5rem)' }}>In the client&apos;s words</h2>

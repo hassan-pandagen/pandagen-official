@@ -84,6 +84,7 @@ export function MyCustomPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStud
         </div>
 
         <WorkCasePreview src="/work/mycustompatches.png" alt="The MyCustomPatches storefront home page after migration, showing the patch category navigation, the hero product imagery and the quote request entry point." width={1912} height={914} caption="The storefront homepage after migration / Independent client" />
+        <ProjectReview project="mycustompatches" inset />
         <WorkCaseFacts items={[
           { label: "Migration completed in", value: requiredMetric("mycustompatches", "delivery-days") },
           { label: "Distinct templates rebuilt", value: requiredMetric("mycustompatches", "templates") },
@@ -119,7 +120,6 @@ export function MyCustomPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStud
         </div>
       </section>
 
-      <ProjectReview project="mycustompatches" />
       <CaseStudyFaqs faqs={faqs} />
 
       <section className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>

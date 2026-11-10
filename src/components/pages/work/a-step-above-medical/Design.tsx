@@ -62,6 +62,7 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <Link href="/services/medical-website-design" className="underline underline-offset-4">Medical website design →</Link>
         </div>
         <WorkCasePreview src="/work/a-step-above-medical-preview-homepage.png" alt="New A Step Above Medical course website with location navigation and an upcoming IV therapy class" width={1912} height={914} caption="Live client project / Screenshot captured before launch" />
+        <ProjectReview project="a-step-above-medical" inset />
         <WorkCaseFacts items={[
           { label: "Status", value: details.status },
           { label: "Owner confirmation", value: <>{details.progress}, as of <time dateTime={details.confirmedOn}>October 20, 2026</time>.</> },
@@ -115,7 +116,6 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <Link href="/services/medical-website-design" className="mt-5 inline-flex items-center gap-2 text-[15px] font-semibold underline underline-offset-4" style={{ color: T.accentText }}>Explore websites and systems for your practice <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
         </div>
       </section>
-      <ProjectReview project="a-step-above-medical" />
       <CaseStudyFaqs faqs={faqs} />
       <section className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
         <div className="mx-auto max-w-[1100px]">

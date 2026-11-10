@@ -71,6 +71,7 @@ export function Ladies4JesusCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
         </div>
 
         <WorkCasePreview src="/work/ladies-4-jesus-hero.png" alt="Ladies 4 Jesus homepage, with stories, devotionals and community navigation" width={1912} height={914} caption="The public homepage / Independent client" />
+        <ProjectReview project="ladies-4-jesus" inset />
         <WorkCaseFacts items={[
           { label: "Project", value: "Community and publishing website" },
           { label: "Team editing", value: "Sanity content editor" },
@@ -104,7 +105,6 @@ export function Ladies4JesusCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
         </div>
       </section>
 
-      <ProjectReview project="ladies-4-jesus" />
       <CaseStudyFaqs faqs={faqs} />
 
       <section className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
