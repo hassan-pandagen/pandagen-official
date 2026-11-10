@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-25",
-        modifiedTime: "2026-10-09",
+        modifiedTime: "2026-11-10",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/top-nextjs-agencies-2026")],
@@ -130,7 +130,8 @@ const sourceLinkClass =
 const agencies = [
     {
         name: "Bejamas",
-        basedIn: "Poland (registered office in Tworków, per its privacy policy)",
+        basedIn: "Registered office: Tworków, Poland",
+        basedInSource: "https://bejamas.com/privacy-policy",
         publicEvidence: "Audits, design, migration and ongoing operation for modern content platforms",
         likelyFit: "Legacy CMS and multi-site migration with an ongoing web-team model",
         verify: "Named Next.js team, target CMS, migration inventory and operating scope",
@@ -138,7 +139,8 @@ const agencies = [
     },
     {
         name: "Blazity",
-        basedIn: "Warsaw, Poland",
+        basedIn: "Registered office: Warsaw, Poland",
+        basedInSource: "https://www.blazity.com/",
         publicEvidence: "Next.js platform development, performance engineering and modernization",
         likelyFit: "Revenue-critical platforms and complex engineering-led migrations",
         verify: "Architecture ownership, knowledge transfer, staffing and acceptance evidence",
@@ -146,7 +148,8 @@ const agencies = [
     },
     {
         name: "Brainhub",
-        basedIn: "Poland (registered seat in Gliwice, per its privacy policy)",
+        basedIn: "Registered seat: Gliwice, Poland",
+        basedInSource: "https://brainhub.eu/privacy-policy",
         publicEvidence: "Software delivery, web development, modernization and team augmentation",
         likelyFit: "Broader product engineering where Next.js is one part of the requirement",
         verify: "Current Next.js delivery examples and the assigned framework-specific team",
@@ -154,7 +157,8 @@ const agencies = [
     },
     {
         name: "FocusReactive",
-        basedIn: "Netherlands entity; offices listed in Amsterdam, London, Warsaw and New York",
+        basedIn: "Dutch company; offices in Amsterdam, London, Warsaw and New York",
+        basedInSource: "https://focusreactive.com/",
         publicEvidence: "Next.js, composable CMS, ecommerce and migration",
         likelyFit: "Content-heavy, multi-market and headless CMS websites",
         verify: "CMS fit, editorial workflow, localization and performance methodology",
@@ -162,7 +166,8 @@ const agencies = [
     },
     {
         name: "Naturaily",
-        basedIn: "Poland (Polish company and VAT number; city not stated)",
+        basedIn: "Polish company (city not stated)",
+        basedInSource: "https://naturaily.com/",
         publicEvidence: "Next.js, Vercel, headless CMS and commerce services",
         likelyFit: "Composable content or commerce with deployment and support needs",
         verify: "Proposed vendors, integration ownership, support and total operating cost",
@@ -170,7 +175,8 @@ const agencies = [
     },
     {
         name: "Netguru",
-        basedIn: "Poznań, Poland",
+        basedIn: "Office: Poznań, Poland",
+        basedInSource: "https://www.netguru.com/",
         publicEvidence: "Broad product, commerce and software engineering with Next.js listed",
         likelyFit: "Larger cross-functional product or commerce programs",
         verify: "Dedicated team, Next.js share of scope, governance and handoff model",
@@ -178,7 +184,8 @@ const agencies = [
     },
     {
         name: "Pagepro",
-        basedIn: "Not confirmed: its site blocked our check",
+        basedIn: "Location not confirmed: its site blocked our check",
+        basedInSource: "",
         publicEvidence: "Next.js, React, headless CMS and migration services",
         likelyFit: "Frontend-led and content-platform work",
         verify: "Starter or reusable components, customization boundary and account control",
@@ -186,7 +193,8 @@ const agencies = [
     },
     {
         name: "PandaCodeGen",
-        basedIn: "Stafford, Texas, United States; remote delivery",
+        basedIn: "US company, principal office in Stafford, Texas; remote delivery",
+        basedInSource: "",
         publicEvidence: "Business websites, online stores and custom Next.js delivery",
         likelyFit: "New builds, redesigns and existing-site improvements from $1,500, quoted to scope",
         verify: "Signed scope, first-party references, acceptance terms and support",
@@ -291,15 +299,14 @@ export default function TopNextjsAgenciesPage() {
                     <BlogHeader>The eight providers compared</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Eight providers, listed alphabetically and not ranked, each described only from what its own site publishes as of the check date below. The middle column is deliberately thin: it records what a firm demonstrates about itself, not what a directory says about it. Everything in the right-hand column is what you still have to establish by asking. Locations come from each firm&apos;s own site, checked November 10, 2026.
+                            Eight providers, listed alphabetically and not ranked, each described only from what its own site publishes as of the check date below. The middle column is deliberately thin: it records what a firm demonstrates about itself, not what a directory says about it. Everything in the right-hand column is what you still have to establish by asking. Locations under each name come from the firm&apos;s own site, checked November 10, 2026. A registered office is where the company is incorporated, which is not always where its team works.
                         </BlogText>
                     </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
-                        <table className="w-full min-w-[1200px] border-collapse text-left text-sm">
+                        <table className="w-full min-w-[1040px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr>
                                     <th className="p-4">Provider</th>
-                                    <th className="p-4">Based in</th>
                                     <th className="p-4">Current first-party evidence</th>
                                     <th className="p-4">Potential fit</th>
                                     <th className="p-4">Verify before selection</th>
@@ -316,8 +323,15 @@ export default function TopNextjsAgenciesPage() {
                                                     {agency.name}
                                                 </a>
                                             )}
+                                            <span className="mt-1 block text-xs font-normal text-stone-500">
+                                                {agency.basedIn}
+                                                {agency.basedInSource ? (
+                                                    <>
+                                                        {" "}(<a href={agency.basedInSource} target="_blank" rel="nofollow noopener noreferrer" className="underline">source</a>)
+                                                    </>
+                                                ) : null}
+                                            </span>
                                         </td>
-                                        <td className="p-4 align-top">{agency.basedIn}</td>
                                         <td className="p-4 align-top">{agency.publicEvidence}</td>
                                         <td className="p-4 align-top">{agency.likelyFit}</td>
                                         <td className="p-4 align-top">{agency.verify}</td>
@@ -373,11 +387,14 @@ export default function TopNextjsAgenciesPage() {
                     </BlogText>
                     <h3 className="mb-3 mt-6 text-xl font-bold text-charcoal">Which Next.js agencies are best for SEO and site migrations?</h3>
                     <BlogText>
-                        None of the eight publishes SEO as its main specialism, so judge SEO through migration work.
-                        Bejamas, FocusReactive and Pagepro position around content-platform and CMS migration. Whichever
-                        you choose, write the SEO checks into the contract: every old URL mapped and redirected, titles,
-                        descriptions and structured data carried over, and indexing checked after launch. The SEO testing
-                        section below lists what to ask for.
+                        Two providers on this list advertise search services directly. FocusReactive describes
+                        Next.js development for &ldquo;AI SEO and performance oriented websites&rdquo; and offers SEO
+                        audits, and Naturaily advertises AI visibility and GEO services alongside its builds. Bejamas,
+                        FocusReactive and Pagepro also position around content-platform and CMS migration. Whichever you
+                        choose, write the SEO checks into the contract: inventory every existing URL, preserve suitable
+                        addresses and redirect changed URLs to their relevant replacements; keep one canonical version of
+                        each page, with HTTP and alternate hostnames redirecting to it; update internal links to the final
+                        addresses; carry over titles, descriptions and structured data; and check indexing after launch.
                     </BlogText>
                     <h3 className="mb-3 mt-6 text-xl font-bold text-charcoal">Which of these Next.js agencies are based in Europe?</h3>
                     <BlogText>
@@ -452,8 +469,9 @@ export default function TopNextjsAgenciesPage() {
                     <BlogText>
                         A framework change does not guarantee ranking retention. Google recommends careful site-move
                         planning, URL mapping, relevant redirects, sitemap updates and monitoring. Require a dated URL
-                        inventory, rendered-output checks, canonical and index-directive validation, redirect tests,
-                        structured-data checks and Search Console monitoring. Search engines still control crawling,
+                        inventory, rendered-output checks, canonical and index-directive validation, HTTPS and
+                        hostname redirects to the canonical version, redirect tests, internal links updated to final
+                        addresses, structured-data checks and Search Console monitoring. Search engines still control crawling,
                         indexing and rankings.
                     </BlogText>
                     <BlogText>
