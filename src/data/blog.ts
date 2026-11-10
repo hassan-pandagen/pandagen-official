@@ -460,7 +460,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "ranking",
-    lastModified: "2026-11-01",
+    lastModified: "2026-11-10",
     faqs: [
       {
         question: "Will I lose my Google rankings if I migrate my website?",

@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description: "How to reduce avoidable migration risk with URL mapping, redirects, metadata, crawl checks, rollback planning, and post-launch monitoring.",
         type: "article",
         publishedTime: "2026-06-03",
-        modifiedTime: "2026-11-01",
+        modifiedTime: "2026-11-10",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo",
         images: [ogImageForPath("/blog/will-migrating-hurt-my-seo")],
@@ -64,7 +64,7 @@ const articleSchema = {
             "description": "A website-migration SEO guide covering URL inventories, page-level redirects, metadata and canonical checks, crawl validation, rollback planning, and post-launch Search Console monitoring.",
             "image": ogImageUrlForPath("/blog/will-migrating-hurt-my-seo"),
             "datePublished": "2026-06-03T00:00:00-05:00",
-            "dateModified": "2026-11-01",
+            "dateModified": "2026-11-10",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -114,7 +114,7 @@ const articleSchema = {
             "description": "The controls that reduce avoidable website-migration SEO risk, plus the outcomes and timelines no agency can guarantee.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-06-03T00:00:00-05:00",
-            "dateModified": "2026-11-01",
+            "dateModified": "2026-11-10",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -225,6 +225,46 @@ export default function WillMigratingHurtSeoPage() {
                     <BlogHighlight>
                         The redirect map, metadata inventory, rendered-content checks, analytics validation, rollback plan, and acceptance evidence should exist before cutover. A percentage cannot meaningfully describe migration success without a defined dataset and methodology.
                     </BlogHighlight>
+
+                    <BlogHeader id="migration-seo-checklist">What should a website migration SEO checklist include?</BlogHeader>
+                    <BlogText>
+                        This checklist follows Google&apos;s guidance for{" "}
+                        <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">site moves with URL changes</a>{" "}
+                        and for{" "}
+                        <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-no-url-changes" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">hosting moves without URL changes</a>,
+                        checked November 10, 2026. Not every item applies to every project: a redesign at the same
+                        address skips the domain steps, and a move without DNS changes skips the DNS step.
+                    </BlogText>
+                    <h3 className="mb-3 mt-6 text-xl font-bold text-charcoal">Before launch</h3>
+                    <BlogList items={[
+                        "List every existing URL from the sitemap, the CMS, Search Console and analytics, including images, PDFs and other downloads that get traffic or links.",
+                        "Preserve existing URLs where practical. Map each changed URL to its genuine replacement, and plan a 404 or 410 for removed content that has no relevant replacement.",
+                        "Give each preferred, indexable page a self-referencing canonical tag. Duplicate and parameter URLs should point to the preferred version.",
+                        "Plan redirects so HTTP and www versions of every page reach one secure address, with no chains: each old URL should go straight to its final destination.",
+                        "Update internal links to the final URLs, so visitors and crawlers don't pass through redirects.",
+                        "Carry over titles, descriptions, structured data and, on multi-language sites, hreflang annotations pointing at the new URLs.",
+                        "Keep the Search Console verification file or tag on the new site, and verify any new property, including all address variants.",
+                        "Keep the staging site protected from search engines, and list which temporary blocks must be removed at launch.",
+                        "If DNS will change, lower the DNS TTL about a week ahead so the switch spreads faster.",
+                        "Save a copy of the old sitemap for monitoring.",
+                    ]} />
+                    <h3 className="mb-3 mt-6 text-xl font-bold text-charcoal">At launch</h3>
+                    <BlogList items={[
+                        "Remove temporary noindex tags and robots.txt blocks from pages intended for search. Keep intentional noindex rules on private or utility pages.",
+                        "Turn on the redirects and test a sample of old URLs, including images and PDFs whose addresses changed.",
+                        "Submit the new sitemap in Search Console.",
+                        "For a move to a new domain or subdomain, use Search Console's Change of Address tool. It doesn't apply to a CMS change at the same address.",
+                        "Check that Googlebot can reach the new site, using URL Inspection, and that a firewall or bot protection isn't blocking it.",
+                        "Update links you control elsewhere: Google Business Profile, social profiles and ad landing pages.",
+                    ]} />
+                    <h3 className="mb-3 mt-6 text-xl font-bold text-charcoal">After launch</h3>
+                    <BlogList items={[
+                        "Watch Search Console's indexing and Not found reports. A rise in errors often means a wrong redirect.",
+                        "Check server logs and crawl errors. Googlebot usually crawls harder for a while after a move, so the new server needs capacity for it.",
+                        "Compare impressions, clicks and conversions for the pages that mattered most before the move.",
+                        "Keep redirects for at least a year, and longer where old links still bring visitors.",
+                        "Keep the old hosting running until its traffic reaches zero. Before cancelling an old platform subscription, check it no longer supplies images, downloads, forms or redirects.",
+                    ]} />
 
                     <BlogHeader id="silent-killers">The Four Silent Killers Beyond Redirects</BlogHeader>
                     <BlogText>

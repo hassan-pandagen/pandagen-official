@@ -18,6 +18,9 @@ import PreviewShell from "@/components/redesign/PreviewShell";
 import OwnershipCompare from "@/components/redesign/OwnershipCompare";
 import { SERVICE_PORTABILITY } from "@/data/platform-portability";
 import { CLIENT_REVIEWS } from "@/data/reviews";
+
+/** Services whose process includes moving an existing site; they link the migration checklist. */
+const MIGRATION_SERVICES = new Set(["woocommerce", "wix", "squarespace", "webflow", "cms-development", "medical-website-design"]);
 import { serviceGuides } from "@/data/service-guides";
 import type { ServicePreview } from "./service-data";
 import { previewFaqs } from "./preview-faqs";
@@ -89,7 +92,7 @@ export default function ServiceDetailPreview({ service }: { service: ServicePrev
     </div></section>
 
     <section className={`${s.section} ${s.sectionAlt}`}><div className={s.wrap}>
-      <div className={v.processGrid}><div className={v.processIntro}><p className={`${s.eyebrow} ${v.eyebrow}`}>{service.process?.label ?? "04 / From call to handover"}</p><h2 className={s.heading}>{service.process?.title ?? <>Build, test{" "}<br /><HeadingEmphasis text="and hand over." /></>}</h2><p>{service.process?.intro ?? "Each stage creates something you can review. Your proposal names the deliverables and the point where you accept them."}</p></div><div className={v.processList}>{service.steps.map(([title, body], index) => <FadeIn className={v.processStep} delay={((index % 3) + 1) as 1 | 2 | 3} key={title}><b>0{index + 1}</b><div><h3>{title}</h3><p>{body}</p></div></FadeIn>)}</div></div>
+      <div className={v.processGrid}><div className={v.processIntro}><p className={`${s.eyebrow} ${v.eyebrow}`}>{service.process?.label ?? "04 / From call to handover"}</p><h2 className={s.heading}>{service.process?.title ?? <>Build, test{" "}<br /><HeadingEmphasis text="and hand over." /></>}</h2><p>{service.process?.intro ?? "Each stage creates something you can review. Your proposal names the deliverables and the point where you accept them."}</p>{MIGRATION_SERVICES.has(service.slug) ? <p>Before launch, we check that Google can access the intended public pages, existing links still work, and important images and downloads remain available. <Link href="/blog/will-migrating-hurt-my-seo#migration-seo-checklist" className="underline">See the full migration checklist</Link>.</p> : null}</div><div className={v.processList}>{service.steps.map(([title, body], index) => <FadeIn className={v.processStep} delay={((index % 3) + 1) as 1 | 2 | 3} key={title}><b>0{index + 1}</b><div><h3>{title}</h3><p>{body}</p></div></FadeIn>)}</div></div>
     </div></section>
 
     <section id="scope" className={`${s.section} ${s.sectionDark}`}><div className={s.wrap}>
