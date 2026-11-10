@@ -115,7 +115,7 @@ const QUIET = T.quiet;
 const ACCENT = T.accentText;
 
 function track(name: string, params: Record<string, unknown> = {}) {
-  (window as { gtag?: (...a: unknown[]) => void }).gtag?.("event", name, params);
+  trackGAEvent(name, params);
 }
 
 function load(): Message[] {
@@ -574,6 +574,7 @@ export default function AskAssistant() {
       if (!res.ok) throw new Error(String(res.status));
       trackFBEvent("Lead", { content_name: "Quote Request", content_category: "Assistant Chat", value: 0, currency: "USD" }, eventId);
       trackGAEvent("quote_submit", { form: "assistant_chat_message" });
+      trackGAEvent("generate_lead", { form_id: "assistant_chat_message", lead_source: "website_assistant" });
       setLeadSent(true);
       try {
         sessionStorage.setItem(LEAD_STORE, "1");
@@ -666,6 +667,7 @@ export default function AskAssistant() {
       }
       trackFBEvent("Lead", { content_name: "Quote Request", content_category: "Assistant Chat", value: 0, currency: "USD" });
       trackGAEvent("quote_submit", { form: "assistant_chat" });
+      trackGAEvent("generate_lead", { form_id: "assistant_chat", lead_source: "website_assistant" });
       setLeadState("sent");
     } catch (err) {
       setLeadState("error");

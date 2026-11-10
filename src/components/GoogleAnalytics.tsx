@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { hasConsent } from "@/components/consent/ConsentProvider";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
@@ -29,30 +29,13 @@ declare global {
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
-  const [loadLib, setLoadLib] = useState(false);
   const initialized = useRef(false);
-
-  // Defer the heavy gtag/js library (155 KiB, ~178ms main-thread) until the
-  // first real user interaction, with a 10s fallback for non-interactors.
-  // This keeps GTM out of the Lighthouse TBT window (FCP -> TTI) entirely,
-  // while the lightweight stub below still queues every event in the meantime.
-  useEffect(() => {
-    if (!GA_ID || loadLib) return;
-
-    const fire = () => setLoadLib(true);
-    const events = ["scroll", "mousemove", "touchstart", "keydown", "click"];
-    const opts: AddEventListenerOptions = { once: true, passive: true };
-    events.forEach((e) => window.addEventListener(e, fire, opts));
-    const timer = window.setTimeout(fire, 10000);
-
-    return () => {
-      events.forEach((e) => window.removeEventListener(e, fire, opts));
-      window.clearTimeout(timer);
-    };
-  }, [loadLib]);
+  const previousView = useRef<{ pathname: string; location: string } | null>(null);
 
   useEffect(() => {
-    if (!GA_ID || typeof window === "undefined") return;
+    if (!GA_ID || !pathname || !hasConsent("analytics")) return;
+    // Also prevents React's development effect replay from duplicating a view.
+    if (previousView.current?.pathname === pathname) return;
 
     const gtag = ensureGtag();
 
@@ -62,23 +45,35 @@ export default function GoogleAnalytics() {
       initialized.current = true;
     }
 
-    // Queue exactly one view on consent-time mount, then one per route change.
-    gtag("event", "page_view", { page_path: pathname });
+    // Capture navigation context now, not when a delayed library drains its queue.
+    // Query strings and fragments can contain contact details: omit them from
+    // reported URLs. Keep automatic history pageviews disabled in GA4 as well.
+    const location = `${window.location.origin}${pathname}`;
+    let referrer = previousView.current?.location ?? "";
+    if (!previousView.current && document.referrer) {
+      try {
+        const url = new URL(document.referrer);
+        referrer = `${url.origin}${url.pathname}`;
+      } catch { /* Ignore malformed referrers. */ }
+    }
+    gtag("event", "page_view", {
+      page_path: pathname,
+      page_location: location,
+      page_title: document.title,
+      page_referrer: referrer,
+    });
+    previousView.current = { pathname, location };
   }, [pathname]);
 
   if (!GA_ID) return null;
 
   return (
-    <>
-      {/* Heavy library: loaded only after interaction or the 10s fallback. It
-          drains the queued dataLayer events on arrival, so nothing is lost. */}
-      {loadLib && (
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-          strategy="afterInteractive"
-        />
-      )}
-    </>
+    // ConsentManagedServices mounts this only after analytics consent.
+    // Load promptly: waiting for interaction can lose consented short visits.
+    <Script
+      src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+      strategy="afterInteractive"
+    />
   );
 }
 

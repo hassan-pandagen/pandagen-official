@@ -1,5 +1,6 @@
 "use client";
 import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
+import { trackGAEvent } from "@/components/GoogleAnalytics";
 
 import { motion } from "@/components/ui/motion";
 import { ArrowRight } from "lucide-react";
@@ -107,7 +108,7 @@ export default function PartnersContent() {
             >
               Apply for Partnership <ArrowRight className="w-5 h-5" />
             </button>
-            <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"book_a_partner_call",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="inline-flex items-center justify-center gap-2 border border-charcoal px-8 py-4 font-bold text-charcoal transition-colors hover:bg-charcoal hover:text-white">
+            <button onClick={() => { trackGAEvent("cta_click", { cta: "book_a_partner_call", location: "cta" }); openQuote(); }} className="inline-flex items-center justify-center gap-2 border border-charcoal px-8 py-4 font-bold text-charcoal transition-colors hover:bg-charcoal hover:text-white">
                 Book a Partner Call
             </button>
           </motion.div>

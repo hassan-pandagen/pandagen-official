@@ -25,12 +25,9 @@ export default function ConsentManagedServices() {
           assistant panel through /api/live-chat. */}
       <CalEmbed />
 
-      {/* Moved OUT of the consent gate 14 Sep 2026. Vercel Web Analytics is
-          cookieless -- a visitor is a hash of the request, valid one day and
-          discarded after 24h -- so it needs no consent and reports on everyone.
-          Gated, it only ever saw visitors who accepted cookies, which is why
-          the site has had no reliable page-view or referrer figures. GA4,
-          Clarity and the Pixel stay gated: they do set identifiers. */}
+      {/* Vercel Web Analytics remains outside this consent gate. Its counts
+          can differ from consent-gated GA4 and are not a census of all visits:
+          blockers, script failures and counting methods still affect them. */}
       {isHostedEnvironment && <Analytics />}
 
       {ready && preferences?.analytics && (

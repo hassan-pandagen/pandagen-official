@@ -1,18 +1,20 @@
 "use client";
 
-import { useEffect } from "react";
-import { useConsent } from "@/components/consent/ConsentProvider";
+import { useEffect, useRef } from "react";
+import { hasConsent, useConsent } from "@/components/consent/ConsentProvider";
+import { trackGAEvent } from "@/components/GoogleAnalytics";
 
 const CAL_LINK = (() => {
   const candidate = process.env.NEXT_PUBLIC_CAL_LINK?.trim();
   return candidate && /^[a-z0-9][a-z0-9_-]*\/[a-z0-9][a-z0-9_-]*$/i.test(candidate)
     ? candidate
-    : null;
+    : "pandagen/discovery";
 })();
 
 export default function CalEmbed() {
   const { preferences, openPreferences } = useConsent();
   const allowed = preferences?.functional === true;
+  const trackedBookings = useRef(new Set<string>());
 
   useEffect(() => {
     if (allowed && CAL_LINK) return;
@@ -41,6 +43,7 @@ export default function CalEmbed() {
     const calLink: string = CAL_LINK;
     let loaded = false;
     let cancelled = false;
+    let unsubscribe: (() => void) | undefined;
 
     async function loadCal() {
       if (loaded || cancelled) return;
@@ -48,6 +51,18 @@ export default function CalEmbed() {
       const { getCalApi } = await import("@calcom/embed-react");
       if (cancelled) return;
       const cal = await getCalApi({ namespace: "discovery" });
+      if (cancelled) return;
+      // One listener for the whole site, rather than one per booking button.
+      const onBooking = (event: CustomEvent<{ data: { uid?: string } }>) => {
+        if (cancelled || !hasConsent("functional") || !hasConsent("analytics")) return;
+        const uid = event.detail.data.uid;
+        if (uid && trackedBookings.current.has(uid)) return;
+        if (uid) trackedBookings.current.add(uid);
+        // The booking ID is used only in memory for deduplication, never sent.
+        trackGAEvent("cal_booking", { form_id: "discovery_calendar" });
+      };
+      cal("on", { action: "bookingSuccessfulV2", callback: onBooking });
+      unsubscribe = () => cal("off", { action: "bookingSuccessfulV2", callback: onBooking });
       cal("ui", {
         theme: "dark",
         cssVarsPerTheme: {
@@ -64,16 +79,13 @@ export default function CalEmbed() {
       }
     }
 
-    const trigger = () => void loadCal();
-    const events = ["mousedown", "touchstart", "scroll", "keydown"] as const;
-    events.forEach((event) => window.addEventListener(event, trigger, { once: true, passive: true }));
-    const timer = window.setTimeout(trigger, 10000);
-    if (window.__calOpenPending) trigger();
+    // Register as soon as functional consent is granted, including when the
+    // visitor opens the calendar immediately after accepting preferences.
+    void loadCal().catch(() => { /* A later booking-button click can retry loading. */ });
 
     return () => {
       cancelled = true;
-      window.clearTimeout(timer);
-      events.forEach((event) => window.removeEventListener(event, trigger));
+      unsubscribe?.();
     };
   }, [allowed]);
 

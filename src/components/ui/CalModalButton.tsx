@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useCallback, ReactNode } from "react";
+import { useCallback, ReactNode } from "react";
 import { useConsent } from "@/components/consent/ConsentProvider";
-import { trackGAEvent } from "@/components/GoogleAnalytics";
 
 interface CalModalButtonProps {
   children: ReactNode;
@@ -35,48 +34,6 @@ const CAL_LINK = (() => {
 export default function CalModalButton({ children, className, fallbackHref }: CalModalButtonProps) {
   const { preferences, openPreferences } = useConsent();
   const allowed = preferences?.functional === true;
-
-  useEffect(() => {
-    if (!allowed || !CAL_LINK) return;
-    let loaded = false;
-
-    async function loadCal() {
-      if (loaded) return;
-      loaded = true;
-
-      const { getCalApi } = await import("@calcom/embed-react");
-      const cal = await getCalApi({ namespace: "discovery" });
-
-      cal("ui", {
-        theme: "dark",
-        cssVarsPerTheme: {
-          dark: {
-            "cal-brand": "#B8410C",
-            "cal-text": "#ffffff",
-            "cal-background": "#050505",
-          },
-          light: {
-            "cal-brand": "#B8410C",
-            "cal-text": "#000000",
-            "cal-background": "#ffffff",
-          },
-        },
-        hideEventTypeDetails: false,
-        layout: "month_view",
-      });
-
-      cal("on", {
-        action: "bookingSuccessful",
-        callback: () => {
-          trackGAEvent("cal_booking", {
-            form_id: "discovery_calendar",
-          });
-        },
-      });
-    }
-
-    loadCal();
-  }, [allowed]);
 
   const openModal = useCallback(async () => {
     if (!CAL_LINK) {
