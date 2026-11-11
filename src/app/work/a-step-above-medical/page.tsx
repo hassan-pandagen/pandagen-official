@@ -5,7 +5,7 @@ import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import { AStepAboveMedicalStatusPreview as RedesignAStepAboveMedical, aStepAboveMedicalFaqs } from "@/components/pages/work/a-step-above-medical/Design";
 
 // Owner-confirmed live on 20 Oct 2026.
-// This project page documents the build without claiming production results.
+// Search observations are separately attributed to owner-supplied screenshots.
 const canonicalUrl = "https://www.pandacodegen.com/work/a-step-above-medical";
 const details = MIGRATION_PROJECT_DETAILS.aStepAboveMedical;
 const title = "A Step Above Medical: Website & Training System";

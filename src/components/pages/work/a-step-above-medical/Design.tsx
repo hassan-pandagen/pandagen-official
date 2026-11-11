@@ -1,4 +1,5 @@
 import PortalWorkflow from "@/components/redesign/case-study/PortalWorkflow";
+import AsamSearchEvidenceFigure from "@/components/redesign/case-study/AsamSearchEvidenceFigure";
 import Link from "next/link";
 import ProjectReview from "@/components/redesign/case-study/ProjectReview";
 import { ArrowRight } from "lucide-react";
@@ -11,13 +12,15 @@ import WorkCaseLabel from "@/components/redesign/case-study/WorkCaseLabel";
 import AStepAboveMedicalWalkthrough from "@/components/redesign/case-study/AStepAboveMedicalWalkthrough";
 import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-study/CaseStudyFaqs";
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
+import { ASAM_SEARCH_EVIDENCE } from "@/data/asam-search-evidence";
 import { BODY, DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 const details = MIGRATION_PROJECT_DETAILS.aStepAboveMedical;
 
 // Shared with the page's FAQ schema. Every answer is in the initial HTML.
 export const aStepAboveMedicalFaqs: CaseStudyFaq[] = [
-  { question: "Is A Step Above Medical live?", answer: "Yes. The project is live, as confirmed by the owner on 20 October 2026. The screenshots were captured before launch and illustrate the website and operations portal; they are not live-site performance or business results." },
+  { question: "Did search visibility increase after the relaunch?", answer: ASAM_SEARCH_EVIDENCE.summary },
+  { question: "Is A Step Above Medical live?", answer: "Yes. The project is live, as confirmed by the owner on 20 October 2026. Website and portal previews were captured before launch. The separate Search Console screenshots show dated search-visibility observations reviewed on 11 November 2026, not booking or revenue results." },
   { question: "What did you build for A Step Above Medical?", answer: "We rebuilt its medical training website from WordPress with Next.js and a Sanity content editor, and built a separate operations portal using Supabase. The website presents courses, locations and upcoming classes; the portal brings class schedules, student records, payments and certificates into the team's workspace." },
   { question: "Can the team update courses and locations themselves?", answer: "Yes. The Sanity editor has separate course and location entries with descriptions, durations, photographs and location availability controls. The team can change the content within those fields. New features or changes to how the website works are scoped separately." },
   { question: "Can staff export the portal's records?", answer: "The portal includes CSV downloads for students, classes, registrations, attendance, payments, certificates and accepted terms. These files open in spreadsheet tools. Uploaded documents are stored separately, and the export screen says each download is recorded in the activity log." },
@@ -50,7 +53,7 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <Link href="/work" style={{ color: T.quiet }}>Work</Link> / A Step Above Medical / {details.status}
         </p>
         <WorkCaseTitle>A Step Above Medical</WorkCaseTitle>
-        <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={details.contentUpdatedOn}>November 9, 2026</time></p>
+        <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={details.contentUpdatedOn}>November 11, 2026</time></p>
         <p className="mt-3 max-w-[42rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
           A complete medical training management system.
         </p>
@@ -72,6 +75,23 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <p className="max-w-[65rem] text-sm leading-relaxed" style={{ color: T.body }}>{details.disclosure}</p>
         </aside>
       </WorkCaseOpening>
+      <section id="search-visibility" aria-labelledby="asam-search-title" className="px-6 py-10 md:px-10 md:py-16" style={{ backgroundColor: T.paperHi }}>
+        <div className="mx-auto max-w-[1100px]">
+          <WorkCaseLabel className="mb-3">After launch / Search visibility</WorkCaseLabel>
+          <h2 id="asam-search-title" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.5rem)", lineHeight: 1.1, color: T.ink }}>More visibility in generative AI search after relaunch.</h2>
+          <p className="mt-4 max-w-3xl text-base leading-relaxed" style={{ color: T.body }}>{ASAM_SEARCH_EVIDENCE.summary}</p>
+          <dl className="mt-6 grid gap-6 sm:grid-cols-2">
+            {ASAM_SEARCH_EVIDENCE.aiSamples.map(sample => <div key={sample.date} className="border-t pt-4" style={{ borderColor: T.rule }}>
+              <dt className="text-sm" style={{ color: T.body }}>Generative AI impressions / <time dateTime={sample.date}>{sample.label}</time></dt>
+              <dd className="mt-2 text-4xl font-semibold" style={{ color: T.accentText }}>{sample.impressions}</dd>
+            </div>)}
+          </dl>
+          <AsamSearchEvidenceFigure />
+          <p className="mt-6 max-w-3xl text-base leading-relaxed" style={{ color: T.body }}>{ASAM_SEARCH_EVIDENCE.webSummary}</p>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed" style={{ color: T.quiet }}>{ASAM_SEARCH_EVIDENCE.limits}</p>
+          <Link href="/blog/ai-search-visibility-tracking#measure-ai-search-visibility" className="mt-5 inline-block font-semibold underline underline-offset-4" style={{ color: T.accentText }}>How to measure visibility, visits and enquiries separately</Link>
+        </div>
+      </section>
       <AStepAboveMedicalWalkthrough />
       <PortalWorkflow project="medical" />
       <section aria-labelledby="asam-before-after" className="px-6 py-10 md:px-10 md:py-16">

@@ -1109,22 +1109,25 @@ export const blogPosts: BlogPost[] = [
     cardStat: "54%",
     cardStatLabel: "of all AI impressions landed on one page",
     title: "AI Visibility Tracking: What 77 Pages and 6,700 AI Impressions Showed",
-    excerpt: "First-party Search Console data on how AI visibility spreads across a site, what the Generative AI report can't tell you, and why an impression isn't a mention.",
+    excerpt: "Measure AI search visibility through citations, brand mentions, visits and enquiries, with a practical business checklist and our 77-page research example.",
     category: "Research",
-    readTime: "15 min",
+    readTime: "19 min",
     date: "Aug 28",
     author: "Hassan",
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'aicommerce',
-    lastModified: "2026-10-08",
+    lastModified: "2026-11-11",
     faqs: [
-      { question: "How do I track whether AI search mentions my site?", answer: "Open Google Search Console and go to Performance, then Generative AI. The report breaks out how often your URLs appeared in AI Overviews and AI Mode, separately from ordinary results, and it costs nothing. Most published advice on this question recommends buying a monitoring product first, which is worth doing only once you have read the free report and found it insufficient for a specific reason you can name." },
+      { question: "How can a business measure its AI search visibility?", answer: "Track citations, business mentions, website visits and enquiries or sales separately. Use Bing AI Performance for its supported citation activity, repeat a saved set of buyer questions to check mentions, and review identifiable referral visits and key events in GA4. Compare equal periods with the same filters. A citation is not a visit or a customer." },
+      { question: "What does a 51–100 range in Bing Top Opportunity Queries mean?", answer: "It is an approximate citation range for an opportunity query where other sites appear and yours does not. It is not your own citation count or monthly search volume. Use it to identify a relevant question to answer, not to forecast traffic or sales." },
+      { question: "Will AI-info pages or llms.txt guarantee that my business gets cited?", answer: "No. Public company facts and a linked content guide can make information easier to find and check, but they do not guarantee inclusion. Google says its AI search features need no special AI file or schema. Useful public pages, accessible content and evidence remain the foundation." },
+      { question: "Can simpler wording cause AI citations to stop?", answer: "A rewrite can change what a page answers, particularly if it removes specific facts. A drop at the same time does not prove the edit caused it. Check report dates and filters, indexing and crawler access, and preserve useful evidence while explaining it in everyday language." },
       { question: "Does an AI impression mean my brand was named in the answer?", answer: "No, and this is the most common misreading of the report. An impression records that your URL was shown as a source in an AI experience. It does not record whether the generated answer text used your company name, described you accurately, or recommended you. Presence as a citation and presence in the prose are two different things, and Search Console only measures the first." },
       { question: "How evenly is AI visibility spread across a website?", answer: "On our own site, not evenly at all. Across 77 pages carrying any AI impressions between 18 May and 13 August 2026, one page accounted for 3,627 of 6,700 total impressions, or 54 percent. The top three pages held 66 percent and the top ten held 87 percent. Thirty-one pages, two fifths of the set, sat on five impressions or fewer and contributed 1.2 percent of the total between them." },
       { question: "Does AI visibility follow ordinary search rankings?", answer: "Our analysis does not compare ranking positions. It compares AI impressions against ordinary search clicks across 76 pages, with a Spearman correlation of 0.79 between those two measures. The exceptions are the interesting part: one page drew 383 AI impressions against a single ordinary click, and another drew 116 AI impressions against none at all." },
       { question: "Why does the Search Console query report show fewer clicks than the pages report?", answer: "Because Google anonymises queries that too few people searched, and the export is capped at 1,000 rows. In our 25 August 2026 export the pages report totalled 243 clicks while the query report showed 48. The query file omits much of the property total. CTR for returned query rows is still valid when clicks and impressions have the same scope and filters; do not combine a partial numerator with a property-wide denominator." },
-      { question: "Can Search Console tell me which prompts triggered an AI answer?", answer: "No. The Generative AI report supports filtering by URL, country, device and date, and our own export from 25 August 2026 carried impressions and nothing else. There is no prompt or query dimension. If you need to know what someone asked, you have to test prompts against the assistants yourself and record what comes back." }
+      { question: "Can this Search Console research tell me which prompts triggered an AI answer?", answer: "No. Our AI export from 19 August 2026 contained page-level impressions without a prompt dimension. Testing your own buyer questions creates a separate sample; it does not recover the original questions behind that historical report." }
     ]
   },
   {

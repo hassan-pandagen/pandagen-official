@@ -21,8 +21,14 @@ export default function ServiceSearchFoundations({ slug }: { slug: string }) {
             <dd className="text-[16px] leading-[1.65]" style={{ color: T.body }}>{body}</dd>
           </div>)}
         </dl>
+        <p className="mt-5 max-w-[55rem] text-[15px] leading-[1.65]" style={{ color: T.body }}>
+          Where useful, we can add an AI-info page with your services, company facts and project evidence, plus an optional llms.txt guide to key pages. These support a clear public website; they are not a requirement for AI search or a shortcut to a recommendation.
+        </p>
         <p className="mt-5 max-w-[55rem] text-[15px] leading-[1.65] md:mt-6" style={{ color: T.body }}>
           Need ongoing buyer research, page improvements and visibility reporting? <Link href="/services/ai-seo" className="font-semibold underline underline-offset-4" style={{ color: T.accentText }}>AI search services</Link> are optional monthly work, scoped separately from the build. Search systems choose which pages they index or cite.
+        </p>
+        <p className="mt-4 max-w-[55rem] text-[15px] leading-[1.65]" style={{ color: T.body }}>
+          How will you know it is helping? Track appearances in AI answers, mentions of your business, visits and enquiries separately. <Link href="/blog/ai-search-visibility-tracking#measure-ai-search-visibility" className="font-semibold underline underline-offset-4" style={{ color: T.accentText }}>See how to measure AI search visibility</Link>.
         </p>
       </div>
     </section>

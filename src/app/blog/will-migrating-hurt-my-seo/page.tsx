@@ -361,6 +361,9 @@ export default function WillMigratingHurtSeoPage() {
                         those staff journeys as well as the visitor journey before approving launch.
                     </BlogText>
                     <BlogText>
+                        The case study also includes <Link href="/work/a-step-above-medical#search-visibility" className="text-cognac underline">dated Search Console screenshots after ASAM&apos;s relaunch</Link>. Visibility rose in the supplied charts, but this is one client&apos;s observation, not a promise for every migration. Our <Link href="/blog/ai-search-visibility-tracking#measure-ai-search-visibility" className="text-cognac underline">AI visibility measurement guide</Link> explains how to separate appearances in search from visits and enquiries.
+                    </BlogText>
+                    <BlogText>
                         <Link href="/contact" className="text-cognac underline font-semibold">Discuss your migration with Hassan and Imran</Link>.
                         Send the current website, the platform you want to leave, your target launch window and the
                         integrations you depend on. We can use that to define the discovery work and a proposal

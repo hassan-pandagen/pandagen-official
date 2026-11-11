@@ -36,13 +36,13 @@ export const MIGRATION_PROJECT_DETAILS = {
   },
   aStepAboveMedical: {
     // Editorial revision; separate from the owner's launch confirmation.
-    contentUpdatedOn: "2026-11-09",
+    contentUpdatedOn: "2026-11-11",
     name: "A Step Above Medical",
     status: "Live",
     websiteUrl: "https://astepabovemed.com/",
     summary: "A complete medical training management system: a public course website, a content editor and a separate team portal for classes, students, payments and certificates. The website was rebuilt from WordPress with Next.js and Sanity; the portal uses Supabase. The project is live.",
     progress: "Project live, confirmed by the owner",
-    disclosure: "Independent client project, now live. Screenshots were captured before launch and illustrate the website and portal; no live-site performance or business results are claimed.",
+    disclosure: "Independent client project, now live. Website and portal previews were captured before launch. The separately described Search Console observations come from owner-supplied screenshots reviewed on 11 November 2026; they are visibility evidence, not booking or revenue results.",
     confirmedOn: "2026-10-20",
   },
 } as const;

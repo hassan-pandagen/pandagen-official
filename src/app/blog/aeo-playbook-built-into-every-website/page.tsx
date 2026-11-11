@@ -692,6 +692,10 @@ export default function AEOPlaybookPage() {
                         For new businesses, the practical implication is to build an accurate, useful information base early. Starter and Growth prices are entry points for discovery, not evidence of affordability for every buyer or a fixed scope for every project.
                     </BlogText>
 
+                    <BlogText>
+                        To check what happens after launch, measure AI citations, mentions of your business, website visits and enquiries separately. Our <Link href="/blog/ai-search-visibility-tracking#measure-ai-search-visibility" className="text-cognac hover:underline">AI search visibility measurement guide</Link> explains the reports, repeatable buyer questions and comparison periods to use. It also explains why an impression is not a visit or a sale.
+                    </BlogText>
+
                     {/* CTA */}
                     <div className="my-12 p-6 md:p-8 bg-charcoal text-white rounded-2xl text-center">
                         <p className="text-xs font-bold uppercase tracking-wider text-cognac mb-3">Ready to build an AEO-ready website?</p>

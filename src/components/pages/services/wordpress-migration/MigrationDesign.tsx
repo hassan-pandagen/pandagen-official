@@ -4,6 +4,7 @@ import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import PriceAmount from "@/components/redesign/PriceAmount";
 import Link from "next/link";
 import ServiceSearchFoundations from "../ServiceSearchFoundations";
+import AsamServiceEvidence from "../AsamServiceEvidence";
 import ServiceHeroActions from "../ServiceHeroActions";
 import ServicePreviewEnlarge from "../ServicePreviewEnlarge";
 import type { ReactNode } from "react";
@@ -120,6 +121,7 @@ export function WordPressMigrationPreview() {
     </div></section>
 
     <ServiceSearchFoundations slug="wordpress-migration" />
+    <AsamServiceEvidence />
 
     <section id="owner-voices" className={`${s.section} ${v.voices}`}><div className={s.wrap}>
       <FadeIn className={`${s.sectionHead} ${v.sectionHead}`}><div><p className={`${s.eyebrow} ${v.eyebrow}`}>From owners on Reddit</p><h2 className={v.narrativeTitle}>Plugins, quotes and code.</h2></div><p>Three lines from one r/nextjs thread, where a WordPress owner asked how to move on. They are Reddit users, not our clients, quoted word for word as checked on 3 October 2026.</p></FadeIn>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import SearchConsoleChartPreview from "./SearchConsoleChartPreview";
 import GoogleAiVisibilityProof from "./GoogleAiVisibilityProof";
+import AsamServiceEvidence from "./AsamServiceEvidence";
 import ServiceSearchFoundations from "./ServiceSearchFoundations";
 import ServiceHeroActions from "./ServiceHeroActions";
 import ServicePreviewEnlarge from "./ServicePreviewEnlarge";
@@ -60,6 +61,22 @@ export default function ServiceDetailPreview({ service }: { service: ServicePrev
       </div>
     </div></header>
 
+    {service.slug === "ai-seo" && <AsamServiceEvidence />}
+
+    {service.slug === "ai-seo" && <section aria-labelledby="ai-measurement" className={s.section}><div className={s.wrap}>
+      <h2 id="ai-measurement" className={v.storyTitle}>Is AI search bringing your business enquiries?</h2>
+      <p className="mt-5 max-w-3xl text-base leading-relaxed">We track four separate signals: citations, mentions of your business, website visits and enquiries or sales. Reports show the dates, questions and platforms checked, so you can see what changed and what still needs work.</p>
+      <dl className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {[
+          ["Can buyers find you?", "We check whether relevant AI answers cite your pages or name your business."],
+          ["Do they visit your website?", "We measure identifiable visits from AI platforms, separately from appearances in answers."],
+          ["Do they get in touch or buy?", "We track agreed actions such as enquiries, bookings and purchases where tracking is available."],
+          ["What should improve next?", "We use the findings to prioritise clearer answers, stronger evidence and easier next steps for buyers."],
+        ].map(([title, body]) => <div key={title} className="border-t border-stone-300 pt-5"><dt className="text-lg font-semibold">{title}</dt><dd className="mt-3 text-base leading-relaxed">{body}</dd></div>)}
+      </dl>
+      <div className="mt-5 flex flex-wrap gap-6"><Link href="/blog/ai-search-visibility-tracking#measure-ai-search-visibility" className={s.textLink}>How we measure AI visibility</Link><Link href="/work/a-step-above-medical#search-visibility" className={s.textLink}>See the ASAM search observations</Link></div>
+    </div></section>}
+
     {service.slug === "ai-seo" && <GoogleAiVisibilityProof />}
 
     <section id="work" className={`${s.section} ${s.sectionAlt} ${v.workSection}`}><div className={s.wrap}>
@@ -85,6 +102,7 @@ export default function ServiceDetailPreview({ service }: { service: ServicePrev
     </div></section>
 
     <ServiceSearchFoundations slug={service.slug} />
+    {service.slug === "medical-website-design" && <AsamServiceEvidence />}
 
     <section id="approach" className={s.section}><div className={s.wrap}>
       <FadeIn className={`${s.sectionHead} ${v.sectionHead}`}><div><p className={`${s.eyebrow} ${v.eyebrow}`}>{service.slug === "ai-seo" ? "03 / AI search services" : "03 / Make the right call"}</p><h2 className={v.storyTitle}><HeadingEmphasis text={service.pathTitle} /></h2></div><p>{service.slug === "ai-seo" ? "AEO and GEO are overlapping parts of one monthly service. The agreed buyer questions, pages and search surfaces decide the work." : "We recommend the scope that addresses the evidence from your site and team, then put the work and boundaries in writing."}</p></FadeIn>

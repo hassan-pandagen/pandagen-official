@@ -1,4 +1,6 @@
 import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
+import AsamSearchEvidenceFigure from "@/components/redesign/case-study/AsamSearchEvidenceFigure";
+import { ASAM_SEARCH_EVIDENCE } from "@/data/asam-search-evidence";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -8,7 +10,7 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText } from "@/components/ui/BlogStyles";
-import { asOf, datedFact, spec } from "@/data/spec-facts";
+import { datedFact, spec } from "@/data/spec-facts";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -20,7 +22,7 @@ const postFAQs = blogPosts.find((p) => p.id === postId)?.faqs ?? [];
 const canonicalUrl = "https://www.pandacodegen.com/blog/ai-search-visibility-tracking";
 const title = "AI Visibility Tracking: What 77 Pages and 6,700 AI Impressions Showed";
 const description =
-    "First-party Search Console data on how AI visibility spreads across a site, what the Generative AI report can't tell you, and why an impression isn't a mention.";
+    "Measure AI search visibility through citations, brand mentions, visits and enquiries, with a practical business checklist and our 77-page research example.";
 
 export const dynamic = "force-static";
 
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-28",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-11-11",
         url: canonicalUrl,
         siteName: "PandaCodeGen",
         images: [ogImageForPath("/blog/ai-search-visibility-tracking")],
@@ -64,7 +66,7 @@ const schema = {
             headline: title,
             description,
             datePublished: "2026-08-28",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-11",
             author: { "@type": "Person", name: "Hassan Jamal", url: "https://www.pandacodegen.com/about/hassan" },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
             mainEntityOfPage: canonicalUrl,
@@ -74,6 +76,21 @@ const schema = {
                 { "@type": "Thing", name: "Google Search Console" },
             ],
             citation: [
+                {
+                    "@type": "CreativeWork",
+                    name: "Microsoft Bing: AI Performance definitions",
+                    url: "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+                },
+                {
+                    "@type": "CreativeWork",
+                    name: "Microsoft Bing: Topics Portfolio and opportunity queries",
+                    url: "https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/",
+                },
+                {
+                    "@type": "CreativeWork",
+                    name: "Google: AI features and your website",
+                    url: "https://developers.google.com/search/docs/appearance/ai-features",
+                },
                 {
                     "@type": "CreativeWork",
                     name: "Google: Search Console performance report, AI Overviews and AI Mode",
@@ -127,22 +144,93 @@ export default function AiSearchVisibilityTracking() {
                     AI visibility tracking: what 77 pages and 6,700 AI impressions showed
                 </h1>
 
-                <BlogAuthor name="Hassan Jamal" role="Lead Engineer" postId="ai-search-visibility-tracking" published="2026-08-28" readTime="15 min" />
+                <BlogAuthor name="Hassan Jamal" role="Lead Engineer" postId="ai-search-visibility-tracking" published="2026-08-28" readTime="19 min" />
                   </div>
                   <div data-article-hero-screen>
                 <BlogCoverFigure id="ai-search-visibility-tracking" />
                   </div>
                 </div>
 
-                <p data-speakable="true" className="mt-6 text-lg leading-relaxed text-stone-700">Seventy-seven pages, 6,700 AI impressions over 88 days, and AI impressions were concentrated on a few pages. Across matching URLs, AI impressions and ordinary search clicks were positively correlated; this is not a comparison of ranking positions. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.</p>
+                <p data-speakable="true" className="mt-6 text-lg leading-relaxed text-stone-700">To measure your business&apos;s AI search visibility, track four things separately: links to your pages, mentions of your business, visits to your website, and enquiries or sales. A citation shows that your content was used as a source. It does not prove that someone visited, that the answer recommended you, or that you won a customer.</p>
 
                 <TopicUpLink postId={postId} />
 
                 <div className="mt-10 space-y-6">
+                    <BlogHeader id="measure-ai-search-visibility">How can a business measure its AI search visibility?</BlogHeader>
                     <BlogText>
-                        You can track AI visibility for free in Google Search Console, under Performance then Generative
-                        AI. It reports how often your URLs appeared in AI Overviews and AI Mode, separately from ordinary
-                        results. PandaCodeGen pulled its own on 19 August 2026, covering 18 May to 13 August, and found
+                        Start with a monthly scorecard. Keep each platform separate and compare equal periods with the
+                        same filters. Here is the measurement plan we recommend; the research further down shows why
+                        one headline number can hide most of the story.
+                    </BlogText>
+                    <div className="overflow-x-auto">
+                        <table className="w-full border-collapse text-left text-sm">
+                            <caption className="mb-3 text-left font-semibold">Four measures for a business AI visibility scorecard</caption>
+                            <thead className="border-b-2 border-stone-300">
+                                <tr><th scope="col" className="p-3">Measure</th><th scope="col" className="p-3">Where to check</th><th scope="col" className="p-3">What it answers</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200">
+                                <tr><th scope="row" className="p-3">Citations and pages cited</th><td className="p-3">Bing Webmaster Tools: AI Performance</td><td className="p-3">Are supported AI experiences using our pages as sources?</td></tr>
+                                <tr><th scope="row" className="p-3">Business mentions</th><td className="p-3">A saved set of buyer questions, tested in each assistant</td><td className="p-3">Does the answer name us, describe us correctly or recommend us?</td></tr>
+                                <tr><th scope="row" className="p-3">Website visits</th><td className="p-3">GA4 Traffic acquisition: session source / medium</td><td className="p-3">Which identifiable AI referrals brought people to our website?</td></tr>
+                                <tr><th scope="row" className="p-3">Enquiries, bookings and sales</th><td className="p-3">Tracked key events, checked against your booking or sales records</td><td className="p-3">Did those recorded visits lead to useful business results?</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        Bing&apos;s citation count covers Microsoft Copilot, Bing AI summaries and selected partners.
+                        Its average cited pages figure is a daily average, not the total number of pages ever cited.
+                        Grounding queries are a sample of searches used to retrieve sources; they are not necessarily
+                        the original questions people typed. See <a href="https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/" className="text-cognac hover:underline">Microsoft&apos;s definitions</a>.
+                    </BlogText>
+                    <BlogText>
+                        In <a href="https://support.google.com/analytics/answer/12923437" className="text-cognac hover:underline">GA4&apos;s Traffic acquisition report</a>,
+                        review session source / medium and the key events recorded for those visits. Count a successful
+                        enquiry submission or confirmed booking, rather than treating a button click as a lead.
+                        Missing referral information, consent choices and visits on another device leave gaps. Ask new
+                        customers how they found you too, and keep those answers separate from tracked attribution.
+                        Do not divide GA4 visits by Bing citations and call it a click-through rate: the two reports
+                        cover different activity.
+                    </BlogText>
+                    <BlogHeader id="repeatable-buyer-questions">Which questions should you test each month?</BlogHeader>
+                    <BlogText>
+                        Use a small, repeatable set of questions a buyer would actually ask: who can solve their problem,
+                        which providers fit their needs, and how the options compare. For a website agency, that might
+                        be &quot;Who can move our WordPress site while keeping class bookings working?&quot;
+                        Test without inserting your own business name, then run separate branded accuracy checks.
+                    </BlogText>
+                    <BlogList items={[
+                        "Record the exact question, date, assistant, search mode and relevant location or language. Save the answer and its source links.",
+                        "Log a mention, a linked citation and a recommendation separately. Also note incorrect descriptions and which competitors appear.",
+                        "Repeat the same questions in fresh conversations on a fixed schedule. Label results as your test sample, not market share or total search demand.",
+                        "Compare complete periods, such as the latest 28 days with the previous 28 days. Keep a change log so a rewrite, tracking change or missing report day is visible.",
+                    ]} />
+                    <BlogHeader id="bing-opportunity-ranges">Does a Bing opportunity range mean we already have those citations?</BlogHeader>
+                    <BlogText>
+                        No. If &quot;methods to measure AI search visibility for businesses&quot; appears under Top
+                        Opportunity Queries with a range of 51–100, that is an opportunity where other sites appear
+                        and yours does not. It is neither your citation count nor monthly search volume.
+                        Microsoft describes <a href="https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/" className="text-cognac hover:underline">Topics Portfolio</a> as
+                        a beta planning tool with approximate ranges. Use the query to find a useful question your
+                        existing article can answer, not as a reason to publish several near-identical posts.
+                    </BlogText>
+                    <BlogHeader id="citation-drop">Why would AI citations suddenly drop to zero?</BlogHeader>
+                    <BlogText>
+                        A chart alone cannot establish the cause. Our troubleshooting order is to check the selected
+                        property, filters, date range and reporting freshness first; then inspect previously cited URLs
+                        for indexing changes, redirects, errors or crawler blocks. Compare the same dates with ordinary
+                        Bing search activity and available server logs. If pages remain accessible and indexed, that
+                        still does not prove whether zero means missing reporting or fewer citations.
+                    </BlogText>
+                    <BlogText>
+                        Clearer language is not evidence of a problem. A rewrite can change what a page answers,
+                        especially if it removes specific facts. Keep useful examples, sources and technical names,
+                        explain them in everyday language, and compare results after the updated page is crawled.
+                        Do not undo a helpful edit solely because a chart changed around the same time.
+                    </BlogText>
+                    <BlogHeader id="our-research">What did our own 77-page study show?</BlogHeader>
+                    <BlogText>
+                        The following research uses the Generative AI report available in our Search Console account
+                        at the time. PandaCodeGen exported it on 19 August 2026, covering 18 May to 13 August, and found
                         6,700 AI impressions spread across 77 pages, with 3,627 of them on a single page. One URL out of
                         77 was 54 percent of everything.
                     </BlogText>
@@ -216,11 +304,10 @@ export default function AiSearchVisibilityTracking() {
 
                     <BlogHeader id="free-tool">How do you track AI visibility without buying a tool?</BlogHeader>
                     <BlogText>
-                        Open Search Console, go to Performance, and switch to the Generative AI report. That is the whole
-                        setup. It is Google&apos;s own data about your own property, Google publishes it at no cost, and it
-                        needs no tag, no script and no trial. Ask a general-purpose AI assistant how to track brand
-                        mentions in AI search and it will send you shopping for monitoring software before it mentions
-                        the report Google already gives you.
+                        Start with Bing&apos;s AI Performance report and the Search Console reports available in your
+                        account. Google&apos;s <a href="https://developers.google.com/search/docs/appearance/ai-features" className="text-cognac hover:underline">published guidance</a> includes
+                        AI Overviews and AI Mode in overall Web performance totals. Our historical export below came
+                        from a separate view in our account; do not assume every account offers the same view or fields.
                     </BlogText>
                     <BlogText>
                         Monitoring products do something the report cannot, which is running prompts against ChatGPT,
@@ -232,8 +319,8 @@ export default function AiSearchVisibilityTracking() {
                     <BlogHeader id="what-it-shows">What does the Generative AI report actually show?</BlogHeader>
                     <BlogText>
                         In our export it showed impressions and nothing else: one row per URL, one number per row. There
-                        was no click column, no position column and no prompt or query dimension. You can filter by URL,
-                        country, device and date range. You cannot ask it what anybody typed.
+                        was no click column, no position column and no prompt or query dimension. That export does not
+                        reveal what anybody typed; check the fields available in your current report before comparing it.
                     </BlogText>
                     <BlogText>
                         A detail worth getting right, because most write-ups blur it. Clicks on AI results are not
@@ -247,8 +334,8 @@ export default function AiSearchVisibilityTracking() {
                             Google documents
                         </a>{" "}
                         that {datedFact("gsc-ai-overview-click-counting")}, so those clicks have been landing in your
-                        ordinary Performance totals the whole time, mixed in with everything else. What the Generative AI report adds is the ability to see AI impressions on
-                        their own. What that report does not yet add is the ability to see AI clicks on their own.
+                        ordinary Performance totals, mixed in with other search activity. Our separate export let us
+                        examine AI impressions, but did not isolate AI clicks.
                     </BlogText>
                     <BlogText>
                         One further exclusion to know about, from{" "}
@@ -449,30 +536,28 @@ export default function AiSearchVisibilityTracking() {
 
                     <BlogText>
                         Twenty-one impressions, average position 3.24, no clicks. The exclusions suggest automated retrieval, but do not prove it. This
-                        query stating an intent in plain words and then removing every freelance
+                        query states an intent in plain words and then removes the listed freelance
                         marketplace and website-builder domain from the results, which is a reasonable thing to do if
                         you are trying to find an agency rather than a gig listing.
                     </BlogText>
                     <BlogText>
                         Worth noting how it differs from the pattern Ray describes. Hers scopes toward trusted domains
                         with positive operators. This one excludes with negative ones, a variation others have reported
-                        separately. Both are the same behaviour seen from opposite ends: the model deciding in advance
-                        which kinds of source it will and will not accept.
+                        separately. The operators narrow the eligible sources, but the query text does not establish
+                        whether a person or an automated system issued the search.
                     </BlogText>
 
                     <BlogHighlight>
                         Not every operator query is a machine reading your page. One of ours reads{" "}
                         <code>+1 &quot;info * com&quot; -india in inurl:contact</code>, which is a wildcard email
-                        harvest with a country exclusion. That is lead-generation tooling scraping for addresses, not an
-                        assistant answering a question. Read the query before you count it.
+                        search with a country exclusion. It resembles an email-harvesting query, but its origin is not
+                        established by the text. Read the query before you classify it.
                     </BlogHighlight>
 
                     <BlogText>
-                        This changes how one earlier figure on this page should be read. A page earning impressions and
-                        no clicks looks like a click-through failure, and often is. The query above is impressions with
-                        no clicks and is not a failure at all: something retrieved the result, read what it needed, and
-                        had no reason to click. Those two cases are indistinguishable in the pages report and separable
-                        in the query report. Treat them as leads to investigate, alongside ordinary search queries, rather than verified AI requests.
+                        Impressions without clicks do not tell us whether someone read an answer, ignored the result or
+                        used an automated tool. The query report adds context, not proof of those behaviours. Treat
+                        unusual queries as leads to investigate, rather than verified AI requests or successful referrals.
                     </BlogText>
 
                     <BlogHeader id="how-to-read">How should you read your own numbers?</BlogHeader>
@@ -484,11 +569,11 @@ export default function AiSearchVisibilityTracking() {
                     </BlogText>
                     <BlogList
                         items={[
-                            "Export the Generative AI report and sort by impressions. Note what share your top page holds. If one URL is carrying most of your AI visibility, that page is your position, and the risk sitting under it is concentration.",
+                            "Where a separate AI report is available, export it and sort by its visibility metric. Note what share your top page holds. Keep Bing citations and Google impressions separate.",
                             "Compare that list against your standard Performance export, page by page. Pages with AI impressions and no clicks are the ones the standard report will never draw your attention to.",
                             "Calculate rates only from matching numerators and denominators. Query-level CTR is valid for returned rows, but their totals omit anonymized or truncated queries.",
                             "Read the answers themselves for your five most important commercial queries. That is the only way to learn whether you are being recommended or merely footnoted.",
-                            "Re-export on a fixed schedule and keep the files. The report has no history beyond its window, so the only trend line you will ever have is the one you saved.",
+                            "Re-export on a fixed schedule and keep the files with their filters and date ranges. Saved exports let you revisit a comparison even if the reporting interface changes.",
                         ]}
                     />
 
@@ -500,21 +585,47 @@ export default function AiSearchVisibilityTracking() {
                     </BlogText>
                     <BlogList
                         items={[
-                            "It is Google only. ChatGPT, Claude and Perplexity publish nothing equivalent, so any figure covering them comes from your own prompt testing or a vendor's sampling, not from a census.",
-                            "It counts citations, not mentions. A URL shown as a source and a brand named in the prose are different events and the report reports one of them.",
-                            "It has no prompt dimension, so you cannot learn what was asked.",
-                            "Search Labs experiments are excluded, so the number is a floor.",
+                            "This historical dataset covers Google only. Bing's AI Performance report and tests in other assistants have different coverage; do not combine them into a supposed total for all AI search.",
+                            "Our export records AI impressions, not brand mentions or recommendations. It cannot establish what the answer said about the business.",
+                            "Our export has no prompt dimension. Testing your own questions creates a new sample; it does not recover the questions behind those historical impressions.",
+                            "Reporting exclusions matter. Google documents exclusions for Search Labs experiments; this dataset is not a complete record of every AI interaction.",
                             "Our figures cover one site in one niche across a single export window. Treat the concentration pattern as a question to ask of your own data, not as a benchmark to compare against.",
                             "Nothing here demonstrates that AI impressions produce revenue. We publish a separate measurement of what AI referrals actually earned, and the two questions should not be answered with the same number.",
                         ]}
                     />
 
-                    <BlogHeader id="what-we-do">What we do with this</BlogHeader>
+                    <BlogHeader id="client-search-example">What does a client visibility report look like after a relaunch?</BlogHeader>
+                    <BlogText>{ASAM_SEARCH_EVIDENCE.summary}</BlogText>
+                    <AsamSearchEvidenceFigure />
                     <BlogText>
-                        The conclusion is not that a site needs a separate AI strategy. PandaCodeGen builds sites so a
-                        retrieval system can lift a passage, attribute it and trust it, and that is the same property
-                        that makes a page good for a reader. Answer-first sections, named entities and dated facts do that work. A
-                        separate file for robots does not.
+                        A Step Above Medical is an independent client and a medical training provider. Its report is a separate example from the PandaCodeGen research above. To assess the change properly, compare equal periods before and after launch, then look at the pages, visits and bookings separately. See <Link href="/work/a-step-above-medical#search-visibility" className="text-cognac underline">the website and class-management project, with its search observations</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="what-we-do">How does PandaCodeGen build a website that AI search can understand?</BlogHeader>
+                    <BlogText>
+                        We plan clear services, company information and evidence into the initial website build.
+                        A prospective customer should be able to see what you do, who you help and why your experience
+                        is relevant. That information also needs to be accessible to search systems.
+                    </BlogText>
+                    <BlogList items={[
+                        "Readable website structure: we put important content in HTML with descriptive headings, useful internal links and public pages that search engines can access.",
+                        "Facts supported by the page: structured data describes the visible business, articles and other appropriate content. We check that it matches what visitors can actually read.",
+                        "Evidence for buying decisions: services, relevant case studies, named client feedback and clear ownership or support terms help a visitor evaluate the business.",
+                        "Measurement from launch: we configure the agreed search and consent-based analytics tools, then test the enquiry or booking events before interpreting the reports.",
+                    ]} />
+                    <BlogText>
+                        On our own site, <Link href="/ai-info/team-and-company" className="text-cognac hover:underline">our public AI-info pages</Link> collect
+                        company facts and link to supporting work. Our <a href="/llms.txt" className="text-cognac hover:underline">llms.txt file</a> provides
+                        a short guide to those resources. We can include the same approach when it serves a client&apos;s
+                        content, keeping it consistent with their ordinary website pages. These are supporting resources,
+                        not a substitute for useful service pages or evidence.
+                    </BlogText>
+                    <BlogText>
+                        <a href="https://llmstxt.org/" className="text-cognac hover:underline">llms.txt is a proposed format</a>,
+                        not a guaranteed route into AI answers. <a href="https://developers.google.com/search/docs/appearance/ai-features" className="text-cognac hover:underline">Google says</a> no
+                        special AI file or schema is required for its AI search features. The goal is a useful,
+                        accessible website with checkable claims; no provider can guarantee that an assistant will
+                        cite it or recommend the business.
                     </BlogText>
                     <BlogText>
                         When we look at a property now we ask three things: whether AI visibility is spread across a real
@@ -541,24 +652,24 @@ export default function AiSearchVisibilityTracking() {
                     </BlogText>
 
                     <BlogHighlight>
-                        Every figure on this page comes from two Search Console exports for pandacodegen.com: the
+                        The original research figures on this page come from Search Console exports for pandacodegen.com: the
                         Generative AI report for 18 May to 13 August 2026, and the standard Performance report for 24
                         May to 23 August 2026. Third-party platform
-                        behaviour is cited to primary documentation and dated {asOf("gsc-ai-overview-click-counting")}.
+                        behaviour is cited to documentation. The business measurement guidance, Bing definitions and
+                        website recommendations were reviewed on 11 November 2026; the historical research windows have not changed.
                     </BlogHighlight>
 
                     <p className="mt-10 border-l-2 border-stone-300 pl-4 text-sm leading-relaxed text-stone-600">
-                        Editorial note: everything above is analysis of our own Search Console data. What follows is a
-                        service offer. The two are separated deliberately, because the findings should be worth reading
-                        whether or not you ever hire us.
+                        Editorial note: the research uses our own site, not a cross-industry benchmark. The scorecard is
+                        our recommended process. PandaCodeGen offers the website and measurement services described above.
                     </p>
 
                     <div className="mt-6 rounded-2xl border border-stone-300 bg-white p-7">
-                        <h2 className="text-xl font-bold text-charcoal">Want this read on your own property?</h2>
+                        <h2 className="text-xl font-bold text-charcoal">Is AI search helping people find your business?</h2>
                         <p className="mt-3 text-stone-600">
-                            We will pull your Generative AI export against your standard Performance export and tell you
-                            which pages carry your AI visibility, which earn impressions without clicks, and whether the
-                            concentration is a strength or a risk. No obligation to build anything afterwards.
+                            Bring your questions to a short call. We can discuss which reports you have, what they
+                            measure, and how to connect website visibility with enquiries and bookings. Any audit or
+                            implementation work is scoped separately.
                         </p>
                         <div className="mt-5">
                             <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 font-bold text-white hover:bg-stone-800">

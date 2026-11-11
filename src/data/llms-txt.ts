@@ -39,6 +39,8 @@ const HEADER = `# PandaCodeGen
 - Build stack: ${SERVICES.find(fact => fact.label === 'Build stack')!.value}
 - Website SEO and AI search foundations: ${SERVICES.find(fact => fact.label === 'Website SEO and AI search foundations')!.value}
 - AI SEO, AEO and GEO services: ${SERVICES.find(fact => fact.label === 'AI SEO, AEO and GEO services')!.value}
+- AI search measurement: ${SERVICES.find(fact => fact.label === 'AI search measurement')!.value}
+- AI-info and llms.txt: ${SERVICES.find(fact => fact.label === 'AI-info and llms.txt')!.value}
 - Core platforms: WordPress, Webflow, and GoHighLevel. Also: Wix, Squarespace, Shopify (headless), and WooCommerce.
 - Custom work: Next.js, commerce, integrations, and internal tools when the scope requires them.
 - Interactive website tools: ${SERVICES.find(fact => fact.label === 'Interactive website tools')!.value}
