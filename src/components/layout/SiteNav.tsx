@@ -77,20 +77,21 @@ const company = [
 // Independent client work only. Founder-affiliated projects are labelled as
 // such on /work and are left out here, where there is no room for the label.
 const shots = [
-  { src: "/work/northdeck-group.png", name: "NorthDeck Group", href: "/work" },
+  { src: "/work/ladies-4-jesus.png", name: "Ladies 4 Jesus", href: "/work/ladies-4-jesus" },
   { src: "/work/emblematic-studio.png", name: "Emblematic Studio", href: "/work/emblematic-studio" },
   { src: "/work/mycustompatches.png", name: "MyCustomPatches", href: "/work/mycustompatches" },
 ];
 
+const workProjects = [
+  { name: "A Step Above Medical", href: "/work/a-step-above-medical", image: "/work/a-step-above-medical-preview-homepage.png", description: "Class bookings and a staff portal." },
+  { name: "Ladies 4 Jesus", href: "/work/ladies-4-jesus", image: "/work/ladies-4-jesus.png", description: "Community stories, simple publishing." },
+  { name: "Emblematic Studio", href: "/work/emblematic-studio", image: "/work/emblematic-studio.png", description: "A product catalogue built for enquiries." },
+  { name: "MyCustomPatches", href: "/work/mycustompatches", image: "/work/mycustompatches.png", description: "An online storefront for custom patches." },
+  { name: "Panda Patches", href: "/work/panda-patches", image: "/work/panda-patches.png", description: "From storefront to order management.", note: "Founder-affiliated business" },
+];
+
 const dropdowns: Record<string, { name: string; href: string; note?: string }[]> = {
-  Work: [
-    { name: "All work", href: "/work" },
-    { name: "A Step Above Medical", href: "/work/a-step-above-medical" },
-    { name: "Panda Patches", href: "/work/panda-patches", note: "Founder-affiliated business" },
-    { name: "NorthDeck Group", href: "/work/northdeck-group" },
-    { name: "Emblematic Studio", href: "/work/emblematic-studio" },
-    { name: "MyCustomPatches", href: "/work/mycustompatches" },
-  ],
+  Work: [{ name: "All work", href: "/work" }, ...workProjects],
   Services: [
     { name: "All services", href: "/services" },
     ...buying.slice(1),
@@ -113,6 +114,8 @@ export default function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [dropdownX, setDropdownX] = useState(0);
+  const [previewIndex, setPreviewIndex] = useState(0);
+  const dropdownTriggerRef = useRef<HTMLButtonElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const topNavRef = useRef<HTMLElement>(null);
@@ -222,19 +225,29 @@ export default function SiteNav() {
     setOpen(true);
   };
   const showDropdown = (name: string, button: HTMLButtonElement) => {
-    setDropdownX(button.getBoundingClientRect().left);
+    const width = name === "Work" ? 760 : name === "Services" ? 500 : 300;
+    setDropdownX(Math.max(16, Math.min(button.getBoundingClientRect().left, window.innerWidth - width - 16)));
+    dropdownTriggerRef.current = button;
+    if (name === "Work" && activeDropdown !== "Work") setPreviewIndex(0);
     setActiveDropdown(name);
   };
+  const preview = workProjects[previewIndex];
 
   return (
     <>
       {/* ── Floating bar ─────────────────────────────────────────────────── */}
-      <header onMouseLeave={() => setActiveDropdown(null)} onKeyDown={(event) => { if (event.key === "Escape" && activeDropdown) setActiveDropdown(null); }} className={`sticky top-0 z-[60] flex min-h-[88px] items-center transition-colors duration-500 ${scrolled ? "border-b border-transparent bg-transparent" : "border-b border-[#1C1917]/15 bg-[#EBE9E4]"}`}>
+      <header onMouseLeave={() => { if (!dropdownRef.current?.contains(document.activeElement)) setActiveDropdown(null); }} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setActiveDropdown(null); }} onKeyDown={(event) => { if (event.key === "Escape" && activeDropdown) { setActiveDropdown(null); dropdownTriggerRef.current?.focus({ preventScroll: true }); } }} className={`sticky top-0 z-[60] flex min-h-[88px] items-center transition-colors duration-500 ${scrolled ? "border-b border-transparent bg-transparent" : "border-b border-[#1C1917]/15 bg-[#EBE9E4]"}`}>
         <div className={`mx-auto flex w-[calc(100%-16px)] items-center justify-between border px-2 transition-[max-width,min-height,padding,box-shadow,background-color,border-color] duration-500 ease-[cubic-bezier(.22,1,.36,1)] motion-reduce:transition-none min-[380px]:w-[calc(100%-32px)] min-[380px]:px-4 md:px-6 xl:justify-start ${scrolled ? "min-h-[64px] max-w-[560px] gap-2 border-[#1C1917]/15 shadow-[0_14px_40px_-18px_rgba(28,25,23,.5)]" : "min-h-[86px] max-w-[1440px] gap-2 border-transparent sm:gap-6"}`} style={{ backgroundColor: scrolled ? "#EBE9E4" : "transparent" }}>
           <Link prefetch={false} href="/" className={`shrink-0 text-[16px] tracking-[-0.01em] transition-[font-size] duration-500 min-[380px]:text-[18px] sm:text-[21px] ${scrolled ? "sm:text-[19px]" : ""}`} style={{ color: INK, fontFamily: "Zodiak, Georgia, serif", fontWeight: 700 }}>PandaCodeGen<span style={{ color: ACCENT }}>.</span></Link>
           <nav ref={topNavRef} aria-label="Primary navigation" inert={scrolled} className={`hidden min-w-0 items-center gap-1 whitespace-nowrap transition-[max-width,opacity,transform] duration-500 motion-reduce:transition-none xl:ml-[clamp(35px,4vw,85px)] xl:flex ${scrolled ? "pointer-events-none max-w-0 scale-90 overflow-hidden opacity-0" : "max-w-[720px] scale-100 opacity-100"}`}>
             {primary.map((link) => dropdowns[link.name] ? (
-              <button key={link.href} type="button" aria-expanded={activeDropdown === link.name} aria-controls="nav-dropdown" onMouseEnter={(event) => showDropdown(link.name, event.currentTarget)} onClick={(event) => showDropdown(link.name, event.currentTarget)} className={`flex items-center gap-1 px-3 py-3 text-[14px] font-semibold transition-colors hover:text-[#AD3D0B] focus-visible:text-[#AD3D0B] ${pathname.startsWith(link.href) ? "text-[#AD3D0B]" : "text-[#1C1917]"}`}>
+              <button key={link.href} type="button" aria-expanded={activeDropdown === link.name} aria-controls="nav-dropdown" onMouseEnter={(event) => showDropdown(link.name, event.currentTarget)} onClick={(event) => showDropdown(link.name, event.currentTarget)} onKeyDown={(event) => {
+                if (event.key === "ArrowDown" || (event.key === "Tab" && !event.shiftKey && activeDropdown === link.name)) {
+                  event.preventDefault();
+                  showDropdown(link.name, event.currentTarget);
+                  requestAnimationFrame(() => dropdownRef.current?.querySelector<HTMLAnchorElement>("a")?.focus());
+                }
+              }} className={`flex items-center gap-1 px-3 py-3 text-[14px] font-semibold transition-colors hover:text-[#AD3D0B] focus-visible:text-[#AD3D0B] ${pathname.startsWith(link.href) ? "text-[#AD3D0B]" : "text-[#1C1917]"}`}>
                 {link.name}<span aria-hidden="true" className={`text-[10px] transition-transform duration-200 ${activeDropdown === link.name ? "rotate-180" : ""}`}>⌄</span>
               </button>
             ) : (
@@ -247,8 +260,35 @@ export default function SiteNav() {
             <button type="button" aria-expanded={open} aria-controls="site-menu" aria-label="Open site menu" onClick={(event) => openMenu(event.currentTarget)} className="flex h-11 items-center gap-1 border border-[#1C1917] px-2 text-[13px] font-semibold text-[#1C1917] transition-colors hover:bg-[#1C1917] hover:text-white focus-visible:bg-[#1C1917] focus-visible:text-white min-[380px]:gap-2 min-[380px]:px-3"><span>Menu</span><span aria-hidden="true">☰</span></button>
           </div>
         </div>
-        <div id="nav-dropdown" ref={dropdownRef} inert={!activeDropdown || scrolled} className={`absolute top-full z-[65] border border-[#1C1917]/20 p-4 shadow-[0_18px_40px_-18px_rgba(28,25,23,.35)] transition-[opacity,transform,visibility] duration-200 ${activeDropdown && !scrolled ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"}`} style={{ left: dropdownX, width: activeDropdown === "Services" ? 500 : 300, backgroundColor: "#F5F4F0", display: "grid", gridTemplateColumns: activeDropdown === "Services" ? "repeat(2,minmax(0,1fr))" : "1fr", gap: "0 22px" }}>
-          {(activeDropdown ? dropdowns[activeDropdown] : []).map((item) => <Link key={item.href} href={item.href} onClick={() => setActiveDropdown(null)} className="block border-b border-[#1C1917]/10 px-2 py-2.5 text-[14px] text-[#1C1917] transition-colors hover:text-[#AD3D0B] focus-visible:text-[#AD3D0B]"><span>{item.name}</span>{item.note && <span className="mt-0.5 block text-[11px] text-[#5E5B55]">{item.note}</span>}</Link>)}
+        <div id="nav-dropdown" ref={dropdownRef} inert={!activeDropdown || scrolled} data-lenis-prevent className={`absolute top-full z-[65] hidden max-h-[calc(100dvh-104px)] overflow-y-auto overscroll-contain border border-[#1C1917]/15 shadow-[0_24px_60px_-20px_rgba(28,25,23,.35)] transition-[opacity,transform,visibility] duration-200 motion-reduce:transition-none xl:grid ${activeDropdown === "Work" ? "rounded-xl p-2" : "p-4"} ${activeDropdown && !scrolled ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"}`} style={{ left: dropdownX, width: activeDropdown === "Work" ? 760 : activeDropdown === "Services" ? 500 : 300, maxWidth: "calc(100vw - 32px)", backgroundColor: "#F5F4F0", gridTemplateColumns: activeDropdown === "Services" ? "repeat(2,minmax(0,1fr))" : "1fr", gap: "0 22px" }}>
+          {activeDropdown === "Work" ? (
+            <div className="grid grid-cols-[280px_minmax(0,1fr)] gap-2">
+              <div className="px-1 pb-1 pt-3">
+                <p className="mb-3 px-3 text-[10px] font-bold uppercase tracking-[0.16em] text-[#5E5B55]">Selected work</p>
+                {workProjects.map((project, index) => (
+                  <Link key={project.href} href={project.href} prefetch={false} onMouseEnter={() => setPreviewIndex(index)} onFocus={() => setPreviewIndex(index)} onClick={() => setActiveDropdown(null)} aria-current={pathname === project.href ? "page" : undefined} className={`group relative block rounded-md px-3 py-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#AD3D0B] ${previewIndex === index ? "bg-[#E8E3DA] text-[#87300A]" : "text-[#1C1917] hover:bg-[#E8E3DA]"}`}>
+                    <span className="flex items-center justify-between gap-2 text-[14px] font-semibold">{project.name}<span aria-hidden="true" className={previewIndex === index ? "opacity-100" : "opacity-0"}>&rarr;</span></span>
+                    <span className="mt-1 block text-[12px] leading-relaxed text-[#5E5B55]">{project.note || project.description}</span>
+                  </Link>
+                ))}
+                <Link href="/work" prefetch={false} onClick={() => setActiveDropdown(null)} className="mx-3 mt-3 flex items-center justify-between border-t border-[#1C1917]/15 py-3 text-[12px] font-semibold text-[#87300A] hover:underline">Explore all work <span aria-hidden="true">&rarr;</span></Link>
+              </div>
+              <Link href={preview.href} prefetch={false} onClick={() => setActiveDropdown(null)} className="group flex min-w-0 flex-col justify-center rounded-lg border border-[#1C1917]/10 bg-[#EBE9E4] p-5 text-[#1C1917] focus-visible:outline-2 focus-visible:outline-[#AD3D0B]" aria-label={`View ${preview.name} case study`}>
+                <div key={preview.href} className="work-nav-preview">
+                  <div className="overflow-hidden rounded-md border border-[#1C1917]/15 bg-[#F5F4F0] shadow-[0_12px_28px_-14px_rgba(28,25,23,.3)]">
+                    <div aria-hidden="true" className="flex h-6 items-center gap-1 border-b border-[#1C1917]/10 px-2"><span className="h-1.5 w-1.5 rounded-full bg-[#1C1917]/25" /><span className="h-1.5 w-1.5 rounded-full bg-[#1C1917]/15" /><span className="h-1.5 w-1.5 rounded-full bg-[#1C1917]/15" /></div>
+                    <div className="relative aspect-[16/10]">
+                      <Image src={preview.image} alt={`${preview.name} website preview`} fill sizes="400px" className="object-cover object-top" />
+                    </div>
+                  </div>
+                  <p className="mb-2 mt-6 text-[10px] font-bold uppercase tracking-[0.14em] text-[#87300A]">{preview.note || "Client project"}</p>
+                  <p className="text-[24px] leading-tight" style={{ fontFamily: "Zodiak, Georgia, serif", fontWeight: 700 }}>{preview.name}</p>
+                  <p className="mt-3 text-[13px] leading-relaxed text-[#5E5B55]">{preview.description}</p>
+                </div>
+                <span className="mt-6 flex items-center justify-between border-t border-[#1C1917]/15 pt-4 text-[12px] font-semibold text-[#87300A] group-hover:underline">View case study <span aria-hidden="true">&rarr;</span></span>
+              </Link>
+            </div>
+          ) : (activeDropdown ? dropdowns[activeDropdown] : []).map((item) => <Link key={item.href} href={item.href} onClick={() => setActiveDropdown(null)} className="block border-b border-[#1C1917]/10 px-2 py-2.5 text-[14px] text-[#1C1917] transition-colors hover:text-[#AD3D0B] focus-visible:text-[#AD3D0B]"><span>{item.name}</span>{item.note && <span className="mt-0.5 block text-[11px] text-[#5E5B55]">{item.note}</span>}</Link>)}
         </div>
       </header>
 
@@ -395,7 +435,9 @@ export default function SiteNav() {
       <style>{`
         .cta-solid { transition: background-color .3s ease, color .3s ease; }
         .cta-solid:hover, .cta-solid:focus-visible { background-color: ${T.accent} !important; color: #FFFFFF !important; }
-        @media (prefers-reduced-motion: reduce) { .cta-solid { transition: none; } }
+        .work-nav-preview { animation: work-nav-reveal .2s ease-out; }
+        @keyframes work-nav-reveal { from { opacity: .4; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+        @media (prefers-reduced-motion: reduce) { .cta-solid { transition: none; } .work-nav-preview { animation: none; } }
       `}</style>
     </>
   );
