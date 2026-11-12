@@ -85,7 +85,7 @@ const shots = [
 const workProjects = [
   { name: "A Step Above Medical", href: "/work/a-step-above-medical", image: "/work/a-step-above-medical-preview-homepage.png", description: "Class bookings and a staff portal." },
   { name: "Ladies 4 Jesus", href: "/work/ladies-4-jesus", image: "/work/ladies-4-jesus.png", description: "Community stories, simple publishing." },
-  { name: "Emblematic Studio", href: "/work/emblematic-studio", image: "/work/emblematic-studio.png", description: "A product catalogue built for enquiries." },
+  { name: "Emblematic Studio", href: "/work/emblematic-studio", image: "/work/emblematic-studio.png", description: "A product catalogue built for enquiries.", showFullPreview: true },
   { name: "MyCustomPatches", href: "/work/mycustompatches", image: "/work/mycustompatches.png", description: "An online storefront for custom patches." },
   { name: "Panda Patches", href: "/work/panda-patches", image: "/work/panda-patches.png", description: "From storefront to order management.", note: "Founder-affiliated business" },
 ];
@@ -257,7 +257,7 @@ export default function SiteNav() {
           <div className="flex shrink-0 items-center gap-1 min-[380px]:gap-2 xl:ml-auto">
             <button type="button" onClick={openQuote} className="cta-solid inline-flex min-h-11 items-center px-2 py-2 text-[12px] font-semibold sm:hidden" style={{ backgroundColor: INK, color: PAPER }} aria-label="Talk to the founders">Talk</button>
             <button type="button" onClick={openQuote} className="cta-solid hidden min-h-11 items-center px-4 py-2 text-[14px] font-semibold sm:inline-flex" style={{ backgroundColor: INK, color: PAPER }}>Talk to the founders</button>
-            <button type="button" aria-expanded={open} aria-controls="site-menu" aria-label="Open site menu" onClick={(event) => openMenu(event.currentTarget)} className="flex h-11 items-center gap-1 border border-[#1C1917] px-2 text-[13px] font-semibold text-[#1C1917] transition-colors hover:bg-[#1C1917] hover:text-white focus-visible:bg-[#1C1917] focus-visible:text-white min-[380px]:gap-2 min-[380px]:px-3"><span>Menu</span><span aria-hidden="true">☰</span></button>
+            <button type="button" aria-expanded={open} aria-controls="site-menu" aria-label="Open site menu" onClick={(event) => openMenu(event.currentTarget)} className={`flex h-11 items-center gap-1 border border-[#1C1917] px-2 text-[13px] font-semibold text-[#1C1917] transition-colors hover:bg-[#1C1917] hover:text-white focus-visible:bg-[#1C1917] focus-visible:text-white min-[380px]:gap-2 min-[380px]:px-3 ${scrolled ? "" : "xl:hidden"}`}><span>Menu</span><span aria-hidden="true">☰</span></button>
           </div>
         </div>
         <div id="nav-dropdown" ref={dropdownRef} inert={!activeDropdown || scrolled} data-lenis-prevent className={`absolute top-full z-[65] hidden max-h-[calc(100dvh-104px)] overflow-y-auto overscroll-contain border border-[#1C1917]/15 shadow-[0_24px_60px_-20px_rgba(28,25,23,.35)] transition-[opacity,transform,visibility] duration-200 motion-reduce:transition-none xl:grid ${activeDropdown === "Work" ? "rounded-xl p-2" : "p-4"} ${activeDropdown && !scrolled ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"}`} style={{ left: dropdownX, width: activeDropdown === "Work" ? 760 : activeDropdown === "Services" ? 500 : 300, maxWidth: "calc(100vw - 32px)", backgroundColor: "#F5F4F0", gridTemplateColumns: activeDropdown === "Services" ? "repeat(2,minmax(0,1fr))" : "1fr", gap: "0 22px" }}>
@@ -277,13 +277,12 @@ export default function SiteNav() {
                 <div key={preview.href} className="work-nav-preview">
                   <div className="overflow-hidden rounded-md border border-[#1C1917]/15 bg-[#F5F4F0] shadow-[0_12px_28px_-14px_rgba(28,25,23,.3)]">
                     <div aria-hidden="true" className="flex h-6 items-center gap-1 border-b border-[#1C1917]/10 px-2"><span className="h-1.5 w-1.5 rounded-full bg-[#1C1917]/25" /><span className="h-1.5 w-1.5 rounded-full bg-[#1C1917]/15" /><span className="h-1.5 w-1.5 rounded-full bg-[#1C1917]/15" /></div>
-                    <div className="relative aspect-[16/10]">
-                      <Image src={preview.image} alt={`${preview.name} website preview`} fill sizes="400px" className="object-cover object-top" />
+                    <div className={`relative aspect-[16/10] ${preview.showFullPreview ? "bg-[#0B0B0D]" : ""}`}>
+                      <Image src={preview.image} alt={`${preview.name} website preview`} fill sizes="400px" className={preview.showFullPreview ? "object-contain" : "object-cover object-top"} />
                     </div>
                   </div>
                   <p className="mb-2 mt-6 text-[10px] font-bold uppercase tracking-[0.14em] text-[#87300A]">{preview.note || "Client project"}</p>
                   <p className="text-[24px] leading-tight" style={{ fontFamily: "Zodiak, Georgia, serif", fontWeight: 700 }}>{preview.name}</p>
-                  <p className="mt-3 text-[13px] leading-relaxed text-[#5E5B55]">{preview.description}</p>
                 </div>
                 <span className="mt-6 flex items-center justify-between border-t border-[#1C1917]/15 pt-4 text-[12px] font-semibold text-[#87300A] group-hover:underline">View case study <span aria-hidden="true">&rarr;</span></span>
               </Link>

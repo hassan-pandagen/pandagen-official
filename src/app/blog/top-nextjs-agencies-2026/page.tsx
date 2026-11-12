@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Top Next.js Development Agencies in 2026: 8 Compared";
 const description =
-    "Eight Next.js development agencies compared: where each is based, which fit B2B SaaS, SEO and site migrations, and what to ask about pricing, ownership and support.";
+    "8 Next.js development agencies compared: where each is based, which fit B2B SaaS, SEO and site migrations, and what to ask about pricing, ownership and support.";
 
 export const dynamic = "force-static";
 
