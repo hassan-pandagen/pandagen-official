@@ -393,8 +393,8 @@ export default function GoHighLevelVsWordPressPage() {
                         ]}
                     />
                     <BlogText>
-                        HighLevel also documents a per-domain <a href="https://help.gohighlevel.com/support/solutions/articles/155000008299-make-your-sites-ai-ready-with-llms-txt" className={sourceLinkClass}>llms.txt editor</a>,
-                        checked on 29 October 2026. It publishes a Markdown guide to your pages. Treat it as an optional
+                        HighLevel also documents a per-domain <a href="https://help.gohighlevel.com/support/solutions/articles/155000008299-make-your-sites-ai-ready-with-llms-txt" className={sourceLinkClass}>llms.txt editor</a>.
+                        It publishes a Markdown guide to your pages. Treat it as an optional
                         description of your site: publishing the file does not establish that a particular assistant
                         uses it or will cite you. Keep useful content and crawlable links on the actual pages, and verify
                         indexing in Search Console separately.

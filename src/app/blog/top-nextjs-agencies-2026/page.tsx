@@ -299,7 +299,7 @@ export default function TopNextjsAgenciesPage() {
                     <BlogHeader>The eight providers compared</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Eight providers, listed alphabetically and not ranked, each described only from what its own site publishes as of the check date below. The middle column is deliberately thin: it records what a firm demonstrates about itself, not what a directory says about it. Everything in the right-hand column is what you still have to establish by asking. Locations under each name come from the firm&apos;s own site, checked November 10, 2026. A registered office is where the company is incorporated, which is not always where its team works.
+                            Eight providers, listed alphabetically and not ranked, each described only from what its own site publishes as of the check date below. The middle column is deliberately thin: it records what a firm demonstrates about itself, not what a directory says about it. Everything in the right-hand column is what you still have to establish by asking. Locations under each name come from the firm&apos;s own site, checked for this update. A registered office is where the company is incorporated, which is not always where its team works.
                         </BlogText>
                     </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
@@ -398,8 +398,7 @@ export default function TopNextjsAgenciesPage() {
                     </BlogText>
                     <h3 className="mb-3 mt-6 text-xl font-bold text-charcoal">Which of these Next.js agencies are based in Europe?</h3>
                     <BlogText>
-                        Six of the seven other providers show a European base on their own sites, checked November 10,
-                        2026: Bejamas, Blazity, Brainhub, Naturaily and Netguru are Polish companies, and FocusReactive
+                        Six of the seven other providers show a European base on their own sites, checked for this update: Bejamas, Blazity, Brainhub, Naturaily and Netguru are Polish companies, and FocusReactive
                         is a Dutch company with offices in Amsterdam, London, Warsaw and New York. Pagepro&apos;s site
                         blocked our check, so confirm its location directly. PandaCodeGen&apos;s principal office is in
                         Stafford, Texas, and we deliver remotely.

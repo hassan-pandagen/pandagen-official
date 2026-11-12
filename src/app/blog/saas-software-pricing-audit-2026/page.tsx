@@ -159,7 +159,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                             consolidate, replace or investigate without promising a universal savings rate.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed October 29, 2026 against current primary vendor sources.
+                            Reviewed against current primary vendor sources for this update.
                         </p>
                       </div>
                       <div data-article-hero-screen>

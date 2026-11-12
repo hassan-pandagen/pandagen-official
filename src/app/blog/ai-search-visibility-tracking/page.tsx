@@ -656,7 +656,7 @@ export default function AiSearchVisibilityTracking() {
                         Generative AI report for 18 May to 13 August 2026, and the standard Performance report for 24
                         May to 23 August 2026. Third-party platform
                         behaviour is cited to documentation. The business measurement guidance, Bing definitions and
-                        website recommendations were reviewed on 11 November 2026; the historical research windows have not changed.
+                        website recommendations were reviewed for this update; the historical research windows have not changed.
                     </BlogHighlight>
 
                     <p className="mt-10 border-l-2 border-stone-300 pl-4 text-sm leading-relaxed text-stone-600">

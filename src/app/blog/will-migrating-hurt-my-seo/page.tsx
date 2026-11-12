@@ -231,8 +231,8 @@ export default function WillMigratingHurtSeoPage() {
                         This checklist follows Google&apos;s guidance for{" "}
                         <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">site moves with URL changes</a>{" "}
                         and for{" "}
-                        <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-no-url-changes" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">hosting moves without URL changes</a>,
-                        checked November 10, 2026. Not every item applies to every project: a redesign at the same
+                        <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-no-url-changes" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">hosting moves without URL changes</a>.
+                        Not every item applies to every project: a redesign at the same
                         address skips the domain steps, and a move without DNS changes skips the DNS step.
                     </BlogText>
                     <h3 className="mb-3 mt-6 text-xl font-bold text-charcoal">Before launch</h3>
