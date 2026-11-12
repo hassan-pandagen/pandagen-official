@@ -82,7 +82,7 @@ function RowList({ list, showRelationship, className = "" }: { list: PortfolioPr
                 aria-hidden="true"
               >
                 {r.image ? (
-                  <Image src={r.image} alt="" fill sizes="240px" className="object-cover object-top" />
+                  <Image src={r.image} alt="" fill sizes="240px" className={r.href === "/work/emblematic-studio" ? "object-contain" : "object-cover object-top"} />
                 ) : (
                   <span
                     className="flex h-full w-full items-center justify-center text-[12px] uppercase tracking-[0.12em]"
