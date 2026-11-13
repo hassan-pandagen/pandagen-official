@@ -97,4 +97,39 @@ export const pricingFaqs: PricingFaq[] = [
     q: "How is the 90+ performance target checked?",
     a: "Your quote names which pages we test and on what device. Each one has to score 90 or better on Google PageSpeed, three times in a row, before we hand over. That is a test-bench score. It is not a promise about your rankings, your revenue, or what happens after someone adds a new tool to the site.",
   },
+  // Added 13 Nov 2026 from the owner's answers, after an assistant eval showed
+  // visitors ask these and the site had no answer, so the assistant had to hand
+  // every one of them to a founder.
+  {
+    q: "How many design revisions are included?",
+    a: "Three rounds of design revisions. Small layout fixes after launch are included during your post-launch support period; after that, changes are quoted before work starts.",
+  },
+  {
+    q: "Do you build mobile apps for iPhone and Android?",
+    a: "Yes. We build iPhone and Android apps with React Native, using one shared codebase and the same accounts and data as your website, and we handle the App Store and Google Play submissions. If you don't need the app stores, an installable web app is a faster, lower-cost option. Tell us what kind of app you have in mind and who will use it, and we'll scope it with you.",
+  },
+  {
+    q: "Can my website work like an app on phones?",
+    a: "Yes. We build installable web apps: your site can be added to a phone's home screen and open full-screen like an app, using the same pages and logins, with no app store needed. We built one for Panda Patches, our founder-owned store.",
+  },
+  {
+    q: "Do you build workflow automation?",
+    a: "Yes. We connect forms, CRMs, payments, email and internal tools so routine steps run on their own. We can work with tools like Zapier or n8n, but we usually build automation in code, because it runs faster and you aren't paying per task.",
+  },
+  {
+    q: "Do you help with Google Maps and local search?",
+    a: "Yes. We set up and improve your Google Business Profile and the local search basics on your website, such as your name, address and phone details, service areas and location pages. Nobody can guarantee a ranking.",
+  },
+  {
+    q: "My WordPress site was hacked. Can you help?",
+    a: "Yes. We review the site first, then clean it up, apply security patches and updates, and harden it against the same problem. Because every case is different, we quote after the review.",
+  },
+  {
+    q: "Do you offer discounts for nonprofits?",
+    a: "Yes. We offer nonprofit discounts, agreed in your written proposal.",
+  },
+  {
+    q: "What hours do you work?",
+    a: "Our team works remotely, and support is available Monday to Friday, 9 a.m. to 5 p.m. Eastern Time. Urgent problems are acknowledged within one support hour.",
+  },
 ];
