@@ -107,11 +107,8 @@ function check(answer, data, expect, turnIndex, offeredBefore = false) {
       if (n >= 3 && n > english) fails.push(`English question answered in ${code}`);
     }
   }
-  // A Step Above Medical is still being built; its record says it must not be
-  // presented as delivered work until launch.
-  if (/A Step Above Medical/i.test(answer) && !/in progress|not (yet )?(finished|launched|live)|launch is pending|being (re)?built/i.test(answer)) {
-    fails.push("presents A Step Above Medical as finished work");
-  }
+  // 13 Nov 2026: removed the A Step Above Medical "still being built" check.
+  // The site launched and its record (migration-projects.ts) now says Live.
   if (/\bthe visitor\b/i.test(answer)) fails.push('talks about "the visitor" instead of "you"');
   // Since 3 Oct 2026 the model also reports "answered": false when it hands a
   // question to the founders, which no wording pattern can catch reliably.

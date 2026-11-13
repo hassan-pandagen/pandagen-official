@@ -4,7 +4,7 @@ import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
   title: { absolute: "Privacy Policy | PandaCodeGen" },
-  description: "How PandaCodeGen collects, uses, and protects your data. Last updated October 22, 2026.",
+  description: "How PandaCodeGen collects, uses, and protects your data. Last updated November 13, 2026.",
   alternates: { canonical: "/privacy" },
   openGraph: {
     title: "Privacy Policy | PandaCodeGen",
@@ -56,7 +56,7 @@ export default function PrivacyPage() {
 
           <div className="mb-16 animate-fade-in-up">
             <h1 className="text-5xl font-bold text-charcoal mb-4">Privacy Policy</h1>
-            <p className="text-stone-600">Last updated: October 22, 2026</p>
+            <p className="text-stone-600">Last updated: November 13, 2026</p>
           </div>
 
           <div className="space-y-8 text-stone-600 leading-relaxed">
@@ -109,7 +109,7 @@ export default function PrivacyPage() {
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">2.4 Website Assistant and Live Chat</h2>
               <p>
-                If you use Ask PandaCodeGen, our server sends your question and recent conversation messages through Vercel AI Gateway to an AI model running on Google Cloud Vertex AI (currently xAI&apos;s Grok or Google&apos;s Gemini), which drafts an answer from selected pages on this website. The request can include up to eight recent messages, limited to 600 characters each. Every request asks for zero data retention, so it only goes to a provider that has agreed with Vercel not to keep it. If we change the model or provider, we will update this section first. The assistant is user-initiated.</p><p className="mt-4">When Hassan is available, the assistant panel offers &quot;Chat with Hassan now&quot;. If you choose it, the questions you typed into the assistant, the messages you send in the chat and the page you started from are posted to a channel in our team&apos;s Slack workspace, which only our team can see, where Hassan reads and answers them. Slack (Slack Technologies, part of Salesforce) processes them for us, and they stay in that channel as a record of the conversation. Live chat sets no cookies; your browser keeps the conversation in session storage until you close the tab. Your questions to the assistant and its answers are also posted to that Slack workspace, with emails and phone numbers removed, so a founder can follow the conversation and join it in the same panel if that would help.
+                If you use Ask PandaCodeGen, our server sends your question and recent conversation messages to Anthropic&apos;s Claude API (currently Claude Sonnet, with Claude Haiku as a backup), which drafts an answer from selected pages on this website. The request can include up to eight recent messages, limited to 600 characters each. Under Anthropic&apos;s commercial terms, these messages are not used to train its models and are kept only for a limited period. If we change the model or provider, we will update this section first. The assistant is user-initiated.</p><p className="mt-4">When Hassan is available, the assistant panel offers &quot;Chat with Hassan now&quot;. If you choose it, the questions you typed into the assistant, the messages you send in the chat and the page you started from are posted to a channel in our team&apos;s Slack workspace, which only our team can see, where Hassan reads and answers them. Slack (Slack Technologies, part of Salesforce) processes them for us, and they stay in that channel as a record of the conversation. Live chat sets no cookies; your browser keeps the conversation in session storage until you close the tab. Your questions to the assistant and its answers are also posted to that Slack workspace, with emails and phone numbers removed, so a founder can follow the conversation and join it in the same panel if that would help.
               </p>
               <p className="mt-4">
                 The panel keeps up to 20 recent messages in your browser&apos;s session storage so you can continue the conversation in that tab. Our server shares cached answers only for the three preset starter questions; it revalidates those answers after seven days. Custom questions and follow-up answers are not placed in that shared cache. If you choose to hand the conversation to our founders, your questions are copied into the contact form, and they reach us with your name and contact details only when you submit that form.

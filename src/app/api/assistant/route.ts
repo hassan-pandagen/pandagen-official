@@ -1,7 +1,10 @@
 import { AsyncLocalStorage } from "node:async_hooks";
+import Anthropic from "@anthropic-ai/sdk";
 import { after } from "next/server";
 import { asksAboutCost, retrieve, sourceLabel, type Passage } from "@/lib/assistant/knowledge";
 import { logQuestion, pageFrom } from "@/lib/assistant/log";
+import { enforceAssistantRateLimit } from "@/lib/audit/auditRateLimit";
+import type { NextRequest } from "next/server";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // POST /api/assistant: the website assistant.
@@ -9,20 +12,16 @@ import { logQuestion, pageFrom } from "@/lib/assistant/log";
 // Added 23 Sep 2026. Retrieval happens here, from src/lib/assistant/knowledge.ts;
 // the model only writes the answer from the passages it is handed.
 //
-// 4 Oct 2026: moved from Google's unpaid Gemini API tier to Vercel AI Gateway.
-// Google's Gemini API terms allow only Paid Services for users in the EEA,
-// Switzerland and the UK, and the unpaid tier lets Google use content to
-// improve its products. Through the gateway Vercel pays the provider, our team
-// gets $5 of free gateway credit a month, and every request asks for zero data
-// retention and is pinned to named US cloud providers (PROVIDERS below), so no
-// visitor message reaches a provider hosted in China. Changing provider means
-// changing callOnce() and PROVIDERS and nothing else.
+// 13 Nov 2026: moved from Vercel AI Gateway (Grok and Gemini, zero data
+// retention) to the Claude API, called directly with ANTHROPIC_API_KEY and,
+// for an organization-scoped key, ANTHROPIC_WORKSPACE_ID. Claude Sonnet answers;
+// Claude Haiku is the fallback. The fixed rules are prompt-cached, and the rate
+// limit is shared across instances in Redis (enforceAssistantRateLimit).
 //
 // Limits are deliberate, not tuning leftovers:
 //   - at most 8 turns of history and 600 characters per message
-//   - 20 requests per visitor per 10 minutes, 600 per instance per day
-// Both counters are per server instance and reset on a cold start, so they are
-// a brake on abuse and on the free quota, not an exact ledger.
+//   - 20 requests per visitor per 10 minutes and 300 a day site-wide, kept in
+//     Redis; if Redis is unavailable the per-instance memory limiter applies.
 //
 // 29 Sep 2026, after a 30-question test against the running assistant:
 //   - 5 of 30 answers failed after a 19 s wait: the free tier sometimes stalls.
@@ -57,51 +56,27 @@ import { logQuestion, pageFrom } from "@/lib/assistant/log";
 // gpt-oss-120b 12, gpt-5.4-nano 13 (mostly promising outcomes). The free tier
 // limits each model's request rate, so requests take turns across three models
 // (see nextStart below), each with its own limit.
-const MODELS = (process.env.ASSISTANT_MODELS || "spacexai/grok-4.1-fast-non-reasoning,google/gemini-2.5-flash,google/gemini-2.5-flash-lite")
+const MODELS = (process.env.ASSISTANT_MODELS || "claude-sonnet-5-5,claude-haiku-5-5")
   .split(",")
   .map((m) => m.trim())
   .filter(Boolean);
 const ATTEMPTS = Math.max(MODELS.length, 3);
 const HEDGE_MS = 4_000;
 
-// Providers allowed to serve each model family, checked 4 Oct 2026 against the
-// gateway's endpoint list: each has a zero-data-retention agreement with Vercel
-// and supports structured JSON. Not on the list on purpose: Alibaba, Novita and
-// GMI Cloud (DeepSeek), and Moonshot's own API (Kimi), which run in or route to
-// China. A model whose family is missing here is refused rather than sent to
-// whichever provider the gateway picks.
-// Keyed by full model id first, then by family. Free-credit fits added after a
-// test on 4 Oct 2026 (each answered with structured JSON on these providers with
-// zero data retention): gpt-oss-120b, gpt-5.4-nano, Mistral, Grok on Vertex,
-// Llama 4 Maverick, and DeepSeek V3.1 on DeepInfra (US). DeepSeek V4 Flash is
-// free only on providers we exclude, and Kimi only through Novita, also excluded.
-const PROVIDERS: Record<string, string[]> = {
-  "openai/gpt-oss-120b": ["fireworks", "groq", "bedrock", "baseten", "togetherai", "nebius", "parasail"],
-  "deepseek/deepseek-v3.1": ["deepinfra"],
-  "meta/llama-4-maverick": ["bedrock", "deepinfra"],
-  google: ["vertex"],
-  openai: ["openai", "azure"],
-  mistral: ["mistral"],
-  spacexai: ["vertex"],
-  deepseek: ["azure", "digitalocean"],
-  moonshotai: ["bedrock"],
-};
 // Development only: the eval scripts send x-assistant-models to test a model
 // list without restarting the server. Production always uses MODELS.
 const modelOverride = new AsyncLocalStorage<string[]>();
-const GATEWAY_URL = "https://ai-gateway.vercel.sh/v1/chat/completions";
 
-// On Vercel each function call carries a fresh OIDC token in the
-// x-vercel-oidc-token header; POST() stores the latest one here so the model
-// call can use it without the request being passed down. The token belongs to the
-// project, not to a visitor, so any recent one is valid for every request.
-// Locally, `vercel env pull` writes VERCEL_OIDC_TOKEN (valid 12 hours). An
-// AI_GATEWAY_API_KEY, if set, takes precedence.
-let latestOidcToken: string | null = null;
-function gatewayToken(): string {
-  const token = process.env.AI_GATEWAY_API_KEY || latestOidcToken || process.env.VERCEL_OIDC_TOKEN;
-  if (!token) throw new Error("no AI Gateway credentials: run on Vercel, `vercel env pull`, or set AI_GATEWAY_API_KEY");
-  return token;
+// 13 Nov 2026: moved from Vercel AI Gateway to the Claude API, called directly
+// with ANTHROPIC_API_KEY (the Max plan includes monthly API credits). Retries
+// are off in the SDK because callModel() already hedges and falls back.
+let client: Anthropic | null = null;
+function anthropic(): Anthropic {
+  if (!process.env.ANTHROPIC_API_KEY) throw new Error("ANTHROPIC_API_KEY is not set");
+  // An organization-scoped key must name the workspace on every request.
+  const workspace = process.env.ANTHROPIC_WORKSPACE_ID;
+  client ??= new Anthropic({ maxRetries: 0, defaultHeaders: workspace ? { "anthropic-workspace-id": workspace } : undefined });
+  return client;
 }
 const TIMEOUT_MS = 10_000;
 
@@ -217,34 +192,17 @@ const OUTPUT = `Return JSON:
 // and stating it plainly is what stopped it.
 const NO_PRICES = `- The visitor has not asked about cost. Do not mention any price, tier or dollar amount in this answer.`;
 
-function systemPrompt(context: Passage[], userTurns: number, lang: Language, costAsked: boolean, callOffered: boolean): string {
+// The fixed rules come first and are cached by the Claude API (prompt caching),
+// so repeat requests within a few minutes pay about a tenth for that part. The
+// per-question parts (language, prices, closing line, retrieved passages) follow.
+function systemPrompt(context: Passage[], userTurns: number, lang: Language, costAsked: boolean, callOffered: boolean): Anthropic.TextBlockParam[] {
   const close = callOffered ? CLOSE_OFFERED : userTurns >= CALL_FROM_TURN ? CLOSE_CALL : CLOSE_EARLY;
   const prices = costAsked ? "" : `\n${NO_PRICES}`;
   const contextText = context.map((p) => `[${p.id}] ${p.title}\n${p.text}`).join("\n\n");
-  return `${RULES}\n${languageRule(lang)}${prices}\n${close}\n\n${OUTPUT}\n\nCONTEXT\n\n${contextText}`;
-}
-
-// ── Rate limiting (best effort, per instance) ──────────────────────────────
-
-const hits = new Map<string, number[]>();
-let day = new Date().toDateString();
-let dayCount = 0;
-
-function limited(ip: string): boolean {
-  const today = new Date().toDateString();
-  if (today !== day) {
-    day = today;
-    dayCount = 0;
-  }
-  if (dayCount >= 600) return true;
-  const now = Date.now();
-  const recent = (hits.get(ip) ?? []).filter((t) => now - t < 10 * 60_000);
-  if (recent.length >= 20) return true;
-  recent.push(now);
-  hits.set(ip, recent);
-  dayCount++;
-  if (hits.size > 5000) hits.clear();
-  return false;
+  return [
+    { type: "text", text: `${RULES}\n\n${OUTPUT}`, cache_control: { type: "ephemeral" } },
+    { type: "text", text: `${languageRule(lang)}${prices}\n${close}\n\nCONTEXT\n\n${contextText}` },
+  ];
 }
 
 // A browser always sends Origin on a POST. Requiring it to match the host stops
@@ -274,7 +232,7 @@ interface ModelReply {
 
 let nextStart = 0;
 
-function callModel(system: string, turns: Turn[]): Promise<ModelReply> {
+function callModel(system: Anthropic.TextBlockParam[], turns: Turn[]): Promise<ModelReply> {
   return new Promise((resolve, reject) => {
     const controllers: AbortController[] = [];
     let started = 0;
@@ -287,7 +245,9 @@ function callModel(system: string, turns: Turn[]): Promise<ModelReply> {
     // limit takes all the traffic; the rest are fallbacks only. A rotation test on
     // 4 Oct 2026 at twice one model's free-tier rate had no rate-limited answers,
     // and all 3 wrong answers of 151 came from the third model, gemini-2.5-flash-lite.
-    const primary = Math.min(2, base.length);
+    // 13 Nov 2026: on the Claude API the first model (Sonnet) answers every
+    // request and the rest are fallbacks only, so there is no rotation.
+    const primary = 1;
     const offset = nextStart++ % primary;
     const models = [...base.slice(offset, primary), ...base.slice(0, offset), ...base.slice(primary)];
     const attempts = Math.max(models.length, ATTEMPTS);
@@ -334,47 +294,40 @@ function callModel(system: string, turns: Turn[]): Promise<ModelReply> {
   });
 }
 
-async function callOnce(model: string, system: string, turns: Turn[], signal: AbortSignal): Promise<Omit<ModelReply, "model">> {
-  const only = PROVIDERS[model] ?? PROVIDERS[model.split("/")[0]];
-  if (!only) throw new Error(`no approved provider for ${model}`);
+const REPLY_SCHEMA = {
+  type: "object",
+  properties: {
+    answer: { type: "string" },
+    sources: { type: "array", items: { type: "string" } },
+    handoff: { type: "boolean" },
+    answered: { type: "boolean" },
+  },
+  required: ["answer", "sources", "handoff", "answered"],
+  additionalProperties: false,
+};
 
-  const res = await fetch(GATEWAY_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Authorization: `Bearer ${gatewayToken()}` },
-    signal,
-    body: JSON.stringify({
-      model,
-      messages: [{ role: "system", content: system }, ...turns.map((t) => ({ role: t.role, content: t.content }))],
-      temperature: 0.2,
-      // 4 Oct 2026: 500 was enough for Gemini Flash-Lite, but reasoning models (gpt-oss,
-      // Gemini 2.5 Flash) spend part of the budget thinking and cut the JSON off.
-      // Answer length is set by the rules, not by this cap.
-      max_tokens: 1500,
-      response_format: {
-        type: "json_schema",
-        json_schema: {
-          name: "assistant_reply",
-          strict: true,
-          schema: {
-            type: "object",
-            properties: {
-              answer: { type: "string" },
-              sources: { type: "array", items: { type: "string" } },
-              handoff: { type: "boolean" },
-              answered: { type: "boolean" },
-            },
-            required: ["answer", "sources", "handoff", "answered"],
-            additionalProperties: false,
-          },
-        },
+async function callOnce(model: string, system: Anthropic.TextBlockParam[], turns: Turn[], signal: AbortSignal): Promise<Omit<ModelReply, "model">> {
+  let res: Anthropic.Message;
+  try {
+    res = await anthropic().messages.create(
+      {
+        model,
+        // Answer length is set by the rules; this only has to fit the JSON and
+        // any brief thinking at low effort.
+        max_tokens: 2000,
+        system,
+        messages: turns.map((t) => ({ role: t.role, content: t.content })),
+        output_config: { effort: "low", format: { type: "json_schema", schema: REPLY_SCHEMA } },
       },
-      providerOptions: { gateway: { only, zeroDataRetention: true } },
-    }),
-  });
-  if (!res.ok) throw new Error(`model ${res.status}`);
-  const data = await res.json();
-  // Some models wrap JSON in a code fence even when asked for a schema.
-  const text = String(data?.choices?.[0]?.message?.content ?? "").trim().replace(/^```(?:json)?\s*|\s*```$/g, "");
+      { signal },
+    );
+  } catch (err) {
+    if (err instanceof Anthropic.RateLimitError) throw new Error("model 429");
+    if (err instanceof Anthropic.APIError) throw new Error(`model ${err.status}`);
+    throw err;
+  }
+  if (res.stop_reason === "refusal") throw new Error("model refusal");
+  const text = res.content.map((b) => (b.type === "text" ? b.text : "")).join("").trim();
   if (!text) throw new Error("empty model reply");
   const parsed = JSON.parse(text) as Partial<ModelReply>;
   const answer = String(parsed.answer ?? "").trim();
@@ -504,15 +457,13 @@ async function answerTurns(turns: Turn[]): Promise<Answer> {
 const DEV = process.env.NODE_ENV !== "production";
 
 export async function POST(request: Request) {
-  latestOidcToken = request.headers.get("x-vercel-oidc-token") ?? latestOidcToken;
   if (!fromThisSite(request)) {
     return Response.json({ error: "forbidden" }, { status: 403 });
   }
 
-  const ip = (request.headers.get("x-forwarded-for") ?? "local").split(",")[0].trim();
-  // The eval scripts send x-assistant-nocache from many fake IPs; in development they
-  // skip the per-instance daily cap so a multi-model comparison can finish.
-  if (!(DEV && request.headers.get("x-assistant-nocache") === "1") && limited(ip)) {
+  // The eval scripts send x-assistant-nocache; in development they skip the
+  // limit so a full comparison run can finish.
+  if (!(DEV && request.headers.get("x-assistant-nocache") === "1") && !(await enforceAssistantRateLimit(request as NextRequest)).allowed) {
     return Response.json({ answer: "You've sent a lot of messages in a short time. Please try again in a few minutes, or email info@pandacodegen.com.", sources: [], handoff: false }, { status: 429 });
   }
 

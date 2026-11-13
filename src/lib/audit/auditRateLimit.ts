@@ -522,6 +522,43 @@ export async function enforceQuoteRateLimit(
   return applyRedisLimit(redis!, rules);
 }
 
+/**
+ * Website assistant rate limit (13 Nov 2026). Every answer now costs Claude API
+ * credit, so the limit is shared across instances in Redis: 20 messages per
+ * visitor per 10 minutes and 300 per day site-wide. Like the quote form, a
+ * configuration problem or a Redis outage falls back to the in-memory limiter
+ * rather than switching the assistant off.
+ */
+export async function enforceAssistantRateLimit(
+  request: NextRequest
+): Promise<AuditRateLimitResult> {
+  const prefix = process.env.AUDIT_RATE_LIMIT_KEY_PREFIX || 'pandacodegen:audit:v1';
+  const rules: RateLimitRule[] = [
+    {
+      key: `${prefix}:assistant:client:${hashedAuditClientIdentifier(request)}`,
+      name: 'client',
+      limit: 20,
+      windowMs: 10 * 60 * 1_000,
+    },
+    {
+      key: `${prefix}:assistant:global`,
+      name: 'global',
+      limit: 300,
+      windowMs: 24 * 60 * 60 * 1_000,
+    },
+  ];
+  try {
+    const { mode, redis } = selectMode();
+    if (mode === 'redis') return await applyRedisLimit(redis!, rules);
+  } catch (error) {
+    console.error(
+      'Assistant rate limiting fell back to memory:',
+      error instanceof Error ? error.message : error
+    );
+  }
+  return applyMemoryLimit(rules);
+}
+
 function pruneMemoryQuoteClaims(now: number): void {
   for (const [key, claim] of memoryQuoteClaims) {
     if (claim.expiresAt <= now) memoryQuoteClaims.delete(key);
