@@ -1,0 +1,21 @@
+{
+  "$schema": "https://unpkg.com/knip@6.45.1/schema.json",
+  "ignore": [
+    "scripts/assistant-eval.mjs",
+    "scripts/assistant-eval-hard.mjs",
+    "scripts/blog-photo-prompts.mjs",
+    "scripts/generate-google-ai-proof.mjs",
+    "scripts/generate-hero-grain.mjs",
+    "scripts/import-generated-blog-photo.mjs",
+    "scripts/stack-guide-covers.mjs",
+    "scripts/scan/**"
+  ],
+  "ignoreDependencies": [
+    "server-only",
+    "sharp"
+  ],
+  "ignoreExportsUsedInFile": true,
+  "rules": {
+    "duplicates": "warn"
+  }
+}

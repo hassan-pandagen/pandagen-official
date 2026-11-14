@@ -277,6 +277,7 @@ function search(query: string, k = 6): Passage[] {
 
 // passageCount and unresolvedPins have no caller in the site. They stay exported as
 // self-checks for the local assistant verification scripts (13 Oct 2026).
+/** @public Used by the local assistant verification scripts, which knip cannot see. */
 export function passageCount(): number {
   return getIndex().passages.length;
 }

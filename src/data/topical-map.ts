@@ -77,6 +77,7 @@ export interface Cluster {
 // ENTITIES: core entity model with attribute tiers
 // ─────────────────────────────────────────────────────────────────────────────
 
+/** @public The topical map itself: planning data that no page reads yet. */
 export const entities: Record<string, Entity> = {
   pandacodegen: {
     id: 'pandacodegen',
@@ -477,6 +478,7 @@ export const PRIMARY_HUB_OVERRIDE: Record<string, string> = {
 // Used to keep content authoring inside the topical border and avoid dilution.
 // ─────────────────────────────────────────────────────────────────────────────
 
+/** @public Planning data for content authoring; no page reads it. */
 export const topicalBoundary = {
   core: [
     'migrating off slow/templated platforms to custom Next.js',

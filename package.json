@@ -29,6 +29,7 @@
     "guard:descriptions": "python scripts/description_guard.py",
     "guard:all": "npm run guard:metrics && npm run guard:links && npm run guard:specs && npm run guard:glossary && npm run guard:unicode && npm run guard:retired && npm run guard:stamps && npm run guard:descriptions",
     "check": "npm run typecheck && npm run lint && npm test && npm run claims:check && npm run dates:check",
+    "deadcode": "npx --yes knip@6.45.1",
     "smoke:release": "node release-smoke.mjs",
     "seo:check": "node seo-audit.mjs",
     "schema:check": "node --test scripts/audit-structured-data.test.mjs && node scripts/audit-structured-data.mjs",
