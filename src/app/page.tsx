@@ -17,9 +17,11 @@ export const metadata: Metadata = {
   // price and "code you own", which the live description carried and this page's
   // body still says ("Custom builds from $1,500", "Code you own"). Both are back,
   // worded from COMMERCIAL in company-facts.ts. Keep it under about 155 characters.
-  title: "Custom Website Design & Development | PandaCodeGen",
+  // 14 Nov 2026, Imran's brief: title and description lead with business systems,
+  // then websites from $1,500. Clicks were all brand searches, so the risk is low.
+  title: "Websites & Business Systems | PandaCodeGen",
   description:
-    "Work directly with the founders on WordPress sites, custom websites, stores and migrations. Custom builds from $1,500. Code you own, price agreed upfront.",
+    "Websites and business systems built with the founders: portals, bookings, payments and admin workflows. Custom websites from $1,500. Code you own.",
   // Self-referencing canonical plus reciprocal hreflang to the French and
   // German versions of this page. x-default points at English.
   alternates: alternatesFor("home", "en"),
@@ -28,18 +30,18 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.pandacodegen.com",
     siteName: "PandaCodeGen",
-    title: "Custom Website Design & Development | PandaCodeGen",
+    title: "Websites & Business Systems | PandaCodeGen",
     description:
-      "Work directly with the founders on WordPress sites, custom websites, stores and migrations. Custom builds from $1,500. Code you own, price agreed upfront.",
+      "Websites and business systems built with the founders: portals, bookings, payments and admin workflows. Custom websites from $1,500. Code you own.",
     images: [
       ogImageForPath("/"),
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Website Design & Development | PandaCodeGen",
+    title: "Websites & Business Systems | PandaCodeGen",
     description:
-      "Work directly with the founders on WordPress sites, custom websites, stores and migrations. Custom builds from $1,500. Code you own, price agreed upfront.",
+      "Websites and business systems built with the founders: portals, bookings, payments and admin workflows. Custom websites from $1,500. Code you own.",
     images: [ogImageForPath("/")],
   },
 };
@@ -143,7 +145,7 @@ export default function Home() {
         citation: ["a-step-above-medical", "emblematic-studio", "mycustompatches", "ladies-4-jesus"].map(reviewCitation),
         "@id": "https://www.pandacodegen.com/#webpage",
         "url": "https://www.pandacodegen.com",
-        "name": "Custom Website Design & Development | PandaCodeGen",
+        "name": "Websites & Business Systems | PandaCodeGen",
         "description": ORGANIZATION_DESCRIPTION,
         "isPartOf": {
           "@id": "https://www.pandacodegen.com/#website"

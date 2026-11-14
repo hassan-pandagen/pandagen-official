@@ -3,8 +3,9 @@ import PriceAmount from "@/components/redesign/PriceAmount";
 import Image from "next/image";
 import Link from "next/link";
 import PreviewShell from "@/components/redesign/PreviewShell";
-import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import CalModalButton from "@/components/ui/CalModalButton";
+import { CAL_BOOKING_URL } from "@/lib/booking";
+import SystemProof from "@/components/redesign/SystemProof";
 import { monthly, monthlyAiAverage } from "@/data/ai-referral-facts";
 import PaperShader from "@/components/visual/PaperShader";
 import WorkIndex from "@/components/redesign/WorkIndex";
@@ -87,55 +88,50 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
       <section className="relative">
         <div className="relative mx-auto flex min-h-[calc(88svh-88px)] max-w-[1600px] flex-col justify-start gap-10 px-6 pb-16 pt-6 md:px-10 lg:pt-6">
           {/* The headline carries the page, as on grigoletti.ch: full width, huge.
-              Words unchanged from the live hero (positioning decision, 15 Sep). */}
+              14 Nov 2026, Imran's brief: the lead moves from websites to websites and
+              business systems, with A Step Above Medical as the proof. The small-website
+              offer stays, as the second option (the price line below the buttons). */}
           <h1
             className="hero-h1"
             style={{ fontFamily: "var(--display), Georgia, serif", fontWeight: condensed ? 400 : 700, color: INK, fontSize: "var(--hero-size)", lineHeight: "var(--hero-lh)", letterSpacing: "var(--hero-ls)" }}
           >
-            Websites built for the way you do <HeadingEmphasis text="business." phrase="business" />
+            Websites and business systems that cut <HeadingEmphasis text="manual work." phrase="manual work" />
           </h1>
 
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,.85fr)_minmax(0,1.15fr)] lg:gap-12 xl:gap-16">
             <div className="min-w-0">
               <p className="max-w-[34rem] text-[18px] leading-[1.55] md:text-[20px]" style={{ color: BODY }}>
-                Work with Hassan and Imran on a business website or online store your team can edit.
-                We can build on WordPress, create a custom site or improve what you already have.
-                You get an agreed price, written instructions and a live editing walkthrough.
+                Work directly with Hassan and Imran on a website, customer portal or connected workflow built
+                around your business. Bring bookings, payments and day-to-day admin together, with an agreed
+                scope, clear running costs and custom code you own.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <QuoteModalButton
-                  cta="preview_hero_talk"
+                <Link
+                  href="/work/a-step-above-medical"
                   className="cta-solid inline-flex items-center justify-center gap-3 bg-[#1C1917] px-6 py-4 text-[16px] font-medium text-white"
                 >
-                  <span className="flex -space-x-2" aria-hidden="true">
-                    <Image src="/team/hassan.png" alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-full object-cover ring-2 ring-white/40" />
-                    <Image src="/team/imran-editorial.png" alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-full object-cover ring-2 ring-white/40" />
-                  </span>
-                  Talk to the founders
-                </QuoteModalButton>
-                <Link
-                  href="/work"
-                  className="inline-flex items-center justify-center px-6 py-4 text-[16px] font-medium"
-                  style={{ color: INK, border: `1px solid ${INK}` }}
-                >
-                  See the work
+                  See the training system
                 </Link>
+                <CalModalButton
+                  fallbackHref={CAL_BOOKING_URL}
+                  className="inline-flex items-center justify-center gap-3 border border-[#1C1917] px-6 py-4 text-[16px] font-medium"
+                >
+                  <span className="flex -space-x-2" aria-hidden="true">
+                    <Image src="/team/hassan.png" alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-full object-cover ring-2 ring-[#EBE9E4]" />
+                    <Image src="/team/imran-editorial.png" alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-full object-cover ring-2 ring-[#EBE9E4]" />
+                  </span>
+                  <span style={{ color: INK }}>Book a 15-minute call</span>
+                </CalModalButton>
               </div>
               <p className="mt-6 text-[14px]" style={{ color: QUIET }}>
-                Custom builds from <PriceAmount value="$1,500" />. WordPress quoted to scope. Price agreed before work starts.
+                Fixed project scope · Founder-led delivery · No mandatory PandaCodeGen retainer
               </p>
-              {/* 13 Oct 2026, owner: a direct booking option beside the email form, and the
-                  AI-referral figure as proof. The figure is read from the same data file as
-                  the measurement post, rounded to whole dollars, with its window. */}
               <p className="mt-3 text-[14px]" style={{ color: QUIET }}>
-                Prefer to talk first?{" "}
-                <CalModalButton
-                  fallbackHref="https://cal.com/pandagen/discovery"
-                  className="font-medium underline underline-offset-4"
-                >
-                  <span style={{ color: ACCENT }}>Book a 15-minute call</span>
-                </CalModalButton>
+                Custom websites from <PriceAmount value="$1,500" />. WordPress quoted to scope.
               </p>
+              {/* 13 Oct 2026, owner: the AI-referral figure as proof. The figure is read
+                  from the same data file as the measurement post, rounded to whole dollars,
+                  with its window. */}
               <p className="mt-7 max-w-[34rem] text-[14px] leading-[1.6]" style={{ color: BODY }}>
                 {/* 27 Oct 2026: the monthly average replaces the March to August total here, as the
                     current figure. Both are in ai-referral-facts.ts and the article shows both. */}
@@ -157,17 +153,21 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
 
       </div>
 
-      <TickerBand />
-      <WorkIndex />
-      {/* Answer-first summary, unchanged in wording from the live page, where it
-          must stay in the first 30% for extraction (after Work it sits at ~22%). Restyled only. */}
-      <section data-home-summary className="relative px-6 pb-8 md:px-10 md:pb-16" style={{ backgroundColor: T.paper }}>
+      {/* 14 Nov 2026, Imran's brief: the A Step Above proof sits directly under the
+          hero, and the automation section follows it. */}
+      <SystemProof />
+      <FeaturesTrio />
+      {/* Answer-first summary; it must stay in the first 30% of the page for
+          extraction, so it sits straight after the automation section. Wording updated
+          14 Nov 2026 to match the new lead. */}
+      <section data-home-summary className="relative px-6 pb-8 pt-8 md:px-10 md:pb-16" style={{ backgroundColor: T.paper }}>
         <p
           className="mx-auto max-w-[44rem] text-[18px] leading-[1.65] md:pt-10"
           style={{ color: BODY }}
         >
           <strong style={{ color: INK }}>
-            PandaCodeGen designs and builds fast business websites and{" "}
+            PandaCodeGen builds websites and business systems: customer portals, online booking and payments,
+            and connected admin workflows. We also design fast business websites and{" "}
             <Link href="/services/ecommerce" className="underline underline-offset-4" style={{ color: ACCENT }}>
               online stores
             </Link>
@@ -184,11 +184,12 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
       </section>
       {/* 26 Oct 2026, owner-approved wording. "Services you hire us to deliver" keeps the
           promise to the scope bought: it doesn't say every plan covers every service. */}
+      <TickerBand />
+      <WorkIndex />
       <OneTeam />
       <ServicesStack />
       <ProofSection />
       <HowWeWork />
-      <FeaturesTrio />
       <PricingFinder />
       <ProcessSplit />
       <FoundersDark />

@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes: RouteConfig[] = [
     // 1. Core Business Pages
-    { path: '', changeFrequency: 'weekly', priority: 1.0 , lastModified: '2026-10-11' },
+    { path: '', changeFrequency: 'weekly', priority: 1.0 , lastModified: '2026-11-14' },
     { path: '/services', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-10-10' },
     { path: '/pricing', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-29' },
     { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },

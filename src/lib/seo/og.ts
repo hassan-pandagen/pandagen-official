@@ -30,9 +30,9 @@ const staticPages: Record<string, StaticOgContent> = {
     description: "A website your team can update, with a written quote and a live walkthrough. Work directly with the founders.",
   },
   "/": {
-    title: "Custom Website Design & Development",
+    title: "Websites & Business Systems",
     label: "PandaCodeGen",
-    description: "Custom business websites and online stores, built new or rebuilt, with a content editor your team runs and code you own.",
+    description: "Websites, customer portals and connected workflows that cut manual work, built with the founders. Code you own.",
   },
   "/about": {
     title: "The Engineers Behind the Build",
