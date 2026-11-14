@@ -17,47 +17,42 @@ import QuoteModalButton from "@/components/ui/QuoteModalButton";
 // fires the same analytics event as before: cta_click, start_discovery, process.
 // ─────────────────────────────────────────────────────────────────────────────
 
+// Plain business steps for new builds, connected systems and migrations.
 const steps = [
   {
-    title: "Discovery",
-    description:
-      "We inventory the current URLs, content, forms, analytics, integrations, and measurable baselines before recommending a migration scope.",
+    title: "Understand your business",
+    description: "We walk through what your customers and staff need to do, review your current site and tools, and agree what a successful project looks like.",
     list: [
-      ["URLs", "Mapped"],
-      ["Content", "Inventoried"],
-      ["Analytics", "Baselined"],
-      ["Integrations", "Reviewed"],
+      ["Your goals", "Agreed together"],
+      ["Current tools", "Reviewed"],
+      ["Content to keep", "Listed"],
     ],
   },
   {
-    title: "Architecture",
-    description:
-      "We document what should stay, move, integrate, or be replaced, along with dependencies, risks, acceptance criteria, and operating costs.",
+    title: "Agree the plan",
+    description: "You review the proposed layouts, what your team will be able to edit, and how the website connects to your other tools. We agree the scope, price and running costs before building.",
     list: [
-      ["CMS", "Keep or migrate"],
-      ["Forms", "Rebuild or connect"],
-      ["Analytics", "Preserve"],
-      ["Integrations", "Test"],
+      ["Page layouts", "For your approval"],
+      ["Features and connections", "Written into the scope"],
+      ["Build and running costs", "Explained upfront"],
     ],
   },
   {
-    title: "Build",
-    description:
-      "The new implementation is delivered in reviewable checkpoints so content, behavior, integrations, and edge cases can be validated before cutover.",
+    title: "Build and try it",
+    description: "See the work on a private preview as it takes shape. Your team tries the agreed tasks, such as editing a page, making a booking or processing an order, and we make the agreed fixes before launch.",
     list: [
-      ["Foundation", "Environment + structure"],
-      ["Migration", "Content + features"],
-      ["QA", "Review + fixes"],
+      ["Private preview", "Review the progress"],
+      ["Customer and staff tasks", "Tested together"],
+      ["Feedback", "Reviewed and addressed"],
     ],
   },
   {
-    title: "Launch",
-    description:
-      "Before cutover, we test redirects, forms, analytics, accessibility, metadata, monitoring, and the rollback path against the approved launch checklist.",
+    title: "Launch with confidence",
+    description: "We check the agreed pages, forms, payments and tracking, plus old links when you are moving sites. You get editor training and written instructions, and we agree the launch and recovery plan with you.",
     list: [
-      ["Redirects", "Old URL → target"],
-      ["Lead forms", "Validation → delivery"],
-      ["Analytics", "Rollback plan"],
+      ["Launch checks", "Completed before go-live"],
+      ["Your team", "Trained to make updates"],
+      ["Code and accounts", "Under your control"],
     ],
   },
 ];
@@ -76,17 +71,17 @@ export default function ProcessSplit() {
               <HeadingEmphasis text="From First Call to Launch." />
             </h2>
             <p className="mt-6 max-w-[26rem] text-[18px] leading-[1.6]" style={{ color: T.body }}>
-              Four reviewable stages, with the important decisions recorded before launch.
+              You know what happens next, what you need to review and what you will receive at each stage.
             </p>
             <QuoteModalButton
               cta="start_discovery"
               location="process"
               className="cta-solid mt-10 inline-flex items-center bg-[#1C1917] px-7 py-4 text-[17px] font-medium text-[#EBE9E4]"
             >
-              Start with Discovery
+              Talk through your project
             </QuoteModalButton>
             <p className="mt-3 text-[14px]" style={{ color: T.quiet }}>
-              Tell us your current platform, primary risk, and target timeline.
+              Tell us what you want to improve and when you would like it ready.
             </p>
           </div>
         </div>

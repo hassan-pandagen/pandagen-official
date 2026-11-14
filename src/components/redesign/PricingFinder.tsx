@@ -36,8 +36,8 @@ export default function PricingFinder() {
         </h2>
         <div className="md:col-span-6 md:col-start-6">
           <p className="max-w-[36rem] text-[18px] leading-[1.6]" style={{ color: T.body }}>
-            Custom websites start at <PriceAmount value="$1,500" />. WordPress builds are quoted to scope. Your proposal names the pages,
-            features, connections and final price before work starts.
+            Custom websites start at <PriceAmount value="$1,500" />. WordPress builds, customer portals and connected business systems
+            are quoted to their agreed scope. Your proposal names the pages, features, connections and final price before work starts.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link href="/pricing" className="cta-solid inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[16px] font-medium" style={{ backgroundColor: T.ink, color: T.paper }}>

@@ -68,7 +68,7 @@ const services: Service[] = [
   {
     title: "Search & AI Foundations",
     body: "Pages that ChatGPT, Claude and Perplexity can actually read: a business described the same way everywhere, structured data that matches what visitors see, and claims backed by a source. We cannot guarantee a citation.",
-    link: { label: "Review delivery standards", href: "/about" },
+    link: { label: "Explore search and AI visibility", href: "/services/ai-seo" },
   },
   {
     title: "Faster E-commerce",
@@ -164,7 +164,7 @@ export default function ServicesStack() {
           className="max-w-[32ch]"
           style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2.6rem, 4.6vw, 4.4rem)", lineHeight: 1.1, letterSpacing: "-0.02em", paddingBottom: "0.08em" }}
         >
-          Engineered around how your <HeadingEmphasis text="business runs," onDark /> and what can break.
+          Websites, systems and support for <HeadingEmphasis text="the way you work." onDark />
         </h2>
 
         {/* One grid: see the note at the top of the file. */}

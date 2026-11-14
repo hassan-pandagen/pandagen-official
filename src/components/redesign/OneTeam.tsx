@@ -17,9 +17,9 @@ export default function OneTeam() {
               One team.<br /><span style={{ color: T.accentText }}>One place to turn.</span>
             </h2>
             <div className={styles.summary} style={{ fontFamily: BODY }}>
-              <p className={styles.lead}>Your website should do more than look good.</p>
-              <p>It should bring in enquiries, connect customers to your team and keep work moving behind the scenes.</p>
-              <p>We build your website, backend and marketing connections around that journey, so you spend less time joining the pieces together.</p>
+              <p className={styles.lead}>Work with the people doing the work.</p>
+              <p>Hassan and Imran stay your contacts from the first conversation to launch and the next update.</p>
+              <p>Bring us the question or the problem. We explain the next step and coordinate with your other providers when needed, for the services you hire us to deliver.</p>
             </div>
           </div>
           <div className={styles.visual}>

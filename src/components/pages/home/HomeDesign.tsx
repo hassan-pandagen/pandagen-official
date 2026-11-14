@@ -6,6 +6,7 @@ import PreviewShell from "@/components/redesign/PreviewShell";
 import CalModalButton from "@/components/ui/CalModalButton";
 import { CAL_BOOKING_URL } from "@/lib/booking";
 import SystemProof from "@/components/redesign/SystemProof";
+import BusinessSummary from "@/components/redesign/BusinessSummary";
 import { monthly, monthlyAiAverage } from "@/data/ai-referral-facts";
 import PaperShader from "@/components/visual/PaperShader";
 import WorkIndex from "@/components/redesign/WorkIndex";
@@ -86,7 +87,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
         />
 
       <section className="relative">
-        <div className="relative mx-auto flex min-h-[calc(88svh-88px)] max-w-[1600px] flex-col justify-start gap-10 px-6 pb-16 pt-6 md:px-10 lg:pt-6">
+        <div className="relative mx-auto flex max-w-[1600px] flex-col justify-start gap-10 px-6 pb-6 pt-6 md:px-10 md:pb-8 lg:pt-6">
           {/* The headline carries the page, as on grigoletti.ch: full width, huge.
               14 Nov 2026, Imran's brief: the lead moves from websites to websites and
               business systems, with A Step Above Medical as the proof. The small-website
@@ -160,28 +161,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
       {/* Answer-first summary; it must stay in the first 30% of the page for
           extraction, so it sits straight after the automation section. Wording updated
           14 Nov 2026 to match the new lead. */}
-      <section data-home-summary className="relative px-6 pb-8 pt-8 md:px-10 md:pb-16" style={{ backgroundColor: T.paper }}>
-        <p
-          className="mx-auto max-w-[44rem] text-[18px] leading-[1.65] md:pt-10"
-          style={{ color: BODY }}
-        >
-          <strong style={{ color: INK }}>
-            PandaCodeGen builds websites and business systems: customer portals, online booking and payments,
-            and connected admin workflows. We also design fast business websites and{" "}
-            <Link href="/services/ecommerce" className="underline underline-offset-4" style={{ color: ACCENT }}>
-              online stores
-            </Link>
-            .
-          </strong>{" "}
-          We create new websites and redesign or rebuild existing sites around how your business works. When a
-          project needs a{" "}
-          <Link href="/services" className="underline underline-offset-4" style={{ color: ACCENT }}>
-            migration
-          </Link>
-          , we plan how your content, URLs and integrations carry across. You get a content editor, training and
-          code you own.
-        </p>
-      </section>
+      <BusinessSummary />
       {/* 26 Oct 2026, owner-approved wording. "Services you hire us to deliver" keeps the
           promise to the scope bought: it doesn't say every plan covers every service. */}
       <TickerBand />
