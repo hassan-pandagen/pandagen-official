@@ -1,11 +1,12 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { CheckCircle2, Send } from "lucide-react";
 import CalModalButton from "@/components/ui/CalModalButton";
 import { PHONE } from "@/data/company-facts";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
+import { useSubmission } from "@/hooks/useSubmission";
 import { submitQuoteLead } from "@/lib/forms/submitQuoteLead";
 import type { LeadFormCopy } from "@/lib/i18n/dictionaries/types";
 
@@ -55,9 +56,9 @@ export default function HeroLeadForm({
   copy?: LeadFormCopy;
   locale?: string;
 }) {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const submission = useSubmission();
+  const isSubmitted = submission.status === "sent";
+  const isLoading = submission.status === "sending";
   const formLoadedAtRef = useRef(0);
 
   const formFunnel = useLeadFormFunnel({
@@ -73,14 +74,15 @@ export default function HeroLeadForm({
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    // A second click or Enter while the first request runs does nothing (14 Nov 2026).
+    const attempt = submission.start();
+    if (attempt === null) return;
     formFunnel.markSubmitAttempt();
-    setIsLoading(true);
-    setError(null);
 
     const formData = new FormData(event.currentTarget);
     if (formData.get("website_url_confirm")) {
       formFunnel.markIgnored();
-      setIsSubmitted(true);
+      submission.succeed(attempt);
       return;
     }
     try {
@@ -93,11 +95,10 @@ export default function HeroLeadForm({
         locale,
       });
       formFunnel.markSubmitted();
-      setIsSubmitted(true);
+      submission.succeed(attempt);
     } catch (submissionError) {
       formFunnel.markSubmitError("network_or_server");
-      setError(submissionError instanceof Error ? submissionError.message : copy.errorFallback);
-      setIsLoading(false);
+      submission.fail(attempt, submissionError instanceof Error ? submissionError.message : copy.errorFallback);
     }
   };
 
@@ -196,9 +197,9 @@ export default function HeroLeadForm({
                 <input id="hero-website-confirm" name="website_url_confirm" tabIndex={-1} autoComplete="off" />
               </div>
 
-              {error ? (
+              {submission.error ? (
                 <p role="alert" className="text-sm font-semibold text-red-700">
-                  {error}
+                  {submission.error}
                 </p>
               ) : null}
 

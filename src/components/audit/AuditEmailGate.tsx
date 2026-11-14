@@ -7,6 +7,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { trackFBEvent } from "@/components/FacebookPixel";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
+import { useSubmission } from "@/hooks/useSubmission";
 import type { PageSpeedResult } from "@/lib/audit/pagespeed";
 import { safeAuditAnalyticsSummary } from "@/lib/audit/analyticsSummary";
 
@@ -19,7 +20,12 @@ interface AuditEmailGateProps {
   action?: 'report' | 'review';
   platform?: string;
   goal?: string;
-  onDelivered?: () => void;
+  /**
+   * Called with the request that was delivered. 14 Nov 2026: it carries the action because the
+   * visitor may have closed the pop-up (and the parent cleared its own `action`) before the
+   * server answered. The one-time token is spent either way, so the button must still change.
+   */
+  onDelivered?: (delivered: 'report' | 'review') => void;
 }
 
 export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadToken, action = 'report', platform = '', goal = '', onDelivered }: AuditEmailGateProps) {
@@ -28,9 +34,11 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
   const [concern, setConcern] = useState("");
   const [pages, setPages] = useState("");
   const [dueAt, setDueAt] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const submission = useSubmission();
+  const isLoading = submission.status === "sending";
+  const isSubmitted = submission.status === "sent";
+  const error = submission.error || null;
+  const resetSubmission = submission.reset;
   const [honeypot, setHoneypot] = useState("");
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -40,14 +48,14 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
     active: isOpen && !isSubmitted,
   });
 
+  // 14 Nov 2026: the reset also makes any request still in flight stale, so its late answer
+  // cannot open this pop-up on the success screen the next time it is shown.
   const closeAndReset = useCallback(() => {
-    setIsSubmitted(false);
-    setIsLoading(false);
-    setError(null);
+    resetSubmission();
     setDueAt(null);
     setHoneypot("");
     onClose();
-  }, [onClose]);
+  }, [onClose, resetSubmission]);
 
   const hasDeep = auditData?.deepChecks && auditData.deepChecks.checks.length > 0;
   const failCount = hasDeep ? auditData!.deepChecks!.checks.filter(c => c.status === 'fail').length : (auditData?.criticalIssues ?? 0);
@@ -132,17 +140,16 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
     e.preventDefault();
     if (!email.trim() || !auditData || !leadToken) return;
 
+    const attempt = submission.start();
+    if (attempt === null) return;
+    const requested = action;
     formFunnel.markSubmitAttempt();
-
-    setIsLoading(true);
-    setError(null);
 
     // Honeypot is supplemental bot friction. Server-side one-time tokens and
     // durable quotas are the actual abuse controls.
     if (honeypot) {
       formFunnel.markIgnored();
-      setIsSubmitted(true);
-      setIsLoading(false);
+      submission.succeed(attempt);
       return;
     }
 
@@ -150,7 +157,7 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
       const response = await fetch("/api/audit/submit-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim(), leadToken, action, platform, goal, concern, pages }),
+        body: JSON.stringify({ email: email.trim(), leadToken, action: requested, platform, goal, concern, pages }),
       });
 
       if (!response.ok) {
@@ -164,26 +171,27 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
       }
 
       const receipt = await response.json();
-      setDueAt(typeof receipt.dueAt === 'string' ? receipt.dueAt : null);
-      onDelivered?.();
-      formFunnel.markSubmitted();
+      onDelivered?.(requested);
+      if (submission.isCurrent(attempt)) {
+        setDueAt(typeof receipt.dueAt === 'string' ? receipt.dueAt : null);
+        formFunnel.markSubmitted();
+      }
 
       trackFBEvent("Lead", {
-        content_name: action === "review" ? "Founder Review Request" : "Automated Website Audit Report",
+        content_name: requested === "review" ? "Founder Review Request" : "Automated Website Audit Report",
         content_category: "Audit Tool",
         value: 0,
         currency: "USD",
       });
 
       // Fire GA4 conversion event for the actual lead capture (bottom of funnel)
-      trackGAEvent("audit_lead_submit", { ...safeAuditAnalyticsSummary(auditData), lead_type: action });
+      trackGAEvent("audit_lead_submit", { ...safeAuditAnalyticsSummary(auditData), lead_type: requested });
 
-      setIsSubmitted(true);
-      setIsLoading(false);
+      submission.succeed(attempt);
     } catch (err) {
+      if (!submission.isCurrent(attempt)) return;
       formFunnel.markSubmitError("network_or_server");
-      setError(err instanceof Error ? err.message : "Something went wrong");
-      setIsLoading(false);
+      submission.fail(attempt, err instanceof Error ? err.message : "Something went wrong");
     }
   };
 

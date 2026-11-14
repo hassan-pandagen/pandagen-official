@@ -156,7 +156,7 @@ export default function AuditWidget() {
 
     </section>}
 
-    <AuditEmailGate isOpen={action !== null} onClose={() => setAction(null)} url={url} auditData={data} leadToken={tokens[action ?? "report"]} action={action ?? "report"} platform={platform} goal={goal} onDelivered={() => { if (action) setDelivered(previous => ({ ...previous, [action]: true })); }} />
+    <AuditEmailGate isOpen={action !== null} onClose={() => setAction(null)} url={url} auditData={data} leadToken={tokens[action ?? "report"]} action={action ?? "report"} platform={platform} goal={goal} onDelivered={(sent) => setDelivered(previous => ({ ...previous, [sent]: true }))} />
 
   </div>;
 

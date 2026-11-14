@@ -11,6 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
+import { useSubmission } from "@/hooks/useSubmission";
 import { submitQuoteLead } from "@/lib/forms/submitQuoteLead";
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
@@ -70,9 +71,9 @@ const contactSchema = {
 const GENERIC_ERROR = `We could not send your request. Please email info@pandacodegen.com or call ${PHONE.display}.`;
 
 export default function ContactPageClient() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [submitError, setSubmitError] = useState<string | null>(null);
+  const submission = useSubmission();
+  const isSubmitting = submission.status === "sending";
+  const isSuccess = submission.status === "sent";
   const [fieldErrors, setFieldErrors] = useState<{ name?: string; email?: string }>({});
   const formFunnel = useLeadFormFunnel({ formId: "contact_page", active: !isSuccess });
 
@@ -88,17 +89,18 @@ export default function ContactPageClient() {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    // A second click or Enter while the first request runs does nothing (14 Nov 2026).
+    const attempt = submission.start();
+    if (attempt === null) return;
     const form = event.currentTarget;
     const formData = new FormData(form);
     formFunnel.markSubmitAttempt();
-    setSubmitError(null);
 
     if (formData.get("website_url_confirm")) {
       formFunnel.markIgnored();
-      setIsSuccess(true);
+      submission.succeed(attempt);
       return;
     }
-    setIsSubmitting(true);
     try {
       // This form sent no attribution until 28 Aug 2026, no browser Lead until 22 Oct, and
       // no `quote_submit` or `locale` until 14 Nov. The shared sender now does all of it.
@@ -112,12 +114,10 @@ export default function ContactPageClient() {
       formFunnel.markSubmitted();
       form.reset();
       setFieldErrors({});
-      setIsSuccess(true);
+      submission.succeed(attempt);
     } catch (error) {
       formFunnel.markSubmitError("network_or_server");
-      setSubmitError(error instanceof Error ? error.message : "We could not send your request.");
-    } finally {
-      setIsSubmitting(false);
+      submission.fail(attempt, error instanceof Error ? error.message : GENERIC_ERROR);
     }
   };
 
@@ -200,8 +200,7 @@ export default function ContactPageClient() {
                   formFunnel.reset();
                   formLoadedAtRef.current = 0;
                   setFieldErrors({});
-                  setSubmitError(null);
-                  setIsSuccess(false);
+                  submission.reset();
                 }} className="mt-7 min-h-11 rounded-full border border-stone-300 px-5 py-3 text-sm font-semibold hover:border-cognac hover:text-cognac">
                   Send another message
                 </button>
@@ -249,7 +248,7 @@ export default function ContactPageClient() {
                     <label htmlFor="contact-website-confirm">Leave this field empty</label>
                     <input id="contact-website-confirm" name="website_url_confirm" tabIndex={-1} autoComplete="off" />
                   </div>
-                  {submitError && <div role="alert" className="rounded-xl border border-red-300 bg-red-50 p-4 text-sm text-red-800">{submitError}</div>}
+                  {submission.error && <div role="alert" className="rounded-xl border border-red-300 bg-red-50 p-4 text-sm text-red-800">{submission.error}</div>}
                   <div>
                     <button type="submit" disabled={isSubmitting} className="flex min-h-13 w-full items-center justify-center gap-2 rounded-full bg-charcoal px-5 py-4 text-base font-bold text-white transition-colors hover:bg-cognac focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac disabled:cursor-not-allowed disabled:opacity-60">
                       {isSubmitting ? "Sending…" : "Send your message"} <Send className="h-4 w-4" aria-hidden="true" />

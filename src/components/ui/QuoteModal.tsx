@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { CheckCircle2, Send, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
+import { useSubmission } from "@/hooks/useSubmission";
 import { submitQuoteLead } from "@/lib/forms/submitQuoteLead";
 import { takeQuotePrefill } from "@/lib/quotePrefill";
 import { PHONE } from "@/data/company-facts";
@@ -17,9 +18,14 @@ const GENERIC_ERROR = `We could not send your request. Please email info@pandaco
 
 export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   const prefersReducedMotion = useReducedMotion();
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  // 14 Nov 2026: one status, from the same hook as the other lead forms. Its reset replaces the
+  // session counter this modal kept, so an answer to a closed opening still cannot change a
+  // later one.
+  const submission = useSubmission();
+  const isSubmitted = submission.status === "sent";
+  const isLoading = submission.status === "sending";
+  const error = submission.error || null;
+  const resetSubmission = submission.reset;
   const [fieldErrors, setFieldErrors] = useState<{ name?: string; email?: string }>({});
   // Controlled so a surface that collected details before opening the modal --
   // the homepage quiz -- can put them in front of the visitor to edit, rather
@@ -32,7 +38,6 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   const returnFocusRef = useRef<HTMLElement | null>(null);
   const onCloseRef = useRef(onClose);
   const initializedOpenRef = useRef(false);
-  const sessionRef = useRef(0);
   const requestControllerRef = useRef<AbortController | null>(null);
   const formFunnel = useLeadFormFunnel({
     formId: "quote_modal",
@@ -45,18 +50,15 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
   const closeDialog = useCallback(() => {
     // Invalidate synchronously: an old response must not update a later opening.
-    sessionRef.current += 1;
+    resetSubmission();
     requestControllerRef.current?.abort();
     requestControllerRef.current = null;
     initializedOpenRef.current = false;
     formRef.current?.reset();
-    setIsSubmitted(false);
-    setIsLoading(false);
-    setError(null);
     setFieldErrors({});
     setDetails("");
     onCloseRef.current();
-  }, []);
+  }, [resetSubmission]);
 
   useEffect(() => {
     if (!isOpen) {
@@ -64,12 +66,9 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
       return;
     }
 
-    sessionRef.current += 1;
     if (!initializedOpenRef.current) {
       initializedOpenRef.current = true;
-      setIsSubmitted(false);
-      setIsLoading(false);
-      setError(null);
+      resetSubmission();
       setFieldErrors({});
       formRef.current?.reset();
       // Consume once per opening, including React's development effect replay.
@@ -126,7 +125,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
     document.addEventListener("keydown", handleKeyDown);
     return () => {
-      sessionRef.current += 1;
+      resetSubmission();
       requestControllerRef.current?.abort();
       requestControllerRef.current = null;
       cancelAnimationFrame(focusFrame);
@@ -142,7 +141,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
         if (target?.isConnected) target.focus();
       });
     };
-  }, [isOpen, closeDialog]);
+  }, [isOpen, closeDialog, resetSubmission]);
 
   const handleInvalidCapture = (event: React.FormEvent<HTMLFormElement>) => {
     formFunnel.onInvalidCapture(event);
@@ -161,19 +160,16 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (requestControllerRef.current) return;
+    const attempt = submission.start();
+    if (attempt === null) return;
     formFunnel.markSubmitAttempt();
-    setIsLoading(true);
-    setError(null);
 
     const formData = new FormData(event.currentTarget);
     if (formData.get("website_url_confirm")) {
       formFunnel.markIgnored();
-      setIsSubmitted(true);
-      setIsLoading(false);
+      submission.succeed(attempt);
       return;
     }
-    const requestSession = sessionRef.current;
     const controller = new AbortController();
     requestControllerRef.current = controller;
 
@@ -186,17 +182,16 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
         formLoadedAt: formLoadedAtRef.current,
         signal: controller.signal,
       });
-      if (controller.signal.aborted || requestSession !== sessionRef.current) return;
+      if (controller.signal.aborted || !submission.isCurrent(attempt)) return;
 
       formFunnel.markSubmitted();
-      setIsSubmitted(true);
+      submission.succeed(attempt);
     } catch (submissionError) {
-      if (controller.signal.aborted || requestSession !== sessionRef.current) return;
+      if (controller.signal.aborted || !submission.isCurrent(attempt)) return;
       formFunnel.markSubmitError("network_or_server");
-      setError(submissionError instanceof Error ? submissionError.message : "We could not send your request.");
+      submission.fail(attempt, submissionError instanceof Error ? submissionError.message : GENERIC_ERROR);
     } finally {
       if (requestControllerRef.current === controller) requestControllerRef.current = null;
-      if (requestSession === sessionRef.current) setIsLoading(false);
     }
   };
 
