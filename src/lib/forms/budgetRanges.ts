@@ -9,7 +9,7 @@
 // quoteRequest.ts directly, without the "@/" path alias.
 
 export const BUDGET_TIER_STARTS = { Starter: 1500, Growth: 3500, Scale: 5000 } as const;
-export const BUDGET_UPPER_BAND = 15000;
+const BUDGET_UPPER_BAND = 15000;
 
 const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
 const { Starter, Growth, Scale } = BUDGET_TIER_STARTS;

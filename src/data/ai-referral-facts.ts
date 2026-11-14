@@ -170,7 +170,6 @@ for (const m of monthly.months) {
 
 /** Mean monthly AI-attributed revenue across the stated average range. */
 export const monthlyAiAverage = averaged.reduce((n, m) => n + m.aiRevenueUsd, 0) / averaged.length;
-export const monthlyAiAverageMonths = averaged.length;
 export const monthlyAiRange = {
     low: Math.min(...averaged.map((m) => m.aiRevenueUsd)),
     high: Math.max(...averaged.map((m) => m.aiRevenueUsd)),

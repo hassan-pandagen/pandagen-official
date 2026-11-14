@@ -55,7 +55,7 @@ import type { NextRequest } from "next/server";
 // gemini-2.5-flash 1 wrong, gemini-2.5-flash-lite about 6, mistral-medium-3.5 5,
 // gpt-oss-120b 12, gpt-5.4-nano 13 (mostly promising outcomes). The free tier
 // limits each model's request rate, so requests take turns across three models
-// (see nextStart below), each with its own limit.
+// (the rotation was removed 14 Nov 2026, see callModel), each with its own limit.
 const MODELS = (process.env.ASSISTANT_MODELS || "claude-sonnet-5-5,claude-haiku-5-5")
   .split(",")
   .map((m) => m.trim())
@@ -230,8 +230,6 @@ interface ModelReply {
   model: string;
 }
 
-let nextStart = 0;
-
 function callModel(system: Anthropic.TextBlockParam[], turns: Turn[]): Promise<ModelReply> {
   return new Promise((resolve, reject) => {
     const controllers: AbortController[] = [];
@@ -247,9 +245,8 @@ function callModel(system: Anthropic.TextBlockParam[], turns: Turn[]): Promise<M
     // and all 3 wrong answers of 151 came from the third model, gemini-2.5-flash-lite.
     // 13 Nov 2026: on the Claude API the first model (Sonnet) answers every
     // request and the rest are fallbacks only, so there is no rotation.
-    const primary = 1;
-    const offset = nextStart++ % primary;
-    const models = [...base.slice(offset, primary), ...base.slice(0, offset), ...base.slice(primary)];
+    // 14 Nov 2026: the rotation code itself is gone; it always kept this order.
+    const models = base;
     const attempts = Math.max(models.length, ATTEMPTS);
 
     const launch = () => {

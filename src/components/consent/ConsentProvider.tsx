@@ -52,7 +52,6 @@ declare global {
   interface Window {
     __PCG_CONSENT__?: ConsentPreferences | null;
     __openCookiePreferences?: (reason?: ConsentPromptReason) => void;
-    __tawkOpenPending?: boolean;
   }
 }
 

@@ -59,10 +59,10 @@ export default function CookieConsent() {
 
   useEffect(() => {
     const sync = () => setChatOpen(
-      document.body.dataset.assistantChatOpen === "true" || document.body.dataset.tawkChatOpen === "true",
+      document.body.dataset.assistantChatOpen === "true",
     );
     const observer = new MutationObserver(sync);
-    observer.observe(document.body, { attributes: true, attributeFilter: ["data-assistant-chat-open", "data-tawk-chat-open"] });
+    observer.observe(document.body, { attributes: true, attributeFilter: ["data-assistant-chat-open"] });
     sync();
     return () => observer.disconnect();
   }, []);
