@@ -4,6 +4,8 @@ import {
 // @ts-expect-error -- Node's strip-only test runner requires the explicit
 // extension; the application is type-checked with noEmit and bundled by Next.
 } from "./budgetRanges.ts";
+// @ts-expect-error -- same as above: the explicit extension is for the node test runner.
+import { LEAD_SOURCES } from "./leadSources.ts";
 const MAX_QUOTE_REQUEST_BYTES = 128 * 1024;
 
 export class QuoteRequestError extends Error {
@@ -345,7 +347,7 @@ export function isQuoteFilledTooFast(formLoadedAt: number | null, now: number = 
   return elapsed < MIN_QUOTE_FILL_MS;
 }
 
-const TRACKING_SOURCES = new Set(["quote_modal", "contact_page", "hero_form", "assistant"]);
+const TRACKING_SOURCES = new Set<string>(LEAD_SOURCES);
 const EVENT_ID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 /** First value of a tracking field, trimmed; blank when missing, repeated, too long or odd. */

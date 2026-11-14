@@ -1,15 +1,12 @@
 "use client";
 
-import { getAttribution } from "@/lib/analytics/trafficSource";
-import { appendLeadTracking } from "@/lib/analytics/leadTracking";
-
 import { useRef, useState } from "react";
 import { CheckCircle2, Send } from "lucide-react";
 import CalModalButton from "@/components/ui/CalModalButton";
 import { PHONE } from "@/data/company-facts";
-import { trackFBEvent } from "@/components/FacebookPixel";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
+import { submitQuoteLead } from "@/lib/forms/submitQuoteLead";
 import type { LeadFormCopy } from "@/lib/i18n/dictionaries/types";
 
 const englishCopy: LeadFormCopy = {
@@ -36,16 +33,6 @@ const englishCopy: LeadFormCopy = {
   replyNote:
     "A founder replies, usually within one business day. Every message gets an answer, whether or not it turns into a quote.",
 };
-
-async function responseMessage(response: Response, fallback: string): Promise<string> {
-  try {
-    const body = (await response.json()) as { error?: unknown };
-    if (typeof body.error === "string" && body.error.trim()) return body.error;
-  } catch {
-    // A generic message is safer when an upstream proxy returns non-JSON.
-  }
-  return fallback;
-}
 
 /**
  * Inline hero lead capture. This slot previously mounted the audit widget, which
@@ -96,34 +83,16 @@ export default function HeroLeadForm({
       setIsSubmitted(true);
       return;
     }
-    if (formLoadedAtRef.current > 0) formData.append("_t", String(formLoadedAtRef.current));
-
     try {
-      const attribution = getAttribution();
-      formData.append("trafficSource", attribution.source);
-      formData.append("trafficMedium", attribution.medium);
-      if (attribution.campaign && attribution.campaign !== "none") {
-        formData.append("trafficCampaign", attribution.campaign);
-      }
-      if (attribution.landingPage) formData.append("landingPage", attribution.landingPage);
-      formData.append("submittedFrom", window.location.pathname);
-      // Tells the inbox which language to reply in. See ALLOWED_LOCALES.
-      formData.append("locale", locale);
-      if (attribution.firstVisit) formData.append("firstVisit", attribution.firstVisit);
-      // The same id goes to the server with the lead and to the Pixel below, so Meta counts it once.
-      const { eventId } = appendLeadTracking(formData, "hero_form");
-
-      const response = await fetch("/api/submit-quote", { method: "POST", body: formData });
-      if (!response.ok) throw new Error(await responseMessage(response, copy.errorFallback));
-
+      await submitQuoteLead(formData, {
+        source: "hero_form",
+        pixel: { content_name: "Homepage Hero Enquiry", content_category: "Contact Form" },
+        ga: { form: "hero_inline", locale },
+        fallbackError: copy.errorFallback,
+        formLoadedAt: formLoadedAtRef.current,
+        locale,
+      });
       formFunnel.markSubmitted();
-      trackFBEvent("Lead", {
-        content_name: "Homepage Hero Enquiry",
-        content_category: "Contact Form",
-        value: 0,
-        currency: "USD",
-      }, eventId);
-      trackGAEvent("quote_submit", { form: "hero_inline", locale });
       setIsSubmitted(true);
     } catch (submissionError) {
       formFunnel.markSubmitError("network_or_server");

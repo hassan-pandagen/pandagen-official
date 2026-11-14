@@ -11,9 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
-import { getAttribution } from "@/lib/analytics/trafficSource";
-import { appendLeadTracking } from "@/lib/analytics/leadTracking";
-import { trackFBEvent } from "@/components/FacebookPixel";
+import { submitQuoteLead } from "@/lib/forms/submitQuoteLead";
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 const platforms = [
@@ -69,15 +67,7 @@ const contactSchema = {
   ],
 };
 
-async function responseMessage(response: Response): Promise<string> {
-  try {
-    const body = await response.json() as { error?: unknown };
-    if (typeof body.error === "string" && body.error.trim()) return body.error;
-  } catch {
-    // A generic message is used for non-JSON proxy errors.
-  }
-  return `We could not send your request. Please email info@pandacodegen.com or call ${PHONE.display}.`;
-}
+const GENERIC_ERROR = `We could not send your request. Please email info@pandacodegen.com or call ${PHONE.display}.`;
 
 export default function ContactPageClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -108,37 +98,18 @@ export default function ContactPageClient() {
       setIsSuccess(true);
       return;
     }
-    if (formLoadedAtRef.current > 0) formData.append("_t", String(formLoadedAtRef.current));
-
     setIsSubmitting(true);
     try {
-      // This form sent no attribution at all until 28 Aug 2026, while the hero
-      // form and the quote modal both did. Every enquiry from the contact page,
-      // which is where the most considered ones arrive, was landing with no
-      // source, no landing page and no first-visit time.
-      const attribution = getAttribution();
-      formData.append("trafficSource", attribution.source);
-      formData.append("trafficMedium", attribution.medium);
-      if (attribution.campaign && attribution.campaign !== "none") {
-        formData.append("trafficCampaign", attribution.campaign);
-      }
-      if (attribution.landingPage) formData.append("landingPage", attribution.landingPage);
-      formData.append("submittedFrom", window.location.pathname);
-      if (attribution.firstVisit) formData.append("firstVisit", attribution.firstVisit);
-      // The same id goes to the server with the lead and to the Pixel below, so Meta counts it once.
-      const { eventId } = appendLeadTracking(formData, "contact_page");
-
-      const response = await fetch("/api/submit-quote", { method: "POST", body: formData });
-      if (!response.ok) throw new Error(await responseMessage(response));
+      // This form sent no attribution until 28 Aug 2026, no browser Lead until 22 Oct, and
+      // no `quote_submit` or `locale` until 14 Nov. The shared sender now does all of it.
+      await submitQuoteLead(formData, {
+        source: "contact_page",
+        pixel: { content_name: "Contact Page Enquiry", content_category: "Contact Form" },
+        ga: { form: "contact_page" },
+        fallbackError: GENERIC_ERROR,
+        formLoadedAt: formLoadedAtRef.current,
+      });
       formFunnel.markSubmitted();
-      // 22 Oct 2026: this form never fired the browser Lead, so Meta only ever saw leads from the
-      // modal, the homepage form and the assistant. Same shape as theirs.
-      trackFBEvent("Lead", {
-        content_name: "Contact Page Enquiry",
-        content_category: "Contact Form",
-        value: 0,
-        currency: "USD",
-      }, eventId);
       form.reset();
       setFieldErrors({});
       setIsSuccess(true);

@@ -104,8 +104,41 @@ test('calendar unmount during async initialization cannot leave a listener behin
   assert.equal(h.listeners.size, 0);
 });
 
+// Loads a TypeScript module the way the bundler would, with its imports replaced by `modules`.
+function loadModule(file, modules, globals = {}) {
+  const exports = {};
+  const output = ts.transpileModule(fs.readFileSync(file, 'utf8'), {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 },
+  }).outputText;
+  vm.runInNewContext(output, { ...globals, exports, require: name => { assert.ok(modules[name], name); return modules[name]; } });
+  return exports;
+}
+
+// The real shared lead sender (14 Nov 2026), with the real tracking and payload modules under it.
+// Only the network, consent, attribution and the analytics vendors are stubbed.
+function leadSender({ ok, events, requests }) {
+  const window = { location: { pathname: '/fr/contact' } };
+  const tracking = loadModule('src/lib/analytics/leadTracking.ts', {
+    '@/components/consent/ConsentProvider': { hasConsent: () => false },
+    '@/lib/analytics/clickIds': { readClickIds: () => ({}) },
+  }, { crypto: globalThis.crypto, document: { cookie: '' }, Uint8Array });
+  return loadModule('src/lib/forms/submitQuoteLead.ts', {
+    '@/components/FacebookPixel': { trackFBEvent: (...args) => events.push(['fb', ...args]) },
+    '@/components/GoogleAnalytics': { trackGAEvent: (...args) => events.push(args) },
+    '@/lib/analytics/leadTracking': tracking,
+    '@/lib/analytics/trafficSource': {
+      getAttribution: () => ({ source: 'Google', medium: 'organic', campaign: 'none', landingPage: '/blog/x', firstVisit: '2026-11-14T00:00:00.000Z' }),
+    },
+    '@/lib/forms/leadPayload': loadModule('src/lib/forms/leadPayload.ts', {}),
+    '@/lib/i18n/config': loadModule('src/lib/i18n/config.ts', {}),
+  }, {
+    window,
+    fetch: async (url, init) => { requests.push({ url, body: init.body }); return { ok, status: 500, json: async () => ({}) }; },
+  }).submitQuoteLead;
+}
+
 for (const method of ['captureLead', 'submitLead']) {
-  test(`${method} sends one lead only on API success, never on failure`, async () => {
+  test(`${method} sends one tracked lead and fires analytics only on API success`, async () => {
     const source = fs.readFileSync('src/components/assistant/AskAssistant.tsx', 'utf8');
     const ast = ts.createSourceFile('assistant.tsx', source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
     let fn;
@@ -117,22 +150,41 @@ for (const method of ['captureLead', 'submitLead']) {
     assert.ok(fn);
     for (const ok of [true, false]) {
       const events = [];
-      class FakeFormData { append() {} get(key) { return key === 'email' ? 'test@example.com' : ''; } }
+      const requests = [];
+      class TestFormData extends FormData {
+        constructor() { super(); this.set('email', 'test@example.com'); }
+      }
       const noop = () => {};
       const context = {
-        FormData: FakeFormData, messages: [], panelOpenedAt: { current: 1 }, leadLoadedAt: { current: 1 }, leadState: 'idle',
+        FormData: TestFormData, messages: [], panelOpenedAt: { current: 1 }, leadLoadedAt: { current: 1 }, leadState: 'idle',
         setPanelInput: noop, setMessages: noop, setLoading: noop, setLeadSent: noop, setLeadState: noop, setLeadError: noop,
-        getAttribution: () => ({}), appendLeadTracking: () => ({ eventId: 'test' }),
-        window: { location: { pathname: '/' } }, sessionStorage: { setItem: noop },
+        sessionStorage: { setItem: noop }, Date,
         LEAD_STORE: 'test', LEAD_THANKS: 'thanks', LEAD_FAILED: 'failed', mirror: noop,
-        fetch: async () => ({ ok, status: 500, json: async () => ({}) }), trackFBEvent: noop,
+        submitQuoteLead: leadSender({ ok, events, requests }),
         trackGAEvent: (...args) => events.push(args),
       };
       vm.createContext(context);
       vm.runInContext(ts.transpileModule(fn, { compilerOptions: { target: ts.ScriptTarget.ES2020 } }).outputText, context);
       if (method === 'captureLead') await context[method]('test', { email: 'test@example.com' });
       else await context[method]({ preventDefault: noop, currentTarget: {} });
+
+      assert.equal(requests.length, 1);
+      assert.equal(requests[0].url, '/api/submit-quote');
+      const body = requests[0].body;
+      // Without these two the CRM drops the lead (buildIngestPayload in src/lib/crm/forwardLead.ts).
+      assert.equal(body.get('leadSource'), 'assistant');
+      assert.match(body.get('eventId'), /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/);
+      assert.equal(body.get('trafficSource'), 'Google');
+      assert.equal(body.get('trafficCampaign'), null, 'a campaign of "none" is left out');
+      assert.equal(body.get('submittedFrom'), '/fr/contact');
+      assert.equal(body.get('locale'), 'fr');
+      assert.equal(body.get('_t'), '1');
+
       assert.equal(events.filter(event => event[0] === 'generate_lead').length, ok ? 1 : 0);
+      assert.equal(events.filter(event => event[0] === 'quote_submit').length, ok ? 1 : 0);
+      const pixel = events.filter(event => event[0] === 'fb');
+      assert.equal(pixel.length, ok ? 1 : 0);
+      if (ok) assert.equal(pixel[0][3], body.get('eventId'), 'the Pixel and the CRM share one event id');
       assert.ok(!JSON.stringify(events).includes('test@example.com'));
     }
   });

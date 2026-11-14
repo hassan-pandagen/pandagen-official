@@ -1,14 +1,10 @@
 "use client";
 
-import { getAttribution } from "@/lib/analytics/trafficSource";
-import { appendLeadTracking } from "@/lib/analytics/leadTracking";
-
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { CheckCircle2, Send, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { trackFBEvent } from "@/components/FacebookPixel";
-import { trackGAEvent } from "@/components/GoogleAnalytics";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
+import { submitQuoteLead } from "@/lib/forms/submitQuoteLead";
 import { takeQuotePrefill } from "@/lib/quotePrefill";
 import { PHONE } from "@/data/company-facts";
 
@@ -17,15 +13,7 @@ interface QuoteModalProps {
   onClose: () => void;
 }
 
-async function responseMessage(response: Response): Promise<string> {
-  try {
-    const body = await response.json() as { error?: unknown };
-    if (typeof body.error === "string" && body.error.trim()) return body.error;
-  } catch {
-    // A generic message is safer when an upstream proxy returns non-JSON.
-  }
-  return `We could not send your request. Please email info@pandacodegen.com or call ${PHONE.display}.`;
-}
+const GENERIC_ERROR = `We could not send your request. Please email info@pandacodegen.com or call ${PHONE.display}.`;
 
 export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   const prefersReducedMotion = useReducedMotion();
@@ -185,39 +173,22 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
       setIsLoading(false);
       return;
     }
-    if (formLoadedAtRef.current > 0) formData.append("_t", String(formLoadedAtRef.current));
-
     const requestSession = sessionRef.current;
     const controller = new AbortController();
     requestControllerRef.current = controller;
 
     try {
-      const attribution = getAttribution();
-      formData.append("trafficSource", attribution.source);
-      formData.append("trafficMedium", attribution.medium);
-      if (attribution.campaign && attribution.campaign !== "none") {
-        formData.append("trafficCampaign", attribution.campaign);
-      }
-      if (attribution.landingPage) formData.append("landingPage", attribution.landingPage);
-      formData.append("submittedFrom", window.location.pathname);
-      if (attribution.firstVisit) formData.append("firstVisit", attribution.firstVisit);
-      // The same id goes to the server with the lead and to the Pixel below, so Meta counts it once.
-      const { eventId } = appendLeadTracking(formData, "quote_modal");
-
-      const response = await fetch("/api/submit-quote", { method: "POST", body: formData, signal: controller.signal });
+      await submitQuoteLead(formData, {
+        source: "quote_modal",
+        pixel: { content_name: "Quote Request", content_category: "Contact Form" },
+        ga: { form: "quote_modal" },
+        fallbackError: GENERIC_ERROR,
+        formLoadedAt: formLoadedAtRef.current,
+        signal: controller.signal,
+      });
       if (controller.signal.aborted || requestSession !== sessionRef.current) return;
-      if (!response.ok) throw new Error(await responseMessage(response));
 
       formFunnel.markSubmitted();
-      trackFBEvent("Lead", {
-        content_name: "Quote Request",
-        content_category: "Contact Form",
-        value: 0,
-        currency: "USD",
-      }, eventId);
-      trackGAEvent("quote_submit", {
-        form: "quote_modal",
-      });
       setIsSubmitted(true);
     } catch (submissionError) {
       if (controller.signal.aborted || requestSession !== sessionRef.current) return;

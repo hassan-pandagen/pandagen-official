@@ -1,4 +1,6 @@
 import { createHmac } from "node:crypto";
+// @ts-expect-error -- node tests load .ts files directly, so the extension stays (TS5097).
+import { LEAD_SOURCES } from "../forms/leadSources.ts";
 
 /**
  * Sends a submitted lead to the CRM (crm.pandacodegen.com, POST /api/ingest/lead).
@@ -72,7 +74,7 @@ export interface LeadForwardInput {
 
 export type ForwardResult = "sent" | "skipped" | "failed";
 
-const CRM_SOURCES = new Set(["quote_modal", "contact_page", "hero_form", "assistant"]);
+const CRM_SOURCES = new Set<string>(LEAD_SOURCES);
 
 /** Keeps only non-empty strings, so the CRM never stores blank answers. */
 function present(entries: Record<string, string>): Record<string, string> {

@@ -10,10 +10,8 @@ import { setQuotePrefill } from "@/lib/quotePrefill";
 import { T } from "@/components/redesign/tokens";
 import CalModalButton from "@/components/ui/CalModalButton";
 import { PHONE } from "@/data/company-facts";
-import { getAttribution } from "@/lib/analytics/trafficSource";
-import { appendLeadTracking } from "@/lib/analytics/leadTracking";
-import { trackFBEvent } from "@/components/FacebookPixel";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
+import { submitQuoteLead } from "@/lib/forms/submitQuoteLead";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // The site-wide assistant, also opened by the homepage inline prompt.
@@ -559,21 +557,15 @@ export default function AskAssistant() {
         .filter(Boolean)
         .join("\n\n"),
     );
-    formData.append("_t", String(panelOpenedAt.current || Date.now() - 60_000));
-    const attribution = getAttribution();
-    formData.append("trafficSource", attribution.source);
-    formData.append("trafficMedium", attribution.medium);
-    if (attribution.campaign && attribution.campaign !== "none") formData.append("trafficCampaign", attribution.campaign);
-    if (attribution.landingPage) formData.append("landingPage", attribution.landingPage);
-    formData.append("submittedFrom", window.location.pathname);
-    if (attribution.firstVisit) formData.append("firstVisit", attribution.firstVisit);
-    const { eventId } = appendLeadTracking(formData, "assistant");
     let reply = LEAD_THANKS;
     try {
-      const res = await fetch("/api/submit-quote", { method: "POST", body: formData });
-      if (!res.ok) throw new Error(String(res.status));
-      trackFBEvent("Lead", { content_name: "Quote Request", content_category: "Assistant Chat", value: 0, currency: "USD" }, eventId);
-      trackGAEvent("quote_submit", { form: "assistant_chat_message" });
+      await submitQuoteLead(formData, {
+        source: "assistant",
+        pixel: { content_name: "Quote Request", content_category: "Assistant Chat" },
+        ga: { form: "assistant_chat_message" },
+        fallbackError: LEAD_FAILED,
+        formLoadedAt: panelOpenedAt.current || Date.now() - 60_000,
+      });
       trackGAEvent("generate_lead", { form_id: "assistant_chat_message", lead_source: "website_assistant" });
       setLeadSent(true);
       try {
@@ -649,24 +641,18 @@ export default function AskAssistant() {
     }
     const lines = messages.filter((m) => m.role === "user").map((m) => `- ${m.content}`);
     formData.append("details", `From my conversation with the website assistant:\n${lines.join("\n")}`);
-    if (leadLoadedAt.current > 0) formData.append("_t", String(leadLoadedAt.current));
-    const attribution = getAttribution();
-    formData.append("trafficSource", attribution.source);
-    formData.append("trafficMedium", attribution.medium);
-    if (attribution.campaign && attribution.campaign !== "none") formData.append("trafficCampaign", attribution.campaign);
-    if (attribution.landingPage) formData.append("landingPage", attribution.landingPage);
-    formData.append("submittedFrom", window.location.pathname);
-    if (attribution.firstVisit) formData.append("firstVisit", attribution.firstVisit);
     setLeadState("sending");
     setLeadError("");
     try {
-      const res = await fetch("/api/submit-quote", { method: "POST", body: formData });
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        throw new Error(typeof data?.error === "string" ? data.error : "Something went wrong.");
-      }
-      trackFBEvent("Lead", { content_name: "Quote Request", content_category: "Assistant Chat", value: 0, currency: "USD" });
-      trackGAEvent("quote_submit", { form: "assistant_chat" });
+      // 14 Nov 2026: this form sent no event id or source, so the CRM dropped every lead
+      // from it (the email still went out). The shared sender adds both.
+      await submitQuoteLead(formData, {
+        source: "assistant",
+        pixel: { content_name: "Quote Request", content_category: "Assistant Chat" },
+        ga: { form: "assistant_chat" },
+        fallbackError: "Something went wrong.",
+        formLoadedAt: leadLoadedAt.current,
+      });
       trackGAEvent("generate_lead", { form_id: "assistant_chat", lead_source: "website_assistant" });
       setLeadState("sent");
     } catch (err) {

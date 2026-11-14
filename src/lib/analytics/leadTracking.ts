@@ -15,7 +15,9 @@ import { readClickIds } from "@/lib/analytics/clickIds";
  * from it, the visitor's country and Global Privacy Control whether anything may be sent.
  */
 
-export type LeadSource = "quote_modal" | "contact_page" | "hero_form" | "assistant";
+import type { LeadSource } from "@/lib/forms/leadSources";
+
+export type { LeadSource };
 
 function newEventId(): string {
   try {
