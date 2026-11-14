@@ -85,7 +85,7 @@ export function WorkPreview() {
           </div>
           <div className={styles.closingActions}>
             <QuoteModalButton cta="work_index_talk" location="work" className={styles.primary}>
-              Discuss your project <ArrowRight size={18} aria-hidden="true" />
+              Talk to the founders <ArrowRight size={18} aria-hidden="true" />
             </QuoteModalButton>
             <Link href="/services" className={styles.secondary}>Explore services <ArrowUpRight size={18} aria-hidden="true" /></Link>
           </div>

@@ -133,7 +133,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
                   fallbackHref="https://cal.com/pandagen/discovery"
                   className="font-medium underline underline-offset-4"
                 >
-                  <span style={{ color: ACCENT }}>Book a free 15-minute call</span>
+                  <span style={{ color: ACCENT }}>Book a 15-minute call</span>
                 </CalModalButton>
               </p>
               <p className="mt-7 max-w-[34rem] text-[14px] leading-[1.6]" style={{ color: BODY }}>

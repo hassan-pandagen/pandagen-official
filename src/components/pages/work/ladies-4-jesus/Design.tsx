@@ -122,7 +122,7 @@ export function Ladies4JesusCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFa
               location="work_ladies_4_jesus"
               className="cta-solid inline-flex items-center justify-center gap-2 bg-[#EBE9E4] px-6 py-3.5 text-[15px] font-medium text-[#1C1917]"
             >
-              Discuss your project <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              Talk to the founders <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </QuoteModalButton>
             <Link href="/services/wordpress-migration" className="text-[14px] font-medium underline underline-offset-4" style={{ color: T.onDarkQuiet }}>
               Explore WordPress migration services

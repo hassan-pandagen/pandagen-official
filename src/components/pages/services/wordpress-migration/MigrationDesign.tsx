@@ -97,7 +97,7 @@ export function WordPressMigrationPreview() {
         <div><p className={`${s.eyebrow} ${v.eyebrow}`}>WordPress to Next.js migration</p><h1 className={v.heroTitle}><span className={v.heroTitleFirst}>Move from WordPress to Next.js.</span>{" "}<span style={{ color: "#1c1917" }}><HeadingEmphasis text="Keep what works." phrase="Keep" /></span></h1><p className={v.heroLead}>Thinking of moving your WordPress site to Next.js? Tell Hassan what the site needs to do. We&apos;ll explain what can move as it is, what needs rebuilding, and how your team will edit it after launch. Only need a WordPress site built or fixed? <Link href="/services/wordpress">See WordPress websites</Link>.</p><ServiceHeroActions
           cta="wp_preview_hero"
           location="wordpress_migration"
-          enquiryLabel="Discuss your website"
+          enquiryLabel="Talk to the founders"
           workHref="#client-work"
         /></div>
         <div className={v.browser}><div className={v.browserBar}><span className={v.dots} aria-hidden="true"><i/><i/><i/></span><span>Completed client work / Ladies 4 Jesus</span></div><EditorScreenshot notes={false} src="/work/ladies-4-jesus.png" alt="Ladies 4 Jesus community homepage after its WordPress rebuild" width={1912} height={914} sizes="(min-width: 901px) 50vw, 100vw" priority /><p className={v.browserCaption}>A WordPress community site rebuilt for owner-managed publishing and moderated submissions. <Link href="/work/ladies-4-jesus">See the case study ↗</Link></p><ServicePreviewEnlarge src="/work/ladies-4-jesus.png" alt="Ladies 4 Jesus community homepage after its WordPress rebuild" /></div>
@@ -144,7 +144,7 @@ export function WordPressMigrationPreview() {
     </div></section>
 
     <section className={`${s.section} ${s.sectionDark}`}><div className={s.wrap}>
-      <div className={v.scopeGrid}><div><p className={`${s.eyebrow} ${v.eyebrow}`}>05 / Starting price</p><p className={v.scopePrice}><PriceAmount value="$1,500" onDark /></p><p className={v.scopeQualifier}>Starter scope, up to 7 pages. More content or integrations change the quote.</p></div><div><h2 className={v.scopeTitle}>Know the scope.{" "}<br /><span><HeadingEmphasis text="Own the result." phrase="Own" onDark /></span></h2><p className={v.scopeCopy}>Your quote names the pages, content responsibilities, redirects, checks, ownership and third-party costs. You know the price and dates before work begins.</p><div className={s.heroActions}><Link href="/pricing" className={s.buttonLight}>Explore all starting scopes ↗</Link><QuoteModalButton cta="wp_preview_scope" location="wordpress_migration" className={s.buttonLight}>Discuss your site ↗</QuoteModalButton></div></div></div>
+      <div className={v.scopeGrid}><div><p className={`${s.eyebrow} ${v.eyebrow}`}>05 / Starting price</p><p className={v.scopePrice}><PriceAmount value="$1,500" onDark /></p><p className={v.scopeQualifier}>Starter scope, up to 7 pages. More content or integrations change the quote.</p></div><div><h2 className={v.scopeTitle}>Know the scope.{" "}<br /><span><HeadingEmphasis text="Own the result." phrase="Own" onDark /></span></h2><p className={v.scopeCopy}>Your quote names the pages, content responsibilities, redirects, checks, ownership and third-party costs. You know the price and dates before work begins.</p><div className={s.heroActions}><Link href="/pricing" className={s.buttonLight}>Explore all starting scopes ↗</Link><QuoteModalButton cta="wp_preview_scope" location="wordpress_migration" className={s.buttonLight}>Talk to the founders ↗</QuoteModalButton></div></div></div>
       <div className={v.scopeList}><div><b>01 / Written scope</b><p>The inventory, deliverables and exclusions are named.</p></div><div><b>02 / Handover check</b><p>{fact("Performance acceptance")}</p></div><div><b>03 / Your control</b><p>{fact("Ownership on handover")}</p></div></div>
     </div></section>
 
@@ -166,7 +166,7 @@ export function WordPressMigrationPreview() {
         <Link href="/blog/wordpress-traffic-drop-speed">Why WordPress traffic drops ↗</Link>
         <Link href="/blog/wordpress-ai-security-risk-2026">WordPress AI plugin security ↗</Link>
       </nav>
-      <div style={{ marginTop: 30 }}><QuoteModalButton cta="wp_preview_close" location="wordpress_migration" className={s.button}>Show us your current site ↗</QuoteModalButton></div>
+      <div style={{ marginTop: 30 }}><QuoteModalButton cta="wp_preview_close" location="wordpress_migration" className={s.button}>Talk to the founders ↗</QuoteModalButton></div>
     </div></section>
   </div></PreviewShell>;
 }

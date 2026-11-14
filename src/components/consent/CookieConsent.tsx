@@ -5,6 +5,7 @@ import { Cookie, X } from "lucide-react";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { useConsent } from "./ConsentProvider";
+import { CAL_BOOKING_URL } from "@/lib/booking";
 
 interface DraftChoices {
   analytics: boolean;
@@ -133,9 +134,17 @@ export default function CookieConsent() {
     rejectOptional();
   };
 
+  // 14 Nov 2026 (Imran's brief): a visitor who keeps scheduling off still needs a
+  // way to book or write to us. Both options below load nothing on our site.
+  const leaveForContactForm = () => {
+    window.__calOpenPending = false;
+    closeDialog();
+    window.dispatchEvent(new Event("open-quote-modal"));
+  };
+
   const reasonCopy =
     promptReason === "calendar"
-      ? "The booking calendar connects to Cal.com. Allow Scheduling to load it."
+      ? "The booking calendar connects to Cal.com. Allow Scheduling to load it here, or use one of the options below without changing your cookies."
       : "Choose which optional services may load. You can change or withdraw your choice at any time.";
 
   if (!ready) return null;
@@ -282,6 +291,32 @@ export default function CookieConsent() {
               >
                 Allow scheduling
               </button>
+              {promptReason === "calendar" && (
+                <div className="mt-4 border-t border-cognac/20 pt-4">
+                  <p className="text-sm text-stone-700">Prefer to keep scheduling off?</p>
+                  <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+                    <a
+                      href={CAL_BOOKING_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => {
+                        window.__calOpenPending = false;
+                        closeDialog();
+                      }}
+                      className="inline-flex min-h-11 items-center justify-center rounded-full border border-stone-300 bg-white px-5 py-2.5 text-sm font-bold text-charcoal hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
+                    >
+                      Open booking page in a new tab
+                    </a>
+                    <button
+                      type="button"
+                      onClick={leaveForContactForm}
+                      className="min-h-11 rounded-full border border-stone-300 bg-white px-5 py-2.5 text-sm font-bold text-charcoal hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
+                    >
+                      Send us a message
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           )}
 

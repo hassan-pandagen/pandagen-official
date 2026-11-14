@@ -3,13 +3,7 @@
 import { useEffect, useRef } from "react";
 import { hasConsent, useConsent } from "@/components/consent/ConsentProvider";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
-
-const CAL_LINK = (() => {
-  const candidate = process.env.NEXT_PUBLIC_CAL_LINK?.trim();
-  return candidate && /^[a-z0-9][a-z0-9_-]*\/[a-z0-9][a-z0-9_-]*$/i.test(candidate)
-    ? candidate
-    : "pandagen/discovery";
-})();
+import { CAL_LINK } from "@/lib/booking";
 
 export default function CalEmbed() {
   const { preferences, openPreferences } = useConsent();

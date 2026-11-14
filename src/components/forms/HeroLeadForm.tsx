@@ -30,7 +30,7 @@ const englishCopy: LeadFormCopy = {
   successBody: "Hassan or Imran will reply from info@pandacodegen.com, usually within one business day.",
   directHeading: "Prefer a call or email?",
   directBody: "Both reach the founders directly.",
-  bookLabel: "Book a discovery call",
+  bookLabel: "Book a 15-minute call",
   errorFallback: `We could not send your request. Please email info@pandacodegen.com or call ${PHONE.display}.`,
   honeypotLabel: "Leave this field empty",
   replyNote:

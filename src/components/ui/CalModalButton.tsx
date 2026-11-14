@@ -2,6 +2,7 @@
 
 import { useCallback, ReactNode } from "react";
 import { useConsent } from "@/components/consent/ConsentProvider";
+import { CAL_LINK } from "@/lib/booking";
 
 interface CalModalButtonProps {
   children: ReactNode;
@@ -17,19 +18,8 @@ interface CalModalButtonProps {
   fallbackHref?: string;
 }
 
-// The booking handle is not a secret and it was already hardcoded in two page
-// files, so the env var is an override rather than a requirement. Leaving it
-// required meant NEXT_PUBLIC_CAL_LINK being unset silently downgraded every
-// "Book a discovery call" button to a new browser tab -- which is the behaviour
-// the modal exists to replace.
-const DEFAULT_CAL_LINK = 'pandagen/discovery';
-
-const CAL_LINK = (() => {
-  const candidate = process.env.NEXT_PUBLIC_CAL_LINK?.trim();
-  return candidate && /^[a-z0-9][a-z0-9_-]*\/[a-z0-9][a-z0-9_-]*$/i.test(candidate)
-    ? candidate
-    : DEFAULT_CAL_LINK;
-})();
+// CAL_LINK falls back to the default handle when NEXT_PUBLIC_CAL_LINK is unset, so
+// an unset env var never silently downgrades the modal to a new browser tab.
 
 export default function CalModalButton({ children, className, fallbackHref }: CalModalButtonProps) {
   const { preferences, openPreferences } = useConsent();

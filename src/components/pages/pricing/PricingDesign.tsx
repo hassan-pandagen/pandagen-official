@@ -51,7 +51,7 @@ export function PricingPreview() {
   if (!review) throw new Error("Missing Emblematic Studio review");
   return <PreviewShell condensed><div className={s.page}>
     <header className={v.hero}><div className={`${s.wrap} ${v.heroGrid}`}>
-      <div><p className={s.eyebrow} style={{ color: "#E8763A" }}>PandaCodeGen / Example scopes</p><h1 className={v.heroTitle}>A better site.{" "}<br /><span style={{ color: "#ebe9e4" }}><HeadingEmphasis text="A clear price." phrase="clear price" onDark /></span></h1><p className={v.heroCopy}>Custom website builds start at <strong><PriceAmount value="$1,500" onDark /></strong>. WordPress builds are quoted to their own scope. We agree the pages, features, handover checks and final price in writing before work begins.</p><div className={s.heroActions}><a href="#find-your-fit" className={s.buttonLight}>Find your starting point ↓</a><QuoteModalButton cta="pricing_preview_hero" location="pricing" className={s.buttonLight}>Talk about your project ↗</QuoteModalButton></div></div>
+      <div><p className={s.eyebrow} style={{ color: "#E8763A" }}>PandaCodeGen / Example scopes</p><h1 className={v.heroTitle}>A better site.{" "}<br /><span style={{ color: "#ebe9e4" }}><HeadingEmphasis text="A clear price." phrase="clear price" onDark /></span></h1><p className={v.heroCopy}>Custom website builds start at <strong><PriceAmount value="$1,500" onDark /></strong>. WordPress builds are quoted to their own scope. We agree the pages, features, handover checks and final price in writing before work begins.</p><div className={s.heroActions}><a href="#find-your-fit" className={s.buttonLight}>Find your starting point ↓</a><QuoteModalButton cta="pricing_preview_hero" location="pricing" className={s.buttonLight}>Talk to the founders ↗</QuoteModalButton></div></div>
       <div className={v.proposal} aria-label="Illustration of the three parts of a written proposal"><div className={v.proposalTop}><span>Example custom build</span><span>01 / 03</span></div><p className={v.proposalPrice}><PriceAmount value="$1,500" /></p><p className={v.proposalLabel}>Published starting price for a focused custom website. Your quote sets the final amount.</p><div style={{ marginTop: 34 }}><div className={v.proposalRow}><span>What gets built</span><span>Named</span></div><div className={v.proposalRow}><span>How it is checked</span><span>Named</span></div><div className={v.proposalRow}><span>What you own</span><span>Named</span></div></div></div>
     </div></header>
 
@@ -96,7 +96,7 @@ export function PricingPreview() {
     <section id="questions" className={s.section}><div className={s.wrap}>
       <div className={s.sectionHead}><div><p className={s.eyebrow}>03 / Questions</p><h2 className={s.heading}>Before you{" "}<br />commit.</h2></div><p>Answers are kept visible so you can read the conditions as well as the headline.</p></div>
       <FaqRows faqs={pricingPageFaqs().map(({ q, a }) => ({ question: q, answer: a }))} />
-      <div className={s.heroActions} style={{ marginTop: 30 }}><QuoteModalButton cta="pricing_preview_close" location="pricing" className={s.button}>Talk through your project ↗</QuoteModalButton><Link className={s.textLink} href="/pricing">Read all pricing questions ↗</Link></div>
+      <div className={s.heroActions} style={{ marginTop: 30 }}><QuoteModalButton cta="pricing_preview_close" location="pricing" className={s.button}>Talk to the founders ↗</QuoteModalButton><Link className={s.textLink} href="/pricing">Read all pricing questions ↗</Link></div>
     </div></section>
   </div></PreviewShell>;
 }

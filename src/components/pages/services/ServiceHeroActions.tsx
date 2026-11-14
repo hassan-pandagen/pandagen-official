@@ -13,7 +13,7 @@ type ServiceHeroActionsProps = {
 export default function ServiceHeroActions({
   cta,
   location,
-  enquiryLabel = "Discuss your project",
+  enquiryLabel = "Talk to the founders",
   workHref,
   workLabel = "See a completed project",
 }: ServiceHeroActionsProps) {

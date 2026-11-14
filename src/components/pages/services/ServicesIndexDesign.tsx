@@ -60,7 +60,7 @@ export default function ServicesPreviewIndex() {
     </div></section>
 
     <section className={`${s.section} ${s.sectionDark}`}><div className={s.wrap}>
-      <p className={`${s.eyebrow} ${v.eyebrow}`}>03 / A clear agreement</p><h2 className={s.heading}>You know the work{" "}<br />before it starts.</h2><p className={s.darkIntro}>Custom website builds start at $1,500; WordPress work is quoted to scope. Monthly AI SEO starts at $500. The final price, content, integrations, checks and handover responsibilities go into a written scope.</p><div className={s.heroActions}><Link href="/pricing" className={s.buttonLight}>Explore starting prices ↗</Link><QuoteModalButton cta="services_preview_close" location="services" className={s.buttonLight}>Discuss your project ↗</QuoteModalButton></div>
+      <p className={`${s.eyebrow} ${v.eyebrow}`}>03 / A clear agreement</p><h2 className={s.heading}>You know the work{" "}<br />before it starts.</h2><p className={s.darkIntro}>Custom website builds start at $1,500; WordPress work is quoted to scope. Monthly AI SEO starts at $500. The final price, content, integrations, checks and handover responsibilities go into a written scope.</p><div className={s.heroActions}><Link href="/pricing" className={s.buttonLight}>Explore starting prices ↗</Link><QuoteModalButton cta="services_preview_close" location="services" className={s.buttonLight}>Talk to the founders ↗</QuoteModalButton></div>
     </div></section>
   </div></PreviewShell>;
 }

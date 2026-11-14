@@ -844,7 +844,7 @@ export default function AskAssistant() {
                           Want to go through it in detail?
                         </p>
                         <p className="mt-1 text-[15px]" style={{ color: BODY }}>
-                          Hassan, our lead engineer, can guide you properly for your own site. Book a quick chat, or
+                          Hassan, our lead engineer, can guide you properly for your own site. Book a 15-minute call, or
                           leave your email or phone and he&apos;ll get back to you. Your questions go with it, so you
                           don&apos;t have to repeat yourself.
                         </p>
@@ -881,7 +881,7 @@ export default function AskAssistant() {
                                   : "bg-[#7A2E0E] px-5 py-3 text-[15px] font-medium text-white"
                               }
                             >
-                              Book a quick chat
+                              Book a 15-minute call
                             </CalModalButton>
                           </span>
                           {!leadOpen && (
