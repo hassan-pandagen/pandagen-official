@@ -5,6 +5,7 @@ import {
   claimQuoteSubmission,
   enforceAuditLeadRateLimit,
   enforceAuditRateLimit,
+  enforceLiveChatRateLimit,
   enforceQuoteRateLimit,
   FORM_GLOBAL_HOURLY_LIMIT,
   hashedAuditClientIdentifier,
@@ -224,6 +225,56 @@ test('quote idempotency claims suppress duplicates without storing raw identifie
     assert.equal((await claimQuoteSubmission(request, fingerprint)).acquired, true);
   } finally {
     process.env.NODE_ENV = 'development';
+    resetAuditRateLimitMemoryForTests();
+    restore();
+  }
+});
+
+// 14 Nov 2026: the live chat's Slack-posting limits moved here from a per-instance Map in
+// the route. Each action keeps its own allowance, per visitor, and a Redis problem must
+// never switch the chat off.
+test('live chat limits count each action and each visitor separately', async () => {
+  const names = ['NODE_ENV', 'AUDIT_RATE_LIMIT_MODE', 'AUDIT_RATE_LIMIT_SECRET'];
+  const restore = preserveEnvironment(names);
+  try {
+    process.env.NODE_ENV = 'development';
+    process.env.AUDIT_RATE_LIMIT_MODE = 'memory';
+    process.env.AUDIT_RATE_LIMIT_SECRET = 'test-audit-secret-that-is-long-enough';
+    resetAuditRateLimitMemoryForTests();
+    const visitor = { headers: new Headers({ 'x-forwarded-for': '198.51.100.20' }) };
+    const other = { headers: new Headers({ 'x-forwarded-for': '198.51.100.21' }) };
+
+    for (let i = 0; i < 3; i += 1) assert.equal((await enforceLiveChatRateLimit(visitor, 'start')).allowed, true);
+    const blocked = await enforceLiveChatRateLimit(visitor, 'start');
+    assert.equal(blocked.allowed, false);
+    assert.equal(blocked.blockedBy, 'client');
+    assert.ok(blocked.retryAfterSeconds > 0);
+
+    assert.equal((await enforceLiveChatRateLimit(visitor, 'message')).allowed, true, 'messages have their own allowance');
+    assert.equal((await enforceLiveChatRateLimit(other, 'start')).allowed, true, 'another visitor is not affected');
+  } finally {
+    resetAuditRateLimitMemoryForTests();
+    restore();
+  }
+});
+
+test('live chat limits fall back to memory when Redis is misconfigured', async () => {
+  const names = ['NODE_ENV', 'AUDIT_RATE_LIMIT_MODE', 'AUDIT_RATE_LIMIT_SECRET', ...redisVariables];
+  const restore = preserveEnvironment(names);
+  const originalError = console.error;
+  console.error = () => {};
+  try {
+    process.env.NODE_ENV = 'development';
+    delete process.env.AUDIT_RATE_LIMIT_MODE;
+    for (const name of redisVariables) delete process.env[name];
+    process.env.UPSTASH_REDIS_REST_URL = 'https://example.upstash.io';
+    resetAuditRateLimitMemoryForTests();
+    const visitor = { headers: new Headers({ 'x-forwarded-for': '198.51.100.30' }) };
+    const result = await enforceLiveChatRateLimit(visitor, 'watch-start');
+    assert.equal(result.allowed, true);
+    assert.equal(result.backend, 'memory');
+  } finally {
+    console.error = originalError;
     resetAuditRateLimitMemoryForTests();
     restore();
   }

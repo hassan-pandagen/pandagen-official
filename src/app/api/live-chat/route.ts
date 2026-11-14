@@ -1,5 +1,7 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
+import type { NextRequest } from "next/server";
 import { redact } from "@/lib/assistant/log";
+import { enforceLiveChatRateLimit, type LiveChatAction } from "@/lib/audit/auditRateLimit";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // /api/live-chat: talking to Hassan from inside the assistant panel.
@@ -124,7 +126,15 @@ function pageOf(request: Request): string {
   }
 }
 
-// ── Limits (per server instance, like the assistant's) ───────────────────────
+// ── Limits ─────────────────────────────────────────────────────────────
+// 14 Nov 2026: everything that posts to Slack is limited in Redis, shared across
+// instances (enforceLiveChatRateLimit). Only the reply poll stays here, per instance:
+// the open panel polls every few seconds and a Redis command per poll would spend
+// the Redis quota for nothing.
+
+async function overLimit(request: Request, action: LiveChatAction): Promise<boolean> {
+  return !(await enforceLiveChatRateLimit(request as NextRequest, action)).allowed;
+}
 
 const hits = new Map<string, number[]>();
 
@@ -259,7 +269,6 @@ function turnText(watch: Body["watch"]): string[] {
 
 export async function POST(request: Request) {
   if (!fromThisSite(request)) return Response.json({ error: "forbidden" }, { status: 403 });
-  const ip = ipOf(request);
 
   let body: Body;
   try {
@@ -278,9 +287,9 @@ export async function POST(request: Request) {
       let thread = body.thread;
       if (thread) {
         if (!validKey(thread, body.key ?? "", "watch")) return Response.json({ error: "not found" }, { status: 404 });
-        if (limited(`watch:${ip}`, 40, 10 * 60_000)) return Response.json({ ok: false }, { status: 429 });
+        if (await overLimit(request, "watch")) return Response.json({ ok: false }, { status: 429 });
       } else {
-        if (limited(`watch-start:${ip}`, 5, 10 * 60_000)) return Response.json({ ok: false }, { status: 429 });
+        if (await overLimit(request, "watch-start")) return Response.json({ ok: false }, { status: 429 });
         const page = pageOf(request);
         const start = await slack(
           "chat.postMessage",
@@ -300,7 +309,7 @@ export async function POST(request: Request) {
       if (!validKey(body.thread, body.key ?? "", kind)) return Response.json({ error: "not found" }, { status: 404 });
       const text = typeof body.text === "string" ? body.text.trim() : "";
       if (!text) return Response.json({ error: "bad request" }, { status: 400 });
-      if (limited(`msg:${ip}`, 30, 10 * 60_000)) {
+      if (await overLimit(request, "message")) {
         return Response.json({ error: "You've sent a lot of messages in a short time. Please wait a few minutes." }, { status: 429 });
       }
       const prefix = body.mention ? `<@${HASSAN}> *Visitor wants to chat with you:*` : "*Visitor:*";
@@ -313,7 +322,7 @@ export async function POST(request: Request) {
     // opened the thread on the button click; in the owner's test the alert
     // read only "New chat from the website" and the message sat in the thread.)
     // Mentioning Hassan makes his phone ring even if the channel is muted.
-    if (limited(`start:${ip}`, 3, 10 * 60_000)) {
+    if (await overLimit(request, "start")) {
       return Response.json({ error: "Please wait a few minutes before starting another chat." }, { status: 429 });
     }
     const questions = (Array.isArray(body.questions) ? body.questions : [])

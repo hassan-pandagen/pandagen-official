@@ -559,6 +559,48 @@ export async function enforceAssistantRateLimit(
   return applyMemoryLimit(rules);
 }
 
+/**
+ * Live chat limits (14 Nov 2026). Each of these requests posts to the team's Slack, so, like
+ * the assistant, they are shared across instances in Redis and fall back to the in-memory
+ * limiter if Redis is unavailable. They used to live in a per-instance Map in the route, so
+ * every warm instance gave a visitor a fresh allowance. The reply poll is not limited here:
+ * the open panel polls every few seconds, and a Redis command per poll would spend the quota.
+ */
+export type LiveChatAction = 'start' | 'watch-start' | 'watch' | 'message';
+
+const LIVE_CHAT_LIMITS: Record<LiveChatAction, { limit: number; windowMs: number }> = {
+  start: { limit: 3, windowMs: 10 * 60 * 1_000 },
+  'watch-start': { limit: 5, windowMs: 10 * 60 * 1_000 },
+  watch: { limit: 40, windowMs: 10 * 60 * 1_000 },
+  message: { limit: 30, windowMs: 10 * 60 * 1_000 },
+};
+
+export async function enforceLiveChatRateLimit(
+  request: NextRequest,
+  action: LiveChatAction
+): Promise<AuditRateLimitResult> {
+  const prefix = process.env.AUDIT_RATE_LIMIT_KEY_PREFIX || 'pandacodegen:audit:v1';
+  const { limit, windowMs } = LIVE_CHAT_LIMITS[action];
+  const rules: RateLimitRule[] = [
+    {
+      key: `${prefix}:live-chat:${action}:${hashedAuditClientIdentifier(request)}`,
+      name: 'client',
+      limit,
+      windowMs,
+    },
+  ];
+  try {
+    const { mode, redis } = selectMode();
+    if (mode === 'redis') return await applyRedisLimit(redis!, rules);
+  } catch (error) {
+    console.error(
+      'Live chat rate limiting fell back to memory:',
+      error instanceof Error ? error.message : error
+    );
+  }
+  return applyMemoryLimit(rules);
+}
+
 function pruneMemoryQuoteClaims(now: number): void {
   for (const [key, claim] of memoryQuoteClaims) {
     if (claim.expiresAt <= now) memoryQuoteClaims.delete(key);
