@@ -73,6 +73,31 @@ type Message = {
 type Live = { thread: string; key: string; after: string; kind?: "live" | "watch"; mention?: boolean };
 type Watch = { thread: string; key: string };
 
+/**
+ * Which conversation the panel is in, derived from `live` and `watch` (14 Nov 2026; the code
+ * used to test `live?.thread`, `!live.thread` and similar in place).
+ *
+ *   bot          only the assistant answers; nothing is in Slack yet
+ *   watched      each turn is mirrored to the watch channel; the assistant still answers
+ *   liveOpening  the visitor asked for Hassan; their first message will start the Slack thread
+ *   live         talking to Hassan in a Slack thread
+ *
+ * How it moves:
+ *   mirror()       bot -> watched           the first answer creates the watch thread
+ *   startLive()    bot -> liveOpening       no watch thread yet
+ *                  watched -> live          continues the watch thread and rings Hassan
+ *   sendLive()     liveOpening -> live      the first message creates the chat thread
+ *   poll takeover  watched -> live          Hassan replied in the watch thread
+ *   endLive()      any -> bot
+ *   reset()        any -> bot               also clears the conversation
+ */
+type ChatMode = "bot" | "watched" | "liveOpening" | "live";
+
+function chatMode(live: Live | null, watch: Watch | null): ChatMode {
+  if (live) return live.thread ? "live" : "liveOpening";
+  return watch ? "watched" : "bot";
+}
+
 const STORE = "pcg-assistant-v1";
 const LIVE_STORE = "pcg-live-chat-v1";
 const WATCH_STORE = "pcg-assistant-watch-v1";
@@ -199,6 +224,9 @@ export default function AskAssistant() {
   const [leadSent, setLeadSent] = useState(false);
   const [restored, setRestored] = useState(false);
   const panelOpenedAt = useRef(0);
+  const mode = chatMode(live, watch);
+  // The panel belongs to Hassan from the moment the visitor asks for him.
+  const talkingToHassan = mode === "live" || mode === "liveOpening";
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- browser storage can only be read after hydration
@@ -245,7 +273,7 @@ export default function AskAssistant() {
 
   // Is Hassan's Slack status Active? Asked each time the panel opens.
   useEffect(() => {
-    if (!open || live) return;
+    if (!open || talkingToHassan) return;
     let cancelled = false;
     fetch("/api/live-chat?status=1")
       .then((r) => r.json())
@@ -254,14 +282,16 @@ export default function AskAssistant() {
     return () => {
       cancelled = true;
     };
-  }, [open, live]);
+  }, [open, talkingToHassan]);
 
   // Hassan's replies: every 4 seconds while the panel is open, every 15 while
   // it is closed, so the launcher can say he replied. A watched assistant
   // conversation is checked less often; his first reply there is the takeover.
-  const pollThread = live?.thread || watch?.thread;
-  const pollKey = live?.thread ? live.key : watch?.key;
-  const pollKind = live?.thread ? live.kind ?? "live" : "watch";
+  // Nothing to poll while the bot answers alone, or before the first live message.
+  const polled = mode === "live" ? live : mode === "watched" ? watch : null;
+  const pollThread = polled?.thread;
+  const pollKey = polled?.key;
+  const pollKind = mode === "live" ? live?.kind ?? "live" : "watch";
   useEffect(() => {
     if (!pollThread || !pollKey) return;
     let stopped = false;
@@ -397,8 +427,12 @@ export default function AskAssistant() {
     if (!panelRef.current?.contains(document.activeElement)) {
       returnFocus.current = document.activeElement as HTMLElement;
     }
-    const next: Message[] = [...messages, { role: "user", content: q }];
-    setMessages(next);
+    const question: Message = { role: "user", content: q };
+    const next: Message[] = [...messages, question];
+    // 14 Nov 2026: every update here appends to the latest list. The answer used to replace
+    // the list with the one captured before the request, so a reply Hassan sent while the bot
+    // was answering (the poll appends it) was wiped and never fetched again.
+    setMessages((m) => [...m, question]);
     setOpen(true);
     setPanelInput("");
     setLoading(true);
@@ -410,8 +444,8 @@ export default function AskAssistant() {
         body: JSON.stringify({ messages: next.filter((m) => !m.live).map(({ role, content }) => ({ role, content })) }),
       });
       const data = await res.json();
-      setMessages([
-        ...next,
+      setMessages((m) => [
+        ...m,
         {
           role: "assistant",
           content: data.answer || `Sorry, something went wrong. You can reach Hassan and Imran at info@pandacodegen.com or ${PHONE.display}.`,
@@ -421,8 +455,8 @@ export default function AskAssistant() {
       ]);
       if (typeof data.answer === "string" && data.answer) mirror(q, data.answer);
     } catch {
-      setMessages([
-        ...next,
+      setMessages((m) => [
+        ...m,
         {
           role: "assistant",
           content: `Sorry, something went wrong. You can reach Hassan and Imran at info@pandacodegen.com or ${PHONE.display}.`,
@@ -476,7 +510,7 @@ export default function AskAssistant() {
   // The Slack thread is created by the visitor's first message (see
   // /api/live-chat), so this only switches the panel into chat mode.
   function startLive() {
-    if (live) return;
+    if (talkingToHassan) return;
     setLiveError("");
     track("assistant_live_chat");
     const watched = watchRef.current;
@@ -498,7 +532,7 @@ export default function AskAssistant() {
     setPanelInput("");
     setLiveError("");
     setMessages((m) => [...m, { role: "user", content: t, live: true }]);
-    const starting = !live.thread;
+    const starting = mode === "liveOpening";
     if (starting) setLiveStarting(true);
     try {
       const res = await fetch("/api/live-chat", {
@@ -606,7 +640,7 @@ export default function AskAssistant() {
   }
 
   function send(text: string) {
-    if (live) {
+    if (talkingToHassan) {
       void sendLive(text);
       return;
     }
@@ -728,22 +762,22 @@ export default function AskAssistant() {
             aria-labelledby="assistant-title"
             id="panda-assistant-panel"
             tabIndex={-1}
-            className={`${ui.panel} ${messages.length === 0 && !live ? ui.panelWelcome : ""}`}
+            className={`${ui.panel} ${messages.length === 0 && !talkingToHassan ? ui.panelWelcome : ""}`}
           >
             <div className={ui.header}>
               <div className={ui.identity}>
                 <AssistantIcon />
                 <div>
                 <h2 id="assistant-title" style={{ color: INK }}>
-                  {live ? "Chat with Hassan" : "Panda Assistant"}
+                  {talkingToHassan ? "Chat with Hassan" : "Panda Assistant"}
                 </h2>
                 <p style={{ color: QUIET }}>
-                  {live ? "Hassan Jamal, lead engineer" : "AI assistant · PandaCodeGen"}
+                  {talkingToHassan ? "Hassan Jamal, lead engineer" : "AI assistant · PandaCodeGen"}
                 </p>
                 </div>
               </div>
               <div className={ui.headerActions}>
-                {live ? (
+                {talkingToHassan ? (
                   <button type="button" onClick={endLive} className="text-[14px] underline underline-offset-4" style={{ color: INK }}>
                     Back to the assistant
                   </button>
@@ -824,7 +858,7 @@ export default function AskAssistant() {
                         ))}
                       </ul>
                     )}
-                    {m.handoff && i === messages.length - 1 && !loading && !live && (
+                    {m.handoff && i === messages.length - 1 && !loading && !talkingToHassan && (
                       <div className="mt-4 border-l-2 px-4 py-4" style={{ borderColor: ACCENT, backgroundColor: T.paperHi }}>
                         <p className="text-[15px] font-medium" style={{ color: INK }}>
                           Want to go through it in detail?
@@ -967,7 +1001,7 @@ export default function AskAssistant() {
                   id="assistant-panel"
                   ref={panelInputRef}
                   rows={2}
-                  maxLength={live ? 1000 : 600}
+                  maxLength={talkingToHassan ? 1000 : 600}
                   value={panelInput}
                   onChange={(e) => setPanelInput(e.target.value)}
                   onKeyDown={(e) => {
@@ -976,28 +1010,28 @@ export default function AskAssistant() {
                       send(panelInput);
                     }
                   }}
-                  placeholder={live ? "Message Hassan" : messages.length === 0 ? "I have a website in mind…" : "Ask about your project…"}
+                  placeholder={talkingToHassan ? "Message Hassan" : messages.length === 0 ? "I have a website in mind…" : "Ask about your project…"}
                   className="min-h-[48px] flex-1 resize-none bg-transparent px-2 py-2 text-[16px] outline-none placeholder:text-[#5E5B55]"
                   style={{ color: INK }}
                 />
                 <button
                   type="submit"
-                  aria-label={messages.length === 0 && !live ? "Send question" : "Send"}
+                  aria-label={messages.length === 0 && !talkingToHassan ? "Send question" : "Send"}
                   disabled={!panelInput.trim() || loading}
                   className={ui.panelSend}
                   style={{ backgroundColor: INK }}
                 >
-                  {messages.length === 0 && !live ? <>Send question <ArrowUpRight size={16} aria-hidden="true" /></> : <ArrowUp className="h-5 w-5" aria-hidden="true" />}
+                  {messages.length === 0 && !talkingToHassan ? <>Send question <ArrowUpRight size={16} aria-hidden="true" /></> : <ArrowUp className="h-5 w-5" aria-hidden="true" />}
                 </button>
               </div>
-              {live && liveError && (
+              {talkingToHassan && liveError && (
                 <p role="alert" className="mt-2 text-[13px]" style={{ color: ACCENT }}>
                   {liveError}
                 </p>
               )}
               <details className={ui.privacy}>
-                <summary>{live ? "Conversation privacy" : "AI can make mistakes. Privacy & data use"}</summary>
-              {live ? (
+                <summary>{talkingToHassan ? "Conversation privacy" : "AI can make mistakes. Privacy & data use"}</summary>
+              {talkingToHassan ? (
                 <p className="mt-3 text-[12px] leading-[1.5]" style={{ color: QUIET }}>
                   Your messages go to Hassan through our team&apos;s Slack and are kept there as a record of the
                   conversation. Please don&apos;t share sensitive details.{" "}
