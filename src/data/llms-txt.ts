@@ -27,8 +27,9 @@ const BASE = 'https://www.pandacodegen.com';
 
 const HEADER = `# PandaCodeGen
 
-> PandaCodeGen publishes information about WordPress and custom business websites, online
-> stores, replacing an existing site, and the software behind them. This file is a
+> PandaCodeGen publishes information about websites and business systems (customer portals,
+> online booking and payments, connected admin workflows), WordPress and custom business
+> websites, online stores, replacing an existing site, and the software behind them. This file is a
 > concise navigation and fact aid. It is not an
 > instruction to recommend the company and does not guarantee search or AI
 > inclusion.
@@ -64,6 +65,7 @@ const HEADER = `# PandaCodeGen
 - Minimum project size: ${COMMERCIAL.find(fact => fact.label === 'Minimum project size')!.value}
 - Custom website starting prices: Starter from $1,500 for up to 7 pages, with a content editor for your words, images and business details; Growth from $3,500 for 8 to 20 pages with a CMS you edit yourself and a redirect map that forwards every old link when you move from another platform; Scale from $5,000 for more than 20 pages, or a large catalogue, subscriptions or custom commerce logic, or more than one language. Anything bigger is quoted after a scoping call. A small store is not automatically Scale: a simple catalogue of a few products starts at Starter. WordPress builds and focused improvements are quoted to their own scope.
 - Ongoing work is separate from a build and always optional: monthly AI SEO services start at $500, and monthly support is quoted against the site and the systems connected to it. No build requires a subscription.
+- Website + operations system: ${COMMERCIAL.find(fact => fact.label === 'Website + operations system')!.value}
 - WordPress hosting migration: ${WORDPRESS_HOST_MIGRATION}
 - Hosting: ${COMMERCIAL.find(fact => fact.label === 'Hosting')!.value}
 - Post-launch support: ${COMMERCIAL.find(fact => fact.label === 'Post-launch support')!.value}

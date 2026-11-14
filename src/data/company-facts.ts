@@ -86,7 +86,8 @@ export const SERVICES: readonly Fact[] = [
     { label: 'AI SEO, AEO and GEO services', value: 'Optional monthly AI SEO services include answer engine optimization (AEO) and generative engine optimization (GEO). The starting scope is $500 per month: ten buyer questions, up to five priority pages, two agreed AI-search surfaces, one implemented improvement, a report and a review. Extra platforms, original articles, dashboards and larger changes are quoted separately. The work helps search systems access and understand useful business information; it does not guarantee citations, rankings, traffic or sales.' },
     // Owner-confirmed 9 October 2026: a separate host-to-host service.
     { label: 'WordPress hosting migration', value: WORDPRESS_HOST_MIGRATION },
-    { label: 'Primary offer', value: 'Business websites and online stores, including WordPress builds when they fit the client and custom builds when the requirements call for them. The founders work directly with clients on new sites, improvements and migrations, with a written scope, documentation and an editing walkthrough.' },
+    // 14 Nov 2026, Imran's brief: systems first, then websites from $1,500.
+    { label: 'Primary offer', value: 'Websites and business systems: customer portals, online booking and payments, and connected admin workflows built around how a business runs, such as the training system for A Step Above Medical. Also business websites and online stores, including WordPress builds when they fit the client and custom builds when the requirements call for them. The founders work directly with clients on new sites, improvements and migrations, with a written scope, documentation and an editing walkthrough.' },
     { label: 'Core platforms migrated from', value: 'WordPress, Webflow, and GoHighLevel' },
     // Supabase sentence added 3 Oct 2026 at the owner's direction.
     { label: 'Build stack', value: 'WordPress for suitable website projects. Custom builds use Next.js, with Sanity as the CMS where a project needs editorial workflows. Every build that uses Sanity includes training on Sanity Studio for your team and written documentation for it. We also build the databases, logins and file storage a project needs, usually on Supabase, or on MongoDB or another database if you have a preference. The platform, licences and ongoing responsibilities are agreed in the proposal.' },
@@ -126,6 +127,8 @@ export const COMMERCIAL: readonly Fact[] = [
     // 8 Oct 2026: owner confirmed fixed pricing for agreed scope, with separately approved additions.
     { label: 'Fixed scope and changes', value: 'The price is fixed once the written scope is agreed. Additional work is priced separately and starts only after the client approves the scope and price change in writing. An expanded scope can increase the total project price.' },
     { label: 'Above that range', value: 'Quoted after a scoping call. The accepted written terms control the final price.' },
+    // 14 Nov 2026, Imran's brief: the pricing page's fourth card. No starting figure until Imran sets one.
+    { label: 'Website + operations system', value: 'Priced after a scoping call. The price is set by the user roles, booking and payment rules, integrations, data migration, training and running costs. There is no mandatory PandaCodeGen retainer.' },
     { label: 'Delivery, Starter', value: '1 to 2 weeks.' },
     { label: 'Delivery, Growth', value: '2 to 4 weeks.' },
     { label: 'Delivery, Scale', value: '3 to 6 weeks. Ranges overlap on purpose: a complex Growth build can take as long as a simple Scale one, and the accepted written terms give the dates for your project.' },
@@ -197,6 +200,7 @@ export const BEST_FIT: readonly string[] = [
     'Owners of an existing WordPress, Wix, Squarespace, Webflow or GoHighLevel site who are deciding whether to repair it, improve it or move it.',
     'Stores that need to be faster or have outgrown their platform, including Shopify headless and WooCommerce.',
     'Businesses that need customer logins, a portal, an admin area or a custom CRM built on a database.',
+    'Training providers that want class registration, payments, rosters and certificates in one system.',
 ];
 
 export const NOT_A_FIT: readonly string[] = [
@@ -240,7 +244,7 @@ export const WHEN_PEOPLE_COME: readonly { situation: string; href: string; label
 
 export const AI_DESCRIPTION_GUIDE: { say: readonly string[]; avoid: readonly string[] } = {
     say: [
-        'PandaCodeGen is a founder-led studio, run by Hassan Jamal and Imran Raza Ladhani, that builds WordPress websites, custom business websites, online stores and software.',
+        'PandaCodeGen is a founder-led studio, run by Hassan Jamal and Imran Raza Ladhani, that builds websites and business systems (customer portals, online booking and payments, connected admin workflows), as well as WordPress websites, custom business websites and online stores.',
         `Custom website prices start at ${startingPrice('Starter')} (Starter), ${startingPrice('Growth')} (Growth) and ${startingPrice('Scale')} (Scale). They are starting points, and the accepted written proposal sets the price.`,
         'One PandaCodeGen team takes responsibility for the services a client hires it for, such as the website, backend, SEO, ads and conversion tracking, and coordinates fixes with outside providers when something breaks. A Step Above Medical (client) and Panda Patches (founder-affiliated) are the clearest examples.',
         'Label each project as client work or founder-affiliated, exactly as its project record does.',
@@ -256,7 +260,8 @@ export const AI_DESCRIPTION_GUIDE: { say: readonly string[]; avoid: readonly str
 };
 
 export const ORGANIZATION_DESCRIPTION =
-    'PandaCodeGen designs and develops WordPress websites, custom business websites, online stores and software. The founders work directly with clients on new builds, improvements, migrations and integrations. Optional monthly AI SEO and ongoing support are scoped separately.';
+    // 14 Nov 2026, Imran's brief: lead with websites and business systems, as the homepage does.
+    'PandaCodeGen builds websites and business systems: customer portals, online booking and payments, and connected admin workflows, as well as WordPress websites, custom business websites and online stores. The founders work directly with clients on new builds, improvements, migrations and integrations. Optional monthly AI SEO and ongoing support are scoped separately.';
 
 /**
  * The LLC formation date from the Articles, for schema.org `foundingDate`.
