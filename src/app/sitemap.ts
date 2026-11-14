@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 1. Core Business Pages
     { path: '', changeFrequency: 'weekly', priority: 1.0 , lastModified: '2026-11-14' },
     { path: '/services', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-10-10' },
-    { path: '/pricing', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-29' },
+    { path: '/pricing', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-11-14' },
     { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/free-audit', changeFrequency: 'monthly', priority: 0.7 },
 
@@ -36,7 +36,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 2. Service Pillars
     { path: '/services/wordpress', changeFrequency: 'monthly', priority: 0.9, lastModified: '2026-10-11' },
     { path: '/services/small-business-website-design', changeFrequency: 'monthly', priority: 0.9, lastModified: '2026-10-12' },
-    { path: '/services/medical-website-design', changeFrequency: 'monthly', priority: 0.8, lastModified: '2026-10-12' },
+    { path: '/services/medical-website-design', changeFrequency: 'monthly', priority: 0.8, lastModified: '2026-11-14' },
+    { path: '/services/training-business-websites', changeFrequency: 'monthly', priority: 0.8, lastModified: '2026-11-14' },
     { path: '/services/wordpress-migration', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-10-11' },
     { path: '/services/ecommerce', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-10-11' },
     { path: '/services/ai-seo', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-10-11' },

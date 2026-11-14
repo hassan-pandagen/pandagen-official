@@ -38,12 +38,14 @@ export type ServicePreview = {
   workHref: string;
   workDescription: string;
   workCaveat: string;
-  secondWork?: { name: string; image: string; alt: string; href: string; description: string; caveat: string };
+  secondWork?: { name: string; image: string; alt: string; href: string; description: string; caveat: string; related?: { label: string; href: string } };
   reviewId?: string;
   pathTitle: string;
   paths: [string, string, string][];
   process?: { label: string; title: string; intro: string };
   steps: [string, string][];
+  /** Shows "Book a 15-minute call" beside the contact button in the hero (14 Nov 2026). */
+  bookCall?: boolean;
   priceTitle: string;
   price: string;
   priceCopy: string;
@@ -86,7 +88,7 @@ export const servicePreviews: ServicePreview[] = [
     },
   },
   {
-    slug: "custom-engineering", name: "Custom software", category: "Custom software development & internal tools",
+    slug: "custom-engineering", bookCall: true, name: "Custom software", category: "Custom software development & internal tools",
     relatedService: { name: "Backend development for CRMs and portals", href: "/services/backend-development" },
     title: "Custom software development.", accent: "CRMs, portals and team tools.",
     lead: "Need a custom CRM, customer portal or a way to stop copying records between spreadsheets? We map the workflow, users and data, then scope a useful first release with the screens, automation, integrations and handover your team needs.",
@@ -98,10 +100,10 @@ export const servicePreviews: ServicePreview[] = [
     workTitle: "Systems built around the working day.", workIntro: "Panda Patches connects commerce to order management. A Step Above Medical connects its course website to class operations. Explore the workflows and screens behind both live projects.",
     workName: "Panda Patches CRM", workImage: "/work/enterprise-ops.png", workAlt: "Panda Patches custom CRM dashboard with sensitive business details obscured", workHref: "/work/enterprise-ops",
     workDescription: "Custom CRM development and workflow automation bring orders, production, payments and reporting into one system connected to the storefront.", workCaveat: "Founder-affiliated work: Panda Patches shares an owner with PandaCodeGen. This is delivery evidence, not an independent client endorsement.",
-    secondWork: { name: "A Step Above Medical", image: "/work/a-step-above-medical-portal-classes.png", alt: "A Step Above Medical team portal showing class schedules and enrolment", href: "/work/a-step-above-medical", description: "A medical training website and staff portal for class schedules, students, payments and certificates, with a Sanity editor for courses and locations.", caveat: "Live independent client project. Screenshots were captured before launch and illustrate the interface." },
+    secondWork: { name: "A Step Above Medical", image: "/work/a-step-above-medical-portal-classes.png", alt: "A Step Above Medical team portal showing class schedules and enrolment", href: "/work/a-step-above-medical", related: { label: "Training business websites and booking systems", href: "/services/training-business-websites" }, description: "A medical training website and staff portal for class schedules, students, payments and certificates, with a Sanity editor for courses and locations.", caveat: "Live independent client project. Screenshots were captured before launch and illustrate the interface." },
     pathTitle: "Build what the job needs.", paths: [["Improve", "Keep a tool that works", "Fix a broken handoff or integration before replacing an entire system."], ["Build", "Build a custom CRM or customer portal", "Scope a dashboard, portal or app around the people, records and decisions involved."]],
     steps: [["Map the workflow", "Walk through a real task, the people involved and the information each one needs."], ["Agree a first release", "Write the screens, data, integrations, permissions and acceptance checks into the proposal."], ["Build in reviewable parts", "Show working parts against real examples throughout the build."], ["Test and hand over", "Check roles, edge cases and connected systems, then transfer code, accounts and documentation as agreed."]],
-    priceTitle: "Custom software and CRM development cost.", price: "From $1,500", priceCopy: "Focused work can start at the published Starter price. A portal, SaaS product or complex integration is priced after requirements and dependencies are reviewed; the accepted proposal sets the final amount and dates.",
+    priceTitle: "Custom software and CRM development cost.", price: "Priced after a scoping call", priceCopy: "A CRM, portal or connected workflow is priced after a scoping call. The price is set by the user roles, booking and payment rules, integrations, data migration, training and running costs your business needs. The accepted proposal sets the final amount and dates.",
     scopeNotes: [["Requirements", "Named users, workflows, data and integrations."], ["Acceptance", "The working behaviours and test cases agreed before build."], ["Control", "Code, accounts and documentation transferred on handover."]],
     costs: {
       title: "What software costs to run.",

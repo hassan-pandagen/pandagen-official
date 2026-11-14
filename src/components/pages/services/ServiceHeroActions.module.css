@@ -79,3 +79,13 @@
     transition: none;
   }
 }
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.secondary {
+  background: transparent;
+  border-color: #1c1917;
+}

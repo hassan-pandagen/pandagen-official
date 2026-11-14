@@ -5,6 +5,8 @@ import Link from "next/link";
 import FadeIn from "@/components/ui/FadeIn";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
+import CalModalButton from "@/components/ui/CalModalButton";
+import { CAL_BOOKING_URL } from "@/lib/booking";
 import FaqRows from "@/components/ui/FaqRows";
 import { COMMERCIAL } from "@/data/company-facts";
 import { pricingFaqs } from "@/data/pricing-faqs";
@@ -75,6 +77,13 @@ export function PricingPreview() {
           <div><p className={s.tierPrice}><PriceAmount value={price.replace("From ", "")} /></p><p className={s.tierMeta}>Starting price{" "}<br />Final amount in your written quote</p></div>
         </FadeIn>;
       })}</div>
+      {/* 14 Nov 2026, Imran's brief: a fourth option, set apart from the website tiers.
+          No price until Imran supplies the starting figure; the card lists what sets it. */}
+      <FadeIn className={`${s.tier} ${v.tierAnchor}`} id="systems" style={{ marginTop: 28, border: "1px solid #1C1917", backgroundColor: "#F4F2EE", padding: "28px 24px" }}>
+        <div><span className={s.tag}>04 / Beyond the website tiers</span><h3 className={s.tierName}>Website + operations system</h3></div>
+        <div><p className={s.tierBody}>Scoped around your workflow. The price is set by the user roles, booking and payment rules, integrations, data migration, training and running costs your business needs.</p><p className={s.tierMeta}><Link href="/work/a-step-above-medical" className={s.textLink}>See the training system we built ↗</Link></p></div>
+        <div><p className={s.tierMeta} style={{ marginTop: 0 }}>Priced after a scoping call</p><CalModalButton fallbackHref={CAL_BOOKING_URL} className={s.button}>Book a workflow call</CalModalButton></div>
+      </FadeIn>
       <p style={{ maxWidth: 760, marginTop: 28, fontSize: 15, lineHeight: 1.65, color: "#5E5B55" }}>{fact("Above that range")} Delivery ranges overlap; the accepted written terms set your project&apos;s dates. <Link href="/services/wordpress" className={s.textLink}>Explore WordPress website builds ↗</Link></p>
       <div className={s.rail}><a href="#quote">How quotes work ↓</a><a href="#questions" className={s.questionJump}>Common questions ↓</a><Link href="/services/wordpress-migration">WordPress migration example ↗</Link></div>
     </div></section>

@@ -27,6 +27,7 @@ function harness(file) {
     '@/components/consent/ConsentProvider': { hasConsent: category => state.consent[category], useConsent: () => ({ preferences: state.consent, openPreferences() {} }) },
     '@/components/GoogleAnalytics': { trackGAEvent: (...args) => events.push(args) },
     '@calcom/embed-react': { getCalApi: async () => cal },
+    '@/lib/booking': { CAL_LINK: 'pandagen/discovery', CAL_BOOKING_URL: 'https://cal.com/pandagen/discovery' },
   };
   const exports = {};
   const output = ts.transpileModule(fs.readFileSync(file, 'utf8'), {

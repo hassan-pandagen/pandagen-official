@@ -17,6 +17,11 @@ export const serviceGuides: Record<string, { title: string; href: string }[]> = 
     { title: "How to check you own your website", href: "/blog/do-you-own-your-website" },
     { title: "Compare developer quotes before paying a deposit", href: "/blog/cheap-web-developer" },
   ],
+  "training-business-websites": [
+    { title: "Online booking for a small business website", href: "/blog/online-booking-small-business-website" },
+    { title: "Sanity vs Supabase: CMS, backend or both", href: "/blog/sanity-vs-supabase" },
+    { title: "What a website and database cost each month", href: "/blog/website-monthly-running-cost" },
+  ],
   "medical-website-design": [
     { title: "Next.js and Sanity: fit, cost and tradeoffs", href: "/blog/nextjs-sanity-stack" },
     { title: "Sanity vs Supabase: CMS, backend or both", href: "/blog/sanity-vs-supabase" },

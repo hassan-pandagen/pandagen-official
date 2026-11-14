@@ -580,6 +580,7 @@ export const SERVICE_PORTABILITY: Record<string, PlatformId[]> = {
   "backend-development": [],
   "small-business-website-design": [],
   "medical-website-design": [],
+  "training-business-websites": [],
 };
 
 export function portabilityFact(platform: PlatformId, item: PortabilityItem): PortabilityFact | undefined {

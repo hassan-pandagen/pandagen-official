@@ -47,6 +47,6 @@ export default function Page() {
     </ul>
 
     <h2>Where we fit</h2>
-    <p>If a scheduling tool covers you, use one. If your bookings feed fees, emails, certificates or staff records, we build that kind of system on <Link href="/services/custom-engineering">custom engineering</Link>, and it can connect to the tools you already use. For the other costs around a site, see the <Link href="/blog/website-monthly-running-cost">monthly running cost guide</Link>. To talk through your own bookings, <Link href="/contact">send us a note</Link>.</p>
+    <p>If a scheduling tool covers you, use one. If your bookings feed fees, emails, certificates or staff records, we build that kind of system on <Link href="/services/custom-engineering">custom engineering</Link>, and it can connect to the tools you already use. For classes and courses, see our <Link href="/services/training-business-websites">training business websites and booking systems</Link>. For the other costs around a site, see the <Link href="/blog/website-monthly-running-cost">monthly running cost guide</Link>. To talk through your own bookings, <Link href="/contact">send us a note</Link>.</p>
   </StackGuide>;
 }

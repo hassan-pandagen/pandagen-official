@@ -117,7 +117,52 @@ export const audienceServices: ServicePreview[] = [
     priceTitle: "Medical website design cost.", price: `From ${startingPrice("Starter")}`,
     priceCopy: `Custom websites start at ${startingPrice("Starter")} (Starter), ${startingPrice("Growth")} (Growth) and ${startingPrice("Scale")} (Scale). A portal with logins, classes or payments is priced after the workflow is reviewed. The accepted written proposal sets the final price and dates.`,
     scopeNotes: [["Included work", "Pages, editor, forms and connections listed in the quote."], ["Your accounts", "Domain and database in your name; hosting as agreed in the proposal."], ["Your team", "Written instructions and a live walkthrough of the editing tasks."]],
-    relatedService: { name: "Backend development for portals", href: "/services/backend-development" },
+    // 14 Nov 2026: linked both ways with the training-business page (Imran's brief).
+    relatedService: { name: "Training business websites and booking systems", href: "/services/training-business-websites" },
+    costs: stackCosts,
+  },
+  // 14 Nov 2026, Imran's brief: a page for training providers, with A Step Above Medical as
+  // the example. The medical page targets practices and clinics; this one targets class-based
+  // training businesses. ASAM facts stay exactly as the case study states them: certificates
+  // are emailed after the class, payments sync to QuickBooks every 30 minutes. Everything else
+  // here is described as scope we can agree, not as something ASAM has.
+  {
+    slug: "training-business-websites", bookCall: true, name: "Training business websites", category: "Training business websites & booking systems",
+    title: "Training business websites.", accent: "Class booking, payments and certificates in one system.",
+    lead: "Websites and booking systems for training providers: course pages, class registration, deposits and payments, rosters, attendance and certificates, connected to the accounting tool you use. We map how a student books today and what your team does by hand, then agree the first release, running costs and price in writing.",
+    image: "/work/a-step-above-medical-portal-classes.png", imageAlt: "A Step Above Medical staff portal showing the class schedule", imageCaption: "Client build / A Step Above Medical / Pre-launch capture",
+    problemTitle: "Where does your team still work by hand?", problemIntro: "Start with one class, from the first enquiry to the certificate. Each step someone repeats by hand is a step worth looking at.",
+    checks: [
+      ["Registration and payment", "How do students book a seat today: a form, a phone call or a payment link sent by email? We plan online booking with full payment or a deposit, and test it end to end."],
+      ["Full classes and waitlists", "Decide what happens when a class fills: close it, open another date or keep a waitlist your team can work from."],
+      ["Rosters and attendance", "Staff and instructors see who is booked, mark attendance and keep student records in one portal instead of spreadsheets."],
+      ["Certificates and accounting", "Certificates can be issued from the portal after a class, and payments can be sent to your accounting software. We agree which tools connect."],
+    ],
+    detailsTitle: "What a training system can include.", detailsIntro: "Each project starts with the parts your business uses. The proposal names every feature, account and running cost.",
+    details: [
+      ["Course and location pages", "Course pages, locations and upcoming classes your team edits in Sanity, built to be found in search."],
+      ["Booking and payments", "Students choose a class, register and pay by Stripe, in full or with a deposit, and get automatic confirmation emails."],
+      ["Staff portal", "Class schedules, enrolment, rosters, attendance, instructor assignments and student records in one workspace, built on Supabase in an account in your name."],
+      ["Certificates and accounting", "Certificates issued from the portal using your template, and payments sent to your accounting software, such as QuickBooks Online."],
+    ],
+    workTitle: "A training system we built.", workIntro: "A Step Above Medical teaches medical courses. We connected its course website to online booking, payments, student emails and a staff portal for classes and certificates. Certificates are emailed after the class, and payments sync to QuickBooks every 30 minutes.",
+    workName: "A Step Above Medical", workImage: "/work/a-step-above-medical-preview-homepage.png", workAlt: "A Step Above Medical course website, captured before launch", workHref: "/work/a-step-above-medical",
+    workDescription: asam.summary, workCaveat: asam.disclosure,
+    pathTitle: "Connect what you have, or build it new.",
+    paths: [
+      ["Connect", "Keep your current website", "If your website works for you, we can start with booking, payments or a staff portal alongside it."],
+      ["Build", "A custom training system", "A course website and staff portal scoped around your classes, payments and certificates."],
+    ],
+    steps: [
+      ["Book a 15-minute call", "Show Hassan or Imran how a student books today and which steps your team does by hand."],
+      ["Agree the first release and price", "Confirm courses, booking rules, payments, portal roles, integrations and running costs in a written proposal."],
+      ["Review a private preview", "Test booking, payment and portal tasks on a private link with your team before launch."],
+      ["Launch with training", "Get access, written instructions and a live walkthrough of the booking, roster and certificate tasks."],
+    ],
+    priceTitle: "Training website and booking system cost.", price: "Priced after a scoping call",
+    priceCopy: `A course website on its own starts at ${startingPrice("Starter")}. A booking system with a staff portal is priced after a scoping call: the user roles, booking and payment rules, integrations, data migration, training and running costs set the price. The accepted proposal sets the final amount and dates.`,
+    scopeNotes: [["Included work", "Pages, booking rules, portal screens and connections listed in the proposal."], ["Your accounts", "Domain, database, payment and accounting accounts in your name."], ["Your team", "Written instructions and a live walkthrough of the staff tasks."]],
+    relatedService: { name: "Medical websites for practices and clinics", href: "/services/medical-website-design" },
     costs: stackCosts,
   },
 ];
@@ -140,5 +185,12 @@ export const audienceServiceFaqs: Record<string, [string, string][]> = {
     ["Can my staff update the website?", "Yes. Staff update services, profiles, locations and announcements in Sanity Studio. Every build that uses Sanity includes training on Sanity Studio and written documentation."],
     ["Can you build a HIPAA-compliant website?", `Yes, when your project needs it. Most practice websites don't collect health information, so HIPAA doesn't apply to the pages themselves. If yours must collect or store protected health information, such as intake forms or patient records, we scope it as a HIPAA project. The parts that handle that information run on providers that sign a Business Associate Agreement (BAA): Vercel's BAA is ${vercelBaa.value}, and for Supabase, ${supabaseBaa.value}. Health information stays out of the content editor, and we sign a BAA with you for our work. The extra provider costs and controls are listed in the proposal. HIPAA compliance is shared between you, us and those providers. A Step Above Medical's website doesn't handle patient health information, so it wasn't built as a HIPAA project.`],
     ["What does a medical website cost to run each month?", `On our usual stack, Vercel Pro hosting is ${vercelPro.value} and Sanity's Free plan is ${sanityFree.value} for most small teams. Supabase Pro, ${supabasePro.value}, is added only when you need logins or records. Prices as of ${asOf("vercel-pro-price")}. On our maintenance or SEO package, hosting is included if you want it.`],
+  ],
+  "training-business-websites": [
+    ["How much does a training business booking system cost?", `A course website on its own starts at ${startingPrice("Starter")}. A booking system with a staff portal is priced after a 15-minute scoping call, because the user roles, booking and payment rules, integrations, data migration, training and running costs set the price. The written proposal fixes the price before work starts.`],
+    ["Have you built a booking system for a training business?", `Yes. For A Step Above Medical, a medical training provider, we connected the course website to online booking, Stripe payments, student emails and a staff portal for classes, students and certificates. ${asam.disclosure}`],
+    ["Can students pay a deposit to hold a seat?", "Yes, when your booking rules need it. Stripe takes either the full fee or a deposit at registration, and the portal records what each student has paid. We agree the deposit, balance and refund rules with you before the build."],
+    ["Can certificates be issued from the system?", "Yes. Certificates are issued from the staff portal using your template. For A Step Above Medical, certificates are emailed after the class."],
+    ["Can it connect to QuickBooks?", "Yes, when the project needs it. Payments can be sent to your accounting software. A Step Above Medical's payments sync to QuickBooks every 30 minutes."],
   ],
 };

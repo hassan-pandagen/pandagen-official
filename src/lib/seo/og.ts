@@ -134,6 +134,11 @@ const staticPages: Record<string, StaticOgContent> = {
     label: "Small business websites",
     description: "WordPress or a custom site with an editor you can use, built with the founders. Price agreed in writing before work starts.",
   },
+  "/services/training-business-websites": {
+    title: "Training Business Websites & Booking Systems",
+    label: "Training business websites",
+    description: "Class registration, deposits and payments, rosters, attendance and certificates in one system, built with the founders.",
+  },
   "/services/medical-website-design": {
     title: "Medical Website Design & Development",
     label: "Medical websites",
