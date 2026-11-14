@@ -1,6 +1,9 @@
 import PortalWorkflow from "@/components/redesign/case-study/PortalWorkflow";
 import AsamSearchEvidenceFigure from "@/components/redesign/case-study/AsamSearchEvidenceFigure";
 import Link from "next/link";
+import CalModalButton from "@/components/ui/CalModalButton";
+import QuoteModalButton from "@/components/ui/QuoteModalButton";
+import { CAL_BOOKING_URL } from "@/lib/booking";
 import ProjectReview from "@/components/redesign/case-study/ProjectReview";
 import { ArrowRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
@@ -53,11 +56,12 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <Link href="/work" style={{ color: T.quiet }}>Work</Link> / A Step Above Medical / {details.status}
         </p>
         <WorkCaseTitle>A Step Above Medical</WorkCaseTitle>
-        <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={details.contentUpdatedOn}>November 11, 2026</time></p>
+        <p className="mt-3 text-sm" style={{ color: T.body }}>Case study updated <time dateTime={details.contentUpdatedOn}>November 14, 2026</time></p>
         <p className="mt-3 max-w-[42rem]" style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
           A complete medical training management system.
         </p>
         <p className="mt-6 max-w-[44rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>{details.summary}</p>
+        <CalModalButton fallbackHref={CAL_BOOKING_URL} className="cta-solid mt-6 inline-flex items-center justify-center bg-[#1C1917] px-6 py-3.5 text-[15px] font-medium text-white">Book a 15-minute workflow call</CalModalButton>
         <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-[14px] font-semibold" style={{ color: T.accentText }}>
           <a href={details.websiteUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Visit live website ↗</a>
           <a href="#a-step-above-medical-walkthrough" className="underline underline-offset-4">Explore the website and portal ↓</a>
@@ -75,25 +79,20 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <p className="max-w-[65rem] text-sm leading-relaxed" style={{ color: T.body }}>{details.disclosure}</p>
         </aside>
       </WorkCaseOpening>
-      <section id="search-visibility" aria-labelledby="asam-search-title" className="px-6 py-10 md:px-10 md:py-16" style={{ backgroundColor: T.paperHi }}>
+      {/* 14 Nov 2026, Imran's brief: a training-business owner needs the workflow first,
+          so the order is workflow, call, before/after, screens, search visibility, FAQ. */}
+      <PortalWorkflow project="medical" />
+      {/* 14 Nov 2026, Imran's brief: a booking callout straight after the day-to-day workflow. */}
+      <section aria-labelledby="asam-workflow-call" className="px-6 py-10 md:px-10 md:py-14" style={{ backgroundColor: T.dark, color: T.onDark }}>
         <div className="mx-auto max-w-[1100px]">
-          <WorkCaseLabel className="mb-3">After launch / Search visibility</WorkCaseLabel>
-          <h2 id="asam-search-title" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.5rem)", lineHeight: 1.1, color: T.ink }}>More visibility in generative AI search after relaunch.</h2>
-          <p className="mt-4 max-w-3xl text-base leading-relaxed" style={{ color: T.body }}>{ASAM_SEARCH_EVIDENCE.summary}</p>
-          <dl className="mt-6 grid gap-6 sm:grid-cols-2">
-            {ASAM_SEARCH_EVIDENCE.aiSamples.map(sample => <div key={sample.date} className="border-t pt-4" style={{ borderColor: T.rule }}>
-              <dt className="text-sm" style={{ color: T.body }}>Generative AI impressions / <time dateTime={sample.date}>{sample.label}</time></dt>
-              <dd className="mt-2 text-4xl font-semibold" style={{ color: T.accentText }}>{sample.impressions}</dd>
-            </div>)}
-          </dl>
-          <AsamSearchEvidenceFigure />
-          <p className="mt-6 max-w-3xl text-base leading-relaxed" style={{ color: T.body }}>{ASAM_SEARCH_EVIDENCE.webSummary}</p>
-          <p className="mt-4 max-w-3xl text-sm leading-relaxed" style={{ color: T.quiet }}>{ASAM_SEARCH_EVIDENCE.limits}</p>
-          <Link href="/blog/ai-search-visibility-tracking#measure-ai-search-visibility" className="mt-5 inline-block font-semibold underline underline-offset-4" style={{ color: T.accentText }}>How to measure visibility, visits and enquiries separately</Link>
+          <h2 id="asam-workflow-call" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.6rem, 2.8vw, 2.2rem)", lineHeight: 1.1 }}>Still managing registrations, reminders and certificates by hand?</h2>
+          <p className="mt-4 max-w-[40rem] text-[16px] leading-[1.6]" style={{ color: T.onDarkQuiet }}>Show us how your training business works today. In a 15-minute call, we&apos;ll identify the steps worth connecting and whether a custom build makes sense.</p>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <CalModalButton fallbackHref={CAL_BOOKING_URL} className="cta-solid inline-flex items-center justify-center bg-[#EBE9E4] px-6 py-3.5 text-[15px] font-medium text-[#1C1917]">Book a workflow call</CalModalButton>
+            <QuoteModalButton cta="asam_workflow_process" location="a-step-above-medical" className="inline-flex items-center justify-center border border-[#EBE9E4] px-6 py-3.5 text-[15px] font-medium text-[#EBE9E4]">Send us your current process</QuoteModalButton>
+          </div>
         </div>
       </section>
-      <AStepAboveMedicalWalkthrough />
-      <PortalWorkflow project="medical" />
       <section aria-labelledby="asam-before-after" className="px-6 py-10 md:px-10 md:py-16">
         <div className="mx-auto max-w-[1100px]">
           <WorkCaseLabel className="mb-3">Before and after</WorkCaseLabel>
@@ -121,6 +120,24 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+      <AStepAboveMedicalWalkthrough />
+      <section id="search-visibility" aria-labelledby="asam-search-title" className="px-6 py-10 md:px-10 md:py-16" style={{ backgroundColor: T.paperHi }}>
+        <div className="mx-auto max-w-[1100px]">
+          <WorkCaseLabel className="mb-3">After launch / Search visibility</WorkCaseLabel>
+          <h2 id="asam-search-title" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.5rem)", lineHeight: 1.1, color: T.ink }}>More visibility in generative AI search after relaunch.</h2>
+          <p className="mt-4 max-w-3xl text-base leading-relaxed" style={{ color: T.body }}>{ASAM_SEARCH_EVIDENCE.summary}</p>
+          <dl className="mt-6 grid gap-6 sm:grid-cols-2">
+            {ASAM_SEARCH_EVIDENCE.aiSamples.map(sample => <div key={sample.date} className="border-t pt-4" style={{ borderColor: T.rule }}>
+              <dt className="text-sm" style={{ color: T.body }}>Generative AI impressions / <time dateTime={sample.date}>{sample.label}</time></dt>
+              <dd className="mt-2 text-4xl font-semibold" style={{ color: T.accentText }}>{sample.impressions}</dd>
+            </div>)}
+          </dl>
+          <AsamSearchEvidenceFigure />
+          <p className="mt-6 max-w-3xl text-base leading-relaxed" style={{ color: T.body }}>{ASAM_SEARCH_EVIDENCE.webSummary}</p>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed" style={{ color: T.quiet }}>{ASAM_SEARCH_EVIDENCE.limits}</p>
+          <Link href="/blog/ai-search-visibility-tracking#measure-ai-search-visibility" className="mt-5 inline-block font-semibold underline underline-offset-4" style={{ color: T.accentText }}>How to measure visibility, visits and enquiries separately</Link>
         </div>
       </section>
       <section aria-labelledby="asam-similar-systems" className="px-6 py-10 md:px-10 md:py-16">
