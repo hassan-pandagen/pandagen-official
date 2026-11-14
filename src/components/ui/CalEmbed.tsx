@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { hasConsent, useConsent } from "@/components/consent/ConsentProvider";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
-import { CAL_LINK } from "@/lib/booking";
+import { CAL_LINK, requestBookingAfterConsent, takePendingBooking } from "@/lib/booking";
 
 export default function CalEmbed() {
   const { preferences, openPreferences } = useConsent();
@@ -24,7 +24,7 @@ export default function CalEmbed() {
         window.dispatchEvent(new Event("open-quote-modal"));
         return;
       }
-      window.__calOpenPending = true;
+      requestBookingAfterConsent();
       openPreferences("calendar");
     };
 
@@ -67,8 +67,7 @@ export default function CalEmbed() {
         layout: "month_view",
       });
 
-      if (window.__calOpenPending) {
-        window.__calOpenPending = false;
+      if (takePendingBooking()) {
         cal("modal", { calLink, config: { layout: "month_view" } });
       }
     }

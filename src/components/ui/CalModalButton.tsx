@@ -2,7 +2,7 @@
 
 import { useCallback, ReactNode } from "react";
 import { useConsent } from "@/components/consent/ConsentProvider";
-import { CAL_LINK } from "@/lib/booking";
+import { CAL_LINK, requestBookingAfterConsent } from "@/lib/booking";
 
 interface CalModalButtonProps {
   children: ReactNode;
@@ -35,7 +35,7 @@ export default function CalModalButton({ children, className, fallbackHref }: Ca
       return;
     }
     if (!allowed) {
-      window.__calOpenPending = true;
+      requestBookingAfterConsent();
       openPreferences("calendar");
       return;
     }

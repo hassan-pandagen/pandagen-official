@@ -27,7 +27,7 @@ function harness(file) {
     '@/components/consent/ConsentProvider': { hasConsent: category => state.consent[category], useConsent: () => ({ preferences: state.consent, openPreferences() {} }) },
     '@/components/GoogleAnalytics': { trackGAEvent: (...args) => events.push(args) },
     '@calcom/embed-react': { getCalApi: async () => cal },
-    '@/lib/booking': { CAL_LINK: 'pandagen/discovery', CAL_BOOKING_URL: 'https://cal.com/pandagen/discovery' },
+    '@/lib/booking': { CAL_LINK: 'pandagen/discovery', CAL_BOOKING_URL: 'https://cal.com/pandagen/discovery', requestBookingAfterConsent() {}, takePendingBooking: () => false },
   };
   const exports = {};
   const output = ts.transpileModule(fs.readFileSync(file, 'utf8'), {
@@ -189,3 +189,15 @@ for (const method of ['captureLead', 'submitLead']) {
     }
   });
 }
+
+test('a booking asked for before consent opens once, and is dropped when the dialog is left without consent', () => {
+  const booking = loadModule('src/lib/booking.ts', {}, { process: { env: {} } });
+  assert.equal(booking.CAL_LINK, 'pandagen/discovery');
+  assert.equal(booking.takePendingBooking(), false);
+  booking.requestBookingAfterConsent();
+  assert.equal(booking.takePendingBooking(), true);
+  assert.equal(booking.takePendingBooking(), false, 'taken once');
+  booking.requestBookingAfterConsent();
+  booking.cancelPendingBooking();
+  assert.equal(booking.takePendingBooking(), false, 'closing the dialog without consent cancels it');
+});

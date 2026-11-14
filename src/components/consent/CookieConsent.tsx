@@ -4,8 +4,8 @@ import Link from "next/link";
 import { Cookie, X } from "lucide-react";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
-import { useConsent } from "./ConsentProvider";
-import { CAL_BOOKING_URL } from "@/lib/booking";
+import { hasConsent, useConsent } from "./ConsentProvider";
+import { CAL_BOOKING_URL, cancelPendingBooking } from "@/lib/booking";
 
 interface DraftChoices {
   analytics: boolean;
@@ -119,8 +119,12 @@ export default function CookieConsent() {
     }
   }, [preferencesOpen]);
 
+  // Also runs on the dialog's native close event, which fires after every way out, including
+  // "Allow scheduling". So a waiting booking is dropped only when scheduling is still off; the
+  // consent choice is already in window.__PCG_CONSENT__ by the time this runs (14 Nov 2026).
   const closeDialog = () => {
     setDraft(null);
+    if (!hasConsent("functional")) cancelPendingBooking();
     closePreferences();
   };
 
@@ -137,7 +141,7 @@ export default function CookieConsent() {
   // 14 Nov 2026 (Imran's brief): a visitor who keeps scheduling off still needs a
   // way to book or write to us. Both options below load nothing on our site.
   const leaveForContactForm = () => {
-    window.__calOpenPending = false;
+    cancelPendingBooking();
     closeDialog();
     window.dispatchEvent(new Event("open-quote-modal"));
   };
@@ -300,7 +304,7 @@ export default function CookieConsent() {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => {
-                        window.__calOpenPending = false;
+                        cancelPendingBooking();
                         closeDialog();
                       }}
                       className="inline-flex min-h-11 items-center justify-center rounded-full border border-stone-300 bg-white px-5 py-2.5 text-sm font-bold text-charcoal hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
