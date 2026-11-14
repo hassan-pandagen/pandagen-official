@@ -35,7 +35,7 @@ test('parses a bounded multipart quote and keeps phone and timing optional', asy
     primaryGoal: 'SEO-safe migration',
     trafficBand: '1,000–10,000',
     timeline: '1–3 months',
-    budget: '$3,500–$7,500',
+    budget: '$3,500–$4,999',
   }));
   assert.doesNotThrow(() => assertSameOriginQuoteRequest(request));
   const form = await readBoundedQuoteFormData(request);

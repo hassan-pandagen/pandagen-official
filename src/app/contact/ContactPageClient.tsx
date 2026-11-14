@@ -5,6 +5,7 @@ import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 
 import { ArrowDown, ArrowUpRight, CheckCircle2, ChevronDown, Mail, Phone, Send } from "lucide-react";
 import { PHONE } from "@/data/company-facts";
+import { BUDGET_RANGES } from "@/lib/forms/budgetRanges";
 import SocialLinks from "@/components/ui/SocialLinks";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +29,7 @@ const platforms = [
 ];
 
 const timelines = ["Within 30 days", "1–3 months", "3–6 months", "Researching"];
-const budgets = ["Under $3,500", "$3,500–$7,500", "$7,500–$15,000", "$15,000+", "Not sure"];
+const budgets = [...BUDGET_RANGES];
 
 const contactSchema = {
   "@context": "https://schema.org",

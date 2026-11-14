@@ -1,3 +1,9 @@
+import {
+  BUDGET_RANGES,
+  LEGACY_BUDGETS,
+// @ts-expect-error -- Node's strip-only test runner requires the explicit
+// extension; the application is type-checked with noEmit and bundled by Next.
+} from "./budgetRanges.ts";
 const MAX_QUOTE_REQUEST_BYTES = 128 * 1024;
 
 export class QuoteRequestError extends Error {
@@ -165,7 +171,7 @@ const ALLOWED_TRAFFIC_BANDS = new Set([
 ]);
 
 const ALLOWED_TIMELINES = new Set(["", "Within 30 days", "1–3 months", "3–6 months", "Researching"]);
-const ALLOWED_BUDGETS = new Set(["", "Under $3,500", "$3,500–$7,500", "$7,500–$15,000", "$15,000+", "Not sure"]);
+const ALLOWED_BUDGETS = new Set<string>(["", ...BUDGET_RANGES, ...LEGACY_BUDGETS]);
 
 /**
  * Accept a website the way a person types their own: "example.com".

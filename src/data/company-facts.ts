@@ -22,6 +22,7 @@
  */
 
 import { MIGRATION_PROJECT_DETAILS } from './migration-projects';
+import { BUDGET_TIER_STARTS } from '../lib/forms/budgetRanges';
 import { ASAM_SEARCH_EVIDENCE } from './asam-search-evidence';
 import { caseStudy } from './case-study-facts';
 import { aiOrders, aiRevenue, aiShareOfAll, corroboration, monthly, monthlyAiAverage, row, studyReadOnLabel, totalOrders, totalRevenue, usd, window_ } from './ai-referral-facts';
@@ -193,6 +194,14 @@ export function startingPrice(tier: 'Starter' | 'Growth' | 'Scale'): string {
     const price = COMMERCIAL.find((fact) => fact.label === tier)?.value.match(/From (\$[\d,]+)/)?.[1];
     if (!price) throw new Error(`Missing starting price for ${tier} in COMMERCIAL`);
     return price;
+}
+
+// 14 Nov 2026: the contact form's budget ranges start at the tier prices. Fail the
+// build if a tier price changes here without src/lib/forms/budgetRanges.ts.
+for (const [tier, start] of Object.entries(BUDGET_TIER_STARTS) as ['Starter' | 'Growth' | 'Scale', number][]) {
+    if (startingPrice(tier) !== `$${start.toLocaleString('en-US')}`) {
+        throw new Error(`Budget ranges are out of date: ${tier} starts at ${startingPrice(tier)} in COMMERCIAL but ${start} in budgetRanges.ts`);
+    }
 }
 
 export const BEST_FIT: readonly string[] = [
