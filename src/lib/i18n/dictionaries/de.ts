@@ -36,19 +36,24 @@ const de: Dictionary = {
 
   home: {
     meta: {
-      title: "Webdesign und Onlineshop-Entwicklung | PandaCodeGen",
+      // 14 Nov 2026: follows the English homepage lead (websites and business systems).
+      title: "Websites und Business-Systeme | PandaCodeGen",
       description:
-        "WordPress-Websites, individuelle Websites und Onlineshops. Direkt mit den Gründern, mit schriftlichem Angebot und einer Live-Einführung in die Bearbeitung.",
+        "Websites und Business-Systeme direkt mit den Gründern: Portale, Buchungen, Zahlungen und Verwaltung. Individuelle Websites ab 1.500 $. Der Code gehört Ihnen.",
     },
     hero: {
-      eyebrow: "Content-Editor · Einführung · Code, der Ihnen gehört",
-      title: "Websites, die zu Ihrer",
-      titleAccent: "Arbeitsweise passen.",
+      eyebrow: "Fester Umfang · Mit den Gründern · Kein Pflicht-Abo",
+      title: "Websites und Business-Systeme, die",
+      titleAccent: "manuelle Arbeit sparen.",
       lead:
-        "Eine einfache WordPress-Website, ein Onlineshop oder ein individuelles Projekt: Sprechen Sie direkt mit Hassan und Imran. Wir helfen bei der Auswahl, vereinbaren den Preis und zeigen Ihnen in einer Live-Demo und schriftlichen Anleitung, wie Sie Ihre Inhalte bearbeiten.",
+        "Arbeiten Sie direkt mit Hassan und Imran an einer Website, einem Kundenportal oder einem verbundenen Arbeitsablauf, der zu Ihrem Unternehmen passt. Bündeln Sie Buchungen, Zahlungen und die tägliche Verwaltung, mit vereinbartem Umfang, klaren laufenden Kosten und individuellem Code, der Ihnen gehört. Individuelle Websites ab 1.500 $; WordPress nach Umfang.",
+    },
+    heroActions: {
+      system: "Das Schulungssystem ansehen",
+      call: "15-Minuten-Gespräch buchen",
     },
     summary:
-      "PandaCodeGen erstellt WordPress-Websites, wenn sie zum Vorhaben passen, sowie individuelle Websites und Software. Die Gründer begleiten neue Projekte, Verbesserungen und Migrationen. Seiten, Funktionen, Zugänge, laufende Kosten und Übergabe werden vor Arbeitsbeginn vereinbart.",
+      "PandaCodeGen erstellt Websites und Business-Systeme: Kundenportale, Online-Buchung und Zahlungen sowie verbundene Verwaltungsabläufe. Außerdem erstellen wir WordPress-Websites, wenn sie zum Vorhaben passen, sowie individuelle Websites und Software. Die Gründer begleiten neue Projekte, Verbesserungen und Migrationen. Seiten, Funktionen, Zugänge, laufende Kosten und Übergabe werden vor Arbeitsbeginn vereinbart.",
     sections: [
       {
         title: "Ein Zeitplan für Ihr Projekt",
@@ -778,7 +783,7 @@ const de: Dictionary = {
     directHeading: "Lieber direkt sprechen?",
     directBody:
       "Schreiben Sie uns oder buchen Sie einen Termin. Beides erreicht die Gründer direkt, nicht ein Vertriebsteam.",
-    bookLabel: "Kennenlerngespräch buchen",
+    bookLabel: "15-Minuten-Gespräch buchen",
     errorFallback: `Wir konnten Ihre Anfrage nicht senden. Bitte schreiben Sie an info@pandacodegen.com oder rufen Sie ${PHONE.display} an.`,
     honeypotLabel: "Dieses Feld bitte leer lassen",
     replyNote:

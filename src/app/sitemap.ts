@@ -140,8 +140,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Home hosting policy and pricing/support refreshed in both locales, 29 Oct 2026.
+  // Home hero, meta and summary moved to the websites-and-business-systems lead, 14 Nov 2026.
   const localeContentDates: Partial<Record<LocalizedPage, string>> = {
-    home: '2026-10-29',
+    home: '2026-11-14',
     services: '2026-10-08',
     pricing: '2026-10-29',
     about: '2026-10-08',

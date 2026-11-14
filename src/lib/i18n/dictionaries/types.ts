@@ -86,6 +86,8 @@ export interface ReviewQuote {
 }
 
 export interface HomeContent extends PageContent {
+  /** 14 Nov 2026: hero buttons, as on the English homepage (training system, 15-minute call). */
+  heroActions: { system: string; call: string };
   /** Migration continuity ledger, the "what must survive the move" block. */
   continuity: {
     eyebrow: string;

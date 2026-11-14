@@ -13,6 +13,8 @@ import {
 } from "@/lib/i18n/config";
 import { getDictionary, type TranslatedLocale } from "@/lib/i18n/dictionaries";
 import HeroLeadForm from "@/components/forms/HeroLeadForm";
+import CalModalButton from "@/components/ui/CalModalButton";
+import { CAL_BOOKING_URL } from "@/lib/booking";
 import FaqRows from "@/components/ui/FaqRows";
 import type { PricingContent, ContactContent, HomeContent } from "@/lib/i18n/dictionaries/types";
 import LocaleSwitcher from "./LocaleSwitcher";
@@ -79,7 +81,7 @@ export default function LocalePage({
           />
           <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="max-w-2xl">
-              <p className="mb-5 inline-flex min-h-8 items-center rounded-full border border-stone-300 bg-white px-4 text-sm font-semibold text-stone-700">
+              <p className="mb-5 inline-flex min-h-8 items-center rounded-2xl border border-stone-300 bg-white px-4 py-1 text-sm font-semibold text-stone-700">
                 {content.hero.eyebrow}
               </p>
               <h1
@@ -96,20 +98,22 @@ export default function LocalePage({
                   wrap where English does not. text-balance splits them at an even
                   phrase boundary instead of orphaning a single word, and the shared
                   basis keeps both buttons the same width. */}
+              {/* 14 Nov 2026: the same two actions as the English hero. The case
+                  study is English-only, as the language note on these pages says. */}
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Link
-                  href={routes.contact[locale]}
+                  href="/work/a-step-above-medical"
                   className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 text-balance rounded-2xl bg-charcoal px-6 py-3 text-center font-bold leading-snug text-white transition-colors hover:bg-cognac sm:basis-0"
                 >
-                  <span>{dict.common.ctaPrimary}</span>
+                  <span>{home.heroActions.system}</span>
                   <ArrowRight className="h-4 w-4 shrink-0" aria-hidden="true" />
                 </Link>
-                <Link
-                  href={routes.pricing[locale]}
+                <CalModalButton
+                  fallbackHref={CAL_BOOKING_URL}
                   className="inline-flex min-h-12 flex-1 items-center justify-center text-balance rounded-2xl border border-stone-400 bg-white px-6 py-3 text-center font-bold leading-snug text-charcoal transition-colors hover:border-charcoal sm:basis-0"
                 >
-                  {dict.common.ctaSecondary}
-                </Link>
+                  {home.heroActions.call}
+                </CalModalButton>
               </div>
             </div>
 

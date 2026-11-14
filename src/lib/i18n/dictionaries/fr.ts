@@ -36,19 +36,24 @@ const fr: Dictionary = {
 
   home: {
     meta: {
-      title: "Création de sites web et boutiques en ligne | PandaCodeGen",
+      // 14 Nov 2026: follows the English homepage lead (websites and business systems).
+      title: "Sites web et systèmes de gestion | PandaCodeGen",
       description:
-        "Sites WordPress, sites sur mesure et boutiques en ligne. Travaillez directement avec les fondateurs, avec un devis écrit et une démonstration de votre éditeur.",
+        "Sites web et systèmes de gestion avec les fondateurs : portails, réservations, paiements et administration. Sites sur mesure dès 1 500 $. Le code est à vous.",
     },
     hero: {
-      eyebrow: "Contenu modifiable · Code qui vous appartient",
-      title: "Des sites web conçus pour",
-      titleAccent: "votre façon de travailler.",
+      eyebrow: "Périmètre fixe · Avec les fondateurs · Sans abonnement obligatoire",
+      title: "Des sites web et des systèmes de gestion qui réduisent",
+      titleAccent: "le travail manuel.",
       lead:
-        "Un site WordPress simple, une boutique en ligne ou un projet sur mesure : parlez-en directement à Hassan et Imran. Nous vous aidons à choisir, convenons du prix et vous montrons comment modifier votre contenu, avec une démonstration en direct et des instructions écrites.",
+        "Travaillez directement avec Hassan et Imran sur un site web, un portail client ou un flux de travail connecté, conçu autour de votre activité. Réunissez réservations, paiements et tâches administratives, avec un périmètre convenu, des coûts de fonctionnement clairs et un code sur mesure qui vous appartient. Sites sur mesure à partir de 1 500 $ ; WordPress chiffré selon le périmètre.",
+    },
+    heroActions: {
+      system: "Voir le système de formation",
+      call: "Réserver un appel de 15 minutes",
     },
     summary:
-      "PandaCodeGen crée des sites WordPress lorsque cette solution convient, ainsi que des sites et logiciels sur mesure. Les fondateurs vous accompagnent pour une création, une amélioration ou une migration. Les pages, fonctionnalités, accès, coûts de fonctionnement et étapes de remise sont convenus avant les travaux.",
+      "PandaCodeGen crée des sites web et des systèmes de gestion : portails clients, réservation et paiement en ligne, et flux administratifs connectés. Nous créons aussi des sites WordPress lorsque cette solution convient, ainsi que des sites et logiciels sur mesure. Les fondateurs vous accompagnent pour une création, une amélioration ou une migration. Les pages, fonctionnalités, accès, coûts de fonctionnement et étapes de remise sont convenus avant les travaux.",
     sections: [
       {
         title: "Des semaines, pas des mois",
@@ -778,7 +783,7 @@ const fr: Dictionary = {
     directHeading: "Vous préférez échanger de vive voix ?",
     directBody:
       "Écrivez-nous ou réservez un appel. Les deux arrivent directement aux fondateurs, pas à un service commercial.",
-    bookLabel: "Réserver un appel de découverte",
+    bookLabel: "Réserver un appel de 15 minutes",
     errorFallback: `Nous n'avons pas pu envoyer votre demande. Écrivez-nous à info@pandacodegen.com ou appelez le ${PHONE.display}.`,
     honeypotLabel: "Laissez ce champ vide",
     replyNote:
