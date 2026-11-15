@@ -299,7 +299,7 @@ export default function WordPressAiSecurityRiskPage() {
                                     <td className="p-4">Open the linked record for the patched version, then update past it</td>
                                 </tr>
                                 <tr>
-                                    <td className="p-4 font-bold"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0746" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">CVE-2026-0746</a></td>
+                                    <td className="p-4 font-bold"><a href="https://nvd.nist.gov/vuln/detail/cve-2026-0746" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">CVE-2026-0746</a></td>
                                     <td className="p-4">3.3.2 and earlier</td>
                                     <td className="p-4">Authenticated Subscriber or higher, with the plugin&apos;s Public API enabled and allow_url_fopen on at the server</td>
                                     <td className="p-4">Open the linked record for the patched version, then update past it</td>

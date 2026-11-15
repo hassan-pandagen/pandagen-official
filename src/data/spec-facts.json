@@ -498,7 +498,7 @@
       "value": "CVSS 9.8, critical",
       "qualifier": "Authentication bypass in the SAML Single Sign On plugin. mo_saml_validate_signature() runs a loose boolean check on the tri-state integer from PHP's openssl_verify(), so an error return of -1 evaluates as truthy and is treated as a valid signature. Affects free-edition versions up to and including 5.4.4; patched in 5.4.5. Score assigned by Wordfence as CNA",
       "verifiedAt": "2026-08-26",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-15981"
+      "source": "https://nvd.nist.gov/vuln/detail/cve-2026-15981"
     },
     "wp-saml-cve-61979": {
       "vendor": "miniOrange",
