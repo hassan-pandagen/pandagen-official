@@ -281,7 +281,7 @@ const articleSchema = {
                 { "@type": "Thing", name: "Data portability", sameAs: ["https://en.wikipedia.org/wiki/Data_portability"] },
                 { "@type": "Thing", name: "Website builder" },
             ],
-            mentions: ORDER.map((id) => ({ "@type": "SoftwareApplication", name: name(id) })),
+            mentions: ORDER.map((id) => ({ "@type": "Thing", name: name(id) })),
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: SOURCES.map((url) => ({ "@type": "CreativeWork", url })),
         },

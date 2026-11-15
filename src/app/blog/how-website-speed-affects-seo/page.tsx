@@ -80,7 +80,7 @@ const articleSchema = {
             about: [
                 { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
                 { "@type": "Thing", name: "Core Web Vitals", sameAs: ["https://en.wikipedia.org/wiki/Core_Web_Vitals"] },
-                { "@type": "SoftwareApplication", name: "Lighthouse", sameAs: ["https://en.wikipedia.org/wiki/Lighthouse_(software)"] },
+                { "@type": "Thing", name: "Lighthouse", sameAs: ["https://en.wikipedia.org/wiki/Lighthouse_(software)"] },
             ],
             wordCount: 2013,
             timeRequired: "PT10M",

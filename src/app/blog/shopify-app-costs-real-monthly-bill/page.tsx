@@ -113,7 +113,7 @@ const articleSchema = {
             about: [
                 { "@type": "Thing", name: "Shopify app costs" },
                 { "@type": "Thing", name: "Software subscription auditing" },
-                { "@type": "SoftwareApplication", name: "Shopify", sameAs: ["https://en.wikipedia.org/wiki/Shopify", "https://www.shopify.com"] },
+                { "@type": "Thing", name: "Shopify", sameAs: ["https://en.wikipedia.org/wiki/Shopify", "https://www.shopify.com"] },
                 { "@type": "Thing", name: "Core Web Vitals" },
             ],
             inLanguage: "en-US",

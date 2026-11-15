@@ -79,9 +79,9 @@ const caseStudySchema = {
                 { "@type": "Thing", "name": "SEO Preservation During Migration" },
                 { "@type": "Thing", "name": "Headless Commerce Architecture" },
                 { "@type": "Thing", "name": "Real-Time Pricing Engine" },
-                { "@type": "SoftwareApplication", "name": "Sanity CMS" },
-                { "@type": "SoftwareApplication", "name": "Supabase" },
-                { "@type": "SoftwareApplication", "name": "Square" }
+                { "@type": "Thing", "name": "Sanity CMS" },
+                { "@type": "Thing", "name": "Supabase" },
+                { "@type": "Thing", "name": "Square" }
             ],
             "author": {
                 "@type": "Person",

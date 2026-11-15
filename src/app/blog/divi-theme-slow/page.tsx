@@ -84,9 +84,9 @@ const articleSchema = {
             wordCount: 2755,
             timeRequired: "PT14M",
             about: [
-                { "@type": "SoftwareApplication", name: "Divi", sameAs: ["https://www.elegantthemes.com/gallery/divi/"] },
+                { "@type": "Thing", name: "Divi", sameAs: ["https://www.elegantthemes.com/gallery/divi/"] },
                 { "@type": "Organization", name: "Elegant Themes", sameAs: ["https://www.elegantthemes.com"] },
-                { "@type": "SoftwareApplication", name: "WordPress", sameAs: ["https://en.wikipedia.org/wiki/WordPress", "https://wordpress.org"] },
+                { "@type": "Thing", name: "WordPress", sameAs: ["https://en.wikipedia.org/wiki/WordPress", "https://wordpress.org"] },
                 { "@type": "Thing", name: "Core Web Vitals", sameAs: "https://web.dev/articles/vitals" },
             ],
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable=\'true\']"] },

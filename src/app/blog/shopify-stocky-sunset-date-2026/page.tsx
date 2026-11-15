@@ -89,7 +89,7 @@ const articleSchema = {
             articleSection: "Shopify operations",
             inLanguage: "en-US",
             about: [
-                { "@type": "SoftwareApplication", name: "Shopify", sameAs: ["https://en.wikipedia.org/wiki/Shopify"] },
+                { "@type": "Thing", name: "Shopify", sameAs: ["https://en.wikipedia.org/wiki/Shopify"] },
                 { "@type": "Thing", name: "Ecommerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
                 { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
             ],

@@ -74,8 +74,8 @@ const articleSchema = {
             "wordCount": 5184,
             "about": [
                 {"@type": "Thing", "name": "Website Hosting Costs", "sameAs": "https://en.wikipedia.org/wiki/Web_hosting_service"},
-                {"@type": "SoftwareApplication", "name": "Vercel", "sameAs": ["https://en.wikipedia.org/wiki/Vercel", "https://vercel.com"]},
-                {"@type": "SoftwareApplication", "name": "Next.js", "sameAs": ["https://en.wikipedia.org/wiki/Next.js", "https://nextjs.org"]},
+                {"@type": "Thing", "name": "Vercel", "sameAs": ["https://en.wikipedia.org/wiki/Vercel", "https://vercel.com"]},
+                {"@type": "Thing", "name": "Next.js", "sameAs": ["https://en.wikipedia.org/wiki/Next.js", "https://nextjs.org"]},
                 {"@type": "Thing", "name": "Static Site Generation", "sameAs": "https://en.wikipedia.org/wiki/Static_web_page"}
             ],
             "inLanguage": "en-US",

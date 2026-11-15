@@ -85,7 +85,7 @@ const articleSchema = {
             "about": [
                 { "@type": "Thing", "name": "llms.txt" },
                 { "@type": "Thing", "name": "Answer Engine Optimization" },
-                { "@type": "SoftwareApplication", "name": "Google Search", "sameAs": ["https://www.google.com"] },
+                { "@type": "Thing", "name": "Google Search", "sameAs": ["https://www.google.com"] },
                 { "@type": "Thing", "name": "Web crawler", "sameAs": ["https://en.wikipedia.org/wiki/Web_crawler"] }
             ],
             "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] },

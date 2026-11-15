@@ -80,7 +80,7 @@ const articleSchema = {
             articleSection: "Wix performance",
             inLanguage: "en-US",
             about: [
-                { "@type": "SoftwareApplication", name: "Wix", sameAs: ["https://en.wikipedia.org/wiki/Wix.com"] },
+                { "@type": "Thing", name: "Wix", sameAs: ["https://en.wikipedia.org/wiki/Wix.com"] },
                 { "@type": "Thing", name: "Website builder", sameAs: ["https://en.wikipedia.org/wiki/Website_builder"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],

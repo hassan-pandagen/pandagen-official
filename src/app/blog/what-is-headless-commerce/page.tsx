@@ -94,7 +94,7 @@ const articleSchema = {
             inLanguage: "en-US",
             about: [
                 { "@type": "Thing", name: "Headless commerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
-                { "@type": "SoftwareApplication", name: "Shopify", sameAs: ["https://en.wikipedia.org/wiki/Shopify", "https://www.shopify.com"] },
+                { "@type": "Thing", name: "Shopify", sameAs: ["https://en.wikipedia.org/wiki/Shopify", "https://www.shopify.com"] },
                 { "@type": "Thing", name: "Application programming interface", sameAs: ["https://en.wikipedia.org/wiki/API"] },
             ],
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },

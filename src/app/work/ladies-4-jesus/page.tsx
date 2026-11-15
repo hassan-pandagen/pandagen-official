@@ -80,7 +80,7 @@ const caseStudySchema = {
             timeRequired: "PT7M",
             about: [
                 { "@type": "Thing", name: "Content moderation" },
-                { "@type": "SoftwareApplication", name: "Sanity", sameAs: ["https://www.sanity.io"] },
+                { "@type": "Thing", name: "Sanity", sameAs: ["https://www.sanity.io"] },
                 { "@type": "Thing", name: "Next.js", sameAs: ["https://nextjs.org"] },
             ],
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },

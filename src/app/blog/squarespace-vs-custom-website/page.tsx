@@ -94,7 +94,7 @@ const articleSchema = {
             articleSection: "Website platforms",
             inLanguage: "en-US",
             about: [
-                { "@type": "SoftwareApplication", name: "Squarespace", sameAs: ["https://en.wikipedia.org/wiki/Squarespace"] },
+                { "@type": "Thing", name: "Squarespace", sameAs: ["https://en.wikipedia.org/wiki/Squarespace"] },
                 { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
                 { "@type": "Thing", name: "Website builder", sameAs: ["https://en.wikipedia.org/wiki/Website_builder"] },
             ],

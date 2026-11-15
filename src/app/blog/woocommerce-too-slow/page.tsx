@@ -95,8 +95,8 @@ const articleSchema = {
             timeRequired: "PT25M",
             inLanguage: "en-US",
             about: [
-                { "@type": "SoftwareApplication", name: "WooCommerce", sameAs: ["https://en.wikipedia.org/wiki/WooCommerce", "https://woocommerce.com"] },
-                { "@type": "SoftwareApplication", name: "WordPress", sameAs: ["https://en.wikipedia.org/wiki/WordPress", "https://wordpress.org"] },
+                { "@type": "Thing", name: "WooCommerce", sameAs: ["https://en.wikipedia.org/wiki/WooCommerce", "https://woocommerce.com"] },
+                { "@type": "Thing", name: "WordPress", sameAs: ["https://en.wikipedia.org/wiki/WordPress", "https://wordpress.org"] },
                 { "@type": "Thing", name: "Core Web Vitals", sameAs: "https://web.dev/articles/vitals" },
                 { "@type": "Thing", name: "Headless commerce", sameAs: "https://en.wikipedia.org/wiki/Headless_content_management_system" },
             ],

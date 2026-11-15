@@ -106,12 +106,11 @@ const articleSchema = {
             ],
             "about": [
                 {
-                    "@type": "SoftwareApplication",
+                    "@type": "Thing",
                     "name": "EmDash",
-                    "applicationCategory": "Content management system",
-                    "operatingSystem": "Cloudflare Workers or compatible Node.js environment",
+                    "description": "Content management system that runs on Cloudflare Workers or a compatible Node.js environment",
                 },
-                { "@type": "SoftwareApplication", "name": "WordPress", "applicationCategory": "Content management system" },
+                { "@type": "Thing", "name": "WordPress", "description": "Content management system" },
                 { "@type": "Thing", "name": "Website migration" },
                 { "@type": "Thing", "name": "Core Web Vitals" },
             ],

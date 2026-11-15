@@ -83,7 +83,7 @@ const articleSchema = {
             articleSection: "Website platforms",
             inLanguage: "en-US",
             about: [
-                { "@type": "SoftwareApplication", name: "Webflow", sameAs: ["https://en.wikipedia.org/wiki/Webflow"] },
+                { "@type": "Thing", name: "Webflow", sameAs: ["https://en.wikipedia.org/wiki/Webflow"] },
                 { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],

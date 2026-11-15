@@ -107,10 +107,10 @@ const articleSchema = {
             timeRequired: "PT23M",
             inLanguage: "en-US",
             about: [
-                { "@type": "SoftwareApplication", name: "HighLevel", alternateName: "GoHighLevel", sameAs: "https://www.gohighlevel.com" },
+                { "@type": "Thing", name: "HighLevel", alternateName: "GoHighLevel", sameAs: "https://www.gohighlevel.com" },
                 { "@type": "Thing", name: "Core Web Vitals", sameAs: "https://web.dev/vitals/" },
                 { "@type": "Thing", name: "Website performance optimization", sameAs: "https://en.wikipedia.org/wiki/Web_performance" },
-                { "@type": "SoftwareApplication", name: "Next.js", sameAs: ["https://en.wikipedia.org/wiki/Next.js", "https://nextjs.org"] },
+                { "@type": "Thing", name: "Next.js", sameAs: ["https://en.wikipedia.org/wiki/Next.js", "https://nextjs.org"] },
             ],
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
