@@ -70,7 +70,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         slug: 'wordpress',
         shortLabel: 'WordPress',
         h1: 'WordPress Migration Guides',
-        title: 'WordPress Migration Guides: Moving Off WordPress to Custom Code',
+        title: 'WordPress to Custom Code Migration Guides',
         description:
             'Guides to moving WordPress to a custom Next.js build: what it costs, how long it takes, what breaks, and whether the move is worth it at all.',
         moneyAnchor: 'our WordPress migration service',
@@ -86,7 +86,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         slug: 'shopify',
         shortLabel: 'Shopify',
         h1: 'Shopify Speed and Migration Guides',
-        title: 'Shopify Speed and Migration Guides: Themes, Apps and Headless',
+        title: 'Shopify Speed, Apps and Headless Guides',
         description:
             'Guides to Shopify store performance: what your app stack costs, why themes slow down, when headless is justified and when a standard theme is better.',
         moneyAnchor: 'our commerce engineering service',
@@ -102,7 +102,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         slug: 'webflow',
         shortLabel: 'Webflow',
         h1: 'Webflow Migration Guides',
-        title: 'Webflow Migration Guides: Costs, CMS Limits and Moving to Next.js',
+        title: 'Webflow Migration Guides: Costs and CMS Limits',
         description:
             'Guides to Webflow costs, CMS and integration requirements, platform alternatives, and what moving to a custom Next.js website involves.',
         moneyAnchor: 'our Webflow optimization and migration service',
@@ -118,7 +118,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         slug: 'squarespace',
         shortLabel: 'Squarespace',
         h1: 'Squarespace Migration Guides',
-        title: 'Squarespace Migration Guides: SEO Limits, Speed and Moving Off',
+        title: 'Squarespace Migration Guides: SEO and Speed',
         description:
             'Guides to Squarespace limits: what you can control in markup and schema, why templates hit a ceiling, and what moving to a custom build involves.',
         moneyAnchor: 'our Squarespace migration service',
@@ -134,7 +134,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         slug: 'custom-development',
         shortLabel: 'Custom Development',
         h1: 'Custom Website Development Guides',
-        title: 'Custom Website Development Guides: Scope, Timelines and Ownership',
+        title: 'Custom Website Builds: Scope and Ownership',
         description:
             'Guides to commissioning custom web development: what a budget includes, how long a build takes, build versus buy, and who owns the result.',
         moneyAnchor: 'our custom engineering service',
@@ -150,7 +150,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         slug: 'agencies',
         shortLabel: 'For Agencies',
         h1: 'Web Development Partnership Guides for Agencies',
-        title: 'Agency Web Development Partnerships: Scope, Handover and White Label',
+        title: 'White Label Web Development for Agencies',
         description:
             'Guides for agencies choosing and managing web development partners: delivery models, scope, handover, confidentiality and white-label work.',
         moneyAnchor: 'our agency partnership terms',
@@ -167,7 +167,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         slug: 'website-speed',
         shortLabel: 'Speed & Core Web Vitals',
         h1: 'Website Speed and Core Web Vitals Guides',
-        title: 'Website Speed and Core Web Vitals Guides: Diagnosis and Fixes',
+        title: 'Website Speed and Core Web Vitals Guides',
         description:
             'Guides on diagnosing a slow website: reading lab and field data correctly, finding which layer is actually slow, and choosing fixes that hold up on a real page.',
         moneyAnchor: 'a free performance audit of your own site',
@@ -184,7 +184,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         slug: 'website-cost',
         shortLabel: 'Cost & SaaS Spend',
         h1: 'Website Cost and SaaS Spend Guides',
-        title: 'Website Cost and SaaS Spend Guides: What Builds and Software Cost',
+        title: 'Website Cost and SaaS Spend Guides',
         description:
             'Guides to what websites and software cost: build and redesign pricing, three-year running cost, SaaS price increases and auditing a subscription stack.',
         moneyAnchor: 'our published pricing tiers',
@@ -201,7 +201,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         slug: 'website-migration',
         shortLabel: 'Migration',
         h1: 'Website Migration Guides',
-        title: 'Website Migration Guides: Cost, SEO Risk and Platform Moves',
+        title: 'Website Migration Guides: Cost and SEO Risk',
         description:
             'Website migration guides: what moving off seven platforms costs, how to protect search visibility, and what to inventory before cutover.',
         // Names the destination. The cluster deliberately shares the WordPress
@@ -221,7 +221,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         slug: 'seo-and-ai-search',
         shortLabel: 'SEO & AI Search',
         h1: 'SEO and AI Search Guides',
-        title: 'SEO and AI Search Guides: Answer Engines, Schema and Indexing',
+        title: 'SEO, AI Search and Schema Guides',
         description:
             'Guides to search and AI answer engines: what structured data and llms.txt really do, why competitors outrank you, and why a site may not be indexed.',
         moneyAnchor: 'our AI SEO services',
@@ -245,7 +245,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         slug: 'ecommerce',
         shortLabel: 'Ecommerce & Tracking',
         h1: 'Ecommerce Strategy and Ad Tracking Guides',
-        title: 'Ecommerce Strategy and Ad Tracking Guides: Headless, Speed, Attribution',
+        title: 'Ecommerce Speed and Ad Tracking Guides',
         description:
             'Guides to ecommerce architecture and measurement: what headless commerce is, how store speed relates to conversion, and why ad platforms and analytics disagree.',
         moneyAnchor: 'our commerce engineering service',

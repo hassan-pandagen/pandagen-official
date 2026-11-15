@@ -10,7 +10,7 @@ const description =
     MIGRATION_PROJECT_DETAILS.ladies4Jesus.summary;
 
 export const metadata: Metadata = {
-    title: { absolute: `${title} | PandaCodeGen` },
+    title: { absolute: "Ladies 4 Jesus Case Study: A Moderated Community | PandaCodeGen" },
     description,
     openGraph: {
         title: "Ladies 4 Jesus: A Moderated Community an Owner Runs Alone",

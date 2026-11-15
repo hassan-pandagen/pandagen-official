@@ -4,7 +4,7 @@ import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
   title: { absolute: "Privacy Policy | PandaCodeGen" },
-  description: "How PandaCodeGen collects, uses, and protects your data. Last updated November 13, 2026.",
+  description: "How PandaCodeGen collects, uses, shares and protects your data, including forms, chat and cookies, and your GDPR and CCPA rights. Last updated November 13, 2026.",
   alternates: { canonical: "/privacy" },
   openGraph: {
     title: "Privacy Policy | PandaCodeGen",

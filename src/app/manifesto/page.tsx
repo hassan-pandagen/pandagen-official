@@ -6,7 +6,7 @@ import { ogImageForPath } from "@/lib/seo/og";
 import { PORTABILITY_GUIDE } from "@/data/platform-portability";
 
 export const metadata: Metadata = {
-  title: "The PandaCodeGen Manifesto | Why We Build The Way We Build",
+  title: { absolute: "The PandaCodeGen Manifesto: Why We Build This Way" },
   description: "The principles behind PandaCodeGen: diagnose before rebuilding, agree a written scope, and make quality and handover checkable.",
   alternates: { canonical: "/manifesto" },
   openGraph: {

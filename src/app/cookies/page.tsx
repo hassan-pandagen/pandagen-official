@@ -5,7 +5,7 @@ import CookieSettingsButton from "@/components/consent/CookieSettingsButton";
 
 export const metadata: Metadata = {
   title: { absolute: "Cookie Policy | PandaCodeGen" },
-  description: "How PandaCodeGen uses cookies and similar technologies. Last updated October 22, 2026.",
+  description: "How PandaCodeGen uses cookies and similar technologies, the categories and current tools, and how to change your choices. Last updated October 22, 2026.",
   alternates: { canonical: "/cookies" },
   openGraph: {
     title: "Cookie Policy | PandaCodeGen",

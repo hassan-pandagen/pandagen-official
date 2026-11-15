@@ -14,7 +14,7 @@ const description =
   "A motion-led website for a firm that designs connected commercial security systems and runs a 12-service back office. Independent client; no speed figures.";
 
 export const metadata: Metadata = {
-  title: { absolute: `${title} | PandaCodeGen` },
+  title: { absolute: "NorthDeck Group: Security and Back-Office Website | PandaCodeGen" },
   description,
   robots: { index: true, follow: true },
   openGraph: {

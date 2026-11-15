@@ -9,7 +9,7 @@ const description =
     "A material-led product catalogue and quote experience for a custom patch studio: 22 product types from one typed registry. Build record, no traffic claims.";
 
 export const metadata: Metadata = {
-    title: { absolute: `${title} | PandaCodeGen` },
+    title: { absolute: "Emblematic Studio: One Catalogue, 22 Products | PandaCodeGen" },
     description,
     keywords: [
         "custom patch website design",
