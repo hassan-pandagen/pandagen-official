@@ -59,7 +59,7 @@ const sources = [
     { name: "WooCommerce order and customer export", url: "https://woocommerce.com/document/ordercustomer-csv-export/" },
     { name: "WooCommerce REST API", url: "https://developer.woocommerce.com/docs/apis/rest-api/" },
     { name: "WooCommerce webhooks", url: "https://woocommerce.com/document/webhooks/" },
-    { name: "WooCommerce HPOS", url: "https://developer.woocommerce.com/docs/features/high-performance-order-storage" },
+    { name: "WooCommerce HPOS", url: "https://developer.woocommerce.com/docs/features/orders/high-performance-order-storage/" },
 ];
 
 const articleSchema = {

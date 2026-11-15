@@ -60,7 +60,7 @@ const sources = [
     },
     {
         name: "Squarespace export documentation",
-        url: "https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site",
+        url: "https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content",
     },
     {
         name: "Squarespace performance guidance",

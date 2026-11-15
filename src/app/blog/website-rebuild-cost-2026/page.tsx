@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 
 const sources = [
     { name: "WCAG 2.2", url: "https://www.w3.org/TR/WCAG22/" },
-    { name: "OWASP ASVS", url: "https://owasp.org/www-project-application-security-verification-standard/" },
+    { name: "OWASP ASVS", url: "https://owasp.org/www-project-application-security-verification-standard" },
 ];
 
 const articleSchema = {

@@ -59,7 +59,7 @@ const sources = [
     { name: "WooCommerce product CSV", url: "https://woocommerce.com/document/product-csv-importer-exporter/" },
     { name: "Webflow code export", url: "https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code" },
     { name: "Wix support: CMS and content export", url: "https://support.wix.com/en" },
-    { name: "Squarespace export", url: "https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site" },
+    { name: "Squarespace export", url: "https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content" },
     { name: "Shopify product export", url: "https://help.shopify.com/en/manual/products/import-export/export-products" },
     { name: "HighLevel API", url: "https://marketplace.gohighlevel.com/docs/" },
 ];

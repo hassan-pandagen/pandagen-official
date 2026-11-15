@@ -455,7 +455,7 @@ export default function ShopifySpeedOptimizationPage() {
                             </div>
 
                             <BlogText>
-                                Shopify&apos;s Hydrogen framework provides official patterns for responsive images, prefetching, caching, and deployment, but its <a href="https://shopify.dev/docs/storefronts/headless/hydrogen/production-checklist" target="_blank" rel="noopener noreferrer" className={sourceLink}>production checklist</a> still requires performance, analytics, redirect, monitoring, and launch work. Choose headless for a documented business and architecture case, not because someone promised a fixed score.
+                                Shopify&apos;s Hydrogen framework provides official patterns for responsive images, prefetching, caching, and deployment, but its <a href="https://shopify.dev/docs/storefronts/headless/legacy/hydrogen/production-checklist" target="_blank" rel="noopener noreferrer" className={sourceLink}>production checklist</a> still requires performance, analytics, redirect, monitoring, and launch work. Choose headless for a documented business and architecture case, not because someone promised a fixed score.
                             </BlogText>
 
                             <BlogQuote>

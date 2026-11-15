@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 
 const sources = [
     { name: "Shopify pricing", url: "https://www.shopify.com/pricing" },
-    { name: "Shopify Plus pricing and features", url: "https://www.shopify.com/plus/pricing" },
+    { name: "Shopify Plus pricing and features", url: "https://www.shopify.com/pricing" },
     {
         name: "Shopify web performance reports",
         url: "https://help.shopify.com/en/manual/online-store/web-performance/web-performance-reports",

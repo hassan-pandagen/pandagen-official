@@ -66,7 +66,7 @@ const sources = [
     },
     {
         name: "Squarespace: what Squarespace does for SEO",
-        url: "https://support.squarespace.com/hc/en-us/articles/206744067-What-Squarespace-does-for-SEO",
+        url: "https://support.squarespace.com/hc/en-us/articles/206744067-How-does-Squarespace-optimize-my-site-for-search-results",
     },
     {
         name: "Google Search Console: performance report",

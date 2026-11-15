@@ -56,7 +56,7 @@ const sources = [
     { name: "Google: AI features and your website", url: "https://developers.google.com/search/docs/appearance/ai-features" },
     // 8 Oct 2026: the "July 2026 guidance" in the AI section is this guide (last updated 2026-07-10). The ai-features page above was last updated 2025-12-10.
     { name: "Google: optimizing for generative AI features", url: "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" },
-    { name: "Bing AI Performance", url: "https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview" },
+    { name: "Bing AI Performance", url: "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview" },
 ];
 
 const articleSchema = {

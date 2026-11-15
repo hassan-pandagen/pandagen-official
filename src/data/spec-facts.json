@@ -425,7 +425,7 @@
       "qualifier": "Starting price on a 3-year term; $2,500/mo on a 1-year term. More complex, higher-volume businesses pay a variable platform fee instead",
       "verifiedAt": "2026-10-08",
       "reviewDays": 60,
-      "source": "https://www.shopify.com/plus/pricing"
+      "source": "https://www.shopify.com/pricing"
     },
     "woocommerce-cart-fragments-default": {
       "vendor": "WooCommerce",
@@ -506,7 +506,7 @@
       "value": "CVSS 8.1, high",
       "qualifier": "Unauthenticated privilege escalation via SAML signature algorithm confusion, affecting versions up to 5.4.3, patched in 5.4.4. The vector carries AC:H, which is what keeps it below 9.0. Patchstack assigned this record as CNA; their own write-up describes both SAML issues as 9.8. Wordfence separately assigned CVE-2026-15013 at 9.8 for what the records describe as the same mechanism and version range",
       "verifiedAt": "2026-08-26",
-      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-61979"
+      "source": "https://nvd.nist.gov/vuln/detail/cve-2026-61979"
     },
     "wp-saml-editions": {
       "vendor": "miniOrange",
@@ -691,7 +691,7 @@
       "qualifier": "not available on Agentic plans; development stores and trial plans can build and test but get no public environments",
       "verifiedAt": "2026-10-03",
       "reviewDays": 60,
-      "source": "https://shopify.dev/docs/storefronts/headless/hydrogen/fundamentals"
+      "source": "https://shopify.dev/docs/storefronts/headless/legacy/hydrogen/fundamentals"
     },
     "shopify-headless-channel-price": {
       "vendor": "Shopify",
@@ -733,7 +733,7 @@
       "value": "10 MB per worker, 30 seconds of CPU time per request and 128 MB of memory",
       "qualifier": "Oxygen doesn't support a proxy in front of a deployment",
       "verifiedAt": "2026-10-03",
-      "source": "https://shopify.dev/docs/storefronts/headless/hydrogen/fundamentals"
+      "source": "https://shopify.dev/docs/storefronts/headless/legacy/hydrogen/fundamentals"
     },
     "emdash-current-version": {
       "vendor": "EmDash",
@@ -1030,7 +1030,7 @@
       "qualifier": "Monthly list price as published by the vendor; usage, volume and carrier charges apply where stated",
       "verifiedAt": "2026-10-04",
       "reviewDays": 60,
-      "source": "https://www.okendo.io/pricing/"
+      "source": "https://okendo.io/pricing/"
     },
     "shopify-app-price-recharge": {
       "vendor": "Recharge",
@@ -1389,7 +1389,7 @@
       "qualifier": "German agency; price in euros, net of tax",
       "verifiedAt": "2026-10-24",
       "reviewDays": 60,
-      "source": "https://in-sync.io/en/knowledge/migrate-wordpress-to-nextjs"
+      "source": "https://www.in-sync.io/en/knowledge/migrate-wordpress-to-nextjs"
     },
     "competitor-luckymedia-migration": {
       "vendor": "Lucky Media",
@@ -1397,7 +1397,7 @@
       "value": "offers WordPress to headless CMS migration with a Next.js or Astro frontend, is based in Dallas, Texas, and publishes no price on the page",
       "verifiedAt": "2026-10-24",
       "reviewDays": 60,
-      "source": "https://luckymedia.dev/wordpress-to-headless-cms-migration"
+      "source": "https://www.luckymedia.dev/wordpress-to-headless-cms-migration"
     },
     "wix-domain-transfer-rules": {
       "vendor": "Wix",

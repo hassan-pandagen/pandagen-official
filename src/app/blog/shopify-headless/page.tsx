@@ -73,11 +73,11 @@ const sources = [
     },
     {
         name: "Shopify: SEO for Hydrogen",
-        url: "https://shopify.dev/docs/storefronts/headless/hydrogen/seo",
+        url: "https://shopify.dev/docs/storefronts/headless/legacy/hydrogen/seo",
     },
     {
         name: "Shopify: custom headless analytics migration",
-        url: "https://shopify.dev/docs/storefronts/headless/hydrogen/migrate/cookies-custom-setup",
+        url: "https://shopify.dev/docs/storefronts/headless/legacy/hydrogen/migrate/cookies-custom-setup",
     },
 ];
 

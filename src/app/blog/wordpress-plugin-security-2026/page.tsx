@@ -83,8 +83,8 @@ const articleSchema = {
                 { "@type": "CreativeWork", name: "WordPress 7.1.4 security release", url: "https://wordpress.org/news/2026/10/wordpress-7-1-4/" },
                 { "@type": "CreativeWork", name: "WordPress 7.1.4 detailed release documentation", url: "https://wordpress.org/documentation/wordpress-version/version-7-1-4/" },
                 { "@type": "CreativeWork", name: "NVD: CVE-2026-15981", url: "https://nvd.nist.gov/vuln/detail/CVE-2026-15981" },
-                { "@type": "CreativeWork", name: "NVD: CVE-2026-61979", url: "https://nvd.nist.gov/vuln/detail/CVE-2026-61979" },
-                { "@type": "CreativeWork", name: "NVD: CVE-2026-15013", url: "https://nvd.nist.gov/vuln/detail/CVE-2026-15013" },
+                { "@type": "CreativeWork", name: "NVD: CVE-2026-61979", url: "https://nvd.nist.gov/vuln/detail/cve-2026-61979" },
+                { "@type": "CreativeWork", name: "NVD: CVE-2026-15013", url: "https://nvd.nist.gov/vuln/detail/cve-2026-15013" },
                 { "@type": "CreativeWork", name: "NVD: CVE-2026-57807", url: "https://nvd.nist.gov/vuln/detail/CVE-2026-57807" },
                 { "@type": "CreativeWork", name: "Patchstack: One slug, seven editions", url: "https://patchstack.com/articles/one-slug-seven-editions-the-miniorange-saml-sso-bug-that-let-anyone-log-in-as-your-wordpress-admin/" },
                 { "@type": "CreativeWork", name: "NVD: CVE-2026-19842", url: "https://nvd.nist.gov/vuln/detail/CVE-2026-19842" },
@@ -223,7 +223,7 @@ export default function WordPressPluginSecurity2026Page() {
                         <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-15981" target="_blank" rel="noopener noreferrer" className={sourceLink}>CVE-2026-15981</a>{" "}
                         is an authentication bypass at {spec("wp-saml-cve-15981").value}, affecting free-edition versions
                         up to and including 5.4.4 and fixed in 5.4.5.{" "}
-                        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-61979" target="_blank" rel="noopener noreferrer" className={sourceLink}>CVE-2026-61979</a>{" "}
+                        <a href="https://nvd.nist.gov/vuln/detail/cve-2026-61979" target="_blank" rel="noopener noreferrer" className={sourceLink}>CVE-2026-61979</a>{" "}
                         is an unauthenticated privilege escalation at {spec("wp-saml-cve-61979").value}. Checked{" "}
                         {asOf("wp-saml-cve-15981")}.
                     </BlogText>
@@ -231,7 +231,7 @@ export default function WordPressPluginSecurity2026Page() {
                         A note on that second score, because the published numbers disagree. Patchstack assigned the CVE
                         record at 8.1, and their own write-up describes both SAML issues as 9.8. Wordfence separately
                         assigned{" "}
-                        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-15013" target="_blank" rel="noopener noreferrer" className={sourceLink}>CVE-2026-15013</a>{" "}
+                        <a href="https://nvd.nist.gov/vuln/detail/cve-2026-15013" target="_blank" rel="noopener noreferrer" className={sourceLink}>CVE-2026-15013</a>{" "}
                         at 9.8 for what the records describe as the same mechanism and the same version range. Two
                         numbering authorities, one bug, two scores. We cite the CVE records rather than the article,
                         and note the discrepancy rather than picking the more dramatic figure.
@@ -448,7 +448,7 @@ export default function WordPressPluginSecurity2026Page() {
                         the affected files reached users who downloaded or updated between 15 October 2026 at 20:02 UTC
                         and 16 October at 07:12 UTC. Rank Math removed them and released a clean version, 3.0.124. The
                         free Rank Math SEO plugin on WordPress.org was not affected. Wordfence published{" "}
-                        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111862" target="_blank" rel="noopener noreferrer" className={sourceLink}>CVE-2026-111862</a>{" "}
+                        <a href="https://nvd.nist.gov/vuln/detail/cve-2026-111862" target="_blank" rel="noopener noreferrer" className={sourceLink}>CVE-2026-111862</a>{" "}
                         for it on 19 October, scored CVSS 9.8, and describes it as a supply-chain compromise.
                     </BlogText>
                     <BlogText>

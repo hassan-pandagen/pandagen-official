@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 
 const sources = [
     { name: "WCAG 2.2", url: "https://www.w3.org/TR/WCAG22/" },
-    { name: "OWASP ASVS", url: "https://owasp.org/www-project-application-security-verification-standard/" },
+    { name: "OWASP ASVS", url: "https://owasp.org/www-project-application-security-verification-standard" },
     { name: "U.S. Copyright Office work made for hire", url: "https://www.copyright.gov/circs/circ30.pdf" },
     { name: "U.S. Copyright Office transfers", url: "https://www.copyright.gov/circs/circ01.pdf" },
 ];

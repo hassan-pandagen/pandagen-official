@@ -52,7 +52,7 @@ const sources = [
     { name: "WordPress export documentation", url: "https://wordpress.org/documentation/article/tools-export-screen/" },
     { name: "WordPress REST API handbook", url: "https://developer.wordpress.org/rest-api/" },
     { name: "Kinsta: free WordPress migrations", url: "https://kinsta.com/wordpress-migration/" },
-    { name: "SiteGround: how a website is transferred", url: "https://www.siteground.com/kb/how_is_a_website_transfered/" },
+    { name: "SiteGround: how a website is transferred", url: "https://www.siteground.com/kb/how_is_a_website_transfered" },
     { name: "WordPress.com pricing", url: "https://wordpress.com/pricing/" },
 ];
 
@@ -257,7 +257,7 @@ export default function WordPressMigrationCostPage() {
                             as of August 2, 2026,{" "}
                             <a href="https://kinsta.com/wordpress-migration/" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>Kinsta</a>{" "}
                             publishes &ldquo;Unlimited Free WordPress Migrations From All Hosts&rdquo;, and{" "}
-                            <a href="https://www.siteground.com/kb/how_is_a_website_transfered/" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>SiteGround</a>{" "}
+                            <a href="https://www.siteground.com/kb/how_is_a_website_transfered" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>SiteGround</a>{" "}
                             publishes a free Migrator plugin and sells a manual transfer done by its support team. Ask your
                             incoming host first. <strong>If all you need is a host change, do not pay migration prices
                             for it.</strong>

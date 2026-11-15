@@ -54,14 +54,14 @@ export const metadata: Metadata = {
 };
 
 const sources = [
-    { name: "Shopify Storefront API", url: "https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/index" },
+    { name: "Shopify Storefront API", url: "https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api" },
     { name: "Shopify bring your own stack", url: "https://shopify.dev/docs/storefronts/headless/bring-your-own-stack" },
     { name: "Shopify Hydrogen releases", url: "https://hydrogen.shopify.dev/updates" },
     { name: "Medusa storefront development", url: "https://docs.medusajs.com/resources/storefront-development" },
     { name: "Medusa production optimization", url: "https://docs.medusajs.com/resources/storefront-development/production-optimizations" },
     { name: "Sanity Visual Editing", url: "https://www.sanity.io/docs/visual-editing" },
     { name: "Hydrogen license (MIT)", url: "https://github.com/Shopify/hydrogen/blob/main/LICENSE.md" },
-    { name: "Shopify: Hydrogen and Oxygen fundamentals, supported plans", url: "https://shopify.dev/docs/storefronts/headless/hydrogen/fundamentals" },
+    { name: "Shopify: Hydrogen and Oxygen fundamentals, supported plans", url: "https://shopify.dev/docs/storefronts/headless/legacy/hydrogen/fundamentals" },
 ];
 
 const articleSchema = {

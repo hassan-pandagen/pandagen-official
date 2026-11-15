@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 };
 
 const sources = [
-    { name: "Shopify Plus pricing and features", url: "https://www.shopify.com/plus/pricing" },
+    { name: "Shopify Plus pricing and features", url: "https://www.shopify.com/pricing" },
     {
         name: "Shopify: web performance reports",
         url: "https://help.shopify.com/en/manual/online-store/web-performance/web-performance-reports",
@@ -65,7 +65,7 @@ const sources = [
     },
     {
         name: "Shopify: Shopify Scripts deprecation (changelog)",
-        url: "https://shopify.dev/changelog/shopify-scripts-will-be-deprecated-on-june-30-2026",
+        url: "https://shopify.dev/changelog/posts/shopify-scripts-will-be-deprecated-on-june-30-2026",
     },
     {
         name: "Shopify: checkout.liquid support status",

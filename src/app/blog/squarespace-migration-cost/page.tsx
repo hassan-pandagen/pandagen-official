@@ -60,7 +60,7 @@ const sources = [
     
     {
         name: "Squarespace: exporting your site",
-        url: "https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site",
+        url: "https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content",
     },
     {
         name: "Squarespace: URL mappings",

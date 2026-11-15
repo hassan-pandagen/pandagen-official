@@ -110,7 +110,7 @@ const articleSchema = {
                 {
                     "@type": "CreativeWork",
                     name: "Elegant Themes: Divi performance options",
-                    url: "https://www.elegantthemes.com/documentation/divi/theme-options/",
+                    url: "https://help.elegantthemes.com/en/articles/12958885-divi-5-theme-options",
                 },
                 {
                     "@type": "CreativeWork",
@@ -553,7 +553,7 @@ export default function DiviThemeSlowPage() {
                         <li><a href="https://www.elegantthemes.com/blog/theme-releases/divi-5-official" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Elegant Themes: Divi 5 official release and migration guidance</a></li>
                         <li><a href="https://help.elegantthemes.com/en/articles/9973580-divi-5-update-status" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Elegant Themes: current Divi 5 update log</a></li>
                         <li><a href="https://help.elegantthemes.com/en/articles/9799364-what-is-the-divi-5-migrator-system" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Elegant Themes: Divi 5 Migrator and compatibility behavior</a></li>
-                        <li><a href="https://www.elegantthemes.com/documentation/divi/theme-options/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Elegant Themes: documented Divi performance settings</a></li>
+                        <li><a href="https://help.elegantthemes.com/en/articles/12958885-divi-5-theme-options" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Elegant Themes: documented Divi performance settings</a></li>
                         <li><a href="https://developers.google.com/search/docs/appearance/core-web-vitals" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Google Search Central: Core Web Vitals thresholds</a></li>
                         <li><a href="https://developers.google.com/search/docs/appearance/page-experience" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Google Search Central: page experience and ranking limits</a></li>
                     </ul>

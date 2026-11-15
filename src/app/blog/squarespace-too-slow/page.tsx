@@ -63,7 +63,7 @@ const sources = [
     },
     {
         name: "Squarespace: exporting your site",
-        url: "https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site",
+        url: "https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content",
     },
 ];
 
@@ -399,7 +399,7 @@ export default function SquarespaceTooSlowPage() {
                     <BlogHeader>What can you actually export out of Squarespace?</BlogHeader>
                     <BlogText>
                         Squarespace&apos;s{" "}
-                        <a href="https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>own export documentation</a>{" "}
+                        <a href="https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>own export documentation</a>{" "}
                         describes a WordPress-format XML file and lists what it leaves out, which as of August 2, 2026
                         includes store pages, portfolio and several other page types, product data and video. Confirm
                         what it actually produces for your account and your page types before you budget the work,

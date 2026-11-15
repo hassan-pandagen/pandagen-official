@@ -55,11 +55,11 @@ export const metadata: Metadata = {
 const sources = [
     { name: "WooCommerce performance documentation", url: "https://developer.woocommerce.com/docs/best-practices/performance/" },
     { name: "WooCommerce caching configuration", url: "https://developer.woocommerce.com/docs/best-practices/performance/configuring-caching-plugins" },
-    { name: "WooCommerce HPOS documentation", url: "https://developer.woocommerce.com/docs/features/high-performance-order-storage" },
+    { name: "WooCommerce HPOS documentation", url: "https://developer.woocommerce.com/docs/features/orders/high-performance-order-storage/" },
     { name: "WooCommerce server requirements", url: "https://woocommerce.com/document/server-requirements/" },
     { name: "WooCommerce Cart and Checkout data flow", url: "https://developer.woocommerce.com/docs/block-development/reference/overview-of-data-flow/" },
     { name: "WooCommerce 8.3.0 release notes (block checkout default)", url: "https://developer.woocommerce.com/2023/11/16/woocommerce-8-3-0-released/" },
-    { name: "WooCommerce Cart and Checkout blocks status", url: "https://woocommerce.com/document/cart-checkout-blocks-status/" },
+    { name: "WooCommerce Cart and Checkout blocks status", url: "https://woocommerce.com/document/woocommerce-store-editing/customizing-cart-and-checkout/" },
     { name: "WooCommerce classic checkout script (source)", url: "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/client/legacy/js/frontend/checkout.js" },
     { name: "WooCommerce shipping rate caching (source)", url: "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/class-wc-shipping.php" },
     { name: "Query Monitor plugin", url: "https://wordpress.org/plugins/query-monitor/" },
@@ -444,7 +444,7 @@ export default function WooCommerceTooSlowPage() {
                     <BlogText>
                         One more thing to rule out before timing anything on a block checkout: a payment gateway that
                         hasn&apos;t declared support for it. WooCommerce&apos;s{" "}
-                        <a href="https://woocommerce.com/document/cart-checkout-blocks-status/" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>Cart and Checkout blocks status page</a>{" "}
+                        <a href="https://woocommerce.com/document/woocommerce-store-editing/customizing-cart-and-checkout/" target="_blank" rel="noopener noreferrer" className={inlineLinkClass}>Cart and Checkout blocks status page</a>{" "}
                         says an incompatible gateway may not appear as a payment option at all, and offers a one-click
                         switch back to the classic checkout.
                     </BlogText>

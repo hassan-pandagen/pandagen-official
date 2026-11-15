@@ -86,7 +86,7 @@ const articleSchema = {
       citation: [
         { "@type": "CreativeWork", name: "Google: site moves with URL changes", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
         { "@type": "CreativeWork", name: "W3C: WCAG 2.2", url: "https://www.w3.org/TR/WCAG22/" },
-        { "@type": "CreativeWork", name: "OWASP Application Security Verification Standard", url: "https://owasp.org/www-project-application-security-verification-standard/" },
+        { "@type": "CreativeWork", name: "OWASP Application Security Verification Standard", url: "https://owasp.org/www-project-application-security-verification-standard" },
       ],
     },
     {
@@ -485,7 +485,7 @@ export default function CheapWebDeveloperPage() {
               <li><a className="text-cognac underline underline-offset-4" href="https://developers.google.com/search/blog/2023/02/google-search-and-ai-content" target="_blank" rel="noreferrer">Google: guidance on AI-generated content</a></li>
               <li><a className="text-cognac underline underline-offset-4" href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" target="_blank" rel="noreferrer">Google: site moves with URL changes</a></li>
               <li><a className="text-cognac underline underline-offset-4" href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noreferrer">W3C: WCAG 2.2</a></li>
-              <li><a className="text-cognac underline underline-offset-4" href="https://owasp.org/www-project-application-security-verification-standard/" target="_blank" rel="noreferrer">OWASP: Application Security Verification Standard</a></li>
+              <li><a className="text-cognac underline underline-offset-4" href="https://owasp.org/www-project-application-security-verification-standard" target="_blank" rel="noreferrer">OWASP: Application Security Verification Standard</a></li>
             </ul>
           </section>
 

@@ -77,7 +77,7 @@ const sources = [
     },
     {
         name: "OWASP API Security Top 10",
-        url: "https://owasp.org/API-Security/editions/2023/en/0x11-t10/",
+        url: "https://owasp.org/API-Security/editions/2023/en/0x11-t10",
     },
 ];
 
@@ -275,25 +275,25 @@ export default function WordPressAiSecurityRiskPage() {
                             </thead>
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr>
-                                    <td className="p-4 font-bold"><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-11749" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">CVE-2025-11749</a></td>
+                                    <td className="p-4 font-bold"><a href="https://nvd.nist.gov/vuln/detail/cve-2025-11749" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">CVE-2025-11749</a></td>
                                     <td className="p-4">3.1.3 and earlier</td>
                                     <td className="p-4">No-Auth URL enabled, which Wordfence reported was disabled by default</td>
                                     <td className="p-4">Update to 3.1.4 or later and rotate an exposed bearer token</td>
                                 </tr>
                                 <tr>
-                                    <td className="p-4 font-bold"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8719" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">CVE-2026-8719</a></td>
+                                    <td className="p-4 font-bold"><a href="https://nvd.nist.gov/vuln/detail/cve-2026-8719" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">CVE-2026-8719</a></td>
                                     <td className="p-4">3.4.9</td>
                                     <td className="p-4">Authenticated Subscriber or higher with a valid OAuth token</td>
                                     <td className="p-4">Update to 3.5.0 or a newer patched version</td>
                                 </tr>
                                 <tr>
-                                    <td className="p-4 font-bold"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27407" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">CVE-2026-27407</a></td>
+                                    <td className="p-4 font-bold"><a href="https://nvd.nist.gov/vuln/detail/cve-2026-27407" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">CVE-2026-27407</a></td>
                                     <td className="p-4">3.4.9 and earlier</td>
                                     <td className="p-4">Authenticated Editor or higher as recorded in the linked entry</td>
                                     <td className="p-4">Open the linked record for the patched version, then update past it</td>
                                 </tr>
                                 <tr>
-                                    <td className="p-4 font-bold"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-23802" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">CVE-2026-23802</a></td>
+                                    <td className="p-4 font-bold"><a href="https://nvd.nist.gov/vuln/detail/cve-2026-23802" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">CVE-2026-23802</a></td>
                                     <td className="p-4">3.3.2 and earlier</td>
                                     <td className="p-4">Authenticated Editor or higher as recorded in the linked entry</td>
                                     <td className="p-4">Open the linked record for the patched version, then update past it</td>

@@ -131,7 +131,7 @@ const agencies = [
     {
         name: "Bejamas",
         basedIn: "Registered office: Tworków, Poland",
-        basedInSource: "https://bejamas.com/privacy-policy",
+        basedInSource: "https://bejamas.com/legal/privacy-policy",
         publicEvidence: "Audits, design, migration and ongoing operation for modern content platforms",
         likelyFit: "Legacy CMS and multi-site migration with an ongoing web-team model",
         verify: "Named Next.js team, target CMS, migration inventory and operating scope",
