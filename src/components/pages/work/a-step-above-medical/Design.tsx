@@ -69,7 +69,20 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <Link href="/services/medical-website-design" className="underline underline-offset-4">Medical website design →</Link>
         </div>
         <WorkCasePreview src="/work/a-step-above-medical-preview-homepage.png" alt="New A Step Above Medical course website with location navigation and an upcoming IV therapy class" width={1912} height={914} caption="Live client project / Screenshot captured before launch" />
-        <ProjectReview project="a-step-above-medical" inset />
+        <div className="mt-8 grid items-stretch gap-5 lg:grid-cols-2 [&>section]:min-w-0 [&>section]:mt-0 [&>section]:p-6">
+          <ProjectReview project="a-step-above-medical" inset />
+          <section aria-labelledby="asam-search-summary" className="min-w-0 border p-6" style={{ backgroundColor: T.paperHi, borderColor: T.rule }}>
+            <WorkCaseLabel className="mb-3">After launch / Search visibility</WorkCaseLabel>
+            <h2 id="asam-search-summary" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(1.8rem, 3.2vw, 2.5rem)", lineHeight: 1.15 }}>More visibility in AI search</h2>
+            <dl className="mt-6 grid grid-cols-2 gap-4">
+              {ASAM_SEARCH_EVIDENCE.aiSamples.map(sample => <div key={sample.date}>
+                <dt className="text-sm leading-relaxed" style={{ color: T.body }}>Daily impressions<br /><time dateTime={sample.date}>{sample.label}</time></dt>
+                <dd className="mt-2 text-4xl font-semibold" style={{ color: T.accentText }}>{sample.impressions}</dd>
+              </div>)}
+            </dl>
+            <AsamSearchEvidenceFigure compact />
+          </section>
+        </div>
         <WorkCaseFacts items={[
           { label: "Status", value: details.status },
           { label: "Owner confirmation", value: <>{details.progress}, as of <time dateTime={details.confirmedOn}>October 20, 2026</time>.</> },
@@ -79,20 +92,8 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <p className="max-w-[65rem] text-sm leading-relaxed" style={{ color: T.body }}>{details.disclosure}</p>
         </aside>
       </WorkCaseOpening>
-      {/* 14 Nov 2026, Imran's brief: a training-business owner needs the workflow first,
-          so the order is workflow, call, before/after, screens, search visibility, FAQ. */}
+      {/* Keep the workflow and detailed proof together before the mid-page booking CTA. */}
       <PortalWorkflow project="medical" />
-      {/* 14 Nov 2026, Imran's brief: a booking callout straight after the day-to-day workflow. */}
-      <section aria-labelledby="asam-workflow-call" className="px-6 py-10 md:px-10 md:py-14" style={{ backgroundColor: T.dark, color: T.onDark }}>
-        <div className="mx-auto max-w-[1100px]">
-          <h2 id="asam-workflow-call" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.6rem, 2.8vw, 2.2rem)", lineHeight: 1.1 }}>Still managing registrations, reminders and certificates by hand?</h2>
-          <p className="mt-4 max-w-[40rem] text-[16px] leading-[1.6]" style={{ color: T.onDarkQuiet }}>Show us how your training business works today. In a 15-minute call, we&apos;ll identify the steps worth connecting and whether a custom build makes sense.</p>
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <CalModalButton fallbackHref={CAL_BOOKING_URL} className="cta-solid inline-flex items-center justify-center bg-[#EBE9E4] px-6 py-3.5 text-[15px] font-medium text-[#1C1917]">Book a workflow call</CalModalButton>
-            <QuoteModalButton cta="asam_workflow_process" location="a-step-above-medical" className="inline-flex items-center justify-center border border-[#EBE9E4] px-6 py-3.5 text-[15px] font-medium text-[#EBE9E4]">Send us your current process</QuoteModalButton>
-          </div>
-        </div>
-      </section>
       <section aria-labelledby="asam-before-after" className="px-6 py-10 md:px-10 md:py-16">
         <div className="mx-auto max-w-[1100px]">
           <WorkCaseLabel className="mb-3">Before and after</WorkCaseLabel>
@@ -140,6 +141,17 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <Link href="/blog/ai-search-visibility-tracking#measure-ai-search-visibility" className="mt-5 inline-block font-semibold underline underline-offset-4" style={{ color: T.accentText }}>How to measure visibility, visits and enquiries separately</Link>
         </div>
       </section>
+      {/* Invite the visitor to plan a project after the workflow, screens and search evidence. */}
+      <section aria-labelledby="asam-workflow-call" className="px-6 py-10 md:px-10 md:py-14" style={{ backgroundColor: T.dark, color: T.onDark }}>
+        <div className="mx-auto max-w-[1100px]">
+          <h2 id="asam-workflow-call" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.6rem, 2.8vw, 2.2rem)", lineHeight: 1.1 }}>Still managing registrations, reminders and certificates by hand?</h2>
+          <p className="mt-4 max-w-[40rem] text-[16px] leading-[1.6]" style={{ color: T.onDarkQuiet }}>Show us how your training business works today. In a 15-minute call, we&apos;ll identify the steps worth connecting and whether a custom build makes sense.</p>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <CalModalButton fallbackHref={CAL_BOOKING_URL} className="cta-solid inline-flex items-center justify-center bg-[#EBE9E4] px-6 py-3.5 text-[15px] font-medium text-[#1C1917]">Plan a similar system for your business</CalModalButton>
+            <QuoteModalButton cta="asam_workflow_process" location="a-step-above-medical" className="inline-flex items-center justify-center border border-[#EBE9E4] px-6 py-3.5 text-[15px] font-medium text-[#EBE9E4]">Send us your current process</QuoteModalButton>
+          </div>
+        </div>
+      </section>
       <section aria-labelledby="asam-similar-systems" className="px-6 py-10 md:px-10 md:py-16">
         <div className="mx-auto max-w-[1100px]">
           <WorkCaseLabel className="mb-3">For your business</WorkCaseLabel>
@@ -159,7 +171,8 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
           <h2 style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2rem, 3.6vw, 2.8rem)", lineHeight: 1.05 }}>A better website. Less work behind it.</h2>
           <p className="mt-4 max-w-[38rem] text-[16px] leading-[1.6]" style={{ color: T.onDarkQuiet }}>Tell us what visitors need to find and what your team currently manages by hand. We can scope the website, a custom portal, or an improvement to your existing system.</p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Link href="/services/custom-engineering" className="cta-solid inline-flex items-center justify-center gap-2 bg-[#EBE9E4] px-6 py-3.5 text-[15px] font-medium text-[#1C1917]">Explore custom software and portals <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
+            <CalModalButton fallbackHref={CAL_BOOKING_URL} className="cta-solid inline-flex items-center justify-center bg-[#EBE9E4] px-6 py-3.5 text-[15px] font-medium text-[#1C1917]">Book a 15-minute workflow call</CalModalButton>
+            <QuoteModalButton cta="asam_closing_requirements" location="a-step-above-medical" className="inline-flex items-center px-2 py-3.5 text-[15px] underline underline-offset-4">Send us your requirements</QuoteModalButton>
             <Link href="/services/wordpress-migration" className="inline-flex items-center gap-2 text-[15px] underline underline-offset-4">WordPress website migration <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
           </div>
         </div>
