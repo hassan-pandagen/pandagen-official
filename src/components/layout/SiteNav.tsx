@@ -267,16 +267,17 @@ export default function SiteNav() {
               <div className="px-1 pb-1 pt-3">
                 <p className="mb-3 px-3 text-[10px] font-bold uppercase tracking-[0.16em] text-[#5E5B55]">Selected work</p>
                 {workProjects.map((project, index) => (
-                  <Link key={project.href} href={project.href} prefetch={false} onMouseEnter={() => setPreviewIndex(index)} onFocus={() => setPreviewIndex(index)} onClick={() => setActiveDropdown(null)} aria-current={pathname === project.href ? "page" : undefined} className={`group relative block rounded-md px-3 py-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#AD3D0B] ${previewIndex === index ? "bg-[#E8E3DA] text-[#87300A]" : "text-[#1C1917] hover:bg-[#E8E3DA]"}`}>
+                  <Link key={project.href} href={project.href} prefetch={false} onMouseEnter={() => setPreviewIndex(index)} onFocus={() => setPreviewIndex(index)} onClick={() => setActiveDropdown(null)} aria-current={pathname === project.href ? "page" : undefined} className={`group relative block rounded-[4px] px-3 py-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#AD3D0B] ${previewIndex === index ? "bg-[#E8E3DA] text-[#87300A]" : "text-[#1C1917] hover:bg-[#E8E3DA]"}`}>
                     <span className="flex items-center justify-between gap-2 text-[14px] font-semibold">{project.name}<span aria-hidden="true" className={previewIndex === index ? "opacity-100" : "opacity-0"}>&rarr;</span></span>
                     <span className="mt-1 block text-[12px] leading-relaxed text-[#5E5B55]">{project.note || project.description}</span>
                   </Link>
                 ))}
                 <Link href="/work" prefetch={false} onClick={() => setActiveDropdown(null)} className="mx-3 mt-3 flex items-center justify-between border-t border-[#1C1917]/15 py-3 text-[12px] font-semibold text-[#87300A] hover:underline">Explore all work <span aria-hidden="true">&rarr;</span></Link>
               </div>
-              <Link href={preview.href} prefetch={false} onClick={() => setActiveDropdown(null)} className="group flex min-w-0 flex-col justify-center rounded-lg border border-[#1C1917]/10 bg-[#EBE9E4] p-5 text-[#1C1917] focus-visible:outline-2 focus-visible:outline-[#AD3D0B]" aria-label={`View ${preview.name} case study`}>
+              {/* Outer menu radius 12px minus its 8px inset gives this 4px inner radius. */}
+              <Link href={preview.href} prefetch={false} onClick={() => setActiveDropdown(null)} className="group flex min-w-0 flex-col justify-center rounded-[4px] border border-[#1C1917]/10 bg-[#EBE9E4] p-5 text-[#1C1917] focus-visible:outline-2 focus-visible:outline-[#AD3D0B]" aria-label={`View ${preview.name} case study`}>
                 <div key={preview.href} className="work-nav-preview">
-                  <div className="overflow-hidden rounded-md border border-[#1C1917]/15 bg-[#F5F4F0] shadow-[0_12px_28px_-14px_rgba(28,25,23,.3)]">
+                  <div className="overflow-hidden border border-[#1C1917]/15 bg-[#F5F4F0] shadow-[0_12px_28px_-14px_rgba(28,25,23,.3)]">
                     <div aria-hidden="true" className="flex h-6 items-center gap-1 border-b border-[#1C1917]/10 px-2"><span className="h-1.5 w-1.5 rounded-full bg-[#1C1917]/25" /><span className="h-1.5 w-1.5 rounded-full bg-[#1C1917]/15" /><span className="h-1.5 w-1.5 rounded-full bg-[#1C1917]/15" /></div>
                     <div className={`relative aspect-[16/10] ${preview.showFullPreview ? "bg-[#0B0B0D]" : ""}`}>
                       <Image src={preview.image} alt={`${preview.name} website preview`} fill sizes="400px" className={preview.showFullPreview ? "object-contain" : "object-cover object-top"} />

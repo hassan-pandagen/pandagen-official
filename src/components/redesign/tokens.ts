@@ -18,19 +18,20 @@
 // 3.33 behind white text, and it is his colour, not ours.
 // ─────────────────────────────────────────────────────────────────────────────
 
+// OKLCH equivalents preserve the existing brand colours and measured contrast.
 export const T = {
-  paper: "#EBE9E4",
-  paperHi: "#F5F4F0",
-  ink: "#1C1917",
-  body: "#3A3733",
-  quiet: "#5E5B55",
+  paper: "oklch(93.417956% 0.00703338 88.644499)",
+  paperHi: "oklch(96.680924% 0.00541245 95.099788)",
+  ink: "oklch(21.611540% 0.00612556 56.043375)",
+  body: "oklch(33.845837% 0.00806004 75.291384)",
+  quiet: "oklch(47.205286% 0.01023010 84.590799)",
   rule: "rgba(28,25,23,0.16)",
-  accent: "#AD3D0B",
-  accentText: "#7A2E0E",
-  dark: "#1C1917",
-  onDark: "#EBE9E4",
-  onDarkQuiet: "#A8A49C",
-  onDarkAccent: "#E8763A",
+  accent: "oklch(51.320925% 0.15609200 39.727996)",
+  accentText: "oklch(40.605571% 0.11418315 40.571567)",
+  dark: "oklch(21.611540% 0.00612556 56.043375)",
+  onDark: "oklch(93.417956% 0.00703338 88.644499)",
+  onDarkQuiet: "oklch(71.970175% 0.01229639 84.586261)",
+  onDarkAccent: "oklch(68.753219% 0.15887907 45.986982)",
   onDarkRule: "rgba(235,233,228,0.16)",
 } as const;
 

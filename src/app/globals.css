@@ -11,58 +11,58 @@
   --font-sans: ui-sans-serif, system-ui, sans-serif;
   --font-serif: ui-serif, Georgia, serif;
 
-  --color-background: #f5f5f4;
-  --color-surface: #fafaf9;
-  --color-border: #e7e5e4;
-  --color-primary: #b8410c;
-  --color-secondary: #44403c;
-  --color-muted: #57534e;
-  --color-dark: #1c1917;
-  --color-accent: #c2410c;
-  --color-success: #16a34a;
-  --color-neon: #c2410c;
-  --color-focus: #b8410c;
-  --color-electric: #9a3412;
-  --color-orange: #f97316;
-  --color-paper: #f5f5f4;
-  --color-charcoal: #1c1917;
-  --color-midnight: #0c0a09;
-  --color-cognac: #ad3d0b;
+  --color-background: oklch(96.987131% 0.00132409 106.423821);
+  --color-surface: oklch(98.482524% 0.00131905 106.423346);
+  --color-border: oklch(92.317503% 0.00256268 48.717095);
+  --color-primary: oklch(53.668673% 0.16379994 39.629938);
+  --color-secondary: oklch(37.411571% 0.00867832 67.558153);
+  --color-muted: oklch(44.441723% 0.00959725 73.638981);
+  --color-dark: oklch(21.611540% 0.00612556 56.043375);
+  --color-accent: oklch(55.342753% 0.17386477 38.402216);
+  --color-success: oklch(62.705223% 0.16991209 149.213788);
+  --color-neon: oklch(55.342753% 0.17386477 38.402216);
+  --color-focus: oklch(53.668673% 0.16379994 39.629938);
+  --color-electric: oklch(46.979885% 0.14304731 37.303511);
+  --color-orange: oklch(70.487125% 0.18672108 47.604421);
+  --color-paper: oklch(96.987131% 0.00132409 106.423821);
+  --color-charcoal: oklch(21.611540% 0.00612556 56.043375);
+  --color-midnight: oklch(14.689616% 0.00412883 49.249906);
+  --color-cognac: oklch(51.320925% 0.15609200 39.727996);
   /* Cognac for dark surfaces. #b8410c measures 2.78:1 to 3.47:1 on the dark
      panels this site uses; this measures 5.69:1 to 6.48:1 on the same set. */
-  --color-cognac-light: #e8763a;
+  --color-cognac-light: oklch(68.753219% 0.15887907 45.986982);
 
-  --color-stone-50: #fafaf9;
-  --color-stone-100: #f5f5f4;
-  --color-stone-200: #e7e5e4;
-  --color-stone-300: #d6d3d1;
+  --color-stone-50: oklch(98.482524% 0.00131905 106.423346);
+  --color-stone-100: oklch(96.987131% 0.00132409 106.423821);
+  --color-stone-200: oklch(92.317503% 0.00256268 48.717095);
+  --color-stone-300: oklch(86.866141% 0.00430627 56.366031);
   /* Keep the semantic Tailwind neutral scale intact. Components choose a
      surface-aware step: stone-600 on light surfaces, stone-400 on dark. */
-  --color-stone-400: #a8a29e;
+  --color-stone-400: oklch(71.608440% 0.00905407 56.259003);
   /* Was #78716c, which measures 4.39:1 on the paper background (#f5f5f4) and
      so failed WCAG AA by 0.11 in 57 places. This measures 5.02:1 on paper and
      5.48:1 on white. Only used on light surfaces; on dark, use stone-400. */
-  --color-stone-500: #6f6862;
-  --color-stone-600: #57534e;
-  --color-stone-700: #44403c;
-  --color-stone-800: #292524;
-  --color-stone-900: #1c1917;
-  --color-stone-950: #0c0a09;
+  --color-stone-500: oklch(52.186470% 0.01283394 63.185826);
+  --color-stone-600: oklch(44.441723% 0.00959725 73.638981);
+  --color-stone-700: oklch(37.411571% 0.00867832 67.558153);
+  --color-stone-800: oklch(26.848491% 0.00628694 34.297556);
+  --color-stone-900: oklch(21.611540% 0.00612556 56.043375);
+  --color-stone-950: oklch(14.689616% 0.00412883 49.249906);
 
   /* Accent scales overridden for contrast, 14 Aug 2026.
      red-500   #fb2c36 measured 3.81:1 on white AND for white text on it (used
                both ways in "Other quotes" callouts and badges). #d70008 gives
                5.39:1 in both directions and 4.93:1 on the red-50 surface.
      emerald-600 #009966 measured 3.65:1 on white. #008055 gives 4.98:1. */
-  --color-red-500: #d70008;
-  --color-emerald-600: #008055;
+  --color-red-500: oklch(55.233667% 0.22617561 28.586715);
+  --color-emerald-600: oklch(52.978837% 0.11775401 161.117827);
   /* red-600 #e7000b measured 4.36:1 on the red-50 callout and 4.37:1 on paper.
      green-600 #00a63e measured 3.08:1 on green-50. orange-600 #f54900
      measured 3.39:1 on orange-50. All three sit on tinted callout surfaces
      where the default scale is tuned for white and falls just short. */
-  --color-red-600: #d70008;
-  --color-green-600: #008236;
-  --color-orange-600: #ca3500;
+  --color-red-600: oklch(55.233667% 0.22617561 28.586715);
+  --color-green-600: oklch(52.961423% 0.14948489 148.989907);
+  --color-orange-600: oklch(55.424678% 0.19216973 35.484569);
 
   --text-heading-1: 72px;
   --text-heading-1--line-height: 1.05;
@@ -277,6 +277,13 @@
   }
 }
 
+/* Dynamic browser chrome must not make page shells taller than the viewport. */
+@supports (min-height: 100dvh) {
+  .min-h-screen {
+    min-height: 100dvh;
+  }
+}
+
 @utility glass-panel {
   @apply bg-white/80 backdrop-blur-md border border-border;
 }
@@ -295,7 +302,7 @@
 
 @utility section-glow-green {
   background: radial-gradient(
-    ellipse 80% 60% at 50% 40%,
+    ellipse 80% 60% at 50% 40% in oklch,
     rgba(22, 163, 74, 0.06) 0%,
     transparent 70%
   );
@@ -303,7 +310,7 @@
 
 @utility section-glow-red {
   background: radial-gradient(
-    ellipse 80% 60% at 50% 40%,
+    ellipse 80% 60% at 50% 40% in oklch,
     rgba(239, 68, 68, 0.05) 0%,
     transparent 70%
   );
@@ -316,7 +323,7 @@
 @utility bg-radial-hero {
   /* Radial hero glow */
   background: radial-gradient(
-    ellipse 70% 50% at 50% 30%,
+    ellipse 70% 50% at 50% 30% in oklch,
     rgba(184, 65, 12, 0.06) 0%,
     transparent 70%
   );
@@ -324,7 +331,7 @@
 
 @utility bg-radial-subtle {
   background: radial-gradient(
-    ellipse 60% 40% at 50% 50%,
+    ellipse 60% 40% at 50% 50% in oklch,
     rgba(184, 65, 12, 0.04) 0%,
     transparent 70%
   );

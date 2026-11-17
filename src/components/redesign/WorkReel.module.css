@@ -9,11 +9,11 @@
 .sectionDescription{font-size:17px;line-height:1.65;color:#5e5b55;max-width:430px}
 .dark .sectionDescription{color:#c6c2ba}
 .theatre{display:grid;grid-template-columns:minmax(0,1.85fr) minmax(300px,.7fr);min-height:500px;background:#1c1917;color:#ebe9e4;border:1px solid #61554b;box-shadow:18px 18px 0 rgba(28,25,23,.12)}
-.dark .theatre{border-color:#716157;box-shadow:18px 18px 0 rgba(0,0,0,.3)}
-.screen{min-width:0;display:flex;flex-direction:column;border-right:1px solid #514840}
+.dark .theatre{background:oklch(26.8% .007 34);border-color:rgb(235 233 228 / .28);box-shadow:18px 18px 0 rgba(0,0,0,.3)}
+.screen{min-width:0;display:flex;flex-direction:column;border-right:1px solid rgb(235 233 228 / .2)}
 .screenBar,.screenBottom{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px;color:#c6c2ba}
-.screenBar{border-bottom:1px solid #514840}
-.screenBottom{border-top:1px solid #514840}
+.screenBar{border-bottom:1px solid rgb(235 233 228 / .2)}
+.screenBottom{border-top:1px solid rgb(235 233 228 / .2)}
 .screenDots{display:flex;gap:5px}
 .screenDots i{width:7px;height:7px;border:1px solid #e8763a;border-radius:50%}
 .screenImage{position:relative;flex:1;min-height:390px;background:#0f0e0d;overflow:hidden}
@@ -46,6 +46,6 @@
 .projectDirectory a:hover,.projectDirectory a:focus-visible{color:#ad3d0b}
 .dark .projectDirectory a:hover,.dark .projectDirectory a:focus-visible{color:#ffb889}
 @keyframes screenReveal{from{opacity:.4;transform:scale(1.015)}to{opacity:1;transform:scale(1)}}
-@media(max-width:1050px){.theatre{grid-template-columns:1fr}.screen{border-right:0;border-bottom:1px solid #514840}.screenImage{min-height:0;aspect-ratio:1.9}.projectInfo{min-height:260px}.projectIndex{margin-bottom:30px}.infoBottom{padding-top:28px}}
+@media(max-width:1050px){.theatre{grid-template-columns:1fr}.screen{border-right:0;border-bottom:1px solid rgb(235 233 228 / .2)}.screenImage{min-height:0;aspect-ratio:1.9}.projectInfo{min-height:260px}.projectIndex{margin-bottom:30px}.infoBottom{padding-top:28px}}
 @media(max-width:700px){.wrap{width:min(100% - 36px,1392px)}.sectionHead{grid-template-columns:1fr;gap:16px}.sectionTitle{font-size:clamp(3.2rem,12vw,5.5rem)}.sectionDescription{font-size:16px}.theatre{box-shadow:9px 9px 0 rgba(28,25,23,.12)}.screenBar,.screenBottom{padding:11px 12px;font-size:9px}.screenImage{aspect-ratio:1.75}.projectInfo{min-height:270px;padding:24px}.projectIndex{margin-bottom:22px}.projectTitle{font-size:clamp(2.5rem,9vw,3.7rem)}.filmstrip{margin-right:-18px;padding-right:18px}.frame{flex-basis:154px}}
 @media(prefers-reduced-motion:reduce){.fullImage{animation:none}.frame,.controls button{transition:none}.frame:hover,.frame:focus-visible,.frame.active,.controls button:hover,.controls button:focus-visible{transform:none}}

@@ -74,9 +74,9 @@ export function InsightBox({ children, variant = "info", label }: { children: Re
 export function CodeWindow({ children, filename = "code" }: { children: string; filename?: string }) {
   const lines = children.trim().split("\n");
   return (
-    <div className="my-10 rounded-2xl overflow-hidden border border-stone-800 bg-charcoal shadow-xl">
+    <div className="my-10 rounded-2xl overflow-hidden border border-white/20 bg-charcoal shadow-xl">
       {/* Chrome bar */}
-      <div className="flex items-center gap-2 px-4 py-3 bg-stone-900 border-b border-white/10">
+      <div className="flex items-center gap-2 px-4 py-3 bg-stone-800 border-b border-white/15">
         <div className="w-3 h-3 rounded-full bg-red-500/80" />
         <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
         <div className="w-3 h-3 rounded-full bg-green-500/80" />

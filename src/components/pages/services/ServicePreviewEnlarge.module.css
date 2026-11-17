@@ -2,10 +2,10 @@
 .trigger{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 14px;border:1px solid #ad3d0b;background:#f1e4d9;color:#7a2e0e;font:650 13px/1.4 var(--font-sans),Arial,sans-serif;cursor:pointer;transition:background 180ms ease,color 180ms ease}
 .trigger:hover{background:#ad3d0b;color:#fff}
 .trigger:focus-visible,.dialog button:focus-visible,.viewport:focus-visible{outline:3px solid #ad3d0b;outline-offset:3px}
-.dialog{position:fixed;inset:0;width:min(1480px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 32px);margin:auto;padding:0;border:1px solid #b8aa9c;background:#f8f5ef;color:#1c1917;box-shadow:0 24px 80px #0005;overflow:hidden;font-family:var(--font-sans),Arial,sans-serif}
+.dialog{position:fixed;inset:0;width:min(1480px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 32px);margin:auto;padding:0;border:1px solid rgb(74 48 34 / .35);background:#f8f5ef;color:#1c1917;box-shadow:0 24px 80px #0005;overflow:hidden;font-family:var(--font-sans),Arial,sans-serif}
 .dialog[open]{display:flex;flex-direction:column}
 .dialog::backdrop{background:rgba(28,25,23,.76)}
-.toolbar{display:flex;align-items:center;gap:12px;flex-shrink:0;padding:8px 14px;border-bottom:1px solid #c9beb1}
+.toolbar{display:flex;align-items:center;gap:12px;flex-shrink:0;padding:8px 14px;border-bottom:1px solid rgb(74 48 34 / .24)}
 .toolbar h2{margin:0 auto 0 0;font:700 16px/1.4 var(--font-sans),Arial,sans-serif}
 .zoom,.close{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;min-width:44px;padding:8px 12px;border:1px solid #b8aa9c;background:#f8f5ef;color:#4a3022;font:650 13px/1.4 var(--font-sans),Arial,sans-serif;cursor:pointer}
 .close{padding:8px}

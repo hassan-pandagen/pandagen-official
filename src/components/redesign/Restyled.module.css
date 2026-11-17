@@ -2,6 +2,7 @@
   background: #ebe9e4;
   color: #1c1917;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Each preview reuses the complete live page, including its working forms and

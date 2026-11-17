@@ -15,6 +15,7 @@
   background: #ebe9e4;
   color: #1c1917;
   min-height: 100vh;
+  min-height: 100dvh;
   /* The title band is full-bleed; clip rather than hidden, so nothing inside
      becomes a scroll container and sticky elements keep working. */
   overflow-x: clip;
