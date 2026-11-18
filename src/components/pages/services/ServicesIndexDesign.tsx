@@ -1,3 +1,4 @@
+import { QuotedIn } from "@/components/redesign/QuotedIn";
 import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import EditorScreenshot from "./EditorScreenshot";
 import Link from "next/link";
@@ -41,6 +42,8 @@ export default function ServicesPreviewIndex() {
     {/* 8 Oct 2026, owner: the headline on two lines like /pricing, copy on the left and
         real client work on the right, instead of a four-line headline and no image. */}
     <header className={v.hubHero}><div className={`${s.wrap} ${v.hubHeroGrid}`}><div><p className={`${s.eyebrow} ${v.eyebrow}`} style={{ color: "#E8763A" }}>PandaCodeGen / Services</p><h1 className={v.hubTitle}>Website design.{" "}<br /><span style={{ color: "#ebe9e4" }}><HeadingEmphasis text="Development, too." phrase="Development" onDark /></span></h1><p className={v.hubLead}>Website design and development for small businesses, custom sites and online stores. Build a new website, redesign what you have, fix a specific problem or plan a platform move. We agree the work and price before starting.</p><div className={s.heroActions}><a href="#choose" className={s.buttonLight}>Explore the services ↓</a><QuoteModalButton cta="services_preview_hero" location="services" className={s.buttonLight}>Talk to the founders ↗</QuoteModalButton></div></div><figure className={`${v.heroVisual} ${v.hubVisual}`}><div className={v.imageBar}><span className={v.dots} aria-hidden="true"><i/><i/><i/></span><span>From the work archive</span></div><EditorScreenshot notes={false} src="/work/emblematic-studio-home.png" alt="Emblematic Studio homepage, a custom brand and product site" width={1440} height={900} sizes="(min-width: 1051px) 46vw, 100vw" priority /><figcaption>Independent client / Emblematic Studio. <Link href="/work/emblematic-studio">See the project ↗</Link></figcaption><ServicePreviewEnlarge src="/work/emblematic-studio-home.png" alt="Emblematic Studio homepage, a custom brand and product site" /></figure></div></header>
+
+    <QuotedIn />
 
     <section id="choose" className={s.section}><div className={s.wrap}>
       <FadeIn className={`${s.sectionHead} ${v.sectionHead}`}><div><p className={`${s.eyebrow} ${v.eyebrow}`}>01 / Find your route</p><h2 className={v.storyTitle}>What do you need to build or improve?</h2></div><p>A simple WordPress site is welcome here. So is a store, a custom build or an existing site that needs attention. Talk directly with the founders, compare the options and get the scope and cost before work starts.</p></FadeIn>

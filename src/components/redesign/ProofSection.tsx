@@ -203,44 +203,9 @@ export default function ProofSection() {
           })}
         </ul>
 
-        {/* Publication links and the founder-affiliated disclosure. */}
+        {/* Founder-affiliated disclosure. */}
         <div data-proof-notes className="mt-8 border-t pt-8 md:mt-16 md:pt-10" style={{ borderColor: T.rule }}>
-          <div>
-            <p className="proof-note-label text-[13px] font-bold uppercase leading-relaxed tracking-[0.08em]" style={{ fontFamily: MONO, color: T.ink }}>
-              In the press
-            </p>
-            <p className="mt-3 max-w-[65ch] text-[17px] leading-[1.6]" style={{ color: T.body }}>
-              Selected articles featuring insights from co-founder Hassan Jamal on our work, technology and business.
-            </p>
-            <div className="mt-6 grid gap-4 md:grid-cols-3">
-              {[
-                { name: "TechBullion", href: "https://techbullion.com/16-keys-to-successful-resource-allocation-in-software-projects/", topic: "resource allocation in software projects" },
-                { name: "CIO Grid", href: "https://ciogrid.com/qa/how-it-leaders-decide-when-to-modernize-aging-systems/", topic: "when to modernize aging systems" },
-                { name: "Woman\u2019s World", href: "https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay", topic: "how remote AI-training work operates" },
-              ].map((publication) => (
-                <a
-                  key={publication.name}
-                  href={publication.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex h-full flex-col border-l-[3px] p-5 md:p-6 no-underline transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 motion-reduce:transition-none"
-                  style={{ borderColor: T.accentText, backgroundColor: T.paper, outlineColor: T.accentText }}
-                >
-                  <span className="flex items-center justify-between gap-4">
-                    <span className="text-[28px] leading-[1.1] group-hover:underline group-focus-visible:underline underline-offset-4" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.accentText }}>
-                      {publication.name}
-                    </span>
-                    <ArrowUpRight className="h-5 w-5 shrink-0" style={{ color: T.accentText }} aria-hidden="true" />
-                  </span>
-                  <span className="mt-2 block text-[16px] leading-[1.6]" style={{ color: T.body }}>
-                    Quoted co-founder Hassan Jamal on {publication.topic}.
-                  </span>
-                  <span className="sr-only"> (opens in a new tab)</span>
-                </a>
-              ))}
-            </div>
-          </div>
-          <div className="mt-8 grid gap-x-10 gap-y-3 border-t pt-6 md:grid-cols-[1fr_2fr]" style={{ borderColor: T.rule }}>
+          <div className="grid gap-x-10 gap-y-3 md:grid-cols-[1fr_2fr]">
             <div>
             <p className="proof-note-label text-[13px] font-bold uppercase leading-relaxed tracking-[0.08em]" style={{ fontFamily: MONO, color: T.ink }}>
               About our project examples

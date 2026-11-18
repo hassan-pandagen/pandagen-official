@@ -1,3 +1,4 @@
+import { QuotedIn } from "@/components/redesign/QuotedIn";
 import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import PriceAmount from "@/components/redesign/PriceAmount";
 import Image from "next/image";
@@ -156,6 +157,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
 
       {/* 14 Nov 2026, Imran's brief: the A Step Above proof sits directly under the
           hero, and the automation section follows it. */}
+      <QuotedIn />
       <SystemProof />
       <FeaturesTrio />
       {/* Answer-first summary; it must stay in the first 30% of the page for

@@ -322,6 +322,7 @@ export const clusters: Cluster[] = [
     relatedClusterIds: ['wordpress', 'shopify', 'pricing', 'agency'],
     caseStudyHrefs: ['/work/emblematic-studio', '/work/ladies-4-jesus', '/work/panda-patches'],
     postIds: [
+      'when-to-rebuild-an-aging-system',
       'sanity-vs-wordpress', 'sanity-vs-supabase', 'product-catalog-website-without-cart',
       'woocommerce-vs-custom-website',
       'custom-website-5000-whats-included', 'how-long-does-a-custom-website-take', 'do-you-own-your-website',

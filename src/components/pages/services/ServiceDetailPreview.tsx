@@ -1,3 +1,4 @@
+import { QuotedIn } from "@/components/redesign/QuotedIn";
 import Image from "next/image";
 import SearchConsoleChartPreview from "./SearchConsoleChartPreview";
 import GoogleAiVisibilityProof from "./GoogleAiVisibilityProof";
@@ -62,11 +63,13 @@ export default function ServiceDetailPreview({ service }: { service: ServicePrev
       </div>
     </div></header>
 
+    <QuotedIn />
+
     {service.slug === "ai-seo" && <AsamServiceEvidence />}
 
     {service.slug === "ai-seo" && <section aria-labelledby="ai-measurement" className={s.section}><div className={s.wrap}>
       <h2 id="ai-measurement" className={v.storyTitle}>Is AI search bringing your business enquiries?</h2>
-      <p className="mt-5 max-w-3xl text-base leading-relaxed">We track four separate signals: citations, mentions of your business, website visits and enquiries or sales. Reports show the dates, questions and platforms checked, so you can see what changed and what still needs work.</p>
+      <p className="mt-5 max-w-3xl text-base leading-relaxed">We track four separate signals: citations, mentions of your business, website visits and enquiries or sales. Reports show the dates, questions and platforms checked. For earned media, we record the publication, its topic and any link. We compare those placements with identifiable visits and enquiries over time, and leave visits with no known source unassigned.</p>
       <dl className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {[
           ["Can buyers find you?", "We check whether relevant AI answers cite your pages or name your business."],

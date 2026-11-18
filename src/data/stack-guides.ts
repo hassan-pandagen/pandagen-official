@@ -29,6 +29,23 @@ const bhRenewal = spec("bluehost-starter-renewal");
 
 export const stackGuidePosts: StackGuidePost[] = [
   {
+    ...byline,
+    id: "when-to-rebuild-an-aging-system",
+    title: "When Should You Rebuild an Aging Business System?",
+    excerpt: "Follow one order through your team. Use repeated handoffs, mistakes and support costs to decide what to repair, connect or rebuild.",
+    category: "Architecture",
+    illustrationType: "migration",
+    faqs: [
+      { question: "How do you tell when a business system needs replacing?", answer: "Follow a normal order or booking. If the same work repeatedly moves into spreadsheets, inboxes or chat to keep the process going, map those handoffs and assess whether a repair, integration or rebuild will remove them." },
+      { question: "Do you need to replace the website and back office together?", answer: "They can move separately. Start with the part creating the most manual work, agree where the official records live, and keep the rest running until the new process has been tested." },
+    ],
+    date: "Nov 18",
+    published: "2026-11-18",
+    lastModified: "2026-11-18",
+    eyebrow: "Founder notes",
+    readTime: "4 min",
+  },
+  {
     ...byline, id: "sanity-vs-wordpress", title: "Sanity vs WordPress: Which Editor Fits Your Website?",
     date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-29", eyebrow: "CMS / Sanity vs WordPress",
     excerpt: "WordPress is free software you host and update. Sanity combines a content editor with hosted storage. How to choose, with a real client editor and five tasks.",

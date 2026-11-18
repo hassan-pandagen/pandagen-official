@@ -1,3 +1,4 @@
+import { QuotedIn } from "@/components/redesign/QuotedIn";
 import Image from "next/image";
 import EditorScreenshot from "../EditorScreenshot";
 import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
@@ -104,6 +105,8 @@ export function WordPressMigrationPreview() {
       </div>
     </div></header>
 
+    <QuotedIn />
+
     <section id="client-work" className={`${s.section} ${v.clientWork}`}><div className={s.wrap}>
       <FadeIn className={`${s.sectionHead} ${v.sectionHead}`}><div><p className={`${s.eyebrow} ${v.eyebrow}`}>01 / See the work</p><h2 className={v.narrativeTitle}>A new shop. A happy client.</h2></div><p>MyCustomPatches moved from an older WordPress store to a custom site. Explore the finished shop and hear from the client about working with Hassan. The changeover had no recorded downtime.</p></FadeIn>
       <div className={v.proofGrid}>
@@ -155,6 +158,7 @@ export function WordPressMigrationPreview() {
       <FadeIn className={`${s.sectionHead} ${v.sectionHead}`}><div><p className={`${s.eyebrow} ${v.eyebrow}`}>07 / Before you decide</p><h2 className={v.narrativeTitle}>Questions worth asking.</h2></div><p>We answer these against your real website and put the project-specific answers into the quote.</p></FadeIn>
       <FaqRows faqs={migrationFaqs().map(({ q, a }) => ({ question: q, answer: a }))} />
       <nav className={v.guides} aria-label="WordPress migration guides">
+        <Link href="/blog/when-to-rebuild-an-aging-system">When to fix or rebuild a business system</Link>
         <Link href="/blog/wordpress-migration-cost">What affects a WordPress migration quote ↗</Link>
         <Link href="/blog/how-to-migrate-wordpress-to-nextjs">The WordPress to Next.js migration steps ↗</Link>
         <Link href="/blog/will-migrating-hurt-my-seo">What a website move means for SEO ↗</Link>

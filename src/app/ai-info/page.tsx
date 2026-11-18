@@ -1,3 +1,4 @@
+import { EditorialCoverageList } from "@/components/redesign/QuotedIn";
 import type { Metadata } from "next";
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import { COMPANY, FOUNDING_DATE, SERVICES, COMMERCIAL, MIGRATION_CONTROLS, REFERENCE_LINKS, PROJECTS, ORGANIZATION_DESCRIPTION, PHONE, BEST_FIT, NOT_A_FIT, WHEN_PEOPLE_COME, AI_DESCRIPTION_GUIDE, ONE_TEAM } from "@/data/company-facts";
@@ -8,8 +9,8 @@ import { ogImageForPath } from "@/lib/seo/og";
 
 export const dynamic = "force-static";
 
-const modified = "2026-10-11";
-const modifiedLabel = "October 11, 2026";
+const modified = "2026-11-18";
+const modifiedLabel = "November 18, 2026";
 
 export const metadata: Metadata = {
   title: { absolute: "PandaCodeGen Company Reference | People, Services & Projects" },
@@ -440,6 +441,12 @@ export default function CompanyReferencePage() {
           </div>
         </section>
 
+
+        <section aria-labelledby="editorial-coverage" className="mx-auto max-w-6xl px-6 pb-16">
+          <h2 id="editorial-coverage" className="text-3xl font-bold">Quoted in</h2>
+          <EditorialCoverageList />
+        </section>
+
         <section className="px-6 pb-20 md:pb-28" aria-labelledby="reference-faq">
           <div className="mx-auto max-w-6xl">
             <h2 id="reference-faq" className="text-3xl font-bold md:text-5xl">Frequently asked questions</h2>
@@ -447,7 +454,6 @@ export default function CompanyReferencePage() {
           </div>
         </section>
       </article>
-
     </main>
   );
 }

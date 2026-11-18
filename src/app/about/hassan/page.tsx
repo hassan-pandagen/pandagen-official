@@ -1,3 +1,4 @@
+import { EditorialCoverageList } from "@/components/redesign/QuotedIn";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -135,62 +136,10 @@ export default function HassanProfilePage() {
         </div>
       </section>
 
-      {/* Independent press. This is one of the few third-party citations we have, so
-          it is stated plainly with the link doing the work. No readership or reach
-          figure: the article is checkable, an audience number is not. */}
       <section className="px-6 pt-16 md:pt-24" aria-labelledby="hassan-press">
         <div className="mx-auto max-w-6xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Press</p>
-          {/* Heading states the PLACEMENT, not a credential. It read "Quoted as an
-              AI expert" until 11 Aug 2026 — the magazine's descriptor, adopted as
-              our own H2 on the founder's bio page. Two problems: it claimed an
-              expertise we do not sell and cannot evidence, and it contradicted the
-              careful paragraph directly beneath it, which says only that he was
-              quoted on how that work operates. An H2 on an entity page is a strong
-              signal about what this company IS, and "AI expert" is not it. */}
-          <h2 id="hassan-press" className="mt-3 scroll-mt-28 text-3xl font-bold md:text-4xl">Quoted in TechBullion, CIO Grid and Woman&rsquo;s World</h2>
-          <div className="mt-8 space-y-5 border-y border-stone-400 py-6 md:py-8">
-            {/* 5 Nov 2026: TechBullion article, published that day. Describe the topic only. */}
-            <p className="max-w-4xl text-lg leading-8 text-stone-700">
-              <a
-                href="https://techbullion.com/16-keys-to-successful-resource-allocation-in-software-projects/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-serif text-xl italic text-cognac underline decoration-cognac/40 underline-offset-4 transition-colors hover:decoration-cognac"
-              >
-                TechBullion
-                <span className="sr-only"> (opens in a new tab)</span>
-              </a>{" "}
-              quoted Hassan on resource allocation in software projects, using the A Step Above Medical website and
-              training system as his example. November 2026.
-            </p>
-            {/* 20 Oct 2026: CIO Grid expert Q&A, published that day. Describe the topic only. */}
-            <p className="max-w-4xl text-lg leading-8 text-stone-700">
-              <a
-                href="https://ciogrid.com/qa/how-it-leaders-decide-when-to-modernize-aging-systems/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-serif text-xl italic text-cognac underline decoration-cognac/40 underline-offset-4 transition-colors hover:decoration-cognac"
-              >
-                CIO Grid
-                <span className="sr-only"> (opens in a new tab)</span>
-              </a>{" "}
-              quoted Hassan on how IT leaders decide when to modernize aging systems, using the Panda Patches
-              rebuild as his example. Panda Patches is owned by co-founder Imran Raza Ladhani. October 2026.
-            </p>
-            <p className="max-w-4xl text-lg leading-8 text-stone-700">
-              <a
-                href="https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-serif text-xl italic text-cognac underline decoration-cognac/40 underline-offset-4 transition-colors hover:decoration-cognac"
-              >
-                Woman&rsquo;s World
-                <span className="sr-only"> (opens in a new tab)</span>
-              </a>{" "}
-              quoted Hassan Jamal, co-founder and lead engineer at PandaCodeGen, on how remote AI-training work operates. May 2026.
-            </p>
-          </div>
+          <h2 id="hassan-press" className="scroll-mt-28 text-3xl font-bold md:text-4xl">Quoted in</h2>
+          <EditorialCoverageList />
         </div>
       </section>
 
