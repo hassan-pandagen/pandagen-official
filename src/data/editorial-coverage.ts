@@ -17,7 +17,7 @@ export const editorialCoverage = [
     dateLabel: "November 5, 2026",
     url: "https://techbullion.com/16-keys-to-successful-resource-allocation-in-software-projects/",
     topic: "Budgeting for the custom work and running costs of a training website.",
-    guide: null,
+    guide: "/blog/how-to-budget-for-custom-software",
   },
   {
     id: "cio-grid",

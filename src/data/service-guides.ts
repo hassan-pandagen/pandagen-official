@@ -18,6 +18,7 @@ export const serviceGuides: Record<string, { title: string; href: string }[]> = 
     { title: "Compare developer quotes before paying a deposit", href: "/blog/cheap-web-developer" },
   ],
   "training-business-websites": [
+    { title: "Budget for the build and monthly costs", href: "/blog/how-to-budget-for-custom-software" },
     { title: "Online booking for a small business website", href: "/blog/online-booking-small-business-website" },
     { title: "Sanity vs Supabase: CMS, backend or both", href: "/blog/sanity-vs-supabase" },
     { title: "What a website and database cost each month", href: "/blog/website-monthly-running-cost" },

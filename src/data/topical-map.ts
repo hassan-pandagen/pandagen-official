@@ -378,6 +378,7 @@ export const clusters: Cluster[] = [
       'how-much-does-a-website-cost', 'website-redesign-cost', 'website-rebuild-cost-2026',
       // 8 Oct 2026: the monthly vendor bill for our usual stack, the running-cost
       // companion to how-much-does-a-website-cost.
+      'how-to-budget-for-custom-software',
       'website-monthly-running-cost',
       'online-booking-small-business-website',
     ],

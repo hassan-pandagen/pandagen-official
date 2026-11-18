@@ -46,6 +46,23 @@ export const stackGuidePosts: StackGuidePost[] = [
     readTime: "4 min",
   },
   {
+    ...byline,
+    id: "how-to-budget-for-custom-software",
+    title: "How to Budget for Custom Software and Monthly Running Costs",
+    excerpt: "Ask for separate build and running-cost estimates, decide where custom work matters, and use three usage scenarios to size the monthly bill.",
+    category: "Architecture",
+    illustrationType: "cost",
+    faqs: [
+      { question: "What should a custom software budget include?", answer: "List the one-time build, cloud and software bills, payment or usage fees, and ongoing care. Ask who pays each bill, how pricing grows with use and who controls the account." },
+      { question: "How do you estimate an AI app's monthly cost?", answer: "Estimate normal and busy-month activity, including model requests, document reads or audio, storage, and repeat requests. Apply the provider's current rates to each scenario and agree a review point when usage is higher than expected." },
+    ],
+    date: "Nov 18",
+    published: "2026-11-18",
+    lastModified: "2026-11-18",
+    eyebrow: "Founder notes",
+    readTime: "4 min",
+  },
+  {
     ...byline, id: "sanity-vs-wordpress", title: "Sanity vs WordPress: Which Editor Fits Your Website?",
     date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-29", eyebrow: "CMS / Sanity vs WordPress",
     excerpt: "WordPress is free software you host and update. Sanity combines a content editor with hosted storage. How to choose, with a real client editor and five tasks.",
