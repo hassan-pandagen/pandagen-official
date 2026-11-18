@@ -12,6 +12,8 @@ export type StackGuidePost = BlogPost & {
   published: string;
   /** The line above the title. */
   eyebrow: string;
+  /** A shorter title tag, when the on-page heading is long. */
+  metaTitle?: string;
 };
 
 const byline = { author: "Hassan", role: "Co-founder, Lead Engineer", featured: false };
@@ -161,6 +163,22 @@ export const stackGuidePosts: StackGuidePost[] = [
       { question: "Can I take payment when someone books?", answer: `Yes, on most routes, but the plan matters. As of ${asOf("booking-calendly-payments")}, Calendly ${spec("booking-calendly-payments").value}, and Wix ${spec("booking-wix-payments").value}. Cal.com ${spec("booking-calcom-free").value}.` },
       { question: "When do I need a custom booking system?", answer: "When booking is only the first step: class seats, fees that depend on the course or location, confirmation emails with dates and venue, certificates, or staff records that must match what was booked. A scheduling tool books a time slot and does not know about any of that." },
       { question: "Is a booking plugin or app safe for a business that takes card payments?", answer: "Payments should go through a processor such as Stripe, so card numbers never touch your website. Whichever route you choose, check that the booking tool hands payment to the processor and does not store card details itself." },
+    ],
+  },
+  {
+    // 18 Nov 2026: Imran's draft, edited from the review notes. The title tag is the short
+    // metaTitle; the long version stays as the on-page heading.
+    ...byline, id: "supabase-vercel-cost", title: "Supabase and Vercel: What They Cost as You Grow, and When to Choose Something Else",
+    metaTitle: "Supabase and Vercel Pricing 2026: What You Pay as You Grow",
+    date: "Nov 18", published: "2026-11-18", lastModified: "2026-11-18", eyebrow: "Pricing / Supabase and Vercel costs",
+    excerpt: "Supabase and Vercel cost about $45 a month for a small live app and a few hundred for a busy one. Where the bills jump, and what to move first. Prices as of November 2026.",
+    category: "Pricing", readTime: "9 min", illustrationType: "hosting", cardStat: "$45", cardStatLabel: "A month for a small live app on Supabase and Vercel",
+    faqs: [
+      { question: "Is Supabase free for a real business?", answer: `The Free plan pauses a project after one week without activity and stops at a 500 MB database. A live business app should budget ${supabasePro.value.replace("from ", "")} for Pro.` },
+      { question: "Can I run a business site on Vercel's free plan?", answer: `No. Vercel limits Hobby to personal, non-commercial use, so a business site needs Pro at ${vercelPro.value}. Our guide "Is Vercel free?" explains what Hobby allows.` },
+      { question: "What's the cheapest way to host a Next.js app?", answer: "A server you rent and manage yourself, from about $4 to $6 a month, or Cloudflare Workers from $5 a month. The saving is real only if someone on the team can maintain it." },
+      { question: "Will I be locked in to Supabase?", answer: "Less than with most backends. The database is standard Postgres and the software is open source, so you can export your data or host it yourself. Logins, file storage and security rules take the most work to move." },
+      { question: "When does it stop making sense?", answer: "When the monthly bill is more than the cost of an engineer's time to run something cheaper. For most small businesses, that point is in the hundreds of dollars a month, not the tens." },
     ],
   },
 ];

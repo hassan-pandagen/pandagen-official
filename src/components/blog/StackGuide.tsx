@@ -18,7 +18,7 @@ function getPost(id: string) {
   const post = blogPosts.find(item => item.id === id);
   const guide = stackGuidePosts.find(item => item.id === id);
   if (!post || !guide) throw new Error(`Missing guide: ${id}`);
-  return { ...post, published: guide.published, eyebrow: guide.eyebrow };
+  return { ...post, published: guide.published, eyebrow: guide.eyebrow, metaTitle: guide.metaTitle };
 }
 
 const titleFocus: Record<string, string> = {
@@ -26,13 +26,14 @@ const titleFocus: Record<string, string> = {
   "sanity-vs-supabase": "Both",
   "product-catalog-website-without-cart": "Quote Requests",
   "website-monthly-running-cost": "Under $50",
+  "supabase-vercel-cost": "as You Grow",
 };
 
 export function stackGuideMetadata(id: string): Metadata {
   const post = getPost(id);
   const path = `/blog/${id}`;
   return {
-    title: post.title, description: post.excerpt, alternates: { canonical: path },
+    title: post.metaTitle ?? post.title, description: post.excerpt, alternates: { canonical: path },
     openGraph: { title: post.title, description: post.excerpt, url: `https://www.pandacodegen.com${path}`, type: "article", publishedTime: post.published, modifiedTime: post.lastModified, authors: ["Hassan Jamal"], images: [ogImageForPath(path)] },
     twitter: { card: "summary_large_image", title: post.title, description: post.excerpt },
   };

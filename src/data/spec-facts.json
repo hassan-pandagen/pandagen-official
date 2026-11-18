@@ -1466,6 +1466,274 @@
       "verifiedAt": "2026-11-18",
       "reviewDays": 30,
       "source": "https://shopthemedetector.com/shopify-statistics/app-speed"
+    },
+    "supabase-free-egress": {
+      "vendor": "Supabase",
+      "plan": "Free",
+      "label": "Free plan data transfer",
+      "value": "5 GB of egress and 5 GB of cached egress a month",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://supabase.com/pricing"
+    },
+    "supabase-pro-egress": {
+      "vendor": "Supabase",
+      "plan": "Pro",
+      "label": "Pro plan data transfer",
+      "value": "250 GB of egress (then $0.09 per GB) and a separate 250 GB of cached egress (then $0.03 per GB) a month",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://supabase.com/pricing"
+    },
+    "supabase-pro-disk-storage-overage": {
+      "vendor": "Supabase",
+      "plan": "Pro",
+      "label": "Pro disk and file storage above the included amounts",
+      "value": "$0.125 per GB of disk above 8 GB per project, and $0.0213 per GB of file storage above 100 GB",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://supabase.com/pricing"
+    },
+    "supabase-compute-sizes": {
+      "vendor": "Supabase",
+      "plan": "Pro",
+      "label": "Compute sizes",
+      "value": "Micro $10, Small $15, Medium $60 and Large $110 a month",
+      "qualifier": "each paid project runs on its own compute; Pro includes $10 a month of compute credits, which covers one Micro project",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://supabase.com/pricing"
+    },
+    "supabase-pitr": {
+      "vendor": "Supabase",
+      "plan": "Pro",
+      "label": "Point-in-time recovery add-on",
+      "value": "$100 a month for 7 days of retention",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://supabase.com/pricing"
+    },
+    "supabase-mau-overage": {
+      "vendor": "Supabase",
+      "plan": "Pro",
+      "label": "Monthly active users above the Pro allowance",
+      "value": "$0.00325 per monthly active user above 100,000",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://supabase.com/pricing"
+    },
+    "supabase-custom-domain": {
+      "vendor": "Supabase",
+      "plan": "Pro",
+      "label": "Custom domain add-on",
+      "value": "$10 a month per project",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://supabase.com/pricing"
+    },
+    "supabase-spend-cap": {
+      "vendor": "Supabase",
+      "plan": "Pro",
+      "label": "Spend cap",
+      "value": "on by default on Pro; usage past a quota is disallowed until the next billing cycle instead of being charged",
+      "qualifier": "the cap doesn't cover compute, branching compute, read replica compute, custom domains, extra disk IOPS and throughput, IPv4, log drains, MFA phone or point-in-time recovery",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://supabase.com/docs/guides/platform/cost-control"
+    },
+    "supabase-cached-egress-change": {
+      "vendor": "Supabase",
+      "label": "Cached egress price change",
+      "value": "22 August 2025",
+      "qualifier": "Supabase announced a cheaper rate for cached egress, rolled out over the following weeks",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 180,
+      "source": "https://supabase.com/changelog/38119-3x-cheaper-egress-for-cache-hits"
+    },
+    "supabase-self-hosting": {
+      "vendor": "Supabase",
+      "label": "Self-hosted Supabase",
+      "value": "open source under the Apache 2.0 licence",
+      "qualifier": "self-hosted projects don't get branching, managed backups or point-in-time recovery, and support comes from the community",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 90,
+      "source": "https://supabase.com/docs/guides/self-hosting"
+    },
+    "vercel-flat-rate-cdn-tiers": {
+      "vendor": "Vercel",
+      "plan": "Pro",
+      "label": "Flat Rate CDN paid tiers",
+      "value": "$20, $100 or $300 a month for 10, 50 or 150 million CDN requests, each with 50 TB of data transfer",
+      "qualifier": "Pro includes the lowest tier of 1 million requests and 1 TB at no extra cost",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://vercel.com/docs/pricing/flat-rate-cdn"
+    },
+    "vercel-cdn-on-demand-included": {
+      "vendor": "Vercel",
+      "plan": "Pro",
+      "label": "CDN requests on on-demand billing",
+      "value": "10 million CDN requests a month included, then from $2 per million",
+      "qualifier": "for Pro teams billed on demand rather than on Flat Rate CDN",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://vercel.com/pricing"
+    },
+    "vercel-function-rates": {
+      "vendor": "Vercel",
+      "plan": "Pro",
+      "label": "Function usage rates",
+      "value": "from $0.128 per hour of Active CPU, plus $0.60 per million invocations",
+      "qualifier": "starting rates; they vary by region",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://vercel.com/pricing"
+    },
+    "vercel-image-transformation-rate": {
+      "vendor": "Vercel",
+      "plan": "Pro",
+      "label": "Image Optimization transformations",
+      "value": "from $0.05 per 1,000",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://vercel.com/pricing"
+    },
+    "vercel-standard-build-minute": {
+      "vendor": "Vercel",
+      "plan": "Pro",
+      "label": "Build minutes on a Standard machine",
+      "value": "$0.014 per minute on a Standard (4 vCPU) build machine",
+      "qualifier": "billed per CPU minute at $0.0035; a Basic (2 vCPU) machine works out to $0.007 a minute",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://vercel.com/docs/builds/managing-builds"
+    },
+    "vercel-pro-hard-limit": {
+      "vendor": "Vercel",
+      "plan": "Pro",
+      "label": "Pausing projects at a spend limit",
+      "value": "you can optionally have Vercel pause all projects when a hard limit is reached",
+      "qualifier": "new Pro teams start with a $200 on-demand budget, which can be changed",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://vercel.com/pricing"
+    },
+    "vercel-pro-credit-change": {
+      "vendor": "Vercel",
+      "label": "Pro usage credit change",
+      "value": "9 September 2025",
+      "qualifier": "Pro moved from fixed allocations to $20 of monthly usage credit",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 180,
+      "source": "https://vercel.com/changelog/included-pro-usage-is-now-credit-based"
+    },
+    "cloudflare-workers-paid": {
+      "vendor": "Cloudflare",
+      "label": "Workers Paid plan",
+      "value": "a $5 a month minimum, with 10 million requests included and no charge for data transfer",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 60,
+      "source": "https://developers.cloudflare.com/workers/platform/pricing/"
+    },
+    "netlify-personal-price": {
+      "vendor": "Netlify",
+      "label": "Personal plan price",
+      "value": "$9 a month",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 60,
+      "source": "https://www.netlify.com/pricing/"
+    },
+    "railway-plans": {
+      "vendor": "Railway",
+      "label": "Plan minimums and egress",
+      "value": "$5 a month on Hobby or $20 on Pro, including the same amount of usage, with egress at $0.05 per GB",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 60,
+      "source": "https://railway.com/pricing"
+    },
+    "render-pricing": {
+      "vendor": "Render",
+      "label": "Instance and workspace prices",
+      "value": "instances from $7 a month; the Pro workspace is $25 a month flat, with no seat fees",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 60,
+      "source": "https://render.com/pricing"
+    },
+    "fly-pricing": {
+      "vendor": "Fly.io",
+      "label": "Smallest machine and egress",
+      "value": "about $2.19 a month for a shared-cpu-1x machine with 256 MB, and $0.02 per GB of egress in North America and Europe",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 60,
+      "source": "https://fly.io/docs/about/pricing/"
+    },
+    "coolify-self-hosted": {
+      "vendor": "Coolify",
+      "label": "Self-hosted Coolify",
+      "value": "free and open source",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 90,
+      "source": "https://coolify.io/pricing"
+    },
+    "digitalocean-cheapest-droplet": {
+      "vendor": "DigitalOcean",
+      "label": "Cheapest Droplet",
+      "value": "$4 a month",
+      "qualifier": "512 MiB of memory",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 60,
+      "source": "https://www.digitalocean.com/pricing/droplets"
+    },
+    "hetzner-cloud-from": {
+      "vendor": "Hetzner",
+      "label": "Cheapest cloud server",
+      "value": "from €5.49 a month, excluding VAT",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 60,
+      "source": "https://www.hetzner.com/cloud"
+    },
+    "neon-pricing": {
+      "vendor": "Neon",
+      "label": "Free plan and usage rates",
+      "value": "a permanent free plan, then usage billing from $0.106 per compute-unit hour and $0.35 per GB-month of storage, with no monthly minimum",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 60,
+      "source": "https://neon.com/pricing"
+    },
+    "appwrite-pro": {
+      "vendor": "Appwrite",
+      "label": "Pro plan",
+      "value": "$25 a month per project",
+      "qualifier": "Appwrite moved Pro from per-seat to per-project pricing on 1 September 2025",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 60,
+      "source": "https://appwrite.io/changelog/entry/2025-09-01"
+    },
+    "planetscale-postgres-from": {
+      "vendor": "PlanetScale",
+      "label": "Cheapest Postgres plan",
+      "value": "$5 a month",
+      "qualifier": "a single-node database without high availability",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 60,
+      "source": "https://planetscale.com/pricing"
+    },
+    "firebase-blaze": {
+      "vendor": "Firebase",
+      "label": "Blaze plan",
+      "value": "pay as you go, with Firestore charged per document read, write and delete",
+      "qualifier": "budget alerts don't pause services; optional spend cap budgets can pause some services",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 60,
+      "source": "https://firebase.google.com/pricing"
+    },
+    "aurora-serverless": {
+      "vendor": "AWS",
+      "label": "Aurora Serverless",
+      "value": "billed per ACU-hour of capacity and per GB-month of storage",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 60,
+      "source": "https://aws.amazon.com/rds/aurora/pricing/"
     }
   }
 }

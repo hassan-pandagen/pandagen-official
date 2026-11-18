@@ -381,6 +381,8 @@ export const clusters: Cluster[] = [
       // companion to how-much-does-a-website-cost.
       'how-to-budget-for-custom-software',
       'website-monthly-running-cost',
+      // 18 Nov 2026: what Supabase and Vercel cost as an app grows.
+      'supabase-vercel-cost',
       'online-booking-small-business-website',
     ],
   },
