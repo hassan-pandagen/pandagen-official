@@ -15,6 +15,10 @@ export const metadata = stackGuideMetadata(id);
 //   to $0.09 (all uncached) = $152 to $197;
 //   growing app, Vercel: $20 plan + two seats at $20 + a $20 to $100 request tier = $80 to $160.
 // Re-add them if a price changes.
+// 18 Nov 2026: the older entries used here (supabase-free-plan, supabase-pro-price, vercel-pro-price,
+// vercel-pro-cdn-capacity, vercel-pro-additional-seat, netlify-pro-price, the Hobby terms) were re-read
+// the same day and still match. Their verifiedAt stays at October because existing pages show those
+// dates and the content freeze (until about 8 Dec) bars changing them; bump them when it lifts.
 // The typed server sizes, disk and file rates and the hard-limit sentence come from the
 // spec-facts entries "supabase-compute-sizes", "supabase-pro-disk-storage-overage" and "vercel-pro-hard-limit".
 export default function Page() {
@@ -157,7 +161,7 @@ export default function Page() {
     <p>We use Supabase ourselves, so this isn&apos;t an argument against it. We choose per project, and we start from what the business already has and what it can run cheaply. Our guide to <Link href="/blog/sanity-vs-supabase">Sanity vs Supabase</Link> explains when a site needs a database at all.</p>
     <p>For <Link href="/work/a-step-above-medical">A Step Above Medical</Link>, a medical training provider, we rebuilt the website with Next.js and a Sanity content editor, and built the team&apos;s operations portal on Supabase. Three decisions kept the running costs low:</p>
     <BlogList items={[
-      "The client owns the accounts. The portal's Supabase project is on the client's own account, so the bill, the data and the access all belong to the business.",
+      "The client owns the database account. The portal's Supabase project is on the client's own account, so the database bill, the data and the access all belong to the business.",
       "Free and low-cost tiers were checked before the build. We looked at which services the project already had or could run on free plans, including Supabase storage, the Sanity editor and Resend for emails, so the budget went into the custom website and portal.",
       "The system matches the size of the business. More than 100 scheduled classes run through one system, which is well inside what the entry plans are built for.",
     ]} />
