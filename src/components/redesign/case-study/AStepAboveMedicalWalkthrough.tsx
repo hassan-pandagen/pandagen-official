@@ -39,7 +39,9 @@ const chapters: WalkthroughChapter[] = [
     id: "portal", label: "Team operations portal", title: "Bring the class schedule and its paperwork together.",
     description: "The separate portal gives the team a class schedule with enrolment, instructor assignments and readiness status. Navigation groups student records, certificates, payments-related reporting, emails and account administration in one workspace.",
     detail: "The exports screen offers spreadsheet downloads for students, classes, registrations, attendance, payments, certificates and accepted terms. Uploaded documents are stored separately from those spreadsheet records.",
-    note: "Screens captured before launch; the counts shown are not production results.",
+    // 18 Nov 2026, owner: the screens match the live system. The portal captures predate launch
+    // (28-29 Sep 2026), so their counts are labelled; "captured before launch" is dropped.
+    note: "The counts shown in these screens are not production results.",
     shots: [
       {
         key: "classes", src: "/work/a-step-above-medical-portal-classes.png", width: 1912, height: 914,
