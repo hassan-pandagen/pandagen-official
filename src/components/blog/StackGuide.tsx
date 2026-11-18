@@ -27,6 +27,7 @@ const titleFocus: Record<string, string> = {
   "product-catalog-website-without-cart": "Quote Requests",
   "website-monthly-running-cost": "Under $50",
   "supabase-vercel-cost": "as You Grow",
+  "class-registration-software-vs-custom-booking-system": "Training School",
 };
 
 export function stackGuideMetadata(id: string): Metadata {

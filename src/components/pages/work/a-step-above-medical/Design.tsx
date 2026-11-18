@@ -112,6 +112,8 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
               </tbody>
             </table>
           </div>
+          {/* 18 Nov 2026, dev handoff Part B: link into the class registration guide. */}
+          <p className="mt-5 text-[15px]" style={{ color: T.body }}>Weighing software against a custom build? <Link href="/blog/class-registration-software-vs-custom-booking-system" className="font-semibold underline underline-offset-4" style={{ color: T.accentText }}>Class registration software or a custom booking system</Link></p>
         </div>
       </section>
       {/* Keep the workflow and detailed proof together before the mid-page booking CTA. */}

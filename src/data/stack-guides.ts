@@ -181,4 +181,19 @@ export const stackGuidePosts: StackGuidePost[] = [
       { question: "When does it stop making sense?", answer: "When the monthly bill is more than the cost of an engineer's time to run something cheaper. For most small businesses, that point is in the hundreds of dollars a month, not the tens." },
     ],
   },
+  {
+    // 18 Nov 2026: dev handoff Part B. Title tag and on-page heading from the build notes.
+    ...byline, id: "class-registration-software-vs-custom-booking-system", title: "Class Registration Software or a Custom Booking System: Which Fits Your Training School?",
+    metaTitle: "Class Registration Software vs a Custom Booking System",
+    date: "Nov 18", published: "2026-11-18", lastModified: "2026-11-18", eyebrow: "Booking / Training schools",
+    excerpt: "When class registration software is enough for a training school, when a custom booking system pays for itself, and what we built for a phlebotomy school.",
+    category: "Guide", readTime: "7 min", illustrationType: "cost", cardStat: "4 jobs", cardStatLabel: "Booking, emails, certificates and contact details, before and after",
+    faqs: [
+      { question: "Is Enrollware a good fit for a phlebotomy school?", answer: "Enrollware describes itself as class management software for CPR and first aid training. Whether it suits a phlebotomy programme depends on your certificates and how your courses are structured. Ask for a demo using one of your own courses before you commit." },
+      { question: "How long does a custom class booking system take to build?", answer: "Our larger builds take 3 to 6 weeks once the scope is agreed in writing. A booking system with a staff portal sits at that end." },
+      { question: "Can a custom booking system take payment when the student books?", answer: "Yes. A Step Above Medical's students pay by Stripe when they book, which reserves the seat." },
+      { question: "Who owns a custom booking system?", answer: "You do. For A Step Above Medical the database runs on the school's own account and the code is kept in GitHub." },
+      { question: "Do I have to replace my current website?", answer: "Not always. If your registration software works and the website is the weak point, we can rebuild the website and link it to the software you already use." },
+    ],
+  },
 ];

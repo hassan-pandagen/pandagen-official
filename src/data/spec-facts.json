@@ -1734,6 +1734,31 @@
       "verifiedAt": "2026-11-18",
       "reviewDays": 60,
       "source": "https://aws.amazon.com/rds/aurora/pricing/"
+    },
+    "enrollware-softwarefinder-review": {
+      "vendor": "Enrollware",
+      "label": "Independent description (SoftwareFinder)",
+      "value": "lets training centers schedule classes, register attendees, process payments, and distribute certifications",
+      "qualifier": "and is \"a particularly useful solution for CPR and healthcare training providers\"",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 90,
+      "source": "https://softwarefinder.com/lms/enrollware"
+    },
+    "enrollware-healthcare": {
+      "vendor": "Enrollware",
+      "label": "Healthcare solutions page",
+      "value": "Tailored for American Heart Association and American Red Cross training centers, training sites, and instructors",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 90,
+      "source": "https://enrollwaresolutions.com/solutions-healthcare"
+    },
+    "enrollware-home": {
+      "vendor": "Enrollware",
+      "label": "Home page description",
+      "value": "CPR class management software, designed for training centers and independent CPR/first aid instructors",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 90,
+      "source": "https://www.enrollwaresolutions.com/"
     }
   }
 }

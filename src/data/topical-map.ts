@@ -384,6 +384,8 @@ export const clusters: Cluster[] = [
       // 18 Nov 2026: what Supabase and Vercel cost as an app grows.
       'supabase-vercel-cost',
       'online-booking-small-business-website',
+      // 18 Nov 2026: class registration software or a custom booking system.
+      'class-registration-software-vs-custom-booking-system',
     ],
   },
   {
