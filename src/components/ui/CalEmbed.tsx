@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { hasConsent, useConsent } from "@/components/consent/ConsentProvider";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
+import { trackFBEvent } from "@/components/FacebookPixel";
 import { CAL_LINK, requestBookingAfterConsent, takePendingBooking } from "@/lib/booking";
 
 export default function CalEmbed() {
@@ -48,12 +49,15 @@ export default function CalEmbed() {
       if (cancelled) return;
       // One listener for the whole site, rather than one per booking button.
       const onBooking = (event: CustomEvent<{ data: { uid?: string } }>) => {
-        if (cancelled || !hasConsent("functional") || !hasConsent("analytics")) return;
+        if (cancelled || !hasConsent("functional")) return;
         const uid = event.detail.data.uid;
         if (uid && trackedBookings.current.has(uid)) return;
         if (uid) trackedBookings.current.add(uid);
         // The booking ID is used only in memory for deduplication, never sent.
-        trackGAEvent("cal_booking", { form_id: "discovery_calendar" });
+        if (hasConsent("analytics")) trackGAEvent("cal_booking", { form_id: "discovery_calendar" });
+        // 18 Nov 2026: Meta ads need a booked-call conversion. trackFBEvent sends nothing
+        // unless the visitor accepted marketing cookies and the pixel has loaded.
+        trackFBEvent("Schedule", { content_name: "discovery_calendar" });
       };
       cal("on", { action: "bookingSuccessfulV2", callback: onBooking });
       unsubscribe = () => cal("off", { action: "bookingSuccessfulV2", callback: onBooking });

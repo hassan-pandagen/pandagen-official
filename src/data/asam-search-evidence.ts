@@ -11,6 +11,9 @@ export const ASAM_SEARCH_EVIDENCE = {
     baselineSrc: "/proof/asam-generative-ai-2026-10-19.png",
   },
   summary: "Owner-supplied Google Search Console screenshots show increased search visibility after the 20 October 2026 relaunch. The account's Generative AI features report shows 11 impressions on 19 October and 132 on 4 November. These are two daily observations, not a period-wide growth rate or evidence that the rebuild alone caused the increase.",
+  // 18 Nov 2026: the case study states the caveat once (pageNote), not in every paragraph.
+  pageSummary: "Owner-supplied Google Search Console screenshots show increased search visibility after the 20 October 2026 relaunch. The account's Generative AI features report shows 11 impressions on 19 October and 132 on 4 November.",
+  pageNote: "Source: the owner's Search Console screenshots, reviewed 11 November 2026. Impressions measure visibility, not visits or bookings, and two daily readings don't show what caused the rise.",
   aiSamples: [
     { date: "2026-10-19", label: "19 October 2026", impressions: 11 },
     { date: "2026-11-04", label: "4 November 2026", impressions: 132 },

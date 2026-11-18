@@ -13,6 +13,7 @@ function harness(file) {
   let effects = [];
   const listeners = new Set();
   const events = [];
+  const fbEvents = [];
   const window = { location: { origin: 'https://example.com', pathname: '/', href: 'https://example.com/?email=private' } };
   const document = { title: 'Home', referrer: 'https://referrer.test/article?email=private', addEventListener() {}, removeEventListener() {} };
   const cal = (action, config) => {
@@ -26,6 +27,8 @@ function harness(file) {
     'next/navigation': { usePathname: () => state.path },
     '@/components/consent/ConsentProvider': { hasConsent: category => state.consent[category], useConsent: () => ({ preferences: state.consent, openPreferences() {} }) },
     '@/components/GoogleAnalytics': { trackGAEvent: (...args) => events.push(args) },
+    // The real trackFBEvent checks marketing consent itself; this stub records the call.
+    '@/components/FacebookPixel': { trackFBEvent: (...args) => fbEvents.push(args) },
     '@calcom/embed-react': { getCalApi: async () => cal },
     '@/lib/booking': { CAL_LINK: 'pandagen/discovery', CAL_BOOKING_URL: 'https://cal.com/pandagen/discovery', requestBookingAfterConsent() {}, takePendingBooking: () => false },
   };
@@ -34,7 +37,7 @@ function harness(file) {
     compilerOptions: { module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX, target: ts.ScriptTarget.ES2020 },
   }).outputText;
   vm.runInNewContext(output, { exports, require: name => { assert.ok(modules[name], name); return modules[name]; }, window, document, URL, process: { env: { NEXT_PUBLIC_GA_ID: 'G-TEST' } } });
-  return { state, window, document, exports, listeners, events,
+  return { state, window, document, exports, listeners, events, fbEvents,
     render() { cursor = 0; effects = []; const element = exports.default(); return { element, effects: [...effects] }; },
     commands: () => (window.dataLayer ?? []).map(args => Array.from(args)),
   };
@@ -87,13 +90,24 @@ test('calendar listener cleans up, deduplicates bookings and respects consent at
   callback({ detail: { data: { uid: 'booking-one' } } });
   assert.equal(h.events.length, 1);
   assert.ok(!JSON.stringify(h.events).includes('booking-one'));
+  // One Meta Schedule event per booking, without the booking ID.
+  assert.equal(h.fbEvents.length, 1);
+  assert.equal(h.fbEvents[0][0], 'Schedule');
+  assert.ok(!JSON.stringify(h.fbEvents).includes('booking-one'));
   h.state.consent.analytics = false;
   callback({ detail: { data: { uid: 'booking-two' } } });
   assert.equal(h.events.length, 1);
+  // Analytics consent doesn't govern Meta; trackFBEvent applies the marketing check.
+  assert.equal(h.fbEvents.length, 2);
+  h.state.consent.functional = false;
+  callback({ detail: { data: { uid: 'booking-four' } } });
+  assert.equal(h.fbEvents.length, 2);
+  h.state.consent.functional = true;
   cleanups.forEach(cleanup => cleanup?.());
   assert.equal(h.listeners.size, 0);
   callback({ detail: { data: { uid: 'booking-three' } } });
   assert.equal(h.events.length, 1);
+  assert.equal(h.fbEvents.length, 2);
 });
 
 test('calendar unmount during async initialization cannot leave a listener behind', async () => {

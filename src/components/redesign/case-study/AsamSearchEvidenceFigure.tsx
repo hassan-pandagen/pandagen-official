@@ -14,7 +14,7 @@ export default function AsamSearchEvidenceFigure({ compact = false }: { compact?
           style={{ position: "absolute", width: "126.316%", maxWidth: "none", height: "auto", left: "-24.013%", top: "-26.23%" }} />
       </div>
       <figcaption className="border-t border-stone-200 p-4 text-sm leading-relaxed text-stone-700">
-        {compact ? <>Two dated observations from the client&apos;s Google Search Console; impressions measure visibility, not sales. They do not establish what caused the increase.</> : <>Owner-supplied Search Console screenshot, reviewed 11 November 2026. The chart includes time before and after the 20 October relaunch. Its 2.22k total covers the full selected three-month window; 132 is the daily value for 4 November. This shows visibility, not bookings or proof of what caused the increase.</>}
+        {compact ? <>Two dated observations from the client&apos;s Google Search Console; impressions measure visibility, not sales. They do not establish what caused the increase.</> : <>Owner-supplied Search Console screenshot, reviewed 11 November 2026. The chart includes time before and after the 20 October relaunch. Its 2.22k total covers the full selected three-month window; 132 is the daily value for 4 November.</>}
         {compact ? <a href="#search-visibility" className="mt-3 inline-block font-semibold underline underline-offset-4">See the search evidence</a> : <div className="mt-3 flex flex-wrap items-center gap-4">
           <ServicePreviewEnlarge src={screenshot.src} alt={screenshot.alt} />
           <a href={screenshot.baselineSrc} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">View the 19 October screenshot (11 impressions)<span className="sr-only"> (opens in a new tab)</span></a>
