@@ -63,6 +63,8 @@ export default function SystemProof() {
           <p className="max-w-[32rem] text-xl leading-snug md:text-2xl" style={{ fontFamily: BODY }}>What could your website take off your team&rsquo;s hands?</p>
           <div className="flex flex-wrap items-center gap-6 text-sm font-semibold" style={{ fontFamily: UI }}>
             <Link href="/work/a-step-above-medical" className={`${styles.link} inline-flex min-h-12 items-center gap-3 underline underline-offset-4`}>See how we built it<ArrowRight size={18} aria-hidden="true" /></Link>
+            {/* 18 Nov 2026, dev handoff item 2: one homepage link to the training service. */}
+            <Link href="/services/training-business-websites" className={`${styles.link} inline-flex min-h-12 items-center gap-3 underline underline-offset-4`}>Websites for training businesses<ArrowRight size={18} aria-hidden="true" /></Link>
             <Link href="/contact" className={`${styles.button} ${styles.solid} inline-flex min-h-12 items-center justify-between gap-6 px-6 py-3`}>Let&rsquo;s talk about your business<ArrowRight size={18} aria-hidden="true" /></Link>
           </div>
         </div>

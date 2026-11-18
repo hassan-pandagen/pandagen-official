@@ -29,6 +29,13 @@ const MONEY_ANCHOR: Record<string, string> = {
     "/editorial-policy": "how we source and correct what we publish",
 };
 
+// 18 Nov 2026, dev handoff item 2: posts that also point at the training-business service.
+// Links only; the posts' own text is unchanged during the content freeze.
+const TRAINING_SERVICE_POSTS = new Set([
+    "nextjs-hosting-zero-cost", "top-nextjs-agencies-2026", "website-migration-cost-2026",
+    "wordpress-plugin-security-2026", "divi-theme-slow", "gohighlevel-website-speed",
+]);
+
 export default function TopicUpLink({ postId }: { postId: string }) {
     const hub = hubForPost(postId);
 
@@ -73,6 +80,19 @@ export default function TopicUpLink({ postId }: { postId: string }) {
                 </Link>
                 .
             </p>
+            {TRAINING_SERVICE_POSTS.has(postId) && (
+                <p className="mt-3 leading-relaxed text-stone-700">
+                    Related service:{" "}
+                    <Link
+                        href="/services/training-business-websites"
+                        className="inline-flex items-center gap-1 font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac"
+                    >
+                        websites and booking systems for training businesses
+                        <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+                    </Link>
+                    .
+                </p>
+            )}
         </aside>
     );
 }
