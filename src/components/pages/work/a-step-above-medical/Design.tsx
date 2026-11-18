@@ -25,10 +25,11 @@ const details = MIGRATION_PROJECT_DETAILS.aStepAboveMedical;
 const RESULT_LINE = "Students book and pay online. Reminders and class details send themselves, and certificates go out automatically once an instructor signs off. The team runs every class from one screen.";
 // 18 Nov 2026: read from the live portal database by the portal repo's Claude (20 Oct to 18 Nov
 // 2026, test booking excluded; the 39 are paid online seats, not staff-added). The old-site
-// figure is the owner's: 52 registrations imported from WordPress, December 2025 to 19 October
-// 2026. Owner, 18 Nov: ads ran on the old setup too. "About eight times" is arithmetic (39 in four
-// weeks vs about 5 a month), not a causal claim. Revenue is deliberately not shown. WAITING for Jaime and Dillon to approve the wording.
-const FIRST_MONTH_RESULT = "On the old website, A Step Above Medical took 52 registrations from December 2025 to October 2026, about five a month. In the first four weeks on the new system, students booked and paid for 39 seats online, the portal sent 170 automated student emails, and 9 certificates went out after the instructor's sign-off. That's about eight times the old site's monthly booking rate, with ads running in both periods.";
+// figure is from the portal database: 64 registrations imported from WordPress (one payment
+// each), 13 Dec 2025 to 19 Oct 2026, about 6.3 a month over 10.2 months; 39 seats in 29 days is
+// about 6.4 times that. ASAM to confirm 64 is the old site's full volume. Owner, 18 Nov: ads ran on the old setup too. "About six times" is arithmetic (39 in 29 days
+// vs about 6.3 a month), not a causal claim. Revenue is deliberately not shown. WAITING for Jaime and Dillon to approve the wording.
+const FIRST_MONTH_RESULT = "On the old website, A Step Above Medical took 64 registrations from December 2025 to October 2026, about six a month. In the first four weeks on the new system, students booked and paid for 39 seats online, the portal sent 170 automated student emails, and 9 certificates went out after the instructor's sign-off. That's about six times the old site's monthly booking rate, with ads running in both periods.";
 const TECH_LINE = "The website was rebuilt from WordPress with Next.js and a Sanity content editor. The team portal runs on Supabase, on the client's own account.";
 // 18 Nov 2026: Lance asked for "Projects like this start from $X". The pricing page has no starting
 // figure for a website + operations system ("no starting figure until Imran sets one", 14 Nov), so
