@@ -20,7 +20,14 @@ import { BODY, DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 const details = MIGRATION_PROJECT_DETAILS.aStepAboveMedical;
 
-const RESULT_LINE = "Students book and pay online. Reminders, class details and certificates send themselves. The team runs every class from one screen.";
+// 18 Nov 2026: certificates are approved by an admin first, then generated and emailed by the
+// portal (portal database check), so the line no longer says they "send themselves".
+const RESULT_LINE = "Students book and pay online. Reminders and class details send themselves, and certificates go out automatically once an instructor signs off. The team runs every class from one screen.";
+// 18 Nov 2026: read from the live portal database by the portal repo's Claude (20 Oct to 18 Nov
+// 2026, test booking excluded; the 39 are paid online seats, not staff-added). The old-site
+// figure is the owner's: 52 registrations imported from WordPress, December 2025 to 19 October
+// 2026. Revenue is deliberately not shown. WAITING for Jaime and Dillon to approve the wording.
+const FIRST_MONTH_RESULT = "On the old website, A Step Above Medical took 52 registrations from December 2025 to October 2026, about five a month. In the first four weeks on the new system, students booked and paid for 39 seats online, the portal sent 170 automated student emails, and 9 certificates went out after the instructor's sign-off.";
 const TECH_LINE = "The website was rebuilt from WordPress with Next.js and a Sanity content editor. The team portal runs on Supabase, on the client's own account.";
 // 18 Nov 2026: Lance asked for "Projects like this start from $X". The pricing page has no starting
 // figure for a website + operations system ("no starting figure until Imran sets one", 14 Nov), so
@@ -70,6 +77,7 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
         {/* 18 Nov 2026, Lance: Meta ad traffic lands here, so the opening states the result for a
             business owner. The technology line moved to the bottom of the page. */}
         <p className="mt-6 max-w-[44rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>{RESULT_LINE}</p>
+        <p className="mt-4 max-w-[44rem] border-l-2 pl-4 text-[16px] leading-[1.6]" style={{ color: T.ink, borderColor: T.accentText }}>{FIRST_MONTH_RESULT}</p>
         <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
           <CalModalButton fallbackHref={CAL_BOOKING_URL} className="cta-solid inline-flex items-center justify-center bg-[#1C1917] px-6 py-3.5 text-[15px] font-medium text-white">Book a 15-minute workflow call</CalModalButton>
           <a href="#a-step-above-medical-walkthrough" className="text-[14px] font-semibold underline underline-offset-4" style={{ color: T.accentText }}>See how it works ↓</a>
