@@ -161,8 +161,10 @@ export default function Page() {
       "Free and low-cost tiers were checked before the build. We looked at which services the project already had or could run on free plans, including Supabase storage, the Sanity editor and Resend for emails, so the budget went into the custom website and portal.",
       "The system matches the size of the business. More than 100 scheduled classes run through one system, which is well inside what the entry plans are built for.",
     ]} />
-    {/* 18 Nov 2026: the owner approved publishing A Step Above Medical's monthly running cost.
-        The figure goes here once the owner supplies it. */}
+    {/* 18 Nov 2026, owner: Supabase Pro $25; Sanity and Resend free; hosting is Vercel Pro ($20),
+        included in the client's maintenance and SEO plan with us; domain and email are the client's
+        own. The plan's fee is not published (never publish client fees). */}
+    <p>A Step Above Medical&apos;s system runs for about $45 a month: Supabase Pro at $25 and Vercel Pro hosting at $20, which is included in their maintenance and SEO plan with us. The Sanity editor and Resend email are on their free plans. Their domain and email are paid separately, to their own providers.</p>
     <p>The same test applies to any small business app:</p>
     <BlogList items={[
       "How many people will log in each month?",
