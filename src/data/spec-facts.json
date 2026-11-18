@@ -1439,6 +1439,33 @@
       "verifiedAt": "2026-10-25",
       "reviewDays": 90,
       "source": "https://support.wix.com/en/article/wix-bookings-about-wix-bookings"
+    },
+    "stdetector-dawn-cwv-pass": {
+      "vendor": "Shopify Theme Detector",
+      "label": "Live Dawn stores passing all three Core Web Vitals on mobile",
+      "value": "71.1%",
+      "qualifier": "Of 10,087 live stores on Shopify’s Dawn theme; Chrome UX Report phone data; the page refreshes daily",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://shopthemedetector.com/shopify-statistics/theme-speed"
+    },
+    "stdetector-dawn-few-apps-cwv-pass": {
+      "vendor": "Shopify Theme Detector",
+      "label": "Live Dawn stores running six or fewer detected apps that pass all three Core Web Vitals on mobile",
+      "value": "79.2%",
+      "qualifier": "Of 5,323 Dawn stores running six or fewer detected apps; Chrome UX Report phone data; the page refreshes daily",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://shopthemedetector.com/shopify-statistics/theme-speed"
+    },
+    "stdetector-app-count-cwv-pass": {
+      "vendor": "Shopify Theme Detector",
+      "label": "Mobile Core Web Vitals pass rate by number of detected apps, all themes",
+      "value": "80.5% of stores with one detected app, 71.3% with five, 68.2% with six to ten, 58.3% with 11 to 20 and 39.9% with 21 or more",
+      "qualifier": "Store counts: 3,275 / 6,890 / 26,513 / 14,908 / 966. An association between store profiles, not the effect of any one app; only stores with enough traffic to appear in the Chrome UX Report",
+      "verifiedAt": "2026-11-18",
+      "reviewDays": 30,
+      "source": "https://shopthemedetector.com/shopify-statistics/app-speed"
     }
   }
 }

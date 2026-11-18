@@ -374,6 +374,10 @@ export default function ShopifySpeedOptimizationPage() {
                             </BlogText>
 
                             <BlogText>
+                                Field data from real stores points the same way. <a href={spec("stdetector-dawn-cwv-pass").source} target="_blank" rel="noopener noreferrer" className={sourceLink}>Shopify Theme Detector</a> matches Chrome UX Report phone data to the apps it detects on each store. As of {asOf("stdetector-dawn-cwv-pass")}, {spec("stdetector-dawn-cwv-pass").value} of 10,087 live stores on Shopify&apos;s Dawn theme passed all three Core Web Vitals on mobile. Among the 5,323 of those stores running six or fewer apps, {spec("stdetector-dawn-few-apps-cwv-pass").value} passed. Across all themes, <a href={spec("stdetector-app-count-cwv-pass").source} target="_blank" rel="noopener noreferrer" className={sourceLink}>the pass rate falls as the app count rises</a>: {spec("stdetector-app-count-cwv-pass").value}. Treat this as an association. Stores with more apps tend to be bigger and busier, the sample only includes stores with enough traffic to appear in Chrome&apos;s data, and nothing here measures a single app or a store before and after a change.
+                            </BlogText>
+
+                            <BlogText>
                                 Shopify&apos;s app guidance recommends theme app extensions, Shopify-hosted assets, and loading resources only on the pages that need them. It sets no numeric threshold for app impact, only that an app should show low or no negative impact on real merchant stores over time. It does publish how it weights pages when it tests an app&apos;s Lighthouse impact: home 17%, product 40%, collection 43%. Test those three templates on your own store, product and collection first. When testing removal, preserve consent, analytics attribution, subscriptions, reviews, search, localization, accessibility, and checkout behavior. A faster page that breaks a required customer journey isn&apos;t an optimization.
                             </BlogText>
 
