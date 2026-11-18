@@ -134,7 +134,7 @@ export default function Page() {
       [src(railway.source, "Railway"), "$5 to $20 a month minimum", "Pay for what the server uses; transfer $0.05 per GB", "Apps that need a long-running server"],
       [src(render.source, "Render"), "$7 a month per service, plus $25 for a Pro workspace", "Fixed price per server", "Predictable monthly bills"],
       [src(fly.source, "Fly.io"), "From about $2 a month per machine", "Per machine; transfer $0.02 per GB", "Apps that must run in several regions"],
-      [src(coolify.source, "Your own server with Coolify"), <>Server from about $4 to $6 a month (<a href={droplet.source} target="_blank" rel="noopener noreferrer">DigitalOcean</a> from {droplet.value}, <a href={hetzner.source} target="_blank" rel="noopener noreferrer">Hetzner</a> {hetzner.value}); Coolify is free to self-host</>, "Flat server rent", "Teams who can maintain a server"],
+      [src(coolify.source, "Your own server with Coolify"), "Server from about $4 to $6 a month; Coolify is free to self-host", "Flat server rent", "Teams who can maintain a server"],
     ]} />
     <h3>Database alternatives to Supabase</h3>
     <GuideTable caption="Database alternatives, entry prices" headers={["Option", "Entry price", "How it charges", "Suits"]} rows={[
