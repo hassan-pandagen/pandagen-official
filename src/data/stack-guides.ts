@@ -63,6 +63,23 @@ export const stackGuidePosts: StackGuidePost[] = [
     readTime: "4 min",
   },
   {
+    ...byline,
+    id: "how-to-document-business-workflows",
+    title: "How to Document Business Workflows Before You Automate Them",
+    excerpt: "Walk through a real job with the people who do it. Capture handoffs and exceptions, then use those examples to test the new system.",
+    category: "Architecture",
+    illustrationType: "code",
+    faqs: [
+      { question: "Who should help document a workflow?", answer: "Invite everyone who performs or receives a handoff, including the people who handle exceptions. Have them walk through a real job using information they are allowed to share." },
+      { question: "How do you tell if a workflow is ready to automate?", answer: "Test whether staff can name the trigger, required information, owner, next action and exception path. Use a normal case and a failure case to check that the rules make sense." },
+    ],
+    date: "Nov 18",
+    published: "2026-11-18",
+    lastModified: "2026-11-18",
+    eyebrow: "Founder notes",
+    readTime: "4 min",
+  },
+  {
     ...byline, id: "sanity-vs-wordpress", title: "Sanity vs WordPress: Which Editor Fits Your Website?",
     date: "Oct 7", published: "2026-10-07", lastModified: "2026-10-29", eyebrow: "CMS / Sanity vs WordPress",
     excerpt: "WordPress is free software you host and update. Sanity combines a content editor with hosted storage. How to choose, with a real client editor and five tasks.",

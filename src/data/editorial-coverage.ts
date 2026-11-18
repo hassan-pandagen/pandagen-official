@@ -7,7 +7,7 @@ export const editorialCoverage = [
     dateLabel: "November 18, 2026",
     url: "https://techmagazine.io/qa/how-software-teams-reduce-risk-from-critical-knowledge-gaps/#answer12",
     topic: "Mapping the Panda Patches workflow with the people who use it.",
-    guide: null,
+    guide: "/blog/how-to-document-business-workflows",
   },
   {
     id: "techbullion",

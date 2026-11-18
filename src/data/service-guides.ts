@@ -50,6 +50,7 @@ export const serviceGuides: Record<string, { title: string; href: string }[]> = 
     { title: "WordPress AI plugin security advisories", href: "/blog/wordpress-ai-security-risk-2026" },
   ],
   "custom-engineering": [
+    { title: "Document a workflow before automating it", href: "/blog/how-to-document-business-workflows" },
     { title: "Choose a content editor, backend or both", href: "/blog/sanity-vs-supabase" },
     { title: "A product catalog website with quote requests", href: "/blog/product-catalog-website-without-cart" },
     { title: "How long a custom website takes", href: "/blog/how-long-does-a-custom-website-take" },

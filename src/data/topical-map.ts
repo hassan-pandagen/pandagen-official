@@ -331,6 +331,7 @@ export const clusters: Cluster[] = [
       'is-it-cheaper-to-build-your-own-website', 'meta-conversions-api-setup-cost',
       // 4 Oct 2026: what each platform lets you export. Primary hub is this one
       // (ownership is the custom cluster's question); it also sits in `migration`.
+      'how-to-document-business-workflows',
       'website-portability',
     ],
   },
