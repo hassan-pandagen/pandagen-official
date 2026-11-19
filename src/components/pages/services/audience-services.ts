@@ -128,8 +128,8 @@ export const audienceServices: ServicePreview[] = [
   // here is described as scope we can agree, not as something ASAM has.
   {
     slug: "training-business-websites", bookCall: true, name: "Training business websites", category: "Training business websites & booking systems",
-    title: "Training business websites.", accent: "Class booking, payments and certificates in one system.",
-    lead: "Websites and booking systems for training providers: course pages, class registration, deposits and payments, rosters, attendance and certificates, connected to the accounting tool you use. We map how a student books today and what your team does by hand, then agree the first release, running costs and price in writing.",
+    title: "Let students book and pay online.", accent: "Give your team one place to run classes.",
+    lead: "We connect your class schedule, payments, reminders and certificates so staff can manage each booking from registration to completion. For training providers, that means course pages, class registration, deposits, rosters and attendance, connected to the accounting tool you use. We map how a student books today and what your team does by hand, then agree the first release, running costs and price in writing.",
     image: "/work/a-step-above-medical-portal-classes.png", imageAlt: "A Step Above Medical staff portal showing the class schedule", imageCaption: "Client build / A Step Above Medical / Pre-launch capture",
     problemTitle: "Where does your team still work by hand?", problemIntro: "Start with one class, from the first enquiry to the certificate. Each step someone repeats by hand is a step worth looking at.",
     checks: [
@@ -145,7 +145,7 @@ export const audienceServices: ServicePreview[] = [
       ["Staff portal", "Class schedules, enrolment, rosters, attendance, instructor assignments and student records in one workspace, built on Supabase in an account in your name."],
       ["Certificates and accounting", "Certificates issued from the portal using your template, and payments sent to your accounting software, such as QuickBooks Online."],
     ],
-    workTitle: "A training system we built.", workIntro: "A Step Above Medical teaches medical courses. We connected its course website to online booking, payments, student emails and a staff portal for classes and certificates. Certificates are emailed after the class, and payments sync to QuickBooks every 30 minutes.",
+    workTitle: "A training system we built.", workIntro: `A Step Above Medical teaches medical courses. We connected its course website to online booking, payments, student emails and a staff portal for classes and certificates. Payments sync to QuickBooks every 30 minutes. ${asam.firstMonthResult}`,
     workName: "A Step Above Medical", workImage: "/work/a-step-above-medical-preview-homepage.png", workAlt: "A Step Above Medical course website, captured before launch", workHref: "/work/a-step-above-medical",
     workDescription: asam.summary, workCaveat: asam.disclosure,
     pathTitle: "Connect what you have, or build it new.",

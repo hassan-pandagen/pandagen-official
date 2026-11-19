@@ -49,7 +49,10 @@ export const MIGRATION_PROJECT_DETAILS = {
     // portal database, equal 30-day windows by booking date (Pacific), staff-added,
     // abandoned, cancelled and test bookings excluded. Any multiplier is added by
     // the page that uses it, not here.
-    firstMonthResult: "In the 30 days before launch, the old website took 7 bookings. In the first 30 days on the new system, students made 37 bookings online, the portal sent 170 automated student emails, and 9 certificates went out after an administrator approved each student's completion.",
+    // 19 Nov 2026: dates and what counted are now in the sentence itself, so no surface can
+    // quote the counts without them. The 7 are bookings made through the old website only;
+    // phone bookings and staff-added bookings are excluded from both periods.
+    firstMonthResult: "From 20 September to 19 October, the 30 days before launch, 7 bookings came through the old website. From 20 October to 18 November, the first 30 days on the new system, students made 37 bookings online, the portal sent 170 automated student emails, and 9 certificates went out after an administrator approved each student's completion. Both counts include website bookings only, not bookings taken by phone or added by staff.",
     // 19 Nov 2026: Google Ads account, same two windows: spend rose about 27% (amounts not
     // published). The monthly budget setting stayed the same; actual spend did not.
     adBudgetNote: "Google Ads spend rose about 25% between the two periods.",
