@@ -750,7 +750,7 @@ export default function NextjsHostingZeroCostPage() {
                         ]} />
 
                         <BlogText>
-                            For a business website, service site, or e-commerce storefront, start the Vercel pricing comparison with Pro&apos;s $20 monthly platform fee, then add any extra seats and expected usage. If you&apos;re moving off WordPress, our{" "}
+                            For a business website, service site, or e-commerce storefront, start the Vercel pricing comparison with Pro&apos;s $20 monthly platform fee, then add any extra seats and <Link href="/blog/supabase-vercel-cost" className="text-cognac hover:underline">expected usage</Link>. If you&apos;re moving off WordPress, our{" "}
                             <Link href="/services/wordpress-migration" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 WordPress migration service
                             </Link>{" "}
