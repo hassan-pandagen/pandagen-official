@@ -57,7 +57,10 @@
 .privacy summary:focus-visible { outline: 2px solid #ad3d0b; outline-offset: 3px; }
 .privacy[open] { max-height: 130px; overflow-y: auto; }
 .panel:focus { outline: none; }
-@keyframes arrive { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes arrive {
+  from { opacity: 0; transform: scale(.97); }
+  to { opacity: 1; transform: scale(1); }
+}
 /* 20 Oct 2026, owner: a small hop so the launcher catches the eye. Starts after 4s, repeats every
    12s, five times, and stops for good once the visitor has opened the assistant (see AskAssistant). */
 @keyframes nudge {

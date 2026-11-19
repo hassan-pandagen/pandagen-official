@@ -50,8 +50,8 @@ const grain = 'url("/textures/hero-grain.webp")';
 export default async function HeroPreview({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
   const condensed = (await searchParams).font !== "zodiak";
   const heroVars = condensed
-    ? { "--hero-size": "clamp(3.4rem, 8.4vw, 10rem)", "--hero-lh": "0.9", "--hero-ls": "-0.01em" }
-    : { "--hero-size": "clamp(3rem, 8.6vw, 10.4rem)", "--hero-lh": "0.94", "--hero-ls": "-0.03em" };
+    ? { "--hero-size": "clamp(2.25rem, 7.15vw, 7.25rem)", "--hero-lh": "0.96", "--hero-ls": "-0.01em" }
+    : { "--hero-size": "clamp(2.125rem, 5.8vw, 6rem)", "--hero-lh": "1.02", "--hero-ls": "-0.03em" };
   return (
     <PreviewShell condensed={condensed}>
       <div className="relative overflow-hidden" style={heroVars as React.CSSProperties}>
@@ -88,16 +88,18 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
         />
 
       <section className="relative">
-        <div className="relative mx-auto flex max-w-[1600px] flex-col justify-start gap-10 px-6 pb-6 pt-6 md:px-10 md:pb-8 lg:pt-6">
-          {/* The headline carries the page, as on grigoletti.ch: full width, huge.
-              14 Nov 2026, Imran's brief: the lead moves from websites to websites and
+        <div className="relative mx-auto flex max-w-[1600px] flex-col justify-start gap-7 px-6 pb-6 pt-6 md:gap-8 md:px-10 md:pb-8 lg:pt-6">
+          {/* 14 Nov 2026, Imran's brief: the lead moves from websites to websites and
               business systems, with A Step Above Medical as the proof. The small-website
               offer stays, as the second option (the price line below the buttons). */}
           <h1
             className="hero-h1"
             style={{ fontFamily: "var(--display), Georgia, serif", fontWeight: condensed ? 400 : 700, color: INK, fontSize: "var(--hero-size)", lineHeight: "var(--hero-lh)", letterSpacing: "var(--hero-ls)" }}
           >
-            Websites and business systems that cut <HeadingEmphasis text="manual work." phrase="manual work" />
+            <span className="block text-balance">Websites and business systems</span>{" "}
+            <span className="block">
+              that cut <HeadingEmphasis text="manual work." phrase="manual work" />
+            </span>
           </h1>
 
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,.85fr)_minmax(0,1.15fr)] lg:gap-12 xl:gap-16">
@@ -116,7 +118,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
                 </Link>
                 <CalModalButton
                   fallbackHref={CAL_BOOKING_URL}
-                  className="inline-flex items-center justify-center gap-3 border border-[#1C1917] px-6 py-4 text-[16px] font-medium"
+                  className="press-feedback inline-flex items-center justify-center gap-3 border border-[#1C1917] px-6 py-4 text-[16px] font-medium"
                 >
                   <span className="flex -space-x-2" aria-hidden="true">
                     <Image src="/team/hassan.png" alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-full object-cover ring-2 ring-[#EBE9E4]" />

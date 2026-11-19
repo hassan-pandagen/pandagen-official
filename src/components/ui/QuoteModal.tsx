@@ -216,10 +216,10 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
               aria-labelledby="quote-modal-title"
               aria-describedby="quote-modal-description"
               tabIndex={-1}
-              initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.96, y: 16 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.96, y: 16 }}
-              transition={prefersReducedMotion ? { duration: 0 } : undefined}
+              initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, scale: 0.97 }}
+              transition={{ duration: prefersReducedMotion ? 0 : 0.2, ease: "easeOut" }}
               className="pointer-events-auto relative flex max-h-[92dvh] w-full max-w-xl flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-elevated md:rounded-3xl"
             >
               <button
@@ -362,7 +362,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                       <button
                         type="submit"
                         disabled={isLoading}
-                        className="flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-charcoal px-5 py-3 font-bold text-white transition-colors hover:bg-cognac disabled:cursor-not-allowed disabled:opacity-60"
+                        className="press-feedback flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-charcoal px-5 py-3 font-bold text-white hover:bg-cognac disabled:cursor-not-allowed disabled:opacity-60"
                       >
                         {isLoading ? "Sending…" : "Send your message"} <Send aria-hidden="true" className="h-4 w-4" />
                       </button>

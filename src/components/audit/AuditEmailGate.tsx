@@ -214,10 +214,10 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
           <div className="fixed inset-0 z-9999 flex items-center justify-center p-4 pointer-events-none">
             <motion.div
               ref={dialogRef}
-              initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={prefersReducedMotion ? { duration: 0 } : undefined}
+              initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, scale: 0.97 }}
+              transition={{ duration: prefersReducedMotion ? 0 : 0.2, ease: "easeOut" }}
               className="bg-white border border-stone-200 w-full max-w-md rounded-3xl shadow-elevated max-h-[90dvh] overflow-y-auto pointer-events-auto"
               role="dialog"
               aria-modal="true"
@@ -228,9 +228,9 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
               {isSubmitted ? (
                 <div className="p-12 text-center flex flex-col items-center justify-center min-h-[300px]">
                   <motion.div
-                    initial={prefersReducedMotion ? false : { scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={prefersReducedMotion ? { duration: 0 } : undefined}
+                    initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.97 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: prefersReducedMotion ? 0 : 0.2, ease: "easeOut" }}
                     className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6 text-green-600"
                   >
                     <CheckCircle2 className="w-10 h-10" />
@@ -357,7 +357,7 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
                       <button
                         type="submit"
                         disabled={isLoading}
-                        className="w-full py-4 bg-charcoal text-white font-bold text-base rounded-xl hover:bg-stone-800 transition-all flex items-center justify-center gap-2 hover:scale-[1.01] shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full py-4 bg-charcoal text-white font-bold text-base rounded-xl hover:bg-stone-800 transition-[background-color,box-shadow,scale] duration-150 ease-out motion-reduce:transition-none flex items-center justify-center gap-2 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {isLoading ? (
                           <>

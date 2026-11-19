@@ -258,7 +258,7 @@ export default function SiteNav() {
           <div className="flex shrink-0 items-center gap-1 min-[380px]:gap-2 xl:ml-auto">
             <button type="button" onClick={openQuote} className="cta-solid inline-flex min-h-11 items-center px-2 py-2 text-[12px] font-semibold sm:hidden" style={{ backgroundColor: INK, color: PAPER }} aria-label="Talk to the founders">Talk</button>
             <button type="button" onClick={openQuote} className="cta-solid hidden min-h-11 items-center px-4 py-2 text-[14px] font-semibold sm:inline-flex" style={{ backgroundColor: INK, color: PAPER }}>Talk to the founders</button>
-            <button type="button" aria-expanded={open} aria-controls="site-menu" aria-label="Open site menu" onClick={(event) => openMenu(event.currentTarget)} className={`flex h-11 items-center gap-1 border border-[#1C1917] px-2 text-[13px] font-semibold text-[#1C1917] transition-colors hover:bg-[#1C1917] hover:text-white focus-visible:bg-[#1C1917] focus-visible:text-white min-[380px]:gap-2 min-[380px]:px-3 ${scrolled ? "" : "xl:hidden"}`}><span>Menu</span><span aria-hidden="true">☰</span></button>
+            <button type="button" aria-expanded={open} aria-controls="site-menu" aria-label="Open site menu" onClick={(event) => openMenu(event.currentTarget)} className={`press-feedback flex h-11 items-center gap-1 border border-[#1C1917] px-2 text-[13px] font-semibold text-[#1C1917] hover:bg-[#1C1917] hover:text-white focus-visible:bg-[#1C1917] focus-visible:text-white min-[380px]:gap-2 min-[380px]:px-3 ${scrolled ? "" : "xl:hidden"}`}><span>Menu</span><span aria-hidden="true">☰</span></button>
           </div>
         </div>
         <div id="nav-dropdown" ref={dropdownRef} inert={!activeDropdown || scrolled} data-lenis-prevent className={`absolute top-full z-[65] hidden max-h-[calc(100dvh-104px)] overflow-y-auto overscroll-contain border border-[#1C1917]/15 shadow-[0_24px_60px_-20px_rgba(28,25,23,.35)] transition-[opacity,transform,visibility] duration-200 motion-reduce:transition-none xl:grid ${activeDropdown === "Work" ? "rounded-xl p-2" : "p-4"} ${activeDropdown && !scrolled ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"}`} style={{ left: dropdownX, width: activeDropdown === "Work" ? 760 : activeDropdown === "Services" ? 500 : 300, maxWidth: "calc(100vw - 32px)", backgroundColor: "#F5F4F0", gridTemplateColumns: activeDropdown === "Services" ? "repeat(2,minmax(0,1fr))" : "1fr", gap: "0 22px" }}>
@@ -308,7 +308,7 @@ export default function SiteNav() {
         // carrying on into the page.
         data-lenis-prevent
         onMouseDown={(event) => { if (event.target === event.currentTarget) close(); }}
-        className="fixed inset-0 z-[70] flex items-start justify-center overflow-y-auto overscroll-contain bg-[#1C1917]/65 px-3 py-3 transition-[opacity,visibility] duration-300 backdrop-blur-sm sm:px-6 sm:py-6"
+        className="fixed inset-0 z-[70] flex items-start justify-center overflow-y-auto overscroll-contain bg-[#1C1917]/65 px-3 py-3 transition-[opacity,visibility] duration-300 backdrop-blur-sm motion-reduce:transition-none sm:px-6 sm:py-6"
         style={{ opacity: open ? 1 : 0, visibility: open ? "visible" : "hidden" }}
       >
         <div className="mx-auto grid w-full max-w-[1280px] gap-8 border border-[#1C1917] bg-[#EBE9E4] px-5 pb-7 pt-5 shadow-[0_26px_80px_rgba(0,0,0,.25)] transition-transform duration-300 motion-reduce:transition-none sm:px-8 lg:grid-cols-12 lg:gap-7" style={{ transform: open ? "scale(1)" : "scale(.97)" }}>
@@ -333,7 +333,7 @@ export default function SiteNav() {
               {primary.map((l, i) => (
                 <li
                   key={l.href}
-                  className="transition-[opacity,transform] duration-500"
+                  className="transition-[opacity,transform] duration-500 motion-reduce:transition-none"
                   style={{
                     transitionDelay: open ? `${80 + i * 45}ms` : "0ms",
                     opacity: open ? 1 : 0,
@@ -402,7 +402,7 @@ export default function SiteNav() {
                   href={s.href}
                   prefetch={open ? null : false}
                   onClick={() => close(false)}
-                  className="group relative mb-6 block overflow-hidden transition-[opacity,transform] duration-700"
+                  className="group relative mb-6 block overflow-hidden transition-[opacity,transform] duration-700 motion-reduce:transition-none"
                   style={{
                     transitionDelay: open ? `${160 + i * 90}ms` : "0ms",
                     opacity: open ? 1 : 0,
@@ -416,7 +416,7 @@ export default function SiteNav() {
                     width={1912}
                     height={914}
                     sizes="(min-width: 1024px) 300px, 0px"
-                    className="h-auto w-full transition-transform duration-700 group-hover:scale-[1.03]"
+                    className="h-auto w-full motion-safe:transition-transform motion-safe:duration-700 motion-safe:group-hover:scale-[1.03]"
                   />
                   <span
                     className="absolute bottom-2 left-2 px-2 py-1 text-[12px]"

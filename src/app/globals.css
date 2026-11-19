@@ -170,11 +170,11 @@
   @keyframes popoverIn {
     0% {
       opacity: 0;
-      transform: scale(0.96) translateY(-2px);
+      transform: scale(0.97);
     }
     100% {
       opacity: 1;
-      transform: scale(1) translateY(0);
+      transform: scale(1);
     }
   }
   @keyframes fadeIn {
@@ -388,6 +388,26 @@
 
 @utility border-cognac {
   border-color: #b8410c;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @layer base {
+    :where(button) {
+      transition: scale 150ms ease-out;
+    }
+  }
+
+  :is(button, a.cta-solid, a.press-feedback):not(:disabled, [aria-disabled="true"]):active {
+    scale: 0.97;
+  }
+
+  :is(a, button).cta-solid {
+    transition: background-color 300ms ease, color 300ms ease, scale 150ms ease-out;
+  }
+
+  .press-feedback {
+    transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease, scale 150ms ease-out;
+  }
 }
 
 /* Base styles in @layer base are overridden by utilities and override v4 preflight. */

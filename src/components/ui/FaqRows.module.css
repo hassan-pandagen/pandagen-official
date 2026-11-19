@@ -10,6 +10,22 @@
   border-bottom: 1px solid rgba(28, 25, 23, .16);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  @supports (interpolate-size: allow-keywords) and (transition-behavior: allow-discrete) and selector(details::details-content) {
+    .row::details-content {
+      display: flow-root;
+      interpolate-size: allow-keywords;
+      block-size: 0;
+      overflow: clip;
+      transition: block-size 200ms ease-out, content-visibility 200ms allow-discrete;
+    }
+
+    .row[open]::details-content {
+      block-size: auto;
+    }
+  }
+}
+
 .question {
   display: grid;
   grid-template-columns: 30px minmax(0, 1fr) 24px;
