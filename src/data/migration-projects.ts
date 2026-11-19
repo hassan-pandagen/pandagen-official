@@ -50,7 +50,9 @@ export const MIGRATION_PROJECT_DETAILS = {
     // abandoned, cancelled and test bookings excluded. Any multiplier is added by
     // the page that uses it, not here.
     firstMonthResult: "In the 30 days before launch, the old website took 7 bookings. In the first 30 days on the new system, students made 37 bookings online, the portal sent 170 automated student emails, and 9 certificates went out after an administrator approved each student's completion.",
-    adBudgetNote: "The owner reported the same monthly ad budget before and after.",
+    // 19 Nov 2026: Google Ads account, same two windows: spend rose about 27% (amounts not
+    // published). The monthly budget setting stayed the same; actual spend did not.
+    adBudgetNote: "Google Ads spend rose about 25% between the two periods.",
   },
 } as const;
 

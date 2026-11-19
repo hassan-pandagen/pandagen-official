@@ -30,10 +30,10 @@ const RESULT_LINE = "Students book and pay online. Reminders and class details s
 // 19 Oct: 7 paid bookings (7 seats) imported from the old site. After, 20 Oct to 18 Nov: 37 paid
 // online bookings (41 seats; 8 were $150 deposits), excluding 5 staff-added bookings, 6 abandoned
 // and 2 cancelled checkouts and 1 test. 37 / 7 = 5.3x, the conservative basis (all old-site bookings
-// against online-only new ones). Emails and certificates: 20 Oct to 18 Nov. Owner: same ad budget
+// against online-only new ones). Emails and certificates: 20 Oct to 18 Nov. Ads: spend rose about 27% (Google Ads account, 19 Nov); earlier note said same budget
 // both periods (amount not published). Revenue is deliberately not shown. Evidence and screenshots:
 // C:/Projects/seo/asam-case-study-2026-11/README.md. Dillon approved the case study.
-const FIRST_MONTH_RESULT = `${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.firstMonthResult} The owner puts it at four to five times the monthly sales, on the same ad budget before and after.`;
+const FIRST_MONTH_RESULT = `${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.firstMonthResult} The owner puts it at four to five times the monthly sales. ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.adBudgetNote}`;
 const TECH_LINE = "The website was rebuilt from WordPress with Next.js and a Sanity content editor. The team portal runs on Supabase, on the client's own account.";
 // 18 Nov 2026: Lance asked for "Projects like this start from $X". The pricing page has no starting
 // figure for a website + operations system ("no starting figure until Imran sets one", 14 Nov), so
