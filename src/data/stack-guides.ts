@@ -174,7 +174,7 @@ export const stackGuidePosts: StackGuidePost[] = [
     ...byline, author: "Imran", role: "Co-founder", reviewer: "Hassan", id: "supabase-vercel-cost", title: "Supabase and Vercel: What They Cost as You Grow, and When to Choose Something Else",
     metaTitle: "Supabase and Vercel Pricing 2026: What You Pay as You Grow",
     date: "Nov 18", published: "2026-11-18", lastModified: "2026-11-18", eyebrow: "Pricing / Supabase and Vercel costs",
-    excerpt: "Supabase and Vercel cost about $45 a month for a small live app and a few hundred for a busy one. Where the bills jump, and what to move first. Prices as of November 2026.",
+    excerpt: "Supabase and Vercel cost about $45 a month for a small live app and a few hundred for a busy one: where the bills jump and what to move first (November 2026).",
     category: "Pricing", readTime: "6 min", illustrationType: "hosting", cardStat: "$45", cardStatLabel: "A month for a small live app on Supabase and Vercel",
     faqs: [
       { question: "Is Supabase free for a real business?", answer: `The Free plan pauses a project after one week without activity and stops at a 500 MB database. A live business app should budget ${supabasePro.value.replace("from ", "")} for Pro.` },
