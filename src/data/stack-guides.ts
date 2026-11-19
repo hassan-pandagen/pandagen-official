@@ -194,7 +194,7 @@ export const stackGuidePosts: StackGuidePost[] = [
     faqs: [
       { question: "Is Enrollware a good fit for a phlebotomy school?", answer: "Enrollware describes itself as class management software for CPR and first aid training. Whether it suits a phlebotomy programme depends on your certificates and how your courses are structured. Ask for a demo using one of your own courses before you commit." },
       { question: "How long does a custom class booking system take to build?", answer: "Our larger builds take 3 to 6 weeks once the scope is agreed in writing. The accepted terms give the dates for your project." },
-      { question: "Can a custom booking system take payment when the student books?", answer: "Yes. A Step Above Medical's students pay by Stripe when they book." },
+      { question: "Can a custom booking system take payment when the student books?", answer: "Yes. A Step Above Medical's students pay by Stripe when they book, and the payment takes their seat in the class. An unpaid checkout's seat is released after 30 minutes." },
       { question: "Who owns a custom booking system?", answer: "You do. For A Step Above Medical the database runs on the school's own account and the code is kept in GitHub." },
       { question: "Do I have to replace my current website?", answer: "Not always. If your registration software works and the website is the weak point, we can rebuild the website and link it to the software you already use." },
     ],

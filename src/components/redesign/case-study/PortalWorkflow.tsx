@@ -18,10 +18,11 @@ const workflows = {
     intro: "Routine booking and class administration runs automatically, with items needing a human brought into one Needs attention list.",
     steps: ["Booking", "Registration", "Class preparation", "Attendance", "Certificate"],
     items: [
-      // 19 Nov 2026: seat holds and their expiry are not yet confirmed from the portal data, so they
-      // are left out here and in the class registration post until they are. Capacity and waitlists
-      // are in the delivered-scope summary.
-      ["Seats follow booking status", "Each class has a set capacity, and waitlists help fill places as they become available."],
+      // 19 Nov 2026: confirmed from the live portal (seats_taken, prevent_overbooking,
+      // set_registration_hold, expire_registration_holds every minute): paid bookings take a seat
+      // within capacity; an unpaid checkout holds it for 30 minutes. No class has filled yet, so
+      // don't claim an overbooking was prevented.
+      ["Seats follow booking status", "Paid bookings take a seat within the class's capacity, and an unpaid checkout's seat is released after 30 minutes. Waitlists help fill places as they become available."],
       ["Students and instructors get the details", "New bookings alert the owner and trigger student confirmation emails. Class details go out before the session, and instructors receive their class rosters."],
       ["Group bookings keep individual records", "Someone can book seats for others, with each attendee receiving a link to complete registration. Signed terms stay with each booking."],
       ["Attendance leads to certificates", "Staff record attendance and late arrivals for each day. Certificates are emailed after the class, keeping completion administration in the same workflow."],

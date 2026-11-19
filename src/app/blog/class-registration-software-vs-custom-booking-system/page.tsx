@@ -14,8 +14,8 @@ import { BlogList } from "@/components/ui/BlogStyles";
 // - The owner confirmed on 18 Nov that QuickBooks sync every 30 minutes, per-attendee
 //   registration links, group bookings and server-side Google Ads reporting with refund
 //   adjustments are live. "Unpaid holds expire" was not confirmed, so it is left out.
-// 19 Nov 2026, skill review (evidence, deslop, citability, Google): all fixes taken. The seat
-// reservation line is out until the portal data confirms it; the first-month result is read
+// 19 Nov 2026, skill review (evidence, deslop, citability, Google): all fixes taken. Seat holds
+// confirmed later that day from the live portal (30-minute hold, released automatically); the first-month result is read
 // from migration-projects.ts, never retyped; certificates follow an administrator's approval.
 const id = "class-registration-software-vs-custom-booking-system";
 export const metadata = stackGuideMetadata(id);
@@ -65,6 +65,7 @@ export default function Page() {
     ]} />
     <p>The new system also does these jobs:</p>
     <BlogList items={[
+      "A paid booking takes a seat within the class capacity, and an unpaid checkout's seat is released after 30 minutes.",
       "One person can book seats for others, and each attendee gets a link to complete their own registration.",
       "Staff record attendance, and the portal emails each certificate once an administrator approves the student's completion.",
       "Payments and refunds sync to QuickBooks every 30 minutes.",
