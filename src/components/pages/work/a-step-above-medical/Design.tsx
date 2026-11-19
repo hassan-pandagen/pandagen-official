@@ -20,7 +20,8 @@ import { BODY, DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 const details = MIGRATION_PROJECT_DETAILS.aStepAboveMedical;
 
-// 19 Nov 2026: no multiplier of our own. Counting 3 group or private classes booked outside the old
+// 19 Nov 2026: no multiplier at all (Lance): Dillon's four-to-five-times was an estimate and isn't approved.
+// Earlier note: no multiplier of our own. Counting 3 group or private classes booked outside the old
 // website, bookings rose about 3.7x, so the page quotes the owner's estimate of sales instead.
 // 19 Nov 2026: wording now says an administrator approves (portal check: all 13 certificates since launch were admin-approved).
 // 18 Nov 2026: certificates are approved by an admin first, then generated and emailed by the
@@ -39,7 +40,7 @@ const RESULT_LINE = "Students book and pay online. Reminders and class details s
 // video impressions at a 1.5% click rate. Google credits 4 first-month bookings directly to ads, so
 // this paragraph doesn't tie the ads to the 37.
 const ADS_FIX = "The old campaigns bid for conversions, but the only conversion they counted was a view of the homepage, so Google bought the cheapest homepage visits it could find. Registrations, form fills and calls weren't measured at all. Their Performance Max campaign targeted the whole United States across Google's display and video network, for a school that teaches in a handful of cities. We replaced them with three search campaigns, for phlebotomy classes, IV therapy classes and the school's own name, each targeting a 40-mile radius around the cities where it teaches, with keywords people type when looking for a class, such as \"phlebotomy classes near me\" and \"iv therapy course\". Each paid registration is now sent from the portal to Google Ads as a conversion. The old campaigns ran for part of the first month before they were paused. Google Ads now credits real bookings: 4 in the first month came directly from ads.";
-const FIRST_MONTH_RESULT = `${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.firstMonthResult} The owner puts it at four to five times the monthly sales. ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.adBudgetNote}`;
+const FIRST_MONTH_RESULT = `${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.firstMonthResult} ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.adBudgetNote}`;
 const TECH_LINE = "The website was rebuilt from WordPress with Next.js and a Sanity content editor. The team portal runs on Supabase, on the client's own account.";
 // 18 Nov 2026: Lance asked for "Projects like this start from $X". The pricing page has no starting
 // figure for a website + operations system ("no starting figure until Imran sets one", 14 Nov), so
