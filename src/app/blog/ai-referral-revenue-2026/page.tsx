@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title, description, type: "article",
-        publishedTime: "2026-08-18", modifiedTime: "2026-10-27",
+        publishedTime: "2026-08-18", modifiedTime: "2026-11-19",
         authors: ["Hassan Jamal"], url: canonicalUrl,
         images: [ogImageForPath("/blog/ai-referral-revenue-2026")],
     },
@@ -67,7 +67,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/ai-referral-revenue-2026"),
             datePublished: "2026-08-18T00:00:00-05:00",
-            dateModified: "2026-10-27T00:00:00-05:00",
+            dateModified: "2026-11-19T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -223,6 +223,13 @@ export default function AiReferralRevenuePage() {
                     <BlogText>
                         {window_.note}
                     </BlogText>
+                    {/* 19 Nov 2026: dated re-read note; the headline keeps the 18 Aug reading. */}
+                    <BlogText>
+                        Re-read on 19 November 2026, after the store started taking payment-link orders&apos; source from
+                        the customer&apos;s earlier quote, chat or order: one order in this window (9 August, $114) moved
+                        from Direct to Google Ads. On that reading Google Ads is 6 orders and $1,847.35, and ChatGPT
+                        out-earned it by 6.3&times;.
+                    </BlogText>
 
                     <BlogHeader>What each AI assistant produced</BlogHeader>
                     <BlogText>
@@ -325,12 +332,16 @@ export default function AiReferralRevenuePage() {
                     </div>
                     <BlogText>
                         These rows were read from the store&apos;s portal on {monthly.recordedOnLabel}, one calendar month at a
-                        time, with the same source classification as the study. Read on that date, the portal shows{" "}
+                        time. An order counts under the source recorded on that order, so a returning customer who came
+                        back through an AI assistant counts as AI for that order. Read on that date, the portal shows{" "}
                         {usd(monthly.repullOfStudyWindow.aiRevenueUsd)} in AI-attributed revenue for{" "}
                         {monthly.repullOfStudyWindow.window}, against the {usd(aiRevenue)} read on {studyReadOnLabel} and
-                        used above. The same orders now carry lower recorded values; we haven&apos;t identified why, and we
-                        show both readings with their dates. The monthly average uses the calendar-month figures recorded
-                        on {monthly.recordedOnLabel}.
+                        used above. Between readings, some orders&apos; recorded source changed: on 19 November 2026 the
+                        store began taking payment-link orders&apos; source from the customer&apos;s earlier quote, chat or
+                        order, and staff corrected a few sources by hand. We show both readings with their dates. The
+                        monthly average uses the calendar-month figures recorded on {monthly.recordedOnLabel}.
+                        September&apos;s total is $2,950 lower than on 27 October: two order amounts were corrected (one
+                        from $2,540 to $120) and one order was refunded.
                     </BlogText>
                     <BlogText>
                         Separately, {monthly.googleAiImpressions.instrument.split(",")[0]} recorded about{" "}
