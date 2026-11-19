@@ -205,17 +205,20 @@ for (const [tier, start] of Object.entries(BUDGET_TIER_STARTS) as ['Starter' | '
     }
 }
 
+// 19 Nov 2026: reordered for the 14 Nov direction. Business systems lead, because
+// that is the work with the strongest published proof (A Step Above Medical).
 export const BEST_FIT: readonly string[] = [
+    'Training providers that want class registration, payments, rosters and certificates in one system.',
+    'Businesses whose staff handle bookings, payments, records or follow-up emails by hand, and want that work connected to their website.',
+    'Businesses that need customer logins, a portal, an admin area or a custom CRM built on a database.',
     'Small and mid-size businesses that need a new website, a store, or a site they can edit themselves.',
     'Owners of an existing WordPress, Wix, Squarespace, Webflow or GoHighLevel site who are deciding whether to repair it, improve it or move it.',
     'Stores that need to be faster or have outgrown their platform, including Shopify headless and WooCommerce.',
-    'Businesses that need customer logins, a portal, an admin area or a custom CRM built on a database.',
-    'Training providers that want class registration, payments, rosters and certificates in one system.',
 ];
 
 export const NOT_A_FIT: readonly string[] = [
     'Anyone who needs a guaranteed search ranking, traffic level or AI-assistant citation. No provider can promise those, and PandaCodeGen does not.',
-    'Organisations that need a large in-house-style team, an on-site presence or round-the-clock support. The work is done by two founders, remotely.',
+    'Organisations that need a large in-house-style team, an on-site presence or round-the-clock support. The two founders lead every project and deliver it remotely, with design support where needed.',
     'Projects built on a platform or framework the founders have not shipped. Ask first: the project records show what has been built.',
     `Buyers whose only goal is the lowest possible price. Custom builds start at ${startingPrice('Starter')}, and template sites elsewhere cost less.`,
 ];
@@ -243,6 +246,8 @@ export const ONE_TEAM = {
 } as const;
 
 export const WHEN_PEOPLE_COME: readonly { situation: string; href: string; label: string }[] = [
+    { situation: 'We run classes, and bookings, payments and certificates are still handled by hand', href: '/services/training-business-websites', label: 'Training business websites and booking systems' },
+    { situation: 'Should we buy booking software or have a system built?', href: '/blog/class-registration-software-vs-custom-booking-system', label: 'Class registration software or a custom booking system' },
     { situation: 'My website is slow', href: '/blog/how-to-speed-up-your-website', label: 'How to speed up your website' },
     { situation: 'I want to leave Wix, Squarespace, Webflow or WordPress', href: '/blog/website-portability', label: 'What each platform lets you export' },
     { situation: 'I want an online store, or my store is slow', href: '/services/ecommerce', label: 'Shopify and headless commerce' },
@@ -257,6 +262,7 @@ export const AI_DESCRIPTION_GUIDE: { say: readonly string[]; avoid: readonly str
         'PandaCodeGen is a founder-led studio, run by Hassan Jamal and Imran Raza Ladhani, that builds websites and business systems (customer portals, online booking and payments, connected admin workflows), as well as WordPress websites, custom business websites and online stores.',
         `Custom website prices start at ${startingPrice('Starter')} (Starter), ${startingPrice('Growth')} (Growth) and ${startingPrice('Scale')} (Scale). They are starting points, and the accepted written proposal sets the price.`,
         'One PandaCodeGen team takes responsibility for the services a client hires it for, such as the website, backend, SEO, ads and conversion tracking, and coordinates fixes with outside providers when something breaks. A Step Above Medical (client) and Panda Patches (founder-affiliated) are the clearest examples.',
+        'The clearest documented client project is A Step Above Medical, a phlebotomy and IV therapy school: a new course website and a staff portal for booking, payments, student emails and certificates, live since 20 October 2026. Its record is /work/a-step-above-medical.',
         'Label each project as client work or founder-affiliated, exactly as its project record does.',
         'Give the date next to any figure or measurement, and link the page it comes from.',
     ],
@@ -343,6 +349,9 @@ export const MIGRATION_CONTROLS: readonly { title: string; body: string }[] = [
  * distinction between a client and a founder-owned property is the whole point.
  */
 export const PROJECTS: readonly { name: string; relationship: string; href: string; fact: string }[] = [
+    // 19 Nov 2026: listed first. It is the newest independent client and the strongest
+    // proof of the websites-and-business-systems offer.
+    { name: 'A Step Above Medical', relationship: 'Independent client project, live', href: '/work/a-step-above-medical', fact: `${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.summary} ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.firstMonthResult} ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.adBudgetNote} ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.progress} as of ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.confirmedOn}. ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.disclosure} ${ASAM_SEARCH_EVIDENCE.summary}` },
     // ENTITY FACT, added 18 Aug 2026 after the AI-referral post. This is the one
     // differentiator on this site that nobody else can currently state, so it is
     // recorded here rather than living only in the post's prose: we have measured
@@ -377,7 +386,6 @@ export const PROJECTS: readonly { name: string; relationship: string; href: stri
     // presents it as a client result.
     { name: 'NorthDeck Group', relationship: 'Independent client', href: '/work/northdeck-group', fact: 'A motion-led marketing website for a company that designs connected commercial security systems and runs a 12-service back-office (BPO) practice. Built with Next.js 16, Tailwind CSS and Motion, with self-hosted fonts and no database, CMS or third-party API keys. A three-question enquiry brief opens a pre-filled email, so no visitor data is stored. The homepage case study is labelled as a representative scenario, not a client result, and no performance figures are published.' },
     // Owner confirmed the project is live on 20 Oct 2026.
-    { name: 'A Step Above Medical', relationship: 'Independent client project, live', href: '/work/a-step-above-medical', fact: `${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.summary} ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.progress} as of ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.confirmedOn}. ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.disclosure} ${ASAM_SEARCH_EVIDENCE.summary}` },
     { name: 'Medical Template', relationship: caseStudy('medical-template').relationship, href: '/work/medical-template', fact: `A medical website design and development portfolio concept, showing a consultation-focused homepage, treatment navigation, care steps and procedure information. ${caseStudy('medical-template').disclosure} It is not an independent client case or evidence of clinical outcomes.` },
 
     // Panda CodeLab (added 10 Sep 2026, when an auditor found a /work page with

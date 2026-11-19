@@ -20,9 +20,12 @@ import { BODY, DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 const details = MIGRATION_PROJECT_DETAILS.aStepAboveMedical;
 
+// 19 Nov 2026: no multiplier of our own. Counting 3 group or private classes booked outside the old
+// website, bookings rose about 3.7x, so the page quotes the owner's estimate of sales instead.
+// 19 Nov 2026: wording now says an administrator approves (portal check: all 13 certificates since launch were admin-approved).
 // 18 Nov 2026: certificates are approved by an admin first, then generated and emailed by the
 // portal (portal database check), so the line no longer says they "send themselves".
-const RESULT_LINE = "Students book and pay online. Reminders and class details send themselves, and certificates go out automatically once an instructor signs off. The team runs every class from one screen.";
+const RESULT_LINE = "Students book and pay online. Reminders and class details send themselves, and certificates go out automatically once an ASAM administrator approves the student's completion. The team runs every class from one screen.";
 // 19 Nov 2026: portal database, by booking date (Pacific), equal 30-day windows. Before, 20 Sep to
 // 19 Oct: 7 paid bookings (7 seats) imported from the old site. After, 20 Oct to 18 Nov: 37 paid
 // online bookings (41 seats; 8 were $150 deposits), excluding 5 staff-added bookings, 6 abandoned
@@ -30,7 +33,7 @@ const RESULT_LINE = "Students book and pay online. Reminders and class details s
 // against online-only new ones). Emails and certificates: 20 Oct to 18 Nov. Owner: same ad budget
 // both periods (amount not published). Revenue is deliberately not shown. Evidence and screenshots:
 // C:/Projects/seo/asam-case-study-2026-11/README.md. Dillon approved the case study.
-const FIRST_MONTH_RESULT = "In the 30 days before launch, the old website took 7 bookings. In the first 30 days on the new system, students made 37 bookings online, the portal sent 170 automated student emails, and 9 certificates went out after the instructor's sign-off. That's more than five times as many bookings, on the same monthly ad budget before and after.";
+const FIRST_MONTH_RESULT = `${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.firstMonthResult} The owner puts it at four to five times the monthly sales, on the same ad budget before and after.`;
 const TECH_LINE = "The website was rebuilt from WordPress with Next.js and a Sanity content editor. The team portal runs on Supabase, on the client's own account.";
 // 18 Nov 2026: Lance asked for "Projects like this start from $X". The pricing page has no starting
 // figure for a website + operations system ("no starting figure until Imran sets one", 14 Nov), so

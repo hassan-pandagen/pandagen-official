@@ -42,8 +42,15 @@ export const MIGRATION_PROJECT_DETAILS = {
     websiteUrl: "https://astepabovemed.com/",
     summary: "A complete medical training management system: a public course website, a content editor and a separate team portal for classes, students, payments and certificates. The website was rebuilt from WordPress with Next.js and Sanity; the portal uses Supabase. The project is live.",
     progress: "Project live, confirmed by the owner",
-    disclosure: "Independent client project, now live. Website and portal previews were captured before launch. The separately described Search Console observations come from owner-supplied screenshots reviewed on 11 November 2026; they are visibility evidence, not booking or revenue results.",
+    disclosure: "Independent client project, now live. The separately described Search Console observations come from owner-supplied screenshots reviewed on 11 November 2026; they are visibility evidence, not booking or revenue results.",
     confirmedOn: "2026-10-20",
+    // 19 Nov 2026: the first-month counts, stated once. The case study and the
+    // AI-facing surfaces (ai-info, llms.txt, assistant) all read this. Method:
+    // portal database, equal 30-day windows by booking date (Pacific), staff-added,
+    // abandoned, cancelled and test bookings excluded. Any multiplier is added by
+    // the page that uses it, not here.
+    firstMonthResult: "In the 30 days before launch, the old website took 7 bookings. In the first 30 days on the new system, students made 37 bookings online, the portal sent 170 automated student emails, and 9 certificates went out after an administrator approved each student's completion.",
+    adBudgetNote: "The owner reported the same monthly ad budget before and after.",
   },
 } as const;
 

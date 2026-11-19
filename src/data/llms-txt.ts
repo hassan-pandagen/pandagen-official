@@ -20,11 +20,20 @@ import 'server-only';
 import { blogPosts } from './blog';
 import { hubs, hubPostIds, moneyHref } from './hubs';
 import { allCaseStudySlugs, caseStudy, disclosure, metaFacts, withdrawalNotice } from './case-study-facts';
-import { COMMERCIAL, SERVICES, PROJECTS, BEST_FIT, NOT_A_FIT, WHEN_PEOPLE_COME, AI_DESCRIPTION_GUIDE, WORDPRESS_HOST_MIGRATION, ONE_TEAM } from './company-facts';
+import { COMPANY, COMMERCIAL, SERVICES, PROJECTS, BEST_FIT, NOT_A_FIT, WHEN_PEOPLE_COME, AI_DESCRIPTION_GUIDE, WORDPRESS_HOST_MIGRATION, ONE_TEAM } from './company-facts';
 import { MIGRATION_PROJECT_DETAILS } from './migration-projects';
 import { aiOrders, aiRevenue, aiRows, monthly, monthlyAiAverage, monthlyAiRange, row, studyReadOnLabel, totalOrders, totalRevenue, usd, window_ } from './ai-referral-facts';
 
 const BASE = 'https://www.pandacodegen.com';
+
+// 19 Nov 2026: facts that were typed here a second time now read their source,
+// so a change in company-facts.ts cannot leave llms.txt behind.
+const fact = (group: readonly { label: string; value: string }[], label: string): string => {
+  const found = group.find((item) => item.label === label);
+  if (!found) throw new Error(`llms.txt: missing fact ${label}`);
+  return found.value;
+};
+const customPrices = ['Starter', 'Growth', 'Scale'].map((tier) => `${tier}: ${fact(COMMERCIAL, tier)}`).join(' ');
 
 const HEADER = `# PandaCodeGen
 
@@ -43,12 +52,12 @@ const HEADER = `# PandaCodeGen
 - AI SEO, AEO and GEO services: ${SERVICES.find(fact => fact.label === 'AI SEO, AEO and GEO services')!.value}
 - AI search measurement: ${SERVICES.find(fact => fact.label === 'AI search measurement')!.value}
 - AI-info and llms.txt: ${SERVICES.find(fact => fact.label === 'AI-info and llms.txt')!.value}
-- Core platforms: WordPress, Webflow, and GoHighLevel. Also: Wix, Squarespace, Shopify (headless), and WooCommerce.
-- Custom work: Next.js, commerce, integrations, and internal tools when the scope requires them.
+- Core platforms migrated from: ${fact(SERVICES, 'Core platforms migrated from')}. Also: Wix, Squarespace, Shopify (headless), and WooCommerce.
+- Custom work: ${fact(SERVICES, 'Custom work')}.
 - Interactive website tools: ${SERVICES.find(fact => fact.label === 'Interactive website tools')!.value}
-- Founded: PandaCodeGen has traded since February 2026. Panda Group Ventures L.L.C. was formed on 12 August 2026.
-- Legal name: Panda Group Ventures L.L.C., trading as PandaCodeGen.
-- Formation: Wyoming, United States, filed 12 August 2026
+- Founded: ${fact(COMPANY, 'Founded')}
+- Legal name: ${fact(COMPANY, 'Legal name')}, trading as ${fact(COMPANY, 'Trading name')}.
+- Formation: ${fact(COMPANY, 'Formation')}
 - Mailing and principal office: Stafford, Texas.
 - Mailing address: 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States. This is a mailing address, not a public service location.
 - Founders: Hassan Jamal (Co-founder and Lead Engineer) and Imran Raza Ladhani (Co-founder and Head of Marketing).
@@ -64,7 +73,7 @@ const HEADER = `# PandaCodeGen
 ## Commercial terms
 
 - Minimum project size: ${COMMERCIAL.find(fact => fact.label === 'Minimum project size')!.value}
-- Custom website starting prices: Starter from $1,500 for up to 7 pages, with a content editor for your words, images and business details; Growth from $3,500 for 8 to 20 pages with a CMS you edit yourself and a redirect map that forwards every old link when you move from another platform; Scale from $5,000 for more than 20 pages, or a large catalogue, subscriptions or custom commerce logic, or more than one language. Anything bigger is quoted after a scoping call. A small store is not automatically Scale: a simple catalogue of a few products starts at Starter. WordPress builds and focused improvements are quoted to their own scope.
+- Custom website starting prices: ${customPrices} ${fact(COMMERCIAL, 'Above that range')} WordPress builds and focused improvements are quoted to their own scope.
 - Ongoing work is separate from a build and always optional: monthly AI SEO services start at $500, and monthly support is quoted against the site and the systems connected to it. No build requires a subscription.
 - Website + operations system: ${COMMERCIAL.find(fact => fact.label === 'Website + operations system')!.value}
 - WordPress hosting migration: ${WORDPRESS_HOST_MIGRATION}
@@ -72,7 +81,7 @@ const HEADER = `# PandaCodeGen
 - Post-launch support: ${COMMERCIAL.find(fact => fact.label === 'Post-launch support')!.value}
 - If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.
 - The accepted written project terms control the final price, deliverables, exclusions, and schedule. Website copy is not the agreement.
-- Performance acceptance: a 90+ Lighthouse handover acceptance target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. This is a lab acceptance target. It is not a promise about search rankings, traffic, conversions, revenue, or field Core Web Vitals after third-party or client changes.
+- Performance acceptance: ${fact(COMMERCIAL, 'Performance acceptance')}
 - Free audit: ${COMMERCIAL.find(fact => fact.label === 'Free audit')!.value}
 - Before you commit: ${COMMERCIAL.find(fact => fact.label === 'Before you commit')!.value}
 - Ownership on handover: ${COMMERCIAL.find(fact => fact.label === 'Ownership on handover')!.value}
@@ -93,6 +102,11 @@ const PRIMARY_PAGES = `## Primary pages
 
 ## Services
 
+- [Websites and booking systems for training businesses](${BASE}/services/training-business-websites)
+- [Custom software and CRM development](${BASE}/services/custom-engineering)
+- [Backend development: logins, portals and databases](${BASE}/services/backend-development)
+- [Medical website design and development](${BASE}/services/medical-website-design)
+- [Small business website design](${BASE}/services/small-business-website-design)
 - [WordPress website design and development](${BASE}/services/wordpress)
 - [WordPress migration](${BASE}/services/wordpress-migration)
 - [Shopify and headless commerce](${BASE}/services/ecommerce)
@@ -103,8 +117,7 @@ const PRIMARY_PAGES = `## Primary pages
 - [GoHighLevel websites and CRM integration](${BASE}/services/gohighlevel)
 - [AI SEO, AEO and GEO services: optional monthly research, implementation and reporting from $500](${BASE}/services/ai-seo)
 - [CMS website development and integration](${BASE}/services/cms-development)
-- [Backend development](${BASE}/services/backend-development)
-- [Custom engineering](${BASE}/services/custom-engineering)`;
+`;
 
 const PEOPLE_AND_POLICIES = `## People
 
@@ -173,7 +186,11 @@ function projectRecords(): string {
     const publishedPaths = new Set(allCaseStudySlugs().map(slug => caseStudy(slug).href));
     const previews = PROJECTS.filter(project => project.href.startsWith('/work/') && !publishedPaths.has(project.href))
         .map(project => `- [${project.name}](${BASE}${project.href}): ${project.relationship}. ${project.fact}`);
-    return ['## Project records', '', ...lines, ...previews].join('\n');
+    // 19 Nov 2026: A Step Above Medical first. It has no case-study-facts record,
+  // so it would otherwise sit at the end among the previews.
+  const first = previews.filter((line) => line.startsWith('- [A Step Above Medical]'));
+  const rest = previews.filter((line) => !line.startsWith('- [A Step Above Medical]'));
+  return ['## Project records', '', ...first, ...lines, ...rest].join('\n');
 }
 
 /**
