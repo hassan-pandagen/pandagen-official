@@ -15,7 +15,7 @@ export type StackGuidePost = BlogPost & {
   /** A shorter title tag, when the on-page heading is long. */
   metaTitle?: string;
   /** A technical reviewer named under the byline, when the author is someone else. */
-  reviewer?: "Hassan";
+  reviewer?: "Hassan" | "Imran";
 };
 
 const byline = { author: "Hassan", role: "Co-founder, Lead Engineer", featured: false };
@@ -170,8 +170,8 @@ export const stackGuidePosts: StackGuidePost[] = [
   {
     // 18 Nov 2026: Imran's draft, edited from the review notes. The title tag is the short
     // metaTitle; the long version stays as the on-page heading.
-    // 19 Nov 2026: Imran wrote the draft, so he is the author; Hassan is named as technical reviewer.
-    ...byline, author: "Imran", role: "Co-founder", reviewer: "Hassan", id: "supabase-vercel-cost", title: "Supabase and Vercel: What They Cost as You Grow, and When to Choose Something Else",
+    // 19 Nov 2026, Imran: a technical piece, so Hassan is the author and Imran the reviewer.
+    ...byline, reviewer: "Imran", id: "supabase-vercel-cost", title: "Supabase and Vercel: What They Cost as You Grow, and When to Choose Something Else",
     metaTitle: "Supabase and Vercel Pricing 2026: What You Pay as You Grow",
     date: "Nov 18", published: "2026-11-18", lastModified: "2026-11-18", eyebrow: "Pricing / Supabase and Vercel costs",
     excerpt: "Supabase and Vercel cost about $45 a month for a small live app and a few hundred for a busy one: where the bills jump and what to move first (November 2026).",

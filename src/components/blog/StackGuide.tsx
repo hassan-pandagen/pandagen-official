@@ -58,7 +58,7 @@ export default function StackGuide({ id, children }: { id: string; children: Rea
   return <main className={s.main}><article className={s.article}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
     <Breadcrumb items={postCrumbs(id, post.title)} />
-    <header className={s.header}><p className={s.eyebrow}>{post.eyebrow}</p><h1><HeadingEmphasis text={post.title} phrase={titleFocus[id]} /></h1><p className={s.summary}>{post.excerpt}</p><p>By <Link href={(AUTHORS[post.author] ?? AUTHORS.Hassan).href}>{(AUTHORS[post.author] ?? AUTHORS.Hassan).name}</Link>, {(AUTHORS[post.author] ?? AUTHORS.Hassan).title}{post.reviewer && <><br />Technical review: <Link href={AUTHORS[post.reviewer].href}>{AUTHORS[post.reviewer].name}</Link>, {AUTHORS[post.reviewer].title}</>}</p><PostDateline postId={id} published={post.published} /></header>
+    <header className={s.header}><p className={s.eyebrow}>{post.eyebrow}</p><h1><HeadingEmphasis text={post.title} phrase={titleFocus[id]} /></h1><p className={s.summary}>{post.excerpt}</p><p>By <Link href={(AUTHORS[post.author] ?? AUTHORS.Hassan).href}>{(AUTHORS[post.author] ?? AUTHORS.Hassan).name}</Link>, {(AUTHORS[post.author] ?? AUTHORS.Hassan).title}{post.reviewer && <><br />Reviewed by <Link href={AUTHORS[post.reviewer].href}>{AUTHORS[post.reviewer].name}</Link>, {AUTHORS[post.reviewer].title}</>}</p><PostDateline postId={id} published={post.published} /></header>
     <div className={s.body}>{content}</div>
     <section className={s.faq}><h2>Common questions</h2><FaqRows faqs={post.faqs ?? []} /></section>
     <TopicUpLink postId={id} />
