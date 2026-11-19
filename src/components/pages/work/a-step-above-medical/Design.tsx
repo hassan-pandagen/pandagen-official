@@ -23,13 +23,14 @@ const details = MIGRATION_PROJECT_DETAILS.aStepAboveMedical;
 // 18 Nov 2026: certificates are approved by an admin first, then generated and emailed by the
 // portal (portal database check), so the line no longer says they "send themselves".
 const RESULT_LINE = "Students book and pay online. Reminders and class details send themselves, and certificates go out automatically once an instructor signs off. The team runs every class from one screen.";
-// 18 Nov 2026: read from the live portal database by the portal repo's Claude (20 Oct to 18 Nov
-// 2026, test booking excluded; the 39 are paid online seats, not staff-added). The old-site
-// figure is from the portal database: 64 registrations imported from WordPress (one payment
-// each), 13 Dec 2025 to 19 Oct 2026, about 6.3 a month over 10.2 months; 39 seats in 29 days is
-// about 6.4 times that. ASAM to confirm 64 is the old site's full volume. Owner, 18 Nov: ads ran on the old setup too, on the same monthly budget (amount not published). "About six times" is arithmetic (39 in 29 days
-// vs about 6.3 a month), not a causal claim. Revenue is deliberately not shown. WAITING for Jaime and Dillon to approve the wording.
-const FIRST_MONTH_RESULT = "On the old website, A Step Above Medical took 64 registrations from December 2025 to October 2026, about six a month. In the first four weeks on the new system, students booked and paid for 39 seats online, the portal sent 170 automated student emails, and 9 certificates went out after the instructor's sign-off. That's about six times the old site's monthly booking rate, on the same monthly ad budget before and after.";
+// 19 Nov 2026: portal database, by booking date (Pacific), equal 30-day windows. Before, 20 Sep to
+// 19 Oct: 7 paid bookings (7 seats) imported from the old site. After, 20 Oct to 18 Nov: 37 paid
+// online bookings (41 seats; 8 were $150 deposits), excluding 5 staff-added bookings, 6 abandoned
+// and 2 cancelled checkouts and 1 test. 37 / 7 = 5.3x, the conservative basis (all old-site bookings
+// against online-only new ones). Emails and certificates: 20 Oct to 18 Nov. Owner: same ad budget
+// both periods (amount not published). Revenue is deliberately not shown. Evidence and screenshots:
+// C:/Projects/seo/asam-case-study-2026-11/README.md. Dillon approved the case study.
+const FIRST_MONTH_RESULT = "In the 30 days before launch, the old website took 7 bookings. In the first 30 days on the new system, students made 37 bookings online, the portal sent 170 automated student emails, and 9 certificates went out after the instructor's sign-off. That's more than five times as many bookings, on the same monthly ad budget before and after.";
 const TECH_LINE = "The website was rebuilt from WordPress with Next.js and a Sanity content editor. The team portal runs on Supabase, on the client's own account.";
 // 18 Nov 2026: Lance asked for "Projects like this start from $X". The pricing page has no starting
 // figure for a website + operations system ("no starting figure until Imran sets one", 14 Nov), so
