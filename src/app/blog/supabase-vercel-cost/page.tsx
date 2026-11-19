@@ -59,7 +59,7 @@ export default function Page() {
   const src = (href: string, label: string) => <a href={href} target="_blank" rel="noopener noreferrer">{label}</a>;
   return <StackGuide id={id}>
     <h2>The short answer</h2>
-    <p><strong>For most small business apps, Supabase and Vercel together cost about $45 a month once you&apos;re live, and they stay the sensible choice until your bill passes a few hundred dollars a month.</strong> Prices in this article were read from each vendor&apos;s own pricing pages on 18 November 2026.</p>
+    <p><strong>For most small business apps, Supabase and Vercel together cost about $45 a month once you&apos;re live, and in our experience they stay the sensible choice until your bill passes a few hundred dollars a month.</strong> Prices in this article were read from each vendor&apos;s own pricing pages on 18 November 2026.</p>
     <BlogList items={[
       "Stay if you have fewer than about 100,000 monthly users, your files are small, and nobody on the team wants to run servers.",
       "Move the hosting first if your Vercel bill is driven by traffic, images or seats. Hosting is the easier half to move.",
@@ -72,14 +72,14 @@ export default function Page() {
     <p>Both services are free to build on, about $45 a month for a small live app, and a few hundred dollars a month for a busy one.</p>
     <h3>Stage 1: building and testing (free)</h3>
     <BlogList items={[
-      `Supabase Free gives you a 500 MB database, 50,000 monthly users, 1 GB of file storage and ${supabaseFreeEgress.value}. A project is paused after one week with no activity, and you can have two active projects.`,
+      `Supabase Free gives you a 500 MB database, 50,000 monthly users, 1 GB of file storage and ${supabaseFreeEgress.value.replace("of egress", "of data transfer").replace("cached egress", "cached transfer")}. A project is paused after one week with no activity, and you can have two active projects.`,
       `Vercel Hobby is free, but only for ${vercelHobby.value.toLowerCase()}, so a live business site needs Pro.`,
     ]} />
     <p>So the free plans are for building, not for running a business. Our guide <Link href="/blog/nextjs-hosting-zero-cost">Is Vercel free?</Link> explains what Hobby allows.</p>
     <h3>Stage 2: a small live app</h3>
     <p>Example: one developer, 5,000 monthly users, a 2 GB database, 20 GB of files and 100 GB of data transfer.</p>
     <GuideTable caption="A small live app, per month" headers={["Service", "Plan", "Monthly cost", "What's included"]} rows={[
-      ["Supabase", "Pro", "$25", "100,000 monthly users, 8 GB database, 100 GB files, 250 GB transfer plus 250 GB of cached transfer, one small server"],
+      ["Supabase", "Pro", "$25", "100,000 monthly users, 8 GB database, 100 GB files, 250 GB transfer plus 250 GB of cached transfer, one Micro server"],
       ["Vercel", "Pro", vercelPro.value.replace(" a month", ""), `One developer seat, $20 of usage credit, ${vercelCdn.value.replace(" a month", "")}`],
       ["Total", "", "$45", ""],
     ]} />
@@ -91,10 +91,10 @@ export default function Page() {
       ["Vercel", `$20 plan, two extra seats at ${seat.value.replace(" each", "")}, and a request tier of $20 to $100`, "$80 to $160"],
       ["Total", "", "$232 to $357"],
     ]} />
-    <p>The Supabase range depends on how much of the transfer is cached: cached transfer costs $0.03 per GB and uncached costs $0.09, each with its own 250 GB allowance. The Vercel range depends on how many requests the site serves. These examples leave out Vercel&apos;s charges for server functions, image resizing and builds, because they depend on how the app is written. They draw on the $20 credit first.</p>
+    <p>The Supabase range depends on how much of the transfer is cached: cached transfer costs $0.03 per GB and uncached costs $0.09, each with its own 250 GB allowance. The Vercel range depends on how many requests the site serves. These examples leave out Vercel&apos;s charges for server functions, image resizing and builds, because they depend on how the app is written. Those charges come out of Vercel&apos;s $20 usage credit first.</p>
 
     <h2>Where the bills jump</h2>
-    <p>The plan price is rarely what surprises people. The extras are.</p>
+    <p>Bills jump on the extras: a larger server, extra projects, backups and transfer on Supabase, and seats, request tiers, functions and images on Vercel.</p>
     <h3>On Supabase</h3>
     <GuideTable caption="Supabase charges beyond the Pro plan" headers={["Charge", "Price", "When it bites"]} rows={[
       ["Larger server", "$15, $60 or $110 a month, up from the $10 one included", "When the database slows under load"],
@@ -113,7 +113,7 @@ export default function Page() {
       ["Image resizing", `${images.value.replace("from ", "From ")} images`, "Photo-heavy sites and shops"],
       ["Builds", builds.value, "Large sites that rebuild often"],
     ]} />
-    <p>Vercel Pro lets you set a budget, and new teams start with a $200 limit on usage charges, with alerts. You can also choose a hard limit that pauses the live site when it&apos;s reached. Check which one you want: a paused site and an unlimited bill are both bad surprises.</p>
+    <p>Vercel Pro lets you set a budget, and new teams start with a $200 budget for usage charges, with notifications. You can also choose a hard limit that pauses the live site when it&apos;s reached. Check which one you want: a paused site and an unlimited bill are both bad surprises.</p>
     <p>Both companies changed their pricing in the last 15 months. Vercel <a href={creditChange.source} target="_blank" rel="noopener noreferrer">moved Pro to a $20 usage credit</a> in September 2025 and added flat-rate request tiers in September 2026. Supabase <a href={cachedChange.source} target="_blank" rel="noopener noreferrer">split data transfer into cached and uncached rates</a> in August 2025. Read the pricing page again before you budget for next year.</p>
 
     <h2>When to stay, and what to move to</h2>
@@ -136,9 +136,9 @@ export default function Page() {
       [src(workers.source, "Cloudflare Workers"), "$5 a month", "10 million requests included, no charge for data transfer", "High-traffic sites that want low, flat costs"],
       [src(netlifyPro.source, "Netlify"), `${netlifyPersonal.value.replace(" a month", "")} to $20 a month`, "Credits; unlimited team members on Pro", "Teams hurt by per-seat pricing"],
       [src(railway.source, "Railway"), "$5 to $20 a month minimum", "Pay for what the server uses; transfer $0.05 per GB", "Apps that need a long-running server"],
-      [src(render.source, "Render"), "$7 a month per service, plus $25 for a Pro workspace", "Fixed price per server", "Predictable monthly bills"],
+      [src(render.source, "Render"), "$7 a month per service; a Pro workspace is $25 a month", "Fixed price per server", "Predictable monthly bills"],
       [src(fly.source, "Fly.io"), "From about $2 a month per machine", "Per machine; transfer $0.02 per GB", "Apps that must run in several regions"],
-      [src(coolify.source, "Your own server with Coolify"), "Server from about $4 to $6 a month; Coolify is free to self-host", "Flat server rent", "Teams who can maintain a server"],
+      [src(coolify.source, "Your own server with Coolify"), "Server from $4 a month (DigitalOcean) or €5.49 before VAT (Hetzner); Coolify is free to self-host", "Flat server rent", "Teams who can maintain a server"],
     ]} />
     <h3>Database alternatives to Supabase</h3>
     <GuideTable caption="Database alternatives, entry prices" headers={["Option", "Entry price", "How it charges", "Suits"]} rows={[
@@ -163,7 +163,7 @@ export default function Page() {
     <BlogList items={[
       "The client owns the database account. The portal's Supabase project is on the client's own account, so the database bill, the data and the access all belong to the business.",
       "Free and low-cost tiers were checked before the build. We looked at which services the project already had or could run on free plans, including Supabase storage, the Sanity editor and Resend for emails, so the budget went into the custom website and portal.",
-      "The system matches the size of the business. More than 100 scheduled classes run through one system, which is well inside what the entry plans are built for.",
+      "The system matches the size of the business. The founder reported more than 100 scheduled classes running through one system, well inside what the entry plans are built for.",
     ]} />
     {/* 18 Nov 2026, owner: Supabase Pro $25; Sanity and Resend free; hosting is Vercel Pro ($20),
         included in the client's maintenance and SEO plan with us; domain and email are the client's

@@ -2,6 +2,7 @@ import Link from "next/link";
 import StackGuide, { GuideTable, stackGuideMetadata } from "@/components/blog/StackGuide";
 import { spec } from "@/data/spec-facts";
 import { startingPrice } from "@/data/company-facts";
+import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import { BlogList } from "@/components/ui/BlogStyles";
 
 // 18 Nov 2026: dev handoff Part B (Imran's copy). Publish-day checks done on 18 Nov:
@@ -13,6 +14,9 @@ import { BlogList } from "@/components/ui/BlogStyles";
 // - The owner confirmed on 18 Nov that QuickBooks sync every 30 minutes, per-attendee
 //   registration links, group bookings and server-side Google Ads reporting with refund
 //   adjustments are live. "Unpaid holds expire" was not confirmed, so it is left out.
+// 19 Nov 2026, skill review (evidence, deslop, citability, Google): all fixes taken. The seat
+// reservation line is out until the portal data confirms it; the first-month result is read
+// from migration-projects.ts, never retyped; certificates follow an administrator's approval.
 const id = "class-registration-software-vs-custom-booking-system";
 export const metadata = stackGuideMetadata(id);
 
@@ -33,12 +37,12 @@ export default function Page() {
     </section>
 
     <h2>What class registration software does well</h2>
-    <p>If you run CPR or first aid classes, software built for that job is the right place to start. Enrollware is one well-known example. {src(review.source, "One independent review")} describes it as cloud software that lets training centres schedule classes, register attendees, take payments and send out certifications, and says it suits CPR and healthcare training providers in particular. {src(healthcare.source, "Enrollware says its healthcare product")} is tailored for American Heart Association and American Red Cross training centres.</p>
+    <p>If you run CPR or first aid classes, software built for that job is the right place to start. Enrollware is one well-known example. {src(review.source, "SoftwareFinder's review")} describes it as cloud software that lets training centres schedule classes, register attendees, take payments and send out certifications, and says it suits CPR and healthcare training providers in particular. {src(healthcare.source, "Enrollware says its healthcare product")} is tailored for American Heart Association and American Red Cross training centres.</p>
     <p>ClassByte, JoinCPR, CourseStorm and CertClass work in the same space. We haven&apos;t tested them, so we won&apos;t rank them.</p>
     <p>What you get from any of them is speed and a fixed monthly bill. You can be taking bookings this week, the vendor fixes the bugs, and nobody on your side needs to know what a database is. For a school with one course type and one location, that&apos;s often all you need, and paying for a custom build would be a waste.</p>
 
     <h2>Where software stops fitting</h2>
-    <p>The trouble shows up at the edges of your process. Check your own week against this list:</p>
+    <p>Software stops fitting when work spills outside it. Check your own week against this list:</p>
     <BlogList items={[
       <><strong>Students leave your website to book.</strong> Your site becomes a brochure, and your ad and search tracking stops at the handoff, so you can&apos;t tell which advert filled a class.</>,
       <><strong>You still email payment links.</strong> Someone enquires, a staff member replies with a link, and the seat isn&apos;t held until they pay.</>,
@@ -51,7 +55,8 @@ export default function Page() {
 
     <h2>What a custom system looked like for one school</h2>
     <p>A Step Above Medical teaches phlebotomy and IV therapy. Their old WordPress site ran on Divi, The Events Calendar, Event Tickets and Ninja Forms. A student filled in an enquiry form, and the team replied by email with a Stripe payment link.</p>
-    <p>We rebuilt the website and added a staff portal. It went live on 20 October 2026. The owner confirmed each row of this table on 21 October:</p>
+    <p>We rebuilt the website and added a staff portal. It went live on 20 October 2026. {MIGRATION_PROJECT_DETAILS.aStepAboveMedical.firstMonthResult} {MIGRATION_PROJECT_DETAILS.aStepAboveMedical.adBudgetNote}</p>
+    <p>The owner confirmed each row of this table on 21 October:</p>
     <GuideTable caption="A Step Above Medical before and after, owner-confirmed 21 October 2026" headers={["Job", "Before", "Now"]} rows={[
       ["Booking and payment", "Enquiry form, then a Stripe payment link by email", "Students book a class and pay by Stripe on the website"],
       ["Messages to students", "Nothing automatic", "Automatic emails, including reminders of fees, dates and venue"],
@@ -60,9 +65,8 @@ export default function Page() {
     ]} />
     <p>The new system also does these jobs:</p>
     <BlogList items={[
-      "A paid booking reserves a seat within the class capacity.",
       "One person can book seats for others, and each attendee gets a link to complete their own registration.",
-      "Staff record attendance, and certificates are emailed after the class.",
+      "Staff record attendance, and the portal emails each certificate once an administrator approves the student's completion.",
       "Payments and refunds sync to QuickBooks every 30 minutes.",
       "Paid bookings are reported to Google Ads, and refunds adjust them.",
     ]} />
@@ -70,7 +74,7 @@ export default function Page() {
     <p><Link href="/work/a-step-above-medical">Read the full case study</Link>.</p>
 
     <h2>How to compare the cost over three years</h2>
-    <p>Vendor prices change, so we haven&apos;t listed them. Check each pricing page on the day you decide. The sum is the same whichever tool you look at.</p>
+    <p>Add up three years of costs on each side, and count staff time. Vendor prices change, so we haven&apos;t listed them; check each pricing page on the day you decide. The sum is the same whichever tool you look at.</p>
     <p><strong>Software, three years:</strong></p>
     <BlogList items={[
       "Monthly fee, times 36",
@@ -83,7 +87,7 @@ export default function Page() {
       "Hosting, database and content editor accounts, which sit in your name",
       "Changes you ask for later",
     ]} />
-    <p>The line that usually decides it is staff time. As an example, five hours a week of copying bookings into a spreadsheet and making certificates, at $25 an hour, is $6,500 a year. If the software removes that work, keep the software. If it doesn&apos;t, that figure is what you weigh against a build.</p>
+    <p>The line that usually decides it is staff time. As an example, five hours a week of copying bookings into a spreadsheet and making certificates, at $25 an hour, is $6,500 a year. If the software removes that work, keep the software. If it doesn&apos;t, weigh that figure against a build.</p>
     <p>Our custom builds start at {startingPrice("Starter")}. A booking system with a staff portal is a larger project than that, and we quote it in writing after a call. See <Link href="/pricing">pricing</Link>.</p>
 
     <h2>The middle route: keep the software, fix the website</h2>
@@ -122,9 +126,9 @@ export default function Page() {
 
     <h2>Sources</h2>
     <BlogList items={[
-      <>{src(review.source, "SoftwareFinder review of Enrollware")}</>,
-      <>{src(healthcare.source, "Enrollware healthcare solutions page")}</>,
-      <>{src(home.source, "Enrollware home page (its own description)")}</>,
+      <>{src(review.source, "SoftwareFinder review of Enrollware")}, checked 18 November 2026</>,
+      <>{src(healthcare.source, "Enrollware healthcare solutions page")}, checked 18 November 2026</>,
+      <>{src(home.source, "Enrollware home page (its own description)")}, checked 18 November 2026</>,
       <><Link href="/work/a-step-above-medical">A Step Above Medical case study</Link>, including Dillon Lynch&apos;s Clutch review of 25 October 2026</>,
     ]} />
   </StackGuide>;

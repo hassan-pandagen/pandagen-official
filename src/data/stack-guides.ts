@@ -14,6 +14,8 @@ export type StackGuidePost = BlogPost & {
   eyebrow: string;
   /** A shorter title tag, when the on-page heading is long. */
   metaTitle?: string;
+  /** A technical reviewer named under the byline, when the author is someone else. */
+  reviewer?: "Hassan";
 };
 
 const byline = { author: "Hassan", role: "Co-founder, Lead Engineer", featured: false };
@@ -168,16 +170,17 @@ export const stackGuidePosts: StackGuidePost[] = [
   {
     // 18 Nov 2026: Imran's draft, edited from the review notes. The title tag is the short
     // metaTitle; the long version stays as the on-page heading.
-    ...byline, id: "supabase-vercel-cost", title: "Supabase and Vercel: What They Cost as You Grow, and When to Choose Something Else",
+    // 19 Nov 2026: Imran wrote the draft, so he is the author; Hassan is named as technical reviewer.
+    ...byline, author: "Imran", role: "Co-founder", reviewer: "Hassan", id: "supabase-vercel-cost", title: "Supabase and Vercel: What They Cost as You Grow, and When to Choose Something Else",
     metaTitle: "Supabase and Vercel Pricing 2026: What You Pay as You Grow",
     date: "Nov 18", published: "2026-11-18", lastModified: "2026-11-18", eyebrow: "Pricing / Supabase and Vercel costs",
     excerpt: "Supabase and Vercel cost about $45 a month for a small live app and a few hundred for a busy one. Where the bills jump, and what to move first. Prices as of November 2026.",
-    category: "Pricing", readTime: "9 min", illustrationType: "hosting", cardStat: "$45", cardStatLabel: "A month for a small live app on Supabase and Vercel",
+    category: "Pricing", readTime: "6 min", illustrationType: "hosting", cardStat: "$45", cardStatLabel: "A month for a small live app on Supabase and Vercel",
     faqs: [
       { question: "Is Supabase free for a real business?", answer: `The Free plan pauses a project after one week without activity and stops at a 500 MB database. A live business app should budget ${supabasePro.value.replace("from ", "")} for Pro.` },
       { question: "Can I run a business site on Vercel's free plan?", answer: `No. Vercel limits Hobby to personal, non-commercial use, so a business site needs Pro at ${vercelPro.value}. Our guide "Is Vercel free?" explains what Hobby allows.` },
-      { question: "What's the cheapest way to host a Next.js app?", answer: "A server you rent and manage yourself, from about $4 to $6 a month, or Cloudflare Workers from $5 a month. The saving is real only if someone on the team can maintain it." },
-      { question: "Will I be locked in to Supabase?", answer: "Less than with most backends. The database is standard Postgres and the software is open source, so you can export your data or host it yourself. Logins, file storage and security rules take the most work to move." },
+      { question: "What's the cheapest way to host a Next.js app?", answer: "A server you rent and manage yourself, from $4 a month at DigitalOcean or €5.49 before VAT at Hetzner, or Cloudflare Workers from $5 a month. The saving is real only if someone on the team can maintain it." },
+      { question: "Will I be locked in to Supabase?", answer: "The database is standard Postgres and the software is open source, so you can export your data or host it yourself. Logins, file storage and security rules take the most work to move." },
       { question: "When does it stop making sense?", answer: "When the monthly bill is more than the cost of an engineer's time to run something cheaper. For most small businesses, that point is in the hundreds of dollars a month, not the tens." },
     ],
   },
@@ -186,12 +189,12 @@ export const stackGuidePosts: StackGuidePost[] = [
     ...byline, id: "class-registration-software-vs-custom-booking-system", title: "Class Registration Software or a Custom Booking System: Which Fits Your Training School?",
     metaTitle: "Class Registration Software vs a Custom Booking System",
     date: "Nov 18", published: "2026-11-18", lastModified: "2026-11-18", eyebrow: "Booking / Training schools",
-    excerpt: "When class registration software is enough for a training school, when a custom booking system pays for itself, and what we built for a phlebotomy school.",
+    excerpt: "When class registration software is enough for a training school, when a custom booking system is worth building, and what we built for a phlebotomy school.",
     category: "Guide", readTime: "7 min", illustrationType: "cost", cardStat: "4 jobs", cardStatLabel: "Booking, emails, certificates and contact details, before and after",
     faqs: [
       { question: "Is Enrollware a good fit for a phlebotomy school?", answer: "Enrollware describes itself as class management software for CPR and first aid training. Whether it suits a phlebotomy programme depends on your certificates and how your courses are structured. Ask for a demo using one of your own courses before you commit." },
-      { question: "How long does a custom class booking system take to build?", answer: "Our larger builds take 3 to 6 weeks once the scope is agreed in writing. A booking system with a staff portal sits at that end." },
-      { question: "Can a custom booking system take payment when the student books?", answer: "Yes. A Step Above Medical's students pay by Stripe when they book, which reserves the seat." },
+      { question: "How long does a custom class booking system take to build?", answer: "Our larger builds take 3 to 6 weeks once the scope is agreed in writing. The accepted terms give the dates for your project." },
+      { question: "Can a custom booking system take payment when the student books?", answer: "Yes. A Step Above Medical's students pay by Stripe when they book." },
       { question: "Who owns a custom booking system?", answer: "You do. For A Step Above Medical the database runs on the school's own account and the code is kept in GitHub." },
       { question: "Do I have to replace my current website?", answer: "Not always. If your registration software works and the website is the weak point, we can rebuild the website and link it to the software you already use." },
     ],
