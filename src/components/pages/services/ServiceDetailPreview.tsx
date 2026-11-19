@@ -78,7 +78,11 @@ export default function ServiceDetailPreview({ service }: { service: ServicePrev
           ["What should improve next?", "We use the findings to prioritise clearer answers, stronger evidence and easier next steps for buyers."],
         ].map(([title, body]) => <div key={title} className="border-t border-stone-300 pt-5"><dt className="text-lg font-semibold">{title}</dt><dd className="mt-3 text-base leading-relaxed">{body}</dd></div>)}
       </dl>
-      <div className="mt-5 flex flex-wrap gap-6"><Link href="/blog/ai-search-visibility-tracking#measure-ai-search-visibility" className={s.textLink}>How we measure AI visibility</Link><Link href="/work/a-step-above-medical#search-visibility" className={s.textLink}>See the ASAM search observations</Link></div>
+      <div className="mt-5 flex flex-wrap gap-6">
+        <Link href="/blog/ai-search-visibility-tracking#measure-ai-search-visibility" className={s.textLink}>How we measure AI visibility</Link>
+        <Link href="/work/a-step-above-medical#search-visibility" className={s.textLink}>See the ASAM search observations</Link>
+        <Link href="/blog/ai-referral-revenue-2026" className={s.textLink}>How Panda Patches tracks sales from AI referrals</Link>
+      </div>
     </div></section>}
 
     {service.slug === "ai-seo" && <GoogleAiVisibilityProof />}

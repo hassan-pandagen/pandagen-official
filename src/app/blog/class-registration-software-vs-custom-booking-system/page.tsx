@@ -4,6 +4,7 @@ import { spec } from "@/data/spec-facts";
 import { startingPrice } from "@/data/company-facts";
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import { BlogList } from "@/components/ui/BlogStyles";
+import { CAL_BOOKING_URL } from "@/lib/booking";
 
 // 18 Nov 2026: dev handoff Part B (Imran's copy). Publish-day checks done on 18 Nov:
 // - The two Enrollware descriptions were re-read. Enrollware's healthcare page says
@@ -121,7 +122,7 @@ export default function Page() {
     <p>Show us how your school works today. In a 15-minute call we&apos;ll tell you which steps are worth connecting and whether a custom build makes sense, or whether software you already pay for can do it.</p>
     <BlogList items={[
       <Link key="svc" href="/services/training-business-websites">Training business websites and booking systems</Link>,
-      <Link key="call" href="/contact#contact-quote-form">Book a 15-minute workflow call</Link>,
+      <a key="call" href={CAL_BOOKING_URL}>Book a 15-minute workflow call</a>,
     ]} />
     <p>Related: <Link href="/blog/online-booking-small-business-website">How to add online booking to a small business website</Link></p>
 
