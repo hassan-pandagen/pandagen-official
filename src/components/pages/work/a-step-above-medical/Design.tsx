@@ -33,6 +33,11 @@ const RESULT_LINE = "Students book and pay online. Reminders and class details s
 // against online-only new ones). Emails and certificates: 20 Oct to 18 Nov. Ads: spend rose about 27% (Google Ads account, 19 Nov); earlier note said same budget
 // both periods (amount not published). Revenue is deliberately not shown. Evidence and screenshots:
 // C:/Projects/seo/asam-case-study-2026-11/README.md. Dillon approved the case study.
+// 19 Nov 2026, Imran's Google Ads audit: the old campaigns counted a homepage view as a conversion
+// (559 in the month before launch, none of them bookings); Performance Max showed 26,471 display and
+// video impressions at a 1.5% click rate. Google credits 4 first-month bookings directly to ads, so
+// this paragraph doesn't tie the ads to the 37.
+const ADS_FIX = "The old campaigns bid for conversions, but the only conversion they counted was a view of the homepage, so Google bought the cheapest homepage visits it could find. Registrations, form fills and calls weren't measured at all. We replaced them with three search campaigns, for phlebotomy classes by city, IV therapy classes by city and the school's own name, and set up a conversion for each paid registration, sent from the portal to Google Ads. The old campaigns ran for part of the first month before they were paused. Google Ads now credits real bookings: 4 in the first month came directly from ads.";
 const FIRST_MONTH_RESULT = `${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.firstMonthResult} The owner puts it at four to five times the monthly sales. ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.adBudgetNote}`;
 const TECH_LINE = "The website was rebuilt from WordPress with Next.js and a Sanity content editor. The team portal runs on Supabase, on the client's own account.";
 // 18 Nov 2026: Lance asked for "Projects like this start from $X". The pricing page has no starting
@@ -126,6 +131,10 @@ export function AStepAboveMedicalStatusPreview({ faqs = aStepAboveMedicalFaqs }:
               </tbody>
             </table>
           </div>
+          {/* 19 Nov 2026: from Imran's audit of their Google Ads account. Only confirmed points; the ad
+              amounts aren't published, and Google's old conversion counts are never used. */}
+          <h3 className="mt-10 text-[20px] font-semibold" style={{ color: T.ink }}>Fixing the ads</h3>
+          <p className="mt-3 max-w-[44rem] text-[16px] leading-[1.65]" style={{ color: T.body }}>{ADS_FIX}</p>
           {/* 18 Nov 2026, dev handoff Part B: link into the class registration guide. */}
           <p className="mt-5 text-[15px]" style={{ color: T.body }}>Weighing software against a custom build? <Link href="/blog/class-registration-software-vs-custom-booking-system" className="font-semibold underline underline-offset-4" style={{ color: T.accentText }}>Class registration software or a custom booking system</Link></p>
         </div>
