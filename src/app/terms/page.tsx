@@ -86,9 +86,9 @@ const sections = [
         <p>These are optional starting points for discussion, not automatic terms or a contract for every customer. The parties may use, change, or omit them. Only provisions expressly included in the written project terms accepted by both parties apply to an engagement.</p>
         <ul className="mt-4 list-disc space-y-2 pl-5">
           <li>Starter begins at $1,500, Growth at $3,500, and Scale begins at $5,000. Extra pages, features, and integrations are priced in a separate written scope before implementation.</li>
-          <li>A common payment option is 30% at onboarding and 70% at the delivery milestone defined in the accepted project terms. The parties may agree to a different written schedule.</li>
-          <li>When the accepted project terms include the 100% contracted-scope protection, PandaCodeGen refunds the project fees paid under that scope if it fails to deliver the promised deliverables. The trigger, verification, and any cure process are stated before work begins. This is not a change-of-mind or subjective-preference refund.</li>
-          <li>When a refund is due or approved, PandaCodeGen normally aims to initiate it within 2-3 business days. The receiving bank or payment provider controls settlement timing, which may take up to 10-12 business days.</li>
+          <li>Business systems are usually paid 30% at onboarding, 40% when the working system is ready to review, and 30% after the booking system passes a live test and the site launches. Websites are usually paid 30% at onboarding and 70% at the delivery milestone defined in the accepted project terms. The parties may agree to a different written schedule.</li>
+          <li>If PandaCodeGen fails to deliver what is in the signed scope, it refunds 100% of the project fees paid under that scope. The trigger, verification, and any cure process are stated in the written project terms before work begins. This is not a change-of-mind or subjective-preference refund.</li>
+          <li>When a refund is due or approved, PandaCodeGen normally aims to initiate it within 4-5 business days. The receiving bank or payment provider controls settlement timing, which may take up to 10-12 business days.</li>
           <li>Cancellation and any refund outside an express scope-failure protection follow the accepted project terms and the work completed at that point. PandaCodeGen may approve a goodwill exception in writing, but an exception does not create a general entitlement for other projects.</li>
           <li>{POST_LAUNCH_SUPPORT} The accepted project terms also record response expectations, exclusions, and any bespoke arrangement.</li>
           <li>A project may include a Lighthouse handover target of 90 or higher on mobile and desktop. When included, the accepted project terms identify the representative pages, profiles, conditions, and number of recorded pre-handover runs that must meet the target.</li>
@@ -155,7 +155,7 @@ export default function TermsPage() {
           <header className="mb-14">
             <p className="text-sm font-bold uppercase tracking-widest text-cognac">Website notice</p>
             <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-6xl">Website Terms</h1>
-            <p className="mt-4 text-stone-700">Last updated: July 21, 2026</p>
+            <p className="mt-4 text-stone-700">Last updated: November 21, 2026</p>
           </header>
 
           <div className="space-y-7">

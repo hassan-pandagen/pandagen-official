@@ -638,9 +638,9 @@ export default function WebsiteCostGuide() {
 
                     <BlogHeader>Refund, ownership and performance terms affect value</BlogHeader>
                     <BlogText>
-                        PandaCodeGen&apos;s 100 percent contracted-scope protection applies when the accepted project
-                        terms include it, and it covers a failure to deliver the promised deliverables under that scope.
-                        It is not a change-of-mind refund. Approved refunds are normally initiated in 2 to 3 business
+                        PandaCodeGen refunds 100 percent of the fees paid under the signed scope if it fails to deliver the
+                        promised deliverables under that scope.
+                        It is not a change-of-mind refund. Approved refunds are normally initiated in 4 to 5 business
                         days; settlement after that is controlled by the receiving bank or payment provider and can take
                         up to 10 to 12 business days.
                     </BlogText>

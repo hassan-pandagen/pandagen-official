@@ -548,7 +548,7 @@ export default function WordPressMigrationCostPage() {
                         A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone named in the accepted terms, and another written schedule may be agreed. Refund is tied to
                         failure to deliver the signed scope, not a preference change after work starts; the contract
                         defines any project-specific exception and work disposition. When a refund is due, PandaCodeGen
-                        aims to initiate it within 2 to 3 business days; the receiving bank or payment provider controls
+                        aims to initiate it within 4 to 5 business days; the receiving bank or payment provider controls
                         settlement, which can take up to 10 to 12 business days. Package discussions may start with 15
                         calendar days of launch defect support on Starter and 30 on Growth and Scale, and support
                         applies only when the accepted project terms record it.
