@@ -8,7 +8,8 @@ const PARTS: readonly [string, string][] = [
   ["A content editor you use yourself", "Change your pages, posts and photos in an editor built into your site, without waiting for a developer."],
   ["Backend and client portal", "Customer logins, staff roles and records, built around how your business already works."],
   ["Bookings and payments", "Live times, online payment, confirmations and reminders, where your business needs them."],
-  ["AI-search setup", "FAQ answers and structured data that ChatGPT and Google's AI can read and quote. We can't promise any AI tool will quote you."],
+  // Google's guide to its AI features (May 2026) says no special schema or AI files are needed; clear, crawlable answers are what count.
+  ["AI-search setup", "Clear answers to the questions your customers ask, on fast pages search engines and AI tools can crawl, so ChatGPT and Google's AI answers can find and quote them. We can't promise any AI tool will quote you."],
   ["Care & SEO, if you want it", "Hosting, fixes, support, 4 blog posts a month and on-page SEO, from $500 a month. Optional; the site keeps working without it."],
 ];
 

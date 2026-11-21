@@ -37,7 +37,7 @@ export const homeFaqs = [
   },
   {
     q: "Is my website set up for ChatGPT and Google's AI answers?",
-    a: "Yes. Every build includes the AI-search setup: pages that answer the questions your customers ask, the structured data search engines and AI assistants read, and a file written for AI tools. We can't promise any AI tool will quote you; we build the site so it can be found and quoted.",
+    a: "Yes. Every build includes the AI-search setup: clear answers to the questions your customers ask, on fast pages that search engines and AI tools can crawl. Google says its AI answers use the same signals as normal search, with no special files or markup required, so that's where we put the work. We can't promise any AI tool will quote you.",
   },
   {
     q: "What do your monthly plans include?",

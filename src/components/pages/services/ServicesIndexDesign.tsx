@@ -23,13 +23,13 @@ const summaries: Record<string, string> = {
   "backend-development": "Databases, sign-in and admin screens for your business, usually on Supabase, scoped with access and recovery checks.",
   wordpress: "WordPress design, development, redesign and host-to-host moves, scoped with a written quote.",
   "custom-engineering": "Custom CRM development, workflow automation, customer portals and staff dashboards.",
-  ecommerce: "Ecommerce website development, Shopify/WooCommerce redesign and custom storefronts.",
+  ecommerce: "Ecommerce website development and Shopify migration, with every old product URL redirected.",
   woocommerce: "WooCommerce development, slow-checkout investigation and store improvements, or a scoped migration.",
   wix: "Wix website design and redesign, mobile-layout improvements and migration when it fits.",
   squarespace: "Squarespace website design and redesign, with content, forms and scheduling in scope.",
   webflow: "Webflow development and redesign, CMS editing improvements, forms and platform moves.",
-  gohighlevel: "GoHighLevel website design, slow-page repairs and connections to forms, bookings and pipelines.",
-  "ai-seo": "AI SEO, AEO and GEO: buyer-question research, one agreed improvement and a monthly report.",
+  gohighlevel: "Keep GoHighLevel as your CRM and move the website to code you own, with every old URL redirected.",
+  "ai-seo": "AI-search setup in every build, kept current on the Care & SEO Plan. GEO and AEO for other sites from $500/month.",
 };
 
 export default function ServicesPreviewIndex() {

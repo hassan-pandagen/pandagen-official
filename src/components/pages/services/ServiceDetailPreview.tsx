@@ -31,8 +31,8 @@ import s from "@/components/redesign/CommercialPreview.module.css";
 import v from "./ServicesPreview.module.css";
 
 const heroFocus: Record<string, string> = {
-  wordpress: "redesigns", "custom-engineering": "team tools", ecommerce: "custom",
-  woocommerce: "migrate", wix: "Redesign", squarespace: "redesigns", webflow: "migration",
+  wordpress: "Redesign", "custom-engineering": "team tools", ecommerce: "custom",
+  woocommerce: "Keep", wix: "Redesign", squarespace: "redesigns", webflow: "migration",
   gohighlevel: "CRM", "ai-seo": "GEO", "cms-development": "business",
   "backend-development": "workflows", "small-business-website-design": "founders",
   "medical-website-design": "training",

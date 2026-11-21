@@ -11,6 +11,7 @@ export default function AsamServiceEvidence() {
         <h2 id="client-search-evidence" style={{ fontFamily: DISPLAY, fontSize: "clamp(2rem, 3.5vw, 3.5rem)", lineHeight: 1.15, textWrap: "balance" }}>A working business website. More visibility after launch.</h2>
         <div className="space-y-4 text-base leading-relaxed">
           <p>Students can find a class, register and pay online. Staff manage classes, student emails and certificates in one system. We rebuilt A Step Above Medical&apos;s WordPress website and connected the work behind it.</p>
+          <p>Website bookings went from 7 in the 30 days before launch to 37 online bookings in the first 30 days after. New Google Ads ran in the same period at about 27% more spend. Founder Dillon Lynch: &ldquo;We did 6x technically since the business launched the new website.&rdquo;</p>
           <p>Its owner-supplied Search Console screenshots also show higher visibility after the 20 October 2026 relaunch. Here are two daily readings from the account&apos;s Generative AI features report.</p>
         </div>
       </div>

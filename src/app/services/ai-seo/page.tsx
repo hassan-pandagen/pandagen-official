@@ -10,9 +10,9 @@ import { previewServiceFaqs } from "@/components/pages/services/preview-faqs";
 
 
 const path = "/services/ai-seo";
-const name = "AI SEO & GEO Services";
+const name = "AI SEO & Generative Engine Optimization (GEO) Services";
 const description =
-  "AI SEO, AEO and generative engine optimization (GEO) services. From $500/month for buyer research, page improvements and AI search visibility reporting.";
+  "Every website we build includes the AI-search setup, and our Care & SEO Plan keeps it current. For other sites, AI SEO, AEO and GEO work from $500/month.";
 
 export const metadata: Metadata = {
   title: name,

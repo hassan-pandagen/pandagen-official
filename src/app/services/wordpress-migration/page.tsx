@@ -7,8 +7,8 @@ import { WordPressMigrationPreview, migrationFaqs } from "@/components/pages/ser
 // stay here; the FAQ structured data now comes from the FAQs the redesign shows.
 
 const path = "/services/wordpress-migration";
-const name = "WordPress to Next.js Migration Services";
-const description = "Move a WordPress site to Next.js with a written plan for content, URLs, redirects and forms. Review it with Hassan, then get an editing demo and documentation.";
+const name = "WordPress Migration Services: Move to Next.js";
+const description = "WordPress to Next.js migration from $1,500. Every old URL listed and redirected, titles and posts kept, forms rebuilt and tested. Fixed price in writing.";
 
 export const metadata: Metadata = {
   title: name,
