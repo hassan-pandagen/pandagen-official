@@ -302,6 +302,7 @@ export default function AiBuiltWebsiteChecklistPage() {
                     ]} />
                     <BlogText>These are suggested starting points: choose a frequency based on transaction volume, the impact of a missed failure and the monitoring already available.</BlogText>
                     <BlogText>If you can complete the checks and someone owns the follow-up, you may not need an agency. If you are deciding whether to build or hire, our <Link href="/blog/is-it-cheaper-to-build-your-own-website" className={linkClass}>DIY website cost guide</Link> covers that separate decision. Where a check keeps failing because the platform cannot do what the business needs, that is the work <Link href="/services/custom-engineering" className={linkClass}>our custom engineering service</Link> covers.</BlogText>
+                    <BlogText>For a quicker start, try the <Link href="/" className={linkClass}>owner&apos;s checklist on our homepage</Link>, or ask us for a <Link href="/contact" className={linkClass}>free written check</Link> of your site.</BlogText>
 
                     <span id="faq" />
                     <FAQAccordion faqs={postFAQs} />

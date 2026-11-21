@@ -365,7 +365,7 @@ export default function AiReferralRevenuePage() {
                         been given when this was published.
                     </BlogText>
 
-                    <BlogHeader>How this compares to the one large study that exists</BlogHeader>
+                    <BlogHeader>How this compares to a larger study of brands</BlogHeader>
                     <BlogText>
                         <BlogHighlight>A 94-brand study found the same thing about order value that a single store found here.</BlogHighlight>{" "}
                         Visibility Labs analysed twelve months of Google Analytics data from 94 seven and eight-figure
@@ -390,6 +390,29 @@ export default function AiReferralRevenuePage() {
                         Claude, Perplexity and Google AI Overview where a referral signal or customer-declared
                         discovery identifies them. That provides detail for this business; the classification depends
                         on the information recorded, and it does not establish that equivalent datasets exist nowhere else.
+                    </BlogText>
+
+                    <BlogHeader>Do visitors from AI tools convert better?</BlogHeader>
+                    <BlogText>
+                        It depends on the kind of business. Orbit Media looked at 97 B2B lead-generation sites and found
+                        that{" "}
+                        <a href="https://www.orbitmedia.com/blog/conversion-rates-ai-search/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                            visitors from AI were about 3x more likely to become leads
+                        </a>{" "}
+                        than other organic traffic (checked 21 Nov 2026). Google still sent those sites about 100 times
+                        more traffic than ChatGPT. Microsoft Clarity studied more than 1,200 publisher and news sites
+                        and found that{" "}
+                        <a href="https://clarity.microsoft.com/blog/ai-traffic-converts-at-3x-the-rate-of-other-channels-study/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                            AI visitors signed up and subscribed at higher rates
+                        </a>{" "}
+                        than visitors from search, direct or social, though AI sent less than 1% of their traffic
+                        (checked 21 Nov 2026). The biggest ecommerce study we found points the other way. Across 973
+                        online stores,{" "}
+                        <a href="https://www.bwl.uni-hamburg.de/en/ueber-die-fakultaet/aktuelles/2025/1106-chatgpt-und-e-commerce.html" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                            ChatGPT referrals converted worse than Google search
+                        </a>{" "}
+                        (checked 21 Nov 2026). Results differ by business type, so check your own numbers before you
+                        move budget.
                     </BlogText>
 
                     <BlogHeader>What this does not establish</BlogHeader>

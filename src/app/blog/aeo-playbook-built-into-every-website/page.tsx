@@ -630,7 +630,7 @@ export default function AEOPlaybookPage() {
                         PandaCodeGen is a custom website, store and software engineering brand founded in February 2026, and is the trading name of Panda Group Ventures L.L.C. Hassan Jamal is Co-founder and Lead Engineer, and Imran Raza Ladhani is Co-founder and Head of Marketing. The company is formed in Wyoming, filed on 12 August 2026, and the Stafford, Texas address is its mailing and principal office rather than a public service location.
                     </BlogText>
                     <BlogText>
-                        Crawlability and evidence hygiene are normal quality controls. Route count, editorial work, structured data, research, monitoring, and ongoing maintenance remain scope-dependent rather than universally included.
+                        Crawlability and evidence hygiene are normal quality controls. The AI-search setup, with answer-first FAQ pages, structured data and an llms.txt file, now comes with every build. Route count, editorial work, research, monitoring and ongoing maintenance remain scope-dependent.
                     </BlogText>
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">Pricing and Tiers</h3>
@@ -694,6 +694,10 @@ export default function AEOPlaybookPage() {
 
                     <BlogText>
                         To check what happens after launch, measure AI citations, mentions of your business, website visits and enquiries separately. Our <Link href="/blog/ai-search-visibility-tracking#measure-ai-search-visibility" className="text-cognac hover:underline">AI search visibility measurement guide</Link> explains the reports, repeatable buyer questions and comparison periods to use. It also explains why an impression is not a visit or a sale.
+                    </BlogText>
+
+                    <BlogText>
+                        This AI-search setup now comes with every website we build: answer-first FAQ pages, structured data and an llms.txt file, so ChatGPT and Google&apos;s AI can read your answers and quote them. It&apos;s part of the <Link href="/pricing" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">website and business system package</Link>, and after launch the <Link href="/services/ai-seo" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Website Care &amp; SEO Plan</Link> keeps it current. Nobody can promise an AI tool will cite you, but this makes your answers easy to find.
                     </BlogText>
 
                     {/* CTA */}

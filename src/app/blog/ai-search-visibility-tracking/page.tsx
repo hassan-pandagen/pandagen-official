@@ -650,6 +650,11 @@ export default function AiSearchVisibilityTracking() {
                         we establish what each report measures, which pages receive visibility and which business
                         outcomes can actually be attributed.
                     </BlogText>
+                    <BlogText>
+                        To see where your own site stands, start with the{" "}
+                        <Link href="/" className="text-cognac hover:underline">owner&apos;s checklist on our homepage</Link>,
+                        or ask for a <Link href="/contact" className="text-cognac hover:underline">free written check</Link>.
+                    </BlogText>
 
                     <BlogHighlight>
                         The original research figures on this page come from Search Console exports for pandacodegen.com: the

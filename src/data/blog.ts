@@ -1143,7 +1143,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'aicommerce',
-    lastModified: "2026-11-19",
+    lastModified: "2026-11-21",
     faqs: [
       { question: "Do AI assistants like ChatGPT actually generate sales?", answer: "This store recorded sales attributed to AI discovery using captured referrers and customer-declared sources. Across 1 March to 18 August 2026, a store we operate recorded 63 orders worth $16,783.76 attributed to AI assistants, out of 760 orders and $271,620.61 total. That is 6.2% of all revenue, or 9.2% of acquisition revenue once repeat orders are excluded. Recorded revenue attributed to ChatGPT was $11,614.78. This is one business in one vertical, so it is evidence that it happens, not a benchmark for your business." },
       { question: "Why do most businesses report almost no AI traffic?", answer: "Referrer-only tracking can miss AI-assisted discovery. Links and clients can carry referrers or campaign parameters, while later direct visits and brand searches may lose that context. This does not establish the size of an unmeasured audience. A business measuring referrer alone will see close to zero and conclude AI sends no traffic. We capture referrer where it survives and ask the customer where it does not, which is the only reason these numbers are not zero." },
