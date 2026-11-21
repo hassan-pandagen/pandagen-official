@@ -29,8 +29,10 @@ import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 //   Pay in stages       Hassan and Imran: system builds 30 / 40 / 30, the last 30% after the live test
 //   Refund              company-facts "Refunds" (failure to deliver the signed scope).
 //                       Check the wording against the contract before this is pushed.
-//   You can remove us   Hassan: accounts opened in the client's name. Confirm every client's
-//                       hosting and database are in their own name before this is pushed.
+//   You own it          Hassan, 21 Nov: database, content editor and Google accounts are opened
+//                       in the client's name; on a maintenance plan hosting can sit on our Vercel
+//                       account (company-facts "Hosting") and moves on request. Some clients give
+//                       us owner access, so "we can't remove you" is not said.
 //   References          Imran: Etoy, Jaime and Emblematic Studio agreed to take calls
 //   How it runs         Imran: keep a short version of the process steps here
 // "Founder-built" absorbs the founders section's promise; the content-editor and
@@ -41,7 +43,7 @@ const rows = [
   { label: "Fixed price.", Icon: FileCheck2, text: "Scope and price agreed in writing before work starts. Changes are agreed in writing first, with the price and date effect stated." },
   { label: "Pay in stages.", Icon: Wallet, text: "Business systems are paid 30 / 40 / 30: 30% to start, 40% when you can review the working system, and the last 30% after your booking system passes a live test and the site launches." },
   { label: "Refund.", Icon: ShieldCheck, text: "100% back if we don't deliver what's in your signed scope. We don't launch until it's tested and working." },
-  { label: "You own it.", Icon: KeyRound, text: "Your hosting, database and content editor are opened in your name, with you as the owner. You can remove us; we can't remove you." },
+  { label: "You own it.", Icon: KeyRound, text: "Your database, content editor and Google accounts are opened in your name. On a monthly plan, hosting can run on our account so you don't pay a second fee, and we move it to yours whenever you ask. You can remove us at any time." },
   { label: "Talk to our clients.", Icon: Users, text: "Three past clients will take your call before you sign." },
   { label: "How it runs.", Icon: Route, text: "A free written check of how you work today, a written scope and price, the build, a live test of every booking and payment journey, then launch." },
   { label: "Support after launch.", Icon: LifeBuoy, text: POST_LAUNCH_SUPPORT_SUMMARY },

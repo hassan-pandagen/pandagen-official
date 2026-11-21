@@ -15,7 +15,7 @@ const items = [
   "US Eastern hours",
   "Fixed price in writing",
   "Pay 30 / 40 / 30",
-  "You own every account",
+  "Your accounts in your name",
   "AI-search setup in every build",
   "Websites from $1,500",
   "Business systems from $10,000",

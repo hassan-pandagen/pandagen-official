@@ -107,7 +107,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
               <p className="max-w-[34rem] text-[18px] leading-[1.55] md:text-[20px]" style={{ color: BODY }}>
                 Bookings, payments, reminders, follow-ups and a client portal, built around how your business
                 already works, on a website made to be found by Google and AI search. Work directly with Hassan
-                and Imran, with a fixed price in writing and every account in your name.
+                and Imran, with a fixed price in writing and your accounts in your name.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Link

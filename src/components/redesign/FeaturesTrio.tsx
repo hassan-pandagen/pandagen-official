@@ -17,7 +17,7 @@ const CHECKLIST = [
   { problem: "You type the same emails every week.", answer: "Welcome, reminder, certificate and thank-you messages are written once and sent automatically." },
   { problem: "Ask ChatGPT who's the best in your field in your city. Did it name you?", answer: "Every build is set up so ChatGPT and Google's AI can read and quote your answers." },
   { problem: "You copy payments into your books by hand.", answer: "Payments sync to QuickBooks." },
-  { problem: "Changing your website means waiting for a developer.", answer: "You edit your own pages, and every account is in your name." },
+  { problem: "Changing your website means waiting for a developer.", answer: "You edit your own pages, and your accounts are in your name." },
 ];
 
 export default function FeaturesTrio() {

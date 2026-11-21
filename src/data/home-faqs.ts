@@ -29,7 +29,7 @@ export const homeFaqs = [
   },
   {
     q: "Do I own my website and accounts?",
-    a: "Yes. We open your hosting, database and content editor accounts in your name, with you as the owner, and work as invited members. You can remove us; we can't remove you. If you change teams, your website and system keep running with nothing to move.",
+    a: "Yes. Your database, content editor and Google accounts, such as Search Console, are opened in your name, and we work as invited members. If you take a monthly plan, hosting can run on our account so you don't pay for a second seat, and we transfer it to an account in your name whenever you ask. You can remove us at any time, and your website and system keep running.",
   },
   {
     q: "What hours do you work?",
