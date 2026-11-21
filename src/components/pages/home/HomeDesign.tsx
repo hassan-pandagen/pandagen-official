@@ -9,6 +9,7 @@ import { CAL_BOOKING_URL } from "@/lib/booking";
 import SystemProof from "@/components/redesign/SystemProof";
 import BusinessSummary from "@/components/redesign/BusinessSummary";
 import { monthly, monthlyAiAverage } from "@/data/ai-referral-facts";
+import { HOME_HEADLINE, HOME_INTRO } from "@/data/home-content";
 import PaperShader from "@/components/visual/PaperShader";
 import WorkIndex from "@/components/redesign/WorkIndex";
 import WorkCard from "@/components/redesign/WorkCard";
@@ -96,18 +97,16 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
           >
             {/* 21 Nov 2026, Imran's decision: "The system behind your website" leads, with
                 AI search as the second line (the paragraph below). */}
-            <span className="block text-balance">The system behind</span>{" "}
+            <span className="block text-balance">{HOME_HEADLINE[0]}</span>{" "}
             <span className="block">
-              <HeadingEmphasis text="your website." phrase="your website" />
+              <HeadingEmphasis text={HOME_HEADLINE[1]} phrase="your website" />
             </span>
           </h1>
 
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,.85fr)_minmax(0,1.15fr)] lg:gap-12 xl:gap-16">
             <div className="min-w-0">
               <p className="max-w-[34rem] text-[18px] leading-[1.55] md:text-[20px]" style={{ color: BODY }}>
-                Bookings, payments, reminders, follow-ups and a client portal, built around how your business
-                already works, on a website made to be found by Google and AI search. Work directly with Hassan
-                and Imran, with a fixed price in writing and your accounts in your name.
+                {HOME_INTRO}
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Link

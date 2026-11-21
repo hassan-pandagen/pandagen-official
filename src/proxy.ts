@@ -1,6 +1,38 @@
 import { NextResponse } from "next/server";
-export function proxy() {
-    const response = NextResponse.next();
+import type { NextRequest } from "next/server";
+
+function prefersMarkdown(accept: string): boolean {
+    const weights = new Map<string, number>();
+
+    for (const entry of accept.split(",")) {
+        const [type, ...parameters] = entry.toLowerCase().split(";").map((part) => part.trim());
+        const quality = parameters.find((parameter) => /^q\s*=/.test(parameter));
+        const weight = quality === undefined ? 1 : Number(quality.split("=")[1]);
+        if (weight >= 0 && weight <= 1) {
+            weights.set(type, Math.max(weights.get(type) ?? 0, weight));
+        }
+    }
+
+    const markdown = weights.get("text/markdown") ?? 0;
+    const html = weights.get("text/html") ?? weights.get("text/*") ?? weights.get("*/*") ?? 0;
+    return markdown > 0 && markdown >= html;
+}
+
+export async function proxy(request: NextRequest) {
+    const homepage = request.nextUrl.pathname === "/";
+    const serveMarkdown = homepage
+        && (request.method === "GET" || request.method === "HEAD")
+        && !request.headers.has("rsc")
+        && prefersMarkdown(request.headers.get("accept") ?? "");
+    const response = serveMarkdown
+        ? new NextResponse(request.method === "HEAD" ? null : (await import("@/data/home-content")).HOME_MARKDOWN, {
+            headers: {
+                "Content-Type": "text/markdown; charset=utf-8",
+                "Cache-Control": "no-store",
+                "Vary": "Accept",
+            },
+        })
+        : NextResponse.next();
 
     // Security Headers
     response.headers.set("X-Content-Type-Options", "nosniff");
