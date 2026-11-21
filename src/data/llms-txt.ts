@@ -95,6 +95,7 @@ const PRIMARY_PAGES = `## Primary pages
 - [Work](${BASE}/work): Project evidence and the publication standard applied to it.
 - [About](${BASE}/about): Team, and how work is scoped, delivered and handed over.
 - [AI Info](${BASE}/ai-info): Structured company reference for people and machines.
+- [Homepage as markdown](${BASE}/): request the homepage with the header \`Accept: text/markdown\` to get a markdown summary of the offer, prices and terms.
 - [Free audit](${BASE}/free-audit): Automated technical scan of a URL, no signup.
 - [Partners](${BASE}/partners): White-label and delivery-partner pilot for agencies.
 - [Contact](${BASE}/contact): Contact options and inquiry form.

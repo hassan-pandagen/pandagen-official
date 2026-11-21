@@ -30,6 +30,8 @@ export async function proxy(request: NextRequest) {
                 "Content-Type": "text/markdown; charset=utf-8",
                 "Cache-Control": "no-store",
                 "Vary": "Accept",
+                // Points agents at the full index and the company facts, the way Upstash and Sanity do.
+                "Link": '<https://www.pandacodegen.com/llms.txt>; rel="alternate"; type="text/plain"; title="LLM-friendly content index", <https://www.pandacodegen.com/ai-info>; rel="describedby"; type="text/html"; title="Company facts and sources"',
             },
         })
         : NextResponse.next();

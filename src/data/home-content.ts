@@ -7,10 +7,13 @@ export const HOME_INTRO = "Bookings, payments, reminders, follow-ups and a clien
 
 const trainingProject = MIGRATION_PROJECT_DETAILS.aStepAboveMedical;
 const systemOffer = COMMERCIAL.find(({ label }) => label === "Website + operations system");
+// Read from company-facts.ts so the markdown never drifts from the site.
+const fact = (label: string) => COMMERCIAL.find((f) => f.label === label)?.value ?? "";
 
-export const HOME_MARKDOWN = `# ${HOME_HEADLINE.join(" ")}
+export const HOME_MARKDOWN = `# PandaCodeGen: ${HOME_HEADLINE.join(" ")}
 
-PandaCodeGen · ${SITE_URL}/
+> **Source:** ${SITE_URL}/
+> **Format:** text/markdown, the homepage for AI agents and LLMs. Full index: ${SITE_URL}/llms.txt
 
 ${HOME_INTRO}
 
@@ -21,8 +24,24 @@ ${systemOffer?.value ?? "See the pricing page for website and business system pa
 Custom websites start at ${startingPrice("Starter")}. [See pricing and what's included](${SITE_URL}/pricing).
 
 - [Websites and booking systems for training businesses](${SITE_URL}/services/training-business-websites)
-- [WordPress migration](${SITE_URL}/services/wordpress-migration)
-- [Online store development](${SITE_URL}/services/ecommerce)
+- [Medical website design](${SITE_URL}/services/medical-website-design)
+- [Small business website design](${SITE_URL}/services/small-business-website-design)
+- [Website migration: move off WordPress, Wix, Squarespace or Shopify with every URL redirected](${SITE_URL}/services/wordpress-migration)
+- [Online store development (Shopify and custom)](${SITE_URL}/services/ecommerce)
+- [AI SEO and generative engine optimization](${SITE_URL}/services/ai-seo)
+
+Every build includes the AI-search setup: answer-first pages, structured data and an llms.txt file.
+
+## Monthly plans (optional)
+
+${fact("Ongoing services")}
+
+## Terms
+
+- ${fact("Payment structure")}
+- ${fact("Refunds")} If we don't deliver the signed scope, we refund 100% of the fees paid for it, starting within 4 to 5 business days.
+- ${fact("Ownership on handover")}
+- US Eastern business hours; your named lead answers the same day. Three past clients take reference calls before you sign.
 
 ## A Step Above Medical
 
@@ -37,5 +56,5 @@ ${trainingProject.firstMonthResult} ${trainingProject.adBudgetNote}
 - [How we measured AI referral revenue for our own store, Panda Patches](${SITE_URL}/blog/ai-referral-revenue-2026)
 - [Portfolio and client projects](${SITE_URL}/work)
 - [Company facts and sources](${SITE_URL}/ai-info)
-- [Talk to the founders](${SITE_URL}/contact)
+- [Talk to the founders](${SITE_URL}/contact): info@pandacodegen.com. The first step is a free written check or a 15-minute call.
 `;
