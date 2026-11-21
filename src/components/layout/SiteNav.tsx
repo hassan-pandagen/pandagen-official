@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import LocaleSwitcher from "@/components/i18n/LocaleSwitcher";
 import { PHONE } from "@/data/company-facts";
 import { T } from "@/components/redesign/tokens";
+import actions from "@/components/redesign/SalesActions.module.css";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // In-flow sticky navigation that contracts on scroll, with dropdowns and a menu panel.
@@ -258,7 +259,7 @@ export default function SiteNav() {
           <div className="flex shrink-0 items-center gap-1 min-[380px]:gap-2 xl:ml-auto">
             <button type="button" onClick={openQuote} className="cta-solid inline-flex min-h-11 items-center px-2 py-2 text-[12px] font-semibold sm:hidden" style={{ backgroundColor: INK, color: PAPER }} aria-label="Talk to the founders">Talk</button>
             <button type="button" onClick={openQuote} className="cta-solid hidden min-h-11 items-center px-4 py-2 text-[14px] font-semibold sm:inline-flex" style={{ backgroundColor: INK, color: PAPER }}>Talk to the founders</button>
-            <button type="button" aria-expanded={open} aria-controls="site-menu" aria-label="Open site menu" onClick={(event) => openMenu(event.currentTarget)} className={`press-feedback flex h-11 items-center gap-1 border border-[#1C1917] px-2 text-[13px] font-semibold text-[#1C1917] hover:bg-[#1C1917] hover:text-white focus-visible:bg-[#1C1917] focus-visible:text-white min-[380px]:gap-2 min-[380px]:px-3 ${scrolled ? "" : "xl:hidden"}`}><span>Menu</span><span aria-hidden="true">☰</span></button>
+            <button type="button" aria-expanded={open} aria-controls="site-menu" aria-label="Open site menu" onClick={(event) => openMenu(event.currentTarget)} className={`${actions.button} flex h-11 items-center gap-1 border border-charcoal px-2 text-[13px] font-semibold text-charcoal min-[380px]:gap-2 min-[380px]:px-3 ${scrolled ? "" : "xl:hidden"}`}><span>Menu</span><span aria-hidden="true">☰</span></button>
           </div>
         </div>
         <div id="nav-dropdown" ref={dropdownRef} inert={!activeDropdown || scrolled} data-lenis-prevent className={`absolute top-full z-[65] hidden max-h-[calc(100dvh-104px)] overflow-y-auto overscroll-contain border border-[#1C1917]/15 shadow-[0_24px_60px_-20px_rgba(28,25,23,.35)] transition-[opacity,transform,visibility] duration-200 motion-reduce:transition-none xl:grid ${activeDropdown === "Work" ? "rounded-xl p-2" : "p-4"} ${activeDropdown && !scrolled ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"}`} style={{ left: dropdownX, width: activeDropdown === "Work" ? 760 : activeDropdown === "Services" ? 500 : 300, maxWidth: "calc(100vw - 32px)", backgroundColor: "#F5F4F0", gridTemplateColumns: activeDropdown === "Services" ? "repeat(2,minmax(0,1fr))" : "1fr", gap: "0 22px" }}>

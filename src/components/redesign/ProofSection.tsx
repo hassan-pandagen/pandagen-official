@@ -1,3 +1,4 @@
+import actions from "./SalesActions.module.css";
 import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import Image from "next/image";
 import Link from "next/link";
@@ -100,8 +101,7 @@ export default function ProofSection() {
                   href={b.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="proof-btn inline-flex items-center gap-2 border px-4 py-2.5 text-[15px] font-medium"
-                  style={{ borderColor: T.ink, color: T.ink }}
+                  className={`${actions.button} inline-flex items-center gap-2 border border-charcoal px-4 py-2.5 text-[15px] font-medium text-charcoal`}
                 >
                   {b.label} <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                   <span className="sr-only"> (opens in a new tab)</span>
@@ -228,8 +228,6 @@ export default function ProofSection() {
       </div>
 
       <style>{`
-        .proof-btn { transition: background-color .25s ease, color .25s ease; }
-        .proof-btn:hover, .proof-btn:focus-visible { background-color: ${T.ink}; color: ${T.paper} !important; }
         .proof-records-link { transition: color .25s ease, border-color .25s ease; }
         .proof-records-link svg { transition: transform .25s ease; }
         .proof-records-link:hover, .proof-records-link:focus-visible { color: ${T.accentText} !important; border-color: currentColor; }

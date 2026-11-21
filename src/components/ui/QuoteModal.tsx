@@ -6,8 +6,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
 import { useSubmission } from "@/hooks/useSubmission";
 import { submitQuoteLead } from "@/lib/forms/submitQuoteLead";
-import { WRITTEN_CHECK_MARK } from "@/components/ui/WrittenCheckButton";
-import { takeQuotePrefill } from "@/lib/quotePrefill";
+import { takeQuotePrefill, type WrittenCheckPrefill } from "@/lib/quotePrefill";
 import { PHONE } from "@/data/company-facts";
 
 interface QuoteModalProps {
@@ -16,6 +15,8 @@ interface QuoteModalProps {
 }
 
 const GENERIC_ERROR = `We could not send your request. Please email info@pandacodegen.com or call ${PHONE.display}.`;
+const WRITTEN_CHECK_MARK = "FREE WRITTEN CHECK";
+const MESSAGE_LIMIT = 5000;
 
 export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   const prefersReducedMotion = useReducedMotion();
@@ -28,12 +29,11 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   const error = submission.error || null;
   const resetSubmission = submission.reset;
   const [fieldErrors, setFieldErrors] = useState<{ name?: string; email?: string }>({});
-  // Controlled so a surface that collected details before opening the modal --
-  // the homepage quiz -- can put them in front of the visitor to edit, rather
-  // than attaching anything to their enquiry that they cannot see.
+  // A message handed off by the website assistant remains editable.
   const [details, setDetails] = useState("");
-  // 21 Nov 2026: set when a "free written check" button opened the modal (WrittenCheckButton).
-  const [writtenCheck, setWrittenCheck] = useState(false);
+  const [writtenCheck, setWrittenCheck] = useState<WrittenCheckPrefill | null>(null);
+  const checklistSummary = writtenCheck?.checklistTopics.join(", ") ?? "";
+  const checklistLine = checklistSummary ? `Checklist: ${checklistSummary}` : "";
   const formLoadedAtRef = useRef(0);
   const formRef = useRef<HTMLFormElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -75,9 +75,9 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
       setFieldErrors({});
       formRef.current?.reset();
       // Consume once per opening, including React's development effect replay.
-      const prefill = takeQuotePrefill() ?? "";
-      setDetails(prefill);
-      setWrittenCheck(prefill.startsWith(WRITTEN_CHECK_MARK));
+      const prefill = takeQuotePrefill();
+      setDetails(typeof prefill === "string" ? prefill : "");
+      setWrittenCheck(typeof prefill === "string" ? null : prefill);
     }
     const previousOverflow = document.body.style.overflow;
     returnFocusRef.current = document.activeElement instanceof HTMLElement
@@ -175,6 +175,12 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
       submission.succeed(attempt);
       return;
     }
+    if (writtenCheck) {
+      const message = [WRITTEN_CHECK_MARK, checklistLine, details.trim()]
+        .filter(Boolean)
+        .join("\n\n");
+      formData.set("details", message);
+    }
     const controller = new AbortController();
     requestControllerRef.current = controller;
 
@@ -244,7 +250,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                       <CheckCircle2 className="h-10 w-10" />
                     </div>
                     <h2 id="quote-modal-title" className="mb-2 text-3xl font-bold text-charcoal">
-                      Message <span className="font-serif italic text-cognac">received.</span>
+                      {writtenCheck ? <>Thanks for <span className="font-serif italic text-cognac">reaching out.</span></> : <>Message <span className="font-serif italic text-cognac">received.</span></>}
                     </h2>
                     <p id="quote-modal-description" className="text-stone-700">
                       Hassan or Imran will reply by email, usually within one business day.
@@ -262,7 +268,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                       </h2>
                       <p id="quote-modal-description" className="mt-3 text-sm leading-6 text-stone-600">
                         {writtenCheck
-                          ? "Answer what you can below. Hassan and Imran send back a written list of what you do by hand today, what could run on its own, and what it would cost. Free, with no commitment."
+                          ? "We’ll take a look and get back to you to talk through what might help."
                           : "A new website, a change to an existing one, or a question. Your message goes directly to Hassan and Imran."}
                       </p>
                     </div>
@@ -309,16 +315,22 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                         </Field>
                       </div>
 
-                      <Field label="Your message" id="quote-details" hint="optional">
+                      {checklistSummary && (
+                        <p className="rounded-lg border border-stone-900/15 bg-stone-50 px-3 py-2.5 text-sm leading-6 text-stone-700">
+                          <strong className="text-charcoal">You selected</strong> {checklistSummary}.
+                        </p>
+                      )}
+
+                      <Field label={writtenCheck ? "Anything else you’d like to tell us?" : "Your message"} id="quote-details" hint="optional">
                         <textarea
                           id="quote-details"
                           name="details"
-                          maxLength={5000}
-                          rows={writtenCheck ? 7 : 2}
+                          maxLength={writtenCheck ? MESSAGE_LIMIT - WRITTEN_CHECK_MARK.length - checklistLine.length - 4 : MESSAGE_LIMIT}
+                          rows={2}
                           value={details}
                           onChange={(event) => setDetails(event.target.value)}
                           autoComplete="off"
-                          placeholder="What would you like to build, change or ask? A sentence is plenty."
+                          placeholder={writtenCheck ? undefined : "What would you like to build, change or ask? A sentence is plenty."}
                           className="max-h-72 min-h-[74px] w-full resize-y rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors [field-sizing:content] focus:border-cognac focus:ring-1 focus:ring-cognac"
                         />
                       </Field>
@@ -374,7 +386,9 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                         {isLoading ? "Sending…" : writtenCheck ? "Request my written check" : "Send your message"} <Send aria-hidden="true" className="h-4 w-4" />
                       </button>
                       <p className="text-center text-sm leading-6 text-stone-600">
-                        A founder replies, usually within one business day. Every message gets an answer, whether or not it turns into a quote.
+                        {writtenCheck
+                          ? "Hassan or Imran usually replies within one business day."
+                          : "A founder replies, usually within one business day. Every message gets an answer, whether or not it turns into a quote."}
                       </p>
                       <p className="text-center text-xs leading-5 text-stone-500">
                         We use your details to reply to your message. Read our <a href="/privacy" className="font-medium underline underline-offset-2 hover:text-cognac">privacy notice</a>. If you need to share files, we can arrange that by email.

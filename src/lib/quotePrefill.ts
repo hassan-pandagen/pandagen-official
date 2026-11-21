@@ -9,13 +9,16 @@
 //
 // Read once and cleared, so a later unrelated open does not resurrect an old
 // visitor's answers into a fresh form.
-let pending: string | null = null;
+export type WrittenCheckPrefill = { checklistTopics: readonly string[] };
+type QuotePrefill = string | WrittenCheckPrefill;
 
-export function setQuotePrefill(details: string): void {
-  pending = details;
+let pending: QuotePrefill | null = null;
+
+export function setQuotePrefill(prefill: QuotePrefill): void {
+  pending = prefill;
 }
 
-export function takeQuotePrefill(): string | null {
+export function takeQuotePrefill(): QuotePrefill | null {
   const value = pending;
   pending = null;
   return value;

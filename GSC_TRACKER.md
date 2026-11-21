@@ -2458,3 +2458,16 @@ migration, WooCommerce and ecommerce give numbers for the same class of work. A
 buyer comparing two of our own service pages sees a promise on one and a
 deferral on the other. Adding numbers is a new commercial promise rather than a
 consistency fix, so it stays with the owner.
+
+## 20 Nov 2026: merges and business-outcome pass (sitemap "Crawled - currently not indexed" went from 7 to 17)
+
+- 16 of the 17 were last crawled before the 13 Oct relaunch. Word overlap inside each group was only 5-17%, so no mass merge.
+- Merged (301 in next.config.js, unique sections and FAQs moved first):
+  - spending-more-on-ads-fewer-orders-tracking (6 impr, 3 months) -> fix-meta-ad-tracking-2026 (141, pos 5.9)
+  - wordpress-plugins-destroy-speed (57) -> how-to-fix-slow-wordpress (449)
+  - shopify-conversion-rate-speed-fix (53) -> shopify-slow-losing-sales (76)
+- fix-meta-ad-tracking-2026: new title, ASAM Google Ads section (adsFix, incl. the 559 homepage-view "conversions", approved by Imran 20 Nov), Google Ads section, "How we help".
+- why-competitor-outranks-you: new title, gap -> fix list, ASAM section (search evidence and bookings kept separate), "How we help".
+- Business-outcome sections added: shopify-store-speed-optimization, elementor-kills-seo, wix/webflow/shopify-vs-custom-website, website-rebuild-cost-2026, custom-website-5000-whats-included, build-vs-buy-software-2026-cost-comparison, wix-migration-cost, cheap-web-developer. Openings tightened on agentic-browsing-pagespeed-score and gohighlevel-keep-crm-replace-website.
+- ASAM ad spend line corrected to "about 27%" (Imran, 20 Nov).
+- Review on 11 Dec: posts recrawled after deploy and still not indexed are candidates to retire.

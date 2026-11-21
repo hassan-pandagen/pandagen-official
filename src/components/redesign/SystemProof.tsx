@@ -1,22 +1,22 @@
 import styles from "./SalesActions.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CalendarDays, GraduationCap, Mail, PanelsTopLeft, Plus } from "lucide-react";
 import { CLIENT_REVIEWS } from "@/data/reviews";
 import { BODY, DISPLAY, UI, T } from "@/components/redesign/tokens";
 
 // Owner-confirmed before/after facts; no unverified savings or growth claims.
 const CHANGES = [
-  { before: "Enquiry form, then an emailed payment link", after: "Students book and pay online", label: "Booking & payment" },
-  { before: "Nothing automatic", after: "Automatic emails with fees, dates and venue", label: "Student communication" },
-  { before: "Certificates made by hand", after: "Certificates issued from the staff portal", label: "Course completion" },
-  { before: "Plugin-based class schedule", after: "Classes, enrolment and payments in one portal", label: "Day-to-day operations" },
+  { before: "Enquiry form, then an emailed payment link", after: "Students book and pay online", label: "Booking & payment", icon: CalendarDays },
+  { before: "Nothing automatic", after: "Automatic emails with fees, dates and venue", label: "Student communication", icon: Mail },
+  { before: "Certificates made by hand", after: "Certificates issued from the staff portal", label: "Course completion", icon: GraduationCap },
+  { before: "Plugin-based class schedule", after: "Classes, enrolment and payments in one portal", label: "Day-to-day operations", icon: PanelsTopLeft },
 ];
 const review = CLIENT_REVIEWS.find((r) => r.id === "a-step-above-medical")!;
 
 export default function SystemProof() {
   return (
-    <section aria-labelledby="system-proof-title" className="px-6 pt-8 pb-16 md:px-10 md:pt-10 md:pb-24" style={{ backgroundColor: T.paper, color: T.ink }}>
+    <section aria-labelledby="system-proof-title" className="px-6 pb-5 pt-8 md:px-10 md:pb-6 md:pt-10" style={{ backgroundColor: T.paper, color: T.ink }}>
       <div className="mx-auto max-w-[1440px]">
         <div className="mb-10 grid gap-6 lg:grid-cols-12 lg:items-end lg:gap-12">
           <div className="lg:col-span-8">
@@ -36,7 +36,12 @@ export default function SystemProof() {
                 <span>A Step Above Medical</span><span className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-emerald-700" />Live client project</span>
               </div>
               <Image src="/work/a-step-above-medical-preview-homepage.png" alt="A Step Above Medical website showing medical courses, upcoming classes and online seat reservations" width={1912} height={914} sizes="(min-width: 1024px) 48vw, 100vw" className="h-auto w-full" />
-              <p className="px-2 pt-3 pb-1 text-xs leading-relaxed" style={{ fontFamily: UI, color: T.quiet }}>Screenshot captured before launch; project now live.</p>
+              <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-2 pb-1 pt-3" style={{ fontFamily: UI }}>
+                <p className="text-xs leading-relaxed" style={{ color: T.quiet }}>Screenshot captured before launch; project now live.</p>
+                <span className="inline-flex min-h-9 items-center gap-2 text-sm font-semibold" style={{ color: T.accentText }}>
+                  View case study <ArrowUpRight size={16} aria-hidden="true" />
+                </span>
+              </div>
             </Link>
             {/* 21 Nov 2026, Imran: Dillon's 6x is approved in his exact words, without
                 "revenue" or dollar amounts, beside 7 to 37 with the ads note. The counts and
@@ -64,26 +69,45 @@ export default function SystemProof() {
               </figcaption>
             </figure>
           </div>
-          <ol className="border-t" style={{ borderColor: T.rule }}>
-            {CHANGES.map(({ before, after, label }, index) => (
-              <li key={label} className="grid grid-cols-[2rem_1fr] gap-3 border-b py-5 md:gap-5 md:py-6" style={{ borderColor: T.rule }}>
-                <span className="pt-1 text-xs" style={{ fontFamily: UI, color: T.accentText }}>0{index + 1}</span>
-                <div>
-                  <p className="mb-2 text-[11px] uppercase tracking-[0.13em]" style={{ fontFamily: UI, color: T.quiet }}>{label}</p>
-                  <h3 className="flex items-start gap-3 text-xl font-semibold leading-snug md:text-[23px]" style={{ fontFamily: UI }}><Check className="mt-1 h-5 w-5 shrink-0" style={{ color: T.accentText }} aria-hidden="true" />{after}</h3>
-                  <p className="mt-2 pl-8 text-[15px] leading-relaxed" style={{ color: T.quiet }}>Before: {before.charAt(0).toLowerCase() + before.slice(1)}.</p>
+          <div className="min-w-0">
+            <ul className="space-y-3">
+              {CHANGES.map(({ before, after, label, icon: Icon }, index) => (
+                <li key={label}>
+                  <details open={index === 0} className="group border" style={{ borderColor: T.rule, backgroundColor: T.paperHi }}>
+                    <summary className="grid cursor-pointer list-none grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 p-4 hover:bg-black/[0.025] focus-visible:outline-2 focus-visible:outline-offset-2 sm:gap-4 sm:p-5 [&::-webkit-details-marker]:hidden"
+                      style={{ outlineColor: T.accent, fontFamily: UI }}>
+                      <span className="flex h-10 w-10 items-center justify-center border sm:h-11 sm:w-11" style={{ color: T.accentText, borderColor: T.rule }}>
+                        <Icon size={21} strokeWidth={1.75} aria-hidden="true" />
+                      </span>
+                      <span>
+                        <span className="mb-1 block text-[11px] uppercase tracking-[0.13em]" style={{ color: T.quiet }}>{label}</span>
+                        <span className="block text-[17px] font-semibold leading-snug sm:text-[20px]">{after}</span>
+                      </span>
+                      <Plus className="h-[18px] w-[18px] group-open:rotate-45 motion-safe:transition-transform" style={{ color: T.accentText }} aria-hidden="true" />
+                    </summary>
+                    <p className="border-t px-4 py-3 text-[15px] leading-relaxed sm:px-5" style={{ color: T.body, borderColor: T.rule }}>
+                      <strong style={{ fontFamily: UI }}>Before</strong> <span className="mx-1" aria-hidden="true">&middot;</span> {before}.
+                    </p>
+                  </details>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 border-t pt-5" style={{ borderColor: T.rule }}>
+              <p className="max-w-[32rem] text-xl leading-snug md:text-2xl" style={{ fontFamily: BODY }}>What could your website take off your team&rsquo;s hands?</p>
+              <div className="mt-4 text-sm font-semibold" style={{ fontFamily: UI }}>
+                <Link href="/contact" className={`${styles.button} ${styles.solid} inline-flex min-h-12 max-w-full items-center justify-between gap-3 px-5 py-3`}>
+                  Let&rsquo;s talk about your business<ArrowRight size={18} className="shrink-0" aria-hidden="true" />
+                </Link>
+                <div className="mt-1 flex flex-wrap gap-x-5">
+                  <Link href="/work/a-step-above-medical" className={`${styles.link} inline-flex min-h-11 items-center gap-2 underline underline-offset-4`}>
+                    See how we built it<ArrowRight size={16} className="shrink-0" aria-hidden="true" />
+                  </Link>
+                  <Link href="/services/training-business-websites" className={`${styles.link} inline-flex min-h-11 items-center gap-2 underline underline-offset-4`}>
+                    Websites for training businesses<ArrowRight size={16} className="shrink-0" aria-hidden="true" />
+                  </Link>
                 </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-        <div className="mt-10 flex flex-col justify-between gap-5 border-t pt-7 md:flex-row md:items-center" style={{ borderColor: T.rule }}>
-          <p className="max-w-[32rem] text-xl leading-snug md:text-2xl" style={{ fontFamily: BODY }}>What could your website take off your team&rsquo;s hands?</p>
-          <div className="flex flex-wrap items-center gap-6 text-sm font-semibold" style={{ fontFamily: UI }}>
-            <Link href="/work/a-step-above-medical" className={`${styles.link} inline-flex min-h-12 items-center gap-3 underline underline-offset-4`}>See how we built it<ArrowRight size={18} aria-hidden="true" /></Link>
-            {/* 18 Nov 2026, dev handoff item 2: one homepage link to the training service. */}
-            <Link href="/services/training-business-websites" className={`${styles.link} inline-flex min-h-12 items-center gap-3 underline underline-offset-4`}>Websites for training businesses<ArrowRight size={18} aria-hidden="true" /></Link>
-            <Link href="/contact" className={`${styles.button} ${styles.solid} inline-flex min-h-12 items-center justify-between gap-6 px-6 py-3`}>Let&rsquo;s talk about your business<ArrowRight size={18} aria-hidden="true" /></Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

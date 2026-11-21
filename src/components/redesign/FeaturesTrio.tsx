@@ -1,33 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
 import WrittenCheckButton from "@/components/ui/WrittenCheckButton";
 import { ArrowRight } from "lucide-react";
-import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
-
-// Homepage automation examples: customer questions with concrete trigger/result
-// pairs. The service FAQ shares the same copy for fuller scoping answers.
-//
-// 21 Nov 2026, Imran's decisions: on the homepage the four feature cards become the
-// owner's checklist (founder brief, business-checklist-v2.md). Each line is a problem
-// the owner can check in their own week, so the section makes no claim about other
-// businesses. businessFeatures stays as the service FAQ's source; only this section
-// stops rendering it. Review requests stay off the list until a client has them live.
-const CHECKLIST = [
-  { problem: "Customers call or text to ask if you're free on Tuesday.", answer: "They see live times, then book and pay on your site, day or night." },
-  { problem: "You chase deposits and payments.", answer: "Payment is taken when they book, and the receipt goes out on its own." },
-  { problem: "People forget, don't show up, or ask what to bring.", answer: "Confirmations, reminders and follow-ups send themselves, with the date, the venue and what to bring." },
-  { problem: "You type the same emails every week.", answer: "Welcome, reminder, certificate and thank-you messages are written once and sent automatically." },
-  { problem: "Ask ChatGPT who's the best in your field in your city. Did it name you?", answer: "Every build is set up so ChatGPT and Google's AI can read and quote your answers." },
-  { problem: "You copy payments into your books by hand.", answer: "Payments sync to QuickBooks." },
-  { problem: "Changing your website means waiting for a developer.", answer: "You edit your own pages, and your accounts are in your name." },
-  // 21 Nov 2026: the migration line, after the 58-buyer test (migration buyers asked how links and rankings are protected).
-  { problem: "Your site is slow or breaks after updates, and moving it feels risky.", answer: "We move it off WordPress, Wix, Squarespace or Shopify with a redirect for every old URL, so your pages, posts and links keep working." },
-];
+import WebsiteChecklist from "./WebsiteChecklist";
+import actions from "./SalesActions.module.css";
+import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 export default function FeaturesTrio() {
   return (
     <section aria-labelledby="features-title" className="px-6 pb-6 pt-10 md:px-10 md:py-20" style={{ backgroundColor: T.paperHi }}>
       <div className="mx-auto max-w-[1440px]">
-        <div className="grid gap-6 lg:grid-cols-12 lg:gap-10">
+        <WebsiteChecklist>
           <div className="lg:col-span-7">
             <p className="mb-5 text-[12px] uppercase tracking-[0.16em]" style={{ fontFamily: MONO, color: T.accentText }}>
               A quick check
@@ -40,84 +23,63 @@ export default function FeaturesTrio() {
               Is your website costing you customers?
             </h2>
           </div>
-          <p className="max-w-[34rem] self-end text-[17px] leading-[1.6] lg:col-span-5" style={{ color: T.body }}>
-            Count how many of these happen in your business. Two or more is time and customers your website could be saving you.
-          </p>
-        </div>
+        </WebsiteChecklist>
 
-        <ol className="feature-grid mt-6 grid gap-4 md:mt-12 md:grid-cols-2 md:gap-0 md:border-t lg:grid-cols-4" style={{ borderColor: T.rule }}>
-          {CHECKLIST.map((c, i) => (
-            <li
-              key={c.problem}
-              className="feature-col relative flex min-w-0 flex-col border-b px-5 py-6 md:border-l md:px-7 md:pb-10 md:pt-8 md:first:border-l-0 lg:pb-12 lg:pt-10"
-              style={{ borderColor: T.rule }}
-            >
-              <span className="feature-num" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.accent, fontSize: "2.8rem", lineHeight: 1 }}>
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="mt-5" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.3rem", lineHeight: 1.3, textWrap: "pretty" }}>
-                {c.problem}
-              </h3>
-              <p className="mt-3 text-[16px] leading-[1.6]" style={{ color: T.body }}>
-                <strong style={{ fontFamily: MONO, color: T.ink }}>What we build:</strong> {c.answer}
-              </p>
-            </li>
-          ))}
-        </ol>
-
-        {/* 14 Nov 2026: the A Step Above Medical card moved to SystemProof, directly
-            above this section on the homepage. */}
-        <div className="mt-8 border-t pt-6" style={{ borderColor: T.rule }}>
-          <div className="max-w-[44rem]">
-            <p className="text-[14px] font-semibold" style={{ color: T.accentText }}>Panda Patches / Founder-affiliated</p>
-            <p className="mt-2 text-[16px] leading-[1.65]" style={{ color: T.body }}>
-              Wholesale orders become invoices and payment links. The connected CRM tracks production, payments and delivery follow-up.
+        <div className="mt-6 grid gap-4 sm:mt-8 xl:grid-cols-[1.12fr_1fr]">
+          <div
+            data-feature-costs
+            className="flex flex-col justify-center border-t-4 px-6 py-8 sm:px-10 sm:py-10 lg:px-12"
+            style={{ backgroundColor: T.dark, borderColor: T.onDarkAccent, color: T.onDark }}
+          >
+            <h3 className="text-[clamp(2rem,4vw,3.75rem)] font-bold leading-[1.08] [text-wrap:balance]" style={{ fontFamily: DISPLAY }}>
+              See what your website could automate.
+            </h3>
+            <p className="mt-4 max-w-[36rem] text-[17px] leading-relaxed sm:text-[19px]" style={{ color: T.onDarkQuiet }}>
+              Get a free written check that shows which tasks could run on their own and what it would cost to set them up. No commitment.
             </p>
-            <Link href="/work/enterprise-ops" className="mt-3 inline-flex min-h-11 items-center gap-2 text-[15px] font-semibold underline underline-offset-4" style={{ color: T.accentText }}>
-              See these workflows in Panda Patches <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
+            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 sm:mt-8" style={{ fontFamily: MONO }}>
+              <WrittenCheckButton
+                location="home_checklist"
+                className={`${actions.button} ${actions.light} inline-flex min-h-12 items-center gap-3 px-5 py-3 text-left text-[15px] font-semibold`}
+              >
+                Get your free written check <ArrowRight className="h-4 w-4 shrink-0" strokeWidth={1.8} aria-hidden="true" />
+              </WrittenCheckButton>
+              <Link
+                href="/services/custom-engineering"
+                className={`${actions.link} ${actions.darkLink} inline-flex min-h-11 items-center text-[14px] font-medium underline underline-offset-4`}
+              >
+                Explore workflow automation
+              </Link>
+            </div>
           </div>
-        </div>
 
-        <div data-feature-costs className="mt-6 grid gap-6 md:mt-12 md:grid-cols-12 md:gap-8 md:pt-8">
-          <p className="max-w-[46rem] text-[16px] leading-[1.7] md:col-span-8" style={{ color: T.body }}>
-            Our free written check goes through each line for your business: what you do by hand today, what could run on its own, and what it would cost. No commitment.
-          </p>
-          <div className="flex flex-col items-start gap-4 md:col-span-4 md:items-end">
-            <WrittenCheckButton location="home_checklist" className="cta-solid inline-flex items-center gap-2 px-6 py-3.5 text-[15px] font-medium bg-[#1C1917] text-[#EBE9E4]">
-              Get your free written check <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </WrittenCheckButton>
-            <Link href="/services/custom-engineering" className="text-[15px] font-medium" style={{ color: T.ink }}>
-              Explore custom workflow automation
-            </Link>
-          </div>
+          <article className="grid min-w-0 gap-4 border p-5 sm:grid-cols-2 sm:items-center sm:p-6 xl:grid-cols-[1.12fr_1fr]" style={{ backgroundColor: T.paper, borderColor: T.rule }}>
+            <Image
+              src="/work/enterprise-ops.png"
+              alt="Panda Patches dashboard showing orders and the production queue, with private details blurred"
+              width={1711}
+              height={919}
+              sizes="(min-width: 1280px) 340px, (min-width: 640px) 45vw, 100vw"
+              className="h-auto w-full border"
+              style={{ borderColor: T.rule }}
+            />
+            <div className="min-w-0">
+              <p className="text-xs font-semibold tracking-[0.1em] uppercase" style={{ fontFamily: MONO, color: T.accentText }}>Founder-affiliated</p>
+              <h3 className="mt-2 text-2xl font-bold leading-tight" style={{ color: T.ink }}>Panda Patches CRM</h3>
+              <p className="mt-2 text-[16px] leading-relaxed" style={{ color: T.body }}>
+                Wholesale orders become invoices and payment links. The CRM tracks production, payments and delivery follow-up.
+              </p>
+              <Link
+                href="/work/enterprise-ops"
+                className={`${actions.link} mt-2 inline-flex min-h-11 items-center gap-2 text-[15px] font-semibold underline underline-offset-4`}
+                style={{ fontFamily: MONO }}
+              >
+                See how Panda Patches works <ArrowRight className="h-4 w-4 shrink-0" strokeWidth={1.8} aria-hidden="true" />
+              </Link>
+            </div>
+          </article>
         </div>
       </div>
-
-      <style>{`
-        .feature-col { transition: background-color .3s ease, box-shadow .3s ease, transform .3s ease; }
-        .feature-col:hover, .feature-col:focus-within {
-          background-color: #fff;
-          box-shadow: inset 0 4px 0 ${T.accent}, 0 18px 25px rgba(28,25,23,.1);
-          transform: translateY(-4px);
-        }
-        .feature-num { transition: color .3s ease; }
-        .feature-col:hover .feature-num, .feature-col:focus-within .feature-num { color: ${T.ink}; }
-        .cta-solid { transition: background-color .3s ease, color .3s ease; }
-        .cta-solid:hover, .cta-solid:focus-visible { background-color: ${T.accent} !important; color: #FFFFFF !important; }
-        @media (max-width: 767px) {
-          /* 22 Nov 2026: on a phone the checklist reads as a list, not tall cards. */
-          .feature-grid { gap: 8px !important; }
-          .feature-col { background-color: #fff; border-top: 3px solid ${T.accent}; padding: 14px 16px !important; }
-          .feature-col h3 { margin-top: 6px !important; font-size: 1.1rem !important; }
-          .feature-col p { margin-top: 6px !important; font-size: 15px !important; }
-          .feature-num { font-size: 1.25rem !important; }
-        }
-        @media (hover: none), (pointer: coarse) {
-          .feature-col:hover { transform: none; box-shadow: none; }
-        }
-        @media (prefers-reduced-motion: reduce) { .feature-col, .feature-num, .cta-solid { transition: none; } .feature-col:hover, .feature-col:focus-within { transform: none; } }
-      `}</style>
     </section>
   );
 }

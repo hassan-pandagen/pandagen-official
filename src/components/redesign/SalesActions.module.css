@@ -1,6 +1,6 @@
 .button {
   cursor: pointer;
-  transition: background-color 180ms ease, color 180ms ease, box-shadow 180ms ease, scale 150ms ease-out;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, scale 150ms ease-out;
 }
 
 .solid {
@@ -11,6 +11,11 @@
 .light {
   background-color: #f5f4f0;
   color: #1c1917;
+}
+
+.light,
+.onDark {
+  --sales-button-focus: var(--color-cognac-light);
 }
 
 .button svg,
@@ -33,7 +38,8 @@
 
 @media (hover: hover) {
   .button:hover {
-    background-color: #ad3d0b;
+    background-color: var(--color-cognac);
+    border-color: var(--color-cognac);
     color: #fff;
     box-shadow: 0 4px 14px rgb(0 0 0 / 14%);
   }
@@ -58,7 +64,14 @@
   }
 }
 
-.button:focus-visible,
+.button:focus-visible {
+  background-color: var(--color-cognac);
+  border-color: var(--color-cognac);
+  color: #fff;
+  outline: 2px solid var(--sales-button-focus, var(--color-cognac));
+  outline-offset: 4px;
+}
+
 .link:focus-visible,
 .preview:focus-visible {
   outline: 2px solid currentColor;
@@ -67,6 +80,7 @@
 
 .button:active {
   background-color: #7a2e0e;
+  border-color: #7a2e0e;
   color: #fff;
   box-shadow: none;
 }

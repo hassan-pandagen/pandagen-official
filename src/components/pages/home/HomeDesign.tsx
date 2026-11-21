@@ -3,8 +3,8 @@ import PriceAmount from "@/components/redesign/PriceAmount";
 import Image from "next/image";
 import Link from "next/link";
 import PreviewShell from "@/components/redesign/PreviewShell";
-import CalModalButton from "@/components/ui/CalModalButton";
 import { CAL_BOOKING_URL } from "@/lib/booking";
+import actions from "@/components/redesign/SalesActions.module.css";
 import SystemProof from "@/components/redesign/SystemProof";
 import BusinessSummary from "@/components/redesign/BusinessSummary";
 import { monthly, monthlyAiAverage } from "@/data/ai-referral-facts";
@@ -115,16 +115,16 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
                 >
                   Get your free written check
                 </WrittenCheckButton>
-                <CalModalButton
-                  fallbackHref={CAL_BOOKING_URL}
-                  className="press-feedback inline-flex items-center justify-center gap-3 border border-[#1C1917] px-6 py-4 text-[16px] font-medium"
+                <a
+                  href={CAL_BOOKING_URL}
+                  className={`${actions.button} press-feedback inline-flex items-center justify-center gap-3 border border-charcoal px-6 py-4 text-[16px] font-medium text-charcoal`}
                 >
                   <span className="flex -space-x-2" aria-hidden="true">
                     <Image src="/team/hassan.png" alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-full object-cover ring-2 ring-[#EBE9E4]" />
                     <Image src="/team/imran-editorial.png" alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-full object-cover ring-2 ring-[#EBE9E4]" />
                   </span>
-                  <span style={{ color: INK }}>Book a 15-minute call</span>
-                </CalModalButton>
+                  Book a 15-minute call
+                </a>
               </div>
               <p className="mt-4 text-[15px]">
                 <Link href="/work/a-step-above-medical" className="font-medium underline underline-offset-4" style={{ color: INK }}>
