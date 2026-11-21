@@ -13,7 +13,8 @@ import PaperShader from "@/components/visual/PaperShader";
 import WorkIndex from "@/components/redesign/WorkIndex";
 import WorkCard from "@/components/redesign/WorkCard";
 import HowWeWork from "@/components/redesign/HowWeWork";
-import ServicesStack from "@/components/redesign/ServicesStack";
+import ServicesGroups from "@/components/redesign/ServicesGroups";
+import WrittenCheckButton from "@/components/ui/WrittenCheckButton";
 import ProofSection from "@/components/redesign/ProofSection";
 import FeaturesTrio from "@/components/redesign/FeaturesTrio";
 import PricingFinder from "@/components/redesign/PricingFinder";
@@ -106,12 +107,14 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
                 {HOME_INTRO}
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Link
-                  href="/work/a-step-above-medical"
+                {/* 22 Nov 2026, journey review: the free written check is the main step for every
+                    kind of buyer; the training system stays one click away as a text link below. */}
+                <WrittenCheckButton
+                  location="home_hero"
                   className="cta-solid inline-flex items-center justify-center gap-3 bg-[#1C1917] px-6 py-4 text-[16px] font-medium text-white"
                 >
-                  See the training system
-                </Link>
+                  Get your free written check
+                </WrittenCheckButton>
                 <CalModalButton
                   fallbackHref={CAL_BOOKING_URL}
                   className="press-feedback inline-flex items-center justify-center gap-3 border border-[#1C1917] px-6 py-4 text-[16px] font-medium"
@@ -123,6 +126,11 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
                   <span style={{ color: INK }}>Book a 15-minute call</span>
                 </CalModalButton>
               </div>
+              <p className="mt-4 text-[15px]">
+                <Link href="/work/a-step-above-medical" className="font-medium underline underline-offset-4" style={{ color: INK }}>
+                  See the training system we built
+                </Link>
+              </p>
               <p className="mt-6 text-[14px]" style={{ color: QUIET }}>
                 Fixed price in writing · Pay 30 / 40 / 30 · US Eastern hours · No mandatory retainer
               </p>
@@ -161,6 +169,9 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
           (a short version is the "How it runs" row in HowWeWork). QuotedIn moved down
           to sit with the proof. */}
       <SystemProof />
+      {/* 22 Nov 2026, journey review: services moved from screen 14 to third, as one compact
+          block; reviews moved up to follow the checklist. */}
+      <ServicesGroups />
       {/* Answer-first summary; it must stay in the first 30% of the page for
           extraction, so it sits straight after the A Step Above proof. Wording updated
           14 Nov 2026 to match the new lead. */}
@@ -168,12 +179,11 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
       {/* 26 Oct 2026, owner-approved wording. "Services you hire us to deliver" keeps the
           promise to the scope bought: it doesn't say every plan covers every service. */}
       <FeaturesTrio />
-      <HowWeWork />
-      <PricingFinder />
       <ProofSection />
+      <PricingFinder />
+      <HowWeWork />
       <WorkIndex />
       <FoundersDark />
-      <ServicesStack />
       <FaqOpen />
     </PreviewShell>
   );

@@ -51,22 +51,24 @@ const rows = [
 
 export default function HowWeWork() {
   return (
-    <section aria-labelledby="how-title" className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
+    <section aria-labelledby="how-title" className="px-6 py-10 md:px-10 md:py-14" style={{ backgroundColor: T.dark, color: T.onDark }}>
       <div className="mx-auto max-w-[1440px]">
         <p className="text-[12px] uppercase tracking-[0.16em]" style={{ fontFamily: MONO, color: T.onDarkQuiet }}>
           How we work with you
         </p>
-        <h2 id="how-title" className="mt-5 max-w-[18ch]" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2.6rem, 5.4vw, 5.2rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}>
+        <h2 id="how-title" className="mt-5 max-w-[18ch]" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2rem, 3.6vw, 3.6rem)", lineHeight: 1, letterSpacing: "-0.02em" }}>
           The terms, <HeadingEmphasis text="before we build." onDark />
         </h2>
-        <ul className="how-list mt-8 border-t md:mt-10" style={{ borderColor: T.onDarkRule }}>
+        {/* 22 Nov 2026, journey review: two columns and smaller type took this from about
+            2.4 screens to about one; the terms themselves are unchanged. */}
+        <ul className="how-list mt-8 grid border-t md:mt-10 md:grid-cols-2 md:gap-x-12" style={{ borderColor: T.onDarkRule }}>
           {rows.map(({ label, Icon, text }) => (
-            <li key={label} className="how-row grid items-start gap-3 border-b py-6 last:border-b-0 last:pb-0 md:grid-cols-12 md:gap-8 md:py-10 md:last:pb-10" style={{ borderColor: T.onDarkRule }}>
-              <span className="md:col-span-4 md:text-right" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.6rem, 2.6vw, 2.4rem)", lineHeight: 1.1 }}>
-                {label}
+            <li key={label} className="how-row flex items-start gap-4 border-b py-4 md:py-5" style={{ borderColor: T.onDarkRule }}>
+              <Icon className="mt-1 h-5 w-5 shrink-0" aria-hidden="true" strokeWidth={1.5} />
+              <span>
+                <span className="block text-[19px] font-semibold md:text-[21px]">{label}</span>
+                <span className="mt-1 block max-w-[38rem] text-[16px] leading-[1.55] md:text-[17px]">{text}</span>
               </span>
-              <Icon className="hidden h-7 w-7 justify-self-center md:col-span-1 md:mt-1.5 md:block" aria-hidden="true" strokeWidth={1.5} />
-              <span className="max-w-[40rem] text-[20px] leading-[1.45] md:col-span-7 md:text-[26px]">{text}</span>
             </li>
           ))}
         </ul>

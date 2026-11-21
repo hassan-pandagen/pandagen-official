@@ -106,8 +106,12 @@ export default function FeaturesTrio() {
         .cta-solid { transition: background-color .3s ease, color .3s ease; }
         .cta-solid:hover, .cta-solid:focus-visible { background-color: ${T.accent} !important; color: #FFFFFF !important; }
         @media (max-width: 767px) {
-          .feature-col { background-color: #fff; border-top: 3px solid ${T.accent}; }
-          .feature-num { font-size: 2rem !important; }
+          /* 22 Nov 2026: on a phone the checklist reads as a list, not tall cards. */
+          .feature-grid { gap: 8px !important; }
+          .feature-col { background-color: #fff; border-top: 3px solid ${T.accent}; padding: 14px 16px !important; }
+          .feature-col h3 { margin-top: 6px !important; font-size: 1.1rem !important; }
+          .feature-col p { margin-top: 6px !important; font-size: 15px !important; }
+          .feature-num { font-size: 1.25rem !important; }
         }
         @media (hover: none), (pointer: coarse) {
           .feature-col:hover { transform: none; box-shadow: none; }
