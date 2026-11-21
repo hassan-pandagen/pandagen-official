@@ -35,7 +35,7 @@ const PLANS = [
     name: "Website + business system",
     price: "$10,000",
     unit: "",
-    body: "The website, a client portal, and the backend that runs your bookings, payments, reminders, follow-ups and accounting sync, built around how you work. Every build includes the AI-search setup, so ChatGPT and Google's AI can read and quote your answers. Starts with a free written check. Pay 30 / 40 / 30. The full package is usually $12,000; we reach $10,000 by leaving out parts you don't need, such as the client portal or the accounting sync.",
+    body: "The website, a client portal, and the backend that runs your bookings, payments, reminders, follow-ups and accounting sync, built around how you work. Every build includes the AI-search setup, so ChatGPT and Google's AI can read and quote your answers. Starts with a free written check. Pay 30 / 40 / 30. The full package is usually $12,000; we reach $10,000 by leaving out parts you don't need, such as the client portal or the accounting sync. To go through the full scope for your business, book a free 15-minute call.",
   },
   { name: "Website Care & SEO Plan", price: "$500", unit: " a month", body: "Hosting, maintenance, fixes, support, 2 developer hours, 4 blog posts a month and on-page SEO, and keeping your AI-search setup current. You approve every post before it goes live." },
   { name: "SEO + Google Ads Plan", price: "$1,300", unit: " a month", body: "Everything in Care & SEO, plus Google Ads management. We send a plain write-up before changing anything, and you approve every change. Ad spend is paid to Google directly." },

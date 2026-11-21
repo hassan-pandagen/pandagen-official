@@ -6,6 +6,7 @@ import PriceAmount from "@/components/redesign/PriceAmount";
 import Link from "next/link";
 import ServiceSearchFoundations from "../ServiceSearchFoundations";
 import AsamServiceEvidence from "../AsamServiceEvidence";
+import ServicePackage from "../ServicePackage";
 import ServiceHeroActions from "../ServiceHeroActions";
 import ServicePreviewEnlarge from "../ServicePreviewEnlarge";
 import type { ReactNode } from "react";
@@ -152,6 +153,8 @@ export function WordPressMigrationPreview() {
     </div></section>
 
     {/* 4 Oct 2026: what moves off WordPress and what you keep from our build. */}
+    <ServicePackage />
+
     <OwnershipCompare platforms={SERVICE_PORTABILITY["wordpress-migration"]} serviceSlug="wordpress-migration" number="06" alt={false} />
 
     <section id="questions" className={`${s.section} ${s.sectionAlt}`}><div className={s.wrap}>

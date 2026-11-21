@@ -3,6 +3,7 @@ import Image from "next/image";
 import SearchConsoleChartPreview from "./SearchConsoleChartPreview";
 import GoogleAiVisibilityProof from "./GoogleAiVisibilityProof";
 import AsamServiceEvidence from "./AsamServiceEvidence";
+import ServicePackage from "./ServicePackage";
 import ServiceSearchFoundations from "./ServiceSearchFoundations";
 import ServiceHeroActions from "./ServiceHeroActions";
 import ServicePreviewEnlarge from "./ServicePreviewEnlarge";
@@ -126,6 +127,8 @@ export default function ServiceDetailPreview({ service }: { service: ServicePrev
       <div className={v.scopeNotes}>{service.scopeNotes.map(([title, body]) => <div key={title}><b>{title}</b><p>{body}</p></div>)}</div>
       {service.costs && <div className={v.runCosts}><div><p className={`${s.eyebrow} ${v.eyebrow}`}>After launch</p><h3 className={v.runTitle}><HeadingEmphasis text={service.costs.title} onDark /></h3><p className={v.runIntro}>The build is a one-off. These are the bills that continue, so add them up before you compare quotes.</p></div><div><div className={v.runList}>{service.costs.lines.map(([label, detail]) => <div key={label}><p>{label}</p><span>{detail}</span></div>)}</div>{service.costs.note && <p className={v.runNote}>{service.costs.note}</p>}{service.costs.links && <div className={v.runLinks}>{service.costs.links.map((link) => <Link key={link.href} href={link.href} className={v.darkLink}>{link.label} ↗</Link>)}</div>}</div></div>}
     </div></section>
+
+    <ServicePackage />
 
     {keeps && <OwnershipCompare platforms={keeps} serviceSlug={service.slug} number="06" />}
 
