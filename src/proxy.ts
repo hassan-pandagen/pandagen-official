@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { MARKDOWN_PATHS } from "@/data/markdown-paths";
 
 function prefersMarkdown(accept: string): boolean {
     const weights = new Map<string, number>();
@@ -19,12 +20,26 @@ function prefersMarkdown(accept: string): boolean {
 }
 
 export async function proxy(request: NextRequest) {
-    const homepage = request.nextUrl.pathname === "/";
-    const serveMarkdown = homepage
-        && (request.method === "GET" || request.method === "HEAD")
+    const path = request.nextUrl.pathname;
+    const homepage = path === "/";
+    const wantsMarkdown = (request.method === "GET" || request.method === "HEAD")
         && !request.headers.has("rsc")
         && prefersMarkdown(request.headers.get("accept") ?? "");
-    const response = serveMarkdown
+    const serveMarkdown = homepage && wantsMarkdown;
+    // Service pages and buyer-intent guides: answer with markdown built from the page data (same URL).
+    const pageMarkdown = !homepage && wantsMarkdown && MARKDOWN_PATHS.has(path)
+        ? (await import("@/lib/markdown-pages")).markdownFor(path)
+        : null;
+    const response = pageMarkdown
+        ? new NextResponse(request.method === "HEAD" ? null : pageMarkdown, {
+            headers: {
+                "Content-Type": "text/markdown; charset=utf-8",
+                "Cache-Control": "no-store",
+                "Vary": "Accept",
+                "Link": '<https://www.pandacodegen.com/llms.txt>; rel="alternate"; type="text/plain"; title="LLM-friendly content index"',
+            },
+        })
+        : serveMarkdown
         ? new NextResponse(request.method === "HEAD" ? null : (await import("@/data/home-content")).HOME_MARKDOWN, {
             headers: {
                 "Content-Type": "text/markdown; charset=utf-8",
