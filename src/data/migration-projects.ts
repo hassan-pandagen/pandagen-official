@@ -55,7 +55,14 @@ export const MIGRATION_PROJECT_DETAILS = {
     firstMonthResult: "From 20 September to 19 October, the 30 days before launch, 7 bookings came through the old website. From 20 October to 18 November, the first 30 days on the new system, students made 37 bookings online, the portal sent 170 automated student emails, and 9 certificates went out after an administrator approved each student's completion. Both counts include website bookings only, not bookings taken by phone or added by staff.",
     // 19 Nov 2026: Google Ads account, same two windows: spend rose about 27% (amounts not
     // published). The monthly budget setting stayed the same; actual spend did not.
-    adBudgetNote: "Google Ads spend rose about 25% between the two periods.",
+    // 20 Nov 2026: Imran confirmed 27% (the published line had said "about 25%").
+    adBudgetNote: "Google Ads spend rose about 27% between the two periods.",
+    // 20 Nov 2026: moved here from the case study (Design.tsx) so blog posts can quote it
+    // without retyping. Source: Imran's Google Ads audit, 19 Nov 2026. The 559 homepage-view
+    // "conversions" in the month before launch were approved for publication by Imran on
+    // 20 Nov. Google credits 4 first-month bookings directly to ads, so no surface may tie
+    // the ads to the 37 bookings.
+    adsFix: "The old campaigns bid for conversions, but the only conversion they counted was a view of the homepage: 559 in the month before launch, and none of them was a booking. So Google bought the cheapest homepage visits it could find. Registrations, form fills and calls weren't measured at all. Their Performance Max campaign targeted the whole United States across Google's display and video network, for a school that teaches in a handful of cities. We replaced them with three search campaigns, for phlebotomy classes, IV therapy classes and the school's own name, each targeting a 40-mile radius around the cities where it teaches, with keywords people type when looking for a class, such as \"phlebotomy classes near me\" and \"iv therapy course\". Each paid registration is now sent to Google Ads from the server, by the same Supabase backend that runs the bookings, so the tracking doesn't depend on the visitor's browser and refunds are adjusted automatically. The old campaigns ran for part of the first month before they were paused.",
   },
 } as const;
 
