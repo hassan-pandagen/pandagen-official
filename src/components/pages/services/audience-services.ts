@@ -42,7 +42,7 @@ export const audienceServices: ServicePreview[] = [
   {
     slug: "small-business-website-design", name: "Small business websites", category: "Small business website design",
     title: "Small business website design.", accent: "Built with the founders.",
-    lead: `Website design for small businesses that want a site they can edit, at a price agreed before work starts. Choose WordPress or a custom Next.js site with a Sanity editor. Custom builds start at ${startingPrice("Starter")}; WordPress is quoted to scope. You work directly with Hassan and Imran.`,
+    lead: `Website design for small businesses that want a site they can edit, at a price agreed before work starts. Choose WordPress or a custom Next.js site with a Sanity editor. Custom builds start at ${startingPrice("Starter")}; WordPress is quoted to scope. You work directly with Hassan and Imran. Every build includes the AI-search setup, so ChatGPT and Google's AI can read and quote your answers.`,
     image: "/work/ladies-4-jesus-hero.png", imageAlt: "Ladies 4 Jesus website homepage, a client site built by PandaCodeGen", imageCaption: "Client website / Ladies 4 Jesus / Moved from WordPress",
     problemTitle: "What does your website need to do?", problemIntro: "Most small business websites have a few jobs: explain what you do, show proof and make it easy to call, book or enquire. We plan those first, then the pages.",
     checks: [
@@ -83,7 +83,7 @@ export const audienceServices: ServicePreview[] = [
   {
     slug: "medical-website-design", name: "Medical websites", category: "Medical website design & development",
     title: "Medical website design.", accent: "For practices and medical training providers.",
-    lead: "Medical website design and development for practices, clinics and medical training providers. We build on Next.js with a Sanity editor your staff can update, and add a Supabase database and logins when you need classes, students or bookings managed behind the site. The pages, editing and price are agreed in writing first.",
+    lead: "Medical website design and development for practices, clinics and medical training providers. We build on Next.js with a Sanity editor your staff can update, and add a Supabase database and logins when you need classes, students or bookings managed behind the site. The pages, editing and price are agreed in writing first. Every build includes the AI-search setup, so ChatGPT and Google's AI can read and quote your answers.",
     image: "/work/a-step-above-medical-preview-homepage.png", imageAlt: "A Step Above Medical course website, captured before launch", imageCaption: `Client build / A Step Above Medical / ${asam.status}`,
     problemTitle: "What should your website do for patients and staff?", problemIntro: "Start with the decisions a visitor makes: which treatment or course fits, how to book or enquire, and who they will see. Then decide what your staff update themselves.",
     checks: [
@@ -129,7 +129,7 @@ export const audienceServices: ServicePreview[] = [
   {
     slug: "training-business-websites", bookCall: true, name: "Training business websites", category: "Training business websites & booking systems",
     title: "Let students book and pay online.", accent: "Give your team one place to run classes.",
-    lead: "We connect your class schedule, payments, reminders and certificates so staff can manage each booking from registration to completion. For training providers, that means course pages, class registration, deposits, rosters and attendance, connected to the accounting tool you use. We map how a student books today and what your team does by hand, then agree the first release, running costs and price in writing.",
+    lead: "We connect your class schedule, payments, reminders and certificates so staff can manage each booking from registration to completion. For training providers, that means course pages, class registration, deposits, rosters and attendance, connected to the accounting tool you use. We map how a student books today and what your team does by hand, then agree the first release, running costs and price in writing. Every build includes the AI-search setup, so ChatGPT and Google's AI can read and quote your answers.",
     image: "/work/a-step-above-medical-portal-classes.png", imageAlt: "A Step Above Medical staff portal showing the class schedule", imageCaption: "Client build / A Step Above Medical / Pre-launch capture",
     problemTitle: "Where does your team still work by hand?", problemIntro: "Start with one class, from the first enquiry to the certificate. Each step someone repeats by hand is a step worth looking at.",
     checks: [

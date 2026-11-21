@@ -232,7 +232,7 @@ export const NOT_A_FIT: readonly string[] = [
  * Worded to the scope bought, not "everything": outages and decisions at Google, Meta or a
  * host are coordinated, not controlled, and ongoing support follows the plan's scope.
  * Panda Patches stays labelled founder-affiliated (see AI_DESCRIPTION_GUIDE.avoid). Its
- * services are from its case study; A Step Above Medical's Meta ads were confirmed by the owner.
+ * services are from its case study; A Step Above Medical's ads: Google Ads only (Hassan, 21 Nov 2026; an earlier note said Meta).
  */
 export const ONE_TEAM = {
     heading: 'One team. One place to turn.',
@@ -244,7 +244,7 @@ export const ONE_TEAM = {
     security: "When a security issue hits, you know who owns the response. Under your maintenance or SEO plan, we check whether your website is affected, apply the relevant security updates and coordinate with your hosting provider when needed. Then we test what the update touched and explain what changed.",
     support: 'Ongoing support follows the scope of your maintenance or SEO plan.',
     examples: [
-        { name: 'A Step Above Medical', href: '/work/a-step-above-medical', relationship: 'Client project', did: 'We rebuilt the public website, built the staff portal for classes, students, payments and certificates, and run its Meta ads.' },
+        { name: 'A Step Above Medical', href: '/work/a-step-above-medical', relationship: 'Client project', did: 'We rebuilt the public website, built the staff portal for classes, students, payments and certificates, and run its Google Ads.' },
         { name: 'Panda Patches', href: '/work/panda-patches', relationship: 'Founder-affiliated: our own store', did: 'We built the storefront, the content editor, the Supabase backend and operations system, the server-side conversion tracking, and its SEO and AI-search pages.' },
     ],
 } as const;
@@ -477,4 +477,4 @@ export const FACTS_VERIFIED = '10 September 2026';
 
 /** Owner-confirmed scope, pricing, hosting and first-call terms reviewed 8 Oct.
  * Separate from the broader identity/project review above. */
-export const COMMERCIAL_FACTS_VERIFIED = '9 October 2026';
+export const COMMERCIAL_FACTS_VERIFIED = '21 November 2026';
