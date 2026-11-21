@@ -1,6 +1,7 @@
 import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import { homeFaqs } from "@/data/home-faqs";
 import FaqRows from "@/components/ui/FaqRows";
+import Link from "next/link";
 import { DISPLAY, T } from "@/components/redesign/tokens";
 
 // Homepage FAQ selection; schema uses this same selection.
@@ -45,6 +46,15 @@ export default function FaqOpen() {
         </h2>
 
         <FaqRows className="mt-10 md:mt-14" faqs={faqs.map(({ q, a }) => ({ question: q, answer: a }))} />
+        {/* 22 Nov 2026: the homepage dropped the guides list and the press strip to get to ten
+            sections; their links stay here so nothing the page linked to is lost. */}
+        <nav aria-label="Guides and press" className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t pt-6 text-[15px] font-medium" style={{ borderColor: T.rule, color: T.ink }}>
+          <Link href="/blog/how-to-fix-slow-wordpress" className="underline underline-offset-4">How to fix a slow WordPress site</Link>
+          <Link href="/blog/website-portability" className="underline underline-offset-4">What each platform lets you export</Link>
+          <Link href="/blog/what-is-headless-commerce" className="underline underline-offset-4">What headless commerce is</Link>
+          <Link href="/blog" className="underline underline-offset-4">All guides</Link>
+          <Link href="/about/hassan#hassan-press" className="underline underline-offset-4">Where we&apos;ve been quoted</Link>
+        </nav>
       </div>
     </section>
   );

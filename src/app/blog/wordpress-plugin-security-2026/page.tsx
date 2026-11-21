@@ -11,6 +11,7 @@ import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText } 
 import { spec, asOf } from "@/data/spec-facts";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import MoveOffer from "@/components/blog/MoveOffer";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
@@ -619,6 +620,7 @@ export default function WordPressPluginSecurity2026Page() {
                     </section>
 
                     <FAQAccordion faqs={postFAQs} />
+                    <MoveOffer platform="WordPress" />
 
                     <BlogText>
                         Related reading:{" "}

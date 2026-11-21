@@ -11,6 +11,7 @@ import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } fro
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import ArticleContents from "@/components/blog/ArticleContents";
+import MoveOffer from "@/components/blog/MoveOffer";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
@@ -665,6 +666,7 @@ export default function WooCommerceTooSlowPage() {
                         <Link href="/pricing" className={inlineLinkClass}>pricing page</Link>.
                     </BlogText>
 
+                    <MoveOffer platform="WooCommerce" />
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>

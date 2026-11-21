@@ -1,4 +1,12 @@
 import type { ServiceFaq } from "@/data/service-faqs";
+import { servicePreviews } from "@/components/pages/services/service-data";
+
+/** "From $1,500" on the page becomes 1500 here; pages quoted to scope emit no offer. The migration page has its own design and starts at $1,500. */
+function publishedStartingPrice(slug: string): number | null {
+  if (slug === "wordpress-migration") return 1500;
+  const match = servicePreviews.find((s) => s.slug === slug)?.price.match(/^From \$([\d,]+)/);
+  return match ? Number(match[1].replace(/,/g, "")) : null;
+}
 import { serviceOutputs, OWNERSHIP_ON_HANDOVER, SERVICE_PORTABILITY } from "@/data/platform-portability";
 
 type ServicePageSchemaProps = {
@@ -19,6 +27,7 @@ type ServicePageSchemaProps = {
 export default function ServicePageSchema({ path, name, description, breadcrumb, faqs }: ServicePageSchemaProps) {
   const canonical = `https://www.pandacodegen.com${path}`;
   const showsHandover = Boolean(SERVICE_PORTABILITY[path.split("/").pop() ?? ""]);
+  const startingPrice = publishedStartingPrice(path.split("/").pop() ?? "");
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -40,6 +49,8 @@ export default function ServicePageSchema({ path, name, description, breadcrumb,
             serviceType: breadcrumb,
             url: canonical,
             provider: { "@id": "https://www.pandacodegen.com/#organization" },
+            // 22 Nov 2026: the published starting price, so search engines and AI tools can read it.
+            ...(startingPrice ? { offers: { "@type": "Offer", priceCurrency: "USD", priceSpecification: { "@type": "PriceSpecification", minPrice: startingPrice, priceCurrency: "USD" }, url: canonical } } : {}),
             description: showsHandover ? `${description} ${OWNERSHIP_ON_HANDOVER}` : description,
             ...(showsHandover ? { serviceOutput: serviceOutputs(path.split("/").pop() ?? "").map((item) => ({ "@type": "Thing", name: item.label, description: item.detail })) } : {}),
       },

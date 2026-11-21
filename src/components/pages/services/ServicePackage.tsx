@@ -1,4 +1,5 @@
 import Link from "next/link";
+import WrittenCheckButton from "@/components/ui/WrittenCheckButton";
 import s from "@/components/redesign/CommercialPreview.module.css";
 
 // 21 Nov 2026, Hassan, Imran and the board's service-page plan: every service page
@@ -33,7 +34,7 @@ export default function ServicePackage() {
           everything else. Your accounts are in your name.
         </p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 16, marginTop: 24 }}>
-          <Link href="/contact" className={s.button}>Get your free written check</Link>
+          <WrittenCheckButton className={s.button} location="service_package">Get your free written check</WrittenCheckButton>
           <Link href="/pricing" className={s.textLink}>See prices</Link>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import { QuotedIn } from "@/components/redesign/QuotedIn";
 import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import PriceAmount from "@/components/redesign/PriceAmount";
 import Image from "next/image";
@@ -15,14 +14,12 @@ import WorkIndex from "@/components/redesign/WorkIndex";
 import WorkCard from "@/components/redesign/WorkCard";
 import HowWeWork from "@/components/redesign/HowWeWork";
 import ServicesStack from "@/components/redesign/ServicesStack";
-import TickerBand from "@/components/redesign/TickerBand";
 import ProofSection from "@/components/redesign/ProofSection";
 import FeaturesTrio from "@/components/redesign/FeaturesTrio";
 import PricingFinder from "@/components/redesign/PricingFinder";
 // The shared founder section uses the same selective italic/cognac heading accent.
 import FoundersDark from "@/components/redesign/FoundersDark";
 import FaqOpen from "@/components/redesign/FaqOpen";
-import GuidesList from "@/components/redesign/GuidesList";
 import { T } from "@/components/redesign/tokens";
 
 // The homepage design; src/app/page.tsx renders it. Built 23 Sep 2026 as the
@@ -170,17 +167,14 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
       <BusinessSummary />
       {/* 26 Oct 2026, owner-approved wording. "Services you hire us to deliver" keeps the
           promise to the scope bought: it doesn't say every plan covers every service. */}
-      <TickerBand />
       <FeaturesTrio />
       <HowWeWork />
       <PricingFinder />
       <ProofSection />
-      <QuotedIn />
       <WorkIndex />
       <FoundersDark />
       <ServicesStack />
       <FaqOpen />
-      <GuidesList />
     </PreviewShell>
   );
 }

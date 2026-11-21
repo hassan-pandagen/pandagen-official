@@ -6,6 +6,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
 import { useSubmission } from "@/hooks/useSubmission";
 import { submitQuoteLead } from "@/lib/forms/submitQuoteLead";
+import { WRITTEN_CHECK_MARK } from "@/components/ui/WrittenCheckButton";
 import { takeQuotePrefill } from "@/lib/quotePrefill";
 import { PHONE } from "@/data/company-facts";
 
@@ -31,6 +32,8 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   // the homepage quiz -- can put them in front of the visitor to edit, rather
   // than attaching anything to their enquiry that they cannot see.
   const [details, setDetails] = useState("");
+  // 21 Nov 2026: set when a "free written check" button opened the modal (WrittenCheckButton).
+  const [writtenCheck, setWrittenCheck] = useState(false);
   const formLoadedAtRef = useRef(0);
   const formRef = useRef<HTMLFormElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -72,7 +75,9 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
       setFieldErrors({});
       formRef.current?.reset();
       // Consume once per opening, including React's development effect replay.
-      setDetails(takeQuotePrefill() ?? "");
+      const prefill = takeQuotePrefill() ?? "";
+      setDetails(prefill);
+      setWrittenCheck(prefill.startsWith(WRITTEN_CHECK_MARK));
     }
     const previousOverflow = document.body.style.overflow;
     returnFocusRef.current = document.activeElement instanceof HTMLElement
@@ -253,10 +258,12 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                     <div className="mb-5 pr-10">
                       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-cognac">Direct to the founders</p>
                       <h2 id="quote-modal-title" className="text-2xl font-bold text-charcoal md:text-3xl">
-                        What would you like <span className="font-serif italic text-cognac">help with?</span>
+                        {writtenCheck ? <>Your free <span className="font-serif italic text-cognac">written check.</span></> : <>What would you like <span className="font-serif italic text-cognac">help with?</span></>}
                       </h2>
                       <p id="quote-modal-description" className="mt-3 text-sm leading-6 text-stone-600">
-                        A new website, a change to an existing one, or a question. Your message goes directly to Hassan and Imran.
+                        {writtenCheck
+                          ? "Answer what you can below. Hassan and Imran send back a written list of what you do by hand today, what could run on its own, and what it would cost. Free, with no commitment."
+                          : "A new website, a change to an existing one, or a question. Your message goes directly to Hassan and Imran."}
                       </p>
                     </div>
 
@@ -307,12 +314,12 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                           id="quote-details"
                           name="details"
                           maxLength={5000}
-                          rows={2}
+                          rows={writtenCheck ? 7 : 2}
                           value={details}
                           onChange={(event) => setDetails(event.target.value)}
                           autoComplete="off"
                           placeholder="What would you like to build, change or ask? A sentence is plenty."
-                          className="max-h-40 min-h-[74px] w-full resize-y rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors [field-sizing:content] focus:border-cognac focus:ring-1 focus:ring-cognac"
+                          className="max-h-72 min-h-[74px] w-full resize-y rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors [field-sizing:content] focus:border-cognac focus:ring-1 focus:ring-cognac"
                         />
                       </Field>
 
@@ -364,7 +371,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                         disabled={isLoading}
                         className="press-feedback flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-charcoal px-5 py-3 font-bold text-white hover:bg-cognac disabled:cursor-not-allowed disabled:opacity-60"
                       >
-                        {isLoading ? "Sending…" : "Send your message"} <Send aria-hidden="true" className="h-4 w-4" />
+                        {isLoading ? "Sending…" : writtenCheck ? "Request my written check" : "Send your message"} <Send aria-hidden="true" className="h-4 w-4" />
                       </button>
                       <p className="text-center text-sm leading-6 text-stone-600">
                         A founder replies, usually within one business day. Every message gets an answer, whether or not it turns into a quote.

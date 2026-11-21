@@ -10,6 +10,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import MoveOffer from "@/components/blog/MoveOffer";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
@@ -471,6 +472,7 @@ export default function SquarespaceTooSlowPage() {
 
                     <BlogHeader id="faq">Frequently asked questions</BlogHeader>
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} showHeading={false} />}
+                    <MoveOffer platform="Squarespace" />
                     <TopicUpLink postId={postId} />
 
                     <RelatedPosts currentPostId={postId} />

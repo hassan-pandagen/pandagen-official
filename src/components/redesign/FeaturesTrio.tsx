@@ -1,4 +1,5 @@
 import Link from "next/link";
+import WrittenCheckButton from "@/components/ui/WrittenCheckButton";
 import { ArrowRight } from "lucide-react";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 
@@ -83,13 +84,9 @@ export default function FeaturesTrio() {
             Our free written check goes through each line for your business: what you do by hand today, what could run on its own, and what it would cost. No commitment.
           </p>
           <div className="flex flex-col items-start gap-4 md:col-span-4 md:items-end">
-            <Link
-              href="/contact"
-              className="cta-solid inline-flex items-center gap-2 px-6 py-3.5 text-[15px] font-medium"
-              style={{ backgroundColor: T.ink, color: T.paper }}
-            >
+            <WrittenCheckButton location="home_checklist" className="cta-solid inline-flex items-center gap-2 px-6 py-3.5 text-[15px] font-medium bg-[#1C1917] text-[#EBE9E4]">
               Get your free written check <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
+            </WrittenCheckButton>
             <Link href="/services/custom-engineering" className="text-[15px] font-medium" style={{ color: T.ink }}>
               Explore custom workflow automation
             </Link>

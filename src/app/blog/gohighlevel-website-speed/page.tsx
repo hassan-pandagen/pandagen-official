@@ -11,6 +11,7 @@ import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } fro
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import ArticleContents from "@/components/blog/ArticleContents";
+import MoveOffer from "@/components/blog/MoveOffer";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
@@ -622,6 +623,7 @@ export default function HighLevelSpeedGuide() {
                         </CalModalButton>
                     </section>
 
+                    <MoveOffer platform="GoHighLevel" />
                     {postFAQs.length > 0 && (
                         <>
                             <BlogHeader id="faq">Frequently asked questions</BlogHeader>
