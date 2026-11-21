@@ -392,7 +392,7 @@ export default function WordPressMigrationCostPage() {
                     <BlogHeader id="plugins">Price plugin capability, not plugin count</BlogHeader>
                     <BlogText>
                         List what each plugin does and which customer or staff tasks depend on it. Decide what to keep, replace, rebuild or remove. One plugin may hold your booking records; another may control the design of most pages. What those plugins do matters more than how many are installed. On the performance side,{" "}
-                        <Link href="/blog/wordpress-plugins-destroy-speed" className={inlineLinkClass}>how plugins accumulate into a page-weight problem</Link>{" "}
+                        <Link href="/blog/how-to-fix-slow-wordpress" className={inlineLinkClass}>how plugins accumulate into a page-weight problem</Link>{" "}
                         explains what to look for while you inventory.
                     </BlogText>
 

@@ -250,7 +250,7 @@ export const clusters: Cluster[] = [
       'wordpress-migration-cost', 'how-to-migrate-wordpress-to-nextjs', 'wordpress-to-nextjs-migration-agencies', 'wordpress-vs-nextjs',
       'why-we-chose-nextjs-over-wordpress-2026', 'nextjs-sanity-stack', 'wordpress-vs-custom-code-real-cost-3-years',
       'wordpress-ai-security-risk-2026', 'wordpress-plugin-security-2026', 'elementor-kills-seo',
-      'wordpress-plugins-destroy-speed', 'wordpress-traffic-drop-speed', 'how-to-fix-slow-wordpress',
+      'wordpress-traffic-drop-speed', 'how-to-fix-slow-wordpress',
       // Market-share research: the WordPress peak is the reason a migration
       // conversation is happening at all, so it belongs with the migration cluster.
       'cms-market-share-2026',
@@ -265,7 +265,7 @@ export const clusters: Cluster[] = [
     postIds: [
       'shopify-store-speed-optimization', 'shopify-stocky-sunset-date-2026', 'shopify-vs-custom-website',
       'shopify-app-costs-real-monthly-bill', 'shopify-dawn-theme-slow', 'shopify-headless',
-      'shopify-plus-still-slow', 'shopify-slow-losing-sales', 'shopify-conversion-rate-speed-fix',
+      'shopify-plus-still-slow', 'shopify-slow-losing-sales',
     ],
   },
   {
@@ -432,15 +432,16 @@ export const clusters: Cluster[] = [
     relatedClusterIds: ['shopify', 'performance', 'custom'],
     postIds: [
       'what-is-headless-commerce', 'which-website-builders-can-go-headless', 'google-universal-commerce-protocol-what-it-means-for-your-store',
-      'shopify-slow-losing-sales', 'shopify-conversion-rate-speed-fix',
-      // Added 25 Aug 2026. Its Shopify counterpart, shopify-conversion-rate-speed-fix,
+      'shopify-slow-losing-sales',
+      // Added 25 Aug 2026. Its Shopify counterpart (then shopify-conversion-rate-speed-fix, merged
+      // into shopify-slow-losing-sales on 20 Nov 2026),
       // already sits in both its platform cluster and this one, which is why that post
       // reaches llms.txt and this one did not. The `woocommerce` cluster is
       // serviceOwned, so hubForPost() returns null for anything living only there and
       // the post is invisible to guidesByTopic(). Same gap still applies to
       // woocommerce-too-slow; left alone until Experiment 1 reads on 8 Sep 2026.
       'woocommerce-low-conversion-rate',
-      'meta-conversions-api-setup-cost', 'spending-more-on-ads-fewer-orders-tracking',
+      'meta-conversions-api-setup-cost',
       'fix-meta-ad-tracking-2026',
     ],
   },

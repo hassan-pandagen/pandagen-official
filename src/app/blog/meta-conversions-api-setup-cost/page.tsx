@@ -604,11 +604,8 @@ export default function MetaCAPISetupCostPage() {
                     <section className="mt-12">
                         <h2 className="mb-3 text-xl font-bold text-charcoal">Related reading</h2>
                         <p className="leading-relaxed text-stone-700">
-                            For how to audit where conversion signal is being lost before you buy anything, read{" "}
-                            <Link href="/blog/spending-more-on-ads-fewer-orders-tracking" className={sourceLinkClass}>
-                                spending more on ads but getting fewer orders
-                            </Link>
-                            . For the wider Meta tracking picture in 2026, see{" "}
+                            For how to check whether you have fewer orders or only fewer recorded orders, and
+                            where conversion signal is being lost before you buy anything, read{" "}
                             <Link href="/blog/fix-meta-ad-tracking-2026" className={sourceLinkClass}>
                                 fixing Meta ad tracking
                             </Link>

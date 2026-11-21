@@ -331,7 +331,7 @@ export default function WooCommerceTooSlowPage() {
                         WooCommerce publishes a filter to scope it to shop pages, and the mini-cart block avoids the API
                         altogether. The same compounding pattern across the wider plugin set is covered
                         in{" "}
-                        <Link href="/blog/wordpress-plugins-destroy-speed" className={inlineLinkClass}>how plugins accumulate into a page-weight problem</Link>.
+                        <Link href="/blog/how-to-fix-slow-wordpress" className={inlineLinkClass}>how plugins accumulate into a page-weight problem</Link>.
                     </BlogText>
 
                     <h3 className="mt-6 text-xl font-bold text-charcoal">WooCommerce doesn&apos;t modernize your images for you</h3>

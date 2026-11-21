@@ -2,6 +2,7 @@ import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Calculator, Layers3, RefreshCcw, Scale } from "lucide-react";
 import Link from "next/link";
+import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import dynamicImport from "next/dynamic";
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-19",
-        modifiedTime: "2026-10-09",
+        modifiedTime: "2026-11-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-rebuild-cost-2026")],
@@ -63,7 +64,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/website-rebuild-cost-2026"),
             description,
             datePublished: "2026-04-19",
-            dateModified: "2026-10-09",
+            dateModified: "2026-11-20",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -128,7 +129,7 @@ export default function WebsiteRebuildCostPage() {
                             Website Rebuild Cost: <span className="italic text-cognac">Scope, Tiers and Decisions</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            A rebuild changes the platform and materially reworks the site&apos;s structure, experience
+                            A rebuild is worth paying for when the current site costs you enquiries, bookings or staff time. A rebuild changes the platform and materially reworks the site&apos;s structure, experience
                             or content system. Price it as a coordinated strategy, design, engineering and migration
                             project, not as a universal market band.
                         </p>
@@ -451,6 +452,13 @@ export default function WebsiteRebuildCostPage() {
                         ]}
                     />
 
+                    <BlogHeader>What the money buys</BlogHeader>
+                    <BlogText>
+                        Price the rebuild against what the current site costs you: enquiries lost on slow pages, staff hours spent on work the site should do, and tools you pay for separately.
+                    </BlogText>
+                    <BlogText>
+                        For one training school, the rebuild included online booking, payments, student emails and a staff portal. {MIGRATION_PROJECT_DETAILS.aStepAboveMedical.firstMonthResult} The <Link href="/work/a-step-above-medical" className="text-cognac hover:underline font-medium">A Step Above Medical case study</Link> has the details.
+                    </BlogText>
                     <BlogHeader id="pandacodegen-pricing">PandaCodeGen terms</BlogHeader>
                     <BlogText>
                         A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to

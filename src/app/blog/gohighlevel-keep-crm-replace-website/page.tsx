@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-04",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-11-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/gohighlevel-keep-crm-replace-website")],
@@ -67,7 +67,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-04",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-20",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -102,7 +102,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-04",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-20",
             inLanguage: "en-US",
         },
         {
@@ -137,7 +137,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                             Keep Your GoHighLevel CRM. <span className="italic text-cognac">Replace Just the Website.</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Yes, you can keep GoHighLevel as your CRM and replace only the website it builds.
+                            If your HighLevel website is slow or hard to rank, it loses leads before they ever reach your CRM. Yes, you can keep GoHighLevel as your CRM and replace only the website it builds.
                             Keep HighLevel doing the thing it is genuinely good at, and put a faster public
                             website in front of it. The contacts, workflows, calendars and pipeline stay exactly
                             where they are. Only the pages your customers and search engines actually see move.

@@ -2,6 +2,7 @@ import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowRight, Scale, AlertTriangle, CheckCircle2, TrendingDown } from "lucide-react";
 import Link from "next/link";
+import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import lazyLoad from "next/dynamic";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
         description: "A scenario-based build-versus-buy framework with no universal spend or payback threshold.",
         type: "article",
         publishedTime: "2026-05-31T00:00:00-05:00",
-        modifiedTime: "2026-11-09T00:00:00-05:00",
+        modifiedTime: "2026-11-20T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison",
         images: [ogImageForPath("/blog/build-vs-buy-software-2026-cost-comparison")],
@@ -57,7 +58,7 @@ const articleSchema = {
             "description": "A scenario-based build-versus-buy framework using current quotes, migration, maintenance, security, adoption, and operating risk.",
             "image": ogImageUrlForPath("/blog/build-vs-buy-software-2026-cost-comparison"),
             "datePublished": "2026-05-31T00:00:00-05:00",
-            "dateModified": "2026-11-09T00:00:00-05:00",
+            "dateModified": "2026-11-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -100,7 +101,7 @@ const articleSchema = {
             "description": "A scenario-based framework with current quotes and no universal spend or payback threshold.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-31T00:00:00-05:00",
-            "dateModified": "2026-11-09T00:00:00-05:00",
+            "dateModified": "2026-11-20T00:00:00-05:00",
             "inLanguage": "en-US"
         },
     ]
@@ -125,7 +126,7 @@ export default function BuildVsBuySoftware2026Page() {
                             <span className="font-serif italic text-cognac">Use the Full-Cost Test</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            There is no monthly SaaS bill that automatically makes building your own software cheaper. The only way to know is to put a dated quote from your current vendor next to what a build would really cost: the work itself, moving your data, hosting, support, keeping it secure, and getting your team to use it. Then run those numbers again for a good year and a bad one.
+                            Buying the wrong software costs more than the subscription; it costs the staff time spent working around it. There is no monthly SaaS bill that automatically makes building your own software cheaper. The only way to know is to put a dated quote from your current vendor next to what a build would really cost: the work itself, moving your data, hosting, support, keeping it secure, and getting your team to use it. Then run those numbers again for a good year and a bad one.
                         </p>
                         <BlogAuthor
                             postId="build-vs-buy-software-2026-cost-comparison" published="2026-05-31"
@@ -278,6 +279,13 @@ export default function BuildVsBuySoftware2026Page() {
                         </CalModalButton>
                     </div>
 
+                    <BlogHeader>A worked example: one school&apos;s booking system</BlogHeader>
+                    <BlogText>
+                        A Step Above Medical, a phlebotomy and IV therapy school, ran on a WordPress site with an enquiry form, and staff replied to each student by email with a payment link. The system we built puts course pages, booking, deposits, student emails, certificates and the QuickBooks sync in one place its staff manage.
+                    </BlogText>
+                    <BlogText>
+                        {MIGRATION_PROJECT_DETAILS.aStepAboveMedical.firstMonthResult} The two options for a school like this are compared in <Link href="/blog/class-registration-software-vs-custom-booking-system" className="text-cognac hover:underline font-medium">class registration software or a custom booking system</Link>, and the project is in the <Link href="/work/a-step-above-medical" className="text-cognac hover:underline font-medium">case study</Link>.
+                    </BlogText>
                     <BlogHeader id="ai-caveat">The AI Caveat: Why Cheap-to-Build Is Not the Same as Build-It-Yourself</BlogHeader>
                     <BlogText>
                         AI tools genuinely save time on some engineering work. They do not give you a delivery date, and they do not make building cheaper than buying. Estimate the actual requirements, review burden, tests, migration, security, and adoption work.

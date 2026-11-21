@@ -308,7 +308,7 @@ export default function WordPressAprilEvidencePage() {
                         A separate 2026 advisory covering an AI plugin is written up in{" "}
                         <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">our review of WordPress AI plugin security</Link>,
                         and the dependency-count question is examined with measurements in{" "}
-                        <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">the plugin audit guide</Link>.
+                        <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">the plugin audit guide</Link>.
                     </BlogText>
 
                     <BlogHeader id="already-updated">&ldquo;I already updated the plugin&rdquo; is not the same as &ldquo;I am clean&rdquo;</BlogHeader>

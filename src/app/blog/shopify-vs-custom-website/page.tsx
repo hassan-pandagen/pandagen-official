@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-30",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-11-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-vs-custom-website")],
@@ -77,7 +77,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-vs-custom-website"),
             description,
             datePublished: "2026-03-30",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-20",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -145,7 +145,7 @@ export default function ShopifyVsCustomWebsitePage() {
                             Shopify vs Custom Website: <span className="italic text-cognac">A 2026 Decision Framework</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Shopify, a headless Shopify storefront and a separate custom commerce stack each
+                            Most stores asking this are paying for apps that slow each other down, or need something Shopify can&apos;t do. Shopify, a headless Shopify storefront and a separate custom commerce stack each
                             solve a different problem. Compare them against what your business actually needs
                             and how you intend to run it, not against invented revenue thresholds, app-spend
                             figures or PageSpeed targets.
@@ -387,7 +387,7 @@ export default function ShopifyVsCustomWebsitePage() {
                         and the wider{" "}
                         <Link href="/blog/shopify-store-speed-optimization" className={inlineLinkClass}>Shopify store speed optimization guide</Link>.
                         To connect those measurements to the funnel rather than to a score, see{" "}
-                        <Link href="/blog/shopify-conversion-rate-speed-fix" className={inlineLinkClass}>how to measure speed inside the conversion funnel</Link>{" "}
+                        <Link href="/blog/shopify-slow-losing-sales" className={inlineLinkClass}>how to measure speed inside the conversion funnel</Link>{" "}
                         and{" "}
                         <Link href="/blog/shopify-slow-losing-sales" className={inlineLinkClass}>how to build a revenue-side evidence model</Link>.
                     </BlogText>
@@ -487,6 +487,13 @@ export default function ShopifyVsCustomWebsitePage() {
                         covers the same controls from the search side, including what to monitor after release.
                     </BlogText>
 
+                    <BlogHeader>What it costs the business, and how we help</BlogHeader>
+                    <BlogText>
+                        The wrong choice shows up as a monthly app bill that keeps growing, a store that slows with each app, or staff running orders through workarounds. Most stores should stay on Shopify and clean up their apps; see <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline font-medium">what Shopify apps really cost each month</Link>.
+                    </BlogText>
+                    <BlogText>
+                        When the store needs something the theme and apps can&apos;t do, such as a product configurator or one storefront across several markets, we scope a headless or custom build with a written acceptance test. See <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">e-commerce development</Link>.
+                    </BlogText>
                     <BlogHeader>10. Use project-specific commercial terms</BlogHeader>
                     <BlogText>
                         PandaCodeGen&apos;s public planning tiers are $1,500 Starter, $3,500 Growth and Scale

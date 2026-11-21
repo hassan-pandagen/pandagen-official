@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-27",
-        modifiedTime: "2026-10-09",
+        modifiedTime: "2026-11-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/webflow-vs-custom-website")],
@@ -67,7 +67,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/webflow-vs-custom-website"),
             description,
             datePublished: "2026-03-27",
-            dateModified: "2026-10-09",
+            dateModified: "2026-11-20",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -131,7 +131,7 @@ export default function WebflowVsCustomWebsitePage() {
                             Webflow vs Custom Website: <span className="italic text-cognac">A Four-Factor Decision</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Webflow gives your team a visual editor and hosting in one service. A custom website lets us build the pages, bookings and business connections around your needs. Compare what staff can update, what customers need to do, what you own and who will maintain it.
+                            Webflow works well for marketing pages. The harder question is what happens when customers need to book, pay or log in, and your team needs to manage it. Webflow gives your team a visual editor and hosting in one service. A custom website lets us build the pages, bookings and business connections around your needs. Compare what staff can update, what customers need to do, what you own and who will maintain it.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed August 3, 2026 against current Webflow and Google documentation.
@@ -477,6 +477,13 @@ export default function WebflowVsCustomWebsitePage() {
                         </>
                     )}
 
+                    <BlogHeader>When Webflow stops fitting the business</BlogHeader>
+                    <BlogText>
+                        Webflow fits less well when the business runs on what happens after the page: bookings, payments, customer accounts and staff approvals. When those live in separate tools joined together, staff spend time keeping them in step, and customers notice when they drift apart.
+                    </BlogText>
+                    <BlogText>
+                        A custom build puts the website and that system in one place. The <Link href="/work/a-step-above-medical" className="text-cognac hover:underline font-medium">A Step Above Medical case study</Link> shows one: course pages, booking, payments and a staff portal. If you are moving off Webflow, see <Link href="/services/webflow" className="text-cognac hover:underline font-medium">Webflow migration</Link>.
+                    </BlogText>
                     <BlogHeader>Primary sources</BlogHeader>
                     <ul className="mb-12 space-y-3 text-sm text-stone-600">
                         {sources.map((source) => (

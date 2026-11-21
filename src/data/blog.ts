@@ -239,8 +239,8 @@ export const blogPosts: BlogPost[] = [
     id: "fix-meta-ad-tracking-2026",
     cardStat: "Trace",
     cardStatLabel: "Reconcile the record, browser event, server event and consent state",
-    title: "Meta Ad Tracking Not Working? A 2026 Diagnostic Guide",
-    excerpt: "A consent-aware method for reconciling orders and Meta events, debugging browser and server delivery, and preventing duplicate events.",
+    title: "Meta Ad Tracking Not Working? Stop Paying for Sales You Can't See",
+    excerpt: "Check whether you have fewer orders or only fewer recorded orders, then trace the browser and server path. Includes how one school's ads were counting homepage views as sales.",
     category: "Measurement",
     readTime: "14 min",
     date: "Jul 6",
@@ -248,7 +248,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "conversion",
-    lastModified: "2026-10-08",
+    lastModified: "2026-11-20",
     faqs: [
       { question: "Why do Meta and my store show different conversion totals?", answer: "They may answer different questions. Reconcile the same event definition, time zone, date range, order state, test and refund treatment, and attribution window. Separate event delivery from ad attribution before calling the integration broken." },
       { question: "Why is my Meta Pixel not firing?", answer: "Check consent state, the expected Pixel or dataset ID, duplicate or stale integrations, browser requests, script errors, navigation timing, extensions and vendor diagnostics. Diagnose the affected session instead of assuming one universal cause." },
@@ -258,6 +258,9 @@ export const blogPosts: BlogPost[] = [
       { question: "Will server-side tracking recover all missing conversions?", answer: "No. It may improve event delivery when correctly implemented, but consent, data availability, event quality, deduplication, attribution rules and platform systems still affect reporting. Measure the result under a defined scope." },
       { question: "How should I test a Shopify Meta integration?", answer: "Use current Shopify and Meta documentation for the installed sales-channel integration. Verify data-sharing and consent settings, then test event names, IDs, values, currency, deduplication and diagnostics. Do not assume an app install or another store's result proves your setup." },
       { question: "Why are my ads getting clicks but no conversions?", answer: "Separate three failures before touching the integration. Delivery: confirm the event actually reached Meta using the Test Events tool in Events Manager, not a preview. Deduplication: Meta discards a duplicate when the browser eventID matches the server event_id and the browser event matches the server event_name on the same dataset within 48 hours, so a mismatched ID can hide a real sale. Mapping: confirm the standard event your campaign optimises for is the same one your site sends. Only then look at attribution, because a sale can be recorded correctly and still fall outside the reporting window or be credited elsewhere. Consent declines also stay uncounted by design." },
+      { question: "Why are my ad costs going up but my orders staying flat?", answer: "The cause could be auction costs, audience, offer, product availability, site experience, checkout, measurement loss, or several together. Compare spend, clicks, sessions, orders and revenue by account, market, device and date before blaming the tracking." },
+      { question: "What happens to my ad budget when tracking counts the wrong thing?", answer: "The ad platform optimises for whatever you tell it is a conversion. A Step Above Medical's old Google Ads campaigns counted a view of the homepage as a conversion: 559 in the month before its new website launched, none of them a booking. Google kept buying cheap homepage visits. Counting each paid registration from the server fixed what the campaigns were judged on." },
+      { question: "Is server-side ad tracking included in a PandaCodeGen build?", answer: "It can be, when the agreed scope names the platforms, events, data sources, consent behaviour and how it will be tested. It is not automatically included in every package, and PandaCodeGen does not promise an attribution, cost-per-sale or revenue result." },
     ]
   },
   {
@@ -273,7 +276,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "migration",
-    lastModified: "2026-10-24",
+    lastModified: "2026-11-20",
     faqs: [
       { question: "How much does it cost to migrate off Wix?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with complex work scoped separately. Final price depends on templates, content, CMS data, commerce, apps, integrations, redesign, SEO, accessibility, QA, cutover and support." },
       { question: "Can I export my Wix site and import it somewhere else?", answer: "Do not treat Wix as one universal full-site export. Wix currently documents separate export or transfer paths for CMS collections, contacts, physical products, orders and site ownership. Design, layout, app behavior, digital products and target compatibility need item-by-item discovery and may require rebuilding." },
@@ -347,7 +350,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "aicommerce",
-    lastModified: "2026-10-08",
+    lastModified: "2026-11-20",
     faqs: [
       { question: "My PageSpeed report says Agentic Browsing 0 of 3. What does that mean?", answer: "It means none of the three checks Google currently scores in that category passed on the page you tested. The category is experimental and the checks are narrow, so a 0 of 3 is not a verdict on whether an assistant can read your site at all. It is a signal that the specific things Google decided to measure are absent. Run the report again on your most commercial page rather than the home page, because the checks are per-URL and the page you want cited is usually not the one you tested first." },
       { question: "How do I fix a failing Agentic Browsing score?", answer: "Open the category in the report and read which of the three checks failed: the accessibility tree, layout shift, or llms.txt. The fix differs for each and none of them is a setting you toggle. The WebMCP and ai-catalog.json audits usually show as not applicable and don't count toward the three. Fixing the accessibility and layout checks is ordinary content and markup work rather than anything AI-specific, which is why the honest advice is usually to fix the page rather than to add a file." },
@@ -373,7 +376,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "cost",
-    lastModified: "2026-10-09",
+    lastModified: "2026-11-20",
     faqs: [
       { question: "How much does a custom website cost with PandaCodeGen in 2026?", answer: "PandaCodeGen's planning tiers begin at $1,500 for Starter and $3,500 for Growth, while Scale starts at $5,000. The accepted proposal or SOW sets the final price after the page, template, content, integration, data, migration, security, compliance, and acceptance scope is known." },
       { question: "What is included in a custom website starting at $5,000?", answer: "Scale can include a custom Next.js frontend, content editing, URL and metadata migration, redirects, integrations, responsive implementation, security and accessibility work, performance acceptance tests, staged launch, documentation, and support. Only the items in the accepted SOW are included; the tier itself is not a universal feature bundle." },
@@ -405,47 +408,6 @@ export const blogPosts: BlogPost[] = [
         { question: "Do I need the Conversions API if I am not on Shopify?", answer: "The decision is platform-independent. Start with the accepted events and system of record, then measure browser delivery and determine whether a supported server source can improve reliability. There is no universal traffic, spend or revenue threshold." },
         { question: "Is Conversions API included in a PandaCodeGen build?", answer: "It can be included in an accepted Scale project starting at $5,000 when the signed scope names the required events, systems, consent behavior and acceptance evidence. It is not automatically included in every build, and complex requirements can change the price." },
       ]
-  },
-  {
-    id: "spending-more-on-ads-fewer-orders-tracking",
-    cardStat: "Reconcile",
-    cardStatLabel: "Platform events against the system of record",
-    title: "Spending More on Ads but Getting Fewer Orders? Audit Tracking",
-    excerpt: "Reconcile platform events with the system of record, diagnose browser and server coverage, and improve consented measurement without assuming attribution or performance lift.",
-    category: "Ad Tracking",
-    readTime: "12 min",
-    date: "Jun 4",
-    author: "Hassan",
-    role: "Co-founder, Lead Engineer",
-    featured: true,
-    illustrationType: "conversion",
-    lastModified: "2026-10-29",
-    faqs: [
-      {
-        question: "Why are my ad costs going up but my orders staying flat?",
-        answer: "The cause could be auction costs, audience, offer, product availability, site experience, checkout, measurement loss, or several factors together. Reconcile spend, clicks, sessions, orders and revenue by account, market, device and date before assigning the cause to tracking."
-      },
-      {
-        question: "What is Event Match Quality (EMQ) and why does it matter?",
-        answer: "Meta describes Event Match Quality as a diagnostic showing how customer-information parameters may support event matching. Treat it as one implementation signal, not a promised CPA or ROAS outcome. Send only permitted data, normalize and hash where required, preserve consent, and test event quality and deduplication."
-      },
-      {
-        question: "Do Google and AI shopping also need this kind of tracking?",
-        answer: "Google Ads has its own measurement products and consent requirements. AI discovery is a separate question: crawlable content and accurate structured data can improve machine readability, but conversion tracking does not guarantee inclusion, ranking, recommendation or citation by an AI system."
-      },
-      {
-        question: "How much does server-side tracking cost if I add it to my platform store?",
-        answer: "Cost depends on the required events, platform support, data sources, consent behavior, gateway or cloud fees, custom engineering, QA and maintenance. Compare a current vendor or native quote with a direct implementation using the same event contract and operating period."
-      },
-      {
-        question: "Why does a custom-coded site handle ad tracking better than a platform store?",
-        answer: "Custom code can provide more control over the data layer, but it also creates implementation and maintenance responsibility. A managed platform integration may be more reliable when it supports the required events. Compare observed coverage, consent, supported checkout events, credentials, monitoring, vendor changes and ownership instead of assuming one model always wins."
-      },
-      {
-        question: "Is this tracking setup included in a PandaCodeGen build?",
-        answer: "It can be included when the signed scope names the platforms, events, data sources, consent behavior, reconciliation method and acceptance evidence. It is not automatically included in every package, and complex data or checkout requirements can change scope and price."
-      }
-    ]
   },
   {
     id: "will-migrating-hurt-my-seo",
@@ -610,7 +572,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "code",
-    lastModified: "2026-11-09",
+    lastModified: "2026-11-20",
     faqs: [
       { question: "Should I build or buy software in 2026?", answer: "Buy when an existing product handles your work well and gets your team started quickly. Consider building when important business rules or connections need repeated workarounds, or when the existing costs justify a closer comparison. Price both against the same tasks, including moving data, training, hosting and ongoing support." },
       { question: "Is it cheaper to build a custom CRM than pay for HubSpot or Salesforce?", answer: "That depends on the workflow, and the comparison is usually set up wrong before the numbers are even gathered. You are weighing a licence fee against a build cost, when the real comparison is against building plus running it forever: the support, the integrations, the person who fixes it when it breaks at month thirty. There is no common outcome to quote you; run the comparison per workflow rather than against the whole bill." },
@@ -784,7 +746,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "performance",
-    lastModified: "2026-10-01",
+    lastModified: "2026-11-20",
     faqs: [
       { question: "How long does Shopify speed optimization take?", answer: "Speed work is measured in days, not weeks, when it's diagnostic and not a rebuild. Establish a baseline on your busiest product page first, change one thing at a time, and re-measure under the same conditions. Most of the elapsed time is waiting for field data to accumulate, which is why the report window counts for more than the working hours." },
       { question: "Do Shopify speed booster apps actually improve performance?", answer: "Sometimes, and rarely as much as the listing implies. Measure your own storefront before and after installing one, on the same route under the same conditions, because a booster app is itself more JavaScript. Shopify already serves WebP and compresses images automatically, so an app promising image optimisation is often charging you for something the platform does for free." },
@@ -830,7 +792,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'performance',
-    lastModified: "2026-10-08",
+    lastModified: "2026-11-20",
     faqs: [
       { question: "Will my HighLevel workflows still fire after the website moves?", answer: "Only if the integration still produces each workflow's real trigger and required fields. Inventory contact, form, appointment, tag, opportunity and other dependencies, then run accepted end-to-end tests. Do not assume that creating a contact reproduces every prior event." },
       { question: "Do I cancel HighLevel for a hybrid website?", answer: "The hybrid model normally keeps HighLevel for the resources named in the accepted scope. Confirm the account's current plan, add-ons, usage charges and required capabilities directly in HighLevel before quoting. The website project does not guarantee an unchanged vendor bill." },
@@ -908,7 +870,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-11-09",
+    lastModified: "2026-11-20",
     faqs: [
       { question: "Is hiring a cheap web developer safe for my business website?", answer: "It can be, and the price is not what tells you. What tells you is whether you can point at a deliverable when each payment falls due, whether the contract says who owns the code and the accounts, and whether the developer can show you finished work rather than a capability list. Cheap and careful exist together; cheap and undefined do not." },
             {
@@ -1047,7 +1009,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-10-09",
+    lastModified: "2026-11-20",
     faqs: [
       { question: "How much does a website rebuild cost in 2026?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale. A rebuild can require custom scope when strategy, content, applications, data, compliance or governance expands. Final price belongs to a signed statement of work." },
       { question: "What's the difference between a website rebuild, a redesign, and a migration?", answer: "A redesign changes the experience while retaining the current platform. A migration changes the platform while preserving much of the approved structure and experience. A rebuild changes the platform and materially reworks the structure, experience or content system." },
@@ -1281,7 +1243,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'webflow',
-    lastModified: "2026-10-09",
+    lastModified: "2026-11-20",
     faqs: [
       { question: "Can I export my Wix website to another platform?", answer: "Wix documents separate export or transfer paths for some assets, including CMS collections, contacts, physical products, orders and site ownership. There is no single universal export that reproduces every page, design and app behavior on another platform. Inventory each content and data type before estimating migration." },
       { question: "How much does it cost to migrate from Wix to a custom website?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with custom scope where needed. Final price depends on pages, templates, CMS data, commerce, apps, design, integrations, SEO, accessibility, QA, launch and support." },
@@ -1479,7 +1441,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'webflow',
-    lastModified: "2026-10-09",
+    lastModified: "2026-11-20",
     faqs: [
       { question: "How do I decide between Webflow and a custom website?", answer: "Keep Webflow when its editor and features work well for your team. Consider a custom build when you need customer journeys or business connections that are difficult to deliver there. Compare the build price, hosting, services, support and ownership before deciding." },
       { question: "Is Webflow good enough for a small business, or do I need custom code?", answer: "Webflow can be a strong fit when visual production, its CMS and supported features meet the requirements and the current cost is acceptable. Business size or traffic alone does not decide. Custom becomes relevant when specific data, experience, integration, portability or release needs justify it." },
@@ -1501,7 +1463,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'cost',
-    lastModified: "2026-10-08",
+    lastModified: "2026-11-20",
     faqs: [
       { question: "When should I switch from Shopify to a custom website?", answer: "Do not switch from a headline threshold. Compare required experience, checkout, integrations, data, performance, current cost and operating capability. A theme optimization may solve implementation problems; headless can change the storefront while retaining Shopify commerce; fully custom transfers more responsibility." },
       { question: "How much does a custom ecommerce website cost compared to Shopify?", answer: "PandaCodeGen's planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, but commerce scope can exceed those ranges. Compare current Shopify plans, apps, fees and internal work with migration, providers, maintenance, security, support and team time." },
@@ -2056,7 +2018,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'code',
-    lastModified: "2026-10-08",
+    lastModified: "2026-11-20",
     faqs: [
       { question: "Is Elementor Pro safe to use after the August 2026 file upload flaw?", answer: "Yes, on version 4.2.2 or later. CVE-2026-32475 was an unauthenticated arbitrary file upload in Elementor Pro up to and including 4.2.1. Patchstack, which issued the CVE, rates it 9.0 out of 10 and Wordfence rates it 9.8. It was made public and fixed in 4.2.2 on 19 August 2026. A site was only reachable if it had a published Form widget with at least one File Upload field not set to required, which is the default. Exploitation began the same day, and by 2 September 2026 Wordfence had blocked more than 190,000 attempts, so what decided the outcome was whether the update had been applied. This is a security question, separate from the SEO question this article answers. Checked 8 October 2026." },
       { question: "Does Elementor hurt SEO?", answer: "Elementor does not carry one Google penalty or ranking outcome. Audit crawlability, initial and rendered content, indexing controls, metadata, canonicals, internal links, structured data, content quality, and field Core Web Vitals. Then compare Search Console around releases while accounting for other changes." },
@@ -2064,39 +2026,6 @@ export const blogPosts: BlogPost[] = [
       { question: "Which Elementor performance features should I check?", answer: "Elementor's June 2026 help page lists stable features for optimized image loading, optimized Gutenberg loading, and lazy-loaded background images, plus experimental features such as optimized control loading and element caching. Recheck current status, test on staging, and verify templates and interactions before production." },
       { question: "Can I get good Core Web Vitals with Elementor?", answer: "Possibly. The result depends on the actual implementation and visitor population. Use URL-level field data where available and repeated lab tests under a recorded profile. No theme or framework has one universal score, and a passing result does not guarantee rankings, traffic, conversions, or revenue." },
       { question: "What is the best alternative to Elementor?", answer: "The answer depends on editor workflow, required plugins, integrations, performance evidence, security, ownership, cost, and maintenance. Options include optimizing Elementor, rebuilding with a lighter WordPress approach, using another managed platform, or migrating to a custom frontend. Compare them against a written requirements and acceptance matrix." }
-    ]
-  },
-  {
-    id: "wordpress-plugins-destroy-speed",
-    cardStat: "5 layers",
-    cardStatLabel: "Frontend, server, database, jobs and third parties",
-    title: "Do WordPress Plugins Slow Your Site? A 2026 Audit Guide",
-    excerpt: "Audit plugins by measured frontend, server, database, background and third-party impact. Fix the responsible work instead of treating plugin count as a speed score.",
-    category: "Performance",
-    readTime: "12 min",
-    date: "Feb 5",
-    author: "Hassan",
-    role: "Co-founder, Lead Engineer",
-    featured: false,
-    illustrationType: 'plugins',
-    lastModified: "2026-10-08",
-    faqs: [
-      {
-        question: "Why is my WordPress site so slow?",
-        answer: "Possible causes include hosting, caching, theme work, plugins, media, database queries, background jobs and third parties. Measure representative public, authenticated and staff journeys with field, lab, server and database evidence before assigning the cause."
-      },
-      {
-        question: "How many plugins are too many for WordPress?",
-        answer: "There is no universal number. A small administrative plugin may add no visitor-facing work, while one builder or commerce extension can affect most requests. Audit capability, data, dependencies, route reach, lifecycle and measured impact."
-      },
-      {
-        question: "Can I speed up WordPress without removing plugins?",
-        answer: "Often. Update supported software, disable unused modules, load assets only where needed, optimize queries and remote calls, configure caching and schedule background work. Use controlled isolation tests and verify functional acceptance after changes."
-      },
-      {
-        question: "How much revenue am I losing from slow WordPress speed?",
-        answer: "Estimate impact from the site's dated field performance, funnel, errors, margins and affected cohorts. Control for other changes where possible. A universal loss per second or public conversion benchmark does not prove this site's revenue loss."
-      }
     ]
   },
   {
@@ -2167,8 +2096,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-slow-losing-sales",
-    title: "Slow Shopify Store Losing Sales? Build an Evidence Model",
-    excerpt: "Join route-level field performance to your funnel, build bounded opportunity scenarios, test the least disruptive remedy and separate measured outcomes from assumptions.",
+    title: "Slow Shopify Store Losing Sales? Find Where Orders Drop Off",
+    excerpt: "Find the funnel step where a slow or low-converting Shopify store loses orders, rule out other causes, and fix the cheapest thing first.",
     category: "Shopify",
     readTime: "11 min",
     date: "Feb 10",
@@ -2176,39 +2105,22 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'sales',
-    lastModified: "2026-10-08",
+    lastModified: "2026-11-20",
     faqs: [
       { question: "How much money am I losing from a slow Shopify store?", answer: "Do not multiply a universal loss-per-second statistic. Join route-level field performance to sessions, device, traffic source and funnel outcomes, then model low, central and high scenarios from your own data. Report assumptions and uncertainty." },
       { question: "Why is my Shopify store slow on mobile?", answer: "Measure representative templates and investigate theme code, sections, apps, pixels, consent, images, fonts, video, liquid work, network and platform behavior. Mobile hardware and networks often expose work that a desktop test hides, but the cause is property-specific." },
       { question: "How do I speed up my Shopify store?", answer: "Start with field and repeatable lab evidence, find the affected routes and bottlenecks, and choose the least disruptive remedy. Test theme, app, media and third-party changes before assuming a headless rebuild is required." },
-      { question: "What is the ROI of fixing Shopify speed?", answer: "ROI depends on the measured intervention cost and incremental profit attributable to it. Define a baseline, primary metric, guardrails, test period and comparison method before release. Do not treat a Lighthouse gain, public case study or scenario as proof of revenue lift." }
-    ]
-  },
-  {
-    id: "shopify-conversion-rate-speed-fix",
-    title: "Low Shopify Conversion Rate? Measure Speed in the Funnel",
-    excerpt: "Segment the Shopify funnel by route, device, traffic source, and field performance before attributing conversion changes to speed or choosing a rebuild.",
-    category: "Shopify",
-    readTime: "16 min",
-    date: "Feb 11",
-    author: "Hassan",
-    role: "Co-founder, Lead Engineer",
-    featured: false,
-    illustrationType: 'conversion',
-    lastModified: "2026-10-08",
-    faqs: [
-      { question: "Why is my Shopify conversion rate low?", answer: "A store-wide average does not identify a cause. Segment the funnel by route, device, market, product, traffic source, customer type and period, then investigate offer, pricing, inventory, merchandising, errors, checkout and performance within the affected segment." },
+      { question: "What is the ROI of fixing Shopify speed?", answer: "ROI depends on the measured intervention cost and incremental profit attributable to it. Define a baseline, primary metric, guardrails, test period and comparison method before release. Do not treat a Lighthouse gain, public case study or scenario as proof of revenue lift." },
       { question: "What is a good conversion rate for Shopify?", answer: "Use your own historical conversion rate segmented by traffic source, device, market, product, new versus returning visitors, and funnel step. Public averages mix unlike stores. Performance can contribute to friction, but it does not explain the whole conversion difference or guarantee a multiplier." },
-      { question: "How does website speed affect conversion rate?", answer: "Speed and conversion move together, which is not the same as speed causing conversion. Shopify analysed Core Web Vitals against conversion across actively-selling stores and reported that for every 100 milliseconds slower a store loads, conversion tends to be about 3.5% lower, and that stores with 2.5 second LCP report roughly 30% lower conversion than stores with 1.5 second LCP. Shopify's verbs there are correlational, and it states that conversion depends on many factors beyond speed. So it is a population correlation, not a per-store coefficient: you cannot multiply your own latency saving by 3.5% and forecast revenue from it. Join route-level field performance with segmented funnel data, test a defined intervention, and report the estimate and its uncertainty without promising a universal uplift." },
-      { question: "How do I increase my Shopify conversion rate?", answer: "Find the funnel stage and segment that changed, form a testable hypothesis, choose the least disruptive intervention and measure it with pre-defined primary and guardrail metrics. Do not treat speed, design or one public benchmark as the automatic answer." }
+      { question: "How do I increase my Shopify conversion rate?", answer: "Find the funnel stage and segment that changed, form a testable hypothesis, choose the least disruptive intervention and measure it with pre-defined primary and guardrail metrics. Do not treat speed, design or one public benchmark as the automatic answer." },
     ]
   },
   {
     id: "why-competitor-outranks-you",
     cardStat: "7",
     cardStatLabel: "Evidence groups to compare",
-    title: "Why Does My Competitor Outrank Me? An Evidence-Led SEO Gap Analysis",
-    excerpt: "Compare intent, content, crawlability, internal links, reputation, page experience and first-party search data without blaming a CMS or promising rankings.",
+    title: "Why Does My Competitor Outrank Me? Find the Gap and Fix It",
+    excerpt: "Seven gaps that let a competitor win the searches your customers make, the fix for each, and what a rebuild changed for one training school.",
     category: "SEO",
     readTime: "11 min",
     date: "Feb 15",
@@ -2216,7 +2128,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'ranking',
-    lastModified: "2026-10-08",
+    lastModified: "2026-11-20",
     faqs: [
       {
         question: "Why does my competitor rank higher on Google than me?",
@@ -2237,7 +2149,15 @@ export const blogPosts: BlogPost[] = [
       {
         question: "Can I improve WordPress SEO without rebuilding my site?",
         answer: "Often. Improve the measured content, technical, architecture, link or page-experience gap on the current site first. Migrate only when verified requirements remain blocked and the value justifies search, operational and cutover risk."
-      }
+      },
+      {
+        question: "Is a competitor outranking me costing me customers?",
+        answer: "Usually, yes. People searching for what you sell tend to contact the businesses they find first. Check which of your queries and pages lost position in Search Console, then find the gap: intent, content, crawl and indexing, internal links, reputation, page experience, or a market change."
+      },
+      {
+        question: "When does a competitor gap mean I need a new website?",
+        answer: "Only when the current site blocks something the business needs, such as online booking and payment, pages Google can render and index, or a site staff can update without a developer. Fix content, links and indexing first when those are the gap."
+      },
     ]
   },
   {
@@ -2294,7 +2214,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'performance',
-    lastModified: "2026-10-08",
+    lastModified: "2026-11-20",
     faqs: [
       {
         question: "Why is my WordPress site so slow?",
@@ -2315,7 +2235,8 @@ export const blogPosts: BlogPost[] = [
       {
         question: "Should I migrate from WordPress to something else?",
         answer: "Migrate only when measured performance, security, ownership, integration or operating requirements remain blocked after realistic fixes and a comparable total-cost case supports replacement. Preserve URLs, search output, data, workflows and rollback through a written scope."
-      }
+      },
+      { question: "Can I speed up WordPress without removing plugins?", answer: "Often. Update supported software, disable unused modules, load assets only where needed, optimize queries and remote calls, configure caching and schedule background work. Use controlled isolation tests and verify functional acceptance after changes." },
     ]
   },
   {

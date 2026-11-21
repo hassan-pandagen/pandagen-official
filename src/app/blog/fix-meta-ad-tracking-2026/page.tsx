@@ -11,6 +11,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, ComparisonGrid, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
@@ -19,9 +20,9 @@ const SignalLeakAnimation = dynamicImport(() => import("@/components/blog/Signal
 const postId = "fix-meta-ad-tracking-2026";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026";
-const title = "Meta Ad Tracking Not Working? A 2026 Diagnostic Guide";
+const title = "Meta Ad Tracking Not Working? Stop Paying for Sales You Can't See";
 const description =
-    "Match orders to Meta events, check browser and server integrations, stop duplicate events and document privacy controls. No promise of recovered attribution.";
+    "When ad tracking breaks, budget goes to the wrong campaigns. Check real orders first, then the browser and server path. Includes one school's fix.";
 
 export const dynamic = "force-static";
 
@@ -41,6 +42,9 @@ export const metadata: Metadata = {
         "checkout.liquid deprecation tracking",
         "iOS 14 Facebook ads tracking",
         "pixel vs conversions API",
+        "spending more on ads but fewer orders",
+        "ad spend up orders down",
+        "Google Ads conversion tracking wrong",
     ],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
@@ -48,7 +52,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-07-06",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-11-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/fix-meta-ad-tracking-2026")],
@@ -66,7 +70,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/fix-meta-ad-tracking-2026"),
             datePublished: "2026-07-06",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-20",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -121,6 +125,21 @@ const articleSchema = {
                     name: "WebKit: full third-party cookie blocking and more",
                     url: "https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/",
                 },
+                {
+                    "@type": "CreativeWork",
+                    name: "Google Ads: conversion columns, attribution and conversion-time reporting",
+                    url: "https://support.google.com/google-ads/answer/6270625",
+                },
+                {
+                    "@type": "CreativeWork",
+                    name: "Google Ads: enhanced conversions for web",
+                    url: "https://support.google.com/google-ads/answer/15712870",
+                },
+                {
+                    "@type": "CreativeWork",
+                    name: "Meta announcement: Pixel and Conversions API updates (April 15, 2026)",
+                    url: "https://www.facebook.com/business/news/pixel-conversionsapi-updates",
+                },
             ],
         },
         {
@@ -131,7 +150,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-07-06",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-20",
             inLanguage: "en-US",
         },
         {
@@ -166,11 +185,13 @@ export default function MetaAdTrackingGuide() {
                       <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Measurement and privacy</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Meta Ad Tracking Not Working? <span className="italic text-cognac">Diagnose the Data Path</span>
+                            Meta Ad Tracking Not Working? <span className="italic text-cognac">Find Where Your Sales Go Missing</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            If Meta reports fewer sales than your shop admin, the campaign is often fine and the
-                            data path is leaking. The leaks come in two kinds, and the difference decides what you
+                            When ad tracking breaks, you keep paying for ads but can&apos;t see which ones bring
+                            customers. The ad platform then spends your budget on the wrong people, and you may cut
+                            a campaign that was working. If Meta reports fewer sales than your shop admin, the
+                            campaign is often fine and the data path is leaking. The leaks come in two kinds, and the difference decides what you
                             are allowed to do about them. Some events are missing because the customer declined
                             tracking, and no tool should recover those. Others are missing for ordinary technical
                             reasons, an ad blocker, an expired browser cookie, a checkout page that stopped
@@ -178,7 +199,7 @@ export default function MetaAdTrackingGuide() {
                             two piles first. Everything else in this guide follows from which pile you are in.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed October 8, 2026 against current Meta, Shopify, and WebKit documentation.
+                            Updated November 20, 2026. Meta, Shopify and WebKit details reviewed October 8, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -213,6 +234,30 @@ export default function MetaAdTrackingGuide() {
                         <SignalLeakAnimation />
                     </div>
 
+                    <BlogHeader>First: fewer orders, or fewer recorded orders?</BlogHeader>
+                    <BlogText>
+                        These are different problems with different fixes. Your store or payment system tells you
+                        what customers actually bought. The ad platform tells you which of those sales it can link
+                        to an ad. If real orders are flat and only the ad dashboard dropped, the problem is
+                        measurement. If real orders dropped too, look at the campaign, the offer and the checkout
+                        before anyone touches the tracking.
+                    </BlogText>
+                    <InsightBox variant="info" label="A first check you can do in one sitting">
+                        Open your store or payment report beside the ad dashboard. Pick two equal, finished periods
+                        with time for reporting to settle, line up the time zones, and compare paid orders and
+                        revenue after refunds. In the ad report, check which date conversions are counted on, the
+                        attribution window and the counting setting. Google Ads, for example, can report a sale on
+                        the date of the ad click, while your store records the purchase date. If sales hold steady
+                        while reported conversions fall, follow the rest of this guide. If sales fall too, inspect
+                        the buying journey and campaign performance alongside tracking.
+                    </InsightBox>
+                    <BlogText>
+                        Two common causes of rising ad cost have nothing to do with tracking. The first is the
+                        auction: what you pay depends on how many other advertisers want the same audience this
+                        month, so your cost per order can rise while your site and measurement stay unchanged. The
+                        second is creative fatigue: people who have seen the same ad seven times respond less. Rule
+                        both out before paying for tracking work, because better measurement fixes neither.
+                    </BlogText>
                     <BlogHeader>Why the browser pixel loses events in the first place</BlogHeader>
                     <BlogText>
                         The pixel is a piece of JavaScript running inside someone else&apos;s browser, and browsers
@@ -286,9 +331,7 @@ export default function MetaAdTrackingGuide() {
                         A storefront normally counts completed orders. A CRM may count qualified leads. Ads Manager
                         applies its own attribution rules to events it can associate with ads. Those are different
                         questions. A mismatch alone does not prove that the Pixel is broken or that one platform has
-                        hidden a fixed percentage of sales. If the symptom is rising spend next to a falling order
-                        count, the same reconciliation sequence is set out in our guide to{" "}
-                        <Link href="/blog/spending-more-on-ads-fewer-orders-tracking" className="text-cognac hover:underline font-medium">auditing tracking when ad spend rises and orders fall</Link>.
+                        hidden a fixed percentage of sales.
                     </BlogText>
                     <BlogList
                         items={[
@@ -466,6 +509,13 @@ export default function MetaAdTrackingGuide() {
                             <Link href="/blog/meta-conversions-api-setup-cost" className="text-cognac hover:underline font-medium">what a Conversions API setup costs, cheapest route first</Link>.
                         </BlogText>
                     </div>
+                    <BlogText>
+                        In the same announcement, Meta states that &ldquo;advertisers with a Conversions API setup
+                        for web events saw an average 17.8% lower cost per result compared to those without
+                        Conversions API&rdquo;. That compares two groups of advertisers. It is not a before-and-after
+                        on one account, and advertisers who set up server tracking differ from those who did not in
+                        more ways than the tracking, so don&apos;t write it into a forecast.
+                    </BlogText>
 
                     <h3 className="mt-8 text-xl font-bold text-charcoal">Why is Shopify&apos;s setup simpler than a custom build?</h3>
                     <BlogText>
@@ -521,16 +571,46 @@ export default function MetaAdTrackingGuide() {
                         tell you. Nobody can honestly promise that a technical change will return a fixed share of your
                         conversions.
                     </BlogText>
+                    <BlogHeader>What broken tracking looked like for one school</BlogHeader>
                     <BlogText>
-                        We scope this work as part of{" "}
-                        <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">e-commerce development</Link>, the
-                        project tiers it sits in are listed on our{" "}
-                        <Link href="/pricing" className="text-cognac hover:underline font-medium">pricing page</Link>, and you can see how we
-                        build owned commerce systems in the{" "}
-                        <Link href="/work/panda-patches" className="text-cognac hover:underline font-medium">Panda Patches case study</Link>{" "}
-                        alongside the rest of our{" "}
-                        <Link href="/work" className="text-cognac hover:underline font-medium">client work</Link>. To talk through a specific
-                        store, <Link href="/contact" className="text-cognac hover:underline font-medium">get in touch</Link>.
+                        A Step Above Medical teaches phlebotomy and IV therapy classes. When we rebuilt its website
+                        and booking system, we also looked at its Google Ads account. This was Google Ads, not Meta,
+                        but the fault is the same one this guide is about: the ad platform was optimising for the
+                        wrong event.
+                    </BlogText>
+                    <BlogText data-speakable="true">{MIGRATION_PROJECT_DETAILS.aStepAboveMedical.adsFix}</BlogText>
+                    <BlogText>
+                        Meta&apos;s Conversions API works on the same principle: your server reports the real sale,
+                        so the report doesn&apos;t depend on the visitor&apos;s browser. We are not claiming the new
+                        ads produced the school&apos;s bookings. What changed is that every paid registration is now
+                        counted, so the ad budget is judged on real sales. The full project is in the{" "}
+                        <Link href="/work/a-step-above-medical" className="text-cognac hover:underline font-medium">A Step Above Medical case study</Link>.
+                    </BlogText>
+                    <BlogHeader>If you run Google Ads as well</BlogHeader>
+                    <BlogText>
+                        Google describes enhanced conversions for web as adding hashed first-party customer data to
+                        your existing conversion tracking. In April 2026 Google began merging the web and lead
+                        settings, so check your current account rather than an older tutorial. Google&apos;s consent
+                        mode also needs testing: the default consent state must be set before any measurement
+                        runs, and updated when a visitor accepts, rejects or changes their choice. Test a first
+                        visit, acceptance, rejection, a return visit and a withdrawn choice, and check the actual
+                        network requests, not just the banner.
+                    </BlogText>
+                    <BlogHeader>How we help</BlogHeader>
+                    <BlogText>
+                        Tracking breaks most often when the booking or payment happens somewhere you don&apos;t
+                        control: a third-party checkout page, a payment link sent by email, or a form that only
+                        sends an enquiry. When booking and payment run on your own site, your server knows the
+                        moment a real sale happens and can report it to Meta and Google directly, with refunds
+                        adjusted. That is how we build{" "}
+                        <Link href="/services/training-business-websites" className="text-cognac hover:underline font-medium">websites and booking systems for training providers</Link>{" "}
+                        and{" "}
+                        <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">online stores</Link>.
+                        Server-side events are included when the agreed scope names the events, the systems and
+                        how consent is handled. We don&apos;t promise a cost-per-sale or revenue result. Project
+                        tiers are on the{" "}
+                        <Link href="/pricing" className="text-cognac hover:underline font-medium">pricing page</Link>, and you can{" "}
+                        <Link href="/contact" className="text-cognac hover:underline font-medium">get in touch</Link> about a specific account.
                     </BlogText>
 
                     <BlogHeader>Primary sources</BlogHeader>
@@ -541,6 +621,10 @@ export default function MetaAdTrackingGuide() {
                         <li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Meta guidance for deduplicating Pixel and server events</a></li>
                         <li><a href="https://shopify.dev/docs/storefronts/themes/architecture/layouts/checkout-liquid" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Shopify: checkout.liquid deprecation and its dates</a></li>
                         <li><a href="https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>WebKit: full third-party cookie blocking and the seven-day storage limit</a></li>
+                        <li><a href="https://www.facebook.com/business/news/pixel-conversionsapi-updates" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Meta announcement: Pixel and Conversions API updates (April 15, 2026)</a></li>
+                        <li><a href="https://support.google.com/google-ads/answer/6270625" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Google Ads: conversion columns, attribution and conversion-time reporting</a></li>
+                        <li><a href="https://support.google.com/google-ads/answer/15712870" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Google Ads: enhanced conversions for web</a></li>
+                        <li><a href="https://developers.google.com/tag-platform/security/guides/consent" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Google: default and updated consent states</a></li>
                     </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">

@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-17",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-11-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-to-fix-slow-wordpress")],
@@ -64,7 +64,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/how-to-fix-slow-wordpress"),
             description,
             datePublished: "2026-02-17",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-20",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -135,7 +135,7 @@ export default function SlowWordPressGuide() {
                             plugins, queries, media, fonts and third parties can all contribute. That order matters: fixing an unmeasured layer is how an afternoon disappears.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed October 8, 2026 against current WordPress and Google primary guidance.
+                            Updated November 20, 2026. WordPress and Google guidance reviewed October 8, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -276,9 +276,8 @@ export default function SlowWordPressGuide() {
                         There is no safe maximum plugin count. One extension can add expensive queries, scripts or
                         remote calls; many small extensions may have little effect. In staging, profile hooks, queries,
                         assets, cron and external requests, then disable or replace one suspect at a time and repeat the
-                        same test. Preserve required security, accessibility, commerce and editorial behavior. For a
-                        keep, replace or remove scorecard, see{" "}
-                        <Link href="/blog/wordpress-plugins-destroy-speed" className={inlineLinkClass}>our guide to WordPress plugins and site speed</Link>.
+                        same test. Preserve required security, accessibility, commerce and editorial behavior. The
+                        patterns, scorecard and consolidation table below show what to look for.
                         Page builders deserve a test of their own, covered in{" "}
                         <Link href="/blog/elementor-kills-seo" className={inlineLinkClass}>how Elementor affects SEO</Link> and{" "}
                         <Link href="/blog/divi-theme-slow" className={inlineLinkClass}>how the Divi theme affects page speed</Link>.
@@ -293,6 +292,89 @@ export default function SlowWordPressGuide() {
                         DevTools console with{" "}
                         <code className="rounded bg-stone-100 px-1.5 py-0.5 text-sm">document.querySelectorAll(&quot;*&quot;).length</code>{" "}
                         and compare a builder template against a plain one on the same site.
+                    </BlogText>
+
+                    <h3 id="patterns" className="mb-4 mt-8 text-xl font-bold text-charcoal">Plugin patterns worth checking first</h3>
+                    <BlogText>
+                        These are behaviors to look for in your own trace, not a ranking of products. Any of them can
+                        be present or absent depending on version, settings and theme.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Assets enqueued unconditionally: a plugin registers its stylesheet and script on every route rather than only where its feature appears. Load a page that uses none of its functionality and see whether its files are still requested.",
+                            "Commerce assets on non-commerce routes: cart, checkout and storefront scripts loading on an About page because the store is active site-wide.",
+                            "Page builder frameworks: the builder CSS and JavaScript, plus the libraries behind carousels, dialogs and scroll effects, requested on pages that contain none of those widgets.",
+                            "Two plugins doing one job: two SEO plugins each writing their own titles, descriptions and canonical tags, or several form or share plugins running side by side.",
+                            "Embeds and iframes: social feeds, review widgets, maps, chat and video that open third-party connections on every page load and fail slowly when the third party is down.",
+                            "Maintenance work inside a visitor request: backups, scans, imports or feed fetches running on page load rather than on a real scheduler.",
+                            "A caching plugin that is not actually caching: cookies, query parameters or session handling causing a bypass on most requests, so the cache reports hits you never receive.",
+                        ]}
+                    />
+                    <BlogText>
+                        <a href="https://wordpress.org/plugins/query-monitor/" target="_blank" rel="nofollow noopener noreferrer" className={inlineLinkClass}>Query Monitor</a>{" "}
+                        is the practical instrument for the server side of this, read October 8, 2026. It reports the database
+                        queries fired during a single request with the component responsible for each, the hooks that
+                        ran, HTTP API calls made during the request, and the scripts and styles enqueued.{" "}
+                        <strong>The panel that answers the question directly is Queries → Queries by Component:</strong>{" "}
+                        it attributes query count and query time to each plugin, theme or core component for the
+                        request you just loaded, which turns &quot;something is slow&quot; into a named row you can act
+                        on. Load a representative route with it enabled on staging, read that panel, and you have
+                        attribution instead of suspicion. Pair it with the DevTools Coverage panel for the browser side, which shows
+                        how much of each delivered stylesheet and script the page actually executed.
+                    </BlogText>
+
+                    <h3 id="scorecard" className="mb-4 mt-8 text-xl font-bold text-charcoal">A keep, replace or remove scorecard</h3>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Once Query Monitor has given you per-plugin server time, you can triage instead of guess.
+                            These bands are a working convention rather than a published standard, and they are read off
+                            your own numbers, so they say nothing about anybody&apos;s product in general.
+                        </BlogText>
+                    </div>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
+                        <table className="w-full min-w-[620px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">What you measured</th><th className="p-4">Verdict</th><th className="p-4">What to do</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4 font-bold">Under ~50ms server time, actively used</td><td className="p-4">Keep</td><td className="p-4">It is earning its place. Leave it alone</td></tr>
+                                <tr><td className="p-4 font-bold">~50 to 200ms, actively used</td><td className="p-4">Replace or scope</td><td className="p-4">Look for a lighter equivalent, or load it only on the routes that need it</td></tr>
+                                <tr><td className="p-4 font-bold">Over ~200ms, or unused for 30 days</td><td className="p-4">Remove</td><td className="p-4">Deactivate, retest, and delete once nothing depends on it</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        <strong>One prioritization rule does most of the work:</strong> anything sitting in the remove
+                        column on your homepage <em>and</em> your checkout at the same time is the highest-value removal
+                        on the list, because those are the two routes where cost compounds fastest per visitor. Start
+                        there rather than at the top of an alphabetical plugin list.
+                    </BlogText>
+
+                    <h3 id="consolidate" className="mb-4 mt-8 text-xl font-bold text-charcoal">Why consolidating plugins often beats deleting one at a time</h3>
+                    <BlogText>
+                        Removing a rarely used plugin removes one feature. Collapsing several overlapping plugins into
+                        one removes an entire framework: its stylesheet, its script, its options, its scheduled tasks
+                        and its database tables in a single change. That is why a consolidation pass is normally the
+                        higher-yield use of an afternoon, provided every capability and its data survives the move.
+                    </BlogText>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
+                        <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Overlap to look for</th><th className="p-4">Consolidated outcome</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4">Two SEO plugins active together</td><td className="p-4">One retained and configured, the other exported and fully removed</td></tr>
+                                <tr><td className="p-4">Several form plugins from different eras</td><td className="p-4">One form plugin, with submissions and integrations migrated first</td></tr>
+                                <tr><td className="p-4">Multiple share or social plugins</td><td className="p-4">Share links implemented once in the theme</td></tr>
+                                <tr><td className="p-4">A slider plugin used on one page</td><td className="p-4">A CSS-only carousel or a static image, loaded only on that route</td></tr>
+                                <tr><td className="p-4">A page builder used for one static page</td><td className="p-4">Core blocks, with the builder framework no longer requested there</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        Migrate the data before you remove anything. Form entries, SEO metadata, <Link href="/blog/will-migrating-hurt-my-seo" className={inlineLinkClass}>redirect map</Link>s and
+                        subscriber lists usually live inside the plugin that owns them, and deleting the plugin can take
+                        them with it.
                     </BlogText>
 
                     <BlogHeader>Tools that make the WordPress layer measurable</BlogHeader>
@@ -388,6 +470,12 @@ export default function SlowWordPressGuide() {
 
                     <BlogHeader>SEO and business impact</BlogHeader>
                     <BlogText>
+                        A slow WordPress site costs a business in two places. Visitors on a phone give up before the
+                        page that takes the enquiry or the booking loads, and your staff lose time every week waiting
+                        on the editor and working around plugins that conflict. Fix the pages that take money or
+                        enquiries first, because that is where the cost lands.
+                    </BlogText>
+                    <BlogText>
                         Google uses Core Web Vitals within broader ranking systems but says good scores do not guarantee
                         top rankings and relevance remains fundamental. A slow experience can create friction, but there is
                         no reliable conversion-per-second rule, traffic-loss band or standard revenue figure to apply to
@@ -403,6 +491,18 @@ export default function SlowWordPressGuide() {
                         covers the other factors worth ruling out before you attribute a gap to speed.
                     </BlogText>
 
+                    <BlogHeader>How we help</BlogHeader>
+                    <BlogText>
+                        We run the measurement and plugin audit above and fix what the evidence supports, starting
+                        with the pages that take enquiries, bookings or orders. When the site keeps slowing down
+                        customers or staff after practical fixes, we rebuild it with an editor your team can use
+                        without a developer, and move the content and URLs across. See{" "}
+                        <Link href="/services/wordpress-migration" className={inlineLinkClass}>WordPress migration</Link>{" "}
+                        and{" "}
+                        <Link href="/services/wordpress" className={inlineLinkClass}>WordPress development</Link>, or the{" "}
+                        <Link href="/work/a-step-above-medical" className={inlineLinkClass}>A Step Above Medical case study</Link>{" "}
+                        for a WordPress site rebuilt with online booking behind it.
+                    </BlogText>
                     <BlogHeader>Primary sources</BlogHeader>
                     <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
                         {sources.map((source) => (

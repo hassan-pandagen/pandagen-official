@@ -168,7 +168,6 @@ export function WordPressMigrationPreview() {
         <Link href="/blog/wordpress-vs-nextjs">WordPress or Next.js: requirements and cost ↗</Link>
         <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years">What WordPress costs over three years ↗</Link>
         <Link href="/blog/how-to-fix-slow-wordpress">How to fix a slow WordPress site ↗</Link>
-        <Link href="/blog/wordpress-plugins-destroy-speed">Do WordPress plugins slow your site? ↗</Link>
         <Link href="/blog/elementor-kills-seo">Does Elementor hurt SEO? ↗</Link>
         <Link href="/blog/wordpress-traffic-drop-speed">Why WordPress traffic drops ↗</Link>
         <Link href="/blog/wordpress-ai-security-risk-2026">WordPress AI plugin security ↗</Link>

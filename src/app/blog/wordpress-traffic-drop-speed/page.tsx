@@ -244,7 +244,7 @@ export default function WordPressTrafficDropPage() {
                         Use URL Inspection on representative pages and compare rendered output with the accepted
                         baseline. Review release, hosting, plugin and incident logs. Check whether the affected page
                         groups share a template or change. Attributing work to a named component is covered in our{" "}
-                        <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">WordPress plugin audit guide</Link>.
+                        <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">WordPress plugin audit guide</Link>.
                     </BlogText>
 
                     <BlogHeader id="demand">Path three: demand or seasonality changed</BlogHeader>

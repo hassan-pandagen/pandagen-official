@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-07-03",
-        modifiedTime: "2026-10-24",
+        modifiedTime: "2026-11-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wix-migration-cost")],
@@ -72,7 +72,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/wix-migration-cost"),
             datePublished: "2026-07-03",
-            dateModified: "2026-10-24",
+            dateModified: "2026-11-20",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -105,7 +105,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-07-03",
-            dateModified: "2026-10-24",
+            dateModified: "2026-11-20",
             inLanguage: "en-US",
         },
         {
@@ -141,7 +141,7 @@ export default function WixMigrationCostPage() {
                             Wix Migration Cost: <span className="italic text-cognac">Scope the Real Move</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            A Wix migration is a rebuild rather than a transfer, and that one fact sets the price. Wix
+                            Before the price, decide what the move should get the business: bookings or orders without manual work, and pages you own. A Wix migration is a rebuild rather than a transfer, and that one fact sets the price. Wix
                             lets you export your data, but not the site itself, so the design, the page layouts and the
                             page-level SEO settings are recreated by hand on the other side. PandaCodeGen&apos;s tiers start at
                             $1,500, with Scale from $5,000 and larger work quoted after a scoping call. Page count on its own is a poor predictor of where you land.
@@ -466,6 +466,13 @@ export default function WixMigrationCostPage() {
                         ]}
                     />
 
+                    <BlogHeader>What the move should get the business</BlogHeader>
+                    <BlogText>
+                        Write down what the business should get from leaving Wix: online booking or payment instead of an enquiry form, fewer separate tools to pay for, pages your team can still edit, and no lost search traffic. If the answer is only a new look, a redesign inside Wix may be cheaper.
+                    </BlogText>
+                    <BlogText>
+                        If the answer is booking, payments and records in one place, see <Link href="/services/training-business-websites" className="text-cognac hover:underline font-medium">websites and booking systems for training providers</Link> and the <Link href="/work/a-step-above-medical" className="text-cognac hover:underline font-medium">A Step Above Medical case study</Link>.
+                    </BlogText>
                     <BlogHeader id="terms">PandaCodeGen terms</BlogHeader>
                     <BlogText>
                         A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to

@@ -19,9 +19,9 @@ const SalesImpactAnimation = dynamicImport(() => import("@/components/blog/Sales
 const postId = "shopify-slow-losing-sales";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "Slow Shopify Store Losing Sales? Build an Evidence Model";
+const title = "Slow Shopify Store Losing Sales? Find Where Orders Drop Off";
 const description =
-    "Join Shopify funnel data with route-level field performance, test a defined change and model business impact as a range instead of claiming exact lost revenue.";
+    "A slow store loses orders you already paid ads to attract. Find the funnel step that drops, rule out other causes, and fix the cheapest thing first.";
 
 export const dynamic = "force-static";
 
@@ -32,6 +32,8 @@ export const metadata: Metadata = {
     robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "slow Shopify losing sales",
+        "low Shopify conversion rate",
+        "Shopify conversion rate speed",
         "Shopify speed revenue",
         "Shopify performance ROI",
         "Shopify conversion funnel",
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-10",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-11-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-slow-losing-sales")],
@@ -79,7 +81,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-slow-losing-sales"),
             description,
             datePublished: "2026-02-10",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-20",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -146,12 +148,13 @@ export default function ShopifySlowLosingSalesPage() {
                             Slow Shopify Store Losing Sales? <span className="italic text-cognac">Build an Evidence Model</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Performance can obstruct a purchase, but no public “per second” formula can calculate your
+                            A slow Shopify store loses orders from shoppers you already paid to bring in, often on
+                            a phone, often at the product page or cart. Performance can obstruct a purchase, but no public “per second” formula can calculate your
                             store&apos;s exact loss. Join real-user performance with the affected funnel, test a defined
                             change and separate observed results from planning scenarios.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed October 8, 2026 against current Shopify and Google documentation.
+                            Updated November 20, 2026. Shopify and Google documentation reviewed October 8, 2026.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -272,6 +275,40 @@ export default function ShopifySlowLosingSalesPage() {
                             "Product-page friction before add to cart.",
                             "Cart behavior before checkout.",
                             "Checkout, payment, delivery or validation problems before purchase.",
+                        ]}
+                    />
+
+                    <h3 className="mb-4 mt-8 text-xl font-bold text-charcoal">Segment before you blame speed</h3>
+                    <BlogText>
+                        A channel mix shift can change the store average even when every segment is stable, which is why the average is the last number to trust. Cut by six dimensions before attributing anything to speed. Record which attribution model you used, because the model changes how credit is assigned across the journey.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Device type and browser.",
+                            "Country, region, market, language and currency.",
+                            "New versus returning customers.",
+                            "Traffic source, campaign and landing page.",
+                            "Product, collection, inventory state and discount.",
+                            "Consent state and major app or tag combinations.",
+                        ]}
+                    />
+
+                    <h3 className="mb-4 mt-8 text-xl font-bold text-charcoal">Separate the cart page from Shopify&apos;s checkout</h3>
+                    <BlogText>
+                        Shopify&apos;s checkout runs on Shopify&apos;s own infrastructure. On most plans you cannot
+                        modify it, which also means you are rarely the cause of its behavior. What you do control is
+                        everything a shopper passes through immediately before it: the cart drawer, the shipping and
+                        tax estimator, upsell and bundle widgets on the cart page, and any script that fires on the way
+                        to the handoff. A slow cart step is a slow checkout, because the shopper has to clear
+                        both to buy.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Establish how much of the cart-to-checkout drop happens on your cart page and how much happens after the handoff.",
+                            "Test the cart drawer separately from the cart page. Many themes ship both, and only one usually gets measured.",
+                            "Time the shipping or tax estimator. It is a network call, and shoppers read a stalled total as a broken price.",
+                            "Watch for layout shift while address and payment fields are being filled. A shift during input costs more than a shift at load.",
+                            "Record checkout errors, declines and validation failures alongside timings, because in an aggregate funnel report they look identical to a speed problem.",
                         ]}
                     />
 
@@ -416,6 +453,23 @@ export default function ShopifySlowLosingSalesPage() {
                         ]}
                     />
 
+                    <BlogHeader>Fix funnel friction that has nothing to do with speed</BlogHeader>
+                    <BlogText>
+                        Some of the drop you are investigating is layout and flow rather than load time. These changes
+                        are cheap, reversible and worth doing while you are still gathering performance evidence,
+                        because they are easy to isolate and they do not commit you to an architecture decision.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Keep the add-to-cart control reachable on long mobile product pages so a shopper who scrolls to read does not have to scroll back to buy.",
+                            "Show progress through a multi-step cart or account flow so the remaining effort is visible.",
+                            "Remove duplicate apps serving the same function. Two review widgets or three popup tools cost several script budgets for one feature.",
+                            "Serve product images in a modern format at the size the layout actually renders, rather than at upload resolution.",
+                            "Reserve space for anything that arrives late, including badges, banners, review stars and currency switchers, so the page does not move under a thumb.",
+                            "Make errors specific. A rejected discount code or an unsupported shipping destination should say so at the field, not at submission.",
+                        ]}
+                    />
+
                     <BlogHeader>Signals a rebuild is worth pricing</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
@@ -457,6 +511,36 @@ export default function ShopifySlowLosingSalesPage() {
                         published.
                     </InsightBox>
 
+                    <BlogHeader>What to check before you accept a Shopify speed quote</BlogHeader>
+                    <BlogText>
+                        Disappointing speed engagements tend to be scoping failures rather than engineering failures.
+                        A cheap quote is often cheap because it leaves these out, and you find out at handover.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Which routes are in scope, and whether cart and checkout-adjacent pages are among them.",
+                            "Which device profile, network profile and number of recorded runs the acceptance test uses.",
+                            "Which apps are kept, which are replaced, and which functionality disappears at launch.",
+                            "Who owns analytics, consent, pixels and conversion-tracking continuity through the change.",
+                            "URL, redirect, structured data and Merchant Center continuity if the storefront layer changes.",
+                            "Who owns the code, the repository and the deployment accounts after handover.",
+                            "Ongoing third-party running costs after launch: hosting, image delivery, search, reviews and monitoring.",
+                            "The rollback plan for a revenue-generating route, and who executes it.",
+                        ]}
+                    />
+
+                    <BlogHeader>How we help</BlogHeader>
+                    <BlogText>
+                        We trace the store the way this guide describes: field data on the templates that sell, the
+                        funnel step that drops, and the apps and scripts on those pages. Most stores need a cleanup,
+                        and we say so. When the constraint survives the cleanup, we scope a rebuild with a written
+                        acceptance test on named pages. See{" "}
+                        <Link href="/services/ecommerce" className="text-cognac hover:underline">e-commerce development</Link>{" "}
+                        and the{" "}
+                        <Link href="/blog/shopify-store-speed-optimization" className="text-cognac hover:underline">Shopify speed optimization guide</Link>,
+                        and the tiers on our{" "}
+                        <Link href="/pricing" className="text-cognac hover:underline">pricing page</Link>.
+                    </BlogText>
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <Calculator className="mb-4 h-7 w-7 text-amber-300" />
                         <h2 className="mb-3 text-3xl font-bold">Tell us what you have</h2>

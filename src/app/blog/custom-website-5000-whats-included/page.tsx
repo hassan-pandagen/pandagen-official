@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description: pageDescription,
         type: "article",
         publishedTime: "2026-06-14",
-        modifiedTime: "2026-10-09",
+        modifiedTime: "2026-11-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/custom-website-5000-whats-included")],
@@ -68,7 +68,7 @@ const articleSchema = {
             description: pageDescription,
             image: ogImageUrlForPath("/blog/custom-website-5000-whats-included"),
             datePublished: "2026-06-14",
-            dateModified: "2026-10-09",
+            dateModified: "2026-11-20",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -101,7 +101,7 @@ const articleSchema = {
             description: pageDescription,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-14",
-            dateModified: "2026-10-09",
+            dateModified: "2026-11-20",
             inLanguage: "en-US",
         },
         {
@@ -144,7 +144,7 @@ export default function CustomWebsite5000Page() {
                             What a Custom Website <span className="italic text-cognac">Starting at $5,000</span> Includes
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            An agency that bills by the hour can only sell you the hours a budget buys. PandaCodeGen
+                            What a custom website should buy is a site that does a job for the business, not a number of pages. An agency that bills by the hour can only sell you the hours a budget buys. PandaCodeGen
                             quotes the site: a custom Next.js site of up to 7 pages for a small business starts at $1,500, an 8 to
                             20 page site with a CMS and every old link forwarded starts at $3,500, and the Scale tier this guide
                             covers starts at $5,000, for more than 20 pages, a large catalogue, subscriptions or custom commerce logic, or more than one language. Every tier is
@@ -428,6 +428,13 @@ export default function CustomWebsite5000Page() {
                         shows it used on named firms.
                     </BlogText>
 
+                    <BlogHeader>What the money buys for the business</BlogHeader>
+                    <BlogText>
+                        Judge any quote by what the site will do once it is live: take bookings or orders without staff stepping in, send the follow-up emails, keep records in one place, and let your team edit pages without a developer. A quote that covers those saves staff time every week. A cheaper quote that leaves them out moves the cost onto your team.
+                    </BlogText>
+                    <BlogText>
+                        Our case studies show what each project included, for example <Link href="/work/a-step-above-medical" className="text-cognac hover:underline font-medium">A Step Above Medical</Link>: the website, booking, payments and a staff portal in one project.
+                    </BlogText>
                     <BlogHeader>Which tier should you start with?</BlogHeader>
                     <BlogText>
                         Start with the smallest tier that can honestly contain the required outcome and risk controls.

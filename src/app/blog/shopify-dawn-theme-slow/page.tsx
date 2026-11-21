@@ -610,7 +610,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         For the same question on the enterprise plan, see{" "}
                         <Link href="/blog/shopify-plus-still-slow" className="font-medium text-cognac hover:underline">why Shopify Plus can still be slow</Link>.
                         To reason about conversion impact with your own data rather than borrowed statistics, see{" "}
-                        <Link href="/blog/shopify-conversion-rate-speed-fix" className="font-medium text-cognac hover:underline">Shopify conversion rate and speed</Link>{" "}
+                        <Link href="/blog/shopify-slow-losing-sales" className="font-medium text-cognac hover:underline">Shopify conversion rate and speed</Link>{" "}
                         and{" "}
                         <Link href="/blog/shopify-slow-losing-sales" className="font-medium text-cognac hover:underline">is a slow Shopify store losing sales</Link>.
                         For the cost comparison over a multi-year horizon, see{" "}

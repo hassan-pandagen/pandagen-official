@@ -144,6 +144,28 @@ const nextConfig = {
         destination: '/blog/how-to-speed-up-your-website',
         permanent: true,
       },
+      // Three same-question merges, 20 Nov 2026 (Search Console, 3 months to 19 Nov:
+      // all three retired posts sat in "Crawled - currently not indexed", and each
+      // answered the same question as its survivor for the same reader). Unique,
+      // still-accurate sections and FAQs were moved into the survivor first.
+      //   spending-more-on-ads-fewer-orders-tracking (6 impressions) -> fix-meta-ad-tracking-2026 (141)
+      //   wordpress-plugins-destroy-speed (57) -> how-to-fix-slow-wordpress (449)
+      //   shopify-conversion-rate-speed-fix (53) -> shopify-slow-losing-sales (76)
+      {
+        source: '/blog/spending-more-on-ads-fewer-orders-tracking',
+        destination: '/blog/fix-meta-ad-tracking-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/wordpress-plugins-destroy-speed',
+        destination: '/blog/how-to-fix-slow-wordpress',
+        permanent: true,
+      },
+      {
+        source: '/blog/shopify-conversion-rate-speed-fix',
+        destination: '/blog/shopify-slow-losing-sales',
+        permanent: true,
+      },
       // Panda CodeLab was taken off the portfolio on 30 Sep 2026 (owner's call).
       // Old links and search results land on the work index instead of a 404.
       {

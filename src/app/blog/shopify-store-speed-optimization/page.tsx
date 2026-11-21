@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description: "Measure real Shopify performance by template, diagnose themes, apps, images, scripts, and fonts, then choose a controlled optimization or headless plan.",
         type: "article",
         publishedTime: "2026-05-12T00:00:00-05:00",
-        modifiedTime: "2026-10-01T00:00:00-05:00",
+        modifiedTime: "2026-11-20T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-store-speed-optimization",
         images: [ogImageForPath("/blog/shopify-store-speed-optimization")],
@@ -67,7 +67,7 @@ const articleSchema = {
             "description": "A practical Shopify speed optimization guide covering field and lab data, Core Web Vitals, themes, apps, images, scripts, and headless decisions.",
             "image": ogImageUrlForPath("/blog/shopify-store-speed-optimization"),
             "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-10-01T00:00:00-05:00",
+            "dateModified": "2026-11-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -114,7 +114,7 @@ const articleSchema = {
             "name": "Shopify Store Speed Optimization: What Actually Works (2026)",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-10-01T00:00:00-05:00",
+            "dateModified": "2026-11-20T00:00:00-05:00",
             "inLanguage": "en-US",
         },
         {
@@ -164,7 +164,7 @@ export default function ShopifySpeedOptimizationPage() {
                 <div className="container mx-auto px-6 mt-8 md:mt-12">
                     <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-10">
                         <p className="text-stone-700 leading-relaxed mb-6 text-lg" data-speakable="true">
-                            Speeding up a Shopify store starts with measuring it, not with installing a booster app and not with someone promising you a perfect score. Your homepage, a collection page, a product page, the cart and a blog post will all score differently, because each one loads a different set of theme sections, images, app scripts, analytics and things customers can click. You&apos;ll find the real bottleneck, improve the current theme where that&apos;s sensible, and decide whether a theme refresh or <Link href="/services/ecommerce" className={sourceLink}>headless storefront</Link> is justified by business requirements. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
+                            A slow product page or cart loses orders from shoppers you already paid to bring in. Speeding up a Shopify store starts with measuring it, not with installing a booster app and not with someone promising you a perfect score. Your homepage, a collection page, a product page, the cart and a blog post will all score differently, because each one loads a different set of theme sections, images, app scripts, analytics and things customers can click. You&apos;ll find the real bottleneck, improve the current theme where that&apos;s sensible, and decide whether a theme refresh or <Link href="/services/ecommerce" className={sourceLink}>headless storefront</Link> is justified by business requirements. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
 
                         <div className="mb-12 rounded-2xl border border-stone-200 bg-stone-50 p-5 md:p-7">
@@ -490,7 +490,7 @@ export default function ShopifySpeedOptimizationPage() {
                             <BlogHeader>Does Shopify speed work pay for itself?</BlogHeader>
 
                             <BlogText>
-                                Sometimes, and only your own numbers can tell you. Don&apos;t apply a universal conversion percentage to store revenue and call the result proven ROI. Define the intervention, date, affected templates, traffic mix, conversion event, attribution window, and confounders. Compare performance distributions and business metrics before and after the release, or run a controlled experiment when traffic and tooling permit. Our notes on <Link href="/blog/shopify-conversion-rate-speed-fix" className={sourceLink}>how a speed change relates to conversion rate</Link> and on <Link href="/blog/shopify-slow-losing-sales" className={sourceLink}>reading a slow store against its sales data</Link> set out the confounders to control for.
+                                Sometimes, and only your own numbers can tell you. Don&apos;t apply a universal conversion percentage to store revenue and call the result proven ROI. Define the intervention, date, affected templates, traffic mix, conversion event, attribution window, and confounders. Compare performance distributions and business metrics before and after the release, or run a controlled experiment when traffic and tooling permit. Our notes on <Link href="/blog/shopify-slow-losing-sales" className={sourceLink}>how a speed change relates to conversion rate</Link> and on <Link href="/blog/shopify-slow-losing-sales" className={sourceLink}>reading a slow store against its sales data</Link> set out the confounders to control for.
                             </BlogText>
 
                             <BlogText>
@@ -502,6 +502,13 @@ export default function ShopifySpeedOptimizationPage() {
                                 <p className="text-sm leading-relaxed text-stone-700">This is a diagnostic method. It does not promise a ranking, revenue increase, Lighthouse score, delivery window, or refund. Those commitments are project-specific and should be agreed in writing after the current store, required functionality, measurement environment, and launch risks are reviewed.</p>
                             </div>
 
+                            <BlogHeader>What a slow store costs, and how we help</BlogHeader>
+                            <BlogText>
+                                The cost shows up in the funnel, not in a score: shoppers who leave a slow product page on a phone, carts that stall at the shipping estimate, and ad budget spent on visits that never reach checkout. To find the step that loses people, see <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline font-medium">where a slow Shopify store loses orders</Link>.
+                            </BlogText>
+                            <BlogText>
+                                We start with the apps, scripts and images on the pages that sell, and most stores need that cleanup rather than a rebuild. When the problem survives the cleanup, we scope a rebuild with a written speed target on named pages. See <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">e-commerce development</Link> and the tiers on our <Link href="/pricing" className="text-cognac hover:underline font-medium">pricing page</Link>.
+                            </BlogText>
                             <BlogHeader>When to Hire a Shopify Performance Specialist</BlogHeader>
                     <BlogText>
                         Hire someone who will show you the evidence, not just a score, and judge them on what they put in writing. Six things a credible provider will commit to before starting: a template-level baseline separating field from lab, per-recommendation evidence naming the actual culprit, regression checks beyond performance, a rollback plan with the exact version tested, and an <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">acceptance target</Link> written into the scope, not asserted about websites in general.

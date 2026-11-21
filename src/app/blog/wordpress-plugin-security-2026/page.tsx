@@ -591,7 +591,7 @@ export default function WordPressPluginSecurity2026Page() {
                             guide to WordPress AI plugin advisories
                         </Link>{" "}
                         covers the same discipline applied to AI and MCP plugins, and{" "}
-                        <Link href="/blog/wordpress-plugins-destroy-speed" className={inlineLink}>
+                        <Link href="/blog/how-to-fix-slow-wordpress" className={inlineLink}>
                             how plugin stacks affect site speed
                         </Link>{" "}
                         covers the performance half of the same trade-off. Cloudflare pitched EmDash&apos;s sandboxed

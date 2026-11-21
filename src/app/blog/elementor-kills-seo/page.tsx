@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-10",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-11-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/elementor-kills-seo")],
@@ -60,7 +60,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/elementor-kills-seo"),
             datePublished: "2026-03-10",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-20",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -134,7 +134,7 @@ export default function ElementorSeoPage() {
                             Does Elementor Hurt SEO? <span className="italic text-cognac">Test the Site, Not the Label</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Elementor does not carry one Google penalty, PageSpeed score, or traffic loss. It can
+                            If your Elementor site is slow or hard to rank, the cost is enquiries that go to a competitor instead. Elementor does not carry one Google penalty, PageSpeed score, or traffic loss. It can
                             contribute work to the page, while the theme, plugins, hosting, media, content, links, and
                             third parties also shape performance and search results.
                         </p>
@@ -187,7 +187,7 @@ export default function ElementorSeoPage() {
                         does not decide the content&apos;s relevance, backlinks, canonical choice, internal linking,
                         search demand, competition, or every plugin&apos;s behavior. Plugin work has its own method in
                         our{" "}
-                        <Link href="/blog/wordpress-plugins-destroy-speed" className={sourceLinkClass}>WordPress plugin audit guide</Link>.
+                        <Link href="/blog/how-to-fix-slow-wordpress" className={sourceLinkClass}>WordPress plugin audit guide</Link>.
                     </BlogText>
                     <BlogText>
                         A single lab test can show what happened on one page under one profile. It cannot prove that all
@@ -438,6 +438,13 @@ export default function ElementorSeoPage() {
                         <Link href="/pricing" className={sourceLinkClass}>pricing page</Link>.
                     </BlogText>
 
+                    <BlogHeader>What it costs the business, and how we help</BlogHeader>
+                    <BlogText>
+                        Page-builder weight lands hardest on the pages a business depends on: the service pages people find through search and the contact or booking page they act on. If those are slow on a phone or hard for Google to read, the enquiry goes to the next result.
+                    </BlogText>
+                    <BlogText>
+                        We start by measuring those pages and trimming what the builder loads on them. When the builder itself is the limit, we rebuild the site with an editor your team can still use without a developer, and keep your URLs and search settings. See <Link href="/services/wordpress-migration" className="text-cognac hover:underline font-medium">WordPress migration</Link>, and the <Link href="/work/a-step-above-medical" className="text-cognac hover:underline font-medium">A Step Above Medical case study</Link> for a WordPress site rebuilt with online booking behind it.
+                    </BlogText>
                     <BlogHeader>Related reading</BlogHeader>
                     <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
                         <li><Link href="/blog/divi-theme-slow" className={sourceLinkClass}>Diagnosing a slow Divi build</Link></li>

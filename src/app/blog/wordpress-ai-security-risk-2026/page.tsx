@@ -355,7 +355,7 @@ export default function WordPressAiSecurityRiskPage() {
                     />
                     <BlogText>
                         The same inventory is useful outside security work. Our notes on{" "}
-                        <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">how plugins affect front-end performance</Link>{" "}
+                        <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">how plugins affect front-end performance</Link>{" "}
                         and on{" "}
                         <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">diagnosing a slow WordPress site</Link>{" "}
                         use the same starting list of installed software, versions and owners.

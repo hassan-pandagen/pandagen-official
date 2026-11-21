@@ -10,6 +10,8 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
+import { ASAM_SEARCH_EVIDENCE } from "@/data/asam-search-evidence";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
@@ -17,9 +19,9 @@ const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalB
 const postId = "why-competitor-outranks-you";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "Why Does My Competitor Outrank Me? An Evidence-Led SEO Gap Analysis";
+const title = "Why Does My Competitor Outrank Me? Find the Gap and Fix It";
 const description =
-    "Compare query intent, content, crawlability, internal links, reputation, page experience and your own search data without blaming a CMS or promising rankings.";
+    "Every search a competitor wins is a customer who never sees you. Find which of seven gaps is costing you, and the fix for each, with one school's rebuild.";
 
 export const dynamic = "force-static";
 
@@ -40,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-15",
-        modifiedTime: "2026-10-08",
+        modifiedTime: "2026-11-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/why-competitor-outranks-you")],
@@ -69,7 +71,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/why-competitor-outranks-you"),
             description,
             datePublished: "2026-02-15",
-            dateModified: "2026-10-08",
+            dateModified: "2026-11-20",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -133,11 +135,12 @@ export default function WhyCompetitorOutranksYouPage() {
                             Why Does My Competitor Outrank Me? <span className="italic text-cognac">Find the Actual Gap</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            A competitor outranks you because of a gap in one of seven comparable areas: query intent, content depth, crawl and indexing health, links, page experience, entity signals, or something that changed outside your site. Ranking below someone tells you that a difference exists; it does not tell you which of the seven it is. Hold everything steady and change one thing at a time: the same search, the same
+                            Every search your competitor wins is a customer who finds them first and may never
+                            see you. A competitor outranks you because of a gap in one of seven comparable areas: query intent, content depth, crawl and indexing health, links, page experience, entity signals, or something that changed outside your site. Ranking below someone tells you that a difference exists; it does not tell you which of the seven it is. Hold everything steady and change one thing at a time: the same search, the same
                             place, the same device, the same day, the same kind of result. Then make the smallest fix
                             your evidence actually supports. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed against current Google and Bing guidance on October 8, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Updated November 20, 2026. Google and Bing guidance reviewed October 8, 2026.</p>
                       </div>
                       <div data-article-hero-screen>
                         <BlogCoverFigure id="why-competitor-outranks-you" />
@@ -297,6 +300,21 @@ export default function WhyCompetitorOutranksYouPage() {
                         A competitor rarely wins on everything. Usually it is one gap in one of seven comparable areas.
                     </BlogQuote>
 
+                    <BlogHeader id="gap-fixes">Each gap, and what fixes it</BlogHeader>
+                    <BlogText>
+                        Once you know which gap it is, the fix is usually narrower than a rebuild:
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Intent: the searcher wanted a price, a comparison or a booking page and you gave them an article. Build the page the search is asking for.",
+                            "Content: your page says what everyone says. Add what only you know: your prices, your process, your results, your examples.",
+                            "Crawl and indexing: Google can't fetch or doesn't keep the page. Fix status codes, canonicals, rendering and duplicate URLs before writing anything new.",
+                            "Internal links: the page is buried. Link to it from your service pages and related posts, with anchor text that says what it is.",
+                            "Reputation: fewer reviews, mentions and accurate listings. Ask real customers for reviews and fix your business listings. Never buy links.",
+                            "Page experience: slow, jumpy or hard to use on a phone. Fix the specific pages that lose visitors, starting with the ones that take bookings or orders.",
+                            "Market change: demand, a Google update or your own tracking moved. Check those before changing anything on the site.",
+                        ]}
+                    />
                     <BlogHeader id="links">Links: compare page-level evidence, not a vendor score</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
@@ -414,17 +432,39 @@ export default function WhyCompetitorOutranksYouPage() {
                         .
                     </BlogText>
 
-                    <BlogHeader id="our-offer">PandaCodeGen&apos;s AI SEO and implementation offer</BlogHeader>
+                    <BlogHeader id="one-school">What a rebuild changed for one school</BlogHeader>
                     <BlogText>
-                        We can turn the gap analysis into a bounded implementation plan: fix crawl and rendered-output
-                        faults, strengthen pages with evidence, repair internal linking, and measure ordinary search
-                        and AI-search visibility separately. We recommend a rebuild only when the current platform
-                        blocks an accepted requirement. We do not promise rankings, traffic multipliers, revenue lift
-                        or AI citations. The recurring scope and its limits sit under{" "}
+                        A Step Above Medical teaches phlebotomy and IV therapy classes. Its old WordPress website
+                        took enquiries, and the team replied by email with a payment link. Several of the gaps above
+                        applied at once: pages that didn&apos;t match what students were searching for, and no way to
+                        book online. We rebuilt the website with a booking system and a staff portal behind it. It
+                        went live on 20 October 2026.
+                    </BlogText>
+                    <BlogText data-speakable="true">{ASAM_SEARCH_EVIDENCE.summary}</BlogText>
+                    <BlogText>
+                        The bookings are a separate measurement from the search screenshots, and we keep them apart.{" "}
+                        {MIGRATION_PROJECT_DETAILS.aStepAboveMedical.firstMonthResult} The full project, including
+                        how its ads were fixed, is in the{" "}
+                        <Link href="/work/a-step-above-medical" className="text-cognac hover:underline">
+                            A Step Above Medical case study
+                        </Link>
+                        .
+                    </BlogText>
+                    <BlogHeader id="our-offer">How we help</BlogHeader>
+                    <BlogText>
+                        We start with the gap analysis above and fix the smallest thing the evidence supports:
+                        crawl and indexing faults, pages that don&apos;t answer the search, internal links, and the
+                        pages that take bookings or orders. When the website itself is what holds the business
+                        back, such as no online booking, slow pages or staff doing by hand what the site should do,
+                        we rebuild it. For training providers that means{" "}
+                        <Link href="/services/training-business-websites" className="text-cognac hover:underline">
+                            a website and booking system in one project
+                        </Link>
+                        . We don&apos;t promise rankings, traffic, revenue or AI citations. Ongoing search work sits under{" "}
                         <Link href="/services/ai-seo" className="text-cognac hover:underline">
                             AI SEO services
                         </Link>
-                        , implementation examples are on the{" "}
+                        , and more examples are on the{" "}
                         <Link href="/work" className="text-cognac hover:underline">
                             work page
                         </Link>

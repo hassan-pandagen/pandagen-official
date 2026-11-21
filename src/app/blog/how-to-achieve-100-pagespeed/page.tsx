@@ -353,7 +353,7 @@ export default function PageSpeedProcessGuide() {
                         experiments. Record owner, purpose, consent category, load condition, transfer, performance cost
                         and failure behavior. Defer or remove only when business and compliance requirements permit it.
                         On a WordPress build the same inventory usually starts with the{" "}
-                        <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">
+                        <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">
                             plugin and script audit
                         </Link>
                         .

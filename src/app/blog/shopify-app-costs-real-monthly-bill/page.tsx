@@ -558,7 +558,7 @@ export default function ShopifyAppCostsPage() {
                         defines each one, and{" "}
                         <Link href="/blog/shopify-dawn-theme-slow" className={sourceLinkClass}>our analysis of a slow Dawn theme</Link>{" "}
                         shows how theme code and apps compound. For the revenue side of the same question, see{" "}
-                        <Link href="/blog/shopify-conversion-rate-speed-fix" className={sourceLinkClass}>how to measure speed inside the conversion funnel</Link>{" "}
+                        <Link href="/blog/shopify-slow-losing-sales" className={sourceLinkClass}>how to measure speed inside the conversion funnel</Link>{" "}
                         and{" "}
                         <Link href="/blog/shopify-slow-losing-sales" className={sourceLinkClass}>how to build a revenue-side evidence model</Link>;
                         on Plus, <Link href="/blog/shopify-plus-still-slow" className={sourceLinkClass}>the plan tier doesn&apos;t change the app arithmetic</Link>.

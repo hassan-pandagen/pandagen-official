@@ -349,7 +349,7 @@ export default function ShopifyPlusStillSlowPage() {
                         controls. Record where the delay occurs. A slow theme route does not prove checkout is slow, and
                         a payment or validation problem is not fixed by replacing the catalog frontend. The conversion
                         side of that split is examined in{" "}
-                        <Link href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline font-medium">Shopify conversion and speed diagnostics</Link>.
+                        <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline font-medium">Shopify conversion and speed diagnostics</Link>.
                     </BlogText>
 
                     <BlogHeader>5. Optimize with enterprise controls</BlogHeader>

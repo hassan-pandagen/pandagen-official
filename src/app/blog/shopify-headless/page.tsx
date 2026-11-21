@@ -583,7 +583,7 @@ export default function ShopifyHeadlessPage() {
                         <h2 className="mb-3 text-xl font-bold text-charcoal">Related reading</h2>
                         <p className="leading-relaxed text-stone-700">
                             On the storefront performance side, read{" "}
-                            <Link href="/blog/shopify-conversion-rate-speed-fix" className={inlineLinkClass}>testing storefront speed against conversion data</Link>{" "}
+                            <Link href="/blog/shopify-slow-losing-sales" className={inlineLinkClass}>testing storefront speed against conversion data</Link>{" "}
                             and{" "}
                             <Link href="/blog/shopify-slow-losing-sales" className={inlineLinkClass}>how to tell whether a slow store is costing sales</Link>.
                         </p>

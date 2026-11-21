@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         description: "What the experimental Lighthouse category checks, what its pass ratio does not prove, and a dated PandaCodeGen snapshot.",
         type: "article",
         publishedTime: "2026-06-19T00:00:00-05:00",
-        modifiedTime: "2026-10-08T00:00:00-05:00",
+        modifiedTime: "2026-11-20T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score",
         images: [ogImageForPath("/blog/agentic-browsing-pagespeed-score")],
@@ -74,7 +74,7 @@ const articleSchema = {
             "description": "A source-linked guide to Lighthouse's experimental Agentic Browsing category, its pass ratio, WebMCP requirements, and a dated PandaCodeGen snapshot.",
             "image": ogImageUrlForPath("/blog/agentic-browsing-pagespeed-score"),
             "datePublished": "2026-06-19T00:00:00-05:00",
-            "dateModified": "2026-10-08T00:00:00-05:00",
+            "dateModified": "2026-11-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -123,7 +123,7 @@ const articleSchema = {
             "description": "What Lighthouse's experimental Agentic Browsing category checks, what its pass ratio does not prove, and a dated PandaCodeGen snapshot.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-06-19T00:00:00-05:00",
-            "dateModified": "2026-10-08T00:00:00-05:00",
+            "dateModified": "2026-11-20T00:00:00-05:00",
             "inLanguage": "en-US"
         },
     ]
@@ -148,7 +148,7 @@ export default function AgenticBrowsingPage() {
                             <span className="font-serif italic text-cognac">What They Actually Prove</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            In May 2026 the Chrome team documented an experimental Lighthouse category called Agentic Browsing. It does not give you a 0-to-100 score. It tells you how many checks passed out of how many, and what each one found. This guide covers what those checks actually measure, and what they cannot tell you: whether you will rank, whether an AI will recommend you, whether people will complete a purchase, or whether you will sell more.
+                            AI assistants that browse for a buyer can only book, buy or recommend from a page they can read and use. In May 2026 the Chrome team documented an experimental Lighthouse category called Agentic Browsing. It does not give you a 0-to-100 score. It tells you how many checks passed out of how many, and what each one found. This guide covers what those checks actually measure, and what they cannot tell you: whether you will rank, whether an AI will recommend you, whether people will complete a purchase, or whether you will sell more.
                         </p>
                         <BlogAuthor
                             postId="agentic-browsing-pagespeed-score" published="2026-06-19"
@@ -237,6 +237,43 @@ export default function AgenticBrowsingPage() {
                     <BlogQuote>
                         A dated audit result proves only what that tool checked on that page, under that recorded environment. It certifies nothing about your other pages, other browsers, other agents, other tasks, or the next version.
                     </BlogQuote>
+
+                    <BlogHeader id="client-before-after">A client site: 1/2 on WordPress, 3/3 after the rebuild</BlogHeader>
+                    <BlogText>
+                        A Step Above Medical, a school that teaches phlebotomy and IV therapy classes, ran on WordPress
+                        until October 2026. Its old site passed one of the two Agentic Browsing checks that applied to it,
+                        1/2. We rebuilt it with Next.js, a content editor and a booking system, and it went live on
+                        20 October 2026.
+                    </BlogText>
+                    <BlogText data-speakable="true">
+                        The PageSpeed Insights mobile report for astepabovemed.com from 19 November 2026 shows Agentic
+                        Browsing at 3/3, with Performance 94, Accessibility 100, Best Practices 100 and SEO 100. Real-user
+                        Core Web Vitals for the site passed: Largest Contentful Paint 1.7 s, Interaction to Next Paint
+                        70 ms and Cumulative Layout Shift 0.
+                    </BlogText>
+                    <figure className="my-8">
+                        <Image
+                            src="/proof/asam-agentic-browsing-2026-11-19.png"
+                            alt="PageSpeed Insights mobile report for astepabovemed.com from November 19, 2026, showing Core Web Vitals passed and Agentic Browsing 3/3, with Performance 94, Accessibility 100, Best Practices 100 and SEO 100"
+                            width={735}
+                            height={727}
+                            sizes="(max-width: 768px) 100vw, 735px"
+                            loading="lazy"
+                            className="mx-auto w-full max-w-[735px] h-auto rounded-xl border border-stone-200"
+                        />
+                        <figcaption className="text-xs text-stone-500 mt-2 text-center">
+                            PageSpeed Insights, mobile, report from November 19, 2026, 6:37 PM, for an independent client
+                            site published with the owner&apos;s permission. The earlier 1/2 result on the WordPress site
+                            was not captured as a screenshot. Agentic Browsing measures whether an agent can read and use
+                            the page; it is not evidence of AI citations or bookings.
+                        </figcaption>
+                    </figure>
+                    <BlogText>
+                        For a business, the point is the pages that matter: the course pages and the booking flow are
+                        the ones an assistant would need to read to recommend a class or start a booking. The full
+                        project, including the booking results, is in the{" "}
+                        <Link href="/work/a-step-above-medical" className="text-cognac hover:underline font-medium">A Step Above Medical case study</Link>.
+                    </BlogText>
 
                     <BlogHeader id="does-it-lead-to-sales">Does Being AI-Readable Actually Lead to Sales?</BlogHeader>
 
@@ -592,6 +629,9 @@ export default function AgenticBrowsingPage() {
                         "Watch for one specific trigger: the point at which the WebMCP audits stop reporting Not Applicable for ordinary sites and start being scored. That is the signal that the action layer is worth building, and it costs nothing to wait for.",
                     ]} />
 
+                    <BlogText>
+                        Start with the pages that take enquiries, bookings or orders, because a failed check there is a lost customer rather than a lower score. We build sites that pass these checks as part of normal delivery; ongoing work is under <Link href="/services/ai-seo" className="text-cognac hover:underline font-medium">AI SEO services</Link>.
+                    </BlogText>
                     <BlogHeader id="bottom-line">The Bottom Line</BlogHeader>
                     <BlogText>
                         Lighthouse&apos;s experimental category is useful when treated as a versioned diagnostic. It highlights selected accessibility, stability, discoverability, and tool-registration conditions. It does not rank your site, certify every agent, or forecast business results.
@@ -625,7 +665,7 @@ export default function AgenticBrowsingPage() {
                     <section className="mb-10 mt-8 md:mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
                         <p className="text-stone-700 leading-relaxed mb-3">
-                            For an adjacent commerce protocol, see our review of <Link href="/blog/google-universal-commerce-protocol-what-it-means-for-your-store" className="text-cognac hover:underline font-medium">Google&apos;s Universal Commerce Protocol</Link>. For a separate measurement problem, read <Link href="/blog/spending-more-on-ads-fewer-orders-tracking" className="text-cognac hover:underline font-medium">how to investigate ad-tracking gaps</Link>. For the terminology used across these pieces, see the <Link href="/blog/aeo-web-performance-glossary" className="text-cognac hover:underline font-medium">AEO and web performance glossary</Link>. And for our bounded approach to AI-search eligibility, see <Link href="/ai-info" className="text-cognac hover:underline font-medium">how PandaCodeGen approaches AI search</Link>.
+                            For an adjacent commerce protocol, see our review of <Link href="/blog/google-universal-commerce-protocol-what-it-means-for-your-store" className="text-cognac hover:underline font-medium">Google&apos;s Universal Commerce Protocol</Link>. For a separate measurement problem, read <Link href="/blog/fix-meta-ad-tracking-2026" className="text-cognac hover:underline font-medium">how to investigate ad-tracking gaps</Link>. For the terminology used across these pieces, see the <Link href="/blog/aeo-web-performance-glossary" className="text-cognac hover:underline font-medium">AEO and web performance glossary</Link>. And for our bounded approach to AI-search eligibility, see <Link href="/ai-info" className="text-cognac hover:underline font-medium">how PandaCodeGen approaches AI search</Link>.
                         </p>
                     </section>
 

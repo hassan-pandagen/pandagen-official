@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: "Compare low-cost web proposals by evidence, scope, security, accessibility, SEO controls, ownership, support, and total cost.",
     type: "article",
     publishedTime: "2026-04-30T00:00:00-05:00",
-    modifiedTime: "2026-11-09T00:00:00-05:00",
+    modifiedTime: "2026-11-20T00:00:00-05:00",
     authors: ["Hassan Jamal"],
     url: "https://www.pandacodegen.com/blog/cheap-web-developer",
     images: [ogImageForPath("/blog/cheap-web-developer")],
@@ -59,7 +59,7 @@ const articleSchema = {
       description: "A due-diligence guide for comparing affordable web-development proposals without assuming price determines quality.",
       image: ogImageUrlForPath("/blog/cheap-web-developer"),
       datePublished: "2026-04-30T00:00:00-05:00",
-      dateModified: "2026-11-09T00:00:00-05:00",
+      dateModified: "2026-11-20T00:00:00-05:00",
       author: {
         "@type": "Person",
         "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -106,7 +106,7 @@ const articleSchema = {
       description: "A due-diligence guide for comparing affordable web-development proposals without assuming price determines quality.",
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       datePublished: "2026-04-30T00:00:00-05:00",
-      dateModified: "2026-11-09T00:00:00-05:00",
+      dateModified: "2026-11-20T00:00:00-05:00",
       breadcrumb: { "@id": "https://www.pandacodegen.com/blog/cheap-web-developer#breadcrumb" },
       inLanguage: "en-US",
     },
@@ -133,7 +133,7 @@ export default function CheapWebDeveloperPage() {
             <span className="font-serif italic text-cognac">How to Hire Without Getting Burned</span>
           </h1>
           <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-            Price on its own does not tell you what is included. The better question is whether two quotes even
+            A cheap website costs more later if it can&apos;t take bookings or orders, or if nobody else can change it. Price on its own does not tell you what is included. The better question is whether two quotes even
             cover the same work: the same pages, the same features, the same care over migration, the same
             security and accessibility checks, the same way of measuring performance, the same ownership at
             the end, the same support, and the same third-party costs. This guide gives you the questions to
@@ -451,6 +451,13 @@ export default function CheapWebDeveloperPage() {
             ))}
           </div>
 
+          <BlogHeader>What a cheap quote can cost the business</BlogHeader>
+          <BlogText>
+              The expensive part of a cheap website usually arrives after launch: a site that can&apos;t take payments or bookings, so staff do it by hand; a developer who holds the hosting and code, so every change costs money; and search traffic lost because nobody set up redirects from the old pages.
+          </BlogText>
+          <BlogText>
+              Ask what the site will do for the business on day one, and who owns it afterwards. Our <Link href="/work" className="text-cognac hover:underline font-medium">case studies</Link> list what each project included, and every PandaCodeGen project hands over the code and accounts.
+          </BlogText>
           <BlogHeader>How PandaCodeGen’s Starting Tiers Work</BlogHeader>
           <BlogText>
             The published tiers are planning anchors, not universal package promises. Extra pages, integrations, features, data cleanup, compliance work, and custom operations are discussed before the accepted scope is signed. For the multi-year view of what a

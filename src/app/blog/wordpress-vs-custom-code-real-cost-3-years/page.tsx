@@ -279,7 +279,7 @@ export default function WordPressVsCustomCostPage() {
                     />
                     <BlogText>
                         Two of those lines are easy to underestimate. Our notes on{" "}
-                        <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">how plugins affect front-end performance</Link>{" "}
+                        <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">how plugins affect front-end performance</Link>{" "}
                         and on{" "}
                         <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">diagnosing a slow WordPress site</Link>{" "}
                         show where the hours usually go.

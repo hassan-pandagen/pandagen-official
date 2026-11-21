@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-12",
-        modifiedTime: "2026-10-09",
+        modifiedTime: "2026-11-20",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wix-vs-custom-website")],
@@ -67,7 +67,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wix-vs-custom-website"),
             description,
             datePublished: "2026-04-12",
-            dateModified: "2026-10-09",
+            dateModified: "2026-11-20",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -134,7 +134,7 @@ export default function WixVsCustomWebsitePage() {
                             Wix vs Custom Website: <span className="italic text-cognac">Choose From Requirements</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Wix gives you the editor, hosting and business tools in one place. A custom build lets us shape the design and connect bookings, payments or customer records around your business. You will also need a developer to maintain it. Compare the features you need and the full running costs before choosing. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
+                            The question behind this comparison is usually a business one: is Wix still doing the job, or are your staff working around it? Wix gives you the editor, hosting and business tools in one place. A custom build lets us shape the design and connect bookings, payments or customer records around your business. You will also need a developer to maintain it. Compare the features you need and the full running costs before choosing. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Reviewed against current primary documentation on October 8, 2026.</p>
                       </div>
@@ -419,6 +419,13 @@ export default function WixVsCustomWebsitePage() {
                         describes how we run the move.
                     </BlogText>
 
+                    <BlogHeader>When Wix stops fitting the business</BlogHeader>
+                    <BlogText>
+                        Wix stops fitting when staff do by hand what the website should do: copying bookings into a spreadsheet, chasing payments by email, retyping customer details into another system. Each of those costs hours every week, and each is where mistakes happen.
+                    </BlogText>
+                    <BlogText>
+                        That is the point to compare a custom build that connects the site to bookings, payments and records. We did that for a training school that took enquiries through a form and replied with payment links; the <Link href="/work/a-step-above-medical" className="text-cognac hover:underline font-medium">A Step Above Medical case study</Link> shows the system. For booking-led businesses, see <Link href="/blog/class-registration-software-vs-custom-booking-system" className="text-cognac hover:underline font-medium">booking software or a custom system</Link>, and our Wix work is on <Link href="/services/wix" className="text-cognac hover:underline font-medium">Wix migration</Link>.
+                    </BlogText>
                     <BlogHeader id="offer">PandaCodeGen terms</BlogHeader>
                     <BlogText>
                         PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale.

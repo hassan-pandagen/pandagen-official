@@ -253,7 +253,7 @@ export default function WhyWeChooseNextJsPage() {
                         services, secrets and custom code. Our goal is a smaller, intentional dependency and privilege
                         surface, not a vulnerability-free or maintenance-free system. The same inventory has a
                         performance dimension, which we cover in{" "}
-                        <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">how plugins affect front-end performance</Link>.
+                        <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">how plugins affect front-end performance</Link>.
                     </BlogText>
 
                     <BlogText>
