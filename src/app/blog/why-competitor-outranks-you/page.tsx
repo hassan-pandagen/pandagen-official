@@ -472,10 +472,10 @@ export default function WhyCompetitorOutranksYouPage() {
                     </BlogText>
                     <BlogText>
                         <Link href="/services/ai-seo" className="text-cognac hover:underline">
-                            Monthly AI SEO work
+                            Our Website Care &amp; SEO Plan
                         </Link>{" "}
-                        starts from $500, with the work and monthly fee agreed from the project&apos;s size and scope
-                        before we begin.
+                        starts from $500 a month and keeps your pages, blog posts and AI-search setup current. For a site we
+                        didn&apos;t build, AI SEO work also starts from $500 a month, agreed before we begin.
                     </BlogText>
 
                     {postFAQs.length > 0 && (
