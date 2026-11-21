@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   // then websites from $1,500. Clicks were all brand searches, so the risk is low.
   title: "Websites & Business Systems | PandaCodeGen",
   description:
-    "Websites and business systems built with the founders: portals, bookings, payments and admin workflows. Custom websites from $1,500. Code you own.",
+    "The system behind your website: bookings, payments, reminders and a client portal, built to be found by Google and AI search. Websites from $1,500, systems from $10,000.",
   // Self-referencing canonical plus reciprocal hreflang to the French and
   // German versions of this page. x-default points at English.
   alternates: alternatesFor("home", "en"),
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "PandaCodeGen",
     title: "Websites & Business Systems | PandaCodeGen",
     description:
-      "Websites and business systems built with the founders: portals, bookings, payments and admin workflows. Custom websites from $1,500. Code you own.",
+      "The system behind your website: bookings, payments, reminders and a client portal, built to be found by Google and AI search. Websites from $1,500, systems from $10,000.",
     images: [
       ogImageForPath("/"),
     ],
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Websites & Business Systems | PandaCodeGen",
     description:
-      "Websites and business systems built with the founders: portals, bookings, payments and admin workflows. Custom websites from $1,500. Code you own.",
+      "The system behind your website: bookings, payments, reminders and a client portal, built to be found by Google and AI search. Websites from $1,500, systems from $10,000.",
     images: [ogImageForPath("/")],
   },
 };
