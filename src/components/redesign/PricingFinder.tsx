@@ -29,13 +29,15 @@ import { DISPLAY, T } from "@/components/redesign/tokens";
 // of Hassan's $1,300 to $1,500 range: confirm it before this is pushed.
 const PLANS = [
   { name: "Website", price: "$1,500", unit: "", body: "A custom website with a content editor you use yourself. Pay 30 / 70." },
+  // 21 Nov 2026: migration row, matching /services/wordpress-migration (Starter from $1,500).
+  { name: "Moving your website", price: "$1,500", unit: "", body: "Off WordPress, Wix, Squarespace or Shopify, with every page and post mapped and a redirect for every old URL. MC Patches moved off WordPress with us. The price depends on how many pages and posts you have." },
   {
     name: "Website + business system",
     price: "$10,000",
     unit: "",
-    body: "The website, a client portal, and the backend that runs your bookings, payments, reminders, follow-ups and accounting sync, built around how you work. Every build includes the AI-search setup, so ChatGPT and Google's AI can read and quote your answers. Starts with a free written check. Pay 30 / 40 / 30.",
+    body: "The website, a client portal, and the backend that runs your bookings, payments, reminders, follow-ups and accounting sync, built around how you work. Every build includes the AI-search setup, so ChatGPT and Google's AI can read and quote your answers. Starts with a free written check. Pay 30 / 40 / 30. The full package is usually $12,000; we reach $10,000 by leaving out parts you don't need, such as the client portal or the accounting sync.",
   },
-  { name: "Website Care & SEO Plan", price: "$500", unit: " a month", body: "Hosting, maintenance, fixes, support, 2 developer hours, blog posts and on-page SEO, and keeping your AI-search setup current. You approve every post before it goes live." },
+  { name: "Website Care & SEO Plan", price: "$500", unit: " a month", body: "Hosting, maintenance, fixes, support, 2 developer hours, 4 blog posts a month and on-page SEO, and keeping your AI-search setup current. You approve every post before it goes live." },
   { name: "SEO + Google Ads Plan", price: "$1,300", unit: " a month", body: "Everything in Care & SEO, plus Google Ads management. We send a plain write-up before changing anything, and you approve every change. Ad spend is paid to Google directly." },
 ];
 

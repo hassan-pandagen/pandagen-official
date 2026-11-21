@@ -18,6 +18,8 @@ const CHECKLIST = [
   { problem: "Ask ChatGPT who's the best in your field in your city. Did it name you?", answer: "Every build is set up so ChatGPT and Google's AI can read and quote your answers." },
   { problem: "You copy payments into your books by hand.", answer: "Payments sync to QuickBooks." },
   { problem: "Changing your website means waiting for a developer.", answer: "You edit your own pages, and your accounts are in your name." },
+  // 21 Nov 2026: the migration line, after the 58-buyer test (migration buyers asked how links and rankings are protected).
+  { problem: "Your site is slow or breaks after updates, and moving it feels risky.", answer: "We move it off WordPress, Wix, Squarespace or Shopify with a redirect for every old URL, so your pages, posts and links keep working." },
 ];
 
 export default function FeaturesTrio() {

@@ -42,7 +42,7 @@ const rows = [
   { label: "Your hours.", Icon: Clock, text: "We work US Eastern business hours, and your named lead answers your messages the same day." },
   { label: "Fixed price.", Icon: FileCheck2, text: "Scope and price agreed in writing before work starts. Changes are agreed in writing first, with the price and date effect stated." },
   { label: "Pay in stages.", Icon: Wallet, text: "Business systems are paid 30 / 40 / 30: 30% to start, 40% when you can review the working system, and the last 30% after your booking system passes a live test and the site launches." },
-  { label: "Refund.", Icon: ShieldCheck, text: "100% back if we don't deliver what's in your signed scope. We don't launch until it's tested and working." },
+  { label: "Refund.", Icon: ShieldCheck, text: "If we don't deliver your signed scope, you get 100% back, and we start the refund within 4 to 5 business days. We don't launch until it's tested and working." },
   { label: "You own it.", Icon: KeyRound, text: "Your database, content editor and Google accounts are opened in your name. On a monthly plan, hosting can run on our account so you don't pay a second fee, and we move it to yours whenever you ask. You can remove us at any time." },
   { label: "Talk to our clients.", Icon: Users, text: "Three past clients will take your call before you sign." },
   { label: "How it runs.", Icon: Route, text: "A free written check of how you work today, a written scope and price, the build, a live test of every booking and payment journey, then launch." },

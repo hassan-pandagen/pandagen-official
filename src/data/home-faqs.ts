@@ -21,7 +21,7 @@ export const homeFaqs = [
   },
   {
     q: "Do I get a refund if the project doesn't work out?",
-    a: "Yes, 100% back if we don't deliver what's in your signed scope. We don't launch until the site is tested and working. If you decide to stop partway through, we settle on the work done, as your contract sets out, and hand over everything built so far.",
+    a: "Yes. If we don't deliver your signed scope, you get 100% back, and we start the refund within 4 to 5 business days. We don't launch until the site is tested and working. If you decide to stop partway through, we settle on the work done, as your contract sets out, and hand over everything built so far.",
   },
   {
     q: "How do payments work?",
@@ -41,7 +41,7 @@ export const homeFaqs = [
   },
   {
     q: "What do your monthly plans include?",
-    a: "Both are optional. The Website Care & SEO Plan, from $500 a month, covers hosting, maintenance, fixes, support, 2 developer hours, blog posts and on-page SEO, and keeps your AI-search setup current. The SEO + Google Ads Plan, from $1,300 a month, adds Google Ads management. You approve every post and every ad change before it goes live, and ad spend is paid to Google directly.",
+    a: "Both are optional. The Website Care & SEO Plan, from $500 a month, covers hosting, maintenance, fixes, support, 2 developer hours, 4 blog posts a month and on-page SEO, and keeps your AI-search setup current. The SEO + Google Ads Plan, from $1,300 a month, adds Google Ads management. You approve every post and every ad change before it goes live, and ad spend is paid to Google directly.",
   },
   {
     // Added 10 Sep 2026. The single biggest objection to a custom-coded site is
