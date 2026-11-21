@@ -14,7 +14,6 @@ import WorkIndex from "@/components/redesign/WorkIndex";
 import WorkCard from "@/components/redesign/WorkCard";
 import HowWeWork from "@/components/redesign/HowWeWork";
 import ServicesStack from "@/components/redesign/ServicesStack";
-import ProcessSplit from "@/components/redesign/ProcessSplit";
 import TickerBand from "@/components/redesign/TickerBand";
 import ProofSection from "@/components/redesign/ProofSection";
 import FeaturesTrio from "@/components/redesign/FeaturesTrio";
@@ -24,7 +23,6 @@ import FoundersDark from "@/components/redesign/FoundersDark";
 import FaqOpen from "@/components/redesign/FaqOpen";
 import GuidesList from "@/components/redesign/GuidesList";
 import { T } from "@/components/redesign/tokens";
-import OneTeam from "@/components/redesign/OneTeam";
 
 // The homepage design; src/app/page.tsx renders it. Built 23 Sep 2026 as the
 // /preview/hero draft beside the old homepage, and moved here on 8 Oct 2026 when
@@ -96,18 +94,20 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
             className="hero-h1"
             style={{ fontFamily: "var(--display), Georgia, serif", fontWeight: condensed ? 400 : 700, color: INK, fontSize: "var(--hero-size)", lineHeight: "var(--hero-lh)", letterSpacing: "var(--hero-ls)" }}
           >
-            <span className="block text-balance">Websites and business systems</span>{" "}
+            {/* 21 Nov 2026, Imran's decision: "The system behind your website" leads, with
+                AI search as the second line (the paragraph below). */}
+            <span className="block text-balance">The system behind</span>{" "}
             <span className="block">
-              that cut <HeadingEmphasis text="manual work." phrase="manual work" />
+              <HeadingEmphasis text="your website." phrase="your website" />
             </span>
           </h1>
 
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,.85fr)_minmax(0,1.15fr)] lg:gap-12 xl:gap-16">
             <div className="min-w-0">
               <p className="max-w-[34rem] text-[18px] leading-[1.55] md:text-[20px]" style={{ color: BODY }}>
-                Work directly with Hassan and Imran on a website, customer portal or connected workflow built
-                around your business. Bring bookings, payments and day-to-day admin together, with an agreed
-                scope, clear running costs and custom code you own.
+                Bookings, payments, reminders, follow-ups and a client portal, built around how your business
+                already works, on a website made to be found by Google and AI search. Work directly with Hassan
+                and Imran, with a fixed price in writing and every account in your name.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Link
@@ -128,10 +128,10 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
                 </CalModalButton>
               </div>
               <p className="mt-6 text-[14px]" style={{ color: QUIET }}>
-                Fixed project scope · Founder-led delivery · No mandatory PandaCodeGen retainer
+                Fixed price in writing · Pay 30 / 40 / 30 · US Eastern hours · No mandatory retainer
               </p>
               <p className="mt-3 text-[14px]" style={{ color: QUIET }}>
-                Custom websites from <PriceAmount value="$1,500" />. WordPress quoted to scope.
+                Website and business systems from <PriceAmount value="$10,000" />. Custom websites from <PriceAmount value="$1,500" />.
               </p>
               {/* 13 Oct 2026, owner: the AI-referral figure as proof. The figure is read
                   from the same data file as the measurement post, rounded to whole dollars,
@@ -159,24 +159,27 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
 
       {/* 14 Nov 2026, Imran's brief: the A Step Above proof sits directly under the
           hero, and the automation section follows it. */}
-      <QuotedIn />
+      {/* 21 Nov 2026, Imran's decisions: proof, summary, checklist, terms, prices, then
+          the wider proof and reference sections. OneTeam left the homepage (the package
+          says the same; its links are in WorkIndex and SystemProof) and ProcessSplit too
+          (a short version is the "How it runs" row in HowWeWork). QuotedIn moved down
+          to sit with the proof. */}
       <SystemProof />
-      <FeaturesTrio />
       {/* Answer-first summary; it must stay in the first 30% of the page for
-          extraction, so it sits straight after the automation section. Wording updated
+          extraction, so it sits straight after the A Step Above proof. Wording updated
           14 Nov 2026 to match the new lead. */}
       <BusinessSummary />
       {/* 26 Oct 2026, owner-approved wording. "Services you hire us to deliver" keeps the
           promise to the scope bought: it doesn't say every plan covers every service. */}
       <TickerBand />
-      <WorkIndex />
-      <OneTeam />
-      <ServicesStack />
-      <ProofSection />
+      <FeaturesTrio />
       <HowWeWork />
       <PricingFinder />
-      <ProcessSplit />
+      <ProofSection />
+      <QuotedIn />
+      <WorkIndex />
       <FoundersDark />
+      <ServicesStack />
       <FaqOpen />
       <GuidesList />
     </PreviewShell>

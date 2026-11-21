@@ -1,6 +1,6 @@
 import HeadingEmphasis from "@/components/redesign/HeadingEmphasis";
 import { POST_LAUNCH_SUPPORT_SUMMARY } from "@/data/company-facts";
-import { FileCheck2, Gauge, KeyRound, LifeBuoy, PencilLine, Route, UserRound } from "lucide-react";
+import { Clock, FileCheck2, KeyRound, LifeBuoy, Route, ShieldCheck, UserRound, Users, Wallet } from "lucide-react";
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -23,13 +23,27 @@ import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 // (4.9:1), so the resting state still passes AA; on touch screens nothing dims.
 // ─────────────────────────────────────────────────────────────────────────────
 
+// 21 Nov 2026, Imran's decisions (founder brief, "Imran's decisions"): this section
+// becomes the terms block. New rows and their sources:
+//   Your hours          Imran: US Eastern hours and a same-day named lead hold for every client
+//   Pay in stages       Hassan and Imran: system builds 30 / 40 / 30, the last 30% after the live test
+//   Refund              company-facts "Refunds" (failure to deliver the signed scope).
+//                       Check the wording against the contract before this is pushed.
+//   You can remove us   Hassan: accounts opened in the client's name. Confirm every client's
+//                       hosting and database are in their own name before this is pushed.
+//   References          Imran: Etoy, Jaime and Emblematic Studio agreed to take calls
+//   How it runs         Imran: keep a short version of the process steps here
+// "Founder-built" absorbs the founders section's promise; the content-editor and
+// Lighthouse rows stay on /pricing and the service pages.
 const rows = [
   { label: "Founder-built.", Icon: UserRound, text: "Hassan leads development. Imran leads marketing and the customer journey. You work directly with the founders." },
-  { label: "Fixed scope.", Icon: FileCheck2, text: "Scope and price agreed before work starts. The written terms control the final price." },
-  { label: "Code you own.", Icon: KeyRound, text: "Source code, design files, CMS models and production accounts end up under your control." },
-  { label: "Content editor.", Icon: PencilLine, text: "Every package includes an editor built into your own site." },
-  { label: "Tested journeys.", Icon: Route, text: "Before launch, we test the agreed customer and staff journeys: forms, bookings, payments and editing, where they apply." },
-  { label: "Measured at handover.", Icon: Gauge, text: "A 90+ Lighthouse target on mobile and desktop for the pages named in your scope, checked before handover." },
+  { label: "Your hours.", Icon: Clock, text: "We work US Eastern business hours, and your named lead answers your messages the same day." },
+  { label: "Fixed price.", Icon: FileCheck2, text: "Scope and price agreed in writing before work starts. Changes are agreed in writing first, with the price and date effect stated." },
+  { label: "Pay in stages.", Icon: Wallet, text: "Business systems are paid 30 / 40 / 30: 30% to start, 40% when you can review the working system, and the last 30% after your booking system passes a live test and the site launches." },
+  { label: "Refund.", Icon: ShieldCheck, text: "100% back if we don't deliver what's in your signed scope. We don't launch until it's tested and working." },
+  { label: "You own it.", Icon: KeyRound, text: "Your hosting, database and content editor are opened in your name, with you as the owner. You can remove us; we can't remove you." },
+  { label: "Talk to our clients.", Icon: Users, text: "Three past clients will take your call before you sign." },
+  { label: "How it runs.", Icon: Route, text: "A free written check of how you work today, a written scope and price, the build, a live test of every booking and payment journey, then launch." },
   { label: "Support after launch.", Icon: LifeBuoy, text: POST_LAUNCH_SUPPORT_SUMMARY },
 ];
 
@@ -38,10 +52,10 @@ export default function HowWeWork() {
     <section aria-labelledby="how-title" className="px-6 py-10 md:px-10 md:py-20" style={{ backgroundColor: T.dark, color: T.onDark }}>
       <div className="mx-auto max-w-[1440px]">
         <p className="text-[12px] uppercase tracking-[0.16em]" style={{ fontFamily: MONO, color: T.onDarkQuiet }}>
-          What you get
+          How we work with you
         </p>
         <h2 id="how-title" className="mt-5 max-w-[18ch]" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2.6rem, 5.4vw, 5.2rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}>
-          Know what is included <HeadingEmphasis text="before we build." onDark />
+          The terms, <HeadingEmphasis text="before we build." onDark />
         </h2>
         <ul className="how-list mt-8 border-t md:mt-10" style={{ borderColor: T.onDarkRule }}>
           {rows.map(({ label, Icon, text }) => (

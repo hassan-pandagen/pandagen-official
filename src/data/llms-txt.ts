@@ -74,7 +74,7 @@ const HEADER = `# PandaCodeGen
 
 - Minimum project size: ${COMMERCIAL.find(fact => fact.label === 'Minimum project size')!.value}
 - Custom website starting prices: ${customPrices} ${fact(COMMERCIAL, 'Above that range')} WordPress builds and focused improvements are quoted to their own scope.
-- Ongoing work is separate from a build and always optional: monthly AI SEO services start at $500, and monthly support is quoted against the site and the systems connected to it. No build requires a subscription.
+- Ongoing work is separate from a build and always optional: the Website Care & SEO Plan starts at $500 a month and the SEO + Google Ads Plan at $1,300 a month (ad spend paid to Google directly). No build requires a subscription.
 - Website + operations system: ${COMMERCIAL.find(fact => fact.label === 'Website + operations system')!.value}
 - WordPress hosting migration: ${WORDPRESS_HOST_MIGRATION}
 - Hosting: ${COMMERCIAL.find(fact => fact.label === 'Hosting')!.value}

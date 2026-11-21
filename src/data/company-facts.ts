@@ -129,13 +129,16 @@ export const COMMERCIAL: readonly Fact[] = [
     // 8 Oct 2026: owner confirmed fixed pricing for agreed scope, with separately approved additions.
     { label: 'Fixed scope and changes', value: 'The price is fixed once the written scope is agreed. Additional work is priced separately and starts only after the client approves the scope and price change in writing. An expanded scope can increase the total project price.' },
     { label: 'Above that range', value: 'Quoted after a scoping call. The accepted written terms control the final price.' },
-    // 14 Nov 2026, Imran's brief: the pricing page's fourth card. No starting figure until Imran sets one.
-    { label: 'Website + operations system', value: 'Priced after a scoping call. The price is set by the user roles, booking and payment rules, integrations, data migration, training and running costs. There is no mandatory PandaCodeGen retainer.' },
+    // 14 Nov 2026, Imran's brief: the pricing page's fourth card.
+    // 21 Nov 2026, Imran's decisions: published from $10,000; the full package is quoted at
+    // $12,000 and reaches $10,000 only by removing named parts, never a plain discount.
+    { label: 'Website + operations system', value: 'From $10,000. The package covers the website, a client portal, and the backend that runs bookings, payments, reminders, follow-ups and accounting sync, plus the AI-search setup, starting with a free written check of how you work. A lower budget is met by removing named parts, such as the portal or the accounting sync; the booking core and the AI-search setup always stay. There is no mandatory PandaCodeGen retainer.' },
     { label: 'Delivery, Starter', value: '1 to 2 weeks.' },
     { label: 'Delivery, Growth', value: '2 to 4 weeks.' },
     { label: 'Delivery, Scale', value: '3 to 6 weeks. Ranges overlap on purpose: a complex Growth build can take as long as a simple Scale one, and the accepted written terms give the dates for your project.' },
     { label: 'None of these fit', value: `If none of these match what you have, call ${PHONE.display} or email info@pandacodegen.com and we will quote it.` },
-    { label: 'Ongoing services', value: 'Everything above prices a build. Ongoing work is separate and optional: monthly AI SEO services start at $500 and monthly support is quoted against the site and the systems connected to it, both scoped and priced before they begin. No build requires a subscription, and the site keeps working without one.' },
+    // 21 Nov 2026, Imran's decisions: the two monthly plans by name.
+    { label: 'Ongoing services', value: 'Everything above prices a build. Ongoing work is separate and optional. The Website Care & SEO Plan, from $500 a month, covers hosting, maintenance, fixes, support, 2 developer hours, blog posts and on-page SEO, and keeps the AI-search setup current. The SEO + Google Ads Plan, from $1,300 a month, adds Google Ads management; ad spend is paid to Google directly. The client approves every post and every ad change. No build requires a subscription, and the site keeps working without one.' },
     // 8 Oct 2026, owner: on a maintenance or SEO package, hosting on our Vercel account is
     // included if the client wants it. Outside a package the client runs it on their own hosting
     // (owner, 12 Oct 2026; replaced "agreed per client").
@@ -147,7 +150,8 @@ export const COMMERCIAL: readonly Fact[] = [
     // said 30 minutes was changed the same day.
     { label: 'Free audit', value: 'Free, with no obligation. Run the automated check at /free-audit for an on-screen report, or request a free founder review of up to three public pages, with up to three prioritized recommendations by email within 24 hours. We need your website URL and an email address to send it.' },
     { label: 'Before you commit', value: 'The first call with a founder is a free 15-minute meeting with no commitment, and you can ask questions by call or email for as long as you need before deciding. Work starts only after you accept the written proposal, and you are not billed beyond its price unless you agree to a change in writing first.' },
-    { label: 'Payment structure', value: 'A common starting structure is 30 percent at onboarding and 70 percent at the delivery milestone. The accepted project terms control each engagement.' },
+    // 21 Nov 2026, Hassan and Imran: business systems are paid 30 / 40 / 30.
+    { label: 'Payment structure', value: 'Business systems are paid in three stages: 30 percent to start, 40 percent when the working system is ready to review, and the last 30 percent after the booking system passes a live test and the site launches. Websites from $1,500 are paid 30 percent at onboarding and 70 percent at launch. The accepted project terms control each engagement.' },
     { label: 'Refunds', value: 'Refund protection is tied to failure to deliver the signed scope, not a general change-of-mind promise. Timing, exceptions and ownership consequences are documented before work begins.' },
     { label: 'Performance acceptance', value: 'A 90+ Lighthouse handover target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. It is a lab acceptance target, not a ranking, traffic, or revenue promise. Field data in the Chrome User Experience Report is measured from real visitors over 28 days and depends on their devices, networks and anything added after handover, so it is measured with the client rather than promised.' },
     // Monthly-plan sentence added 3 Oct 2026 at the owner's direction: a care

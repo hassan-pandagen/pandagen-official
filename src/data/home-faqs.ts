@@ -11,6 +11,38 @@ if (!hosting) throw new Error("Homepage FAQ requires the canonical hosting polic
  * rendered: the JSON-LD asserts them. See HomeFaqSection.tsx.
  */
 export const homeFaqs = [
+  // 21 Nov 2026, Imran's decisions: the terms and prices as questions, so the
+  // homepage FAQPage data answers what buyers and AI assistants ask. Before pushing,
+  // check the refund answer against the contract and confirm every client's accounts
+  // are in their own name.
+  {
+    q: "How much does a website with a booking and business system cost?",
+    a: "From $10,000. That covers the website, a client portal, and the backend that runs your bookings, payments, reminders, follow-ups and accounting sync, plus the AI-search setup. It starts with a free written check of how you work today. If your budget is lower, we take named parts out of the scope, such as the portal or the accounting sync; the booking core and the AI-search setup always stay. Custom websites on their own start at $1,500.",
+  },
+  {
+    q: "Do I get a refund if the project doesn't work out?",
+    a: "Yes, 100% back if we don't deliver what's in your signed scope. We don't launch until the site is tested and working. If you decide to stop partway through, we settle on the work done, as your contract sets out, and hand over everything built so far.",
+  },
+  {
+    q: "How do payments work?",
+    a: "Business systems are paid in three stages: 30% to start, 40% when you can review the working system, and the last 30% after your booking system passes a live test and the site launches. Websites from $1,500 are paid 30% to start and 70% at launch.",
+  },
+  {
+    q: "Do I own my website and accounts?",
+    a: "Yes. We open your hosting, database and content editor accounts in your name, with you as the owner, and work as invited members. You can remove us; we can't remove you. If you change teams, your website and system keep running with nothing to move.",
+  },
+  {
+    q: "What hours do you work?",
+    a: "US Eastern business hours. Your named lead answers your messages the same day.",
+  },
+  {
+    q: "Is my website set up for ChatGPT and Google's AI answers?",
+    a: "Yes. Every build includes the AI-search setup: pages that answer the questions your customers ask, the structured data search engines and AI assistants read, and a file written for AI tools. We can't promise any AI tool will quote you; we build the site so it can be found and quoted.",
+  },
+  {
+    q: "What do your monthly plans include?",
+    a: "Both are optional. The Website Care & SEO Plan, from $500 a month, covers hosting, maintenance, fixes, support, 2 developer hours, blog posts and on-page SEO, and keeps your AI-search setup current. The SEO + Google Ads Plan, from $1,300 a month, adds Google Ads management. You approve every post and every ad change before it goes live, and ad spend is paid to Google directly.",
+  },
   {
     // Added 10 Sep 2026. The single biggest objection to a custom-coded site is
     // "then I have to call a developer every time", and none of the seven

@@ -159,8 +159,9 @@ export const audienceServices: ServicePreview[] = [
       ["Review a private preview", "Test booking, payment and portal tasks on a private link with your team before launch."],
       ["Launch with training", "Get access, written instructions and a live walkthrough of the booking, roster and certificate tasks."],
     ],
-    priceTitle: "Training website and booking system cost.", price: "Priced after a scoping call",
-    priceCopy: `A course website on its own starts at ${startingPrice("Starter")}. A booking system with a staff portal is priced after a scoping call: the user roles, booking and payment rules, integrations, data migration, training and running costs set the price. The accepted proposal sets the final amount and dates.`,
+    // 21 Nov 2026, Imran's decisions: systems published from $10,000, paid 30 / 40 / 30.
+    priceTitle: "Training website and booking system cost.", price: "From $10,000",
+    priceCopy: `A course website on its own starts at ${startingPrice("Starter")}. A website with a booking system and staff portal starts at $10,000: bookings, payments, reminders, certificates, accounting sync and the AI-search setup, built around how your school runs. It's paid in three stages, 30 / 40 / 30, with the last 30% after a live booking test. The accepted proposal sets the final amount and dates.`,
     scopeNotes: [["Included work", "Pages, booking rules, portal screens and connections listed in the proposal."], ["Your accounts", "Domain, database, payment and accounting accounts in your name."], ["Your team", "Written instructions and a live walkthrough of the staff tasks."]],
     relatedService: { name: "Medical websites for practices and clinics", href: "/services/medical-website-design" },
     costs: stackCosts,

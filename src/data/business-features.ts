@@ -1,11 +1,4 @@
 // Buyer-facing automation examples and service FAQs, scoped per project.
-export const businessFeatureCopy = {
-  heading: "You run the business. We automate the busywork.",
-  intro: "An order is confirmed. A booking needs a reminder. An invoice needs sending. Tell us the steps your team repeats, and we'll build workflow automation around your business, so routine work happens without someone doing it by hand each time.",
-  costs: "Some platforms charge a subscription for these features. We can build the agreed workflow into your website or business software, with no required PandaCodeGen monthly plan. We compare the build and running costs with the apps it could replace; hosting, email delivery and connected services still have their own costs.",
-  cta: "Tell us what you repeat",
-};
-
 export const businessFeatures = [
   {
     title: "Can you automate order and booking emails?",

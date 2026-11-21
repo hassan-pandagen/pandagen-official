@@ -23,6 +23,22 @@ import { DISPLAY, T } from "@/components/redesign/tokens";
 // cleanup; both are in git history if the quiz ever moves onto /pricing.
 // ─────────────────────────────────────────────────────────────────────────────
 
+// 21 Nov 2026, Imran's decisions: the homepage shows the package and both monthly
+// plans. Published "from $10,000"; the full package is quoted at $12,000 and reaches
+// $10,000 only by removing named parts. The SEO + Google Ads plan figure is the low end
+// of Hassan's $1,300 to $1,500 range: confirm it before this is pushed.
+const PLANS = [
+  { name: "Website", price: "$1,500", unit: "", body: "A custom website with a content editor you use yourself. Pay 30 / 70." },
+  {
+    name: "Website + business system",
+    price: "$10,000",
+    unit: "",
+    body: "The website, a client portal, and the backend that runs your bookings, payments, reminders, follow-ups and accounting sync, built around how you work. Every build includes the AI-search setup, so ChatGPT and Google's AI can read and quote your answers. Starts with a free written check. Pay 30 / 40 / 30.",
+  },
+  { name: "Website Care & SEO Plan", price: "$500", unit: " a month", body: "Hosting, maintenance, fixes, support, 2 developer hours, blog posts and on-page SEO, and keeping your AI-search setup current. You approve every post before it goes live." },
+  { name: "SEO + Google Ads Plan", price: "$1,300", unit: " a month", body: "Everything in Care & SEO, plus Google Ads management. We send a plain write-up before changing anything, and you approve every change. Ad spend is paid to Google directly." },
+];
+
 export default function PricingFinder() {
   return (
     <section aria-labelledby="pricing-title" className="px-6 py-6 md:px-10 md:py-20" style={{ backgroundColor: T.paper }}>
@@ -35,9 +51,21 @@ export default function PricingFinder() {
           A <HeadingEmphasis text="clear price" phrase="clear price" /> before we build.
         </h2>
         <div className="md:col-span-6 md:col-start-6">
-          <p className="max-w-[36rem] text-[18px] leading-[1.6]" style={{ color: T.body }}>
-            Custom websites start at <PriceAmount value="$1,500" />. WordPress builds, customer portals and connected business systems
-            are quoted to their agreed scope. Your proposal names the pages, features, connections and final price before work starts.
+          <ul className="border-t" style={{ borderColor: T.rule }}>
+            {PLANS.map((p) => (
+              <li key={p.name} className="grid gap-2 border-b py-5 sm:grid-cols-[1fr_auto] sm:gap-6" style={{ borderColor: T.rule }}>
+                <div>
+                  <h3 className="text-[19px] font-semibold" style={{ color: T.ink }}>{p.name}</h3>
+                  <p className="mt-1 max-w-[36rem] text-[16px] leading-[1.6]" style={{ color: T.body }}>{p.body}</p>
+                </div>
+                <p className="text-[19px] font-semibold sm:text-right" style={{ color: T.ink }}>
+                  from <PriceAmount value={p.price} />{p.unit}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 max-w-[36rem] text-[15px] leading-[1.6]" style={{ color: T.body }}>
+            Monthly plans are optional; no build needs one to keep working. Your written proposal names every part and the final price before work starts.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link href="/pricing" className="cta-solid inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[16px] font-medium" style={{ backgroundColor: T.ink, color: T.paper }}>

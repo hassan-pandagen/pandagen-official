@@ -7,6 +7,14 @@ import { DISPLAY, T } from "@/components/redesign/tokens";
 // Owner chose the shared native accordion on 10 October 2026.
 
 const HOMEPAGE_FAQS = [
+  // 21 Nov 2026, Imran's decisions: terms and prices first.
+  "How much does a website with a booking and business system cost?",
+  "Do I get a refund if the project doesn't work out?",
+  "How do payments work?",
+  "Do I own my website and accounts?",
+  "What hours do you work?",
+  "Is my website set up for ChatGPT and Google's AI answers?",
+  "What do your monthly plans include?",
   "If the site is custom code, do I need a developer every time I want to change something?",
   "If the features are built in, is every future feature included too?",
   "Do I need your monthly plan to keep a custom feature working?",

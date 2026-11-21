@@ -38,6 +38,24 @@ export default function SystemProof() {
               <Image src="/work/a-step-above-medical-preview-homepage.png" alt="A Step Above Medical website showing medical courses, upcoming classes and online seat reservations" width={1912} height={914} sizes="(min-width: 1024px) 48vw, 100vw" className="h-auto w-full" />
               <p className="px-2 pt-3 pb-1 text-xs leading-relaxed" style={{ fontFamily: UI, color: T.quiet }}>Screenshot captured before launch; project now live.</p>
             </Link>
+            {/* 21 Nov 2026, Imran: Dillon's 6x is approved in his exact words, without
+                "revenue" or dollar amounts, beside 7 to 37 with the ads note. The counts and
+                the 27% come from migration-projects.ts. */}
+            <div className="mt-6 border p-5 md:p-6" style={{ borderColor: T.rule, backgroundColor: T.paperHi }}>
+              <p style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2rem, 3.4vw, 3rem)", lineHeight: 1.05 }}>
+                7 <span style={{ color: T.quiet }}>to</span> <span style={{ color: T.accentText }}>37</span> bookings
+              </p>
+              <p className="mt-2 text-[15px] leading-relaxed" style={{ color: T.body }}>
+                Website bookings in the 30 days before launch, then online bookings in the first 30 days on the new system.
+              </p>
+              <p className="mt-4 text-[18px] leading-[1.45]" style={{ fontFamily: BODY }}>
+                &ldquo;We did 6x technically since the business launched the new website.&rdquo;
+                <span className="mt-1 block text-sm" style={{ fontFamily: UI, color: T.body }}>{review.name}</span>
+              </p>
+              <p className="mt-3 text-xs leading-relaxed" style={{ fontFamily: UI, color: T.quiet }}>
+                The new Google Ads campaigns ran over the same period, with about 27% more ad spend.
+              </p>
+            </div>
             <figure className="mt-6 border-l-[3px] py-1 pl-6" style={{ borderColor: T.accent }}>
               <blockquote className="text-[22px] leading-[1.45] md:text-[26px]" style={{ fontFamily: BODY }}>&ldquo;{review.quote}&rdquo;</blockquote>
               <figcaption className="mt-4 text-sm leading-relaxed" style={{ fontFamily: UI, color: T.body }}>

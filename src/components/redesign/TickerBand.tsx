@@ -7,14 +7,18 @@ import { MONO, T } from "@/components/redesign/tokens";
 // copy is hidden from assistive tech, and the band stands still for reduced
 // motion and while hovered.
 
+// 21 Nov 2026, Imran's decisions: the band carries the new terms; each is stated in
+// full in HowWeWork and PricingFinder.
 const items = [
   "Founder-built",
   "Stafford, Texas",
-  "Code you own",
-  "Content editor included",
-  "Scope and price agreed before work starts",
-  "From $1,500",
-  "Measured at handover",
+  "US Eastern hours",
+  "Fixed price in writing",
+  "Pay 30 / 40 / 30",
+  "You own every account",
+  "AI-search setup in every build",
+  "Websites from $1,500",
+  "Business systems from $10,000",
 ];
 
 export default function TickerBand() {
