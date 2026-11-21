@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title, description, type: "article",
-        publishedTime: "2026-08-18", modifiedTime: "2026-11-19",
+        publishedTime: "2026-08-18", modifiedTime: "2026-11-21",
         authors: ["Hassan Jamal"], url: canonicalUrl,
         images: [ogImageForPath("/blog/ai-referral-revenue-2026")],
     },
@@ -67,7 +67,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/ai-referral-revenue-2026"),
             datePublished: "2026-08-18T00:00:00-05:00",
-            dateModified: "2026-11-19T00:00:00-05:00",
+            dateModified: "2026-11-21T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
