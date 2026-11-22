@@ -29,9 +29,17 @@ export default function RelatedPosts({
   const hub = hubForPost(currentPostId);
   const hubMates = new Set(hub ? hubPostIds(hub) : []);
 
-  const relatedPosts = getRelatedPostIds(currentPostId, orderedIds, Math.max(maxPosts * 3, 9))
+  const picked = getRelatedPostIds(currentPostId, orderedIds, Math.max(maxPosts * 3, 9))
     .sort((a, b) => Number(hubMates.has(b)) - Number(hubMates.has(a)))
-    .slice(0, maxPosts)
+    .slice(0, maxPosts);
+  // 22 Nov 2026: merging a duplicate post can leave a post with one same-hub card, which
+  // fails link_guard's 2-sibling minimum. Top up from the hub, replacing the last card.
+  // Posts that already show 2 hub mates are untouched.
+  for (const mate of hubMates) {
+    if (picked.filter(id => hubMates.has(id)).length >= 2 || picked.length < maxPosts) break;
+    if (mate !== currentPostId && !picked.includes(mate) && byId.has(mate)) picked[picked.length - 1] = mate;
+  }
+  const relatedPosts = picked
     .map(id => byId.get(id))
     .filter((p): p is (typeof blogPosts)[number] => Boolean(p));
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import StackGuide, { GuideTable, stackGuideMetadata } from "@/components/blog/StackGuide";
-import { spec } from "@/data/spec-facts";
+import { asOf, spec } from "@/data/spec-facts";
 import { startingPrice } from "@/data/company-facts";
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import { BlogList } from "@/components/ui/BlogStyles";
@@ -128,9 +128,9 @@ export default function Page() {
 
     <h2>Sources</h2>
     <BlogList items={[
-      <>{src(review.source, "SoftwareFinder review of Enrollware")}, checked 18 November 2026</>,
-      <>{src(healthcare.source, "Enrollware healthcare solutions page")}, checked 18 November 2026</>,
-      <>{src(home.source, "Enrollware home page (its own description)")}, checked 18 November 2026</>,
+      <>{src(review.source, "SoftwareFinder review of Enrollware")}, checked {asOf("enrollware-softwarefinder-review")}</>,
+      <>{src(healthcare.source, "Enrollware healthcare solutions page")}, checked {asOf("enrollware-healthcare")}</>,
+      <>{src(home.source, "Enrollware home page (its own description)")}, checked {asOf("enrollware-home")}</>,
       <><Link href="/work/a-step-above-medical">A Step Above Medical case study</Link>, including Dillon Lynch&apos;s Clutch review of 25 October 2026</>,
     ]} />
   </StackGuide>;

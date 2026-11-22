@@ -1759,6 +1759,33 @@
       "verifiedAt": "2026-11-18",
       "reviewDays": 90,
       "source": "https://www.enrollwaresolutions.com/"
+    },
+    "orbit-media-ai-lead-rate": {
+      "vendor": "Orbit Media",
+      "label": "AI search visitors' lead conversion against other organic traffic",
+      "value": "about 3x",
+      "qualifier": "B2B and service sites in Orbit Media's study",
+      "verifiedAt": "2026-11-21",
+      "reviewDays": 180,
+      "source": "https://www.orbitmedia.com/blog/conversion-rates-ai-search/"
+    },
+    "clarity-ai-conversion": {
+      "vendor": "Microsoft Clarity",
+      "label": "AI visitors' sign-up and subscription rates",
+      "value": "higher than search, direct or social",
+      "qualifier": "more than 1,200 publisher and news sites; AI sent less than 1% of their traffic",
+      "verifiedAt": "2026-11-21",
+      "reviewDays": 180,
+      "source": "https://clarity.microsoft.com/blog/ai-traffic-converts-at-3x-the-rate-of-other-channels-study/"
+    },
+    "hamburg-chatgpt-ecommerce": {
+      "vendor": "University of Hamburg",
+      "label": "ChatGPT referral conversion against Google search",
+      "value": "lower than Google search",
+      "qualifier": "973 online stores",
+      "verifiedAt": "2026-11-21",
+      "reviewDays": 180,
+      "source": "https://www.bwl.uni-hamburg.de/en/ueber-die-fakultaet/aktuelles/2025/1106-chatgpt-und-e-commerce.html"
     }
   }
 }

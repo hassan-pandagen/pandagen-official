@@ -10,6 +10,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogHighlight, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { asOf } from "@/data/spec-facts";
 import {
     rows, aiRows, aiOrders, aiRevenue, totalOrders, totalRevenue, aiShareOfAll,
     siteAov, aov, row, usd, pct, chatgptVsGoogleAds,
@@ -399,19 +400,19 @@ export default function AiReferralRevenuePage() {
                         <a href="https://www.orbitmedia.com/blog/conversion-rates-ai-search/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
                             visitors from AI were about 3x more likely to become leads
                         </a>{" "}
-                        than other organic traffic (checked 21 Nov 2026). Google still sent those sites about 100 times
+                        than other organic traffic (checked {asOf("orbit-media-ai-lead-rate")}). Google still sent those sites about 100 times
                         more traffic than ChatGPT. Microsoft Clarity studied more than 1,200 publisher and news sites
                         and found that{" "}
                         <a href="https://clarity.microsoft.com/blog/ai-traffic-converts-at-3x-the-rate-of-other-channels-study/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
                             AI visitors signed up and subscribed at higher rates
                         </a>{" "}
                         than visitors from search, direct or social, though AI sent less than 1% of their traffic
-                        (checked 21 Nov 2026). The biggest ecommerce study we found points the other way. Across 973
+                        (checked {asOf("clarity-ai-conversion")}). The biggest ecommerce study we found points the other way. Across 973
                         online stores,{" "}
                         <a href="https://www.bwl.uni-hamburg.de/en/ueber-die-fakultaet/aktuelles/2025/1106-chatgpt-und-e-commerce.html" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
                             ChatGPT referrals converted worse than Google search
                         </a>{" "}
-                        (checked 21 Nov 2026). Results differ by business type, so check your own numbers before you
+                        (checked {asOf("hamburg-chatgpt-ecommerce")}). Results differ by business type, so check your own numbers before you
                         move budget.
                     </BlogText>
 
