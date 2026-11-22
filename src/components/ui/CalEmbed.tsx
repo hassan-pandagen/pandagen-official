@@ -53,11 +53,14 @@ export default function CalEmbed() {
         const uid = event.detail.data.uid;
         if (uid && trackedBookings.current.has(uid)) return;
         if (uid) trackedBookings.current.add(uid);
-        // The booking ID is used only in memory for deduplication, never sent.
+        // The booking ID also deduplicates repeat events in memory.
         if (hasConsent("analytics")) trackGAEvent("cal_booking", { form_id: "discovery_calendar" });
         // 18 Nov 2026: Meta ads need a booked-call conversion. trackFBEvent sends nothing
         // unless the visitor accepted marketing cookies and the pixel has loaded.
-        trackFBEvent("Schedule", { content_name: "discovery_calendar" });
+        // 22 Nov 2026: the CRM sends this booking's server Lead and Schedule with the booking
+        // uid as event id, so the browser uses the same id and Meta counts each once.
+        trackFBEvent("Lead", { content_name: "discovery_calendar" }, uid);
+        trackFBEvent("Schedule", { content_name: "discovery_calendar" }, uid);
       };
       cal("on", { action: "bookingSuccessfulV2", callback: onBooking });
       unsubscribe = () => cal("off", { action: "bookingSuccessfulV2", callback: onBooking });
