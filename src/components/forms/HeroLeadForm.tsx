@@ -7,7 +7,7 @@ import { PHONE } from "@/data/company-facts";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
 import { useSubmission } from "@/hooks/useSubmission";
-import { submitQuoteLead } from "@/lib/forms/submitQuoteLead";
+import { QuoteLeadError, submitQuoteLead } from "@/lib/forms/submitQuoteLead";
 import type { LeadFormCopy } from "@/lib/i18n/dictionaries/types";
 
 const englishCopy: LeadFormCopy = {
@@ -30,6 +30,7 @@ const englishCopy: LeadFormCopy = {
   directBody: "Both reach the founders directly.",
   bookLabel: "Book a 15-minute call",
   errorFallback: `We could not send your request. Please email info@pandacodegen.com or call ${PHONE.display}.`,
+  errorRateLimited: "Too many quote requests. Please try again later.",
   honeypotLabel: "Leave this field empty",
   replyNote:
     "A founder replies, usually within one business day. Every message gets an answer, whether or not it turns into a quote.",
@@ -97,9 +98,19 @@ export default function HeroLeadForm({
       formFunnel.markSubmitted();
       submission.succeed(attempt);
     } catch (submissionError) {
-      formFunnel.markSubmitError("network_or_server");
-      // Server errors are English only, so French and German pages show their own fallback.
-      submission.fail(attempt, locale === "en" && submissionError instanceof Error ? submissionError.message : copy.errorFallback);
+      const rateLimited = submissionError instanceof QuoteLeadError && submissionError.status === 429;
+      formFunnel.markSubmitError(rateLimited ? "rate_limited" : "network_or_server");
+      // Server errors are English only, so French and German pages show their own copy.
+      // A 429 is the one refusal the visitor can act on, and the generic fallback sends
+      // them to email instead of telling them to retry, so it gets its own line (22 Nov 2026).
+      submission.fail(
+        attempt,
+        rateLimited
+          ? copy.errorRateLimited
+          : locale === "en" && submissionError instanceof Error
+            ? submissionError.message
+            : copy.errorFallback
+      );
     }
   };
 

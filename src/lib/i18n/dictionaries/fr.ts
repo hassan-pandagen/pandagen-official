@@ -784,6 +784,8 @@ const fr: Dictionary = {
     directBody:
       "Écrivez-nous ou réservez un appel. Les deux arrivent directement aux fondateurs, pas à un service commercial.",
     bookLabel: "Réserver un appel de 15 minutes",
+    errorRateLimited:
+      "Trop de demandes de devis. Merci de réessayer dans un moment.",
     errorFallback: `Nous n'avons pas pu envoyer votre demande. Écrivez-nous à info@pandacodegen.com ou appelez le ${PHONE.display}.`,
     honeypotLabel: "Laissez ce champ vide",
     replyNote:

@@ -214,6 +214,8 @@ export interface LeadFormCopy {
   directBody: string;
   bookLabel: string;
   errorFallback: string;
+  /** Shown when the route refuses with 429. The visitor should retry, not email. */
+  errorRateLimited: string;
   honeypotLabel: string;
   /** Notes that the team replies in this language. */
   replyNote: string;

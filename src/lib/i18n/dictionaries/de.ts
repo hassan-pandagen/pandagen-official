@@ -784,6 +784,8 @@ const de: Dictionary = {
     directBody:
       "Schreiben Sie uns oder buchen Sie einen Termin. Beides erreicht die Gründer direkt, nicht ein Vertriebsteam.",
     bookLabel: "15-Minuten-Gespräch buchen",
+    errorRateLimited:
+      "Zu viele Anfragen. Bitte versuchen Sie es in Kürze erneut.",
     errorFallback: `Wir konnten Ihre Anfrage nicht senden. Bitte schreiben Sie an info@pandacodegen.com oder rufen Sie ${PHONE.display} an.`,
     honeypotLabel: "Dieses Feld bitte leer lassen",
     replyNote:

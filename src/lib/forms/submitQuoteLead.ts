@@ -8,6 +8,24 @@ import { appendLeadContext, quoteErrorMessage } from "@/lib/forms/leadPayload";
 import type { LeadSource } from "@/lib/forms/leadSources";
 import { localeFromPathname } from "@/lib/i18n/config";
 
+/**
+ * Carries the route's status alongside its message.
+ *
+ * A refusal the visitor can retry (429) and one they cannot (500) need different
+ * copy, and the status was being dropped at the throw, so every locale page that
+ * cannot show the English server text told a rate-limited visitor their message
+ * had failed for good. See HeroLeadForm's catch.
+ */
+export class QuoteLeadError extends Error {
+  readonly status: number;
+
+  constructor(message: string, status: number) {
+    super(message);
+    this.name = "QuoteLeadError";
+    this.status = status;
+  }
+}
+
 export interface QuoteLeadOptions {
   /** Which form this is, for the CRM. */
   source: LeadSource;
@@ -30,7 +48,7 @@ export interface QuoteLeadOptions {
  * drifted: the chat's inline form sent no event id, so the CRM dropped its leads, and the
  * contact page never fired `quote_submit`. A new form calls this too, so it cannot forget.
  *
- * Throws an Error carrying the route's message when the route refuses. Returns quietly when
+ * Throws a QuoteLeadError carrying the route's message and status when the route refuses. Returns quietly when
  * `signal` was aborted after the route answered, without firing anything, because the caller
  * has already moved on.
  */
@@ -47,7 +65,7 @@ export async function submitQuoteLead(formData: FormData, options: QuoteLeadOpti
 
   const response = await fetch("/api/submit-quote", { method: "POST", body: formData, signal: options.signal });
   if (options.signal?.aborted) return;
-  if (!response.ok) throw new Error(await quoteErrorMessage(response, options.fallbackError));
+  if (!response.ok) throw new QuoteLeadError(await quoteErrorMessage(response, options.fallbackError), response.status);
 
   trackFBEvent("Lead", { ...options.pixel, value: 0, currency: "USD" }, eventId);
   trackGAEvent("quote_submit", options.ga);
