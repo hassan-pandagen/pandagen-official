@@ -589,10 +589,12 @@ function checkMobileCheckout(html: string): DeepCheckResult {
   // writes about Shopify/WooCommerce is not a store. Require real storefront signals:
   // a cart/checkout link or button, Product/Offer schema, or an add-to-cart control.
   const hasCartLink = /href=["'][^"']*\/(cart|checkout|basket)\b/i.test(html);
-  const hasAddToCart = /(add[\s-]*to[\s-]*cart|add[\s-]*to[\s-]*bag|add[\s-]*to[\s-]*basket)/i.test(html)
-    && /<button|type=["']submit["']|class=["'][^"']*(add-to-cart|product-form|buy)/i.test(html);
+  // 22 Nov 2026: our own homepage was flagged as a store because a blog title read
+  // "Add to Cart" and a services list read "WooCommerce". Both signals now need markup:
+  // the words inside a button or link, and the platform inside an asset URL.
+  const hasAddToCart = /<(button|a)\b[^>]*>\s*(<[^>]+>\s*)*add[\s-]*to[\s-]*(cart|bag|basket)|value=["']add[\s-]*to[\s-]*(cart|bag|basket)|class=["'][^"']*(add-to-cart|product-form)/i.test(html);
   const hasProductSchema = /"@type"\s*:\s*"(Product|Offer|AggregateOffer)"/i.test(html);
-  const hasStorePlatform = /cdn\.shopify\.com|shopify\.com\/s\/|woocommerce|wp-content\/plugins\/woocommerce|cdn\.bigcommerce|squarespace.*commerce/i.test(html);
+  const hasStorePlatform = /(src|href)=["'][^"']*(cdn\.shopify\.com|shopify\.com\/s\/|wp-content\/plugins\/woocommerce|cdn\.bigcommerce|squarespace[^"']*commerce)/i.test(html);
   const ecomSignals = [hasCartLink, hasAddToCart, hasProductSchema, hasStorePlatform].filter(Boolean).length;
   const isEcommerce = ecomSignals >= 1;
 

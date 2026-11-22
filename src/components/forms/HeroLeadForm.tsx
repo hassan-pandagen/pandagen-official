@@ -98,7 +98,8 @@ export default function HeroLeadForm({
       submission.succeed(attempt);
     } catch (submissionError) {
       formFunnel.markSubmitError("network_or_server");
-      submission.fail(attempt, submissionError instanceof Error ? submissionError.message : copy.errorFallback);
+      // Server errors are English only, so French and German pages show their own fallback.
+      submission.fail(attempt, locale === "en" && submissionError instanceof Error ? submissionError.message : copy.errorFallback);
     }
   };
 
