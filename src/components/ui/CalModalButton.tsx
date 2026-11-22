@@ -3,6 +3,7 @@
 import { useCallback, ReactNode } from "react";
 import { useConsent } from "@/components/consent/ConsentProvider";
 import { CAL_LINK, requestBookingAfterConsent } from "@/lib/booking";
+import { bookingMetadataConfig } from "@/lib/bookingMetadata";
 
 interface CalModalButtonProps {
   children: ReactNode;
@@ -39,11 +40,11 @@ export default function CalModalButton({ children, className, fallbackHref }: Ca
       openPreferences("calendar");
       return;
     }
-    const { getCalApi } = await import("@calcom/embed-react");
+    const [{ getCalApi }, metadata] = await Promise.all([import("@calcom/embed-react"), bookingMetadataConfig()]);
     const cal = await getCalApi({ namespace: "discovery" });
     cal("modal", {
       calLink: CAL_LINK,
-      config: { layout: "month_view" },
+      config: { layout: "month_view", ...metadata },
     });
   }, [allowed, openPreferences, fallbackHref]);
 

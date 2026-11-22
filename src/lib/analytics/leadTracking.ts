@@ -43,12 +43,18 @@ function readCookie(name: string): string {
 
 export function appendLeadTracking(formData: FormData, source: LeadSource): { eventId: string } {
   const eventId = newEventId();
+  if (eventId) formData.append("eventId", eventId);
+  formData.append("leadSource", source);
+  appendClickTracking(formData);
+  return { eventId };
+}
+
+/** Consent, click ids, UTMs and Meta cookies. A booked call sends these without a lead source. */
+export function appendClickTracking(formData: FormData): void {
   const put = (key: string, value: string | undefined) => {
     if (value) formData.append(key, value);
   };
 
-  put("eventId", eventId);
-  put("leadSource", source);
   formData.append("marketingConsent", hasConsent("marketing") ? "1" : "0");
 
   const ids = readClickIds();
@@ -67,6 +73,4 @@ export function appendLeadTracking(formData: FormData, source: LeadSource): { ev
   put("fbp", readCookie("_fbp"));
   const fbc = readCookie("_fbc") || (ids.fbclid ? `fb.1.${ids.fbclid_at ?? Date.now()}.${ids.fbclid}` : "");
   put("fbc", fbc);
-
-  return { eventId };
 }

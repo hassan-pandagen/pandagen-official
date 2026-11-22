@@ -30,6 +30,7 @@ function harness(file) {
     // The real trackFBEvent checks marketing consent itself; this stub records the call.
     '@/components/FacebookPixel': { trackFBEvent: (...args) => fbEvents.push(args) },
     '@calcom/embed-react': { getCalApi: async () => cal },
+    '@/lib/bookingMetadata': { bookingMetadataConfig: async () => ({}) },
     '@/lib/booking': { CAL_LINK: 'pandagen/discovery', CAL_BOOKING_URL: 'https://cal.com/pandagen/discovery', requestBookingAfterConsent() {}, takePendingBooking: () => false },
   };
   const exports = {};

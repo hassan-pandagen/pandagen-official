@@ -5,6 +5,7 @@ import { hasConsent, useConsent } from "@/components/consent/ConsentProvider";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
 import { trackFBEvent } from "@/components/FacebookPixel";
 import { CAL_LINK, requestBookingAfterConsent, takePendingBooking } from "@/lib/booking";
+import { bookingMetadataConfig } from "@/lib/bookingMetadata";
 
 export default function CalEmbed() {
   const { preferences, openPreferences } = useConsent();
@@ -75,7 +76,7 @@ export default function CalEmbed() {
       });
 
       if (takePendingBooking()) {
-        cal("modal", { calLink, config: { layout: "month_view" } });
+        cal("modal", { calLink, config: { layout: "month_view", ...(await bookingMetadataConfig()) } });
       }
     }
 
