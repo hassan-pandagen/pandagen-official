@@ -73,6 +73,9 @@ function ProjectPreview({ href, className = "" }: { href: string; className?: st
 
 export default function ProofSection() {
   const featured = CLIENT_REVIEWS.find((r) => r.id === FEATURED)!;
+  const featuredProject = featured.caseStudy;
+  const featuredImage = featuredProject && SITE_IMAGE_BY_CASE[featuredProject];
+  const featuredSite = featuredProject && SITE_BY_CASE[featuredProject];
   const rest = GRID_ORDER.map((id) => CLIENT_REVIEWS.find((r) => r.id === id)!);
 
   return (
@@ -111,34 +114,50 @@ export default function ProofSection() {
           </div>
         </div>
 
-        {/* Featured quote, set large. */}
-        <figure data-featured-review className="mt-8 border-t pt-6 md:mt-16 md:pt-12" style={{ borderColor: T.rule }}>
-          <blockquote
-            className="max-w-[30ch]"
-            style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "clamp(1.4rem, 3.6vw, 3.4rem)", lineHeight: 1.35, letterSpacing: "-0.015em", textWrap: "pretty" }}
-          >
-            <span aria-hidden="true" style={{ color: T.accent }}>&ldquo;</span>
-            {featured.quote}
-            <span aria-hidden="true" style={{ color: T.accent }}>&rdquo;</span>
-          </blockquote>
-          <figcaption className="mt-5 flex flex-col items-start gap-2 text-[15px] md:mt-8 md:flex-row md:flex-wrap md:items-center md:gap-x-6" style={{ color: T.body }}>
-            <span style={{ color: T.ink, fontWeight: 600 }}>{featured.name}</span>
-            <a className="proof-text-link" href={featured.href} target="_blank" rel="noopener noreferrer" style={{ color: T.accentText }}>
-              {featured.platform}, {featured.date}
-              <span className="sr-only"> (opens in a new tab)</span>
-            </a>
-            <span className="text-[12px] font-semibold uppercase leading-relaxed tracking-[0.06em]" style={{ fontFamily: MONO, color: T.body }}>
-              {badge(featured)}
-            </span>
-            {featured.caseStudy && (
-              <Link className="proof-text-link inline-flex min-h-11 items-center gap-2 font-semibold" href={featured.caseStudy} style={{ color: T.accentText }}>
-                Website: {SITE_BY_CASE[featured.caseStudy] ?? "the project"}
-                <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
-            )}
-          </figcaption>
-          {featured.caseStudy && <ProjectPreview href={featured.caseStudy} />}
-        </figure>
+        <div data-featured-review className="mt-8 grid items-center gap-7 border-t pt-7 md:mt-12 md:pt-10 lg:grid-cols-2 lg:gap-10 xl:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] xl:gap-14" style={{ borderColor: T.rule }}>
+          <figure className="min-w-0">
+            <blockquote
+              className="max-w-[32ch]"
+              style={{ fontFamily: BODY, fontWeight: 700, color: T.ink, fontSize: "clamp(1.5rem, 2.45vw, 2.6rem)", lineHeight: 1.3, letterSpacing: "-0.015em", textWrap: "pretty" }}
+            >
+              <span aria-hidden="true" style={{ color: T.accent }}>&ldquo;</span>
+              {featured.quote}
+              <span aria-hidden="true" style={{ color: T.accent }}>&rdquo;</span>
+            </blockquote>
+            <figcaption className="mt-6 border-l-2 pl-4" style={{ borderColor: T.accent, fontFamily: UI }}>
+              <p className="text-base font-semibold" style={{ color: T.ink }}>{featured.name}</p>
+              <a className="proof-text-link mt-1 inline-block text-[15px]" href={featured.href} target="_blank" rel="noopener noreferrer" style={{ color: T.accentText }}>
+                {featured.platform}, {featured.date}
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+              <p className="mt-2 text-[12px] font-semibold leading-relaxed" style={{ color: T.body }}>{badge(featured)}</p>
+            </figcaption>
+          </figure>
+
+          {featuredProject && featuredImage && featuredSite && (
+            <Link
+              href={featuredProject}
+              className={`${actions.preview} min-w-0 border border-charcoal/15 p-2.5 sm:p-3`}
+              style={{ backgroundColor: T.paper, color: T.ink, fontFamily: UI }}
+            >
+              <Image
+                src={featuredImage}
+                alt={`Homepage of ${featuredSite}`}
+                width={1912}
+                height={914}
+                sizes="(min-width: 1520px) 740px, (min-width: 1024px) 48vw, 94vw"
+                className="block h-auto w-full border"
+                style={{ borderColor: T.rule }}
+              />
+              <span className="flex min-h-12 flex-wrap items-center justify-between gap-x-4 gap-y-1 px-1 pt-2">
+                <span className="text-[17px] font-semibold">{featuredSite}</span>
+                <span className="inline-flex items-center gap-2 text-sm font-semibold" style={{ color: T.accentText }}>
+                  View case study <ArrowRight className="h-4 w-4 shrink-0" strokeWidth={1.75} aria-hidden="true" />
+                </span>
+              </span>
+            </Link>
+          )}
+        </div>
 
         {/* Four compact reviews in the requested order. Etoy also appears above
             as the featured quote, and her card links to the project image. */}
