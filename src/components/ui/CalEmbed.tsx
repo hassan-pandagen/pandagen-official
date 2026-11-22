@@ -58,9 +58,9 @@ export default function CalEmbed() {
         if (hasConsent("analytics")) trackGAEvent("cal_booking", { form_id: "discovery_calendar" });
         // 18 Nov 2026: Meta ads need a booked-call conversion. trackFBEvent sends nothing
         // unless the visitor accepted marketing cookies and the pixel has loaded.
-        // 22 Nov 2026: the CRM sends this booking's server Lead and Schedule with the booking
-        // uid as event id, so the browser uses the same id and Meta counts each once.
-        trackFBEvent("Lead", { content_name: "discovery_calendar" }, uid);
+        // 22 Nov 2026: the CRM's server Schedule uses the booking uid as event id, so the browser
+        // uses the same id and Meta counts it once. No browser Lead: a person counts as one Lead,
+        // and only the CRM can see whether this email already sent one in the last 30 days.
         trackFBEvent("Schedule", { content_name: "discovery_calendar" }, uid);
       };
       cal("on", { action: "bookingSuccessfulV2", callback: onBooking });

@@ -91,23 +91,23 @@ test('calendar listener cleans up, deduplicates bookings and respects consent at
   callback({ detail: { data: { uid: 'booking-one' } } });
   assert.equal(h.events.length, 1);
   assert.ok(!JSON.stringify(h.events).includes('booking-one'));
-  // One Meta Lead and one Schedule per booking, each with the booking uid as event id: the
-  // CRM's server events use the same id, so Meta counts each once (22 Nov 2026).
-  assert.deepEqual(h.fbEvents.map(e => [e[0], e[2]]), [['Lead', 'booking-one'], ['Schedule', 'booking-one']]);
+  // One Meta Schedule per booking with the booking uid as event id, matching the CRM's server
+  // Schedule. No browser Lead: the CRM decides whether a booking is this person's Lead (22 Nov 2026).
+  assert.deepEqual(h.fbEvents.map(e => [e[0], e[2]]), [['Schedule', 'booking-one']]);
   h.state.consent.analytics = false;
   callback({ detail: { data: { uid: 'booking-two' } } });
   assert.equal(h.events.length, 1);
   // Analytics consent doesn't govern Meta; trackFBEvent applies the marketing check.
-  assert.equal(h.fbEvents.length, 4);
+  assert.equal(h.fbEvents.length, 2);
   h.state.consent.functional = false;
   callback({ detail: { data: { uid: 'booking-four' } } });
-  assert.equal(h.fbEvents.length, 4);
+  assert.equal(h.fbEvents.length, 2);
   h.state.consent.functional = true;
   cleanups.forEach(cleanup => cleanup?.());
   assert.equal(h.listeners.size, 0);
   callback({ detail: { data: { uid: 'booking-three' } } });
   assert.equal(h.events.length, 1);
-  assert.equal(h.fbEvents.length, 4);
+  assert.equal(h.fbEvents.length, 2);
 });
 
 test('calendar unmount during async initialization cannot leave a listener behind', async () => {
